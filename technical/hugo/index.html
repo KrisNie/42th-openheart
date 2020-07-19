@@ -1119,7 +1119,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             4 min
                             
-                            45 s.
+                            38 s.
                         
                     </div>
                 </div>
@@ -1338,7 +1338,7 @@ location /webhook {
   proxy_pass http://127.0.0.1:7777;  
 }
 </code></pre></div><h2 id="github配置">Github配置</h2>
-<p>&lsquo;webhook&rsquo;即 ‘github_webhook.js’ 中配置的path，如果你配置了cloundflare代理来实现https请求，那这里最好设置成<code>http://[ip]:[port]/webhook</code></p>
+<p>&lsquo;webhook&rsquo;即 ‘github_webhook.js’ 中配置的path，比如：<code>https://www.openheart.icu/webhook</code></p>
 <p>必须选择‘application/json’,否则不起作用</p>
 <p>‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
 一定要和脚本中设置一致</p>
