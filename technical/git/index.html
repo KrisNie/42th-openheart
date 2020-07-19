@@ -239,6 +239,77 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
     <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
 
 
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#idea%e8%ae%be%e7%bd%aegit" onclick="onNavClick(`#idea设置git-nav`)" id="idea设置git-nav">
+									idea设置git
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%ae%be%e7%bd%aegit%e4%bb%a3%e7%90%86" onclick="onNavClick(`#设置git代理-nav`)" id="设置git代理-nav">
+									设置git代理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%81%87%e5%88%b0pull%e4%b8%8d%e4%b8%8b%e6%9d%a5" onclick="onNavClick(`#遇到pull不下来-nav`)" id="遇到pull不下来-nav">
+									遇到pull不下来
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
 </div>
     
     <div class="pagination">
@@ -342,6 +413,77 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
             <div class="toc">
 
 
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#idea%e8%ae%be%e7%bd%aegit" onclick="onNavClick(`#idea设置git-nav`)" id="idea设置git-nav">
+									idea设置git
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%ae%be%e7%bd%aegit%e4%bb%a3%e7%90%86" onclick="onNavClick(`#设置git代理-nav`)" id="设置git代理-nav">
+									设置git代理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%81%87%e5%88%b0pull%e4%b8%8d%e4%b8%8b%e6%9d%a5" onclick="onNavClick(`#遇到pull不下来-nav`)" id="遇到pull不下来-nav">
+									遇到pull不下来
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
 </div>
             
         </div>
@@ -431,7 +573,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            0 s.
+                            39 s.
                         
                     </div>
                 </div>
@@ -441,7 +583,31 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 <div class="post-body" v-pre>
                 
-                    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+                    <h2 id="idea设置git">idea设置git</h2>
+<p>idea -&gt;VSC -&gt;Create Git Repository
+右击工程文件 -&gt;git-&gt;add
+右击工程文件 -&gt;git-&gt;commit</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git remote add origin git@github.com:Hyominn/java_demo.git
+git pull git@github.com:Hyominn/java_demo.git
+git add .
+dir                                                <span style="color:#228b22"># 查看有哪些文件夹</span>
+git rm -r --cached target   <span style="color:#228b22"># 删除target文件夹</span>
+git commit –m <span style="color:#cd5555">&#34;版本更新信息&#34;</span>
+git push git@github.com:Hyominn/java_demo.git   
+</code></pre></div><h2 id="设置git代理">设置git代理</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git config --global https.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080
+
+git config --global http.proxy <span style="color:#cd5555">&#39;socks5://127.0.0.1:1080&#39;</span>
+git config --global https.proxy <span style="color:#cd5555">&#39;socks5://127.0.0.1:1080&#39;</span>
+
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+npm config delete proxy
+</code></pre></div><h2 id="遇到pull不下来">遇到pull不下来</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git reset --hard FETCH_HEAD
+git clone  https://www.github.com/Hyominn/openheart.git
 </code></pre></div>
                     
                     <HR width="100%" id="EOF">

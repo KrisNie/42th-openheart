@@ -404,7 +404,31 @@ Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&lt;/p&gt;
         <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
         <guid>https://www.openheart.icu/technical/git/</guid>
-        <description>42th openheart https://www.openheart.icu/technical/git/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;
+        <description>42th openheart https://www.openheart.icu/technical/git/ -&lt;h2 id=&#34;idea设置git&#34;&gt;idea设置git&lt;/h2&gt;
+&lt;p&gt;idea -&amp;gt;VSC -&amp;gt;Create Git Repository
+右击工程文件 -&amp;gt;git-&amp;gt;add
+右击工程文件 -&amp;gt;git-&amp;gt;commit&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git remote add origin git@github.com:Hyominn/java_demo.git
+git pull git@github.com:Hyominn/java_demo.git
+git add .
+dir                                                &lt;span style=&#34;color:#228b22&#34;&gt;# 查看有哪些文件夹&lt;/span&gt;
+git rm -r --cached target   &lt;span style=&#34;color:#228b22&#34;&gt;# 删除target文件夹&lt;/span&gt;
+git commit –m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;版本更新信息&amp;#34;&lt;/span&gt;
+git push git@github.com:Hyominn/java_demo.git   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置git代理&#34;&gt;设置git代理&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global https.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080
+
+git config --global http.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
+git config --global https.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
+
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+npm config delete proxy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;遇到pull不下来&#34;&gt;遇到pull不下来&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git reset --hard FETCH_HEAD
+git clone  https://www.github.com/Hyominn/openheart.git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     

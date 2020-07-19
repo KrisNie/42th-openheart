@@ -431,7 +431,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            9 s.
+                            1 min
+                            
+                            1 second.
                         
                     </div>
                 </div>
@@ -460,6 +462,17 @@ nginx -s reload
 </span><span style="color:#bbb">    </span>location<span style="color:#bbb"> </span>/<span style="color:#bbb"> </span>{<span style="color:#bbb">
 </span><span style="color:#bbb">    </span>root<span style="color:#bbb">         </span>/usr/project/openheart;<span style="color:#bbb">
 </span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></code></pre></div><p>强制浏览器使用本地缓存</p>
+<p>cache-control/expires</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#228b22">#nginx.conf 中配置</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>location<span style="color:#bbb"> </span>~<span style="color:#bbb"> </span>.<span style="color:#1e889b">*\.(gif|jpg|jpeg|png|bmp|swf)$</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>{<span style="color:#bbb">
+</span><span style="color:#bbb">		</span>expires<span style="color:#bbb"> </span>30d;<span style="color:#bbb">
+</span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span><span style="color:#bbb">		</span>location<span style="color:#bbb"> </span>~<span style="color:#bbb"> </span>.<span style="color:#1e889b">*\.(js|css)?$</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>{<span style="color:#bbb">
+</span><span style="color:#bbb">		</span>expires<span style="color:#bbb"> </span>1h;<span style="color:#bbb">
 </span><span style="color:#bbb"></span>}<span style="color:#bbb">
 </span></code></pre></div>
                     
