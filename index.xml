@@ -639,7 +639,7 @@ location /webhook {
 &lt;p&gt;&amp;lsquo;webhook&amp;rsquo;即 ‘github_webhook.js’ 中配置的path，如果你配置了cloundflare代理来实现https请求，那这里最好设置成&lt;code&gt;http://[ip]:[port]/webhook&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;必须选择‘application/json’,否则不起作用&lt;/p&gt;
 &lt;p&gt;‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
-一定要和脚本中设置一致，否则，你懂的！&lt;/p&gt;
+一定要和脚本中设置一致&lt;/p&gt;
 - https://www.openheart.icu/technical/hugo/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
