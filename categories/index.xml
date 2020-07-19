@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 42th openheart</title>
+    <link>https://www.openheart.icu/categories/</link>
+    <description>Recent content in Categories on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Sun, 19 Jul 2020 12:50:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.openheart.icu/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Technical</title>
+      <link>https://www.openheart.icu/categories/technical/</link>
+      <pubDate>Sun, 19 Jul 2020 12:50:56 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/categories/technical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Boom</title>
+      <link>https://www.openheart.icu/categories/boom/</link>
+      <pubDate>Sat, 18 Jul 2020 10:28:50 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/categories/boom/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

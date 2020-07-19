@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technical on 42th openheart</title>
+    <link>https://www.openheart.icu/categories/technical/</link>
+    <description>Recent content in Technical on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Sun, 19 Jul 2020 12:50:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.openheart.icu/categories/technical/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DNS</title>
+      <link>https://www.openheart.icu/technical/dns/</link>
+      <pubDate>Sun, 19 Jul 2020 12:50:56 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/dns/</guid>
+      <description>DNSPod DNS+ ​ 首选：119.29.29.29
+​ 备选：182.254.116.116
+114DNS ​ 首选：114.114.114.114
+​ 备选：114.114.114.115
+阿里 AliDNS ​ 首选：223.5.5.5
+​ 备选：223.6.6.6
+DNS派 ​ 首选（电信/移动/铁通）：101.226.4.6
+​ 备选（电信/移动/铁通）：218.30.118.6
+​ 首选（联通）：123.125.81.6
+​ 备选（联通）：140.207.198.6
+百度 BaiduDNS ​ 首选：180.76.76.76
+CNNIC SDNS ​ 首选：1.2.4.8
+​ 备选：202.98.0.68
+OpenDNS ​ 208.67.222.222
+​ 208.67.220.220
+​ 208.67.222.220
+​ 208.67.220.222
+Family Shield Servers 可以阻挡成人网站和含有恶意网站
+​ 208.67.222.123
+​ 208.67.220.123
+IPv6地址(实验) ​ 2620:0:ccc::2
+​ 2620:0:ccd::2</description>
+    </item>
+    
+    <item>
+      <title>Webhook</title>
+      <link>https://www.openheart.icu/technical/webhook/</link>
+      <pubDate>Sun, 19 Jul 2020 11:18:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/webhook/</guid>
+      <description>可以使用webhook用来增加GitHub的pull/push操作，将项目推送到阿里云</description>
+    </item>
+    
+    <item>
+      <title>.NET INTERVIEW</title>
+      <link>https://www.openheart.icu/technical/dot-net-interview-questions/</link>
+      <pubDate>Fri, 17 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/dot-net-interview-questions/</guid>
+      <description>.NET INTERVIEW from Jeffrey Zhao&amp;rsquo;s blog 我在面试.NET/C#程序员时会提出的问题
+ 什么是.NET？什么是CLI？什么是CLR？IL是什么？JIT是什么，它是如何工作的？GC是什么，简述一下GC的工作方式？ 什么是.net .NET是个平台，你就把它看成C#
+一个.NET应用是一个运行于.NET Framework之上的应用程序。（更精确的说，一个.NET应用是一个使用.NET Framework类库来编写，并运行于公共语言运行时 Common Language Runtime之上的应用程序。）如果一个应用程序跟.NET Framework无关，它就不能叫做.NET程序。比如，仅仅使用了XML并不就是.NET应用，仅仅使用SOAP SDK调用一个Web Service也不是.NET应用
+开发平台（Dot Net Framework）：包含通用语言运行时（CLR）和Dot Net框架类库（FCL）两个部分。他们提供了一致的编程模型，简化的编程方式，可靠的版本机制（用全局程序集缓存GAC来避免DLL Hell），轻便的部署管理（程序集自带的元数据可以避免ini文件和注册表） ，广泛的平台支持（只要这台机器兼容标准下的CLR和FCL就可以部署，当然运行的时候IL会变成本机代码），无缝的语言集成，自动化的内存管理（垃圾收集），类型安全（CLR会阻止利用缓冲区溢出错误进行的攻击），CLR支持跨语言调试，统一的错误报告，全新的安全策略（CAS），兼容以往的COM组件
+什么是CLR CLR(公用语言运行时)和Java虚拟机一样也是一个运行时环境，它负责资源管理（内存分配和垃圾收集），并保证应用和底层操作系统之间必要的分离。.NET提供了一个运行时环境，叫做公用语言运行时（Commen Language Runtime），是一种多语言执行环境，支持众多的数据类型和语言特性。他管理着代码的执行，并使开发过程变得更加简单。这是一种可操控的执行环境，其功能通过编译器与其他工具共同展现。
+什么是CLI 通用语言基础结构（Common Language Infrastructure，CLI）是CLR的一个子集，也就是.NET中最终对编译成MSIL代码的应用程序的运行环境进行管理的那一部分。在 CLR结构图中CLI位于下半部分，主要包括类加载器(Class Loader)、实时编译器(IL To Native Compilers)和一个运行时环境的垃圾收集器(Garbage Collector)。CLI是.Net和CLR的灵魂，CLI为IL代码提供运行的环境，你可以将使用任何语言编写的代码通过其特定的编译器转换为 MSIL代码之后运行其上，甚至还可以自己写MSIL代码在CLI上面运行。
+什么是IL IL是微软.NET平台上衍生出来的一门中间语言，.NET平台上的各种高级语言（如C#，VB，F#）的编译器会将各自的文字表述方式转化为 IL。各种不同的文字形式最终被统一到了IL的表述方式，其中包含了.NET平台上的各种元素，如“范型”，“类”、、“接口”、“模块”、“属性”等 等。值得注意的是，各种高级语言本身可能根本没有这些“概念”在里头，如IronScheme是一个在.NET平台上的Scheme语言实现，其中根本没有前面提到的这些IL——亦或说是.NET平台上的名词。IL本身并不知道自己是由哪种高级语言转化而来的，哪种语言中有哪些特性，IL也根本不会关心。
+什么是JIT JIT（Just In Time, JIT）是.Net边运行边编译的一种机制。
+开发人员需要通过IL与CLR进行交流, 虽然IL本身支持一些面向对象的概念, 但是对于开发人员来讲还是过于复杂低效, 于是C#应运而生, 程序员只需编写C#代码, csc编译器会将其翻译成IL;虽然CLR理解IL, 但是CPU只认识二进制指令, 所以CLR需要JIT的帮助, 将IL翻译成CPU指令. JIT按需工作, 当一个.NET方法即将被执行时, JIT会介入, 把该方法(IL指令) 编译成CPU指令, 并保存以供重用。
+什么是GC，以及它的工作方式 GC:.NET Framework 的垃圾回收器管理应用程序的内存分配和释放
+工作方式：每次您使用 new 运算符创建对象时，运行库都从托管堆为该对象分配内存。只要托管堆中有地址空间可用，运行库就会继续为新对象分配空间。但是，内存不是无限大的。最终，垃 圾回收器必须执行回收以释放一些内存。垃圾回收器优化引擎根据正在进行的分配情况确定执行回收的最佳时间。当垃圾回收器执行回收时，它检查托管堆中不再被 应用程序使用的对象并执行必要的操作来回收它们占用的内存。</description>
+    </item>
+    
+    <item>
+      <title>206. Reverse Linked List</title>
+      <link>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</guid>
+      <description>Reverse a singly linked list. Example:
+ Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL
+ Follow up:
+A linked list can be reversed either iteratively or recursively. Could you implement both?
+ 迭代 将
+ 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
+ 转化为
+ NULL&amp;lt;-1&amp;lt;-2&amp;lt;-3&amp;lt;-4&amp;lt;-5
+ 使用一个prev节点存储上一个节点（初始为NULL），将当前curr节点的next指向prev节点，prev节点存储curr节点，curr存储curr的原next节点，完成一次迭代。最后返回prev（最后的curr是原ListNode的NULL）
+/** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ public ListNode reverseList(ListNode head) { ListNode prev = null; ListNode curr = head; while (curr !</description>
+    </item>
+    
+    <item>
+      <title>Computer network</title>
+      <link>https://www.openheart.icu/cs/computer-network/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/computer-network/</guid>
+      <description>计算机网络 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
+四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://www.openheart.icu/technical/git/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://www.openheart.icu/technical/hugo/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/hugo/</guid>
+      <description>Install tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz cp ./hugo /usr/local/bin/ hugo new site site42 cd site42 hugo version rm -r public hugo server -b &amp;#34;https://openheart.icu:1313/&amp;#34; -p 1313 --bind &amp;#34;0.0.0.0&amp;#34; #mac 安装 brew install hugo # show the location of the hugo executable which hugo # show the installed version ls -l $( which hugo ) #lrwxr-xr-x 1 hyomin admin 30 7 17 22:46 /usr/local/bin/hugo -&amp;gt; ../Cellar/hugo/0.74.1/bin/hugo # verify that hugo runs correctly hugo version Hugo Static Site Generator v0.</description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://www.openheart.icu/technical/linux/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/linux/</guid>
+      <description>chown -R nginx:users ./* #查看当前文件夹下权限 ls -l netstat -npa | grep 9000 #查看当前路径 pwd #安装git yum -y install git </description>
+    </item>
+    
+    <item>
+      <title>Mac Operation</title>
+      <link>https://www.openheart.icu/technical/mac/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/mac/</guid>
+      <description>brew使用国内镜像源（不好使） 中科大：
+# 步骤一 cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git* # 步骤二 cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git* #步骤三 brew update 复原：
+cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core brew update 配置item2代理 # 打开配置文件 vim ~/.bash_profile # 如果用了`oh-my-zsh` 那么修改`~/.zshrc` # 在后面新增配置 export http_proxy=http://127.0.0.1:1087 export https_proxy=$http_proxy # 同理，可能执行 source ~/.zshrc source ~/.bash_profile </description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://www.openheart.icu/technical/mysql/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/mysql/</guid>
+      <description>Install MySQL 准备操作 lsb_release -a	#查看操作系统版本 #LSB Version:	:core-4.1-amd64:core-4.1-noarch #Distributor ID:	CentOS #Description:	CentOS Linux release 7.8.2003 (Core) #Release:	7.8.2003 #Codename:	Core cat /etc/redhat-release	#查看Linux内核版本 #CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	#查看系统位数 #64 yum -y update	#更新 yum rpm -qa | grep mysql	#查看是否安装过MySQL 安装MySQL #此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm #安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm #此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.noarch #禁用 mysql8.0: sudo yum-config-manager --disable mysql80-community #启用 mysql8.0 sudo yum-config-manager --enable mysql80-community #校验当前启用(enable)的 mysql 版本是否为 5.</description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://www.openheart.icu/technical/nginx/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/nginx/</guid>
+      <description>$sudo nginx sudo pkill -f nginx &amp;amp; wait $! sudo systemctl start nginx sudo systemctl restart nginx nginx -c /etc/nginx/nginx.conf #重启服务 nginx -s reload 设置二级域名</description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>https://www.openheart.icu/technical/php/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/php/</guid>
+      <description>Operation systemctl start php-fpm systemctl restart php-fpm service php-fpm start service php-fpm restart service php-fpm stop service php-fpm reload Problem 1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组
+user = nginx group = users </description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://www.openheart.icu/technical/vim/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/technical/vim/</guid>
+      <description>#退出编辑模式，输入以下命令： Esc #保存后退出vi，若为 :wq! 则为强制储存后退出（常用） :wq #保存但不退出（常用） :w #若文件属性为『只读』时，强制写入该档案 :w! #离开 vi （常用） :q #若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。 :q! #将档案还原到最原始的状态！ :e! </description>
+    </item>
+    
+  </channel>
+</rss>

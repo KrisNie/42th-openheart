@@ -1,0 +1,555 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>42th openheart</title>
+    <link>https://www.openheart.icu/</link>
+    <description>Recent content on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Sun, 19 Jul 2020 12:50:56 +0000</lastBuildDate>
+    
+        <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Mac Operation</title>
+        <link>https://www.openheart.icu/technical/mac/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/technical/mac/</guid>
+        <description>42th openheart https://www.openheart.icu/technical/mac/ -&lt;h2 id=&#34;brew使用国内镜像源不好使&#34;&gt;brew使用国内镜像源（不好使）&lt;/h2&gt;
+&lt;p&gt;中科大：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤一&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git*
+
+ &lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#步骤三&lt;/span&gt;
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;复原：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/brew.git
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/homebrew-core
+
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置item2代理&#34;&gt;配置item2代理&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 打开配置文件&lt;/span&gt;
+vim ~/.bash_profile 
+&lt;span style=&#34;color:#228b22&#34;&gt;# 如果用了`oh-my-zsh` 那么修改`~/.zshrc`&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 在后面新增配置&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;http_proxy&lt;/span&gt;=http://127.0.0.1:1087 &lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;https_proxy&lt;/span&gt;=&lt;span style=&#34;color:#00688b&#34;&gt;$http_proxy&lt;/span&gt; 
+&lt;span style=&#34;color:#228b22&#34;&gt;# 同理，可能执行 source ~/.zshrc&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/mac/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>MySQL</title>
+        <link>https://www.openheart.icu/technical/mysql/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/technical/mysql/</guid>
+        <description>42th openheart https://www.openheart.icu/technical/mysql/ -&lt;h1 id=&#34;install-mysql&#34;&gt;Install MySQL&lt;/h1&gt;
+&lt;h2 id=&#34;准备操作&#34;&gt;准备操作&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;lsb_release -a						&lt;span style=&#34;color:#228b22&#34;&gt;#查看操作系统版本&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#LSB Version:	:core-4.1-amd64:core-4.1-noarch&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#Distributor ID:	CentOS&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#Description:	CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#Release:	7.8.2003&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#Codename:	Core&lt;/span&gt;
+
+cat /etc/redhat-release		&lt;span style=&#34;color:#228b22&#34;&gt;#查看Linux内核版本&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
+
+getconf LONG_BIT					&lt;span style=&#34;color:#228b22&#34;&gt;#查看系统位数&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#64&lt;/span&gt;
+
+yum -y update							&lt;span style=&#34;color:#228b22&#34;&gt;#更新 yum&lt;/span&gt;
+rpm -qa | grep mysql			&lt;span style=&#34;color:#228b22&#34;&gt;#查看是否安装过MySQL&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装mysql&#34;&gt;安装MySQL&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;#此处版本为在CentOS7下安装MySQL8.0&lt;/span&gt;
+wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#安装&lt;/span&gt;
+sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#mysql80-community-release-el7-3.noarch&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#禁用 mysql8.0:&lt;/span&gt;
+sudo yum-config-manager --disable mysql80-community
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#启用 mysql8.0&lt;/span&gt;
+sudo yum-config-manager --enable mysql80-community
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#校验当前启用(enable)的 mysql 版本是否为 5.7:&lt;/span&gt;
+yum repolist enabled | grep mysql
+&lt;span style=&#34;color:#228b22&#34;&gt;#mysql-connectors-community/x86_64 MySQL Connectors Community                 165&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#mysql-tools-community/x86_64      MySQL Tools Community                      115&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#mysql80-community/x86_64          MySQL 8.0 Community Server                 193&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#安装MySQL&lt;/span&gt;
+sudo yum install -y mysql-community-server
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#启动 mysql 服务&lt;/span&gt;
+sudo service mysqld start
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#查看 mysql 服务状态&lt;/span&gt;
+sudo service mysqld status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;mysql初始化设置&#34;&gt;MySQL初始化设置&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;#查看初始密码&lt;/span&gt;
+sudo grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;temporary password&amp;#39;&lt;/span&gt; /var/log/mysqld.log
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#使用初始密码进行登录&lt;/span&gt;
+mysql -u root -p
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#登录成功之后设置新密码&lt;/span&gt;
+ALTER USER &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#创建用户&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#允许本地 IP（localhost, 127.0.0.1）访问：&lt;/span&gt;
+create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#228b22&#34;&gt;#允许任何 IP 访问：&lt;/span&gt;
+create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#228b22&#34;&gt;#刷新权限&lt;/span&gt;
+FLUSH PRIVILEGES;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#8.0版本后&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#创建账户&lt;/span&gt;
+create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; identified by  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人&lt;/span&gt;
+grant all privileges on *.* to &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; with grant option;
+&lt;span style=&#34;color:#228b22&#34;&gt;#改密码&amp;amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里&lt;/span&gt;
+flush privileges;
+
+//修改host 将kris用作登录账户名
+update mysql.user &lt;span style=&#34;color:#658b00&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; where &lt;span style=&#34;color:#00688b&#34;&gt;User&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/mysql/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Nginx</title>
+        <link>https://www.openheart.icu/technical/nginx/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/technical/nginx/</guid>
+        <description>42th openheart https://www.openheart.icu/technical/nginx/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;$sudo&lt;/span&gt; nginx
+
+sudo pkill -f nginx &amp;amp; &lt;span style=&#34;color:#658b00&#34;&gt;wait&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;$!&lt;/span&gt;
+
+sudo systemctl start nginx
+
+sudo systemctl restart nginx
+
+nginx -c /etc/nginx/nginx.conf
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#重启服务&lt;/span&gt;
+nginx -s reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;设置二级域名&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;server&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;{&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;listen&lt;span style=&#34;color:#bbb&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#b452cd&#34;&gt;80&lt;/span&gt;;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;server_name&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;site42.openheart.icu;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;/&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;{&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;root&lt;span style=&#34;color:#bbb&#34;&gt;         &lt;/span&gt;/usr/project/openheart;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/nginx/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>PHP</title>
+        <link>https://www.openheart.icu/technical/php/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/technical/php/</guid>
+        <description>42th openheart https://www.openheart.icu/technical/php/ -&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl start php-fpm
+systemctl restart php-fpm
+
+service php-fpm start
+service php-fpm restart
+service php-fpm stop
+service php-fpm reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt; = nginx
+&lt;span style=&#34;color:#00688b&#34;&gt;group&lt;/span&gt; = users
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/php/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Vim</title>
+        <link>https://www.openheart.icu/technical/vim/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/technical/vim/</guid>
+        <description>42th openheart https://www.openheart.icu/technical/vim/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;#退出编辑模式，输入以下命令：&lt;/span&gt;
+Esc 
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#保存后退出vi，若为 :wq! 则为强制储存后退出（常用）&lt;/span&gt;
+:wq
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#保存但不退出（常用）&lt;/span&gt;
+:w
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#若文件属性为『只读』时，强制写入该档案&lt;/span&gt;
+:w!
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#离开 vi （常用）&lt;/span&gt;
+:q    
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。&lt;/span&gt;
+:q!   
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#将档案还原到最原始的状态！&lt;/span&gt;
+:e!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/vim/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>想吃肉</title>
+        <link>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</link>
+        <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ -&lt;p&gt;去年&lt;/p&gt;
+&lt;p&gt;这个时候&lt;/p&gt;
+&lt;p&gt;我们&lt;/p&gt;
+&lt;p&gt;在想&lt;/p&gt;
+&lt;p&gt;那个女人&lt;/p&gt;
+&lt;p&gt;下月结婚的话&lt;/p&gt;
+&lt;p&gt;书狗&lt;/p&gt;
+&lt;p&gt;去不去&lt;/p&gt;
+&lt;p&gt;今年&lt;/p&gt;
+&lt;p&gt;这个时候&lt;/p&gt;
+&lt;p&gt;我们&lt;/p&gt;
+&lt;p&gt;在想&lt;/p&gt;
+&lt;p&gt;那个女人&lt;/p&gt;
+&lt;p&gt;去年结婚的话&lt;/p&gt;
+&lt;p&gt;书狗&lt;/p&gt;
+&lt;p&gt;去不去&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我把&lt;/p&gt;
+&lt;p&gt;非自来的&lt;/p&gt;
+&lt;p&gt;农夫山泉水&lt;/p&gt;
+&lt;p&gt;烧开&lt;/p&gt;
+&lt;p&gt;期间&lt;/p&gt;
+&lt;p&gt;蒙眼喝掉&lt;/p&gt;
+&lt;p&gt;每100毫升&lt;/p&gt;
+&lt;p&gt;含180千焦能量的&lt;/p&gt;
+&lt;p&gt;两块五毛钱&lt;/p&gt;
+&lt;p&gt;发现&lt;/p&gt;
+&lt;p&gt;蒙眼&lt;/p&gt;
+&lt;p&gt;并不能防止&lt;/p&gt;
+&lt;p&gt;两块五毛钱&lt;/p&gt;
+&lt;p&gt;让我&lt;/p&gt;
+&lt;p&gt;疯狂&lt;/p&gt;
+&lt;p&gt;打嗝儿&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;往不值一提的&lt;/p&gt;
+&lt;p&gt;玻璃容器中&lt;/p&gt;
+&lt;p&gt;加随意毫升的&lt;/p&gt;
+&lt;p&gt;烫水&lt;/p&gt;
+&lt;p&gt;5粒红黑红黑红相间的&lt;/p&gt;
+&lt;p&gt;枸杞&lt;/p&gt;
+&lt;p&gt;4节长短长短不齐的&lt;/p&gt;
+&lt;p&gt;金银花&lt;/p&gt;
+&lt;p&gt;1粒没掉到过地上的&lt;/p&gt;
+&lt;p&gt;胎菊&lt;/p&gt;
+&lt;p&gt;如果&lt;/p&gt;
+&lt;p&gt;算上&lt;/p&gt;
+&lt;p&gt;掉到过地上的&lt;/p&gt;
+&lt;p&gt;那就是3粒&lt;/p&gt;
+&lt;p&gt;胎菊&lt;/p&gt;
+&lt;p&gt;不需要&lt;/p&gt;
+&lt;p&gt;用咖啡勺&lt;/p&gt;
+&lt;p&gt;从容&lt;/p&gt;
+&lt;p&gt;潇洒&lt;/p&gt;
+&lt;p&gt;肆意&lt;/p&gt;
+&lt;p&gt;老练&lt;/p&gt;
+&lt;p&gt;地搅动一周&lt;/p&gt;
+&lt;p&gt;又一周&lt;/p&gt;
+&lt;p&gt;直接加入2.5块冰糖&lt;/p&gt;
+&lt;p&gt;即可&lt;/p&gt;
+&lt;p&gt;完美&lt;/p&gt;
+&lt;p&gt;复刻&lt;/p&gt;
+&lt;p&gt;爷爷泡的茶&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;反复&lt;/p&gt;
+&lt;p&gt;轻捻&lt;/p&gt;
+&lt;p&gt;揉搓&lt;/p&gt;
+&lt;p&gt;爱抚&lt;/p&gt;
+&lt;p&gt;玻璃杯的&lt;/p&gt;
+&lt;p&gt;把手&lt;/p&gt;
+&lt;p&gt;等待&lt;/p&gt;
+&lt;p&gt;149秒后&lt;/p&gt;
+&lt;p&gt;凭心情&lt;/p&gt;
+&lt;p&gt;吹几下热茶&lt;/p&gt;
+&lt;p&gt;喝完&lt;/p&gt;
+&lt;p&gt;第一杯&lt;/p&gt;
+&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
+&lt;p&gt;拿出&lt;/p&gt;
+&lt;p&gt;富士康工厂&lt;/p&gt;
+&lt;p&gt;都是双眼皮员工的&lt;/p&gt;
+&lt;p&gt;高端车间里装配的&lt;/p&gt;
+&lt;p&gt;高级电脑&lt;/p&gt;
+&lt;p&gt;开机&lt;/p&gt;
+&lt;p&gt;打开神秘的编程软件&lt;/p&gt;
+&lt;p&gt;配着&lt;/p&gt;
+&lt;p&gt;窗外经十路上&lt;/p&gt;
+&lt;p&gt;无法逃避的&lt;/p&gt;
+&lt;p&gt;车流声&lt;/p&gt;
+&lt;p&gt;双手&lt;/p&gt;
+&lt;p&gt;在键盘上&lt;/p&gt;
+&lt;p&gt;从容&lt;/p&gt;
+&lt;p&gt;潇洒&lt;/p&gt;
+&lt;p&gt;肆意&lt;/p&gt;
+&lt;p&gt;老练&lt;/p&gt;
+&lt;p&gt;地敲打&lt;/p&gt;
+&lt;p&gt;表情&lt;/p&gt;
+&lt;p&gt;老成持重&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;经过&lt;/p&gt;
+&lt;p&gt;简单的&lt;/p&gt;
+&lt;p&gt;数学高阶计算&lt;/p&gt;
+&lt;p&gt;复杂的&lt;/p&gt;
+&lt;p&gt;量子力学分析&lt;/p&gt;
+&lt;p&gt;2899秒后&lt;/p&gt;
+&lt;p&gt;我改完&lt;/p&gt;
+&lt;p&gt;13行代码&lt;/p&gt;
+&lt;p&gt;如果&lt;/p&gt;
+&lt;p&gt;多一秒&lt;/p&gt;
+&lt;p&gt;或者&lt;/p&gt;
+&lt;p&gt;少一行&lt;/p&gt;
+&lt;p&gt;那就只能&lt;/p&gt;
+&lt;p&gt;全部删掉&lt;/p&gt;
+&lt;p&gt;然后背着&lt;/p&gt;
+&lt;p&gt;比我年轻3岁半&lt;/p&gt;
+&lt;p&gt;正如花似玉&lt;/p&gt;
+&lt;p&gt;含苞待放的&lt;/p&gt;
+&lt;p&gt;女同事&lt;/p&gt;
+&lt;p&gt;偷偷&lt;/p&gt;
+&lt;p&gt;换掉&lt;/p&gt;
+&lt;p&gt;报错的代码&lt;/p&gt;
+&lt;p&gt;我依旧是&lt;/p&gt;
+&lt;p&gt;那个没有BUG的&lt;/p&gt;
+&lt;p&gt;美男子&lt;/p&gt;
+&lt;p&gt;女同事&lt;/p&gt;
+&lt;p&gt;今晚&lt;/p&gt;
+&lt;p&gt;依旧会&lt;/p&gt;
+&lt;p&gt;做梦&lt;/p&gt;
+&lt;p&gt;梦到&lt;/p&gt;
+&lt;p&gt;我&lt;/p&gt;
+&lt;p&gt;的代码&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;继续&lt;/p&gt;
+&lt;p&gt;喝完&lt;/p&gt;
+&lt;p&gt;第二杯&lt;/p&gt;
+&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
+&lt;p&gt;我认为&lt;/p&gt;
+&lt;p&gt;Apple Music&lt;/p&gt;
+&lt;p&gt;下首要播放的&lt;/p&gt;
+&lt;p&gt;《突然想起你》&lt;/p&gt;
+&lt;p&gt;用的是不是&lt;/p&gt;
+&lt;p&gt;三峡大坝&lt;/p&gt;
+&lt;p&gt;发的电&lt;/p&gt;
+&lt;p&gt;对书狗&lt;/p&gt;
+&lt;p&gt;去不去&lt;/p&gt;
+&lt;p&gt;那个女人的&lt;/p&gt;
+&lt;p&gt;婚礼&lt;/p&gt;
+&lt;p&gt;没有&lt;/p&gt;
+&lt;p&gt;任何影响&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;今年&lt;/p&gt;
+&lt;p&gt;没人&lt;/p&gt;
+&lt;p&gt;送我&lt;/p&gt;
+&lt;p&gt;他们自酿的&lt;/p&gt;
+&lt;p&gt;散装红酒&lt;/p&gt;
+&lt;p&gt;我只有&lt;/p&gt;
+&lt;p&gt;75度的&lt;/p&gt;
+&lt;p&gt;医用酒精&lt;/p&gt;
+&lt;p&gt;但我&lt;/p&gt;
+&lt;p&gt;没有烧杯&lt;/p&gt;
+&lt;p&gt;不能&lt;/p&gt;
+&lt;p&gt;精确配比&lt;/p&gt;
+&lt;p&gt;勾兑出82年的&lt;/p&gt;
+&lt;p&gt;波尔多&lt;em&gt;Lafite&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;所以&lt;/p&gt;
+&lt;p&gt;只能&lt;/p&gt;
+&lt;p&gt;全部&lt;/p&gt;
+&lt;p&gt;倒掉&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我好想&lt;/p&gt;
+&lt;p&gt;十块钱一瓶的&lt;/p&gt;
+&lt;p&gt;一厂小优&lt;/p&gt;
+&lt;p&gt;八十一箱的&lt;/p&gt;
+&lt;p&gt;勇闯天涯&lt;/p&gt;
+&lt;p&gt;一直没喝惯的&lt;/p&gt;
+&lt;p&gt;泰山原浆&lt;/p&gt;
+&lt;p&gt;极大部分是辣椒的&lt;/p&gt;
+&lt;p&gt;辣炒花嘎&lt;/p&gt;
+&lt;p&gt;我好想&lt;/p&gt;
+&lt;p&gt;好想&lt;/p&gt;
+&lt;p&gt;好想&lt;/p&gt;
+&lt;p&gt;出去&lt;/p&gt;
+&lt;p&gt;吃肉&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;2020-02-14，泉城，小雨&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>亲密关系2020</title>
+        <link>https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/</link>
+        <pubDate>Thu, 06 Feb 2020 10:58:08 -0400</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/ -&lt;p&gt;新型肺炎像亲密关系一样，有种奇妙的不确定性，让人无所适从。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;追求安全感是人的本能，于是人们拼命地戴口罩拼命地喝双黄连口服液。只有沉浸在这种安全感中，才会做出让他人可以依靠、相信的言谈举止，为亲密关系中的另一方也带来安全感。&lt;/p&gt;
+&lt;p&gt;新型肺炎也在追求安全感，这安全感却是由人们提供的。它再怎么新型，也只是由一个保护性外壳包裹的一段DNA或者RNA。这些简单的有机体仅单纯的想利用宿主的细胞系统进行自我复制。像极了干面胡同的小半间屋子里，窝在两箱子方便面，一箱好丽友派，两打鸡蛋，两打避孕套，两打脐橙，一箱娃哈哈矿泉水，两箱燕京啤酒，一箱红星小二锅头中间的小床上，在接下来的两周里疯狂发生亲密关系的男人和女人。他俩觉得他俩足够安全。新型肺炎疯狂传染，无药可治，确实也足够安全。&lt;/p&gt;
+&lt;p&gt;不像亲密关系，心醉的女人被搂在怀里，会问男人什么时候起开始喜欢她。男人或不假思索或略微迟疑 &lt;em&gt;“第一次看见你的时候”&lt;/em&gt;。其实，他到底是什么时候第一次看见她的，根本就记不住了。而新型肺炎并非带着目的去传播感染、复制自身，也不会带着目的去杀死宿主。它们太简单了，我们太复杂了。复杂的免疫系统让我们发热不发光，40°的高烧，人和病毒必须死一个。亲密关系更加复杂，&lt;em&gt;“Two stangers fell in love.Only one knows it wasn’t by chance.”&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“In a boy-meets-girl story,the boy should always meet the girl.”&lt;/em&gt; 有些关系是必然发生的，有些关系是必然不发生的。正如新型肺炎杀死宿主，这是宏观的进化规律，是必然发生的。假设人们抓住了新型肺炎，把他关进像电影里一样审讯室，像电影里一样的手脚铐住，像电影里一样的强灯光照脸，像电影里一样的 &lt;em&gt;“Good Cop, Bad Cop”&lt;/em&gt;，像电影里一样的拳脚相加后递烟，问 &lt;em&gt;“你和被害人什么关系，为什么要杀他！”&lt;/em&gt;。新型肺炎肯定不会和我一样煞风景说 &lt;em&gt;“谢谢我不抽烟”&lt;/em&gt;，也想必不会像电影里一样咬舌自杀或者以头抢地尔或者用灵活的舌头触发牙齿里的机关吞服氰化物自杀，它会如实招来 &lt;em&gt;“他死了，我的故事就结束了，而我死了，他的故事还长的很”&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;在一段亲密关系中必定会有隐瞒，双方或多或少都费力地隐藏着某些东西。就像每个人都会有过去，就算是一个杀手，一样会有小学同学，杀手可能在犯罪现场留下一个个 &lt;em&gt;“Riddle”&lt;/em&gt;，但绝对不会写下自己小学同学张苇刘波的名字。所以，往新型肺炎祖上刨10的几十几百次方代，虽然肯定不是农民，但说不准是个天真无邪的 &lt;em&gt;“好玩意儿”&lt;/em&gt;。亲密关系中，足够了解一个人并不代表什么，人是会变的，今天她喜欢梅林，明天她可以喜欢别的。穷则求变，物竞天择，频繁的基因重排，新型肺炎把人畜无害的稚嫩藏得严严实实，它将来会成为一个没感情、真正的 &lt;em&gt;“Killing machine”&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;新型肺炎来势汹汹，在某天突然出现，或许会在某天突然消失，当然，越快越好。正如某年某月某日，你会得到你的初恋。你要意识到，她就好像是一家店，你不会知道能停留多久，当然，越久越好。&lt;/p&gt;
+&lt;p&gt;一段亲密关系结束之后，没等伤心完，又开始了一段类似的注定伤心的亲密关系。人类从历史中吸取的唯一教训就是人类永远不会从历史中吸取教训。正如蝙蝠身上的新型肝炎也会像亲密关系一样，有种奇妙的不确定性，让人无所适从……&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;有人觉得用新型肺炎和亲密关系作比较是荒唐又可笑的，他们不该怪我，毕竟亲密关系本身就是荒唐又可笑的。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2020-02-06，乐安，小雪，怕死&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>下一站</title>
+        <link>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</link>
+        <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ -&lt;p&gt;不是茶山刘，是草山岭东。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;故事&#34;&gt;故事&lt;/h1&gt;
+&lt;p&gt;如果要我编个故事，我必然会这么写：&lt;/p&gt;
+&lt;p&gt;“我是刘波，百度上‘刘波’的搜索结果有一千二百八十万个，我可能不是你们认识的那个。我和其他刘波不同，我爸不是木匠，我不是山大毕业，我更不是主播也不配钥匙……我和其他刘波一样，我也喜欢一个张苇，也时常在熙攘的人群中当众孤独，我也不知道我到底想要什么……”这是人物；&lt;/p&gt;
+&lt;p&gt;“公交车顺着经十路往西，我被挤在公交车后门脸快贴到玻璃，路上拥挤的人群在整齐的标语和不整齐的广告中显得更加拥挤。我服了，于是我把自己放到了乐安县与油城的中间偏南，这里足够空旷。这里秋天的下午和别地儿一样慵懒，风挺大，云彩也不小；风吹云彩，太阳时隐时现，像极了梦里的张苇，所以我爱死了下午的太阳……”这是环境；&lt;/p&gt;
+&lt;p&gt;“我要如何体面地date张苇，她会如何体面地拒绝我，我该如何体面地认同她的拒绝，我一问三不知……”这是故事情节。&lt;/p&gt;
+&lt;p&gt;要是假期再充裕点，我可以是欧亨利，也可以是莫泊桑。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;国庆&#34;&gt;国庆&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在狼牙区 在飞虎路 那李杀神 王诛魔 还有刘斩仙 断罪小学 再度聚首 齐心协力 只因为 一个大魔头&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;大魔头是谁就不用问了吧，军人伟大，异地恋伟大，大魔头只配挨打，懂吧！&lt;/p&gt;
+&lt;p&gt;国庆加班开始前一晚上喜迎院士孙，我们几个在天没黑前走进饭店速战速决，然后各就各位。在开始电子竞技前，异口同声骂我朋张“被孙洋的小香批迷住了双眼”（我除外，我不会骂人）。&lt;/p&gt;
+&lt;p&gt;国庆加班结束前一晚上喜迎农民许，我们几个在政法学院旁边，感受到康康他们租的宾馆里浓厚的学习氛围后，在他们宾馆楼下的豪华网咖开始电子竞技，按习俗我朋张必须挨骂，“他就是个豁批犯”（不是我说的，我不会骂人）。&lt;/p&gt;
+&lt;p&gt;其实，院士孙和农民许并不配骂我朋张，因为他俩来泉城完全是路过，他俩的目的地一个是一国两制的小香批一个是油城的小香批，真是五十步笑百步。&lt;/p&gt;
+&lt;p&gt;世界与我都不完美，万物都有美中不足之处（我除外，我只有不足）。国庆长假也不例外，除了长假不够长这一明显不足外还有两个。&lt;/p&gt;
+&lt;p&gt;一是由于各种原因没吃上公司旁边刚开业生意兴隆的蟹黄生煎。&lt;/p&gt;
+&lt;p&gt;二是没在6号晚上及时亲手接过院士孙给我代的大地，然后大声让他滚出我屋。&lt;/p&gt;
+&lt;p&gt;但总体上来说国庆长假还算圆满。这是我在泉城过得第一个国庆，康康说泉城比琴岛宜居，其实我也感觉到了，冬暖夏凉怕是琴岛唯一的优势了。&lt;/p&gt;
+&lt;p&gt;还有一个有关国庆的就是，这几天除了路灯挂上了五星红旗，路边还多了挺多标语……&lt;/p&gt;
+&lt;p&gt;“灭霸扫痞”与“除暴安良”不停地交配、繁殖，与“鼓励二胎”一起平分了原本属于“计划生育好”的天下。虽然比“年产一零七零万吨钢铁”要些许得靠谱，但还是难免让多愁善感的人叹一口气，“时过境迁，物是人非”（我爱国爱党，没有任何暗示，如果有，也与本人无关）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;活着&#34;&gt;活着&lt;/h1&gt;
+&lt;p&gt;其实，除了国庆也没啥可以说道的。&lt;/p&gt;
+&lt;p&gt;自打中秋节画了个月亮里的张苇，就没动过画笔，樱花牌的固体颜料都裂开了，像极了樱花。&lt;/p&gt;
+&lt;p&gt;这半年我也还是没做到不以物喜不以己悲。&lt;/p&gt;
+&lt;p&gt;拿到大地后特意发了个微博。我没做到不以物喜，我对不起范仲淹。&lt;/p&gt;
+&lt;p&gt;在一群贪财好色的人中，有的成了冯唐、王小波、王朔、渡边淳一、杜拉斯、萨德、劳伦斯、三岛由纪夫……有的成了空山基、金政基、席勒、莫迪里阿尼、前田俊夫、佐伯俊男……（还有很多我就不列举了，不然就成当众开车了）却只有我成了刘波。我没做到不以己悲，我对不起范仲淹。&lt;/p&gt;
+&lt;p&gt;我现在做的，能做的也就只有活着了，大地也不能让我在活着前面加个“好好”。&lt;/p&gt;
+&lt;p&gt;然后呢，这几个完成“豁小香批”成就的（此处并非特指男生，也包括个别女生）和我妈一样开始担心起我的感情生活了。他们从正面侧面反面对我的将来进行大胆预测，让我对未来根本不抱有任何期望。&lt;/p&gt;
+&lt;p&gt;他们与其问我什么时候能在我结婚典礼上听到我背唐诗宋词汉乐府，还不如问我在结婚典礼上会背长恨歌还是孔雀东南飞。懂吧，我起码能给他们个确切的答案。&lt;/p&gt;
+&lt;p&gt;说起往南飞，你说如果世上没有了南这个方向……&lt;/p&gt;
+&lt;p&gt;那我要撞张苇的南墙，是不是就要从佛王村出发，带足干粮或者带足银行卡一直往北，途径北极、南极，行程40万公里，才能一头撞死我自己或者撞瞎张苇？&lt;/p&gt;
+&lt;p&gt;虽然我极力地避免在多事之秋出门，但故事里一旦有张苇，那我内心与肉体必肿胀，这40万公里是逃不掉的。舔狗舔到最后一无所有，但没办法，大地毕竟不是聚斯金德笔下的格雷诺耶谋杀二十六个少女后制成的香水，并不能让我***永久占有（包括进行占有）***张苇。&lt;/p&gt;
+&lt;p&gt;我会继续努力的，努力方向可以是张苇，但没必要。&lt;/p&gt;
+&lt;p&gt;不以物喜不以己悲，不用互勉，我自己勉自己。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;2018年10月7日&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title> Children</title>
+        <link>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</link>
+        <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ -&lt;blockquote&gt;
+&lt;p&gt;你的儿女，其实并不是你的儿女
+他们的诞生源自于你的情欲以及自身对于生命的渴望
+他们借助你来到这个世界，却非为了你而来
+他们在你身旁，然而并不是你的私人物品
+你可以给予他们的是你的爱，不是你的想法
+你可以庇护的是他们的身体，不是他们的灵魂
+因为他们的灵魂属于明天
+属于你做梦也无法到达的明天
+你可以拼尽全力，变得像他们一样
+你不能绞尽脑汁，让他们变得和你一样
+因为生命不会后退，时间也不在过去停留
+你是弓，儿女是箭
+弓箭手望着未来之路上的箭靶
+他用尽力气将你拉开，使他的箭射得又快又远
+所以怀着快乐的心情，在弓箭手的手中弯曲吧
+因为他爱一路飞翔的箭，也爱无比稳定的弓&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这首诗是纪伯伦的《On Children》，我把这诗读给了我爸妈，于是我来到了你身边。&lt;/p&gt;
+- https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Abstinence</title>
+        <link>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</link>
+        <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E6%88%92%E9%85%92/ -&lt;h1 id=&#34;戒酒&#34;&gt;戒酒&lt;/h1&gt;
+&lt;p&gt;我把眼泪酿成酒&lt;/p&gt;
+&lt;p&gt;一股脑喝进了肚子&lt;/p&gt;
+&lt;p&gt;肾老是大呼着将进酒&lt;/p&gt;
+&lt;p&gt;他总爱把酒糟蹋成尿&lt;/p&gt;
+&lt;p&gt;我的泪就这样进入了下水道&lt;/p&gt;
+&lt;p&gt;与他人的泪混在一起&lt;/p&gt;
+&lt;p&gt;悲伤与悲伤互相交融&lt;/p&gt;
+&lt;p&gt;寂寞与寂寞互相倾诉&lt;/p&gt;
+&lt;p&gt;后来&lt;/p&gt;
+&lt;p&gt;不知又过了多久&lt;/p&gt;
+&lt;p&gt;烈日炎炎将其蒸发&lt;/p&gt;
+&lt;p&gt;化作一场秋雨&lt;/p&gt;
+&lt;p&gt;淋在我的脸上&lt;/p&gt;
+&lt;p&gt;我伸出舌尖&lt;/p&gt;
+&lt;p&gt;尝出了那是我的眼泪&lt;/p&gt;
+&lt;p&gt;味道太差&lt;/p&gt;
+&lt;p&gt;所以我不再哭&lt;/p&gt;
+&lt;p&gt;顺便戒了酒&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;2017.10.10&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/boom/%E6%88%92%E9%85%92/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+  </channel>
+</rss> 

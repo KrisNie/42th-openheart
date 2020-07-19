@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSs on 42th openheart</title>
+    <link>https://www.openheart.icu/cs/</link>
+    <description>Recent content in CSs on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Wed, 15 Jul 2020 23:28:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.openheart.icu/cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Computer network</title>
+      <link>https://www.openheart.icu/cs/computer-network/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/computer-network/</guid>
+      <description>计算机网络 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
+四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。</description>
+    </item>
+    
+  </channel>
+</rss>
