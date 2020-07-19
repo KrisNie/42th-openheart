@@ -67,7 +67,7 @@ git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.c
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/technical/linux/</guid>
-      <description>chown -R nginx:users ./* #查看当前文件夹下权限 ls -l netstat -npa | grep 9000 #查看当前路径 pwd #安装git yum -y install git </description>
+      <description>chown -R nginx:users ./* # 查看当前文件夹下权限 ls -l netstat -npa | grep 9000 # 查看当前路径 pwd # 安装git yum -y install git </description>
     </item>
     
     <item>
@@ -87,7 +87,7 @@ cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/technical/mysql/</guid>
-      <description>Install MySQL 准备操作 lsb_release -a	#查看操作系统版本 #LSB Version:	:core-4.1-amd64:core-4.1-noarch #Distributor ID:	CentOS #Description:	CentOS Linux release 7.8.2003 (Core) #Release:	7.8.2003 #Codename:	Core cat /etc/redhat-release	#查看Linux内核版本 #CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	#查看系统位数 #64 yum -y update	#更新 yum rpm -qa | grep mysql	#查看是否安装过MySQL 安装MySQL #此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm #安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm #此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.noarch #禁用 mysql8.0: sudo yum-config-manager --disable mysql80-community #启用 mysql8.0 sudo yum-config-manager --enable mysql80-community #校验当前启用(enable)的 mysql 版本是否为 5.</description>
+      <description>Install MySQL 准备操作 lsb_release -a	# 查看操作系统版本 # LSB Version:	:core-4.1-amd64:core-4.1-noarch # Distributor ID:	CentOS # Description:	CentOS Linux release 7.8.2003 (Core) # Release:	7.8.2003 # Codename:	Core cat /etc/redhat-release	# 查看Linux内核版本 # CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	# 查看系统位数 # 64 yum -y update	# 更新 yum rpm -qa | grep mysql	# 查看是否安装过MySQL 安装MySQL # 此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm # 安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm # 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.</description>
     </item>
     
     <item>
@@ -96,10 +96,8 @@ cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/technical/nginx/</guid>
-      <description>$sudo nginx sudo pkill -f nginx &amp;amp; wait $! sudo systemctl start nginx sudo systemctl restart nginx nginx -c /etc/nginx/nginx.conf #重启服务 nginx -s reload 设置二级域名
-server{listen80;server_namesite42.openheart.icu;location/{root/usr/project/openheart;}}强制浏览器使用本地缓存
-cache-control/expires
-#nginx.conf 中配置location~.</description>
+      <description>Common Operation $sudo nginx sudo pkill -f nginx &amp;amp; wait $! sudo systemctl start nginx sudo systemctl restart nginx nginx -c /etc/nginx/nginx.conf # 重启服务 nginx -s reload 设置二级域名 server{listen80;server_namesite42.openheart.icu;location/{root/usr/project/openheart;}}强制浏览器使用本地缓存 cache-control/expires
+# nginx.conf 中配置location~.</description>
     </item>
     
     <item>
@@ -118,7 +116,7 @@ user = nginx group = users </description>
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/technical/vim/</guid>
-      <description>#退出编辑模式，输入以下命令： Esc #保存后退出vi，若为 :wq! 则为强制储存后退出（常用） :wq #保存但不退出（常用） :w #若文件属性为『只读』时，强制写入该档案 :w! #离开 vi （常用） :q #若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。 :q! #将档案还原到最原始的状态！ :e! </description>
+      <description># 退出编辑模式，输入以下命令： Esc # 保存后退出vi，若为 :wq! 则为强制储存后退出（常用） :wq # 保存但不退出（常用） :w # 若文件属性为『只读』时，强制写入该档案 :w! # 离开 vi （常用） :q # 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。 :q! # 将档案还原到最原始的状态！ :e! </description>
     </item>
     
   </channel>

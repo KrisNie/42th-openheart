@@ -611,7 +611,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             2 min
                             
-                            31 s.
+                            33 s.
                         
                     </div>
                 </div>
@@ -623,78 +623,78 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                     <h1 id="install-mysql">Install MySQL</h1>
 <h2 id="准备操作">准备操作</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lsb_release -a						<span style="color:#228b22">#查看操作系统版本</span>
-<span style="color:#228b22">#LSB Version:	:core-4.1-amd64:core-4.1-noarch</span>
-<span style="color:#228b22">#Distributor ID:	CentOS</span>
-<span style="color:#228b22">#Description:	CentOS Linux release 7.8.2003 (Core)</span>
-<span style="color:#228b22">#Release:	7.8.2003</span>
-<span style="color:#228b22">#Codename:	Core</span>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lsb_release -a						<span style="color:#228b22"># 查看操作系统版本</span>
+<span style="color:#228b22"># LSB Version:	:core-4.1-amd64:core-4.1-noarch</span>
+<span style="color:#228b22"># Distributor ID:	CentOS</span>
+<span style="color:#228b22"># Description:	CentOS Linux release 7.8.2003 (Core)</span>
+<span style="color:#228b22"># Release:	7.8.2003</span>
+<span style="color:#228b22"># Codename:	Core</span>
 
-cat /etc/redhat-release		<span style="color:#228b22">#查看Linux内核版本</span>
-<span style="color:#228b22">#CentOS Linux release 7.8.2003 (Core)</span>
+cat /etc/redhat-release		<span style="color:#228b22"># 查看Linux内核版本</span>
+<span style="color:#228b22"># CentOS Linux release 7.8.2003 (Core)</span>
 
-getconf LONG_BIT					<span style="color:#228b22">#查看系统位数</span>
-<span style="color:#228b22">#64</span>
+getconf LONG_BIT					<span style="color:#228b22"># 查看系统位数</span>
+<span style="color:#228b22"># 64</span>
 
-yum -y update							<span style="color:#228b22">#更新 yum</span>
-rpm -qa | grep mysql			<span style="color:#228b22">#查看是否安装过MySQL</span>
+yum -y update							<span style="color:#228b22"># 更新 yum</span>
+rpm -qa | grep mysql			<span style="color:#228b22"># 查看是否安装过MySQL</span>
 </code></pre></div><h2 id="安装mysql">安装MySQL</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22">#此处版本为在CentOS7下安装MySQL8.0</span>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 此处版本为在CentOS7下安装MySQL8.0</span>
 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
-<span style="color:#228b22">#安装</span>
+<span style="color:#228b22"># 安装</span>
 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
 
-<span style="color:#228b22">#此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）</span>
+<span style="color:#228b22"># 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）</span>
 <span style="color:#228b22">#mysql80-community-release-el7-3.noarch</span>
 
-<span style="color:#228b22">#禁用 mysql8.0:</span>
+<span style="color:#228b22"># 禁用 mysql8.0:</span>
 sudo yum-config-manager --disable mysql80-community
 
-<span style="color:#228b22">#启用 mysql8.0</span>
+<span style="color:#228b22"># 启用 mysql8.0</span>
 sudo yum-config-manager --enable mysql80-community
 
-<span style="color:#228b22">#校验当前启用(enable)的 mysql 版本是否为 5.7:</span>
+<span style="color:#228b22"># 校验当前启用(enable)的 mysql 版本是否为 5.7:</span>
 yum repolist enabled | grep mysql
-<span style="color:#228b22">#mysql-connectors-community/x86_64 MySQL Connectors Community                 165</span>
-<span style="color:#228b22">#mysql-tools-community/x86_64      MySQL Tools Community                      115</span>
-<span style="color:#228b22">#mysql80-community/x86_64          MySQL 8.0 Community Server                 193</span>
+<span style="color:#228b22"># mysql-connectors-community/x86_64 MySQL Connectors Community                 165</span>
+<span style="color:#228b22"># mysql-tools-community/x86_64      MySQL Tools Community                      115</span>
+<span style="color:#228b22"># mysql80-community/x86_64          MySQL 8.0 Community Server                 193</span>
 
-<span style="color:#228b22">#安装MySQL</span>
+<span style="color:#228b22"># 安装MySQL</span>
 sudo yum install -y mysql-community-server
 
-<span style="color:#228b22">#启动 mysql 服务</span>
+<span style="color:#228b22"># 启动 mysql 服务</span>
 sudo service mysqld start
 
-<span style="color:#228b22">#查看 mysql 服务状态</span>
+<span style="color:#228b22"># 查看 mysql 服务状态</span>
 sudo service mysqld status
 </code></pre></div><h2 id="mysql初始化设置">MySQL初始化设置</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22">#查看初始密码</span>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 查看初始密码</span>
 sudo grep <span style="color:#cd5555">&#39;temporary password&#39;</span> /var/log/mysqld.log
 
-<span style="color:#228b22">#使用初始密码进行登录</span>
+<span style="color:#228b22"># 使用初始密码进行登录</span>
 mysql -u root -p
 
-<span style="color:#228b22">#登录成功之后设置新密码</span>
+<span style="color:#228b22"># 登录成功之后设置新密码</span>
 ALTER USER <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;localhost&#39;</span> IDENTIFIED BY <span style="color:#cd5555">&#39;123456&#39;</span>;
 
-<span style="color:#228b22">#创建用户</span>
-<span style="color:#228b22">#允许本地 IP（localhost, 127.0.0.1）访问：</span>
+<span style="color:#228b22"># 创建用户</span>
+<span style="color:#228b22"># 允许本地 IP（localhost, 127.0.0.1）访问：</span>
 create user <span style="color:#cd5555">&#39;test&#39;</span>@<span style="color:#cd5555">&#39;localhost&#39;</span> identified by <span style="color:#cd5555">&#39;123456&#39;</span>;
-<span style="color:#228b22">#允许任何 IP 访问：</span>
+<span style="color:#228b22"># 允许任何 IP 访问：</span>
 create user <span style="color:#cd5555">&#39;test&#39;</span>@<span style="color:#cd5555">&#39;%&#39;</span> identified by <span style="color:#cd5555">&#39;123456&#39;</span>;
-<span style="color:#228b22">#刷新权限</span>
+<span style="color:#228b22"># 刷新权限</span>
 FLUSH PRIVILEGES;
 
-<span style="color:#228b22">#8.0版本后</span>
-<span style="color:#228b22">#创建账户</span>
+<span style="color:#228b22"># 8.0版本后</span>
+<span style="color:#228b22"># 创建账户</span>
 create user <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;172.16.10.203&#39;</span> identified by  <span style="color:#cd5555">&#39;password&#39;</span>
-<span style="color:#228b22">#赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人</span>
+<span style="color:#228b22"># 赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人</span>
 grant all privileges on *.* to <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;172.16.10.203&#39;</span> with grant option;
-<span style="color:#228b22">#改密码&amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里</span>
+<span style="color:#228b22"># 改密码&amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里</span>
 flush privileges;
 
-//修改host 将kris用作登录账户名
+<span style="color:#228b22"># 修改host 将kris用作登录账户名</span>
 update mysql.user <span style="color:#658b00">set</span> <span style="color:#00688b">host</span>=<span style="color:#cd5555">&#39;%&#39;</span> where <span style="color:#00688b">User</span>=<span style="color:#cd5555">&#34;Kris&#34;</span>
 </code></pre></div>
                     

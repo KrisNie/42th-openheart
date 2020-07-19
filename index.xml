@@ -582,7 +582,7 @@ hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt; server
 &lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/024/&#34;&gt;https://mogeko.me/2018/024/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;webhook&#34;&gt;Webhook&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;#本地public文件夹关联到GitHub&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 本地public文件夹关联到GitHub&lt;/span&gt;
 &lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; public
 git init
 git remote add origin https://github.com/Hyominn/42th-openheart.git
@@ -601,7 +601,8 @@ git remote add origin https://github.com/Hyominn/42th-openheart.git
 git pull origin master
 
 
-&lt;span style=&#34;color:#228b22&#34;&gt;#创建目录&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建目录 webhook目录需要创建在当前项目路径下&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 如 /usr/project/hugoblog/webhook&lt;/span&gt;
 mkdir webhook
 &lt;span style=&#34;color:#228b22&#34;&gt;#进入目录&lt;/span&gt;
 &lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; webhook
@@ -631,7 +632,7 @@ handler.on(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;push&amp;#39;&lt;/
     &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;let&lt;/span&gt; currentTime = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;Date&lt;/span&gt;();
     console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\n--&amp;gt; &amp;#39;&lt;/span&gt; + currentTime.toLocaleString());
     console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Received a push event for %s to %s&amp;#39;&lt;/span&gt;, event.payload.repository.name, event.payload.ref);
-    exec(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;sh ./webhook/git_pull.sh&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (error, stdout, stderr) {
+    exec(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;sh git_pull.sh&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (error, stdout, stderr) {
         &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt;(error) {
             console.error(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;error:\n&amp;#39;&lt;/span&gt; + error);
             &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt;;
@@ -653,7 +654,26 @@ location /webhook {
 &lt;p&gt;必须选择‘application/json’,否则不起作用&lt;/p&gt;
 &lt;p&gt;‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
 一定要和脚本中设置一致&lt;/p&gt;
-- https://www.openheart.icu/technical/hugo/ - ALL RIGHTS RESERVED KRIS NIE</description>
+&lt;h1 id=&#34;pv-uv&#34;&gt;pv uv&lt;/h1&gt;
+&lt;p&gt;两行代码 搞定计数：&lt;a href=&#34;http://busuanzi.ibruce.info/&#34;&gt;不蒜子&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 网站head引用 --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- PV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_pv&amp;#34;&lt;/span&gt;&amp;gt;
+    本站总访问量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- UV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_uv&amp;#34;&lt;/span&gt;&amp;gt;
+  本站访客数&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_uv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;人次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 单页PV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_page_pv&amp;#34;&lt;/span&gt;&amp;gt;
+  本文总阅读量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_page_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/hugo/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -666,15 +686,15 @@ location /webhook {
         <guid>https://www.openheart.icu/technical/linux/</guid>
         <description>42th openheart https://www.openheart.icu/technical/linux/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;chown -R nginx:users ./*
 
-&lt;span style=&#34;color:#228b22&#34;&gt;#查看当前文件夹下权限&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看当前文件夹下权限&lt;/span&gt;
 ls -l
 
 netstat -npa | grep &lt;span style=&#34;color:#b452cd&#34;&gt;9000&lt;/span&gt;
 
-&lt;span style=&#34;color:#228b22&#34;&gt;#查看当前路径&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看当前路径&lt;/span&gt;
 &lt;span style=&#34;color:#658b00&#34;&gt;pwd&lt;/span&gt;
 
-&lt;span style=&#34;color:#228b22&#34;&gt;#安装git&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 安装git&lt;/span&gt;
 yum -y install git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/linux/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
@@ -693,7 +713,7 @@ yum -y install git
 &lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
 git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git*
 
- &lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
 &lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
 git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git*
 

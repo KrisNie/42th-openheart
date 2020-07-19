@@ -579,6 +579,28 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#pv-uv" onclick="onNavClick(`#pv-uv-nav`)" id="pv-uv-nav">
+									pv uv
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -1025,6 +1047,28 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#pv-uv" onclick="onNavClick(`#pv-uv-nav`)" id="pv-uv-nav">
+									pv uv
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -1117,9 +1161,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            4 min
+                            5 min
                             
-                            38 s.
+                            52 s.
                         
                     </div>
                 </div>
@@ -1271,7 +1315,7 @@ hugo <span style="color:#658b00">help</span> server
 <li><a href="https://mogeko.me/2018/024/">https://mogeko.me/2018/024/</a></li>
 </ul>
 <h1 id="webhook">Webhook</h1>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#228b22">#本地public文件夹关联到GitHub</span>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#228b22"># 本地public文件夹关联到GitHub</span>
 <span style="color:#658b00">cd</span> public
 git init
 git remote add origin https://github.com/Hyominn/42th-openheart.git
@@ -1290,7 +1334,8 @@ git remote add origin https://github.com/Hyominn/42th-openheart.git
 git pull origin master
 
 
-<span style="color:#228b22">#创建目录</span>
+<span style="color:#228b22"># 创建目录 webhook目录需要创建在当前项目路径下</span>
+<span style="color:#228b22"># 如 /usr/project/hugoblog/webhook</span>
 mkdir webhook
 <span style="color:#228b22">#进入目录</span>
 <span style="color:#658b00">cd</span> webhook
@@ -1320,7 +1365,7 @@ handler.on(<span style="color:#cd5555">&#39;push&#39;</span>, <span style="color
     <span style="color:#8b008b;font-weight:bold">let</span> currentTime = <span style="color:#8b008b;font-weight:bold">new</span> <span style="color:#658b00">Date</span>();
     console.log(<span style="color:#cd5555">&#39;\n--&gt; &#39;</span> + currentTime.toLocaleString());
     console.log(<span style="color:#cd5555">&#39;Received a push event for %s to %s&#39;</span>, event.payload.repository.name, event.payload.ref);
-    exec(<span style="color:#cd5555">&#39;sh ./webhook/git_pull.sh&#39;</span>, <span style="color:#8b008b;font-weight:bold">function</span> (error, stdout, stderr) {
+    exec(<span style="color:#cd5555">&#39;sh git_pull.sh&#39;</span>, <span style="color:#8b008b;font-weight:bold">function</span> (error, stdout, stderr) {
         <span style="color:#8b008b;font-weight:bold">if</span>(error) {
             console.error(<span style="color:#cd5555">&#39;error:\n&#39;</span> + error);
             <span style="color:#8b008b;font-weight:bold">return</span>;
@@ -1342,7 +1387,26 @@ location /webhook {
 <p>必须选择‘application/json’,否则不起作用</p>
 <p>‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
 一定要和脚本中设置一致</p>
+<h1 id="pv-uv">pv uv</h1>
+<p>两行代码 搞定计数：<a href="http://busuanzi.ibruce.info/">不蒜子</a></p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#228b22">&lt;!-- 网站head引用 --&gt;</span>
+&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">async</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
 
+<span style="color:#228b22">&lt;!-- PV --&gt;</span>
+&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_container_site_pv&#34;</span>&gt;
+    本站总访问量&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_value_site_pv&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;次
+&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
+
+<span style="color:#228b22">&lt;!-- UV --&gt;</span>
+&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_container_site_uv&#34;</span>&gt;
+  本站访客数&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_value_site_uv&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;人次
+&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
+
+<span style="color:#228b22">&lt;!-- 单页PV --&gt;</span>
+&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_container_page_pv&#34;</span>&gt;
+  本文总阅读量&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_value_page_pv&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;次
+&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
+</code></pre></div>
                     
                     <HR width="100%" id="EOF">
                     <p style="color:#777;">

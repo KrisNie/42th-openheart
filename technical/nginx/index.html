@@ -239,6 +239,77 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
     <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
 
 
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#common-operation" onclick="onNavClick(`#common-operation-nav`)" id="common-operation-nav">
+									Common Operation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%ae%be%e7%bd%ae%e4%ba%8c%e7%ba%a7%e5%9f%9f%e5%90%8d" onclick="onNavClick(`#设置二级域名-nav`)" id="设置二级域名-nav">
+									设置二级域名
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%bc%ba%e5%88%b6%e6%b5%8f%e8%a7%88%e5%99%a8%e4%bd%bf%e7%94%a8%e6%9c%ac%e5%9c%b0%e7%bc%93%e5%ad%98" onclick="onNavClick(`#强制浏览器使用本地缓存-nav`)" id="强制浏览器使用本地缓存-nav">
+									强制浏览器使用本地缓存
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
 </div>
     
     <div class="pagination">
@@ -342,6 +413,77 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
             <div class="toc">
 
 
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#common-operation" onclick="onNavClick(`#common-operation-nav`)" id="common-operation-nav">
+									Common Operation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%ae%be%e7%bd%ae%e4%ba%8c%e7%ba%a7%e5%9f%9f%e5%90%8d" onclick="onNavClick(`#设置二级域名-nav`)" id="设置二级域名-nav">
+									设置二级域名
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%bc%ba%e5%88%b6%e6%b5%8f%e8%a7%88%e5%99%a8%e4%bd%bf%e7%94%a8%e6%9c%ac%e5%9c%b0%e7%bc%93%e5%ad%98" onclick="onNavClick(`#强制浏览器使用本地缓存-nav`)" id="强制浏览器使用本地缓存-nav">
+									强制浏览器使用本地缓存
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
 </div>
             
         </div>
@@ -433,7 +575,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             1 min
                             
-                            1 second.
+                            2 s.
                         
                     </div>
                 </div>
@@ -443,7 +585,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 <div class="post-body" v-pre>
                 
-                    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#00688b">$sudo</span> nginx
+                    <h2 id="common-operation">Common Operation</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#00688b">$sudo</span> nginx
 
 sudo pkill -f nginx &amp; <span style="color:#658b00">wait</span> <span style="color:#00688b">$!</span>
 
@@ -453,9 +596,9 @@ sudo systemctl restart nginx
 
 nginx -c /etc/nginx/nginx.conf
 
-<span style="color:#228b22">#重启服务</span>
+<span style="color:#228b22"># 重启服务</span>
 nginx -s reload
-</code></pre></div><p>设置二级域名</p>
+</code></pre></div><h2 id="设置二级域名">设置二级域名</h2>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">server<span style="color:#bbb"> </span>{<span style="color:#bbb">
 </span><span style="color:#bbb">    </span>listen<span style="color:#bbb">       </span><span style="color:#b452cd">80</span>;<span style="color:#bbb">
 </span><span style="color:#bbb">    </span>server_name<span style="color:#bbb">  </span>site42.openheart.icu;<span style="color:#bbb">
@@ -463,9 +606,9 @@ nginx -s reload
 </span><span style="color:#bbb">    </span>root<span style="color:#bbb">         </span>/usr/project/openheart;<span style="color:#bbb">
 </span><span style="color:#bbb">    </span>}<span style="color:#bbb">
 </span><span style="color:#bbb"></span>}<span style="color:#bbb">
-</span></code></pre></div><p>强制浏览器使用本地缓存</p>
+</span></code></pre></div><h2 id="强制浏览器使用本地缓存">强制浏览器使用本地缓存</h2>
 <p>cache-control/expires</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#228b22">#nginx.conf 中配置</span><span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#228b22"># nginx.conf 中配置</span><span style="color:#bbb">
 </span><span style="color:#bbb"></span>location<span style="color:#bbb"> </span>~<span style="color:#bbb"> </span>.<span style="color:#1e889b">*\.(gif|jpg|jpeg|png|bmp|swf)$</span><span style="color:#bbb">
 </span><span style="color:#bbb"></span>{<span style="color:#bbb">
 </span><span style="color:#bbb">		</span>expires<span style="color:#bbb"> </span>30d;<span style="color:#bbb">
