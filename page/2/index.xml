@@ -116,7 +116,7 @@ sudo systemctl restart nginx
 nginx -c /etc/nginx/nginx.conf
 
 &lt;span style=&#34;color:#228b22&#34;&gt;# 重启服务&lt;/span&gt;
-nginx -s reload
+
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置二级域名&#34;&gt;设置二级域名&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;server&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;{&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;listen&lt;span style=&#34;color:#bbb&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#b452cd&#34;&gt;80&lt;/span&gt;;&lt;span style=&#34;color:#bbb&#34;&gt;
