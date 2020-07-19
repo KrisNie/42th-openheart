@@ -636,7 +636,7 @@ location /webhook {
   proxy_pass http://127.0.0.1:7777;  
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github配置&#34;&gt;Github配置&lt;/h2&gt;
-&lt;p&gt;&amp;lsquo;webhook&amp;rsquo;即 ‘github_webhook.js’ 中配置的path，如果你配置了cloundflare代理来实现https请求，那这里最好设置成&lt;code&gt;http://[ip]:[port]/webhook&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;webhook&amp;rsquo;即 ‘github_webhook.js’ 中配置的path，比如：&lt;code&gt;https://www.openheart.icu/webhook&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;必须选择‘application/json’,否则不起作用&lt;/p&gt;
 &lt;p&gt;‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
 一定要和脚本中设置一致&lt;/p&gt;
