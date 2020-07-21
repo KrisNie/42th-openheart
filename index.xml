@@ -6,56 +6,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 21 Jul 2020 21:15:51 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2020 20:28:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-        <item>
-        <title>剑指 Offer 46. 把数字翻译成字符串</title>
-        <link>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</link>
-        <pubDate>Tue, 21 Jul 2020 21:15:51 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</guid>
-        <description>42th openheart https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/ -&lt;h1 id=&#34;把数字翻译成字符串httpsleetcode-cncomproblemsba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/&#34;&gt;把数字翻译成字符串&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。&lt;/p&gt;
-&lt;p&gt;eg:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: 12258
-输出: 5
-解释: 12258有5种不同的翻译，分别是&lt;code&gt;bccfi&lt;/code&gt;, &lt;code&gt;bwfi&lt;/code&gt;, &lt;code&gt;bczi&lt;/code&gt;, &lt;code&gt;mcfi&lt;/code&gt;和&lt;code&gt;mzi&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;提示：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;0 &amp;lt;= num &amp;lt; 2&lt;!-- raw HTML omitted --&gt;31&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;动态规划&#34;&gt;动态规划&lt;/h2&gt;
-&lt;p&gt;拿示例看&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;首先考虑每个数字单独翻译的情况，即翻译&lt;code&gt;[1,2,2,4,8]&lt;/code&gt;，结果为&lt;code&gt;bccfi&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可以将数字拼接为两位的情况，&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;[12,2,4,8]&lt;/code&gt; &lt;code&gt;mcfi&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[12,24,8]&lt;/code&gt; &lt;code&gt;mzi&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[12,2,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[1,22,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[1,22,4,8]&lt;/code&gt; &lt;code&gt;bwfi&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[1,2,24,8]&lt;/code&gt; &lt;code&gt;bczi&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[1,2,2,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;归纳规则：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可以单独作为一位来翻译&lt;/li&gt;
-&lt;li&gt;如果第 &lt;code&gt;i−1&lt;/code&gt; 位和第 &lt;code&gt;i&lt;/code&gt; 位组成的数字在 10 到 25 之间，可以把这两位连起来翻译&lt;/li&gt;
-&lt;/ul&gt;
-- https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
     
     
     
@@ -101,6 +54,53 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 - https://www.openheart.icu/technical/oracle/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>剑指 Offer 46. 把数字翻译成字符串</title>
+        <link>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</link>
+        <pubDate>Tue, 21 Jul 2020 19:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</guid>
+        <description>42th openheart https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/ -&lt;h1 id=&#34;把数字翻译成字符串httpsleetcode-cncomproblemsba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/&#34;&gt;把数字翻译成字符串&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: 12258
+输出: 5
+解释: 12258有5种不同的翻译，分别是&lt;code&gt;bccfi&lt;/code&gt;, &lt;code&gt;bwfi&lt;/code&gt;, &lt;code&gt;bczi&lt;/code&gt;, &lt;code&gt;mcfi&lt;/code&gt;和&lt;code&gt;mzi&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;提示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0 &amp;lt;= num &amp;lt; 2&lt;!-- raw HTML omitted --&gt;31&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;动态规划&#34;&gt;动态规划&lt;/h2&gt;
+&lt;p&gt;拿示例看&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先考虑每个数字单独翻译的情况，即翻译&lt;code&gt;[1,2,2,4,8]&lt;/code&gt;，结果为&lt;code&gt;bccfi&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以将数字拼接为两位的情况，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[12,2,4,8]&lt;/code&gt; &lt;code&gt;mcfi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[12,24,8]&lt;/code&gt; &lt;code&gt;mzi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[12,2,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,22,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,22,4,8]&lt;/code&gt; &lt;code&gt;bwfi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,2,24,8]&lt;/code&gt; &lt;code&gt;bczi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,2,2,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;归纳规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以单独作为一位来翻译&lt;/li&gt;
+&lt;li&gt;如果第 &lt;code&gt;i−1&lt;/code&gt; 位和第 &lt;code&gt;i&lt;/code&gt; 位组成的数字在 10 到 25 之间，可以把这两位连起来翻译&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

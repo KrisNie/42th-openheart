@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 21 Jul 2020 21:15:51 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2020 19:28:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/tags/%E5%89%91%E6%8C%87-offer/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>剑指 Offer 46. 把数字翻译成字符串</title>
       <link>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</link>
-      <pubDate>Tue, 21 Jul 2020 21:15:51 +0000</pubDate>
+      <pubDate>Tue, 21 Jul 2020 19:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</guid>
       <description>把数字翻译成字符串 给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。
