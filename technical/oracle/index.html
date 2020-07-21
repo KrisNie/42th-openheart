@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>MySQL</title>
+<title>Oracle</title>
 
 
 
@@ -10,26 +10,26 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="CentOS7 install MySQL">
+<meta name="description" content="Oracle">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content="MySQL" />
-<meta property="og:description" content="CentOS7 install MySQL" />
+<meta property="og:title" content="Oracle" />
+<meta property="og:description" content="Oracle" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.openheart.icu/technical/mysql/" />
-<meta property="article:published_time" content="2020-07-15T23:28:00+00:00" />
-<meta property="article:modified_time" content="2020-07-15T23:28:00+00:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:url" content="https://www.openheart.icu/technical/oracle/" />
+<meta property="article:published_time" content="2020-07-21T20:28:00+00:00" />
+<meta property="article:modified_time" content="2020-07-21T21:15:51+00:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MySQL"/>
-<meta name="twitter:description" content="CentOS7 install MySQL"/>
+<meta name="twitter:title" content="Oracle"/>
+<meta name="twitter:description" content="Oracle"/>
 
 
 
@@ -262,8 +262,26 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#install-mysql" onclick="onNavClick(`#install-mysql-nav`)" id="install-mysql-nav">
-									Install MySQL
+								<a href="#common-operation" onclick="onNavClick(`#common-operation-nav`)" id="common-operation-nav">
+									Common Operation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#optimize" onclick="onNavClick(`#optimize-nav`)" id="optimize-nav">
+									Optimize
 								</a>
 							</li>
 						
@@ -284,8 +302,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%87%86%e5%a4%87%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#准备操作-nav`)" id="准备操作-nav">
-									准备操作
+								<a href="#%e7%b4%a2%e5%bc%95%e5%a4%b1%e6%95%88" onclick="onNavClick(`#索引失效-nav`)" id="索引失效-nav">
+									索引失效
 								</a>
 							</li>
 						
@@ -302,8 +320,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%ae%89%e8%a3%85mysql" onclick="onNavClick(`#安装mysql-nav`)" id="安装mysql-nav">
-									安装MySQL
+								<a href="#%e5%88%86%e5%ba%93-%e5%88%86%e8%a1%a8-%e5%88%86%e5%8c%ba" onclick="onNavClick(`#分库-分表-分区-nav`)" id="分库-分表-分区-nav">
+									分库 分表 分区
 								</a>
 							</li>
 						
@@ -320,8 +338,48 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#mysql%e5%88%9d%e5%a7%8b%e5%8c%96%e8%ae%be%e7%bd%ae" onclick="onNavClick(`#mysql初始化设置-nav`)" id="mysql初始化设置-nav">
-									MySQL初始化设置
+								<a href="#%e8%a7%86%e5%9b%be%e4%bc%98%e5%8c%96" onclick="onNavClick(`#视图优化-nav`)" id="视图优化-nav">
+									视图优化
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e8%a1%a8%e5%a2%9e%e5%8a%a0%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#基表增加索引-nav`)" id="基表增加索引-nav">
+									基表增加索引
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%87%8d%e6%96%b0%e8%bf%9b%e8%a1%8c%e8%a1%a8%e5%88%86%e6%9e%90" onclick="onNavClick(`#重新进行表分析-nav`)" id="重新进行表分析-nav">
+									重新进行表分析
 								</a>
 							</li>
 						
@@ -454,8 +512,26 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#install-mysql" onclick="onNavClick(`#install-mysql-nav`)" id="install-mysql-nav">
-									Install MySQL
+								<a href="#common-operation" onclick="onNavClick(`#common-operation-nav`)" id="common-operation-nav">
+									Common Operation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#optimize" onclick="onNavClick(`#optimize-nav`)" id="optimize-nav">
+									Optimize
 								</a>
 							</li>
 						
@@ -476,8 +552,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%87%86%e5%a4%87%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#准备操作-nav`)" id="准备操作-nav">
-									准备操作
+								<a href="#%e7%b4%a2%e5%bc%95%e5%a4%b1%e6%95%88" onclick="onNavClick(`#索引失效-nav`)" id="索引失效-nav">
+									索引失效
 								</a>
 							</li>
 						
@@ -494,8 +570,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%ae%89%e8%a3%85mysql" onclick="onNavClick(`#安装mysql-nav`)" id="安装mysql-nav">
-									安装MySQL
+								<a href="#%e5%88%86%e5%ba%93-%e5%88%86%e8%a1%a8-%e5%88%86%e5%8c%ba" onclick="onNavClick(`#分库-分表-分区-nav`)" id="分库-分表-分区-nav">
+									分库 分表 分区
 								</a>
 							</li>
 						
@@ -512,8 +588,48 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#mysql%e5%88%9d%e5%a7%8b%e5%8c%96%e8%ae%be%e7%bd%ae" onclick="onNavClick(`#mysql初始化设置-nav`)" id="mysql初始化设置-nav">
-									MySQL初始化设置
+								<a href="#%e8%a7%86%e5%9b%be%e4%bc%98%e5%8c%96" onclick="onNavClick(`#视图优化-nav`)" id="视图优化-nav">
+									视图优化
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e8%a1%a8%e5%a2%9e%e5%8a%a0%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#基表增加索引-nav`)" id="基表增加索引-nav">
+									基表增加索引
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%87%8d%e6%96%b0%e8%bf%9b%e8%a1%8c%e8%a1%a8%e5%88%86%e6%9e%90" onclick="onNavClick(`#重新进行表分析-nav`)" id="重新进行表分析-nav">
+									重新进行表分析
 								</a>
 							</li>
 						
@@ -579,16 +695,16 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
             >
                 <div class="post-title">
-                    MySQL
+                    Oracle
                     
                     <div class="post-subtitle">
-                        CentOS7 install MySQL
+                        Oracle
                     </div>
                     
                     <div class="post-meta">
                         
                         <time itemprop="datePublished">
-                            2020-07-15 23:28
+                            2020-07-21 20:28
                         </time>
                         
 
@@ -618,7 +734,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             2 min
                             
-                            33 s.
+                            4 s.
                         
                     </div>
                 </div>
@@ -628,86 +744,46 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 <div class="post-body" v-pre>
                 
-                    <h1 id="install-mysql">Install MySQL</h1>
-<h2 id="准备操作">准备操作</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lsb_release -a						<span style="color:#228b22"># 查看操作系统版本</span>
-<span style="color:#228b22"># LSB Version:	:core-4.1-amd64:core-4.1-noarch</span>
-<span style="color:#228b22"># Distributor ID:	CentOS</span>
-<span style="color:#228b22"># Description:	CentOS Linux release 7.8.2003 (Core)</span>
-<span style="color:#228b22"># Release:	7.8.2003</span>
-<span style="color:#228b22"># Codename:	Core</span>
+                    <h1 id="common-operation">Common Operation</h1>
+<h1 id="optimize">Optimize</h1>
+<h2 id="索引失效">索引失效</h2>
+<p>SQL在<code>WHERE</code>条件里面使用了<code>IN</code>导致有一个关联表的索引失效，Oracle版本为11g</p>
+<p>条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引</p>
+<p>like查询是以%开头</p>
+<p>如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引</p>
+<h2 id="分库-分表-分区">分库 分表 分区</h2>
+<h2 id="视图优化">视图优化</h2>
+<h3 id="基表增加索引">基表增加索引</h3>
+<p>对基表中，视图查询SQL的<code>WHERE</code>条件中用到的字段增加索引</p>
+<h3 id="重新进行表分析">重新进行表分析</h3>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">-- 视图查询慢
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">analyze</span> <span style="color:#8b008b;font-weight:bold">table</span> <span style="color:#8b008b;font-weight:bold">table_name</span> <span style="color:#8b008b;font-weight:bold">delete</span> <span style="color:#8b008b;font-weight:bold">statistics</span>;
+    <span style="color:#8b008b;font-weight:bold">analyze</span> <span style="color:#8b008b;font-weight:bold">table</span> <span style="color:#8b008b;font-weight:bold">table_name</span> compute <span style="color:#8b008b;font-weight:bold">statistics</span>;
 
-cat /etc/redhat-release		<span style="color:#228b22"># 查看Linux内核版本</span>
-<span style="color:#228b22"># CentOS Linux release 7.8.2003 (Core)</span>
+<span style="color:#228b22">-- 在当前用户下执行
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">select</span> <span style="color:#cd5555">&#39;analyze table &#39;</span>||<span style="color:#8b008b;font-weight:bold">table_name</span>||<span style="color:#cd5555">&#39; compute statistics;&#39;</span> <span style="color:#8b008b;font-weight:bold">from</span> user_tables <span style="color:#8b008b;font-weight:bold">where</span> <span style="color:#8b008b;font-weight:bold">table_name</span> <span style="color:#8b008b;font-weight:bold">IN</span> (<span style="color:#cd5555">&#39;tablename&#39;</span>);   
 
-getconf LONG_BIT					<span style="color:#228b22"># 查看系统位数</span>
-<span style="color:#228b22"># 64</span>
+<span style="color:#228b22">-- 得到如下语句，将这些语句整体执行一遍
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">analyze</span> <span style="color:#8b008b;font-weight:bold">table</span> PRODUCT_REF_LIST_NESTEDTAB compute <span style="color:#8b008b;font-weight:bold">statistics</span>;
+    <span style="color:#228b22">-- ....
+</span><span style="color:#228b22"></span>
+<span style="color:#228b22">-- 查看统计信息
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">select</span> <span style="color:#8b008b;font-weight:bold">table_name</span>,num_rows <span style="color:#8b008b;font-weight:bold">from</span> user_tables;
+</code></pre></div><p>分析的结果被Oracle用于基于成本的优化生成更好的查询计划。</p>
+<p>遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。</p>
+<ul>
+<li>
+<p>如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。</p>
+</li>
+<li>
+<p>如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。</p>
+</li>
+</ul>
 
-yum -y update							<span style="color:#228b22"># 更新 yum</span>
-rpm -qa | grep mysql			<span style="color:#228b22"># 查看是否安装过MySQL</span>
-</code></pre></div><h2 id="安装mysql">安装MySQL</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 此处版本为在CentOS7下安装MySQL8.0</span>
-wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-
-<span style="color:#228b22"># 安装</span>
-sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-
-<span style="color:#228b22"># 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）</span>
-<span style="color:#228b22">#mysql80-community-release-el7-3.noarch</span>
-
-<span style="color:#228b22"># 禁用 mysql8.0:</span>
-sudo yum-config-manager --disable mysql80-community
-
-<span style="color:#228b22"># 启用 mysql8.0</span>
-sudo yum-config-manager --enable mysql80-community
-
-<span style="color:#228b22"># 校验当前启用(enable)的 mysql 版本是否为 5.7:</span>
-yum repolist enabled | grep mysql
-<span style="color:#228b22"># mysql-connectors-community/x86_64 MySQL Connectors Community                 165</span>
-<span style="color:#228b22"># mysql-tools-community/x86_64      MySQL Tools Community                      115</span>
-<span style="color:#228b22"># mysql80-community/x86_64          MySQL 8.0 Community Server                 193</span>
-
-<span style="color:#228b22"># 安装MySQL</span>
-sudo yum install -y mysql-community-server
-
-<span style="color:#228b22"># 启动 mysql 服务</span>
-sudo service mysqld start
-
-<span style="color:#228b22"># 查看 mysql 服务状态</span>
-sudo service mysqld status
-</code></pre></div><h2 id="mysql初始化设置">MySQL初始化设置</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 查看初始密码</span>
-sudo grep <span style="color:#cd5555">&#39;temporary password&#39;</span> /var/log/mysqld.log
-
-<span style="color:#228b22"># 使用初始密码进行登录</span>
-mysql -u root -p
-
-<span style="color:#228b22"># 登录成功之后设置新密码</span>
-ALTER USER <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;localhost&#39;</span> IDENTIFIED BY <span style="color:#cd5555">&#39;123456&#39;</span>;
-
-<span style="color:#228b22"># 创建用户</span>
-<span style="color:#228b22"># 允许本地 IP（localhost, 127.0.0.1）访问：</span>
-create user <span style="color:#cd5555">&#39;test&#39;</span>@<span style="color:#cd5555">&#39;localhost&#39;</span> identified by <span style="color:#cd5555">&#39;123456&#39;</span>;
-<span style="color:#228b22"># 允许任何 IP 访问：</span>
-create user <span style="color:#cd5555">&#39;test&#39;</span>@<span style="color:#cd5555">&#39;%&#39;</span> identified by <span style="color:#cd5555">&#39;123456&#39;</span>;
-<span style="color:#228b22"># 刷新权限</span>
-FLUSH PRIVILEGES;
-
-<span style="color:#228b22"># 8.0版本后</span>
-<span style="color:#228b22"># 创建账户</span>
-create user <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;172.16.10.203&#39;</span> identified by  <span style="color:#cd5555">&#39;password&#39;</span>
-<span style="color:#228b22"># 赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人</span>
-grant all privileges on *.* to <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;172.16.10.203&#39;</span> with grant option;
-<span style="color:#228b22"># 改密码&amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里</span>
-flush privileges;
-
-<span style="color:#228b22"># 修改host 将kris用作登录账户名</span>
-update mysql.user <span style="color:#658b00">set</span> <span style="color:#00688b">host</span>=<span style="color:#cd5555">&#39;%&#39;</span> where <span style="color:#00688b">User</span>=<span style="color:#cd5555">&#34;Kris&#34;</span>
-</code></pre></div>
                     
                     <HR width="100%" id="EOF">
                     <p style="color:#777;">
-                        Last modified on 2020-07-15 23:28
+                        Last modified on 2020-07-21 21:15
                         &nbsp;
                         <span id="busuanzi_container_page_pv" style="color:#777;">
                             This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
@@ -722,14 +798,14 @@ update mysql.user <span style="color:#658b00">set</span> <span style="color:#006
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="https://www.openheart.icu/technical/markdown/">
-			Next<br>Markdown
+                <a class="newer-posts" href="https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/">
+			Next<br>剑指 Offer 46. 把数字翻译成字符串
                 </a>
                 
                 
                 
-                <a class="older-posts" href="https://www.openheart.icu/technical/nginx/">
-			Previous<br>Nginx
+                <a class="older-posts" href="https://www.openheart.icu/technical/dns/">
+			Previous<br>DNS
                 </a>
                 
             </nav>

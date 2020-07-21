@@ -6,9 +6,102 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sun, 19 Jul 2020 12:50:56 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2020 21:15:51 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>剑指 Offer 46. 把数字翻译成字符串</title>
+        <link>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</link>
+        <pubDate>Tue, 21 Jul 2020 21:15:51 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</guid>
+        <description>42th openheart https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/ -&lt;h1 id=&#34;把数字翻译成字符串httpsleetcode-cncomproblemsba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/&#34;&gt;把数字翻译成字符串&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: 12258
+输出: 5
+解释: 12258有5种不同的翻译，分别是&lt;code&gt;bccfi&lt;/code&gt;, &lt;code&gt;bwfi&lt;/code&gt;, &lt;code&gt;bczi&lt;/code&gt;, &lt;code&gt;mcfi&lt;/code&gt;和&lt;code&gt;mzi&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;提示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0 &amp;lt;= num &amp;lt; 2&lt;!-- raw HTML omitted --&gt;31&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;动态规划&#34;&gt;动态规划&lt;/h2&gt;
+&lt;p&gt;拿示例看&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先考虑每个数字单独翻译的情况，即翻译&lt;code&gt;[1,2,2,4,8]&lt;/code&gt;，结果为&lt;code&gt;bccfi&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以将数字拼接为两位的情况，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[12,2,4,8]&lt;/code&gt; &lt;code&gt;mcfi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[12,24,8]&lt;/code&gt; &lt;code&gt;mzi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[12,2,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,22,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,22,4,8]&lt;/code&gt; &lt;code&gt;bwfi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,2,24,8]&lt;/code&gt; &lt;code&gt;bczi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,2,2,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;归纳规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以单独作为一位来翻译&lt;/li&gt;
+&lt;li&gt;如果第 &lt;code&gt;i−1&lt;/code&gt; 位和第 &lt;code&gt;i&lt;/code&gt; 位组成的数字在 10 到 25 之间，可以把这两位连起来翻译&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Oracle</title>
+        <link>https://www.openheart.icu/technical/oracle/</link>
+        <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/technical/oracle/</guid>
+        <description>42th openheart https://www.openheart.icu/technical/oracle/ -&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
+&lt;h1 id=&#34;optimize&#34;&gt;Optimize&lt;/h1&gt;
+&lt;h2 id=&#34;索引失效&#34;&gt;索引失效&lt;/h2&gt;
+&lt;p&gt;SQL在&lt;code&gt;WHERE&lt;/code&gt;条件里面使用了&lt;code&gt;IN&lt;/code&gt;导致有一个关联表的索引失效，Oracle版本为11g&lt;/p&gt;
+&lt;p&gt;条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引&lt;/p&gt;
+&lt;p&gt;like查询是以%开头&lt;/p&gt;
+&lt;p&gt;如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引&lt;/p&gt;
+&lt;h2 id=&#34;分库-分表-分区&#34;&gt;分库 分表 分区&lt;/h2&gt;
+&lt;h2 id=&#34;视图优化&#34;&gt;视图优化&lt;/h2&gt;
+&lt;h3 id=&#34;基表增加索引&#34;&gt;基表增加索引&lt;/h3&gt;
+&lt;p&gt;对基表中，视图查询SQL的&lt;code&gt;WHERE&lt;/code&gt;条件中用到的字段增加索引&lt;/p&gt;
+&lt;h3 id=&#34;重新进行表分析&#34;&gt;重新进行表分析&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;-- 视图查询慢
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;delete&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; compute &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;-- 在当前用户下执行
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;analyze table &amp;#39;&lt;/span&gt;||&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt;||&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39; compute statistics;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; user_tables &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;IN&lt;/span&gt; (&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;tablename&amp;#39;&lt;/span&gt;);   
+
+&lt;span style=&#34;color:#228b22&#34;&gt;-- 得到如下语句，将这些语句整体执行一遍
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; PRODUCT_REF_LIST_NESTEDTAB compute &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
+    &lt;span style=&#34;color:#228b22&#34;&gt;-- ....
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;-- 查看统计信息
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt;,num_rows &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; user_tables;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;分析的结果被Oracle用于基于成本的优化生成更好的查询计划。&lt;/p&gt;
+&lt;p&gt;遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/technical/oracle/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -172,7 +265,7 @@ struct 适用于作为经常使用的一些数据组合成的新类型。&lt;/p&
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;listt和t的区别是什么平时你如何进行选择dictionarytkey-tvalue是做什么的net-bcl中还有哪些常用的容器它们分别是如何实现的哪种数据结构分别是适用于哪些场景&#34;&gt;List&lt;!-- raw HTML omitted --&gt;和T[]的区别是什么，平时你如何进行选择？Dictionary&amp;lt;TKey, TValue&amp;gt;是做什么的？.NET BCL中还有哪些常用的容器？它们分别是如何实现的（哪种数据结构）？分别是适用于哪些场景？&lt;/h3&gt;
 &lt;p&gt;List&lt;!-- raw HTML omitted --&gt;长度不固定，动态变化，支持方法较多；T[]固定大小的泛型数组。&lt;/p&gt;
-&lt;p&gt;Dictionary&amp;lt;T Key, T Value&amp;gt;是泛型字典，提供一对一的关系；&lt;/p&gt;
+&lt;p&gt;Dictionary&amp;lt;TKey, TValue&amp;gt;是泛型字典，提供一对一的关系；&lt;/p&gt;
 &lt;p&gt;.Net BCL中常用的集合有Stack&lt;!-- raw HTML omitted --&gt;、Queue&lt;!-- raw HTML omitted --&gt;、LinkedList&lt;!-- raw HTML omitted --&gt;，对应的数据结构是栈、队列和链表。&lt;/p&gt;
 &lt;h3 id=&#34;抽象类和接口有什么区别使用时有什么需要注意的吗如何选择是定义一个完全抽象的抽象类还是接口什么是接口的显式实现为什么说它很重要&#34;&gt;抽象类和接口有什么区别？使用时有什么需要注意的吗？如何选择是定义一个“完全抽象”的抽象类，还是接口？什么是接口的“显式实现”？为什么说它很重要？&lt;/h3&gt;
 &lt;p&gt;抽象类不能实例化。
@@ -280,8 +373,36 @@ str1 is abc,str2 is ab
 &lt;h3 id=&#34;工作之外您看哪些技术相关的书网站社区项目等等您还接触哪些net以外的技术能和net或net中有针对性的部分做个对比吗&#34;&gt;工作之外您看哪些技术相关的书、网站、社区、项目等等？您还接触哪些.NET以外的技术，能和.NET或.NET中有针对性的部分做个对比吗？&lt;/h3&gt;
 &lt;h2 id=&#34;面试题&#34;&gt;面试题&lt;/h2&gt;
 &lt;h3 id=&#34;concurrentdictionary-or-dictionary&#34;&gt;ConcurrentDictionary or Dictionary&lt;/h3&gt;
+&lt;p&gt;ConcurrentDictionary是&lt;code&gt;System.Collections.Concurrent&lt;/code&gt;中线程安全的字典类&lt;/p&gt;
 &lt;h3 id=&#34;redis&#34;&gt;Redis&lt;/h3&gt;
-&lt;hr&gt;
+&lt;h3 id=&#34;高可用性和高可靠性&#34;&gt;高可用性和高可靠性&lt;/h3&gt;
+&lt;p&gt;Reliability和Availability分别对应可靠性和可用性, 这两个概念既有区别也有联系:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reliability定义为一个服务连续无故障运行的时间，无故障运行的时间越长，可靠性就越高。&lt;/li&gt;
+&lt;li&gt;Availiability定义为在足够长的时间里，比如一年的时间里，一个服务可用的时间，服务可用时间越长越好。一般用可服务时间除于总时间算出一个百分比，用百分比作为度量。比如一个服务如果有5个9的可用性，指的就是一年里99.999%时间里服务都是可用的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;有两个极端的例子可以很好的说明这两个概念的区别:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;假想一个服务，可靠性很高，平均来说可以稳定运行10年，但是一旦服务中断，要用一年的时间来恢复，那么它的可用性只有90%。&lt;/li&gt;
+&lt;li&gt;假想另一个服务，可靠性很差，运行10秒就会宕机，但是恢复服务只需要1ms, 那么它的可用性是99.99%&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;从这两个极端的例子可以看出，提高可用性有两条路:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一是提高可靠性，当然影响可靠性的原因有很多，包括硬件，软件，网络，运维等。但是有人做过统计，软件的bug是影响可靠性的最主要的因素。并且提高软件质量相较于使用更可靠的硬件也算成本较低的方式了，&lt;/li&gt;
+&lt;li&gt;二是减少恢复时间，一旦出现宕机，如果能在秒级恢复，那对业务影响是很小的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;高可用性&#34;&gt;高可用性&lt;/h4&gt;
+&lt;p&gt;高可用HA（High Availability）是分布式系统架构设计中必须考虑的因素之一，它通常是指，通过设计减少系统不能提供服务的时间。&lt;/p&gt;
+&lt;p&gt;方法论上，高可用是通过&lt;strong&gt;冗余+自动故障转移&lt;/strong&gt;来实现的。&lt;/p&gt;
+&lt;p&gt;整个互联网分层系统架构的高可用，又是通过每一层的&lt;strong&gt;冗余+自动故障转移&lt;/strong&gt;来综合实现的，具体的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;【客户端层】到【反向代理层】的高可用，是通过反向代理层的冗余实现的，常见实践是keepalived + virtual IP自动故障转移&lt;/li&gt;
+&lt;li&gt;【反向代理层】到【站点层】的高可用，是通过站点层的冗余实现的，常见实践是nginx与web-server之间的存活性探测与自动故障转移&lt;/li&gt;
+&lt;li&gt;【站点层】到【服务层】的高可用，是通过服务层的冗余实现的，常见实践是通过service-connection-pool来保证自动故障转移&lt;/li&gt;
+&lt;li&gt;【服务层】到【缓存层】的高可用，是通过缓存数据的冗余实现的，常见实践是缓存客户端双读双写，或者利用缓存集群的主从数据同步与sentinel保活与自动故障转移；更多的业务场景，对缓存没有高可用要求，可以使用缓存服务化来对调用方屏蔽底层复杂性&lt;/li&gt;
+&lt;li&gt;【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移&lt;/li&gt;
+&lt;li&gt;【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移&lt;/li&gt;
+&lt;/ol&gt;
 - https://www.openheart.icu/technical/dot-net-interview-questions/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -323,7 +444,7 @@ str1 is abc,str2 is ab
         <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
         <guid>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</guid>
-        <description>42th openheart https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ -&lt;h1 id=&#34;reverse-a-singly-linked-list&#34;&gt;Reverse a singly linked list.&lt;/h1&gt;
+        <description>42th openheart https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ -&lt;h1 id=&#34;reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/reverse-linked-list&#34;&gt;Reverse a singly linked list.&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Example:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
@@ -365,6 +486,25 @@ Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&lt;/p&gt;
 &lt;p&gt;时间复杂度：&lt;em&gt;O&lt;/em&gt;(n)&lt;/p&gt;
 &lt;p&gt;空间复杂度：&lt;em&gt;O&lt;/em&gt;(1)&lt;/p&gt;
 &lt;h2 id=&#34;递归&#34;&gt;递归&lt;/h2&gt;
+&lt;p&gt;将
+$$
+n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}→&amp;hellip;→n_m→∅
+$$
+转化为
+$$
+n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}←&amp;hellip;←n_m
+$$
+先转化原链表最后一个节点，然后依次转化直到n&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ListNode &lt;span style=&#34;color:#008b45&#34;&gt;reverseList&lt;/span&gt;(ListNode head) {
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (head == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt; || head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; head;
+    ListNode p = reverseList(head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;);
+    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = head;
+    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; p;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;时间复杂度分析-1&#34;&gt;时间复杂度分析&lt;/h3&gt;
+&lt;p&gt;时间复杂度：O(n)，假设 n 是列表的长度，那么时间复杂度为 O(n)。
+空间复杂度：O(n)，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。&lt;/p&gt;
 - https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -443,7 +583,7 @@ git config --global user.email johndoe@example.com
         <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
         <guid>https://www.openheart.icu/technical/hugo/</guid>
-        <description>42th openheart https://www.openheart.icu/technical/hugo/ -&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+        <description>42th openheart https://www.openheart.icu/technical/hugo/ -&lt;h1 id=&#34;install&#34;&gt;Install&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz
 
 cp ./hugo /usr/local/bin/
@@ -471,7 +611,7 @@ ls -l &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;
 hugo version
 Hugo Static Site Generator v0.74.1/extended darwin/amd64 BuildDate: unknown
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;quick-start-guide&#34;&gt;Quick start guide&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;quick-start-guide&#34;&gt;Quick start guide&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new site site42
 
 &lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
@@ -677,68 +817,6 @@ location /webhook {
   本文总阅读量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_page_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
 &amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/hugo/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Linux</title>
-        <link>https://www.openheart.icu/technical/linux/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/technical/linux/</guid>
-        <description>42th openheart https://www.openheart.icu/technical/linux/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;chown -R nginx:users ./*
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 查看当前文件夹下权限&lt;/span&gt;
-ls -l
-
-netstat -npa | grep &lt;span style=&#34;color:#b452cd&#34;&gt;9000&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 查看当前路径&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;pwd&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 安装git&lt;/span&gt;
-yum -y install git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/linux/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Mac Operation</title>
-        <link>https://www.openheart.icu/technical/mac/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/technical/mac/</guid>
-        <description>42th openheart https://www.openheart.icu/technical/mac/ -&lt;h2 id=&#34;brew使用国内镜像源不好使&#34;&gt;brew使用国内镜像源（不好使）&lt;/h2&gt;
-&lt;p&gt;中科大：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤一&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
-git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git*
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
-git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git*
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#步骤三&lt;/span&gt;
-brew update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;复原：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
-git remote set-url origin https://github.com/Homebrew/brew.git
-
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
-git remote set-url origin https://github.com/Homebrew/homebrew-core
-
-brew update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置item2代理&#34;&gt;配置item2代理&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 打开配置文件&lt;/span&gt;
-vim ~/.bash_profile 
-&lt;span style=&#34;color:#228b22&#34;&gt;# 如果用了`oh-my-zsh` 那么修改`~/.zshrc`&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 在后面新增配置&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;http_proxy&lt;/span&gt;=http://127.0.0.1:1087 &lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;https_proxy&lt;/span&gt;=&lt;span style=&#34;color:#00688b&#34;&gt;$http_proxy&lt;/span&gt; 
-&lt;span style=&#34;color:#228b22&#34;&gt;# 同理，可能执行 source ~/.zshrc&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;source&lt;/span&gt; ~/.bash_profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/mac/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

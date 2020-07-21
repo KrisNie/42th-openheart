@@ -262,7 +262,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#reverse-a-singly-linked-list" onclick="onNavClick(`#reverse-a-singly-linked-list-nav`)" id="reverse-a-singly-linked-list-nav">
+								<a href="#reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list" onclick="onNavClick(`#reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list-nav`)" id="reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list-nav">
 									Reverse a singly linked list.
 								</a>
 							</li>
@@ -330,6 +330,28 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 							<li>
 								<a href="#%e9%80%92%e5%bd%92" onclick="onNavClick(`#递归-nav`)" id="递归-nav">
 									递归
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e6%97%b6%e9%97%b4%e5%a4%8d%e6%9d%82%e5%ba%a6%e5%88%86%e6%9e%90-1" onclick="onNavClick(`#时间复杂度分析-1-nav`)" id="时间复杂度分析-1-nav">
+									时间复杂度分析
 								</a>
 							</li>
 						
@@ -462,7 +484,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#reverse-a-singly-linked-list" onclick="onNavClick(`#reverse-a-singly-linked-list-nav`)" id="reverse-a-singly-linked-list-nav">
+								<a href="#reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list" onclick="onNavClick(`#reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list-nav`)" id="reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list-nav">
 									Reverse a singly linked list.
 								</a>
 							</li>
@@ -530,6 +552,28 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 							<li>
 								<a href="#%e9%80%92%e5%bd%92" onclick="onNavClick(`#递归-nav`)" id="递归-nav">
 									递归
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e6%97%b6%e9%97%b4%e5%a4%8d%e6%9d%82%e5%ba%a6%e5%88%86%e6%9e%90-1" onclick="onNavClick(`#时间复杂度分析-1-nav`)" id="时间复杂度分析-1-nav">
+									时间复杂度分析
 								</a>
 							</li>
 						
@@ -629,9 +673,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            1 min
+                            2 min
                             
-                            7 s.
+                            12 s.
                         
                     </div>
                 </div>
@@ -641,7 +685,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 <div class="post-body" v-pre>
                 
-                    <h1 id="reverse-a-singly-linked-list">Reverse a singly linked list.</h1>
+                    <h1 id="reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list"><a href="https://leetcode-cn.com/problems/reverse-linked-list">Reverse a singly linked list.</a></h1>
 <p>Example:</p>
 <blockquote>
 <p>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
@@ -683,6 +727,25 @@ Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p>
 <p>时间复杂度：<em>O</em>(n)</p>
 <p>空间复杂度：<em>O</em>(1)</p>
 <h2 id="递归">递归</h2>
+<p>将
+$$
+n_1→&hellip;→n_{k−1}→n_k→n_{k+1}→&hellip;→n_m→∅
+$$
+转化为
+$$
+n_1→&hellip;→n_{k−1}→n_k→n_{k+1}←&hellip;←n_m
+$$
+先转化原链表最后一个节点，然后依次转化直到n<!-- raw HTML omitted -->1<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8b008b;font-weight:bold">public</span> ListNode <span style="color:#008b45">reverseList</span>(ListNode head) {
+    <span style="color:#8b008b;font-weight:bold">if</span> (head == <span style="color:#8b008b;font-weight:bold">null</span> || head.<span style="color:#658b00">next</span> == <span style="color:#8b008b;font-weight:bold">null</span>) <span style="color:#8b008b;font-weight:bold">return</span> head;
+    ListNode p = reverseList(head.<span style="color:#658b00">next</span>);
+    head.<span style="color:#658b00">next</span>.<span style="color:#658b00">next</span> = head;
+    head.<span style="color:#658b00">next</span> = <span style="color:#8b008b;font-weight:bold">null</span>;
+    <span style="color:#8b008b;font-weight:bold">return</span> p;
+}
+</code></pre></div><h3 id="时间复杂度分析-1">时间复杂度分析</h3>
+<p>时间复杂度：O(n)，假设 n 是列表的长度，那么时间复杂度为 O(n)。
+空间复杂度：O(n)，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。</p>
 
                     
                     <HR width="100%" id="EOF">

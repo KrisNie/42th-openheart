@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arithmetic on 42th openheart</title>
-    <link>https://www.openheart.icu/tags/arithmetic/</link>
-    <description>Recent content in Arithmetic on 42th openheart</description>
+    <title>剑指 Offer on 42th openheart</title>
+    <link>https://www.openheart.icu/tags/%E5%89%91%E6%8C%87-offer/</link>
+    <description>Recent content in 剑指 Offer on 42th openheart</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
     <lastBuildDate>Tue, 21 Jul 2020 21:15:51 +0000</lastBuildDate>
     
-	<atom:link href="https://www.openheart.icu/tags/arithmetic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.openheart.icu/tags/%E5%89%91%E6%8C%87-offer/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -27,24 +27,6 @@ eg:
   可以将数字拼接为两位的情况，
  [12,2,4,8] mcfi [12,24,8] mzi [12,2,48] 48&amp;gt;25 [1,22,48] 48&amp;gt;25 [1,22,4,8] bwfi [1,2,24,8] bczi [1,2,2,48] 48&amp;gt;25    归纳规则：
  可以单独作为一位来翻译 如果第 i−1 位和第 i 位组成的数字在 10 到 25 之间，可以把这两位连起来翻译  </description>
-    </item>
-    
-    <item>
-      <title>206. Reverse Linked List</title>
-      <link>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</link>
-      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</guid>
-      <description>Reverse a singly linked list. Example:
- Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL
- Follow up:
-A linked list can be reversed either iteratively or recursively. Could you implement both?
- 迭代 将
- 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
- 转化为
- NULL&amp;lt;-1&amp;lt;-2&amp;lt;-3&amp;lt;-4&amp;lt;-5
- 使用一个prev节点存储上一个节点（初始为NULL），将当前curr节点的next指向prev节点，prev节点存储curr节点，curr存储curr的原next节点，完成一次迭代。最后返回prev（最后的curr是原ListNode的NULL）
-/** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ public ListNode reverseList(ListNode head) { ListNode prev = null; ListNode curr = head; while (curr !</description>
     </item>
     
   </channel>

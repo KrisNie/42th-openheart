@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>MySQL</title>
+<title>Operation</title>
 
 
 
@@ -10,26 +10,25 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="CentOS7 install MySQL">
+<meta name="description" content="">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content="MySQL" />
-<meta property="og:description" content="CentOS7 install MySQL" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.openheart.icu/technical/mysql/" />
-<meta property="article:published_time" content="2020-07-15T23:28:00+00:00" />
-<meta property="article:modified_time" content="2020-07-15T23:28:00+00:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:title" content="Operation" />
+<meta property="og:description" content="My HomePage Description" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.openheart.icu/tags/operation/" />
+<meta property="og:updated_time" content="2020-07-21T21:15:51+00:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MySQL"/>
-<meta name="twitter:description" content="CentOS7 install MySQL"/>
+<meta name="twitter:title" content="Operation"/>
+<meta name="twitter:description" content="My HomePage Description"/>
 
 
 
@@ -70,31 +69,7 @@
 
 
 
-  
-    
-    <script src=".../js/toc-collapse.js"></script>
 
-  
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="/vendor/js/md5.min.js"></script>
-<script>
-  var gitalk = new Gitalk({
-  clientID: '78028e4d522031d4773c',
-  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
-  repo: '42th-openheart',
-  owner: 'Hyominn',
-  admin: ['Hyominn'],
-  id: md5(location.pathname),
-  distractionFreeMode: 'false'
-  });
-  window.onload = function () {
-        gitalk.render('gitalk-container')
-  }
-</script>
 
 
 
@@ -134,11 +109,9 @@
             
             
             
-                
             
             
-            
-            <a class="a-block nav-link-item active" href="/technical">
+            <a class="a-block nav-link-item false" href="/technical">
                 Technical
             </a>
             
@@ -186,9 +159,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/tags">
+            
+            <a class="a-block nav-link-item active" href="/tags">
                 Tags
             </a>
             
@@ -240,100 +215,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </div><div ref="extraContainer" class="extra-container">
     
     
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#install-mysql" onclick="onNavClick(`#install-mysql-nav`)" id="install-mysql-nav">
-									Install MySQL
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#%e5%87%86%e5%a4%87%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#准备操作-nav`)" id="准备操作-nav">
-									准备操作
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%ae%89%e8%a3%85mysql" onclick="onNavClick(`#安装mysql-nav`)" id="安装mysql-nav">
-									安装MySQL
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#mysql%e5%88%9d%e5%a7%8b%e5%8c%96%e8%ae%be%e7%bd%ae" onclick="onNavClick(`#mysql初始化设置-nav`)" id="mysql初始化设置-nav">
-									MySQL初始化设置
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -349,6 +230,24 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 brightness_7
             </i>
         </a>
+        
+        
+        
+            <div class="pagination-indicator">
+                <span style="text-align: center">
+                    2<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>2
+                </span>
+            </div>
+            
+            
+            <a class="pagination-action" href="/tags/operation/">
+                <i class="material-icons pagination-action-icon">
+                    chevron_left
+                </i>
+            </a>
+            
+
+            
         
         
     </div>
@@ -372,11 +271,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 
                 
-                    
                 
                 
-                
-                <a class="a-block drawer-menu-item active" href="/technical">
+                <a class="a-block drawer-menu-item false" href="/technical">
                     Technical
                 </a>
                 
@@ -424,107 +321,15 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/tags">
+                
+                <a class="a-block drawer-menu-item active" href="/tags">
                     Tags
                 </a>
                 
             
-            
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#install-mysql" onclick="onNavClick(`#install-mysql-nav`)" id="install-mysql-nav">
-									Install MySQL
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#%e5%87%86%e5%a4%87%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#准备操作-nav`)" id="准备操作-nav">
-									准备操作
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%ae%89%e8%a3%85mysql" onclick="onNavClick(`#安装mysql-nav`)" id="安装mysql-nav">
-									安装MySQL
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#mysql%e5%88%9d%e5%a7%8b%e5%8c%96%e8%ae%be%e7%bd%ae" onclick="onNavClick(`#mysql初始化设置-nav`)" id="mysql初始化设置-nav">
-									MySQL初始化设置
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
             
         </div>
     </div>
@@ -570,186 +375,374 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
-
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    MySQL
-                    
-                    <div class="post-subtitle">
-                        CentOS7 install MySQL
-                    </div>
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2020-07-15 23:28
-                        </time>
-                        
-
-                        
-                            <i class="material-icons" style="">folder</i>
-                                <a href="/categories/technical">Technical</a>
-                                &nbsp;
-                        
-
-                        
-                            <i class="material-icons" style="">label</i>
-                            
-                                <a href="/tags/operation">Operation</a>
-                                &nbsp;
-                            
-                                <a href="/tags/sql">SQL</a>
-                                &nbsp;
-                            
-                        
-                        
-                            <i class="material-icons" style="">schedule</i>
-                            
-
-                            
-                            
-
-                            
-                            2 min
-                            
-                            33 s.
-                        
+        <div class="post-item-wrapper post-item-wrapper-no-hover">
+            <div class="post-item post-item-no-gaps">
+                <div class="post-item-info-wrapper">
+                    <div class="post-item-title  post-item-title-small">
+                        <a href="https://www.openheart.icu/">42th openheart</a> / Operation
                     </div>
                 </div>
             </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <h1 id="install-mysql">Install MySQL</h1>
-<h2 id="准备操作">准备操作</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lsb_release -a						<span style="color:#228b22"># 查看操作系统版本</span>
-<span style="color:#228b22"># LSB Version:	:core-4.1-amd64:core-4.1-noarch</span>
-<span style="color:#228b22"># Distributor ID:	CentOS</span>
-<span style="color:#228b22"># Description:	CentOS Linux release 7.8.2003 (Core)</span>
-<span style="color:#228b22"># Release:	7.8.2003</span>
-<span style="color:#228b22"># Codename:	Core</span>
+        </div><a href="/technical/oracle/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Oracle
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-21
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
 
-cat /etc/redhat-release		<span style="color:#228b22"># 查看Linux内核版本</span>
-<span style="color:#228b22"># CentOS Linux release 7.8.2003 (Core)</span>
+    
+    
 
-getconf LONG_BIT					<span style="color:#228b22"># 查看系统位数</span>
-<span style="color:#228b22"># 64</span>
-
-yum -y update							<span style="color:#228b22"># 更新 yum</span>
-rpm -qa | grep mysql			<span style="color:#228b22"># 查看是否安装过MySQL</span>
-</code></pre></div><h2 id="安装mysql">安装MySQL</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 此处版本为在CentOS7下安装MySQL8.0</span>
-wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-
-<span style="color:#228b22"># 安装</span>
-sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-
-<span style="color:#228b22"># 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）</span>
-<span style="color:#228b22">#mysql80-community-release-el7-3.noarch</span>
-
-<span style="color:#228b22"># 禁用 mysql8.0:</span>
-sudo yum-config-manager --disable mysql80-community
-
-<span style="color:#228b22"># 启用 mysql8.0</span>
-sudo yum-config-manager --enable mysql80-community
-
-<span style="color:#228b22"># 校验当前启用(enable)的 mysql 版本是否为 5.7:</span>
-yum repolist enabled | grep mysql
-<span style="color:#228b22"># mysql-connectors-community/x86_64 MySQL Connectors Community                 165</span>
-<span style="color:#228b22"># mysql-tools-community/x86_64      MySQL Tools Community                      115</span>
-<span style="color:#228b22"># mysql80-community/x86_64          MySQL 8.0 Community Server                 193</span>
-
-<span style="color:#228b22"># 安装MySQL</span>
-sudo yum install -y mysql-community-server
-
-<span style="color:#228b22"># 启动 mysql 服务</span>
-sudo service mysqld start
-
-<span style="color:#228b22"># 查看 mysql 服务状态</span>
-sudo service mysqld status
-</code></pre></div><h2 id="mysql初始化设置">MySQL初始化设置</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 查看初始密码</span>
-sudo grep <span style="color:#cd5555">&#39;temporary password&#39;</span> /var/log/mysqld.log
-
-<span style="color:#228b22"># 使用初始密码进行登录</span>
-mysql -u root -p
-
-<span style="color:#228b22"># 登录成功之后设置新密码</span>
-ALTER USER <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;localhost&#39;</span> IDENTIFIED BY <span style="color:#cd5555">&#39;123456&#39;</span>;
-
-<span style="color:#228b22"># 创建用户</span>
-<span style="color:#228b22"># 允许本地 IP（localhost, 127.0.0.1）访问：</span>
-create user <span style="color:#cd5555">&#39;test&#39;</span>@<span style="color:#cd5555">&#39;localhost&#39;</span> identified by <span style="color:#cd5555">&#39;123456&#39;</span>;
-<span style="color:#228b22"># 允许任何 IP 访问：</span>
-create user <span style="color:#cd5555">&#39;test&#39;</span>@<span style="color:#cd5555">&#39;%&#39;</span> identified by <span style="color:#cd5555">&#39;123456&#39;</span>;
-<span style="color:#228b22"># 刷新权限</span>
-FLUSH PRIVILEGES;
-
-<span style="color:#228b22"># 8.0版本后</span>
-<span style="color:#228b22"># 创建账户</span>
-create user <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;172.16.10.203&#39;</span> identified by  <span style="color:#cd5555">&#39;password&#39;</span>
-<span style="color:#228b22"># 赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人</span>
-grant all privileges on *.* to <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;172.16.10.203&#39;</span> with grant option;
-<span style="color:#228b22"># 改密码&amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里</span>
-flush privileges;
-
-<span style="color:#228b22"># 修改host 将kris用作登录账户名</span>
-update mysql.user <span style="color:#658b00">set</span> <span style="color:#00688b">host</span>=<span style="color:#cd5555">&#39;%&#39;</span> where <span style="color:#00688b">User</span>=<span style="color:#cd5555">&#34;Kris&#34;</span>
-</code></pre></div>
-                    
-                    <HR width="100%" id="EOF">
-                    <p style="color:#777;">
-                        Last modified on 2020-07-15 23:28
-                        &nbsp;
-                        <span id="busuanzi_container_page_pv" style="color:#777;">
-                            This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
-                        </span>
-                    </p>
-                    
-                </div>
-
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="https://www.openheart.icu/technical/markdown/">
-			Next<br>Markdown
-                </a>
-                
-                
-                
-                <a class="older-posts" href="https://www.openheart.icu/technical/nginx/">
-			Previous<br>Nginx
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-<div id="gitalk-container"></div>
-
-
-
-
-
-
-            </div>
-        </div>
-    </div>
+    
+    2 min
+    
+    4 s
+    
+    
+    &emsp;
+    
 </div>
 
-            </div><div id="single-column-footer">
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/dns/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            DNS
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-19
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    1 min
+    
+    19 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/git/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Git
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-15
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    44 s
+    
+    
+    &emsp;
+    
+    <span class="draft-label">DRAFT</span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/hugo/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Hugo
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-15
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    5 min
+    
+    52 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/linux/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Linux
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-15
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    10 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/mac/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Mac Operation
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-15
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    39 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/markdown/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Markdown
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-15
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    16 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/mysql/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            MySQL
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-15
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    2 min
+    
+    33 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/nginx/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Nginx
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-15
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    2 min
+    
+    41 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/php/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            PHP
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-15
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    16 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/technical/vim/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Vim
+                        </div>
+                        <div class="post-item-meta">
+    2020-07-15
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    35 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a></div>
+</div>
+
+            </div>
+
+<div class="pagination">
+    
+    <a class="pagination-action" href="/tags/operation/" style="opacity:1">
+    
+        <i class="material-icons pagination-action-icon">
+            chevron_left
+        </i>
+    </a>
+
+        <div class="pagination-indicator">
+            <span>2/2</span>
+        </div>
+
+        
+            <a class="pagination-action" style="opacity:0">
+        
+                <i class="material-icons pagination-action-icon">
+                    chevron_right
+                </i>
+            </a>
+</div>
+
+
+<div id="single-column-footer">
 
 
 <i class="fa fa-weixin" aria-hidden="true"></i>
