@@ -20,14 +20,14 @@
         <guid>https://www.openheart.icu/cs/url/</guid>
         <description>42th openheart https://www.openheart.icu/cs/url/ -&lt;h1 id=&#34;url解析&#34;&gt;URL解析&lt;/h1&gt;
 &lt;h2 id=&#34;urlencode&#34;&gt;UrlEncode&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;+&lt;/code&gt; 号表示空格  &lt;code&gt;%2B&lt;/code&gt;
-&lt;code&gt; &lt;/code&gt; 可以用+号或者编码 &lt;code&gt;%20&lt;/code&gt;
-&lt;code&gt;/&lt;/code&gt; 分隔目录和子目录 &lt;code&gt;%2F&lt;/code&gt;
-&lt;code&gt;?&lt;/code&gt; 分隔实际的URL和参数 &lt;code&gt;%3F&lt;/code&gt;
-&lt;code&gt;%&lt;/code&gt; 指定特殊字符 &lt;code&gt;%25&lt;/code&gt;
-&lt;code&gt;##&lt;/code&gt; 表示书签 &lt;code&gt;%23&lt;/code&gt;
-&lt;code&gt;&amp;amp;&lt;/code&gt; URL 中指定的参数间的分隔符 &lt;code&gt;%26&lt;/code&gt;
-&lt;code&gt;=&lt;/code&gt; URL 中指定参数的值 &lt;code&gt;%3D&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;+&lt;/code&gt; 号表示空格  &lt;code&gt;%2B&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; &lt;/code&gt;(空格) 可以用+号或者编码 &lt;code&gt;%20&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/&lt;/code&gt; 分隔目录和子目录 &lt;code&gt;%2F&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;?&lt;/code&gt; 分隔实际的URL和参数 &lt;code&gt;%3F&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;%&lt;/code&gt; 指定特殊字符 &lt;code&gt;%25&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;##&lt;/code&gt; 表示书签 &lt;code&gt;%23&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;amp;&lt;/code&gt; URL 中指定的参数间的分隔符 &lt;code&gt;%26&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;=&lt;/code&gt; URL 中指定参数的值 &lt;code&gt;%3D&lt;/code&gt;&lt;/p&gt;
 - https://www.openheart.icu/cs/url/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
