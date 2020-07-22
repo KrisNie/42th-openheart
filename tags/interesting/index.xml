@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interesting on 42th openheart</title>
+    <link>https://www.openheart.icu/tags/interesting/</link>
+    <description>Recent content in Interesting on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Wed, 22 Jul 2020 19:45:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.openheart.icu/tags/interesting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interesting</title>
+      <link>https://www.openheart.icu/cs/interesting/</link>
+      <pubDate>Wed, 22 Jul 2020 19:45:28 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/interesting/</guid>
+      <description>Textures.js 一个 JS 纹理库，基于 D3.js
+elevator.js Finally, a &amp;ldquo;back to top&amp;rdquo; button that behaves like a real elevator, by adding elevator music to quietly soothe the awkwardness that can ensue when being smoothly scrolled to the top of the screen.
+This is very serious stuff, here&amp;rsquo;s a demo!
+一个使得“回到顶部”的网页滚动，具有电梯效果的 JS 库。
+Mowned 一个手机数据库
+JavaScript 生成艺术图形教程 介绍 如何使用JavaScript 生成8种艺术图形。
+使用 Raspberry Pi 学习操作系统开发 这是一个免费英文教程，教大家怎么用树莓派，一步步开发一个简单的操作系统内核，每一步都有实例代码
+Vim 的由来 Vim 有30多年历史，目前依然是最流行的编辑器之一。本文简要地回顾了历史，它的一些主要的设计决定，到底是怎么来的
+Makefile 的静态网站实现 现在有各种各样的静态网站工具，比如 Jekyll 和 Hugo 等。作者提出，Makefile 也可以用来实现静态网站，这样就不需要任何外部工具了，只维护一个 Makefile 配置文件即可</description>
+    </item>
+    
+  </channel>
+</rss>

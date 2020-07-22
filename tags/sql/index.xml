@@ -14,10 +14,10 @@
     
     <item>
       <title>Oracle</title>
-      <link>https://www.openheart.icu/technical/oracle/</link>
+      <link>https://www.openheart.icu/cs/oracle/</link>
       <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/technical/oracle/</guid>
+      <guid>https://www.openheart.icu/cs/oracle/</guid>
       <description>Common Operation Optimize 索引失效 SQL在WHERE条件里面使用了IN导致有一个关联表的索引失效，Oracle版本为11g
 条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引
 like查询是以%开头
@@ -25,17 +25,15 @@ like查询是以%开头
 分库 分表 分区 视图优化 基表增加索引 对基表中，视图查询SQL的WHERE条件中用到的字段增加索引
 重新进行表分析 -- 视图查询慢  analyze table table_name delete statistics; analyze table table_name compute statistics; -- 在当前用户下执行  select &amp;#39;analyze table &amp;#39;||table_name||&amp;#39; compute statistics;&amp;#39; from user_tables where table_name IN (&amp;#39;tablename&amp;#39;); -- 得到如下语句，将这些语句整体执行一遍  analyze table PRODUCT_REF_LIST_NESTEDTAB compute statistics; -- ....  -- 查看统计信息  select table_name,num_rows from user_tables; 分析的结果被Oracle用于基于成本的优化生成更好的查询计划。
 遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。
-  如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。
-  如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。
-  </description>
+ 如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。 如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。  ERROR ORA-01779: 无法修改与非键值保存表对应的列 这里要搞清楚三个概念：视图、联接视图、可更新的联接视图</description>
     </item>
     
     <item>
       <title>MySQL</title>
-      <link>https://www.openheart.icu/technical/mysql/</link>
+      <link>https://www.openheart.icu/cs/mysql/</link>
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/technical/mysql/</guid>
+      <guid>https://www.openheart.icu/cs/mysql/</guid>
       <description>Install MySQL 准备操作 lsb_release -a	# 查看操作系统版本 # LSB Version:	:core-4.1-amd64:core-4.1-noarch # Distributor ID:	CentOS # Description:	CentOS Linux release 7.8.2003 (Core) # Release:	7.8.2003 # Codename:	Core cat /etc/redhat-release	# 查看Linux内核版本 # CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	# 查看系统位数 # 64 yum -y update	# 更新 yum rpm -qa | grep mysql	# 查看是否安装过MySQL 安装MySQL # 此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm # 安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm # 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.</description>
     </item>
     

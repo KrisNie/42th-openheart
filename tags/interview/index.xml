@@ -14,10 +14,10 @@
     
     <item>
       <title>.NET INTERVIEW</title>
-      <link>https://www.openheart.icu/technical/dot-net-interview-questions/</link>
+      <link>https://www.openheart.icu/cs/dot-net-interview-questions/</link>
       <pubDate>Fri, 17 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/technical/dot-net-interview-questions/</guid>
+      <guid>https://www.openheart.icu/cs/dot-net-interview-questions/</guid>
       <description>.NET INTERVIEW from Jeffrey Zhao&amp;rsquo;s blog 我在面试.NET/C#程序员时会提出的问题
  什么是.NET？什么是CLI？什么是CLR？IL是什么？JIT是什么，它是如何工作的？GC是什么，简述一下GC的工作方式？ 什么是.net .NET是个平台，你就把它看成C#
 一个.NET应用是一个运行于.NET Framework之上的应用程序。（更精确的说，一个.NET应用是一个使用.NET Framework类库来编写，并运行于公共语言运行时 Common Language Runtime之上的应用程序。）如果一个应用程序跟.NET Framework无关，它就不能叫做.NET程序。比如，仅仅使用了XML并不就是.NET应用，仅仅使用SOAP SDK调用一个Web Service也不是.NET应用

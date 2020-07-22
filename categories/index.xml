@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 21 Jul 2020 20:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2020 20:28:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,18 @@
     <item>
       <title>Technical</title>
       <link>https://www.openheart.icu/categories/technical/</link>
-      <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
+      <pubDate>Wed, 22 Jul 2020 20:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/categories/technical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Interesting</title>
+      <link>https://www.openheart.icu/categories/interesting/</link>
+      <pubDate>Wed, 22 Jul 2020 19:45:28 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/categories/interesting/</guid>
       <description></description>
     </item>
     

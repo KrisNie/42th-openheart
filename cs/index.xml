@@ -7,10 +7,131 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Wed, 15 Jul 2020 23:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2020 20:28:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/cs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>URL</title>
+      <link>https://www.openheart.icu/cs/url/</link>
+      <pubDate>Wed, 22 Jul 2020 20:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/url/</guid>
+      <description>URL解析 UrlEncode + 号表示空格 %2B   可以用+号或者编码 %20 / 分隔目录和子目录 %2F ? 分隔实际的URL和参数 %3F % 指定特殊字符 %25 ## 表示书签 %23 &amp;amp; URL 中指定的参数间的分隔符 %26 = URL 中指定参数的值 %3D</description>
+    </item>
+    
+    <item>
+      <title>Interesting</title>
+      <link>https://www.openheart.icu/cs/interesting/</link>
+      <pubDate>Wed, 22 Jul 2020 19:45:28 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/interesting/</guid>
+      <description>Textures.js 一个 JS 纹理库，基于 D3.js
+elevator.js Finally, a &amp;ldquo;back to top&amp;rdquo; button that behaves like a real elevator, by adding elevator music to quietly soothe the awkwardness that can ensue when being smoothly scrolled to the top of the screen.
+This is very serious stuff, here&amp;rsquo;s a demo!
+一个使得“回到顶部”的网页滚动，具有电梯效果的 JS 库。
+Mowned 一个手机数据库
+JavaScript 生成艺术图形教程 介绍 如何使用JavaScript 生成8种艺术图形。
+使用 Raspberry Pi 学习操作系统开发 这是一个免费英文教程，教大家怎么用树莓派，一步步开发一个简单的操作系统内核，每一步都有实例代码
+Vim 的由来 Vim 有30多年历史，目前依然是最流行的编辑器之一。本文简要地回顾了历史，它的一些主要的设计决定，到底是怎么来的
+Makefile 的静态网站实现 现在有各种各样的静态网站工具，比如 Jekyll 和 Hugo 等。作者提出，Makefile 也可以用来实现静态网站，这样就不需要任何外部工具了，只维护一个 Makefile 配置文件即可</description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>https://www.openheart.icu/cs/oracle/</link>
+      <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/oracle/</guid>
+      <description>Common Operation Optimize 索引失效 SQL在WHERE条件里面使用了IN导致有一个关联表的索引失效，Oracle版本为11g
+条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引
+like查询是以%开头
+如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引
+分库 分表 分区 视图优化 基表增加索引 对基表中，视图查询SQL的WHERE条件中用到的字段增加索引
+重新进行表分析 -- 视图查询慢  analyze table table_name delete statistics; analyze table table_name compute statistics; -- 在当前用户下执行  select &amp;#39;analyze table &amp;#39;||table_name||&amp;#39; compute statistics;&amp;#39; from user_tables where table_name IN (&amp;#39;tablename&amp;#39;); -- 得到如下语句，将这些语句整体执行一遍  analyze table PRODUCT_REF_LIST_NESTEDTAB compute statistics; -- ....  -- 查看统计信息  select table_name,num_rows from user_tables; 分析的结果被Oracle用于基于成本的优化生成更好的查询计划。
+遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。
+ 如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。 如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。  ERROR ORA-01779: 无法修改与非键值保存表对应的列 这里要搞清楚三个概念：视图、联接视图、可更新的联接视图</description>
+    </item>
+    
+    <item>
+      <title>Speech</title>
+      <link>https://www.openheart.icu/cs/speech/</link>
+      <pubDate>Tue, 21 Jul 2020 19:45:28 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/speech/</guid>
+      <description>唯一不适应远程工作的是中层管理人员。
+基层员工对于在家工作感到很高兴，只要把活做好就可以了。高层管理人员只需要对销售和产量数字负责。中层管理人员的不适应在于，他们的职责是直接监控基层员工，最常用的判断方法是通过是否坐在座位上等迹象，来判断工作量和工作是否勤奋。
+ &amp;ndash; Hacker news 读者
+   我有一种反英雄主义的精神。以前看电视时，我就对皇帝和将军不感兴趣，觉得他们已经有荣耀和风光了。
+我更关心皇帝和将军手下的那些小兵，有时战斗刚开始，他们就被杀死了。他们脑海里想的是什么？会有人记得他们，为他们哭泣吗？
+ &amp;ndash; 黄西自传《黄瓜的黄，西瓜的西》
+   时钟和镜子改变了人类社会。
+时钟创造了一种焦虑文化。
+镜子创造了一种自恋文化。
+ &amp;ndash; David Perell
+   100年前的中国，四千个人里面才有一个中学生，其他都是文盲。
+ &amp;ndash; 李敖
+   看到抽象的东西，应该尽量使它变得具体；看到具体的东西，应该尽量使它变得抽象。
+ &amp;ndash; 李敖
+   如果你花钱买，你就是客户，如果你免费获得，你就是产品。
+ &amp;ndash; 《创业公司尝试搜索引擎的订阅模式》
+   40年前算法很重要，大部分程序员都需要懂，因为硬件差，必须靠算法保证性能。
+但是今天只剩下不到1%的程序员直接跟算法打交道，其他人都使用现成的软件包，或从大公司购买算法，算法已成为一种商品，普通程序员不再需要自己生产了，也不需要有很深入的了解。
+ &amp;ndash; 《算法现在是商品》
+   本站100%无 JavaScript。
+ &amp;ndash; swiftbysundell.com
+   我希望 JavaScript 程序员、Java 程序员、PHP 程序员、Perl 程序员、Python 程序员、C 程序员、C ++ 程序员、以及其他重要语言的程序员，大家聚在一起开个会，一劳永逸地提出一个大家都遵守的解决方案，我们应该如何处理时间和日期。我厌倦了每个语言都有自己一套处理时间和日期的方法。</description>
+    </item>
+    
+    <item>
+      <title>DNS</title>
+      <link>https://www.openheart.icu/cs/dns/</link>
+      <pubDate>Sun, 19 Jul 2020 12:50:56 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/dns/</guid>
+      <description>DNSPod DNS+ ​ 首选：119.29.29.29
+​ 备选：182.254.116.116
+114DNS ​ 首选：114.114.114.114
+​ 备选：114.114.114.115
+阿里 AliDNS ​ 首选：223.5.5.5
+​ 备选：223.6.6.6
+DNS派 ​ 首选（电信/移动/铁通）：101.226.4.6
+​ 备选（电信/移动/铁通）：218.30.118.6
+​ 首选（联通）：123.125.81.6
+​ 备选（联通）：140.207.198.6
+百度 BaiduDNS ​ 首选：180.76.76.76
+CNNIC SDNS ​ 首选：1.2.4.8
+​ 备选：202.98.0.68
+OpenDNS ​ 208.67.222.222
+​ 208.67.220.220
+​ 208.67.222.220
+​ 208.67.220.222
+Family Shield Servers 可以阻挡成人网站和含有恶意网站
+​ 208.67.222.123
+​ 208.67.220.123
+IPv6地址(实验) ​ 2620:0:ccc::2
+​ 2620:0:ccd::2</description>
+    </item>
+    
+    <item>
+      <title>.NET INTERVIEW</title>
+      <link>https://www.openheart.icu/cs/dot-net-interview-questions/</link>
+      <pubDate>Fri, 17 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/dot-net-interview-questions/</guid>
+      <description>.NET INTERVIEW from Jeffrey Zhao&amp;rsquo;s blog 我在面试.NET/C#程序员时会提出的问题
+ 什么是.NET？什么是CLI？什么是CLR？IL是什么？JIT是什么，它是如何工作的？GC是什么，简述一下GC的工作方式？ 什么是.net .NET是个平台，你就把它看成C#
+一个.NET应用是一个运行于.NET Framework之上的应用程序。（更精确的说，一个.NET应用是一个使用.NET Framework类库来编写，并运行于公共语言运行时 Common Language Runtime之上的应用程序。）如果一个应用程序跟.NET Framework无关，它就不能叫做.NET程序。比如，仅仅使用了XML并不就是.NET应用，仅仅使用SOAP SDK调用一个Web Service也不是.NET应用
+开发平台（Dot Net Framework）：包含通用语言运行时（CLR）和Dot Net框架类库（FCL）两个部分。他们提供了一致的编程模型，简化的编程方式，可靠的版本机制（用全局程序集缓存GAC来避免DLL Hell），轻便的部署管理（程序集自带的元数据可以避免ini文件和注册表） ，广泛的平台支持（只要这台机器兼容标准下的CLR和FCL就可以部署，当然运行的时候IL会变成本机代码），无缝的语言集成，自动化的内存管理（垃圾收集），类型安全（CLR会阻止利用缓冲区溢出错误进行的攻击），CLR支持跨语言调试，统一的错误报告，全新的安全策略（CAS），兼容以往的COM组件
+什么是CLR CLR(公用语言运行时)和Java虚拟机一样也是一个运行时环境，它负责资源管理（内存分配和垃圾收集），并保证应用和底层操作系统之间必要的分离。.NET提供了一个运行时环境，叫做公用语言运行时（Commen Language Runtime），是一种多语言执行环境，支持众多的数据类型和语言特性。他管理着代码的执行，并使开发过程变得更加简单。这是一种可操控的执行环境，其功能通过编译器与其他工具共同展现。
+什么是CLI 通用语言基础结构（Common Language Infrastructure，CLI）是CLR的一个子集，也就是.NET中最终对编译成MSIL代码的应用程序的运行环境进行管理的那一部分。在 CLR结构图中CLI位于下半部分，主要包括类加载器(Class Loader)、实时编译器(IL To Native Compilers)和一个运行时环境的垃圾收集器(Garbage Collector)。CLI是.Net和CLR的灵魂，CLI为IL代码提供运行的环境，你可以将使用任何语言编写的代码通过其特定的编译器转换为 MSIL代码之后运行其上，甚至还可以自己写MSIL代码在CLI上面运行。
+什么是IL IL是微软.NET平台上衍生出来的一门中间语言，.NET平台上的各种高级语言（如C#，VB，F#）的编译器会将各自的文字表述方式转化为 IL。各种不同的文字形式最终被统一到了IL的表述方式，其中包含了.NET平台上的各种元素，如“范型”，“类”、、“接口”、“模块”、“属性”等 等。值得注意的是，各种高级语言本身可能根本没有这些“概念”在里头，如IronScheme是一个在.NET平台上的Scheme语言实现，其中根本没有前面提到的这些IL——亦或说是.NET平台上的名词。IL本身并不知道自己是由哪种高级语言转化而来的，哪种语言中有哪些特性，IL也根本不会关心。
+什么是JIT JIT（Just In Time, JIT）是.Net边运行边编译的一种机制。
+开发人员需要通过IL与CLR进行交流, 虽然IL本身支持一些面向对象的概念, 但是对于开发人员来讲还是过于复杂低效, 于是C#应运而生, 程序员只需编写C#代码, csc编译器会将其翻译成IL;虽然CLR理解IL, 但是CPU只认识二进制指令, 所以CLR需要JIT的帮助, 将IL翻译成CPU指令. JIT按需工作, 当一个.NET方法即将被执行时, JIT会介入, 把该方法(IL指令) 编译成CPU指令, 并保存以供重用。
+什么是GC，以及它的工作方式 GC:.NET Framework 的垃圾回收器管理应用程序的内存分配和释放
+工作方式：每次您使用 new 运算符创建对象时，运行库都从托管堆为该对象分配内存。只要托管堆中有地址空间可用，运行库就会继续为新对象分配空间。但是，内存不是无限大的。最终，垃 圾回收器必须执行回收以释放一些内存。垃圾回收器优化引擎根据正在进行的分配情况确定执行回收的最佳时间。当垃圾回收器执行回收时，它检查托管堆中不再被 应用程序使用的对象并执行必要的操作来回收它们占用的内存。</description>
+    </item>
     
     <item>
       <title>Computer network</title>
@@ -18,8 +139,104 @@
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/computer-network/</guid>
-      <description>计算机网络 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
+      <description>网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
 四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://www.openheart.icu/cs/git/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/git/</guid>
+      <description>idea设置git idea -&amp;gt;VSC -&amp;gt;Create Git Repository 右击工程文件 -&amp;gt;git-&amp;gt;add 右击工程文件 -&amp;gt;git-&amp;gt;commit
+git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.com:Hyominn/java_demo.git git add . dir # 查看有哪些文件夹 git rm -r --cached target # 删除target文件夹 git commit –m &amp;#34;版本更新信息&amp;#34; git push git@github.com:Hyominn/java_demo.git 设置git代理 git config --global https.proxy http://127.0.0.1:1080 git config --global https.proxy https://127.0.0.1:1080 git config --global http.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global https.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global --unset http.proxy git config --global --unset https.proxy npm config delete proxy 遇到pull不下来 git reset --hard FETCH_HEAD git clone https://www.</description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://www.openheart.icu/cs/hugo/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/hugo/</guid>
+      <description>Install tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz cp ./hugo /usr/local/bin/ hugo new site site42 cd site42 hugo version rm -r public hugo server -b &amp;#34;https://openheart.icu:1313/&amp;#34; -p 1313 --bind &amp;#34;0.0.0.0&amp;#34; #mac 安装 brew install hugo # show the location of the hugo executable which hugo # show the installed version ls -l $( which hugo ) #lrwxr-xr-x 1 hyomin admin 30 7 17 22:46 /usr/local/bin/hugo -&amp;gt; ../Cellar/hugo/0.74.1/bin/hugo # verify that hugo runs correctly hugo version Hugo Static Site Generator v0.</description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://www.openheart.icu/cs/linux/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/linux/</guid>
+      <description>chown -R nginx:users ./* # 查看当前文件夹下权限 ls -l netstat -npa | grep 9000 # 查看当前路径 pwd # 安装git yum -y install git </description>
+    </item>
+    
+    <item>
+      <title>Mac Operation</title>
+      <link>https://www.openheart.icu/cs/mac/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/mac/</guid>
+      <description>brew使用国内镜像源（不好使） 中科大：
+# 步骤一 cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git* # 步骤二 cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git* #步骤三 brew update 复原：
+cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core brew update 配置item2代理 # 打开配置文件 vim ~/.bash_profile # 如果用了`oh-my-zsh` 那么修改`~/.zshrc` # 在后面新增配置 export http_proxy=http://127.0.0.1:1087 export https_proxy=socks5://127.0.0.1:1080 # 同理，可能执行 source ~/.zshrc source ~/.bash_profile iTerm2 + Oh My Zsh 安装Oh my zsh # curl 安装方式 sh -c &amp;#34;$(curl -fsSL https://raw.</description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://www.openheart.icu/cs/markdown/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/markdown/</guid>
+      <description>公式 角标 Markdown Language is a superset of HTML, so you can use html tag sub,sup to achieve this
+eg:
+H&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;O CO&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt; NIKE&amp;lt;sup&amp;gt;®&amp;lt;/sup&amp;gt; H2O CO2NIKE®</description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://www.openheart.icu/cs/mysql/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/mysql/</guid>
+      <description>Install MySQL 准备操作 lsb_release -a	# 查看操作系统版本 # LSB Version:	:core-4.1-amd64:core-4.1-noarch # Distributor ID:	CentOS # Description:	CentOS Linux release 7.8.2003 (Core) # Release:	7.8.2003 # Codename:	Core cat /etc/redhat-release	# 查看Linux内核版本 # CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	# 查看系统位数 # 64 yum -y update	# 更新 yum rpm -qa | grep mysql	# 查看是否安装过MySQL 安装MySQL # 此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm # 安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm # 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.</description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://www.openheart.icu/cs/nginx/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/nginx/</guid>
+      <description>Reverse Proxy &amp;amp; Forward Proxy Forward Proxy（正向代理） 我想访问 www.google.com ，然而大家都知道它被墙了，我没法直接访问它。于是我连接了一个 VPN 服务并设定其为本地 HTTP 访问的代理，然后我再访问 www.google.com ，此时我的请求被该 VPN 服务代理了，它帮我访问了 www.google.com 然后把结果返回给我。
+正向代理隐藏真实客户端，www.google.com 并不知道访问他的是我。
+Reverse Proxy（反向代理） 当我们在访问 www.baidu.com 时，百度背后有成千上万个服务器为我们服务，但具体是哪一台，我们并不知道。此时 www.baidu.com 就充当一个反向代理服务器，帮我们把请求转发到真实的服务器。
+反向代理隐藏真实服务端，Nginx就是很好的反向代理服务器，用来做负载均衡。
+正向代理与反向代理两者的区别在于代理的对象不一样：正向代理代理的对象是客户端，反向代理代理的对象是服务端。
+Common Operation $sudo nginx sudo pkill -f nginx &amp;amp; wait $! sudo systemctl start nginx sudo systemctl restart nginx nginx -c /etc/nginx/nginx.conf # 重启服务 设置二级域名 增加一个新的listen 80
+server_name设置为二级域名地址
+root指向项目地址
+server{listen80;server_namesite42.openheart.icu;location/{root/usr/project/openheart;}}强制浏览器使用本地缓存 cache-control/expires
+# nginx.conf 中配置location~.</description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>https://www.openheart.icu/cs/php/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/php/</guid>
+      <description>Operation systemctl start php-fpm systemctl restart php-fpm service php-fpm start service php-fpm restart service php-fpm stop service php-fpm reload Problem 1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组
+user = nginx group = users </description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://www.openheart.icu/cs/vim/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/vim/</guid>
+      <description># 退出编辑模式，输入以下命令： Esc # 保存后退出vi，若为 :wq! 则为强制储存后退出（常用） :wq # 保存但不退出（常用） :w # 若文件属性为『只读』时，强制写入该档案 :w! # 离开 vi （常用） :q # 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。 :q! # 将档案还原到最原始的状态！ :e! </description>
     </item>
     
   </channel>

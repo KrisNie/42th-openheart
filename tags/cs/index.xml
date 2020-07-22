@@ -18,7 +18,7 @@
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/computer-network/</guid>
-      <description>计算机网络 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
+      <description>网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
 四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。</description>
     </item>
     

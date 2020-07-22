@@ -6,19 +6,107 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 21 Jul 2020 20:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2020 20:28:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
+        <title>URL</title>
+        <link>https://www.openheart.icu/cs/url/</link>
+        <pubDate>Wed, 22 Jul 2020 20:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/url/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/url/ -&lt;h1 id=&#34;url解析&#34;&gt;URL解析&lt;/h1&gt;
+&lt;h2 id=&#34;urlencode&#34;&gt;UrlEncode&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;+&lt;/code&gt; 号表示空格  &lt;code&gt;%2B&lt;/code&gt;
+&lt;code&gt; &lt;/code&gt; 可以用+号或者编码 &lt;code&gt;%20&lt;/code&gt;
+&lt;code&gt;/&lt;/code&gt; 分隔目录和子目录 &lt;code&gt;%2F&lt;/code&gt;
+&lt;code&gt;?&lt;/code&gt; 分隔实际的URL和参数 &lt;code&gt;%3F&lt;/code&gt;
+&lt;code&gt;%&lt;/code&gt; 指定特殊字符 &lt;code&gt;%25&lt;/code&gt;
+&lt;code&gt;##&lt;/code&gt; 表示书签 &lt;code&gt;%23&lt;/code&gt;
+&lt;code&gt;&amp;amp;&lt;/code&gt; URL 中指定的参数间的分隔符 &lt;code&gt;%26&lt;/code&gt;
+&lt;code&gt;=&lt;/code&gt; URL 中指定参数的值 &lt;code&gt;%3D&lt;/code&gt;&lt;/p&gt;
+- https://www.openheart.icu/cs/url/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Interesting</title>
+        <link>https://www.openheart.icu/cs/interesting/</link>
+        <pubDate>Wed, 22 Jul 2020 19:45:28 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/interesting/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/interesting/ -&lt;h3 id=&#34;texturesjshttpsriccardoscalcoittextures&#34;&gt;&lt;a href=&#34;https://riccardoscalco.it/textures/&#34;&gt;Textures.js&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个 JS 纹理库，基于 D3.js&lt;/p&gt;
+&lt;h3 id=&#34;elevatorjshttpsgithubcomtholmanelevatorjs&#34;&gt;&lt;a href=&#34;https://github.com/tholman/elevator.js&#34;&gt;elevator.js&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Finally, a &amp;ldquo;back to top&amp;rdquo; button that behaves like a real elevator, by adding elevator music to quietly soothe the awkwardness that can ensue when being smoothly scrolled to the top of the screen.&lt;/p&gt;
+&lt;p&gt;This is very serious stuff, &lt;a href=&#34;http://tholman.com/elevator.js&#34;&gt;here&amp;rsquo;s a demo&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;一个使得“回到顶部”的网页滚动，具有电梯效果的 JS 库。&lt;/p&gt;
+&lt;h3 id=&#34;mownedhttpsmownedcom&#34;&gt;&lt;a href=&#34;https://mowned.com/&#34;&gt;Mowned&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个手机数据库&lt;/p&gt;
+&lt;h3 id=&#34;javascript-生成艺术图形教程httpsgenerativeartistrycomtutorials&#34;&gt;&lt;a href=&#34;https://generativeartistry.com/tutorials/&#34;&gt;JavaScript 生成艺术图形教程&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;介绍 如何使用JavaScript 生成8种艺术图形。&lt;/p&gt;
+&lt;h3 id=&#34;使用-raspberry-pi-学习操作系统开发httpss-matyukevichgithubioraspberry-pi-os&#34;&gt;&lt;a href=&#34;https://s-matyukevich.github.io/raspberry-pi-os/&#34;&gt;使用 Raspberry Pi 学习操作系统开发&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这是一个免费英文教程，教大家怎么用树莓派，一步步开发一个简单的操作系统内核，每一步都有实例代码&lt;/p&gt;
+&lt;h3 id=&#34;vim-的由来httpspragmaticpineapplecomhow-did-vim-become-so-popular&#34;&gt;&lt;a href=&#34;https://pragmaticpineapple.com/how-did-vim-become-so-popular/&#34;&gt;Vim 的由来&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Vim 有30多年历史，目前依然是最流行的编辑器之一。本文简要地回顾了历史，它的一些主要的设计决定，到底是怎么来的&lt;/p&gt;
+&lt;h3 id=&#34;makefile-的静态网站实现httpsmetinnextcorgpoststhe_idea_of_makefile_bloghtml&#34;&gt;&lt;a href=&#34;https://metin.nextc.org/posts/The_Idea_Of_Makefile_Blog.html&#34;&gt;Makefile 的静态网站实现&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;现在有各种各样的静态网站工具，比如 Jekyll 和 Hugo 等。作者提出，Makefile 也可以用来实现静态网站，这样就不需要任何外部工具了，只维护一个 Makefile 配置文件即可&lt;/p&gt;
+&lt;h3 id=&#34;字体反爬的攻与防httpscjtingme20200701douyu-crawler-and-font-anti-crawling&#34;&gt;&lt;a href=&#34;https://cjting.me/2020/07/01/douyu-crawler-and-font-anti-crawling/&#34;&gt;字体反爬的攻与防&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;作者因为业务原因需要爬取一批斗鱼主播的相关数据，结果发现斗鱼使用了一种很有意思的反爬技术：字体反爬&lt;/p&gt;
+&lt;h3 id=&#34;分页查询不要使用-offset-和-limit-语法httpshackernooncomplease-dont-use-offset-and-limit-for-your-pagination-8ux3u4y&#34;&gt;&lt;a href=&#34;https://hackernoon.com/please-dont-use-offset-and-limit-for-your-pagination-8ux3u4y&#34;&gt;分页查询不要使用 OFFSET 和 LIMIT 语法&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;数据查询时，如果数据多，就需要分页，一般使用 OFFSET 和 LIMIT 语法。这篇文章提出，这样做不好，耗费资源，有性能问题&lt;/p&gt;
+&lt;h3 id=&#34;git-多行提交信息的简单方法httpswwwstefanjudiscomtoday-i-learnedgit-commit-accepts-several-message-flags-m-to-allow-multiline-commits&#34;&gt;&lt;a href=&#34;https://www.stefanjudis.com/today-i-learned/git-commit-accepts-several-message-flags-m-to-allow-multiline-commits/&#34;&gt;Git 多行提交信息的简单方法&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git commit&lt;/code&gt;命令的&lt;code&gt;-m&lt;/code&gt;参数用来指定提交信息，但是这样提交的信息只有一行。本文介绍实现多行信息的简单方法&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git co -m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;commit title&amp;#34;&lt;/span&gt; -m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;commit description&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;盲文的由来httpsstitcherioblogbraille-and-the-history-of-software&#34;&gt;&lt;a href=&#34;https://stitcher.io/blog/braille-and-the-history-of-software&#34;&gt;盲文的由来&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;如题&lt;/p&gt;
+&lt;h3 id=&#34;漫长的雨httpwwwsamwellernetbradbury-120181129the-essential-bradbury&#34;&gt;&lt;a href=&#34;http://www.samweller.net/bradbury-1/2018/11/29/the-essential-bradbury&#34;&gt;漫长的雨&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;《漫长的雨》（The long rain，&lt;strong&gt;&lt;a href=&#34;https://www.sohu.com/a/337866552_771944&#34;&gt;中译全文&lt;/a&gt;&lt;/strong&gt;）是美国科幻小说作家雷·布拉德伯里（Ray Bradbury）1950年发表的一篇短篇小说。&lt;/p&gt;
+&lt;p&gt;它讲述四个宇航员因为火箭失事，来到一个不停下雨的星球。这个星球永远在下瓢泼大雨，过去10年一秒都没有停过。宇航员冒着雨水，在丛林里面穿行，拼命寻找前人修建的“阳光穹顶”，那里是一个大屋顶，有温暖的人造阳光，以及充足的食物和休息的场所。&lt;/p&gt;
+&lt;p&gt;小说的开头是这样的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;大雨，永远的雨，升腾着汗水和蒸汽的雨。这是密集的瓢泼大雨，像鞭子一样打在眼睛上，飞溅到脚踝上。它是一场淹没其他所有雨水的雨，让人遗忘所有关于雨水的记忆。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;6个最常见的网页可访问性问题httpsblogscottlogiccom202007026-most-common-accessibility-problemshtmlempty-links-and-empty-buttons&#34;&gt;&lt;a href=&#34;https://blog.scottlogic.com/2020/07/02/6-most-common-accessibility-problems.html#empty-links-and-empty-buttons&#34;&gt;6个最常见的网页可访问性问题&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;可访问性（accessibility）指的是，网页对生理缺陷的用户是否友好。本文总结了6个最常见的可访问性问题及其解决方法&lt;/p&gt;
+&lt;h3 id=&#34;伪随机数生成器httpsgithubcombryccodeblobmasterjshashprngsmd&#34;&gt;&lt;a href=&#34;https://github.com/bryc/code/blob/master/jshash/PRNGs.md&#34;&gt;伪随机数生成器&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;伪随机数指的是通过一种算法，由种子值得到的随机数。本文介绍了几种简单的伪随机数算法&lt;/p&gt;
+&lt;h3 id=&#34;75行代码入门-webglhttpsavikdascom20200708barebones-webgl-in-75-lines-of-codehtml&#34;&gt;&lt;a href=&#34;https://avikdas.com/2020/07/08/barebones-webgl-in-75-lines-of-code.html&#34;&gt;75行代码入门 WebGL&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;WebGL 是浏览器对 OpenGL API 的调用接口，可以在浏览器里面实现 3D 动画。本文用一个简短的例子，介绍了这个 API。这只是一篇简介，另有**&lt;a href=&#34;https://www.toptal.com/javascript/3d-graphics-a-webgl-tutorial&#34;&gt;完整的 WebGL 教程&lt;/a&gt;**&lt;/p&gt;
+&lt;h3 id=&#34;redisearchhttpsossredislabscomredisearch&#34;&gt;&lt;a href=&#34;https://oss.redislabs.com/redisearch/&#34;&gt;RediSearch&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;以 Redis 作为后端的全文搜索引擎，支持中文&lt;/p&gt;
+&lt;h3 id=&#34;onelook-thesaurushttpswwwonelookcomthesaurus&#34;&gt;&lt;a href=&#34;https://www.onelook.com/thesaurus/&#34;&gt;OneLook Thesaurus&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;英语的同义词词典，可以查询同义词，也可以根据描述返回对应的词（比如 &lt;a href=&#34;https://www.onelook.com/thesaurus/?s=large%20birds&amp;amp;loc=revfp&#34;&gt;large bird&lt;/a&gt; 对应哪些词），加载速度很快&lt;/p&gt;
+&lt;h3 id=&#34;crdttechhttpscrdttech&#34;&gt;&lt;a href=&#34;https://crdt.tech/&#34;&gt;CRDT.tech&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;CRDT 是一种数据结构，用于分布式网络的数据同步，最典型的例子就是多人同时编辑文档。该网站收集了 CRDT 的相关资料&lt;/p&gt;
+&lt;h3 id=&#34;progressive-app-storehttpsprogressiveappstorehome&#34;&gt;&lt;a href=&#34;https://progressiveapp.store/home&#34;&gt;Progressive App Store&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个渐进式 App 的在线商店，收集各种 Progessive App，是网友搭建的&lt;/p&gt;
+&lt;h3 id=&#34;网页设计博物馆httpswwwwebdesignmuseumorg&#34;&gt;&lt;a href=&#34;https://www.webdesignmuseum.org/&#34;&gt;网页设计博物馆&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;该网站收集了1600多个经过精心挑选和分类的网页，展示了1991年至2006年之间的网站设计趋势&lt;/p&gt;
+&lt;h3 id=&#34;窗口交换httpswindow-swapcom&#34;&gt;&lt;a href=&#34;https://window-swap.com/&#34;&gt;窗口交换&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;该网站让世界各地的人上传他们窗外的镜像，一段5到10分钟的视频。其他用户就可以在网站上随机看到别人的窗外&lt;/p&gt;
+&lt;h3 id=&#34;cnetcomhttpswwwcnetcompicturesinside-the-kansas-survival-condo-designed-to-save-you-from-nuclear-winter&#34;&gt;&lt;a href=&#34;https://www.cnet.com/pictures/inside-the-kansas-survival-condo-designed-to-save-you-from-nuclear-winter/&#34;&gt;cnet.com&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;幸存者公寓&lt;/p&gt;
+&lt;h3 id=&#34;平流层飞船httpswwwgeekwirecom2020space-perspective-reboots-vision-flying-passengers-stratosphere-balloon&#34;&gt;&lt;a href=&#34;https://www.geekwire.com/2020/space-perspective-reboots-vision-flying-passengers-stratosphere-balloon/&#34;&gt;平流层飞船&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;美国一家私人公司提出了“平流层飞船”计划，让游客乘坐飞船上升到平流层（距离地面30公里），体验一下太空的感觉，票价预计为每人12.5万美元。飞船可以乘坐八名乘客和一名飞行员，先进行长达两个小时的上升，然后在空中停留两个小时，最后再花两个小时下降。&lt;/p&gt;
+&lt;p&gt;飞船的上升动力，主要来自一个巨大的充满氢气的气球。飞船内部有酒吧，还有一个“拥有世界上最佳视野”的厕所，甚至有 Wifi。该公司计划飞船在2024年完工，目前已经在**&lt;a href=&#34;https://thespaceperspective.com/fly/&#34;&gt;官网&lt;/a&gt;**接受预订。&lt;/p&gt;
+- https://www.openheart.icu/cs/interesting/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
         <title>Oracle</title>
-        <link>https://www.openheart.icu/technical/oracle/</link>
+        <link>https://www.openheart.icu/cs/oracle/</link>
         <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/technical/oracle/</guid>
-        <description>42th openheart https://www.openheart.icu/technical/oracle/ -&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
+        <guid>https://www.openheart.icu/cs/oracle/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/oracle/ -&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
 &lt;h1 id=&#34;optimize&#34;&gt;Optimize&lt;/h1&gt;
 &lt;h2 id=&#34;索引失效&#34;&gt;索引失效&lt;/h2&gt;
 &lt;p&gt;SQL在&lt;code&gt;WHERE&lt;/code&gt;条件里面使用了&lt;code&gt;IN&lt;/code&gt;导致有一个关联表的索引失效，Oracle版本为11g&lt;/p&gt;
@@ -46,14 +134,106 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;分析的结果被Oracle用于基于成本的优化生成更好的查询计划。&lt;/p&gt;
 &lt;p&gt;遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。&lt;/li&gt;
+&lt;li&gt;如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。&lt;/li&gt;
 &lt;/ul&gt;
-- https://www.openheart.icu/technical/oracle/ - ALL RIGHTS RESERVED KRIS NIE</description>
+&lt;h1 id=&#34;error&#34;&gt;ERROR&lt;/h1&gt;
+&lt;h2 id=&#34;ora-01779-无法修改与非键值保存表对应的列&#34;&gt;ORA-01779: 无法修改与非键值保存表对应的列&lt;/h2&gt;
+&lt;p&gt;这里要搞清楚三个概念：视图、联接视图、可更新的联接视图&lt;/p&gt;
+&lt;h3 id=&#34;视图&#34;&gt;视图&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;视图&lt;/strong&gt;可以分为视图对象和内嵌视图两种。&lt;/p&gt;
+&lt;h4 id=&#34;视图对象view-object&#34;&gt;视图对象（View Object）&lt;/h4&gt;
+&lt;p&gt;数据库里的&lt;strong&gt;视图对象&lt;/strong&gt;跟一张表或索引等一样，是数据库对象中的一种，它其实是将基于表中原始数据的查询给虚拟了一层之后，提供给外部查询的一种对象。
+其本质是并不保存查询的实际结果，而只是将查询语句保存在数据库中，当用户查询某张视图的时候，就会找到并执行这个视图的语句。
+而&lt;strong&gt;联接视图&lt;/strong&gt;其实就是在一个视图中将两个表建立关联就是了。&lt;/p&gt;
+&lt;h4 id=&#34;内嵌视图inline-view&#34;&gt;内嵌视图（Inline View）&lt;/h4&gt;
+&lt;p&gt;在SQL语句中，很多地方都可以写嵌套的语句，比如说，FROM后面可以套括号嵌套其他的语句，WHERE、SELECT、UPDATE、INSERT、DELETE后面都是可以写的。只是写的位置不同，执行的方式还有处理时的一些限制不同，这些SQL中嵌套的SQL被称为&lt;strong&gt;子查询（Subquery）&lt;/strong&gt; 。子查询可以分为如下几类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内嵌视图：位置位于FROM语句中，也相当于一个预处理结果集的概念&lt;/li&gt;
+&lt;li&gt;标量子查询（Scalar Subquery）：只返还一个结果值的子查询。位于SELECT语句的子查询只能返还一个值，所以必然是标量子查询，WHERE语句里也会出现这样的子查询&lt;/li&gt;
+&lt;li&gt;关联子查询：将查询的结果传递给子查询作为参数的使用的形式&lt;/li&gt;
+&lt;li&gt;一般子查询：除了那些特殊形式的子查询以外的一般用法&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/cs/oracle/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Speech</title>
+        <link>https://www.openheart.icu/cs/speech/</link>
+        <pubDate>Tue, 21 Jul 2020 19:45:28 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/speech/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/speech/ -&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;唯一不适应远程工作的是中层管理人员。&lt;/p&gt;
+&lt;p&gt;基层员工对于在家工作感到很高兴，只要把活做好就可以了。高层管理人员只需要对销售和产量数字负责。中层管理人员的不适应在于，他们的职责是直接监控基层员工，最常用的判断方法是通过是否坐在座位上等迹象，来判断工作量和工作是否勤奋。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://news.ycombinator.com/item?id=23607203&#34;&gt;Hacker news 读者&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我有一种反英雄主义的精神。以前看电视时，我就对皇帝和将军不感兴趣，觉得他们已经有荣耀和风光了。&lt;/p&gt;
+&lt;p&gt;我更关心皇帝和将军手下的那些小兵，有时战斗刚开始，他们就被杀死了。他们脑海里想的是什么？会有人记得他们，为他们哭泣吗？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; 黄西自传《黄瓜的黄，西瓜的西》&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;时钟和镜子改变了人类社会。&lt;/p&gt;
+&lt;p&gt;时钟创造了一种焦虑文化。&lt;/p&gt;
+&lt;p&gt;镜子创造了一种自恋文化。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; David Perell&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;100年前的中国，四千个人里面才有一个中学生，其他都是文盲。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; 李敖&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;看到抽象的东西，应该尽量使它变得具体；看到具体的东西，应该尽量使它变得抽象。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; 李敖&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你花钱买，你就是客户，如果你免费获得，你就是产品。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://www.wired.com/story/a-startup-is-testing-the-subscription-model-for-search-engines/&#34;&gt;《创业公司尝试搜索引擎的订阅模式》&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;40年前算法很重要，大部分程序员都需要懂，因为硬件差，必须靠算法保证性能。&lt;/p&gt;
+&lt;p&gt;但是今天只剩下不到1%的程序员直接跟算法打交道，其他人都使用现成的软件包，或从大公司购买算法，算法已成为一种商品，普通程序员不再需要自己生产了，也不需要有很深入的了解。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; &lt;a href=&#34;http://shape-of-code.coding-guidelines.com/2020/07/05/algorithms-are-now-commodities/&#34;&gt;《算法现在是商品》&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本站100%无 JavaScript。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://www.swiftbysundell.com/special/javascript-free/&#34;&gt;swiftbysundell.com&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我希望 JavaScript 程序员、Java 程序员、PHP 程序员、Perl 程序员、Python 程序员、C 程序员、C ++ 程序员、以及其他重要语言的程序员，大家聚在一起开个会，一劳永逸地提出一个大家都遵守的解决方案，我们应该如何处理时间和日期。我厌倦了每个语言都有自己一套处理时间和日期的方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://news.ycombinator.com/item?id=23781819&#34;&gt;《JavaScript 语言准备提出新的时间和日期 API》&lt;/a&gt;&lt;/p&gt;
+- https://www.openheart.icu/cs/speech/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -107,11 +287,11 @@
     
         <item>
         <title>DNS</title>
-        <link>https://www.openheart.icu/technical/dns/</link>
+        <link>https://www.openheart.icu/cs/dns/</link>
         <pubDate>Sun, 19 Jul 2020 12:50:56 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/technical/dns/</guid>
-        <description>42th openheart https://www.openheart.icu/technical/dns/ -&lt;h2 id=&#34;dnspod-dns&#34;&gt;DNSPod DNS+&lt;/h2&gt;
+        <guid>https://www.openheart.icu/cs/dns/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/dns/ -&lt;h2 id=&#34;dnspod-dns&#34;&gt;DNSPod DNS+&lt;/h2&gt;
 &lt;p&gt;​            首选：119.29.29.29&lt;/p&gt;
 &lt;p&gt;​            备选：182.254.116.116&lt;/p&gt;
 &lt;h3 id=&#34;114dns&#34;&gt;114DNS&lt;/h3&gt;
@@ -142,7 +322,7 @@
 &lt;h3 id=&#34;ipv6地址实验&#34;&gt;IPv6地址(实验)&lt;/h3&gt;
 &lt;p&gt;​            2620:0:ccc::2&lt;/p&gt;
 &lt;p&gt;​            2620:0:ccd::2&lt;/p&gt;
-- https://www.openheart.icu/technical/dns/ - ALL RIGHTS RESERVED KRIS NIE</description>
+- https://www.openheart.icu/cs/dns/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -161,11 +341,11 @@
     
         <item>
         <title>.NET INTERVIEW</title>
-        <link>https://www.openheart.icu/technical/dot-net-interview-questions/</link>
+        <link>https://www.openheart.icu/cs/dot-net-interview-questions/</link>
         <pubDate>Fri, 17 Jul 2020 23:28:00 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/technical/dot-net-interview-questions/</guid>
-        <description>42th openheart https://www.openheart.icu/technical/dot-net-interview-questions/ -&lt;h1 id=&#34;net-interview&#34;&gt;.NET INTERVIEW&lt;/h1&gt;
+        <guid>https://www.openheart.icu/cs/dot-net-interview-questions/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/dot-net-interview-questions/ -&lt;h1 id=&#34;net-interview&#34;&gt;.NET INTERVIEW&lt;/h1&gt;
 &lt;h2 id=&#34;from-jeffrey-zhaos-blog&#34;&gt;from Jeffrey Zhao&amp;rsquo;s blog&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://blog.zhaojie.me/2011/03/my-interview-questions-for-dotnet-programmers.html&#34;&gt;我在面试.NET/C#程序员时会提出的问题&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -403,7 +583,7 @@ str1 is abc,str2 is ab
 &lt;li&gt;【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移&lt;/li&gt;
 &lt;li&gt;【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移&lt;/li&gt;
 &lt;/ol&gt;
-- https://www.openheart.icu/technical/dot-net-interview-questions/ - ALL RIGHTS RESERVED KRIS NIE</description>
+- https://www.openheart.icu/cs/dot-net-interview-questions/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -416,6 +596,9 @@ str1 is abc,str2 is ab
         <guid>https://www.openheart.icu/about/</guid>
         <description>42th openheart https://www.openheart.icu/about/ -&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
 &lt;p&gt;I am Kris Nie.&lt;/p&gt;
+&lt;p&gt;Github: &lt;a href=&#34;https://github.com/Hyominn&#34;&gt;@Hyominn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ins: &lt;a href=&#34;https://www.instagram.com/hehe54213/&#34;&gt;@krisnie42&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Twitter: &lt;a href=&#34;https://twitter.com/hehe54213&#34;&gt;@hehe54213&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
 &lt;p&gt;This is my Hugo blog :&lt;/p&gt;
 &lt;blockquote&gt;
@@ -506,317 +689,6 @@ $$
 &lt;p&gt;时间复杂度：O(n)，假设 n 是列表的长度，那么时间复杂度为 O(n)。
 空间复杂度：O(n)，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。&lt;/p&gt;
 - https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Computer network</title>
-        <link>https://www.openheart.icu/cs/computer-network/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/computer-network/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/computer-network/ -&lt;h1 id=&#34;计算机网络&#34;&gt;计算机网络&lt;/h1&gt;
-&lt;h2 id=&#34;网络的七层架构&#34;&gt;网络的七层架构&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;物理层&lt;/li&gt;
-&lt;li&gt;数据链路层&lt;/li&gt;
-&lt;li&gt;网络层&lt;/li&gt;
-&lt;li&gt;传输层&lt;/li&gt;
-&lt;li&gt;会话层&lt;/li&gt;
-&lt;li&gt;表示层&lt;/li&gt;
-&lt;li&gt;应用层&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;tcpip-原理&#34;&gt;TCP/IP 原理&lt;/h2&gt;
-&lt;h2 id=&#34;tcp-三次握手四次挥手&#34;&gt;TCP 三次握手/四次挥手&lt;/h2&gt;
-&lt;h3 id=&#34;三次握手&#34;&gt;三次握手&lt;/h3&gt;
-&lt;p&gt;TCP 在传输之前会进行三次沟通，一般称为“三次握手”。&lt;/p&gt;
-&lt;h3 id=&#34;四次挥手&#34;&gt;四次挥手&lt;/h3&gt;
-&lt;p&gt;TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。&lt;/p&gt;
-- https://www.openheart.icu/cs/computer-network/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Git</title>
-        <link>https://www.openheart.icu/technical/git/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/technical/git/</guid>
-        <description>42th openheart https://www.openheart.icu/technical/git/ -&lt;h2 id=&#34;idea设置git&#34;&gt;idea设置git&lt;/h2&gt;
-&lt;p&gt;idea -&amp;gt;VSC -&amp;gt;Create Git Repository
-右击工程文件 -&amp;gt;git-&amp;gt;add
-右击工程文件 -&amp;gt;git-&amp;gt;commit&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git remote add origin git@github.com:Hyominn/java_demo.git
-git pull git@github.com:Hyominn/java_demo.git
-git add .
-dir                                                &lt;span style=&#34;color:#228b22&#34;&gt;# 查看有哪些文件夹&lt;/span&gt;
-git rm -r --cached target   &lt;span style=&#34;color:#228b22&#34;&gt;# 删除target文件夹&lt;/span&gt;
-git commit –m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;版本更新信息&amp;#34;&lt;/span&gt;
-git push git@github.com:Hyominn/java_demo.git   
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置git代理&#34;&gt;设置git代理&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global https.proxy http://127.0.0.1:1080
-git config --global https.proxy https://127.0.0.1:1080
-
-git config --global http.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
-git config --global https.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
-
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-
-npm config delete proxy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;遇到pull不下来&#34;&gt;遇到pull不下来&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git reset --hard FETCH_HEAD
-git clone  https://www.github.com/Hyominn/openheart.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;更改用户名邮箱&#34;&gt;更改用户名邮箱&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global user.name &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt;
-git config --global user.email johndoe@example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Hugo</title>
-        <link>https://www.openheart.icu/technical/hugo/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/technical/hugo/</guid>
-        <description>42th openheart https://www.openheart.icu/technical/hugo/ -&lt;h1 id=&#34;install&#34;&gt;Install&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz
-
-cp ./hugo /usr/local/bin/
-
-hugo new site site42
-
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
-
-hugo version
-
-rm -r public
-hugo server -b &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://openheart.icu:1313/&amp;#34;&lt;/span&gt; -p &lt;span style=&#34;color:#b452cd&#34;&gt;1313&lt;/span&gt; --bind &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#mac 安装&lt;/span&gt;
-brew install hugo
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# show the location of the hugo executable&lt;/span&gt;
-which hugo
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# show the installed version&lt;/span&gt;
-ls -l &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt; which hugo &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#lrwxr-xr-x  1 hyomin  admin  30  7 17 22:46 /usr/local/bin/hugo -&amp;gt; ../Cellar/hugo/0.74.1/bin/hugo&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# verify that hugo runs correctly&lt;/span&gt;
-hugo version
-Hugo Static Site Generator v0.74.1/extended darwin/amd64 BuildDate: unknown
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;quick-start-guide&#34;&gt;Quick start guide&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new site site42
-
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
-&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ archetypes/&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ doc/content/&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ data/&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ layouts/&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ static/&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#    config.toml&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#创建文章&lt;/span&gt;
-hugo new about.md
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#安装皮肤&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; themes
-&lt;span style=&#34;color:#228b22&#34;&gt;#git clone https://github.com/gevhaz/hugo-theme-notrack.git&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#https://github.com/spf13/hyde.git&lt;/span&gt;
-git clone https://github.com/AmazingRise/hugo-theme-diary.git themes/diary
-
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#下载所有hugoThemes&lt;/span&gt;
-git clone --depth &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt; --recursive https://github.com/spf13/hugoThemes.git themes
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#运行 Hugo&lt;/span&gt;
-hugo server --theme=hyde --buildDrafts
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#想要了解更多其他的选项，执行：&lt;/span&gt;
-hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#想要了解 server 相关的选项：&lt;/span&gt;
-hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt; server
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#打开你喜欢的 编辑器 ，编辑和保存你的文章内容，然后等待 Hugo 重新编译并自动重新加载&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hugo-post-missing&#34;&gt;Hugo Post Missing&lt;/h1&gt;
-&lt;p&gt;偶然发现存在有文章无法被生成的情况，经过检查发现在文章yaml配置文件中的date的问题。&lt;/p&gt;
-&lt;p&gt;具体对比后发现并没有规律，既不是纽约时间也不是北京时间，但改时间确实会影响文章的生成。&lt;/p&gt;
-&lt;p&gt;查阅之后发现如下两个解决办法&lt;/p&gt;
-&lt;h4 id=&#34;修改configtoml文件&#34;&gt;修改&lt;code&gt;config.toml&lt;/code&gt;文件&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;buildFuture = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;build-add---buildfuture&#34;&gt;build add &amp;ndash;buildFuture&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server --theme=diary --buildDrafts --buildFuture
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&#34;&gt;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://jdhao.github.io/2020/01/11/hugo_post_missing/&#34;&gt;https://jdhao.github.io/2020/01/11/hugo_post_missing/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;添加谈笑风生区&#34;&gt;添加谈笑风生区&lt;/h1&gt;
-&lt;p&gt;申请地址：&lt;a href=&#34;https://github.com/settings/applications/new&#34;&gt;Authorization callback URL&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;查看自己的OAuth Apps：&lt;a href=&#34;https://github.com/settings/developers&#34;&gt;OAuth Apps&lt;/a&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;字段&lt;/th&gt;
-&lt;th&gt;内容&lt;/th&gt;
-&lt;th&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Application name&lt;/td&gt;
-&lt;td&gt;42th-openheart&lt;/td&gt;
-&lt;td&gt;填写应用名称&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Homepage URL&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.openheart.icu/&#34;&gt;https://www.openheart.icu/&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;主页地址&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Application description&lt;/td&gt;
-&lt;td&gt;第四十二次不开心&lt;/td&gt;
-&lt;td&gt;备注&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Authorization callback URL&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.openheart.icu/&#34;&gt;https://www.openheart.icu/&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;回调地址&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;创建模板&#34;&gt;创建模板&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;{{ if and (.Site.Params.enableGitalk) (.IsPage) }}
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;rel&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;href&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;vendor&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;js&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;md5&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;min&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;js&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;relURL&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;}}&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; gitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Gitalk({
-  clientID: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.client_id }}&amp;#39;&lt;/span&gt;,
-  clientSecret: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.client_secret }}&amp;#39;&lt;/span&gt;,
-  repo: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.repo }}&amp;#39;&lt;/span&gt;,
-  owner: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.owner }}&amp;#39;&lt;/span&gt;,
-  admin: [&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.owner }}&amp;#39;&lt;/span&gt;],
-  id: md5(location.pathname),
-  distractionFreeMode: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;false&amp;#39;&lt;/span&gt;
-  });
-  &lt;span style=&#34;color:#658b00&#34;&gt;window&lt;/span&gt;.onload = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; () {
-        gitalk.render(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;gitalk-container&amp;#39;&lt;/span&gt;)
-  }
-&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
-{{ end }}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;添加配置&#34;&gt;添加配置&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[params]
-  enableGitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-
-[params.gitalk]
-  owner = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hyominn&amp;#34;&lt;/span&gt;
-  repo = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;42th-openheart&amp;#34;&lt;/span&gt;
-  client_id = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_id&amp;#34;&lt;/span&gt;
-  client_secret = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_secret&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;reference-1&#34;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/024/&#34;&gt;https://mogeko.me/2018/024/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;webhook&#34;&gt;Webhook&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 本地public文件夹关联到GitHub&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; public
-git init
-git remote add origin https://github.com/Hyominn/42th-openheart.git
-git add -A
-git commit -m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
-git push -u origin master
-
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 服务端操作&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# cd 到目录blog2&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; hugoblog
-&lt;span style=&#34;color:#228b22&#34;&gt;# git 初始化&lt;/span&gt;
-git init
-git remote add origin https://github.com/Hyominn/42th-openheart.git
-&lt;span style=&#34;color:#228b22&#34;&gt;# 从 Github第一次抓取&lt;/span&gt;
-git pull origin master
-
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 创建目录 webhook目录需要创建在当前项目路径下&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 如 /usr/project/hugoblog/webhook&lt;/span&gt;
-mkdir webhook
-&lt;span style=&#34;color:#228b22&#34;&gt;#进入目录&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; webhook
-&lt;span style=&#34;color:#228b22&#34;&gt;# 创建脚本&lt;/span&gt;
-vim git_pull.sh
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#在脚本中保存以下内容：&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; /root/blog2
-git pull origin master
-&lt;span style=&#34;color:#658b00&#34;&gt;exit&lt;/span&gt; &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装并配置webhook&#34;&gt;安装并配置webhook&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;npm install github-webhook-handler
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;新建github_webhookjs脚本&#34;&gt;新建&lt;code&gt;github_webhook.js&lt;/code&gt;脚本&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; http = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;)
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; exec = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt;).exec
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; createHandler = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;github-webhook-handler&amp;#39;&lt;/span&gt;)
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; handler = createHandler({ path: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/webhook&amp;#39;&lt;/span&gt;, secret: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;111111&amp;#39;&lt;/span&gt; })
-
-http.createServer(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (req, res) {
-handler(req, res, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (err) {
-    res.statusCode = &lt;span style=&#34;color:#b452cd&#34;&gt;404&lt;/span&gt;
-    res.end(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;no such location&amp;#39;&lt;/span&gt;)
-  })
-}).listen(&lt;span style=&#34;color:#b452cd&#34;&gt;7777&lt;/span&gt;)
-
-handler.on(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;push&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (event) {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;let&lt;/span&gt; currentTime = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;Date&lt;/span&gt;();
-    console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\n--&amp;gt; &amp;#39;&lt;/span&gt; + currentTime.toLocaleString());
-    console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Received a push event for %s to %s&amp;#39;&lt;/span&gt;, event.payload.repository.name, event.payload.ref);
-    exec(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;sh git_pull.sh&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (error, stdout, stderr) {
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt;(error) {
-            console.error(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;error:\n&amp;#39;&lt;/span&gt; + error);
-            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt;;
-        }
-        console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;stdout:\n&amp;#39;&lt;/span&gt; + stdout);
-        console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;stderr:\n&amp;#39;&lt;/span&gt; + stderr);
-    });
-})
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pm2运行&#34;&gt;pm2运行&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;pm2 start github_webhook.js
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;增加nginx配置&#34;&gt;增加nginx配置&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# NodeJS 将 Web 服务跑在了 7777 端口，我们可以用 Nginx 反向代理到 80 端口&lt;/span&gt;
-location /webhook {
-  &lt;span style=&#34;color:#658b00&#34;&gt;alias&lt;/span&gt; /root/webhook;
-  proxy_pass http://127.0.0.1:7777;  
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github配置&#34;&gt;Github配置&lt;/h2&gt;
-&lt;p&gt;&amp;lsquo;webhook&amp;rsquo;即 ‘github_webhook.js’ 中配置的path，比如：&lt;code&gt;https://www.openheart.icu/webhook&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;必须选择‘application/json’,否则不起作用&lt;/p&gt;
-&lt;p&gt;‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
-一定要和脚本中设置一致&lt;/p&gt;
-&lt;h1 id=&#34;pv-uv&#34;&gt;pv uv&lt;/h1&gt;
-&lt;p&gt;两行代码 搞定计数：&lt;a href=&#34;http://busuanzi.ibruce.info/&#34;&gt;不蒜子&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 网站head引用 --&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- PV --&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_pv&amp;#34;&lt;/span&gt;&amp;gt;
-    本站总访问量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
-&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- UV --&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_uv&amp;#34;&lt;/span&gt;&amp;gt;
-  本站访客数&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_uv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;人次
-&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 单页PV --&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_page_pv&amp;#34;&lt;/span&gt;&amp;gt;
-  本文总阅读量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_page_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
-&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/technical/hugo/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
