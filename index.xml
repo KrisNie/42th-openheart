@@ -6,9 +6,83 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Wed, 22 Jul 2020 20:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 00:00:50 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Distributed cache</title>
+        <link>https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/</link>
+        <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/ -&lt;p&gt;&lt;em&gt;简单了解分布式缓存的各种概念&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;缓存雪崩&#34;&gt;缓存雪崩&lt;/h1&gt;
+&lt;p&gt;缓存雪崩我们可以简单的理解为：由于原有&lt;strong&gt;缓存失效&lt;/strong&gt;，新缓存未到期间所有原本应该访问缓存的请求都去查询数据库了，而对数据库 CPU 和内存造成巨大压力，严重的会造成数据库宕机。从而形成一系列 连锁反应，造成整个系统崩溃。&lt;/p&gt;
+&lt;p&gt;关键词：缓存失效，针对这种情况一般有三种处理办法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一般并发量不是特别多的时候，使用最多的解决方案是加锁排队。&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;给每一个缓存数据增加相应的缓存标记，记录缓存的是否失效，如果缓存标记失效，则更新数据缓存。&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;为 key 设置不同的缓存失效时间。&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;第二、第三中方法在面试中均被提到过，很遗憾我只想到了第一种解决办法（纯粹靠蒙），被连续问到两次后觉得分布式缓存需要整体都了解一下，于是去查资料整理了本文&lt;/em&gt; 😁。&lt;/p&gt;
+&lt;h1 id=&#34;缓存穿透&#34;&gt;缓存穿透&lt;/h1&gt;
+&lt;p&gt;缓存穿透是指用户查询数据，在数据库没有，自然在缓存中也不会有。这样就导致用户查询的时候，在 缓存中找不到，每次都要去数据库再查询一遍，然后返回空（相当于进行了两次无用的查询）。这样请 求就绕过缓存直接查数据库，这也是经常提的缓存命中率问题。&lt;/p&gt;
+&lt;p&gt;有很多种方法可以有效地解决缓存穿透问题，最常见的则是采用布隆过滤器，将所有可能存在的数据哈 希到一个足够大的 bitmap 中，一个一定不存在的数据会被这个 bitmap 拦截掉，从而避免了对底层存 储系统的查询压力。&lt;/p&gt;
+&lt;p&gt;另外也有一个更为简单粗暴的方法，如果一个查询返回的数据为空（不管是数据不 存在，还是系统故障），我们仍然把这个空结果进行缓存，但它的过期时间会很短，最长不超过五分钟。 通过这个直接设置的默认值存放到缓存，这样第二次到缓冲中获取就有值了，而不会继续访问数据库。&lt;/p&gt;
+&lt;h1 id=&#34;缓存预热&#34;&gt;缓存预热&lt;/h1&gt;
+&lt;p&gt;缓存预热就是系统上线后，将相关的缓存数据直接加载到缓存系统。这样就可以避免在用户请求的时候，先查询数据库，然后再将数据缓存的问题。用户直接查询事先被预热的缓存数据。&lt;/p&gt;
+&lt;h1 id=&#34;缓存更新&#34;&gt;缓存更新&lt;/h1&gt;
+&lt;p&gt;缓存更新除了缓存服务器自带的缓存失效策略之外（Redis 默认的有 6 中策略可供选择），我们还可以根据具体的业务需求进行自定义的缓存淘汰，常见的策略有两种：&lt;/p&gt;
+&lt;p&gt;（1）定时去清理过期的缓存；&lt;/p&gt;
+&lt;p&gt;（2）当有用户请求过来时，再判断这个请求所用到的缓存是否过期，过期的话就去底层系统得到新数据并更新缓存。&lt;/p&gt;
+&lt;h1 id=&#34;缓存降级&#34;&gt;缓存降级&lt;/h1&gt;
+&lt;p&gt;当访问量剧增、服务出现问题（如响应时间慢或不响应）或非核心服务影响到核心流程的性能时，仍然需要保证服务还是可用的，即使是有损服务。系统可以根据一些关键数据进行自动降级，也可以配置开关实现人工降级。 降级的最终目的是保证核心服务可用，即使是有损的。 而且有些服务是无法降级的（如加入购物车、结算）。&lt;/p&gt;
+- https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Reliability&amp;Availability</title>
+        <link>https://www.openheart.icu/cs/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E5%92%8C%E9%AB%98%E5%8F%AF%E9%9D%A0%E6%80%A7/</link>
+        <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E5%92%8C%E9%AB%98%E5%8F%AF%E9%9D%A0%E6%80%A7/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E5%92%8C%E9%AB%98%E5%8F%AF%E9%9D%A0%E6%80%A7/ -&lt;h1 id=&#34;区分高可靠性与高可用性&#34;&gt;区分高可靠性与高可用性&lt;/h1&gt;
+&lt;p&gt;Reliability和Availability分别对应可靠性和可用性, 这两个概念既有区别也有联系:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reliability定义为一个服务连续无故障运行的时间，无故障运行的时间越长，可靠性就越高。&lt;/li&gt;
+&lt;li&gt;Availiability定义为在足够长的时间里，比如一年的时间里，一个服务可用的时间，服务可用时间越长越好。一般用可服务时间除于总时间算出一个百分比，用百分比作为度量。比如一个服务如果有5个9的可用性，指的就是一年里99.999%时间里服务都是可用的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;有两个极端的例子可以很好的说明这两个概念的区别:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;假想一个服务，可靠性很高，平均来说可以稳定运行10年，但是一旦服务中断，要用一年的时间来恢复，那么它的可用性只有90%。&lt;/li&gt;
+&lt;li&gt;假想另一个服务，可靠性很差，运行10秒就会宕机，但是恢复服务只需要1ms, 那么它的可用性是99.99%&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;从这两个极端的例子可以看出，提高可用性有两条路:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一是提高可靠性，当然影响可靠性的原因有很多，包括硬件，软件，网络，运维等。但是有人做过统计，软件的bug是影响可靠性的最主要的因素。并且提高软件质量相较于使用更可靠的硬件也算成本较低的方式了，&lt;/li&gt;
+&lt;li&gt;二是减少恢复时间，一旦出现宕机，如果能在秒级恢复，那对业务影响是很小的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;高可靠性的实现&#34;&gt;高可靠性的实现&lt;/h1&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;h1 id=&#34;高可用性的实现&#34;&gt;高可用性的实现&lt;/h1&gt;
+&lt;p&gt;高可用HA（High Availability）是分布式系统架构设计中必须考虑的因素之一，它通常是指，通过设计减少系统不能提供服务的时间。&lt;/p&gt;
+&lt;p&gt;方法论上，高可用是通过&lt;strong&gt;冗余+自动故障转移&lt;/strong&gt;来实现的。&lt;/p&gt;
+&lt;p&gt;整个互联网分层系统架构的高可用，又是通过每一层的&lt;strong&gt;冗余+自动故障转移&lt;/strong&gt;来综合实现的，具体的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;【客户端层】到【反向代理层】的高可用，是通过反向代理层的冗余实现的，常见实践是keepalived + virtual IP自动故障转移&lt;/li&gt;
+&lt;li&gt;【反向代理层】到【站点层】的高可用，是通过站点层的冗余实现的，常见实践是nginx与web-server之间的存活性探测与自动故障转移&lt;/li&gt;
+&lt;li&gt;【站点层】到【服务层】的高可用，是通过服务层的冗余实现的，常见实践是通过service-connection-pool来保证自动故障转移&lt;/li&gt;
+&lt;li&gt;【服务层】到【缓存层】的高可用，是通过缓存数据的冗余实现的，常见实践是缓存客户端双读双写，或者利用缓存集群的主从数据同步与sentinel保活与自动故障转移；更多的业务场景，对缓存没有高可用要求，可以使用缓存服务化来对调用方屏蔽底层复杂性&lt;/li&gt;
+&lt;li&gt;【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移&lt;/li&gt;
+&lt;li&gt;【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移&lt;/li&gt;
+&lt;/ol&gt;
+- https://www.openheart.icu/cs/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E5%92%8C%E9%AB%98%E5%8F%AF%E9%9D%A0%E6%80%A7/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -554,140 +628,7 @@ str1 is abc,str2 is ab
 &lt;h2 id=&#34;面试题&#34;&gt;面试题&lt;/h2&gt;
 &lt;h3 id=&#34;concurrentdictionary-or-dictionary&#34;&gt;ConcurrentDictionary or Dictionary&lt;/h3&gt;
 &lt;p&gt;ConcurrentDictionary是&lt;code&gt;System.Collections.Concurrent&lt;/code&gt;中线程安全的字典类&lt;/p&gt;
-&lt;h3 id=&#34;redis&#34;&gt;Redis&lt;/h3&gt;
-&lt;h3 id=&#34;高可用性和高可靠性&#34;&gt;高可用性和高可靠性&lt;/h3&gt;
-&lt;p&gt;Reliability和Availability分别对应可靠性和可用性, 这两个概念既有区别也有联系:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Reliability定义为一个服务连续无故障运行的时间，无故障运行的时间越长，可靠性就越高。&lt;/li&gt;
-&lt;li&gt;Availiability定义为在足够长的时间里，比如一年的时间里，一个服务可用的时间，服务可用时间越长越好。一般用可服务时间除于总时间算出一个百分比，用百分比作为度量。比如一个服务如果有5个9的可用性，指的就是一年里99.999%时间里服务都是可用的。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;有两个极端的例子可以很好的说明这两个概念的区别:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;假想一个服务，可靠性很高，平均来说可以稳定运行10年，但是一旦服务中断，要用一年的时间来恢复，那么它的可用性只有90%。&lt;/li&gt;
-&lt;li&gt;假想另一个服务，可靠性很差，运行10秒就会宕机，但是恢复服务只需要1ms, 那么它的可用性是99.99%&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;从这两个极端的例子可以看出，提高可用性有两条路:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;一是提高可靠性，当然影响可靠性的原因有很多，包括硬件，软件，网络，运维等。但是有人做过统计，软件的bug是影响可靠性的最主要的因素。并且提高软件质量相较于使用更可靠的硬件也算成本较低的方式了，&lt;/li&gt;
-&lt;li&gt;二是减少恢复时间，一旦出现宕机，如果能在秒级恢复，那对业务影响是很小的。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;高可用性&#34;&gt;高可用性&lt;/h4&gt;
-&lt;p&gt;高可用HA（High Availability）是分布式系统架构设计中必须考虑的因素之一，它通常是指，通过设计减少系统不能提供服务的时间。&lt;/p&gt;
-&lt;p&gt;方法论上，高可用是通过&lt;strong&gt;冗余+自动故障转移&lt;/strong&gt;来实现的。&lt;/p&gt;
-&lt;p&gt;整个互联网分层系统架构的高可用，又是通过每一层的&lt;strong&gt;冗余+自动故障转移&lt;/strong&gt;来综合实现的，具体的：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;【客户端层】到【反向代理层】的高可用，是通过反向代理层的冗余实现的，常见实践是keepalived + virtual IP自动故障转移&lt;/li&gt;
-&lt;li&gt;【反向代理层】到【站点层】的高可用，是通过站点层的冗余实现的，常见实践是nginx与web-server之间的存活性探测与自动故障转移&lt;/li&gt;
-&lt;li&gt;【站点层】到【服务层】的高可用，是通过服务层的冗余实现的，常见实践是通过service-connection-pool来保证自动故障转移&lt;/li&gt;
-&lt;li&gt;【服务层】到【缓存层】的高可用，是通过缓存数据的冗余实现的，常见实践是缓存客户端双读双写，或者利用缓存集群的主从数据同步与sentinel保活与自动故障转移；更多的业务场景，对缓存没有高可用要求，可以使用缓存服务化来对调用方屏蔽底层复杂性&lt;/li&gt;
-&lt;li&gt;【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移&lt;/li&gt;
-&lt;li&gt;【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移&lt;/li&gt;
-&lt;/ol&gt;
 - https://www.openheart.icu/cs/dot-net-interview-questions/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>About</title>
-        <link>https://www.openheart.icu/about/</link>
-        <pubDate>Fri, 17 Jul 2020 22:57:45 +0800</pubDate>
-        
-        <guid>https://www.openheart.icu/about/</guid>
-        <description>42th openheart https://www.openheart.icu/about/ -&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
-&lt;p&gt;I am Kris Nie.&lt;/p&gt;
-&lt;p&gt;Github: &lt;a href=&#34;https://github.com/Hyominn&#34;&gt;@Hyominn&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Ins: &lt;a href=&#34;https://www.instagram.com/krisnie42/&#34;&gt;@krisnie42&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Twitter: &lt;a href=&#34;https://twitter.com/hehe54213&#34;&gt;@hehe54213&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
-&lt;p&gt;This is my Hugo blog :&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;42th openheart.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;用来记录我的第42次不开心&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.
-├── Gossip			#谨言慎行
-├── ComputerScience		#计算机科学
-├── Arithmetic			#算法
-├── About			#关于
-├── Category			#归类
-├── Tags			#标签
-└── RSS Feed			#RSS订阅
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Thanks for theme makers:&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Hugo Theme &lt;a href=&#34;https://github.com/amazingrise/hugo-theme-diary&#34;&gt;Diary&lt;/a&gt; by &lt;a href=&#34;https://amazingrise.net/&#34;&gt;Rise&lt;/a&gt; Ported from &lt;a href=&#34;https://mak1t0.cc/&#34;&gt;Makito&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://github.com/SumiMakito/hexo-theme-journal/&#34;&gt;Journal.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/about/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>206. Reverse Linked List</title>
-        <link>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</guid>
-        <description>42th openheart https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ -&lt;h1 id=&#34;reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/reverse-linked-list&#34;&gt;Reverse a singly linked list.&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Example:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
-Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Follow up:&lt;/p&gt;
-&lt;p&gt;A linked list can be reversed either iteratively or recursively. Could you implement both?&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;迭代&#34;&gt;迭代&lt;/h2&gt;
-&lt;p&gt;将&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;转化为&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NULL&amp;lt;-1&amp;lt;-2&amp;lt;-3&amp;lt;-4&amp;lt;-5&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;使用一个prev节点存储上一个节点（初始为NULL），将当前curr节点的next指向prev节点，prev节点存储curr节点，curr存储curr的原next节点，完成一次迭代。最后返回prev（最后的curr是原ListNode的NULL）&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * Definition for singly-linked list.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * public class ListNode {
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     int val;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     ListNode next;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     ListNode(int x) { val = x; }
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * }
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; */&lt;/span&gt;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ListNode &lt;span style=&#34;color:#008b45&#34;&gt;reverseList&lt;/span&gt;(ListNode head) {
-    ListNode prev = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-    ListNode curr = head;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;while&lt;/span&gt; (curr != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) {
-        ListNode nextTemp = curr.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;;
-        curr.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = prev;
-        prev = curr;
-        curr = nextTemp;
-    }
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; prev;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;时间复杂度分析&#34;&gt;时间复杂度分析&lt;/h3&gt;
-&lt;p&gt;时间复杂度：&lt;em&gt;O&lt;/em&gt;(n)&lt;/p&gt;
-&lt;p&gt;空间复杂度：&lt;em&gt;O&lt;/em&gt;(1)&lt;/p&gt;
-&lt;h2 id=&#34;递归&#34;&gt;递归&lt;/h2&gt;
-&lt;p&gt;将
-$$
-n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}→&amp;hellip;→n_m→∅
-$$
-转化为
-$$
-n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}←&amp;hellip;←n_m
-$$
-先转化原链表最后一个节点，然后依次转化直到n&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ListNode &lt;span style=&#34;color:#008b45&#34;&gt;reverseList&lt;/span&gt;(ListNode head) {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (head == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt; || head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; head;
-    ListNode p = reverseList(head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;);
-    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = head;
-    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; p;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;时间复杂度分析-1&#34;&gt;时间复杂度分析&lt;/h3&gt;
-&lt;p&gt;时间复杂度：O(n)，假设 n 是列表的长度，那么时间复杂度为 O(n)。
-空间复杂度：O(n)，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。&lt;/p&gt;
-- https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

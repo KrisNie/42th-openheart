@@ -6,9 +6,113 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Wed, 22 Jul 2020 20:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 00:00:50 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>About</title>
+        <link>https://www.openheart.icu/about/</link>
+        <pubDate>Fri, 17 Jul 2020 22:57:45 +0800</pubDate>
+        
+        <guid>https://www.openheart.icu/about/</guid>
+        <description>42th openheart https://www.openheart.icu/about/ -&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
+&lt;p&gt;I am Kris Nie.&lt;/p&gt;
+&lt;p&gt;Github: &lt;a href=&#34;https://github.com/Hyominn&#34;&gt;@Hyominn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ins: &lt;a href=&#34;https://www.instagram.com/krisnie42/&#34;&gt;@krisnie42&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Twitter: &lt;a href=&#34;https://twitter.com/hehe54213&#34;&gt;@hehe54213&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
+&lt;p&gt;This is my Hugo blog :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;42th openheart.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用来记录我的第42次不开心&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.
+├── Gossip			#谨言慎行
+├── ComputerScience		#计算机科学
+├── Arithmetic			#算法
+├── About			#关于
+├── Category			#归类
+├── Tags			#标签
+└── RSS Feed			#RSS订阅
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Thanks for theme makers:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hugo Theme &lt;a href=&#34;https://github.com/amazingrise/hugo-theme-diary&#34;&gt;Diary&lt;/a&gt; by &lt;a href=&#34;https://amazingrise.net/&#34;&gt;Rise&lt;/a&gt; Ported from &lt;a href=&#34;https://mak1t0.cc/&#34;&gt;Makito&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://github.com/SumiMakito/hexo-theme-journal/&#34;&gt;Journal.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/about/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>206. Reverse Linked List</title>
+        <link>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</guid>
+        <description>42th openheart https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ -&lt;h1 id=&#34;reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/reverse-linked-list&#34;&gt;Reverse a singly linked list.&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
+Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Follow up:&lt;/p&gt;
+&lt;p&gt;A linked list can be reversed either iteratively or recursively. Could you implement both?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;迭代&#34;&gt;迭代&lt;/h2&gt;
+&lt;p&gt;将&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;转化为&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NULL&amp;lt;-1&amp;lt;-2&amp;lt;-3&amp;lt;-4&amp;lt;-5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用一个prev节点存储上一个节点（初始为NULL），将当前curr节点的next指向prev节点，prev节点存储curr节点，curr存储curr的原next节点，完成一次迭代。最后返回prev（最后的curr是原ListNode的NULL）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * Definition for singly-linked list.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * public class ListNode {
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     int val;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     ListNode next;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     ListNode(int x) { val = x; }
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * }
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ListNode &lt;span style=&#34;color:#008b45&#34;&gt;reverseList&lt;/span&gt;(ListNode head) {
+    ListNode prev = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
+    ListNode curr = head;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;while&lt;/span&gt; (curr != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) {
+        ListNode nextTemp = curr.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;;
+        curr.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = prev;
+        prev = curr;
+        curr = nextTemp;
+    }
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; prev;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;时间复杂度分析&#34;&gt;时间复杂度分析&lt;/h3&gt;
+&lt;p&gt;时间复杂度：&lt;em&gt;O&lt;/em&gt;(n)&lt;/p&gt;
+&lt;p&gt;空间复杂度：&lt;em&gt;O&lt;/em&gt;(1)&lt;/p&gt;
+&lt;h2 id=&#34;递归&#34;&gt;递归&lt;/h2&gt;
+&lt;p&gt;将
+$$
+n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}→&amp;hellip;→n_m→∅
+$$
+转化为
+$$
+n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}←&amp;hellip;←n_m
+$$
+先转化原链表最后一个节点，然后依次转化直到n&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ListNode &lt;span style=&#34;color:#008b45&#34;&gt;reverseList&lt;/span&gt;(ListNode head) {
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (head == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt; || head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; head;
+    ListNode p = reverseList(head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;);
+    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = head;
+    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; p;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;时间复杂度分析-1&#34;&gt;时间复杂度分析&lt;/h3&gt;
+&lt;p&gt;时间复杂度：O(n)，假设 n 是列表的长度，那么时间复杂度为 O(n)。
+空间复杂度：O(n)，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。&lt;/p&gt;
+- https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -410,7 +514,8 @@ git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-autosuggestions
 vi ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改zshrc&lt;/p&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 修改zshrc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;plugins信息：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;plugins=(
 	git
 	zsh-autosuggestions
@@ -576,60 +681,6 @@ nginx -c /etc/nginx/nginx.conf
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;1h;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/nginx/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>PHP</title>
-        <link>https://www.openheart.icu/cs/php/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/php/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/php/ -&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl start php-fpm
-systemctl restart php-fpm
-
-service php-fpm start
-service php-fpm restart
-service php-fpm stop
-service php-fpm reload
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt; = nginx
-&lt;span style=&#34;color:#00688b&#34;&gt;group&lt;/span&gt; = users
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/php/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Vim</title>
-        <link>https://www.openheart.icu/cs/vim/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/vim/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/vim/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 退出编辑模式，输入以下命令：&lt;/span&gt;
-Esc 
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 保存后退出vi，若为 :wq! 则为强制储存后退出（常用）&lt;/span&gt;
-:wq
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 保存但不退出（常用）&lt;/span&gt;
-:w
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 若文件属性为『只读』时，强制写入该档案&lt;/span&gt;
-:w!
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 离开 vi （常用）&lt;/span&gt;
-:q    
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。&lt;/span&gt;
-:q!   
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 将档案还原到最原始的状态！&lt;/span&gt;
-:e!
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/vim/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

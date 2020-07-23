@@ -1060,64 +1060,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#redis" onclick="onNavClick(`#redis-nav`)" id="redis-nav">
-									Redis
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%ab%98%e5%8f%af%e7%94%a8%e6%80%a7%e5%92%8c%e9%ab%98%e5%8f%af%e9%9d%a0%e6%80%a7" onclick="onNavClick(`#高可用性和高可靠性-nav`)" id="高可用性和高可靠性-nav">
-									高可用性和高可靠性
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#%e9%ab%98%e5%8f%af%e7%94%a8%e6%80%a7" onclick="onNavClick(`#高可用性-nav`)" id="高可用性-nav">
-									高可用性
-								</a>
-							</li>
-						
-						
-					
-				
-			
 		</ul>
 	</div>
 
@@ -2052,64 +1994,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#redis" onclick="onNavClick(`#redis-nav`)" id="redis-nav">
-									Redis
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%ab%98%e5%8f%af%e7%94%a8%e6%80%a7%e5%92%8c%e9%ab%98%e5%8f%af%e9%9d%a0%e6%80%a7" onclick="onNavClick(`#高可用性和高可靠性-nav`)" id="高可用性和高可靠性-nav">
-									高可用性和高可靠性
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#%e9%ab%98%e5%8f%af%e7%94%a8%e6%80%a7" onclick="onNavClick(`#高可用性-nav`)" id="高可用性-nav">
-									高可用性
-								</a>
-							</li>
-						
-						
-					
-				
-			
 		</ul>
 	</div>
 
@@ -2205,7 +2089,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            41 min
+                            36 min
                             
                             2 s.
                         
@@ -2426,35 +2310,6 @@ str1 is abc,str2 is ab
 <h2 id="面试题">面试题</h2>
 <h3 id="concurrentdictionary-or-dictionary">ConcurrentDictionary or Dictionary</h3>
 <p>ConcurrentDictionary是<code>System.Collections.Concurrent</code>中线程安全的字典类</p>
-<h3 id="redis">Redis</h3>
-<h3 id="高可用性和高可靠性">高可用性和高可靠性</h3>
-<p>Reliability和Availability分别对应可靠性和可用性, 这两个概念既有区别也有联系:</p>
-<ol>
-<li>Reliability定义为一个服务连续无故障运行的时间，无故障运行的时间越长，可靠性就越高。</li>
-<li>Availiability定义为在足够长的时间里，比如一年的时间里，一个服务可用的时间，服务可用时间越长越好。一般用可服务时间除于总时间算出一个百分比，用百分比作为度量。比如一个服务如果有5个9的可用性，指的就是一年里99.999%时间里服务都是可用的。</li>
-</ol>
-<p>有两个极端的例子可以很好的说明这两个概念的区别:</p>
-<ol>
-<li>假想一个服务，可靠性很高，平均来说可以稳定运行10年，但是一旦服务中断，要用一年的时间来恢复，那么它的可用性只有90%。</li>
-<li>假想另一个服务，可靠性很差，运行10秒就会宕机，但是恢复服务只需要1ms, 那么它的可用性是99.99%</li>
-</ol>
-<p>从这两个极端的例子可以看出，提高可用性有两条路:</p>
-<ol>
-<li>一是提高可靠性，当然影响可靠性的原因有很多，包括硬件，软件，网络，运维等。但是有人做过统计，软件的bug是影响可靠性的最主要的因素。并且提高软件质量相较于使用更可靠的硬件也算成本较低的方式了，</li>
-<li>二是减少恢复时间，一旦出现宕机，如果能在秒级恢复，那对业务影响是很小的。</li>
-</ol>
-<h4 id="高可用性">高可用性</h4>
-<p>高可用HA（High Availability）是分布式系统架构设计中必须考虑的因素之一，它通常是指，通过设计减少系统不能提供服务的时间。</p>
-<p>方法论上，高可用是通过<strong>冗余+自动故障转移</strong>来实现的。</p>
-<p>整个互联网分层系统架构的高可用，又是通过每一层的<strong>冗余+自动故障转移</strong>来综合实现的，具体的：</p>
-<ol>
-<li>【客户端层】到【反向代理层】的高可用，是通过反向代理层的冗余实现的，常见实践是keepalived + virtual IP自动故障转移</li>
-<li>【反向代理层】到【站点层】的高可用，是通过站点层的冗余实现的，常见实践是nginx与web-server之间的存活性探测与自动故障转移</li>
-<li>【站点层】到【服务层】的高可用，是通过服务层的冗余实现的，常见实践是通过service-connection-pool来保证自动故障转移</li>
-<li>【服务层】到【缓存层】的高可用，是通过缓存数据的冗余实现的，常见实践是缓存客户端双读双写，或者利用缓存集群的主从数据同步与sentinel保活与自动故障转移；更多的业务场景，对缓存没有高可用要求，可以使用缓存服务化来对调用方屏蔽底层复杂性</li>
-<li>【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移</li>
-<li>【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移</li>
-</ol>
 
                     
                     <HR width="100%" id="EOF">

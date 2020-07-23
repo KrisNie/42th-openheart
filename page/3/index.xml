@@ -6,9 +6,63 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Wed, 22 Jul 2020 20:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 00:00:50 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>PHP</title>
+        <link>https://www.openheart.icu/cs/php/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/php/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/php/ -&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl start php-fpm
+systemctl restart php-fpm
+
+service php-fpm start
+service php-fpm restart
+service php-fpm stop
+service php-fpm reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt; = nginx
+&lt;span style=&#34;color:#00688b&#34;&gt;group&lt;/span&gt; = users
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/php/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Vim</title>
+        <link>https://www.openheart.icu/cs/vim/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/vim/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/vim/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 退出编辑模式，输入以下命令：&lt;/span&gt;
+Esc 
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 保存后退出vi，若为 :wq! 则为强制储存后退出（常用）&lt;/span&gt;
+:wq
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 保存但不退出（常用）&lt;/span&gt;
+:w
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 若文件属性为『只读』时，强制写入该档案&lt;/span&gt;
+:w!
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 离开 vi （常用）&lt;/span&gt;
+:q    
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。&lt;/span&gt;
+:q!   
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 将档案还原到最原始的状态！&lt;/span&gt;
+:e!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/vim/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
