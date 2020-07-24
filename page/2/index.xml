@@ -395,7 +395,7 @@ npm config delete proxy
 git clone  https://www.github.com/Hyominn/openheart.git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;更改用户名邮箱&#34;&gt;更改用户名邮箱&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global user.name &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris Nie&amp;#34;&lt;/span&gt;
-git config --global user.email krisnie@example.com
+git config --global user.email krisnie@qq.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
