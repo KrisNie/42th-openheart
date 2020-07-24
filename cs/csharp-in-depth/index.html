@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html><head>
+<title>C# in Depth</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="深入理解CSharp">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="C# in Depth" />
+<meta property="og:description" content="深入理解CSharp" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/cs/csharp-in-depth/" />
+<meta property="article:published_time" content="2020-07-25T00:14:11+00:00" />
+<meta property="article:modified_time" content="2020-07-25T00:14:11+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C# in Depth"/>
+<meta name="twitter:description" content="深入理解CSharp"/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<script src="/vendor/js/vue.min.js" ></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="https://www.openheart.icu//js/loadCSS.js"></script>
+
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://www.openheart.icu//js/toc-collapse.js"></script>
+
+  
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'Hyominn',
+  admin: ['Hyominn'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/boom">
+                Gossip
+            </a>
+            
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+Case42
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@gmail.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+鲁ICP备20007116号
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2020 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#implementing-the-singleton-pattern-in-chttpscsharpindepthcomarticlessingleton" onclick="onNavClick(`#implementing-the-singleton-pattern-in-chttpscsharpindepthcomarticlessingleton-nav`)" id="implementing-the-singleton-pattern-in-chttpscsharpindepthcomarticlessingleton-nav">
+									Implementing the Singleton Pattern in C#
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#introduction" onclick="onNavClick(`#introduction-nav`)" id="introduction-nav">
+									Introduction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#first-version---not-thread-safe" onclick="onNavClick(`#first-version---not-thread-safe-nav`)" id="first-version---not-thread-safe-nav">
+									First version - not thread-safe
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#second-version---simple-thread-safety" onclick="onNavClick(`#second-version---simple-thread-safety-nav`)" id="second-version---simple-thread-safety-nav">
+									Second version - simple thread-safety
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#third-version---attempted-thread-safety-using-double-check-locking" onclick="onNavClick(`#third-version---attempted-thread-safety-using-double-check-locking-nav`)" id="third-version---attempted-thread-safety-using-double-check-locking-nav">
+									Third version - attempted thread-safety using double-check locking
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#fourth-version---not-quite-as-lazy-but-thread-safe-without-using-locks" onclick="onNavClick(`#fourth-version---not-quite-as-lazy-but-thread-safe-without-using-locks-nav`)" id="fourth-version---not-quite-as-lazy-but-thread-safe-without-using-locks-nav">
+									Fourth version - not quite as lazy, but thread-safe without using locks
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#fifth-version---fully-lazy-instantiation" onclick="onNavClick(`#fifth-version---fully-lazy-instantiation-nav`)" id="fifth-version---fully-lazy-instantiation-nav">
+									Fifth version - fully lazy instantiation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#sixth-version---using-net-4s-lazyt-type" onclick="onNavClick(`#sixth-version---using-net-4s-lazyt-type-nav`)" id="sixth-version---using-net-4s-lazyt-type-nav">
+									Sixth version - using .NET 4’s Lazy&lt;T&gt; type
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#performance-vs-laziness" onclick="onNavClick(`#performance-vs-laziness-nav`)" id="performance-vs-laziness-nav">
+									Performance vs laziness
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#exceptions" onclick="onNavClick(`#exceptions-nav`)" id="exceptions-nav">
+									Exceptions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#conclusion-modified-slightly-on-january-7th-2006-updated-feb-12th-2011" onclick="onNavClick(`#conclusion-modified-slightly-on-january-7th-2006-updated-feb-12th-2011-nav`)" id="conclusion-modified-slightly-on-january-7th-2006-updated-feb-12th-2011-nav">
+									Conclusion (modified slightly on January 7th 2006; updated Feb 12th 2011)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/boom">
+                    Gossip
+                </a>
+                
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#implementing-the-singleton-pattern-in-chttpscsharpindepthcomarticlessingleton" onclick="onNavClick(`#implementing-the-singleton-pattern-in-chttpscsharpindepthcomarticlessingleton-nav`)" id="implementing-the-singleton-pattern-in-chttpscsharpindepthcomarticlessingleton-nav">
+									Implementing the Singleton Pattern in C#
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#introduction" onclick="onNavClick(`#introduction-nav`)" id="introduction-nav">
+									Introduction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#first-version---not-thread-safe" onclick="onNavClick(`#first-version---not-thread-safe-nav`)" id="first-version---not-thread-safe-nav">
+									First version - not thread-safe
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#second-version---simple-thread-safety" onclick="onNavClick(`#second-version---simple-thread-safety-nav`)" id="second-version---simple-thread-safety-nav">
+									Second version - simple thread-safety
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#third-version---attempted-thread-safety-using-double-check-locking" onclick="onNavClick(`#third-version---attempted-thread-safety-using-double-check-locking-nav`)" id="third-version---attempted-thread-safety-using-double-check-locking-nav">
+									Third version - attempted thread-safety using double-check locking
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#fourth-version---not-quite-as-lazy-but-thread-safe-without-using-locks" onclick="onNavClick(`#fourth-version---not-quite-as-lazy-but-thread-safe-without-using-locks-nav`)" id="fourth-version---not-quite-as-lazy-but-thread-safe-without-using-locks-nav">
+									Fourth version - not quite as lazy, but thread-safe without using locks
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#fifth-version---fully-lazy-instantiation" onclick="onNavClick(`#fifth-version---fully-lazy-instantiation-nav`)" id="fifth-version---fully-lazy-instantiation-nav">
+									Fifth version - fully lazy instantiation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#sixth-version---using-net-4s-lazyt-type" onclick="onNavClick(`#sixth-version---using-net-4s-lazyt-type-nav`)" id="sixth-version---using-net-4s-lazyt-type-nav">
+									Sixth version - using .NET 4’s Lazy&lt;T&gt; type
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#performance-vs-laziness" onclick="onNavClick(`#performance-vs-laziness-nav`)" id="performance-vs-laziness-nav">
+									Performance vs laziness
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#exceptions" onclick="onNavClick(`#exceptions-nav`)" id="exceptions-nav">
+									Exceptions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#conclusion-modified-slightly-on-january-7th-2006-updated-feb-12th-2011" onclick="onNavClick(`#conclusion-modified-slightly-on-january-7th-2006-updated-feb-12th-2011-nav`)" id="conclusion-modified-slightly-on-january-7th-2006-updated-feb-12th-2011-nav">
+									Conclusion (modified slightly on January 7th 2006; updated Feb 12th 2011)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    C# in Depth
+                    
+                    <div class="post-subtitle">
+                        深入理解CSharp
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-07-25 00:14
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/interview">Interview</a>
+                                &nbsp;
+                            
+                                <a href="/tags/.net">.NET</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            21 min
+                            
+                            56 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p><em>本文为「C# in Depth」(4th edition)学习记录。</em></p>
+<h1 id="implementing-the-singleton-pattern-in-chttpscsharpindepthcomarticlessingleton"><a href="https://csharpindepth.com/articles/Singleton">Implementing the Singleton Pattern in C#</a></h1>
+<p>在C＃中实现单例模式。该模式是非常常见的设计模式之一，某个对象全局只需要一个实例时，就可以使用单例模式。它的优点也显而易见：</p>
+<ul>
+<li>它能够避免对象重复创建，节约空间并提升效率</li>
+<li>避免由于操作不同实例导致的逻辑错误</li>
+</ul>
+<p><em>以下是原文作者Jon Skeet 对C#单例模式的介绍。</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>单例模式是软件工程中最著名的模式之一。本质上，单例是仅允许创建其自身的单个实例的类，并且通常提供对该实例的简单访问。最常见的是，单例在创建实例时不允许指定任何参数，否则对实例的第二次请求但参数不同可能会出现问题！ （如果应该为具有相同参数的所有请求访问相同的实例，则使用工厂模式更为合适。）本文仅涉及不需要参数的情况。通常，单例的要求是它们是懒惰地创建的，即：直到首次需要实例时才创建实例。</p>
+<p>在C＃中有多种不同的方式来实现单例模式。我将在这里以从简到难顺序（<em>in reverse order of elegance</em>）介绍它们，从最常见的线程安全性开始，逐步发展为完全延迟加载，线程安全，简单且高性能的版本。</p>
+<p>所有这些实现都有四个共同的特征，但是：</p>
+<ul>
+<li>单个构造函数，私有且无参数。这样可以防止其他类实例化它（这将违反模式）。请注意，它还防止了子类化（<em>subclassing</em>）如果一个单例可以被子类化一次，则可以被子类化两次，并且如果每个子类都可以创建一个实例，则将违反（<em>violated</em>）该模式。如果您需要基本类型的单个实例，则可以使用工厂模式，但是直到运行时才知道确切的类型。</li>
+<li>该类是密封的。严格来说，由于上述几点，这是不必要的，但可以帮助<code>JIT</code>进行更多优化。</li>
+<li>一个静态变量，其中包含对创建的单个实例的引用（如果有）。</li>
+<li>公共静态方法是获取对创建的单个实例的引用，并在必要时创建一个实例。</li>
+</ul>
+<p>请注意，所有这些实现还使用公共静态属性<code>Instance</code>作为访问实例的方式。在所有情况下，都可以轻松地将属性转换为方法，而不会影响线程安全性或性能。</p>
+<h2 id="first-version---not-thread-safe">First version - not thread-safe</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#228b22">// Bad code! Do not use!
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">sealed</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Singleton</span>
+{
+  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton instance = <span style="color:#8b008b;font-weight:bold">null</span>;
+
+  <span style="color:#8b008b;font-weight:bold">private</span> Singleton()
+  {
+  }
+
+  <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton Instance
+  {
+    <span style="color:#8b008b;font-weight:bold">get</span>
+    {
+      <span style="color:#8b008b;font-weight:bold">if</span> (instance == <span style="color:#8b008b;font-weight:bold">null</span>)
+      {
+        instance = <span style="color:#8b008b;font-weight:bold">new</span> Singleton();
+      }
+      <span style="color:#8b008b;font-weight:bold">return</span> instance;
+    }
+  }
+}
+</code></pre></div><p>如前所述，以上内容不是线程安全的。</p>
+<p>两个不同的线程都可以执行判断（<em>evaluated the test</em>）<code>if(instance == null)</code>并发现它为<code>true</code>，然后都创建实例，这违反了单例模式。请注意，实际上可能已经在计算表达式之前创建了实例，但是内存模型不能保证实例的新值能暴露给其他线程，除非已传递适当的内存屏障（互斥锁）（<em>memory barriers</em>）。</p>
+<h2 id="second-version---simple-thread-safety">Second version - simple thread-safety</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">sealed</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Singleton</span>
+{
+  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton instance = <span style="color:#8b008b;font-weight:bold">null</span>;
+  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">readonly</span> <span style="color:#00688b;font-weight:bold">object</span> padlock = <span style="color:#8b008b;font-weight:bold">new</span> <span style="color:#00688b;font-weight:bold">object</span>();
+
+  Singleton()
+  {
+  }
+
+  <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton Instance
+  {
+    <span style="color:#8b008b;font-weight:bold">get</span>
+    {
+      <span style="color:#8b008b;font-weight:bold">lock</span> (padlock)
+      {
+        <span style="color:#8b008b;font-weight:bold">if</span> (instance == <span style="color:#8b008b;font-weight:bold">null</span>)
+        {
+          instance = <span style="color:#8b008b;font-weight:bold">new</span> Singleton();
+        }
+        <span style="color:#8b008b;font-weight:bold">return</span> instance;
+      }
+    }
+  }
+}
+</code></pre></div><p>此实现是线程安全的。线程在共享对象上加锁（<em>takes out a lock</em>），然后在创建实例之前检查是否已创建实例。这可以解决内存屏障问题（因为锁定可确保所有读取均在获取锁之后逻辑发生，而解锁可确保所有写入均在锁释放之前逻辑发生）并确保只有一个线程将创建一个实例（仅一个线程一次可以位于代码的该部分中，到第二个线程进入该线程时，第一个线程将创建该实例，因此该表达式的计算结果为<code>false</code>）。不幸的是，每次请求实例时都需要获取锁，因此性能会受到影响。</p>
+<p>请注意，我没有像此实现的某些版本那样锁定<code>typeof(Singleton)</code>，而是锁定了类私有的静态变量的值。锁定其他类可以访问和锁定的对象（such as the type）可能会导致性能问题甚至死锁。这是我的一般样式首选项-尽可能仅锁定专门为锁定目的而创建的对象，或者为特定目的而将其锁定在哪个文档上（例如用于等待/触发队列）。通常，此类对象应为使用它们的类所专用。这有助于使编写线程安全的应用程序变得更加容易。</p>
+<h2 id="third-version---attempted-thread-safety-using-double-check-locking">Third version - attempted thread-safety using double-check locking</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#228b22">// Bad code! Do not use!
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">sealed</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Singleton</span>
+{
+  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton instance = <span style="color:#8b008b;font-weight:bold">null</span>;
+  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">readonly</span> <span style="color:#00688b;font-weight:bold">object</span> padlock = <span style="color:#8b008b;font-weight:bold">new</span> <span style="color:#00688b;font-weight:bold">object</span>();
+
+  Singleton()
+  {
+  }
+
+  <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton Instance
+  {
+    <span style="color:#8b008b;font-weight:bold">get</span>
+    {
+      <span style="color:#8b008b;font-weight:bold">if</span> (instance == <span style="color:#8b008b;font-weight:bold">null</span>)
+      {
+        <span style="color:#8b008b;font-weight:bold">lock</span> (padlock)
+        {
+          <span style="color:#8b008b;font-weight:bold">if</span> (instance == <span style="color:#8b008b;font-weight:bold">null</span>)
+          {
+            instance = <span style="color:#8b008b;font-weight:bold">new</span> Singleton();
+          }
+        }
+      }
+      <span style="color:#8b008b;font-weight:bold">return</span> instance;
+    }
+  }
+}
+</code></pre></div><p>此实现方式（<em>implementation</em>）尝试不再每次都加锁，同时保证线程安全。遗憾的是，该模式有四个缺点（<em>there are four downsides to the pattern</em>）：</p>
+<ul>
+<li>它在Java中不起作用。这么说这似乎有些不合理，但是值得一提的是，您是否需要Java中的单例模式，C＃程序员也很可能是Java程序员。 Java内存模型无法确保在将对新对象的引用分配给实例之前，执行完构造函数。 Java内存模型针对1.5版进行了重新加工，但是在此之后，在没有易失性变量的情况下，双重检查锁定仍然被破坏（像C＃一样）。</li>
+<li>没有任何内存障碍，它在<code>ECMA CLI</code>规范中也被打破。在.NET 2.0内存模型（比ECMA规范更强）下，它很可能是安全的，但我宁愿不依赖那些更强的语义，尤其是在对安全性有任何疑问的情况下。将实例变量设置为<code>volatile</code>也有效，就像显式的内存屏障调用一样，但这样的话即使是大佬也无法确切地确定需要哪些屏障。我倾向于不去用大佬们有争议的方法！</li>
+<li>很容易出错。该模式必须与上面的完全一样-任何重大更改都可能影响性能或正确性。</li>
+<li>它的性能仍然不如后来的实现方式。</li>
+</ul>
+<h2 id="fourth-version---not-quite-as-lazy-but-thread-safe-without-using-locks">Fourth version - not quite as lazy, but thread-safe without using locks</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">sealed</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Singleton</span>
+{
+  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">readonly</span> Singleton instance = <span style="color:#8b008b;font-weight:bold">new</span> Singleton();
+
+  <span style="color:#228b22">// Explicit static constructor to tell C# compiler
+</span><span style="color:#228b22"></span>  <span style="color:#228b22">// not to mark type as beforefieldinit
+</span><span style="color:#228b22"></span>  <span style="color:#8b008b;font-weight:bold">static</span> Singleton()
+  {
+  }
+
+  <span style="color:#8b008b;font-weight:bold">private</span> Singleton()
+  {
+  }
+
+  <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton Instance
+  {
+    <span style="color:#8b008b;font-weight:bold">get</span>
+    {
+      <span style="color:#8b008b;font-weight:bold">return</span> instance;
+    }
+  }
+}
+</code></pre></div><p>如您所见，这确实非常简单，那它是怎么实现线程安全的，它有多懒呢？Well，将C＃中的静态构造函数指定为仅在创建类的实例或引用静态成员时执行，并且每个<code>AppDomain</code>仅执行一次。鉴于无论其他情况如何都需要执行对新构造的类型的检查，因此比在前面的示例中添加额外的检查要快。</p>
+<p>但是，这种方法也有一些缺点（<em>wrinkles</em>）：</p>
+<ul>
+<li>它没有其他实现那么懒。特别是，当具有实例以外的静态成员时，对这些成员的首次引用将涉及创建实例。在下一个实现中将对此进行更正。</li>
+<li>如果一个静态构造函数调用另一个而又再次调用第一个静态构造函数，则会带来复杂性。请查阅<code>.NET规范（currently section 9.5.3 of partition II</code>），以获取有关类型初始值设定项的确切性质的更多详细信息。它们不太可能会影响程序（<em>they&rsquo;re unlikely to bite you</em>），但值得一提的是，静态构造函数在生命周期内存在互相引用（<em>the consequences of static constructors which refer to each other in a cycle</em>）。</li>
+<li>只有当类型未使用称为<code>beforefieldinit</code>的特殊标志进行标记时，.NET才能保证类型初始化程序的惰性。不幸的是，C＃编译器（至少是.NET 1.1运行时中提供的）将所有没有静态构造函数（即看起来像构造函数但被标记为静态的块）的类型都标记为<code>beforefieldinit</code>。我有一篇<a href="https://csharpindepth.com/articles/BeforeFieldInit">文章</a>，详细介绍了这个问题。还要注意，它会影响性能，如页面底部所述。</li>
+</ul>
+<p>这种实现方式可以采取的一种捷径：仅使实例成为公共静态只读变量，并完全摆脱该属性。这使得基本框架代码绝对很小！但是，许多人更喜欢拥有属性，以防将来需要采取进一步的措施，并且<code>JIT</code>内联可能使性能相同。 （请注意，如果您需要惰性，则仍然需要静态构造函数本身。）</p>
+<h2 id="fifth-version---fully-lazy-instantiation">Fifth version - fully lazy instantiation</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">sealed</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Singleton</span>
+{
+  <span style="color:#8b008b;font-weight:bold">private</span> Singleton()
+  {
+  }
+
+  <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton Instance
+  {
+    <span style="color:#8b008b;font-weight:bold">get</span> { <span style="color:#8b008b;font-weight:bold">return</span> Nested.instance; }
+  }
+
+  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Nested</span>
+  {
+    <span style="color:#228b22">// Explicit static constructor to tell C# compiler
+</span><span style="color:#228b22"></span>    <span style="color:#228b22">// not to mark type as beforefieldinit
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">static</span> Nested()
+    {
+    }
+
+    <span style="color:#8b008b;font-weight:bold">internal</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">readonly</span> Singleton instance = <span style="color:#8b008b;font-weight:bold">new</span> Singleton();
+  }
+}
+</code></pre></div><p>在这里，实例化是由对嵌套类的静态成员的第一次引用触发的，该实例仅在<code>Instance</code>中发生。这意味着该实现完全是懒的，同事具有先前性能的所有性能优势。请注意，尽管嵌套类可以访问封闭类的私有成员，但事实并非如此，因此这里需要实例化。但是，由于类本身是私有的，所以这不会引起任何其他问题。但是，为了使实例化变得懒惰，代码有些复杂。</p>
+<h2 id="sixth-version---using-net-4s-lazyt-type">Sixth version - using .NET 4&rsquo;s <code>Lazy&lt;T&gt;</code> type</h2>
+<p>如果使用的是.NET 4（或更高版本），则可以使用<a href="http://msdn.microsoft.com/en-us/library/dd642331.aspx">System.Lazy</a>类型使懒变得非常简单。您需要做的就是将委托传递给构造函数，该构造函数调用Singleton构造函数，使用<code>lambda表达式</code>最容易完成。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">sealed</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Singleton</span>
+{
+    <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">readonly</span> Lazy&lt;Singleton&gt; lazy = <span style="color:#8b008b;font-weight:bold">new</span> Lazy&lt;Singleton&gt; (() =&gt; <span style="color:#8b008b;font-weight:bold">new</span> Singleton());
+
+    <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton Instance { 
+      <span style="color:#8b008b;font-weight:bold">get</span> { <span style="color:#8b008b;font-weight:bold">return</span> lazy.Value; }
+    }
+
+    <span style="color:#8b008b;font-weight:bold">private</span> Singleton()
+    {
+    }
+}
+</code></pre></div><p>它很简单，性能也很好。如果需要，还可以使用<a href="http://msdn.microsoft.com/en-us/library/dd642334.aspx">IsValueCreated</a>属性检查实例是否已创建。</p>
+<p>上面的代码隐式地使用<code>LazyThreadSafetyMode.ExecutionAndPublication</code>作为<code>Lazy&lt;Singleton&gt;</code>的线程安全模式。根据您的要求，您可能希望尝试其他模式。</p>
+<h2 id="performance-vs-laziness">Performance vs laziness</h2>
+<p>在许多情况下，您实际上并不需要完全的懒，除非类初始化时需要做特别耗时的事情，或者在其他地方有副作用，否则可以忽略上面有关显式静态构造函数的实现方法。这可以提高性能，因为它允许<code>JIT</code>编译器进行一次检查（例如，在方法开始时进行检查），以确保类型已初始化，然后从此开始进行假定。如果您的单例实例是在相对紧凑的循环中引用的，则这可能会（相对）产生明显的性能差异。您应该确定是否需要完全延迟的实例化，并在类中适当地记录此决定。</p>
+<p>该页面存在的很多原因是人们试图变得聪明（<em>A lot of the reason for this page&rsquo;s existence is people trying to be clever</em>），因此提出了双重检查的锁定算法。人们常常认为加锁是付出昂贵代价的操作，这是普遍的并且是错误的。我编写了一个非常快速的基准测试，它以十亿次尝试各种变体，以循环方式获取单例实例。这并不是十分科学（<em>It&rsquo;s not terribly scientific</em>），因为在现实生活中，您可能想知道，如果每次迭代实际上都涉及到对获取单例的方法的调用等，该过程有多快。但是，它确实显示了重要的意义。在我的笔记本电脑上，最慢的解决方案（约为5倍）是加锁的解决方法（解决方案2）。那重要吗？当您记住它仍然可以在40秒内成功获取十亿次单例时，可能就不会了。 （注意：本文最初是在很早以前写的，我希望现在可以有更好的性能。）这意味着，如果您“仅”每秒获取40万次单例，则获取的成本将不断增加达到1％的性能。因此，改善性能并不会起到太大作用。现在，如果您经常使用单例模式，您是否是在循环中使用它？如果您非常在乎提高性能，为什么不在循环之外声明局部变量，请获取一次单例然后循环。所以，即使是最慢的实现也很容易做到。</p>
+<p>我非常有兴趣看到一个现实世界的应用程序，在该应用程序中，使用简单的加锁和使用较快速的解决方案之一之间的差异实际上带来了显着的性能差异。</p>
+<h2 id="exceptions">Exceptions</h2>
+<p>有时，您需要在单例构造函数中进行工作，这可能会引发异常，但对整个应用程序可能不会致命。您的应用程序可能能够解决问题，并希望重试。在这个阶段，使用类型初始值设定项构造单例成为问题。不同的运行时对这种情况的处理方式不同，但是我不知道哪个运行者可以做所需的事情（再次运行类型初始化器），即使这样做，您的代码也会在其他运行时中损坏。为了避免这些问题，我建议使用页面上列出的第二种模式，只需使用一个简单的锁，然后每次都要进行检查，如果尚未成功构建该实例，则可以在方法/属性中进行构建。</p>
+<h2 id="conclusion-modified-slightly-on-january-7th-2006-updated-feb-12th-2011">Conclusion (modified slightly on January 7th 2006; updated Feb 12th 2011)</h2>
+<p>在C＃中有多种不同的方式来实现单例模式。读者写信给我，详细介绍了他封装同步方面的一种方式，尽管我承认这在某些非常特殊的情况下（特别是在您想要非常高性能的情况下，并且能够确定单例是否已经被使用的能力）很有用。创建，并且完全懒惰（无论是否调用其他静态成员）。我个人认为这种情况不会经常出现，值得在此页面上进行进一步介绍，但是如果您遇到这种情况，请发<a href="skeet@pobox.com">邮件</a>给我。</p>
+<p>我的个人偏爱是解决方案4：通常，我只有在我需要能够在不触发初始化的情况下调用其他静态方法，或者如果我需要知道单例是否已经被实例化，或者是否需要知道单例是否已被实例化时才不会使用该方法。我不记得我上次遇到这种情况，假设我有过，在这种情况下，我可能会选择解决方案2，该解决方案仍然很不错，而且很容易就可以实现。</p>
+<p>解决方案5很优雅，但比2或4棘手，而且正如我上面所说，它提供的好处似乎很少有用。如果您使用的是.NET 4，则解决方案6是实现懒惰的一种更简单的方法，它还具有明显的惰性。我目前倾向于仅通过习惯就使用解决方案4，但是如果我与经验不足的开发人员一起工作，我很可能会选择解决方案6作为一种简单且普遍适用的模式开始。</p>
+<p>（我不会使用解决方案1，因为它是有缺陷的，我不会使用解决方案3，因为它比不过5。）</p>
+<h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://csharpindepth.com/articles/Singleton">https://csharpindepth.com/articles/Singleton</a></li>
+<li><a href="https://www.cnblogs.com/leolion/p/10241822.html">https://www.cnblogs.com/leolion/p/10241822.html</a></li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">
+                        Last modified on 2020-07-25 00:14
+                        &nbsp;
+                        <span id="busuanzi_container_page_pv" style="color:#777;">
+                            This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
+                        </span>
+                    </p>
+                    
+                </div>
+
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/">
+			Previous<br>Distributed cache
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+Case42
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@gmail.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+鲁ICP备20007116号
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2020 ALL RIGHTS RESERVED KRIS NIE
+	
+
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://www.openheart.icu//js/journal.js"></script>
+
+    </body>
+</html>

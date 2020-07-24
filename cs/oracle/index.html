@@ -21,7 +21,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.openheart.icu/cs/oracle/" />
 <meta property="article:published_time" content="2020-07-21T20:28:00+00:00" />
-<meta property="article:modified_time" content="2020-07-21T21:15:51+00:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="article:modified_time" content="2020-07-24T22:02:44+00:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
@@ -474,6 +474,64 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%af%e6%9b%b4%e6%96%b0%e8%81%94%e6%8e%a5%e8%a7%86%e5%9b%beupdatable-join-view-" onclick="onNavClick(`#可更新联接视图updatable-join-view--nav`)" id="可更新联接视图updatable-join-view--nav">
+									可更新联接视图（Updatable Join View ）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%8a%a5%e9%94%99%e5%8e%9f%e7%90%86" onclick="onNavClick(`#报错原理-nav`)" id="报错原理-nav">
+									报错原理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -822,6 +880,64 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%af%e6%9b%b4%e6%96%b0%e8%81%94%e6%8e%a5%e8%a7%86%e5%9b%beupdatable-join-view-" onclick="onNavClick(`#可更新联接视图updatable-join-view--nav`)" id="可更新联接视图updatable-join-view--nav">
+									可更新联接视图（Updatable Join View ）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%8a%a5%e9%94%99%e5%8e%9f%e7%90%86" onclick="onNavClick(`#报错原理-nav`)" id="报错原理-nav">
+									报错原理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -917,9 +1033,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            4 min
+                            7 min
                             
-                            42 s.
+                            47 s.
                         
                     </div>
                 </div>
@@ -977,11 +1093,62 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 <li>关联子查询：将查询的结果传递给子查询作为参数的使用的形式</li>
 <li>一般子查询：除了那些特殊形式的子查询以外的一般用法</li>
 </ul>
+<h4 id="可更新联接视图updatable-join-view-">可更新联接视图（Updatable Join View ）</h4>
+<p>将一个联接视图（包括视图对象和内嵌视图）放到UPADTE语句中这样的语法形式。</p>
+<p>同样的道理，如果只是用一个表来作为视图的基表，则可以对该视图直接进行<code>DELETE</code>和<code>UPDATE</code>，但无法直接执行<code>INSERT</code>，因为该视图没有默认值的非空列(<code>brand_id</code>)。该视图称为<strong>可更新视图</strong></p>
+<h3 id="报错原理">报错原理</h3>
+<p>Oracle的键值保存表</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#8b008b;font-weight:bold">SELECT</span> *
+<span style="color:#8b008b;font-weight:bold">FROM</span> DBA_UPDATABLE_COLUMNS
+<span style="color:#8b008b;font-weight:bold">WHERE</span> <span style="color:#8b008b;font-weight:bold">OWNER</span> = <span style="color:#cd5555">&#39;SCOTT&#39;</span> <span style="color:#8b008b;font-weight:bold">AND</span> <span style="color:#8b008b;font-weight:bold">TABLE_NAME</span> = <span style="color:#cd5555">&#39;EMP_DEPT_V&#39;</span>;
+<span style="color:#8b008b;font-weight:bold">OWNER</span> | <span style="color:#8b008b;font-weight:bold">TABLE_NAME</span> | <span style="color:#8b008b;font-weight:bold">COLUMN_NAME</span> | UPDATABLE | INSERTABLE | DELETABLE
+SCOTT   EMP_DEPT_V     EMPNO            <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+SCOTT   EMP_DEPT_V     ENAME            <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+SCOTT   EMP_DEPT_V     SAL              <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+SCOTT   EMP_DEPT_V     DEPTNO           <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+SCOTT   EMP_DEPT_V     DNAME            <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+</code></pre></div><p>视图<code>EMP_DEPT_V</code>里的字段都无法变更。</p>
+<p>如果能保证DEPT_T表里的数据是唯一的就能够更新。也就是说在DEPT_T表上加<code>主键约束</code>或<code>唯一约束</code></p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">ALTER</span> <span style="color:#8b008b;font-weight:bold">TABLE</span> DEPT_T
+     <span style="color:#8b008b;font-weight:bold">ADD</span> <span style="color:#8b008b;font-weight:bold">CONSTRAINT</span> PK_DEPT_T <span style="color:#8b008b;font-weight:bold">PRIMARY</span> <span style="color:#8b008b;font-weight:bold">KEY</span> (DEPTNO);
+</code></pre></div><p>再看一下之前的视图：</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">SELECT</span> *
+<span style="color:#8b008b;font-weight:bold">FROM</span> DBA_UPDATABLE_COLUMNS
+<span style="color:#8b008b;font-weight:bold">WHERE</span> <span style="color:#8b008b;font-weight:bold">OWNER</span> = <span style="color:#cd5555">&#39;SCOTT&#39;</span> <span style="color:#8b008b;font-weight:bold">AND</span> <span style="color:#8b008b;font-weight:bold">TABLE_NAME</span> = <span style="color:#cd5555">&#39;EMP_DEPT_V&#39;</span>;
+
+<span style="color:#8b008b;font-weight:bold">OWNER</span> | <span style="color:#8b008b;font-weight:bold">TABLE_NAME</span> | <span style="color:#8b008b;font-weight:bold">COLUMN_NAME</span> | UPDATABLE | INSERTABLE | DELETABLE
+SCOTT   EMP_DEPT_V     EMPNO            YES         YES         YES
+SCOTT   EMP_DEPT_V     ENAME            YES         YES         YES
+SCOTT   EMP_DEPT_V     SAL              YES         YES         YES
+SCOTT   EMP_DEPT_V     DEPTNO           YES         YES         YES
+SCOTT   EMP_DEPT_V     DNAME             <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+</code></pre></div><p>这个时候就可以看到，视图中<code>EMP_DEPT_V</code>表中原来的字段都是可以更新的了。</p>
+<p>在对联接视图进行变更的时候，必须保证修改后的值是唯一的，并且这个事实要让数据库知道，而告知数据库的方法是建立主键约束或唯一约束。</p>
+<p>并不是所有的表都可以随意建这些约束，有什么方法能够不添加约束也能变更？</p>
+<ul>
+<li>添加<code>/*+ BYPASS_UJVC */</code> 提示，让ORACLE跳过检查（11g R2之后无效，不建议使用）</li>
+<li>改写<code>UPDATE</code>语句，通过其他方式判断后处理</li>
+<li>将<code>UPDATE</code>改成<code>MERGE</code>语句</li>
+</ul>
+<h3 id="reference">Reference</h3>
+<ul>
+<li>Oracle：</li>
+</ul>
+<blockquote>
+<p>The concept of a <strong>key-preserved table</strong> is fundamental to understanding the restrictions on <strong>modifying join views</strong>. A table is key-preserved if every key of the table can also be a key of the result of the join. So, a key-preserved table has its keys preserved through a join.</p>
+</blockquote>
+<blockquote>
+<p>An <strong>updatable join view</strong> (also referred to as a <strong>modifiable join view</strong>) is a view that contains multiple tables in the top-level FROM clause of the SELECT statement, and is not restricted by the WITH READ ONLY clause.</p>
+</blockquote>
+<ul>
+<li><a href="https://www.jianshu.com/p/60a56760b19f">https://www.jianshu.com/p/60a56760b19f</a></li>
+<li><a href="https://www.yiibai.com/oracle/oracle-updatable-view.html">https://www.yiibai.com/oracle/oracle-updatable-view.html</a></li>
+</ul>
 
                     
                     <HR width="100%" id="EOF">
                     <p style="color:#777;">
-                        Last modified on 2020-07-21 21:15
+                        Last modified on 2020-07-24 22:02
                         &nbsp;
                         <span id="busuanzi_container_page_pv" style="color:#777;">
                             This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
