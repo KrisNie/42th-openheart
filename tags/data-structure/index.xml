@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arithmetic on 42th openheart</title>
-    <link>https://www.openheart.icu/tags/arithmetic/</link>
-    <description>Recent content in Arithmetic on 42th openheart</description>
+    <title>Data Structure on 42th openheart</title>
+    <link>https://www.openheart.icu/tags/data-structure/</link>
+    <description>Recent content in Data Structure on 42th openheart</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
     <lastBuildDate>Sat, 25 Jul 2020 18:32:23 +0000</lastBuildDate>
     
-	<atom:link href="https://www.openheart.icu/tags/arithmetic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.openheart.icu/tags/data-structure/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -30,41 +30,6 @@
  public static int linearSearch(int[] a, int num) { for(int i = 0; i &amp;lt; a.length; i++) { if(a[i] == num){ // 返回数据所在的下标，也就是位置  return i; } } // 不存在的话返回-1  return -1; } 索引顺序表查找（分块查找） 整个表中的元素未必有序，但若划分为若干块后，每一块中的所有元素均小于（或大于）其后面块中的所有元素。我们称这种为分块有序。
 分块查找要求把一个数据分为若干块，每一块里面的元素可以是无序的，但是块与块之间的元素需要是有序的。（对于一个非递减的数列来说，第i块中的每个元素一定比第i-1块中的任意元素大）
  原理：</description>
-    </item>
-    
-    <item>
-      <title>剑指 Offer 46. 把数字翻译成字符串</title>
-      <link>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</link>
-      <pubDate>Tue, 21 Jul 2020 19:28:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</guid>
-      <description>把数字翻译成字符串 给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。
-eg:
- 输入: 12258 输出: 5 解释: 12258有5种不同的翻译，分别是bccfi, bwfi, bczi, mcfi和mzi
- 提示：
- 0 &amp;lt;= num &amp;lt; 231 动态规划 拿示例看
-  首先考虑每个数字单独翻译的情况，即翻译[1,2,2,4,8]，结果为bccfi
-  可以将数字拼接为两位的情况，
- [12,2,4,8] mcfi [12,24,8] mzi [12,2,48] 48&amp;gt;25 [1,22,48] 48&amp;gt;25 [1,22,4,8] bwfi [1,2,24,8] bczi [1,2,2,48] 48&amp;gt;25    归纳规则：
- 可以单独作为一位来翻译 如果第 i−1 位和第 i 位组成的数字在 10 到 25 之间，可以把这两位连起来翻译  </description>
-    </item>
-    
-    <item>
-      <title>206. Reverse Linked List</title>
-      <link>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</link>
-      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</guid>
-      <description>Reverse a singly linked list. Example:
- Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL
- Follow up:
-A linked list can be reversed either iteratively or recursively. Could you implement both?
- 迭代 将
- 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
- 转化为
- NULL&amp;lt;-1&amp;lt;-2&amp;lt;-3&amp;lt;-4&amp;lt;-5
- 使用一个prev节点存储上一个节点（初始为NULL），将当前curr节点的next指向prev节点，prev节点存储curr节点，curr存储curr的原next节点，完成一次迭代。最后返回prev（最后的curr是原ListNode的NULL）
-/** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ public ListNode reverseList(ListNode head) { ListNode prev = null; ListNode curr = head; while (curr !</description>
     </item>
     
   </channel>

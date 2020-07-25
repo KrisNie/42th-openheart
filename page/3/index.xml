@@ -6,9 +6,86 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 11:42:23 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2020 18:32:23 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Mac Operation</title>
+        <link>https://www.openheart.icu/cs/mac/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/mac/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/mac/ -&lt;h1 id=&#34;brew使用国内镜像源不好使&#34;&gt;brew使用国内镜像源（不好使）&lt;/h1&gt;
+&lt;p&gt;中科大：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤一&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#步骤三&lt;/span&gt;
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;复原：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/brew.git
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/homebrew-core
+
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;配置item2代理&#34;&gt;配置item2代理&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 打开配置文件&lt;/span&gt;
+vim ~/.bash_profile 
+&lt;span style=&#34;color:#228b22&#34;&gt;# 如果用了`oh-my-zsh` 那么修改`~/.zshrc`&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 在后面新增配置&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;http_proxy&lt;/span&gt;=http://127.0.0.1:1087 
+&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;https_proxy&lt;/span&gt;=socks5://127.0.0.1:1080
+&lt;span style=&#34;color:#228b22&#34;&gt;# 同理，可能执行 source ~/.zshrc&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;iterm2--oh-my-zsh&#34;&gt;iTerm2 + Oh My Zsh&lt;/h1&gt;
+&lt;h2 id=&#34;安装oh-my-zsh&#34;&gt;安装Oh my zsh&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# curl 安装方式&lt;/span&gt;
+sh -c &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装powerline&#34;&gt;安装PowerLine&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 安装 pip&lt;/span&gt;
+sudo easy_install pip
+
+pip install powerline-status --user
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装powerfonts&#34;&gt;安装PowerFonts&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# git clone&lt;/span&gt;
+git clone https://github.com/powerline/fonts.git --depth=&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# cd to folder&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; fonts
+&lt;span style=&#34;color:#228b22&#34;&gt;# run install shell&lt;/span&gt;
+./install.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Text 设置item2字体为Meslo LG&lt;/p&gt;
+&lt;h2 id=&#34;安装主题&#34;&gt;安装主题&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/Desktop/OpenSource
+git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; oh-my-zsh-agnoster-fcamblor/
+./install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行上面的命令会将主题拷贝到oh my zsh的themes中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vi ~/.zshrc
+&lt;span style=&#34;color:#228b22&#34;&gt;# 将ZSH_THEME后面的字段改为agnoster&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装高亮插件&#34;&gt;安装高亮插件&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-autosuggestions
+vi ~/.zshrc
+&lt;span style=&#34;color:#228b22&#34;&gt;# 修改zshrc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;plugins信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mac/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -519,38 +596,6 @@ Esc
 &lt;/blockquote&gt;
 &lt;p&gt;这首诗是纪伯伦的《On Children》，我把这诗读给了我爸妈，于是我来到了你身边。&lt;/p&gt;
 - https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Abstinence</title>
-        <link>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</link>
-        <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E6%88%92%E9%85%92/ -&lt;h1 id=&#34;戒酒&#34;&gt;戒酒&lt;/h1&gt;
-&lt;p&gt;我把眼泪酿成酒&lt;/p&gt;
-&lt;p&gt;一股脑喝进了肚子&lt;/p&gt;
-&lt;p&gt;肾老是大呼着将进酒&lt;/p&gt;
-&lt;p&gt;他总爱把酒糟蹋成尿&lt;/p&gt;
-&lt;p&gt;我的泪就这样进入了下水道&lt;/p&gt;
-&lt;p&gt;与他人的泪混在一起&lt;/p&gt;
-&lt;p&gt;悲伤与悲伤互相交融&lt;/p&gt;
-&lt;p&gt;寂寞与寂寞互相倾诉&lt;/p&gt;
-&lt;p&gt;后来&lt;/p&gt;
-&lt;p&gt;不知又过了多久&lt;/p&gt;
-&lt;p&gt;烈日炎炎将其蒸发&lt;/p&gt;
-&lt;p&gt;化作一场秋雨&lt;/p&gt;
-&lt;p&gt;淋在我的脸上&lt;/p&gt;
-&lt;p&gt;我伸出舌尖&lt;/p&gt;
-&lt;p&gt;尝出了那是我的眼泪&lt;/p&gt;
-&lt;p&gt;味道太差&lt;/p&gt;
-&lt;p&gt;所以我不再哭&lt;/p&gt;
-&lt;p&gt;顺便戒了酒&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2017.10.10&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E6%88%92%E9%85%92/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

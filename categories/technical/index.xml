@@ -7,13 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 11:42:23 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2020 18:32:23 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/categories/technical/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>SessionStorage&amp;LocalStorage&amp;Cookie</title>
+      <title>Static Search Table &amp; Dynamic Search Table</title>
+      <link>https://www.openheart.icu/cs/%E5%8A%A8%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%8E%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8/</link>
+      <pubDate>Sat, 25 Jul 2020 18:32:23 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/%E5%8A%A8%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%8E%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8/</guid>
+      <description>今天在看BST时，指导书上讲二叉排序树时与二分查找进行对比，引出几个模棱两可的概念（静态查找表、动态查找表），经查找后整理得本文
+概述 首先要了解几个基础概念
+查找(Searching) 是根据给定的某个值，在查找表中确定一个其关键字等于给定值的数据元素。
+查找表(Search Table) 是由同⼀类型的数据元素(记录)构成的集合。
+关键字(Key) 是数据元素中某个数据项的值，又称为键值，用它可以表示⼀个数据元素，也可以标识一个记录的某个数据项(字段)，我们称为关键码。 若关键字可以唯⼀地标识一个记录, 则称此关键字为主关键字 (Primary Key)。 对于那些可以识别多个属于元素(记录)的关键字，我们称为次关键字(Secondary Key)。
+查找表操作可分为静态查找和动态查找。
+静态查找表(Static Search Table) 只作查找操作的查找表。
+ 查询某个”特定的”数据元素是否在查找表中; 检索某个&amp;quot;特定的&amp;quot;数据元素和各种属性;  静态查找只是仅查找，并不会去改变集合内的数据元素。常用的查找有。
+顺序查找（ Linear search，又称线性查找）  原理 ：顺序查找就是按顺序从头到尾依次往下查找，从表中的第一个(或最后一个)记录开始，逐个进行记录关键字和给定值比较，找到数据，则提前结束查找，找不到便一直查找下去，直到数据最后一位
+ public static int linearSearch(int[] a, int num) { for(int i = 0; i &amp;lt; a.length; i++) { if(a[i] == num){ // 返回数据所在的下标，也就是位置  return i; } } // 不存在的话返回-1  return -1; } 索引顺序表查找（分块查找） 整个表中的元素未必有序，但若划分为若干块后，每一块中的所有元素均小于（或大于）其后面块中的所有元素。我们称这种为分块有序。
+分块查找要求把一个数据分为若干块，每一块里面的元素可以是无序的，但是块与块之间的元素需要是有序的。（对于一个非递减的数列来说，第i块中的每个元素一定比第i-1块中的任意元素大）
+ 原理：</description>
+    </item>
+    
+    <item>
+      <title>SessionStorage &amp; LocalStorage &amp; Cookie</title>
       <link>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</link>
       <pubDate>Sat, 25 Jul 2020 11:42:23 +0000</pubDate>
       
@@ -32,8 +52,7 @@ sessionStorage.setItem(&amp;#39;myCat&amp;#39;, &amp;#39;Tom&amp;#39;); 下面�
       <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/csharp-in-depth/</guid>
-      <description>本文为「C# in Depth」(4th edition)学习记录。
- </description>
+      <description>本文为「C# in Depth」(4th edition)学习记录。</description>
     </item>
     
     <item>
