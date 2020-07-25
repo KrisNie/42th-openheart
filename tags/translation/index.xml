@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Translation on 42th openheart</title>
+    <link>https://www.openheart.icu/tags/translation/</link>
+    <description>Recent content in Translation on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Sat, 25 Jul 2020 00:14:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.openheart.icu/tags/translation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Implementing the Singleton Pattern in C#</title>
+      <link>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</link>
+      <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</guid>
+      <description>Implementing the Singleton Pattern in C# 在C＃中实现单例模式。该模式是非常常见的设计模式之一，某个对象全局只需要一个实例时，就可以使用单例模式。它的优点也显而易见：
+ 它能够避免对象重复创建，节约空间并提升效率 避免由于操作不同实例导致的逻辑错误  以下是原文作者Jon Skeet 对C#单例模式的介绍。
+Introduction 单例模式是软件工程中最著名的模式之一。本质上，单例是仅允许创建其自身的单个实例的类，并且通常提供对该实例的简单访问。最常见的是，单例在创建实例时不允许指定任何参数，否则对实例的第二次请求但参数不同可能会出现问题！ （如果应该为具有相同参数的所有请求访问相同的实例，则使用工厂模式更为合适。）本文仅涉及不需要参数的情况。通常，单例的要求是它们是懒惰地创建的，即：直到首次需要实例时才创建实例。
+在C＃中有多种不同的方式来实现单例模式。我将在这里以从简到难顺序（in reverse order of elegance）介绍它们，从最常见的线程安全性开始，逐步发展为完全延迟加载，线程安全，简单且高性能的版本。
+所有这些实现都有四个共同的特征，但是：
+ 单个构造函数，私有且无参数。这样可以防止其他类实例化它（这将违反模式）。请注意，它还防止了子类化（subclassing）如果一个单例可以被子类化一次，则可以被子类化两次，并且如果每个子类都可以创建一个实例，则将违反（violated）该模式。如果您需要基本类型的单个实例，则可以使用工厂模式，但是直到运行时才知道确切的类型。 该类是密封的。严格来说，由于上述几点，这是不必要的，但可以帮助JIT进行更多优化。 一个静态变量，其中包含对创建的单个实例的引用（如果有）。 公共静态方法是获取对创建的单个实例的引用，并在必要时创建一个实例。  请注意，所有这些实现还使用公共静态属性Instance作为访问实例的方式。在所有情况下，都可以轻松地将属性转换为方法，而不会影响线程安全性或性能。
+First version - not thread-safe // Bad code! Do not use! public sealed class Singleton { private static Singleton instance = null; private Singleton() { } public static Singleton Instance { get { if (instance == null) { instance = new Singleton(); } return instance; } } } 如前所述，以上内容不是线程安全的。</description>
+    </item>
+    
+  </channel>
+</rss>

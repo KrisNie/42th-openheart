@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on 42th openheart</title>
+    <link>https://www.openheart.icu/tags/web/</link>
+    <description>Recent content in Web on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Sat, 25 Jul 2020 11:42:23 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.openheart.icu/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SessionStorage&amp;LocalStorage&amp;Cookie</title>
+      <link>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</link>
+      <pubDate>Sat, 25 Jul 2020 11:42:23 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</guid>
+      <description>Window.sessionStorage sessionStorage 属性允许你访问一个，对应当前源的 session Storage 对象。它与 localStorage 相似，不同之处在于 localStorage 里面存储的数据没有过期时间设置，而存储在 sessionStorage 里面的数据在页面会话结束时会被清除。
+ 页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话。 在新标签或窗口打开一个页面时会复制顶级浏览会话的上下文作为新会话的上下文，这点和 session cookies 的运行方式不同。 打开多个相同的URL的Tabs页面，会创建各自的sessionStorage。 关闭对应浏览器tab，会清除对应的sessionStorage。   应该注意，存储在sessionStorage或localStorage中的数据特定于页面的协议。也就是说http://example.com 与 https://example.com的sessionStorage相互隔离。
+ 语法 // 保存数据到 sessionStorage sessionStorage.setItem(&amp;#39;key&amp;#39;, &amp;#39;value&amp;#39;); // 从 sessionStorage 获取数据 let data = sessionStorage.getItem(&amp;#39;key&amp;#39;); // 从 sessionStorage 删除保存的数据 sessionStorage.removeItem(&amp;#39;key&amp;#39;); // 从 sessionStorage 删除所有保存的数据 sessionStorage.clear(); 返回值 一个 Storage 对象。
+示例 下面的代码访问当前域名的 session Storage 对象，并使用 Storage.setItem() 访问往里面添加一个数据条目。
+sessionStorage.setItem(&amp;#39;myCat&amp;#39;, &amp;#39;Tom&amp;#39;); 下面的示例会自动保存一个文本输入框的内容，如果浏览器因偶然因素被刷新了，文本输入框里面的内容会被恢复，因此写入的内容不会丢失。
+// 获取文本输入框 let field = document.getElementById(&amp;#34;field&amp;#34;); // 检测是否存在 autosave 键值 // (这个会在页面偶然被刷新的情况下存在) if (sessionStorage.</description>
+    </item>
+    
+    <item>
+      <title>URL</title>
+      <link>https://www.openheart.icu/cs/url/</link>
+      <pubDate>Wed, 22 Jul 2020 20:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/url/</guid>
+      <description>URL解析 UrlEncode    符号 意义 Encode     + 表示空格 %2B   (空格) 可以用+号替代 %20   / 分隔目录和子目录 %2F   ？ 分隔实际的URL和参数 %3F   % 指定特殊字符 %25   # 表示书签 %23   &amp;amp; URL 中指定的参数间的分隔符 %26   = URL 中指定参数的值 %3D    </description>
+    </item>
+    
+  </channel>
+</rss>

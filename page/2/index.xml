@@ -6,9 +6,63 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 00:14:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2020 11:42:23 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>DNS</title>
+        <link>https://www.openheart.icu/cs/dns/</link>
+        <pubDate>Sun, 19 Jul 2020 12:50:56 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/dns/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/dns/ -&lt;h2 id=&#34;dnspod-dns&#34;&gt;DNSPod DNS+&lt;/h2&gt;
+&lt;p&gt;​            首选：119.29.29.29&lt;/p&gt;
+&lt;p&gt;​            备选：182.254.116.116&lt;/p&gt;
+&lt;h3 id=&#34;114dns&#34;&gt;114DNS&lt;/h3&gt;
+&lt;p&gt;​            首选：114.114.114.114&lt;/p&gt;
+&lt;p&gt;​            备选：114.114.114.115&lt;/p&gt;
+&lt;h3 id=&#34;阿里-alidns&#34;&gt;阿里 AliDNS&lt;/h3&gt;
+&lt;p&gt;​            首选：223.5.5.5&lt;/p&gt;
+&lt;p&gt;​            备选：223.6.6.6&lt;/p&gt;
+&lt;h3 id=&#34;dns派&#34;&gt;DNS派&lt;/h3&gt;
+&lt;p&gt;​            首选（电信/移动/铁通）：101.226.4.6&lt;/p&gt;
+&lt;p&gt;​            备选（电信/移动/铁通）：218.30.118.6&lt;/p&gt;
+&lt;p&gt;​            首选（联通）：123.125.81.6&lt;/p&gt;
+&lt;p&gt;​            备选（联通）：140.207.198.6&lt;/p&gt;
+&lt;h3 id=&#34;百度-baidudns&#34;&gt;百度 BaiduDNS&lt;/h3&gt;
+&lt;p&gt;​            首选：180.76.76.76&lt;/p&gt;
+&lt;h3 id=&#34;cnnic-sdns&#34;&gt;CNNIC SDNS&lt;/h3&gt;
+&lt;p&gt;​            首选：1.2.4.8&lt;/p&gt;
+&lt;p&gt;​            备选：202.98.0.68&lt;/p&gt;
+&lt;h3 id=&#34;opendns&#34;&gt;OpenDNS&lt;/h3&gt;
+&lt;p&gt;​            208.67.222.222&lt;/p&gt;
+&lt;p&gt;​            208.67.220.220&lt;/p&gt;
+&lt;p&gt;​            208.67.222.220&lt;/p&gt;
+&lt;p&gt;​            208.67.220.222&lt;/p&gt;
+&lt;h3 id=&#34;family-shield-servers&#34;&gt;Family Shield Servers&lt;/h3&gt;
+&lt;p&gt;可以阻挡成人网站和含有恶意网站&lt;/p&gt;
+&lt;p&gt;​            208.67.222.123&lt;/p&gt;
+&lt;p&gt;​            208.67.220.123&lt;/p&gt;
+&lt;h3 id=&#34;ipv6地址实验&#34;&gt;IPv6地址(实验)&lt;/h3&gt;
+&lt;p&gt;​            2620:0:ccc::2&lt;/p&gt;
+&lt;p&gt;​            2620:0:ccd::2&lt;/p&gt;
+- https://www.openheart.icu/cs/dns/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title> 当面调试</title>
+        <link>https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/</link>
+        <pubDate>Sat, 18 Jul 2020 10:28:50 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/ -&lt;p&gt;当我在被面试的时候我再想些什么？&lt;/p&gt;
+- https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -741,113 +795,6 @@ vi ~/.zshrc
 	zsh-syntax-highlighting
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mac/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Markdown</title>
-        <link>https://www.openheart.icu/cs/markdown/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/markdown/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/markdown/ -&lt;h1 id=&#34;公式&#34;&gt;公式&lt;/h1&gt;
-&lt;h1 id=&#34;角标&#34;&gt;角标&lt;/h1&gt;
-&lt;p&gt;Markdown Language is a superset of HTML, so you can use html tag &lt;strong&gt;sub,sup&lt;/strong&gt; to achieve this&lt;/p&gt;
-&lt;p&gt;eg:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;H&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sub&amp;gt;&lt;/span&gt;2&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sub&amp;gt;&lt;/span&gt;O
-CO&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sub&amp;gt;&lt;/span&gt;2&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sub&amp;gt;&lt;/span&gt;
-NIKE&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sup&amp;gt;&lt;/span&gt;®&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sup&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;H&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;O
-CO&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;
-NIKE&lt;!-- raw HTML omitted --&gt;®&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-- https://www.openheart.icu/cs/markdown/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>MySQL</title>
-        <link>https://www.openheart.icu/cs/mysql/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/mysql/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/mysql/ -&lt;h1 id=&#34;install-mysql&#34;&gt;Install MySQL&lt;/h1&gt;
-&lt;h2 id=&#34;准备操作&#34;&gt;准备操作&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;lsb_release -a						&lt;span style=&#34;color:#228b22&#34;&gt;# 查看操作系统版本&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# LSB Version:	:core-4.1-amd64:core-4.1-noarch&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Distributor ID:	CentOS&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Description:	CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Release:	7.8.2003&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Codename:	Core&lt;/span&gt;
-
-cat /etc/redhat-release		&lt;span style=&#34;color:#228b22&#34;&gt;# 查看Linux内核版本&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
-
-getconf LONG_BIT					&lt;span style=&#34;color:#228b22&#34;&gt;# 查看系统位数&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 64&lt;/span&gt;
-
-yum -y update							&lt;span style=&#34;color:#228b22&#34;&gt;# 更新 yum&lt;/span&gt;
-rpm -qa | grep mysql			&lt;span style=&#34;color:#228b22&#34;&gt;# 查看是否安装过MySQL&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装mysql&#34;&gt;安装MySQL&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 此处版本为在CentOS7下安装MySQL8.0&lt;/span&gt;
-wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 安装&lt;/span&gt;
-sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#mysql80-community-release-el7-3.noarch&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 禁用 mysql8.0:&lt;/span&gt;
-sudo yum-config-manager --disable mysql80-community
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 启用 mysql8.0&lt;/span&gt;
-sudo yum-config-manager --enable mysql80-community
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 校验当前启用(enable)的 mysql 版本是否为 5.7:&lt;/span&gt;
-yum repolist enabled | grep mysql
-&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-connectors-community/x86_64 MySQL Connectors Community                 165&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-tools-community/x86_64      MySQL Tools Community                      115&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# mysql80-community/x86_64          MySQL 8.0 Community Server                 193&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 安装MySQL&lt;/span&gt;
-sudo yum install -y mysql-community-server
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 启动 mysql 服务&lt;/span&gt;
-sudo service mysqld start
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 查看 mysql 服务状态&lt;/span&gt;
-sudo service mysqld status
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;mysql初始化设置&#34;&gt;MySQL初始化设置&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 查看初始密码&lt;/span&gt;
-sudo grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;temporary password&amp;#39;&lt;/span&gt; /var/log/mysqld.log
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 使用初始密码进行登录&lt;/span&gt;
-mysql -u root -p
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 登录成功之后设置新密码&lt;/span&gt;
-ALTER USER &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 创建用户&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 允许本地 IP（localhost, 127.0.0.1）访问：&lt;/span&gt;
-create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 允许任何 IP 访问：&lt;/span&gt;
-create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 刷新权限&lt;/span&gt;
-FLUSH PRIVILEGES;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 8.0版本后&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 创建账户&lt;/span&gt;
-create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; identified by  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人&lt;/span&gt;
-grant all privileges on *.* to &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; with grant option;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 改密码&amp;amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里&lt;/span&gt;
-flush privileges;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 修改host 将kris用作登录账户名&lt;/span&gt;
-update mysql.user &lt;span style=&#34;color:#658b00&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; where &lt;span style=&#34;color:#00688b&#34;&gt;User&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mysql/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

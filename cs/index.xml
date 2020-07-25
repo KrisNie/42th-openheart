@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 00:14:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2020 11:42:23 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/cs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SessionStorage&amp;LocalStorage&amp;Cookie</title>
+      <link>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</link>
+      <pubDate>Sat, 25 Jul 2020 11:42:23 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</guid>
+      <description>Window.sessionStorage sessionStorage 属性允许你访问一个，对应当前源的 session Storage 对象。它与 localStorage 相似，不同之处在于 localStorage 里面存储的数据没有过期时间设置，而存储在 sessionStorage 里面的数据在页面会话结束时会被清除。
+ 页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话。 在新标签或窗口打开一个页面时会复制顶级浏览会话的上下文作为新会话的上下文，这点和 session cookies 的运行方式不同。 打开多个相同的URL的Tabs页面，会创建各自的sessionStorage。 关闭对应浏览器tab，会清除对应的sessionStorage。   应该注意，存储在sessionStorage或localStorage中的数据特定于页面的协议。也就是说http://example.com 与 https://example.com的sessionStorage相互隔离。
+ 语法 // 保存数据到 sessionStorage sessionStorage.setItem(&amp;#39;key&amp;#39;, &amp;#39;value&amp;#39;); // 从 sessionStorage 获取数据 let data = sessionStorage.getItem(&amp;#39;key&amp;#39;); // 从 sessionStorage 删除保存的数据 sessionStorage.removeItem(&amp;#39;key&amp;#39;); // 从 sessionStorage 删除所有保存的数据 sessionStorage.clear(); 返回值 一个 Storage 对象。
+示例 下面的代码访问当前域名的 session Storage 对象，并使用 Storage.setItem() 访问往里面添加一个数据条目。
+sessionStorage.setItem(&amp;#39;myCat&amp;#39;, &amp;#39;Tom&amp;#39;); 下面的示例会自动保存一个文本输入框的内容，如果浏览器因偶然因素被刷新了，文本输入框里面的内容会被恢复，因此写入的内容不会丢失。
+// 获取文本输入框 let field = document.getElementById(&amp;#34;field&amp;#34;); // 检测是否存在 autosave 键值 // (这个会在页面偶然被刷新的情况下存在) if (sessionStorage.</description>
+    </item>
     
     <item>
       <title>C# in Depth</title>
@@ -19,7 +33,16 @@
       
       <guid>https://www.openheart.icu/cs/csharp-in-depth/</guid>
       <description>本文为「C# in Depth」(4th edition)学习记录。
-Implementing the Singleton Pattern in C# 在C＃中实现单例模式。该模式是非常常见的设计模式之一，某个对象全局只需要一个实例时，就可以使用单例模式。它的优点也显而易见：
+ </description>
+    </item>
+    
+    <item>
+      <title>Implementing the Singleton Pattern in C#</title>
+      <link>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</link>
+      <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</guid>
+      <description>Implementing the Singleton Pattern in C# 在C＃中实现单例模式。该模式是非常常见的设计模式之一，某个对象全局只需要一个实例时，就可以使用单例模式。它的优点也显而易见：
  它能够避免对象重复创建，节约空间并提升效率 避免由于操作不同实例导致的逻辑错误  以下是原文作者Jon Skeet 对C#单例模式的介绍。
 Introduction 单例模式是软件工程中最著名的模式之一。本质上，单例是仅允许创建其自身的单个实例的类，并且通常提供对该实例的简单访问。最常见的是，单例在创建实例时不允许指定任何参数，否则对实例的第二次请求但参数不同可能会出现问题！ （如果应该为具有相同参数的所有请求访问相同的实例，则使用工厂模式更为合适。）本文仅涉及不需要参数的情况。通常，单例的要求是它们是懒惰地创建的，即：直到首次需要实例时才创建实例。
 在C＃中有多种不同的方式来实现单例模式。我将在这里以从简到难顺序（in reverse order of elegance）介绍它们，从最常见的线程安全性开始，逐步发展为完全延迟加载，线程安全，简单且高性能的版本。
