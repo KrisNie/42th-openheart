@@ -1159,7 +1159,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 <li>进入该块中，使用简单顺序表查找算法进行关键字查找。</li>
 </ol>
 </blockquote>
-<p>这种带索引表的分块有序表查找的时间性能取决于两步查找时间之和：如前面所述，第一步可以采用简单顺序查找和折半查找之一进行。第二步只能采用简单顺序查找，但由于子表的长度较原表的长度小。因此，其时间性能介于顺序查找和折半查找之间。分块查找也同时有顺序查找和二分查找的优点：<code>不需要有序</code>、<code>速度快</code>。</p>
+<p>这种带索引表的分块有序表查找的时间性能取决于两步查找时间之和：如前面所述，第一步可以采用简单顺序查找和折半查找之一进行。第二步只能采用简单顺序查找，但由于子表的长度较原表的长度小。因此，其时间性能介于顺序查找和折半查找之间。分块查找也同时有顺序查找和二分查找的优点：<strong>不需要有序</strong>、<strong>速度快</strong>。</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">BlockSearch</span> {
     <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#00688b;font-weight:bold">int</span>[] index;
     <span style="color:#8b008b;font-weight:bold">private</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list;
@@ -1396,7 +1396,7 @@ a[11] = {0, 1, 16, 24, 35, 47, 59, 62, 73, 88, 99}</p>
 <p><strong>指导书中二叉排序树与二分查找的对比</strong>：就维护表的<strong>有序性</strong>而言，二叉排序树无需移动结点，只需修改指针即可完成插入和删除操作，平均执行时间为O(log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->n)。二分查找的对象是<strong>有序顺序表</strong>，若有插入和删除结点的操作，所花时间是O(n)。当有序表是<strong>静态查找表</strong>时，宜用<strong>顺序表</strong>作为其<strong>存储结构</strong>，而采用二分查找实现其查找操作；若有序表是动态查找表，则应该选择二叉排序树作为其逻辑结构。</p>
 </blockquote>
 <h2 id="平衡二叉树">平衡二叉树</h2>
-<p>为了避免树的高度增长过快，降低二叉排序的性能，规定在插入和删除二叉树结点时，要保证任意结点的左、右树高度差的绝对值<code>不超过1</code>，这样的二叉树称为平衡二叉树，简称平衡树。定义结点左子树和右子树的高度差为该节点的<code>平衡因子</code>。平衡二叉树结点的平衡因子只可能是<code>-1</code>、<code>0</code>或<code>1</code>。</p>
+<p><strong>为了避免树的高度增长过快，降低二叉排序的性能</strong>，规定在插入和删除二叉树结点时，要保证任意结点的左、右树高度差的绝对值<strong>不超过1</strong>，这样的二叉树称为平衡二叉树，简称平衡树。定义结点左子树和右子树的高度差为该节点的<strong>平衡因子</strong>。平衡二叉树结点的平衡因子只可能是<code>-1</code>、<code>0</code>或<code>1</code>。</p>
 <p>平衡二叉树的插入过程的前半部分与二叉排序树相同，但是在新节点插入后，若造成查找路径上的某个结点不再平衡，则需要作出相应的调整。归纳总结为以下四种情况：</p>
 <ul>
 <li>LL平衡旋转（右单旋转）</li>
@@ -1460,34 +1460,38 @@ a[11] = {0, 1, 16, 24, 35, 47, 59, 62, 73, 88, 99}</p>
 </div>
 
             </div><div id="single-column-footer">
-
-
-<i class="fa fa-weixin" aria-hidden="true"></i>
-Case42
-<br>
-<i class="fa fa-envelope" aria-hidden="true"></i>
-krisnie42@gmail.com
-<br>
-<span id="busuanzi_container_site_pv">
-    site pv:<span id="busuanzi_value_site_pv"></span>
-</span>
-| 
-<span id="busuanzi_container_site_uv">
-	site uv:<span id="busuanzi_value_site_uv"></span>
-</span>
-<br>
-鲁ICP备20007116号
-<br>
-Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
-
-<br>
-
-
-&copy;
 	
-	2020 ALL RIGHTS RESERVED KRIS NIE
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	Case42
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@gmail.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
 	
-
+	<br>
+	
+	
+	&copy;
+		
+		2020 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').html($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').html($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
 </div>
             </div>
     <script>

@@ -776,34 +776,38 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 
 
 <div id="single-column-footer">
-
-
-<i class="fa fa-weixin" aria-hidden="true"></i>
-Case42
-<br>
-<i class="fa fa-envelope" aria-hidden="true"></i>
-krisnie42@gmail.com
-<br>
-<span id="busuanzi_container_site_pv">
-    site pv:<span id="busuanzi_value_site_pv"></span>
-</span>
-| 
-<span id="busuanzi_container_site_uv">
-	site uv:<span id="busuanzi_value_site_uv"></span>
-</span>
-<br>
-鲁ICP备20007116号
-<br>
-Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
-
-<br>
-
-
-&copy;
 	
-	2020 ALL RIGHTS RESERVED KRIS NIE
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	Case42
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@gmail.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
 	
-
+	<br>
+	
+	
+	&copy;
+		
+		2020 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').html($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').html($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
 </div>
             </div>
     <script>

@@ -59,7 +59,7 @@
 &lt;li&gt;进入该块中，使用简单顺序表查找算法进行关键字查找。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;这种带索引表的分块有序表查找的时间性能取决于两步查找时间之和：如前面所述，第一步可以采用简单顺序查找和折半查找之一进行。第二步只能采用简单顺序查找，但由于子表的长度较原表的长度小。因此，其时间性能介于顺序查找和折半查找之间。分块查找也同时有顺序查找和二分查找的优点：&lt;code&gt;不需要有序&lt;/code&gt;、&lt;code&gt;速度快&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这种带索引表的分块有序表查找的时间性能取决于两步查找时间之和：如前面所述，第一步可以采用简单顺序查找和折半查找之一进行。第二步只能采用简单顺序查找，但由于子表的长度较原表的长度小。因此，其时间性能介于顺序查找和折半查找之间。分块查找也同时有顺序查找和二分查找的优点：&lt;strong&gt;不需要有序&lt;/strong&gt;、&lt;strong&gt;速度快&lt;/strong&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;BlockSearch&lt;/span&gt; {
     &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;[] index;
     &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list;
@@ -296,7 +296,7 @@ a[11] = {0, 1, 16, 24, 35, 47, 59, 62, 73, 88, 99}&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;指导书中二叉排序树与二分查找的对比&lt;/strong&gt;：就维护表的&lt;strong&gt;有序性&lt;/strong&gt;而言，二叉排序树无需移动结点，只需修改指针即可完成插入和删除操作，平均执行时间为O(log&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;n)。二分查找的对象是&lt;strong&gt;有序顺序表&lt;/strong&gt;，若有插入和删除结点的操作，所花时间是O(n)。当有序表是&lt;strong&gt;静态查找表&lt;/strong&gt;时，宜用&lt;strong&gt;顺序表&lt;/strong&gt;作为其&lt;strong&gt;存储结构&lt;/strong&gt;，而采用二分查找实现其查找操作；若有序表是动态查找表，则应该选择二叉排序树作为其逻辑结构。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;平衡二叉树&#34;&gt;平衡二叉树&lt;/h2&gt;
-&lt;p&gt;为了避免树的高度增长过快，降低二叉排序的性能，规定在插入和删除二叉树结点时，要保证任意结点的左、右树高度差的绝对值&lt;code&gt;不超过1&lt;/code&gt;，这样的二叉树称为平衡二叉树，简称平衡树。定义结点左子树和右子树的高度差为该节点的&lt;code&gt;平衡因子&lt;/code&gt;。平衡二叉树结点的平衡因子只可能是&lt;code&gt;-1&lt;/code&gt;、&lt;code&gt;0&lt;/code&gt;或&lt;code&gt;1&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为了避免树的高度增长过快，降低二叉排序的性能&lt;/strong&gt;，规定在插入和删除二叉树结点时，要保证任意结点的左、右树高度差的绝对值&lt;strong&gt;不超过1&lt;/strong&gt;，这样的二叉树称为平衡二叉树，简称平衡树。定义结点左子树和右子树的高度差为该节点的&lt;strong&gt;平衡因子&lt;/strong&gt;。平衡二叉树结点的平衡因子只可能是&lt;code&gt;-1&lt;/code&gt;、&lt;code&gt;0&lt;/code&gt;或&lt;code&gt;1&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;平衡二叉树的插入过程的前半部分与二叉排序树相同，但是在新节点插入后，若造成查找路径上的某个结点不再平衡，则需要作出相应的调整。归纳总结为以下四种情况：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;LL平衡旋转（右单旋转）&lt;/li&gt;
