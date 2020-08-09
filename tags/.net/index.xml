@@ -22,8 +22,7 @@
  Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
  使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
 Note that run time is not included in this list by default. To change this behaviour:
-  Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.
-  Change your Startup.ConfigureServices code to include runtime compilation:</description>
+ Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services .</description>
     </item>
     
     <item>

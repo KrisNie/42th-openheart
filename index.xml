@@ -26,20 +26,16 @@
 &lt;p&gt;使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用&lt;strong&gt;运行时编译&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note that run time is not included in this list by default.&lt;/strong&gt; To change this behaviour:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Add the Nuget package &lt;a href=&#34;https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/&#34;&gt;&lt;code&gt;Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Change your &lt;code&gt;Startup.ConfigureServices&lt;/code&gt; code to include runtime compilation:&lt;/p&gt;
+&lt;li&gt;Add the Nuget package &lt;a href=&#34;https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/&#34;&gt;&lt;code&gt;Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Change your &lt;code&gt;Startup.ConfigureServices&lt;/code&gt; code to include runtime compilation:&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; ConfigureServices(IServiceCollection services)
 {
   services
     .AddControllersWithViews()
     .AddRazorRuntimeCompilation();
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/58300922/how-to-enable-the-view-hot-reloading-in-rider&#34;&gt;How to enable the view hot-reloading in Rider? &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/zh-cn/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0&amp;amp;tabs=visual-studio#runtime-compilation&#34;&gt;Razor file compilation in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
