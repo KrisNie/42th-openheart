@@ -18,7 +18,9 @@
       <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/oracle/</guid>
-      <description>Common Operation Optimize 索引失效 SQL在WHERE条件里面使用了IN导致有一个关联表的索引失效，Oracle版本为11g
+      <description>Common Operation 删除操作前一定要先执行一遍查询 如题， 带的一个新员工做补丁把项目历史数据干掉了 My bad.
+2020-8-7
+Optimize 索引失效 SQL在WHERE条件里面使用了IN导致有一个关联表的索引失效，Oracle版本为11g
 条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引
 like查询是以%开头
 如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引

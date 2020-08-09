@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 11:42:23 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2020 22:59:51 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/tags/operation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>.Net Issue</title>
+      <link>https://www.openheart.icu/cs/dot-net-issue/</link>
+      <pubDate>Fri, 31 Jul 2020 22:59:51 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
+      <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
+ Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
+ 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
+Note that run time is not included in this list by default. To change this behaviour:
+  Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.
+  Change your Startup.ConfigureServices code to include runtime compilation:</description>
+    </item>
     
     <item>
       <title>SessionStorage &amp; LocalStorage &amp; Cookie</title>
@@ -32,7 +46,8 @@ sessionStorage.setItem(&amp;#39;myCat&amp;#39;, &amp;#39;Tom&amp;#39;); 下面�
       <pubDate>Wed, 22 Jul 2020 20:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/url/</guid>
-      <description>URL解析 UrlEncode    符号 意义 Encode     + 表示空格 %2B   (空格) 可以用+号替代 %20   / 分隔目录和子目录 %2F   ？ 分隔实际的URL和参数 %3F   % 指定特殊字符 %25   # 表示书签 %23   &amp;amp; URL 中指定的参数间的分隔符 %26   = URL 中指定参数的值 %3D    </description>
+      <description>URL解析 UrlEncode    符号 意义 Encode     + 表示空格 %2B   (空格) 可以用+号替代 %20   / 分隔目录和子目录 %2F   ？ 分隔实际的URL和参数 %3F   % 指定特殊字符 %25   # 表示书签 %23   &amp;amp; URL 中指定的参数间的分隔符 %26   = URL 中指定参数的值 %3D    IE11URL解析问题 今天(2020-8-3 14:41:03)，发现项目中使用IE11时打开连接出现HTTP400的问题，有且仅在IE11里面，chrome正常。
+后来查资料发现，是因为我传参的时候带了中文字符，而IE对中文字符是有限制的，所以不成功，而要解决这个问题就需要转码，把要传的中文参数用UrlEncode方法给转一下码就ok。</description>
     </item>
     
     <item>
@@ -41,7 +56,9 @@ sessionStorage.setItem(&amp;#39;myCat&amp;#39;, &amp;#39;Tom&amp;#39;); 下面�
       <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/oracle/</guid>
-      <description>Common Operation Optimize 索引失效 SQL在WHERE条件里面使用了IN导致有一个关联表的索引失效，Oracle版本为11g
+      <description>Common Operation 删除操作前一定要先执行一遍查询 如题， 带的一个新员工做补丁把项目历史数据干掉了 My bad.
+2020-8-7
+Optimize 索引失效 SQL在WHERE条件里面使用了IN导致有一个关联表的索引失效，Oracle版本为11g
 条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引
 like查询是以%开头
 如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引
@@ -126,9 +143,11 @@ cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/markdown/</guid>
-      <description>公式 角标 Markdown Language is a superset of HTML, so you can use html tag sub,sup to achieve this
-eg:
-H&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;O CO&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt; NIKE&amp;lt;sup&amp;gt;®&amp;lt;/sup&amp;gt; H2O CO2NIKE®</description>
+      <description>公式 公式标记 行内公式（inline） eg: $ E=mc^2 $，写法是：$E=mc^2$
+整行公式（displayed） 用一对紧挨的两个美元符号$$包裹
+ $$ $$
+ eg: $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$
+希腊字母    名称 大写 Tex 小写 Tex     alpha $A$ A α \alpha   beta $B$ B β \beat   gamma $Γ$ \Gamma γ \gamma   delta $Δ$ \Delta δ \delta   epsilon $E$ E ϵ \epsilon   zeta Z Z ζ \zeta   eta H H η \eta   theta $Θ$ \Theta θ \theta   iota I I ι \iota   kappa K K κ \kappa   lambda Λ \Lambda λ \lambda   mu M M μ \mu   nu N N ν \nu   xi $Ξ$ \Xi ξ \xi   omicron O O ο \omicron   pi Π \Pi π \pi   rho P P ρ \rho   sigma Σ \Sigma σ \sigma   tau T T τ \tau   upsilon Υ \Upsilon υ \upsilon   phi Φ \Phi ϕ \phi   chi X X χ \chi   psi $Ψ$ \Psi $ψ$ \psi   omega Ω \Omega ω \omega    角标 Markdown Language is a superset of HTML, so you can use html tag sub,sup to achieve this</description>
     </item>
     
     <item>

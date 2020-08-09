@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 00:14:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2020 22:59:51 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/tags/.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>.Net Issue</title>
+      <link>https://www.openheart.icu/cs/dot-net-issue/</link>
+      <pubDate>Fri, 31 Jul 2020 22:59:51 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
+      <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
+ Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
+ 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
+Note that run time is not included in this list by default. To change this behaviour:
+  Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.
+  Change your Startup.ConfigureServices code to include runtime compilation:</description>
+    </item>
     
     <item>
       <title>C# in Depth</title>
@@ -38,10 +52,10 @@ First version - not thread-safe // Bad code! Do not use! public sealed class Sin
     
     <item>
       <title>.NET INTERVIEW</title>
-      <link>https://www.openheart.icu/cs/dot-net-interview-questions/</link>
+      <link>https://www.openheart.icu/cs/dot-net-interview/</link>
       <pubDate>Fri, 17 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/dot-net-interview-questions/</guid>
+      <guid>https://www.openheart.icu/cs/dot-net-interview/</guid>
       <description>.NET INTERVIEW from Jeffrey Zhao&amp;rsquo;s blog 我在面试.NET/C#程序员时会提出的问题
  什么是.NET？什么是CLI？什么是CLR？IL是什么？JIT是什么，它是如何工作的？GC是什么，简述一下GC的工作方式？ 什么是.net .NET是个平台，你就把它看成C#
 一个.NET应用是一个运行于.NET Framework之上的应用程序。（更精确的说，一个.NET应用是一个使用.NET Framework类库来编写，并运行于公共语言运行时 Common Language Runtime之上的应用程序。）如果一个应用程序跟.NET Framework无关，它就不能叫做.NET程序。比如，仅仅使用了XML并不就是.NET应用，仅仅使用SOAP SDK调用一个Web Service也不是.NET应用

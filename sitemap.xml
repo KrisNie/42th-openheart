@@ -3,8 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.openheart.icu/tags/.net/</loc>
+    <lastmod>2020-08-02T16:07:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/dot-net-issue/</loc>
+    <lastmod>2020-08-02T16:07:05+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.openheart.icu/</loc>
-    <lastmod>2020-07-25T20:25:28+00:00</lastmod>
+    <lastmod>2020-08-02T16:07:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/categories/</loc>
+    <lastmod>2020-08-02T16:07:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/</loc>
+    <lastmod>2020-08-02T16:07:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/tags/operation/</loc>
+    <lastmod>2020-08-02T16:07:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/tags/</loc>
+    <lastmod>2020-08-02T16:07:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/categories/technical/</loc>
+    <lastmod>2020-08-02T16:07:05+00:00</lastmod>
   </url>
   
   <url>
@@ -13,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/categories/</loc>
-    <lastmod>2020-07-25T20:25:28+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.openheart.icu/tags/cs/</loc>
-    <lastmod>2020-07-25T20:25:28+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/</loc>
     <lastmod>2020-07-25T20:25:28+00:00</lastmod>
   </url>
   
@@ -48,21 +73,6 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/tags/</loc>
-    <lastmod>2020-07-25T20:25:28+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/categories/technical/</loc>
-    <lastmod>2020-07-25T20:25:28+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/tags/operation/</loc>
-    <lastmod>2020-07-25T14:42:50+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</loc>
     <lastmod>2020-07-25T14:42:50+00:00</lastmod>
   </url>
@@ -70,11 +80,6 @@
   <url>
     <loc>https://www.openheart.icu/tags/web/</loc>
     <lastmod>2020-07-25T14:42:50+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/tags/.net/</loc>
-    <lastmod>2020-07-25T00:14:11+00:00</lastmod>
   </url>
   
   <url>
@@ -183,7 +188,7 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/dot-net-interview-questions/</loc>
+    <loc>https://www.openheart.icu/cs/dot-net-interview/</loc>
     <lastmod>2020-07-21T20:15:51+00:00</lastmod>
   </url>
   

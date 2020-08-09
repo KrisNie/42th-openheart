@@ -272,6 +272,28 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#ie11url%e8%a7%a3%e6%9e%90%e9%97%ae%e9%a2%98" onclick="onNavClick(`#ie11url解析问题-nav`)" id="ie11url解析问题-nav">
+									IE11URL解析问题
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -418,6 +440,28 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#ie11url%e8%a7%a3%e6%9e%90%e9%97%ae%e9%a2%98" onclick="onNavClick(`#ie11url解析问题-nav`)" id="ie11url解析问题-nav">
+									IE11URL解析问题
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -513,7 +557,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            24 s.
+                            1 min
+                            
+                            10 s.
                         
                     </div>
                 </div>
@@ -576,6 +622,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </tr>
 </tbody>
 </table>
+<h3 id="ie11url解析问题">IE11URL解析问题</h3>
+<p>今天(2020-8-3 14:41:03)，发现项目中使用IE11时打开连接出现<code>HTTP400</code>的问题，有且仅在IE11里面，chrome正常。</p>
+<p>后来查资料发现，是因为我传参的时候带了中文字符，而IE对中文字符是有限制的，所以不成功，而要解决这个问题就需要转码，把要传的中文参数用UrlEncode方法给转一下码就ok。</p>
 
                     
                     <HR width="100%" id="EOF">

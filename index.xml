@@ -6,9 +6,306 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 18:32:23 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2020 22:59:51 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>.Net Issue</title>
+        <link>https://www.openheart.icu/cs/dot-net-issue/</link>
+        <pubDate>Fri, 31 Jul 2020 22:59:51 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/dot-net-issue/ -&lt;h1 id=&#34;hot-reload-razor-views&#34;&gt;Hot-Reload Razor Views&lt;/h1&gt;
+&lt;p&gt;在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（&lt;em&gt;it&amp;rsquo;s fundamentally how ASP.NET MVC Core works&lt;/em&gt;）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Razor files are compiled at both &lt;strong&gt;build&lt;/strong&gt; and &lt;strong&gt;publish&lt;/strong&gt; time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用&lt;strong&gt;运行时编译&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note that run time is not included in this list by default.&lt;/strong&gt; To change this behaviour:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Add the Nuget package &lt;a href=&#34;https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/&#34;&gt;&lt;code&gt;Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change your &lt;code&gt;Startup.ConfigureServices&lt;/code&gt; code to include runtime compilation:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; ConfigureServices(IServiceCollection services)
+{
+  services
+    .AddControllersWithViews()
+    .AddRazorRuntimeCompilation();
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/58300922/how-to-enable-the-view-hot-reloading-in-rider&#34;&gt;How to enable the view hot-reloading in Rider? &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/zh-cn/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0&amp;amp;tabs=visual-studio#runtime-compilation&#34;&gt;Razor file compilation in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;watch-out-project-on-rider&#34;&gt;Watch out Project On Rider&lt;/h1&gt;
+&lt;p&gt;To let Project hot-reload, we can use the &amp;ldquo;Before launch&amp;rdquo; option as a run configuration to make this happen. To do so:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Select Run -&amp;gt; Edit Configuration from the menu options&lt;/li&gt;
+&lt;li&gt;Add a new &lt;code&gt;Before launch&lt;/code&gt;Click the + icon and select the &amp;ldquo;Run Executnal Tool &amp;quot; option from the list&lt;/li&gt;
+&lt;li&gt;In the options that are displayed, provide the following&amp;hellip;
+&lt;ul&gt;
+&lt;li&gt;Name: Watch (or whatever you prefer)&lt;/li&gt;
+&lt;li&gt;Exe path: /usr/local/share/dotnet/dotnet&lt;/li&gt;
+&lt;li&gt;Program Arguments: watch run&lt;/li&gt;
+&lt;li&gt;Working directory: [path to your project where .csproj file resides]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;OK&amp;rdquo; to apply/save the changes.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;reference-1&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/46349038/jetbrains-rider-run-with-watch&#34;&gt;JetBrains Rider run with watch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;newguid&#34;&gt;NewGuid()&lt;/h1&gt;
+&lt;h2 id=&#34;guid&#34;&gt;GUID&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;全局唯一标识符&lt;/strong&gt;（Globally Unique &lt;strong&gt;Id&lt;/strong&gt;entifier，缩写：&lt;strong&gt;GUID&lt;/strong&gt;；发音为/ˈɡuːɪd/或/ˈɡwɪd/）是一种由&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%AE%97%E6%B3%95&#34;&gt;算法&lt;/a&gt;生成的唯一标识，通常表示成32个16进制数字（0－9，A－F）组成的字符串，如：&lt;code&gt;{21EC2020-3AEA-1069-A2DD-08002B30309D}&lt;/code&gt;，它实质上是一个128位长的二进制整数。GUID一词有时也专指微软对UUID标准的实现。&lt;/p&gt;
+&lt;p&gt;GUID的主要目的是产生完全唯一的数字。在理想情况下，任何计算机和计算机集群都不会生成两个相同的GUID。GUID的总数也足够大，达到了2128（3.4×1038）个，所以随机生成两个相同GUID的可能性是非常小的，但并不为0。所以，用于生成GUID的算法通常都加入了非随机的参数（时间），以保证这种重复的情况不会发生。&lt;/p&gt;
+&lt;p&gt;GUID 主要用于在拥有多个节点、多台计算机的网络或系统中，分配必须具有唯一性的标识符。在 Windows 平台上，GUID 应用非常广泛：注册表、类及接口标识、数据库、甚至自动生成的机器名、目录名等。&lt;/p&gt;
+&lt;p&gt;与自增长id相比较：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;优点&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GUID&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;1. GUID过长，看表现形式，至少都有32位，长的38位，浪费存储空间 2. GUID是根据硬件设备相关ID以及时间戳生成的 3. GUID不利于检索、外键关联&lt;/td&gt;
+&lt;td&gt;1. 一般来说不担心有冲突的影响，而且，根据GUID的生成规则，还能大致知道生成的计算机硬件设备、时间等信息（但这个有多少意义呢）2. 能在业务层就知道目标ID，而不是数据提交给数据库系统后才确定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;自增长&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;1. 多数据库同步、读写分离十分不方便。&lt;/td&gt;
+&lt;td&gt;1. 使用简单&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;systemguidnewguidtostring&#34;&gt;System.Guid.NewGuid().ToString()&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Guid.NewGuid()是指生成唯一码的规则&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;systemguidnewguidtostringformat&#34;&gt;System.Guid.NewGuid().ToString(format)&lt;/h3&gt;
+&lt;p&gt;说明符 返回值的格式&lt;/p&gt;
+&lt;p&gt;N 32 位字符：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/p&gt;
+&lt;p&gt;D 由连字符分隔的 32 位数字：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&lt;/p&gt;
+&lt;p&gt;B 括在大括号中、由连字符分隔的 32 位数字：{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}&lt;/p&gt;
+&lt;p&gt;P 括在圆括号中、由连字符分隔的 32 位数字：(xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)&lt;/p&gt;
+&lt;p&gt;Guid.NewGuid().ToString()		  : 1f13a943-4c7e-4bfc-aac5-935886591424&lt;/p&gt;
+&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;N&amp;rdquo;)	: 3a81013f9ee549b38f11ee3d50f5bd78&lt;/p&gt;
+&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;D&amp;rdquo;)	: c4219375-c2c8-4639-86e8-8d910ed12186 &amp;ndash; 默认为：D&lt;/p&gt;
+&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;B&amp;rdquo;)	: {a793927d-9a1b-4d25-9562-0a59522db9c0}&lt;/p&gt;
+&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;P&amp;rdquo;)	: (a99839b9-da94-40fd-87a5-4a5e73677b1f)&lt;/p&gt;
+&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;X&amp;rdquo;)	: {0xb294a44e,0x43d9,0x4b60,{0xb5,0xb9,0x32,0x29,0xae,0x46,0x45,0x17}}&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;如果在程序中使用&lt;strong&gt;D&lt;/strong&gt;，则需要注意数据库字段长应为&lt;code&gt;36&lt;/code&gt;而不是32&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;model--entity--dto--viewmodel&#34;&gt;model &amp;amp; entity &amp;amp; dto &amp;amp; viewmodel&lt;/h1&gt;
+&lt;h2 id=&#34;model&#34;&gt;model&lt;/h2&gt;
+&lt;p&gt;model是一个模型，里面装了各种数据，将一个model传递给view，在试图页面就可以使用model里面的数据来呈现到页面上。&lt;/p&gt;
+&lt;h2 id=&#34;entity&#34;&gt;entity&lt;/h2&gt;
+&lt;p&gt;entity是实体，就是和数据表一一对应的，一个实体一张表&lt;/p&gt;
+&lt;p&gt;官方的demo没有entity这个说法，他只有model，model就是表，也是传递给view的model，就是说他的model即是model又是entity。而我们实际运用需要将model分成ViewModel和Entity，甚至还要加入Dto。&lt;/p&gt;
+&lt;h2 id=&#34;viewmodel&#34;&gt;viewmodel&lt;/h2&gt;
+&lt;p&gt;MSDOC详细介绍页面直接返回一个model，这个model就是表中的一条数据。但是在我们实际建站需求中页面上怎么可能只需要一条数据就完了，很多时候还需要其他的数据。比如一个&lt;code&gt;List&amp;lt;entity&amp;gt;&lt;/code&gt;，此时就需要使用ViewModel。&lt;/p&gt;
+&lt;h2 id=&#34;dtodata-transfer-object&#34;&gt;dto(Data transfer object)&lt;/h2&gt;
+&lt;p&gt;entity里包含的是表所有的字段，但在实际应用的时候我们可能不会使用到所有的字段，可能只需要一个名称和编号即可，所以就需要使用dto（数据传输对象）。此时ViewModel就可以使用&lt;code&gt;List&amp;lt;dto&amp;gt;&lt;/code&gt;返回我们部分数据而不是整个表数据。&lt;/p&gt;
+&lt;h2 id=&#34;final&#34;&gt;Final&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们可以花一部分精力去考虑这方面问题，但也不用纠结太多，头大且对项目也没太大帮助。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;reference-2&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/194493331&#34;&gt;什么时候用Model，什么时候用Entity？ - 虚若影的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/30290376&#34;&gt;什么时候用Model，什么时候用Entity？ - 赵劼的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;dependency-injection&#34;&gt;Dependency Injection&lt;/h1&gt;
+&lt;h2 id=&#34;ioc&#34;&gt;IOC&lt;/h2&gt;
+&lt;p&gt;Spring 框架为Java提供了IOC（Inversion of Control），只是提供了一个服务容器，程序控制我们需要的对象，而不是在使用对象时我们亲自直接控制。既然提到了IOC就详细了解一下这种设计思想：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Coupling-20200808133032885.png&#34; alt=&#34;Coupling-20200808133032885.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;为了解决对象间耦合度过高的问题，软件专家Michael Mattson提出了IOC理论，用来实现对象之间的“解耦”。&lt;/p&gt;
+&lt;p&gt;控制反转是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/IOC-20200808134840983.png&#34; alt=&#34;IOC-20200808134840983&#34;&gt;&lt;/p&gt;
+&lt;p&gt;软件系统在没有引入IOC容器之前，对象A依赖于对象B，那么对象A在初始化或者运行到某一点的时候，自己必须主动去创建对象B或者使用已经创建的对象B。无论是创建还是使用对象B，控制权都在自己手上。&lt;/p&gt;
+&lt;p&gt;软件系统在引入IOC容器之后，这种情形就完全改变了，由于IOC容器的加入，对象A与对象B之间失去了直接联系，所以，当对象A运行到需要对象B的时候，IOC容器会主动创建一个对象B注入到对象A需要的地方。&lt;/p&gt;
+&lt;p&gt;通过前后的对比，我们不难看出来：对象A获得依赖对象B的过程,由主动行为变为了被动行为，控制权颠倒过来了，这就是“控制反转”这个名称的由来。&lt;/p&gt;
+&lt;p&gt;控制反转可以用来减低计算机代码之间的耦合度。 其中最常见的方式叫做依赖注入（Dependency Injection，简称DI），还有一种方式叫“依赖查找”（Dependency Lookup）。&lt;/p&gt;
+&lt;h2 id=&#34;dip&#34;&gt;DIP&lt;/h2&gt;
+&lt;p&gt;要了解控制反转( Inversion of Control ), 我觉得有必要先了解软件设计的一个重要思想：依赖倒置原则（Dependency Inversion Principle ）。&lt;/p&gt;
+&lt;p&gt;依赖倒置原则（Dependence Inversion Principle）是程序要依赖于抽象接口，不要依赖于具体实现。 简单的说就是要求对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。&lt;/p&gt;
+&lt;p&gt;在&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B&#34;&gt;面向对象编程&lt;/a&gt;领域中，&lt;strong&gt;依赖反转原则&lt;/strong&gt;（Dependency inversion principle，DIP）是指一种特定的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%80%A6%E5%90%88%E6%80%A7_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)&#34;&gt;解耦&lt;/a&gt;（传统的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%80%A6%E5%90%88%E6%80%A7_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)&#34;&gt;依赖&lt;/a&gt;关系创建在高层次上，而具体的策略设置则应用在低层次的模块上）形式，使得高层次的模块不依赖于低层次的模块的实现细节，依赖关系被颠倒（反转），从而使得低层次模块依赖于高层次模块的需求抽象。&lt;/p&gt;
+&lt;p&gt;该原则规定：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;高层次的模块不应该依赖于低层次的模块，两者都应该依赖于&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)&#34;&gt;抽象接口&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;该原则颠倒了一部分人对于面向对象设计的认识方式。如高层次和低层次对象都应该依赖于相同的抽象接口。控制反转就是依赖倒置原则的一种代码设计的思路。具体采用的方法就是所谓的依赖注入（Dependency Injection）。&lt;/p&gt;
+&lt;p&gt;设计模式中的五大原则 &lt;a href=&#34;https://zh.wikipedia.org/wiki/SOLID_(%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1)&#34;&gt;SOLID&lt;/a&gt; 中的 D 指代的就是依赖反转原则。&lt;/p&gt;
+&lt;p&gt;eg: &lt;a href=&#34;https://flylib.com/books/en/4.444.1.71/1/&#34;&gt;Lamp and Button：A Simple DIP Example&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;di&#34;&gt;DI&lt;/h2&gt;
+&lt;h3 id=&#34;ioc与di的区别&#34;&gt;IOC与DI的区别&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;控制反转是一种在软件工程中解耦合的思想，调用类只依赖接口，而不依赖具体的实现类，减少了耦合。控制权交给了容器，在运行的时候才由容器决定将具体的实现动态的“注入”到调用类的对象中。&lt;/li&gt;
+&lt;li&gt;依赖注入是一种设计模式，可以作为控制反转的一种实现方式。依赖注入就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。&lt;/li&gt;
+&lt;li&gt;通过IOC框架，类A依赖类B的强耦合关系可以在运行时通过容器建立，也就是说把创建B实例的工作移交给容器，类A只管使用就可以。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;lifetime&#34;&gt;LifeTime&lt;/h3&gt;
+&lt;p&gt;MSDOC指出了有关&lt;code&gt;AddTransient&lt;/code&gt;/&lt;code&gt;AddScoped&lt;/code&gt;/&lt;code&gt;AddSingleton&lt;/code&gt;的区别，并带有一个小示例：&lt;/p&gt;
+&lt;p&gt;创建一个Operation接口然后分别对应实现上述三种依赖注入，为Operation添加属性&lt;code&gt;Guid OperationId&lt;/code&gt;，凭借此属性值，我们可以在逻辑层与controller控制器中分别implement，对比两处implement的OperationId可以发现这三种模式的lifetime。（&lt;em&gt;The &lt;code&gt;IOperationSingletonInstance&lt;/code&gt; service is using a specific instance with a known ID of &lt;code&gt;Guid.Empty&lt;/code&gt;. It&amp;rsquo;s clear when this type is in use (its GUID is all zeroes).&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;IOperation：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperation
+{
+  Guid OperationId { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+}
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationTransient : IOperation
+{
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationScoped : IOperation
+{
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationSingleton : IOperation
+{
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationSingletonInstance : IOperation
+{
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Operation:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Operation&lt;/span&gt; : IOperation, IOperationTransient, IOperationScoped, IOperationSingleton, IOperationSingletonInstance
+{
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Guid OperationId { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Operation(Guid operationId)
+  {
+    OperationId = operationId;
+  }
+
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Operation() : &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;this&lt;/span&gt;(Guid.NewGuid())
+  {
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OperationSercice:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;OperationService&lt;/span&gt;
+{
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationTransient TransientOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationScoped ScopedOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationSingleton SingletonOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationSingletonInstance SingletonInstanceOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; OperationService(IOperationTransient transientOperation,
+                          IOperationScoped scopedOperation,
+                          IOperationSingleton singletonOperation,
+                          IOperationSingletonInstance instanceOperation)
+  {
+    TransientOperation = transientOperation;
+    ScopedOperation = scopedOperation;
+    SingletonOperation = singletonOperation;
+    SingletonInstanceOperation = instanceOperation;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OperationController:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;OperationsController&lt;/span&gt; : Controller
+{
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; OperationService _operationService;
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationTransient _transientOperation;
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationScoped _scopedOperation;
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationSingleton _singletonOperation;
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationSingletonInstance _singletonInstanceOperation;
+
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; OperationsController(OperationService operationService,
+                              IOperationTransient transientOperation,
+                              IOperationScoped scopedOperation,
+                              IOperationSingleton singletonOperation,
+                              IOperationSingletonInstance singletonInstanceOperation)
+  {
+    _operationService = operationService;
+    _transientOperation = transientOperation;
+    _scopedOperation = scopedOperation;
+    _singletonOperation = singletonOperation;
+    _singletonInstanceOperation = singletonInstanceOperation;
+  }
+
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IActionResult Index()
+  {
+    &lt;span style=&#34;color:#228b22&#34;&gt;// viewbag contains controller-requested services
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    ViewBag.Transient = _transientOperation;
+    ViewBag.Scoped = _scopedOperation;
+    ViewBag.Singleton = _singletonOperation;
+    ViewBag.SingletonInstance = _singletonInstanceOperation;
+
+    &lt;span style=&#34;color:#228b22&#34;&gt;// operation service has its own requested services
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    ViewBag.Service = _operationService;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; View();
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;两次请求对比如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/DI-20200809140803.png&#34; alt=&#34;DI-20200809140803&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/DI-20200809140837.png&#34; alt=&#34;DI-20200809140837&#34;&gt;&lt;/p&gt;
+&lt;p&gt;观察在请求中以及请求之间的哪个&lt;code&gt;OperationId&lt;/code&gt;值有所不同。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transient 对象总是不同的; 每个控制器和每个服务都提供了一个新的实例。&lt;/li&gt;
+&lt;li&gt;Scoped 对象在请求中是相同的，但在不同的请求中是不同的。&lt;/li&gt;
+&lt;li&gt;Singleton 对象对于每个对象和每个请求都是一样的（不管&lt;code&gt;ConfigureServices&lt;/code&gt;中是否提供一个实例）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference-3&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC%E5%8E%9F%E5%88%99&#34;&gt;依赖反转原则&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/07af9dbbbc4b&#34;&gt;控制反转（IOC）与依赖注入（DI）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/91218464&#34;&gt;.NET Core中的IoC和DI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.martinfowler.com/articles/injection.html&#34;&gt;Inversion of Control Containers and the Dependency Injection pattern&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://flylib.com/books/en/4.444.1.71/1/&#34;&gt;A Simple DIP Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1&#34;&gt;Dependency injection in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;iviewlocationexpander&#34;&gt;IViewLocationExpander&lt;/h1&gt;
+&lt;p&gt;实现&lt;code&gt;IViewLocationExpander&lt;/code&gt;接口，&lt;code&gt;location&lt;/code&gt;为build时程序检查的views层路径&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;ViewLocationExpander&lt;/span&gt;: IViewLocationExpander
+{
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IEnumerable&amp;lt;String&amp;gt; ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable&amp;lt;String&amp;gt; locations)
+  {
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (RazorViewEngine.GetNormalizedRouteValue(context.ActionContext, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;area&amp;#34;&lt;/span&gt;) != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
+    {
+      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[]
+      {
+        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{2}/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{2}/{1}/{0}.cshtml&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;
+      };
+    }
+
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[]
+    {
+      &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{1}/{0}.cshtml&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;
+    };
+  }
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; PopulateValues(ViewLocationExpanderContext context)
+  {
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在Startup注册我们的implement&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;services.AddMvc()
+  .AddRazorOptions(options =&amp;gt; options.ViewLocationExpanders.Add(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; ViewLocationExpander()));
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference-4&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.c-sharpcorner.com/article/expanding-razor-view-location-and-sub-areas-in-asp-net-core/&#34;&gt;Expanding Razor View Location And Sub Areas In ASP.NET Core&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/NonFactors/AspNetCore.Template/blob/378d64f6900f0cc95eee921b5caf81d2bc9efc11/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&#34;&gt;AspNetCore.Template/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;error-the-database-provider-attempted-to-register-an-implementation&#34;&gt;Error: The database provider attempted to register an implementation&amp;hellip;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The database provider attempted to register an implementation of the &amp;lsquo;IRelationalTypeMappingSource&amp;rsquo; service. This is not a service defined by EF and as such must be registered as a provider-specific service using the &amp;lsquo;TryAddProviderSpecificServices&amp;rsquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;检查一下EF版本！！！&lt;/p&gt;
+&lt;p&gt;You are mixing different versions of EF Core!!!&lt;/p&gt;
+&lt;h2 id=&#34;reference-5&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/npgsql/efcore.pg/issues/1441&#34;&gt;Cannot register IRelationalTypeMappingSource #1441&lt;/a&gt;&lt;/p&gt;
+- https://www.openheart.icu/cs/dot-net-issue/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -1068,6 +1365,9 @@ console.log(&lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cook
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h3 id=&#34;ie11url解析问题&#34;&gt;IE11URL解析问题&lt;/h3&gt;
+&lt;p&gt;今天(2020-8-3 14:41:03)，发现项目中使用IE11时打开连接出现&lt;code&gt;HTTP400&lt;/code&gt;的问题，有且仅在IE11里面，chrome正常。&lt;/p&gt;
+&lt;p&gt;后来查资料发现，是因为我传参的时候带了中文字符，而IE对中文字符是有限制的，所以不成功，而要解决这个问题就需要转码，把要传的中文参数用UrlEncode方法给转一下码就ok。&lt;/p&gt;
 - https://www.openheart.icu/cs/url/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -1161,6 +1461,35 @@ console.log(&lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cook
 &lt;p&gt;麻省理工学院本科生统计学课程的 PPT 课件&lt;/p&gt;
 &lt;h3 id=&#34;没有博士学位者的-tensorflow-和深度学习教程httpscodelabsdevelopersgooglecomcodelabscloud-tensorflow-mnist&#34;&gt;&lt;a href=&#34;https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/&#34;&gt;没有博士学位者的 TensorFlow 和深度学习教程&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;谷歌发布的英文教程，没有高深的数学，向初学者介绍 TensorFlow 和深度学习。&lt;/p&gt;
+&lt;h3 id=&#34;javascript-的第三纪元httpswwwswyxiowritingjs-third-age&#34;&gt;&lt;a href=&#34;https://www.swyx.io/writing/js-third-age/&#34;&gt;JavaScript 的第三纪元&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;作者认为，JavaScript 的发展可以分成三个阶段：原始阶段、Node.js 阶段和目前的超越阶段。&lt;/p&gt;
+&lt;p&gt;当前阶段的主要特征是，JavaScript 开始作为底层技术，ES6 模块、TypeScript、WebAssembly 逐渐普及&lt;/p&gt;
+&lt;h3 id=&#34;如何构建优秀的-apihttpswwwstxnextcombloghow-to-build-a-good-api-that-wont-embarrass-you&#34;&gt;&lt;a href=&#34;https://www.stxnext.com/blog/how-to-build-a-good-api-that-wont-embarrass-you&#34;&gt;如何构建优秀的 API&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;本文介绍设计一个优秀的 RESTful API 的注意事项，以及 REST 和 GraphQL 两种 API 的差异&lt;/p&gt;
+&lt;h3 id=&#34;python-的-sqlite-数据库教程httpstowardsdatasciencecomdo-you-know-python-has-a-built-in-database-d553989c87bd&#34;&gt;&lt;a href=&#34;https://towardsdatascience.com/do-you-know-python-has-a-built-in-database-d553989c87bd&#34;&gt;Python 的 SQLite 数据库教程&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;本文是入门教程，介绍如何在 Python 语言使用内置的 SQLite 数据库，不需要任何安装步骤&lt;/p&gt;
+&lt;h3 id=&#34;10个有用的-git-log-技巧httpshackernooncomten-useful-git-log-tricks-7nt3yxy&#34;&gt;&lt;a href=&#34;https://hackernoon.com/ten-useful-git-log-tricks-7nt3yxy&#34;&gt;10个有用的 git log 技巧&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;本文介绍&lt;code&gt;git log&lt;/code&gt;命令的10个参数用法&lt;/p&gt;
+&lt;h3 id=&#34;async-函数的一个注意点httpswwwbrandonsmithninjablogasync-await&#34;&gt;&lt;a href=&#34;https://www.brandonsmith.ninja/blog/async-await&#34;&gt;async 函数的一个注意点&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;本文提醒大家注意，使用 JavaScript 的 async/await 函数时，要区分并发操作和继发操作&lt;/p&gt;
+&lt;h3 id=&#34;react-spectrumhttpsreact-spectrumadobecomreact-spectrumindexhtml&#34;&gt;&lt;a href=&#34;https://react-spectrum.adobe.com/react-spectrum/index.html&#34;&gt;React Spectrum&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Adobe 公司的 React 组件库&lt;/p&gt;
+&lt;h3 id=&#34;css-sweeperhttpsgithubcompropjockeycss-sweeper&#34;&gt;&lt;a href=&#34;https://github.com/propjockey/css-sweeper&#34;&gt;css-sweeper&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个只用 HTML 和 CSS 实现的扫雷游戏，不使用 JavaScript&lt;/p&gt;
+&lt;h3 id=&#34;react-tablehttpsgithubcomtannerlinsleyreact-table&#34;&gt;&lt;a href=&#34;https://github.com/tannerlinsley/react-table&#34;&gt;react-table&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;React 的表格组件库，新的 7.0 版完全采用 Hooks 设计&lt;/p&gt;
+&lt;h3 id=&#34;数据可视化图表目录httpsdatavizcataloguecomzh&#34;&gt;&lt;a href=&#34;https://datavizcatalogue.com/ZH/&#34;&gt;数据可视化图表目录&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站收集各种数据可视化的图表类型，简要讲解每种类型的用途和特点&lt;/p&gt;
+&lt;h3 id=&#34;拥抱扩展扑灭httpsenwikipediaorgwikiembrace_extend_and_extinguish&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguish&#34;&gt;拥抱，扩展，扑灭&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;1996年，美国司法部发现，微软公司内部使用“拥抱，扩展，扑灭”（Embrace, extend, and extinguish，简称 EEE ）这个短语，描述对付竞争对手的策略。&lt;/p&gt;
+&lt;p&gt;首先，拥抱对方的产品种类，进入对方的市场；然后，使用自己的专有功能扩展产品标准；最后，利用这些差异，使竞争对手处于不利地位。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;拥抱阶段&lt;/strong&gt; ：开发与竞争产品基本兼容的软件，或实施公共标准。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;扩展阶段&lt;/strong&gt;：添加和推广竞争对手或标准不支持的功能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;扑灭阶段&lt;/strong&gt;：由于市场份额的扩展，添加的功能成为事实上的标准时，再将竞争对手边缘化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;微软的 IE 浏览器就是使用这种策略的最好例子。&lt;/p&gt;
+&lt;p&gt;现在有人认为，微软对于开源软件的态度，从敌对变成拥抱，也有可能是在实施这种策略。另一方面，谷歌公司在很多技术领域的作为，也让人疑虑，它在实施这种策略。&lt;/p&gt;
 - https://www.openheart.icu/cs/interesting/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -1173,6 +1502,9 @@ console.log(&lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cook
         
         <guid>https://www.openheart.icu/cs/oracle/</guid>
         <description>42th openheart https://www.openheart.icu/cs/oracle/ -&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
+&lt;h2 id=&#34;删除操作前一定要先执行一遍查询&#34;&gt;删除操作前一定要先执行一遍查询&lt;/h2&gt;
+&lt;p&gt;如题， 带的一个新员工做补丁把项目历史数据干掉了 My bad.&lt;/p&gt;
+&lt;p&gt;2020-8-7&lt;/p&gt;
 &lt;h1 id=&#34;optimize&#34;&gt;Optimize&lt;/h1&gt;
 &lt;h2 id=&#34;索引失效&#34;&gt;索引失效&lt;/h2&gt;
 &lt;p&gt;SQL在&lt;code&gt;WHERE&lt;/code&gt;条件里面使用了&lt;code&gt;IN&lt;/code&gt;导致有一个关联表的索引失效，Oracle版本为11g&lt;/p&gt;
@@ -1273,118 +1605,6 @@ SCOTT   EMP_DEPT_V     DNAME             &lt;span style=&#34;color:#8b008b;font-
 &lt;li&gt;&lt;a href=&#34;https://www.yiibai.com/oracle/oracle-updatable-view.html&#34;&gt;https://www.yiibai.com/oracle/oracle-updatable-view.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 - https://www.openheart.icu/cs/oracle/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Speech</title>
-        <link>https://www.openheart.icu/cs/speech/</link>
-        <pubDate>Tue, 21 Jul 2020 19:45:28 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/speech/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/speech/ -&lt;ol&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;唯一不适应远程工作的是中层管理人员。&lt;/p&gt;
-&lt;p&gt;基层员工对于在家工作感到很高兴，只要把活做好就可以了。高层管理人员只需要对销售和产量数字负责。中层管理人员的不适应在于，他们的职责是直接监控基层员工，最常用的判断方法是通过是否坐在座位上等迹象，来判断工作量和工作是否勤奋。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://news.ycombinator.com/item?id=23607203&#34;&gt;Hacker news 读者&lt;/a&gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我有一种反英雄主义的精神。以前看电视时，我就对皇帝和将军不感兴趣，觉得他们已经有荣耀和风光了。&lt;/p&gt;
-&lt;p&gt;我更关心皇帝和将军手下的那些小兵，有时战斗刚开始，他们就被杀死了。他们脑海里想的是什么？会有人记得他们，为他们哭泣吗？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; 黄西自传《黄瓜的黄，西瓜的西》&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;时钟和镜子改变了人类社会。&lt;/p&gt;
-&lt;p&gt;时钟创造了一种焦虑文化。&lt;/p&gt;
-&lt;p&gt;镜子创造了一种自恋文化。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; David Perell&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;100年前的中国，四千个人里面才有一个中学生，其他都是文盲。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; 李敖&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;看到抽象的东西，应该尽量使它变得具体；看到具体的东西，应该尽量使它变得抽象。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; 李敖&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果你花钱买，你就是客户，如果你免费获得，你就是产品。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://www.wired.com/story/a-startup-is-testing-the-subscription-model-for-search-engines/&#34;&gt;《创业公司尝试搜索引擎的订阅模式》&lt;/a&gt;&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;40年前算法很重要，大部分程序员都需要懂，因为硬件差，必须靠算法保证性能。&lt;/p&gt;
-&lt;p&gt;但是今天只剩下不到1%的程序员直接跟算法打交道，其他人都使用现成的软件包，或从大公司购买算法，算法已成为一种商品，普通程序员不再需要自己生产了，也不需要有很深入的了解。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;http://shape-of-code.coding-guidelines.com/2020/07/05/algorithms-are-now-commodities/&#34;&gt;《算法现在是商品》&lt;/a&gt;&lt;/p&gt;
-&lt;ol start=&#34;8&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本站100%无 JavaScript。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://www.swiftbysundell.com/special/javascript-free/&#34;&gt;swiftbysundell.com&lt;/a&gt;&lt;/p&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我希望 JavaScript 程序员、Java 程序员、PHP 程序员、Perl 程序员、Python 程序员、C 程序员、C ++ 程序员、以及其他重要语言的程序员，大家聚在一起开个会，一劳永逸地提出一个大家都遵守的解决方案，我们应该如何处理时间和日期。我厌倦了每个语言都有自己一套处理时间和日期的方法。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://news.ycombinator.com/item?id=23781819&#34;&gt;《JavaScript 语言准备提出新的时间和日期 API》&lt;/a&gt;&lt;/p&gt;
-&lt;ol start=&#34;10&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;至少12年 Kubernetes 经验。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Required Technical and Professional Expertise&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Minimum 12+ years’ experience in Kubernetes administration and management&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; IBM 招聘云工程师的&lt;a href=&#34;https://intellijobs.ai/job/IBMCloud-Native-Infrastructure-Engineer-Architect-bvJJ6yraexfWOk1nMRKP-bvJJ6yraexfWOk1nMRKP&#34;&gt;公告&lt;/a&gt;，但 Kubernetes 是2014年发布的。&lt;/p&gt;
-&lt;ol start=&#34;11&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一家公司获得垄断地位以后，就不需要从任何形式的产品开发获益了，只通过市场营销或金融工程就能增加利润。最终，公司就会被销售人员和财务人员控制。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; 史蒂夫·乔布斯&lt;/p&gt;
-&lt;ol start=&#34;12&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;锚定偏差（anchoring bias）指的是决策时严重依赖第一个可用的信息。&lt;/p&gt;
-&lt;p&gt;比如，你走进一家体育用品商店，发现的第一件商品，是一条价值500美元的运动裤。接着，你看到另一条价格为300美元的运动裤时，就会觉得它很便宜，实际上如果首先看到这条300美元的裤子，你会觉得它根本不便宜。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://models.substack.com/p/why-are-we-anchored-often&#34;&gt;《锚定偏差》&lt;/a&gt;&lt;/p&gt;
-&lt;ol start=&#34;13&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;信息成瘾指的是强迫性信息消费：明明已经看完所有内容，你仍在继续滚动浏览 Facebook；你刚刚关闭 Instagram，立即再次打开它；你每五分钟拿起手机，检查有没有新的通知。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://www.defetter.com/&#34;&gt;《什么是信息成瘾》&lt;/a&gt;&lt;/p&gt;
-- https://www.openheart.icu/cs/speech/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
