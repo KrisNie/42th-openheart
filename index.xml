@@ -1486,6 +1486,41 @@ console.log(&lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cook
 &lt;/ul&gt;
 &lt;p&gt;微软的 IE 浏览器就是使用这种策略的最好例子。&lt;/p&gt;
 &lt;p&gt;现在有人认为，微软对于开源软件的态度，从敌对变成拥抱，也有可能是在实施这种策略。另一方面，谷歌公司在很多技术领域的作为，也让人疑虑，它在实施这种策略。&lt;/p&gt;
+&lt;h3 id=&#34;javascript-语言的多态httpszellwkcomblogpolymorphism-javascript&#34;&gt;&lt;a href=&#34;https://zellwk.com/blog/polymorphism-javascript/&#34;&gt;JavaScript 语言的多态&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;多态（Polymorph）是面向对象编程的一个术语，有多种含义。本文讨论 JavaScript 语言如何实现多态&lt;/p&gt;
+&lt;h3 id=&#34;github-actions-的-go-语言示例httpswwwfreecodecamporgnewsgo-automate-your-github-profile-readme&#34;&gt;&lt;a href=&#34;https://www.freecodecamp.org/news/go-automate-your-github-profile-readme/&#34;&gt;GitHub Actions 的 Go 语言示例&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;本文介绍如何在 GitHub 仓库里面定时跑 Go 语言脚本，再将代码推送回仓库&lt;/p&gt;
+&lt;h3 id=&#34;javascript-测试框架比较httpsgithubcomscraggocomparing-javascript-test-runnersblobmasterreadmemd&#34;&gt;&lt;a href=&#34;https://github.com/scraggo/comparing-javascript-test-runners/blob/master/README.md&#34;&gt;JavaScript 测试框架比较&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Mocha、Ava、Jest 是目前非常流行的三大 JavaScript 测试框架，本文对它们进行了比较，每个框架最合适的运行场景&lt;/p&gt;
+&lt;h3 id=&#34;git-工作流程的图示httpszepelioblog5-git-workflows-to-improve-development&#34;&gt;&lt;a href=&#34;https://zepel.io/blog/5-git-workflows-to-improve-development/&#34;&gt;Git 工作流程的图示&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;本文用清晰的图形解释了五种 Git 工作流程&lt;/p&gt;
+&lt;h3 id=&#34;tailwind-css从业余项目到数百万美元的业务httpsadamwathanmetailwindcss-from-side-project-byproduct-to-multi-mullion-dollar-business&#34;&gt;&lt;a href=&#34;https://adamwathan.me/tailwindcss-from-side-project-byproduct-to-multi-mullion-dollar-business/&#34;&gt;Tailwind CSS：从业余项目到数百万美元的业务&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Tailwind CSS 的作者介绍这个框架的诞生过程，以及他们如何通过它赚到几百万美元。&lt;/p&gt;
+&lt;h3 id=&#34;windows-10-阻止修改-hosts-文件httpswwwbleepingcomputercomnewsmicrosoftwindows-10-hosts-file-blocking-telemetry-is-now-flagged-as-a-risk&#34;&gt;&lt;a href=&#34;https://www.bleepingcomputer.com/news/microsoft/windows-10-hosts-file-blocking-telemetry-is-now-flagged-as-a-risk/&#34;&gt;Windows 10 阻止修改 HOSTS 文件&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;HOSTS 文件用于修改网站域名对应的 IP 地址，WIndows 10 内置的 Windows Defender 软件最近开始警告和阻止修改这个文件。&lt;/p&gt;
+&lt;h3 id=&#34;我用-gpt-3-写了一篇博客文章httpsliampsubstackcompmy-gpt-3-blog-got-26-thousand-visitors&#34;&gt;&lt;a href=&#34;https://liamp.substack.com/p/my-gpt-3-blog-got-26-thousand-visitors&#34;&gt;我用 GPT-3 写了一篇博客文章&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;GPT-3 是目前最先进的人工智能模型，可以根据输入，返回一篇人类可读的文章。&lt;/p&gt;
+&lt;p&gt;作者输入文章的标题和简介，GPT-3 就自动返回了一篇博客文章，这篇文章还登上了 Hacker News 的第一名，许多人都没有发现这是计算机写的。&lt;/p&gt;
+&lt;h3 id=&#34;随机数据生成器httpsrandom-data-apicom&#34;&gt;&lt;a href=&#34;https://random-data-api.com/&#34;&gt;随机数据生成器&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站提供一个 API，可以让你定制想要的随机数据，以 JSON 格式返回。&lt;/p&gt;
+&lt;h3 id=&#34;compiler-explorerhttpsgodboltorg&#34;&gt;&lt;a href=&#34;https://godbolt.org/&#34;&gt;Compiler Explorer&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个在线的编译器学习工具，可以显示高级语言对应的汇编代码，支持多种语言。&lt;/p&gt;
+&lt;h3 id=&#34;yandex-图片搜索httpsyandexcomimages&#34;&gt;&lt;a href=&#34;https://yandex.com/images/&#34;&gt;Yandex 图片搜索&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;俄罗斯的搜索引擎 Yandex&lt;/p&gt;
+&lt;h3 id=&#34;nightcafehttpscreatornightcafestudio&#34;&gt;&lt;a href=&#34;https://creator.nightcafe.studio/&#34;&gt;NightCafe&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个图片处理的在线工具，可以让普通照片变成世界名画&lt;/p&gt;
+&lt;h3 id=&#34;js-1024-竞赛httpsjs1024funresults2020&#34;&gt;&lt;a href=&#34;https://js1024.fun/results/2020&#34;&gt;JS 1024 竞赛&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这是代码长度不超过1024字节的 JS 程序的比赛，2020年的结果已经公布了。第一名是一个&lt;a href=&#34;https://js1024.fun/demos/2020/16&#34;&gt;钢琴键盘&lt;/a&gt;，第二名和第三名是动画渲染，第四名是一个游戏。&lt;/p&gt;
+&lt;h3 id=&#34;stackoverflow-top-cpphttpsgithubcomethsonliustackoverflow-top-cpptreemasterquestion&#34;&gt;&lt;a href=&#34;https://github.com/EthsonLiu/stackoverflow-top-cpp/tree/master/question&#34;&gt;stackoverflow-top-cpp&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;StackOverflow 上面高票排名的 C/C++ 问题的中文翻译&lt;/p&gt;
+&lt;h3 id=&#34;gitenberghttpswwwgitenbergorg&#34;&gt;&lt;a href=&#34;https://www.gitenberg.org/&#34;&gt;Gitenberg&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个公共领域的英文电子书的搜索引擎。&lt;/p&gt;
+&lt;h3 id=&#34;svg-repohttpswwwsvgrepocom&#34;&gt;&lt;a href=&#34;https://www.svgrepo.com/&#34;&gt;SVG Repo&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个 SVG 图片（主要是图标）的搜索引擎。&lt;/p&gt;
+&lt;h3 id=&#34;motherboard-dbhttpsmotherboarddbcom&#34;&gt;&lt;a href=&#34;https://motherboarddb.com/&#34;&gt;Motherboard DB&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;电脑主板的数据库&lt;/p&gt;
+&lt;h3 id=&#34;kindle-的诞生httpsthreadreaderappcomthread1287944667414196225html&#34;&gt;&lt;a href=&#34;https://threadreaderapp.com/thread/1287944667414196225.html&#34;&gt;Kindle 的诞生&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;如题&lt;/p&gt;
 - https://www.openheart.icu/cs/interesting/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
