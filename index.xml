@@ -150,6 +150,7 @@
 &lt;li&gt;依赖注入是一种设计模式，可以作为控制反转的一种实现方式。依赖注入就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。&lt;/li&gt;
 &lt;li&gt;通过IOC框架，类A依赖类B的强耦合关系可以在运行时通过容器建立，也就是说把创建B实例的工作移交给容器，类A只管使用就可以。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;.net core 框架自带&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iserviceprovider&#34;&gt;IServiceProvider&lt;/a&gt;以实现依赖注入&lt;/p&gt;
 &lt;h3 id=&#34;lifetime&#34;&gt;LifeTime&lt;/h3&gt;
 &lt;p&gt;MSDOC指出了有关&lt;code&gt;AddTransient&lt;/code&gt;/&lt;code&gt;AddScoped&lt;/code&gt;/&lt;code&gt;AddSingleton&lt;/code&gt;的区别，并带有一个小示例：&lt;/p&gt;
 &lt;p&gt;创建一个Operation接口然后分别对应实现上述三种依赖注入，为Operation添加属性&lt;code&gt;Guid OperationId&lt;/code&gt;，凭借此属性值，我们可以在逻辑层与controller控制器中分别implement，对比两处implement的OperationId可以发现这三种模式的lifetime。（&lt;em&gt;The &lt;code&gt;IOperationSingletonInstance&lt;/code&gt; service is using a specific instance with a known ID of &lt;code&gt;Guid.Empty&lt;/code&gt;. It&amp;rsquo;s clear when this type is in use (its GUID is all zeroes).&lt;/em&gt;）&lt;/p&gt;
