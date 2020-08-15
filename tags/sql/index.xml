@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 21 Jul 2020 20:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2020 16:27:30 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SQLserver</title>
+      <link>https://www.openheart.icu/cs/sqlserver/</link>
+      <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/sqlserver/</guid>
+      <description>Common Operation Index 聚集索引 非聚集索引  </description>
+    </item>
     
     <item>
       <title>Oracle</title>

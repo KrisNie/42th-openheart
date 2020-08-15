@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Fri, 31 Jul 2020 22:59:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2020 16:27:30 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Operation</title>
+      <link>https://www.openheart.icu/tags/operation/</link>
+      <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/tags/operation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://www.openheart.icu/tags/sql/</link>
+      <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/tags/sql/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>.NET</title>
@@ -18,15 +36,6 @@
       <pubDate>Fri, 31 Jul 2020 22:59:51 +0000</pubDate>
       
       <guid>https://www.openheart.icu/tags/.net/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Operation</title>
-      <link>https://www.openheart.icu/tags/operation/</link>
-      <pubDate>Fri, 31 Jul 2020 22:59:51 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/tags/operation/</guid>
       <description></description>
     </item>
     
@@ -99,15 +108,6 @@
       <pubDate>Wed, 22 Jul 2020 19:45:28 +0000</pubDate>
       
       <guid>https://www.openheart.icu/tags/interesting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SQL</title>
-      <link>https://www.openheart.icu/tags/sql/</link>
-      <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/tags/sql/</guid>
       <description></description>
     </item>
     

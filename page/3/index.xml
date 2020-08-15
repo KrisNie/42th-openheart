@@ -6,9 +6,251 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Fri, 31 Jul 2020 22:59:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2020 16:27:30 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Hugo</title>
+        <link>https://www.openheart.icu/cs/hugo/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/hugo/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/hugo/ -&lt;h1 id=&#34;install&#34;&gt;Install&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz
+
+cp ./hugo /usr/local/bin/
+
+hugo new site site42
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
+
+hugo version
+
+rm -r public
+hugo server -b &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://openheart.icu:1313/&amp;#34;&lt;/span&gt; -p &lt;span style=&#34;color:#b452cd&#34;&gt;1313&lt;/span&gt; --bind &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#mac 安装&lt;/span&gt;
+brew install hugo
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# show the location of the hugo executable&lt;/span&gt;
+which hugo
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# show the installed version&lt;/span&gt;
+ls -l &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt; which hugo &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#lrwxr-xr-x  1 hyomin  admin  30  7 17 22:46 /usr/local/bin/hugo -&amp;gt; ../Cellar/hugo/0.74.1/bin/hugo&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# verify that hugo runs correctly&lt;/span&gt;
+hugo version
+Hugo Static Site Generator v0.74.1/extended darwin/amd64 BuildDate: unknown
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;quick-start-guide&#34;&gt;Quick start guide&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new site site42
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ archetypes/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ doc/content/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ data/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ layouts/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ static/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#    config.toml&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#创建文章&lt;/span&gt;
+hugo new about.md
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#安装皮肤&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; themes
+&lt;span style=&#34;color:#228b22&#34;&gt;#git clone https://github.com/gevhaz/hugo-theme-notrack.git&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#https://github.com/spf13/hyde.git&lt;/span&gt;
+git clone https://github.com/AmazingRise/hugo-theme-diary.git themes/diary
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#下载所有hugoThemes&lt;/span&gt;
+git clone --depth &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt; --recursive https://github.com/spf13/hugoThemes.git themes
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#运行 Hugo&lt;/span&gt;
+hugo server --theme=hyde --buildDrafts
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#想要了解更多其他的选项，执行：&lt;/span&gt;
+hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#想要了解 server 相关的选项：&lt;/span&gt;
+hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt; server
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#打开你喜欢的 编辑器 ，编辑和保存你的文章内容，然后等待 Hugo 重新编译并自动重新加载&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hugo-post-missing&#34;&gt;Hugo Post Missing&lt;/h1&gt;
+&lt;p&gt;偶然发现存在有文章无法被生成的情况，经过检查发现在文章yaml配置文件中的date的问题。&lt;/p&gt;
+&lt;p&gt;具体对比后发现并没有规律，既不是纽约时间也不是北京时间，但改时间确实会影响文章的生成。&lt;/p&gt;
+&lt;p&gt;查阅之后发现如下两个解决办法&lt;/p&gt;
+&lt;h4 id=&#34;修改configtoml文件&#34;&gt;修改&lt;code&gt;config.toml&lt;/code&gt;文件&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;buildFuture = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;build-add---buildfuture&#34;&gt;build add &amp;ndash;buildFuture&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server --theme=diary --buildDrafts --buildFuture
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;添加谈笑风生区&#34;&gt;添加谈笑风生区&lt;/h1&gt;
+&lt;p&gt;申请地址：&lt;a href=&#34;https://github.com/settings/applications/new&#34;&gt;Authorization callback URL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;查看自己的OAuth Apps：&lt;a href=&#34;https://github.com/settings/developers&#34;&gt;OAuth Apps&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Application name&lt;/td&gt;
+&lt;td&gt;42th-openheart&lt;/td&gt;
+&lt;td&gt;填写应用名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Homepage URL&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.openheart.icu/&#34;&gt;https://www.openheart.icu/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;主页地址&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Application description&lt;/td&gt;
+&lt;td&gt;第四十二次不开心&lt;/td&gt;
+&lt;td&gt;备注&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Authorization callback URL&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.openheart.icu/&#34;&gt;https://www.openheart.icu/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;回调地址&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;创建模板&#34;&gt;创建模板&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;{{ if and (.Site.Params.enableGitalk) (.IsPage) }}
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;rel&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;href&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;#34;&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;vendor&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;js&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;md5&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;min&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;js&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;relURL&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;}}&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; gitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Gitalk({
+  clientID: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.client_id }}&amp;#39;&lt;/span&gt;,
+  clientSecret: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.client_secret }}&amp;#39;&lt;/span&gt;,
+  repo: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.repo }}&amp;#39;&lt;/span&gt;,
+  owner: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.owner }}&amp;#39;&lt;/span&gt;,
+  admin: [&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.owner }}&amp;#39;&lt;/span&gt;],
+  id: md5(location.pathname),
+  distractionFreeMode: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;false&amp;#39;&lt;/span&gt;
+  });
+  &lt;span style=&#34;color:#658b00&#34;&gt;window&lt;/span&gt;.onload = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; () {
+        gitalk.render(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;gitalk-container&amp;#39;&lt;/span&gt;)
+  }
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;添加配置&#34;&gt;添加配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[params]
+  enableGitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
+
+[params.gitalk]
+  owner = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hyominn&amp;#34;&lt;/span&gt;
+  repo = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;42th-openheart&amp;#34;&lt;/span&gt;
+  client_id = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_id&amp;#34;&lt;/span&gt;
+  client_secret = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_secret&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;webhook&#34;&gt;Webhook&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 本地public文件夹关联到GitHub&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; public
+git init
+git remote add origin https://github.com/Hyominn/42th-openheart.git
+git add -A
+git commit -m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
+git push -u origin master
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 服务端操作&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# cd 到目录blog2&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; hugoblog
+&lt;span style=&#34;color:#228b22&#34;&gt;# git 初始化&lt;/span&gt;
+git init
+git remote add origin https://github.com/Hyominn/42th-openheart.git
+&lt;span style=&#34;color:#228b22&#34;&gt;# 从 Github第一次抓取&lt;/span&gt;
+git pull origin master
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建目录 webhook目录需要创建在当前项目路径下&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 如 /usr/project/hugoblog/webhook&lt;/span&gt;
+mkdir webhook
+&lt;span style=&#34;color:#228b22&#34;&gt;#进入目录&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; webhook
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建脚本&lt;/span&gt;
+vim git_pull.sh
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#在脚本中保存以下内容：&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; /root/blog2
+git pull origin master
+&lt;span style=&#34;color:#658b00&#34;&gt;exit&lt;/span&gt; &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装并配置webhook&#34;&gt;安装并配置webhook&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;npm install github-webhook-handler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;新建github_webhookjs脚本&#34;&gt;新建&lt;code&gt;github_webhook.js&lt;/code&gt;脚本&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; http = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; exec = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt;).exec
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; createHandler = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;github-webhook-handler&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; handler = createHandler({ path: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/webhook&amp;#39;&lt;/span&gt;, secret: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;111111&amp;#39;&lt;/span&gt; })
+
+http.createServer(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (req, res) {
+handler(req, res, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (err) {
+    res.statusCode = &lt;span style=&#34;color:#b452cd&#34;&gt;404&lt;/span&gt;
+    res.end(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;no such location&amp;#39;&lt;/span&gt;)
+  })
+}).listen(&lt;span style=&#34;color:#b452cd&#34;&gt;7777&lt;/span&gt;)
+
+handler.on(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;push&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (event) {
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;let&lt;/span&gt; currentTime = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;Date&lt;/span&gt;();
+    console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\n--&amp;gt; &amp;#39;&lt;/span&gt; + currentTime.toLocaleString());
+    console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Received a push event for %s to %s&amp;#39;&lt;/span&gt;, event.payload.repository.name, event.payload.ref);
+    exec(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;sh git_pull.sh&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (error, stdout, stderr) {
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt;(error) {
+            console.error(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;error:\n&amp;#39;&lt;/span&gt; + error);
+            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt;;
+        }
+        console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;stdout:\n&amp;#39;&lt;/span&gt; + stdout);
+        console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;stderr:\n&amp;#39;&lt;/span&gt; + stderr);
+    });
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pm2运行&#34;&gt;pm2运行&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;pm2 start github_webhook.js
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;增加nginx配置&#34;&gt;增加nginx配置&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# NodeJS 将 Web 服务跑在了 7777 端口，我们可以用 Nginx 反向代理到 80 端口&lt;/span&gt;
+location /webhook {
+  &lt;span style=&#34;color:#658b00&#34;&gt;alias&lt;/span&gt; /root/webhook;
+  proxy_pass http://127.0.0.1:7777;  
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github配置&#34;&gt;Github配置&lt;/h2&gt;
+&lt;p&gt;&amp;lsquo;webhook&amp;rsquo;即 ‘github_webhook.js’ 中配置的path，比如：&lt;code&gt;https://www.openheart.icu/webhook&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;必须选择‘application/json’,否则不起作用&lt;/p&gt;
+&lt;p&gt;‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
+一定要和脚本中设置一致&lt;/p&gt;
+&lt;h1 id=&#34;pv-uv&#34;&gt;pv uv&lt;/h1&gt;
+&lt;p&gt;两行代码 搞定计数：&lt;a href=&#34;http://busuanzi.ibruce.info/&#34;&gt;不蒜子&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 网站head引用 --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- PV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_pv&amp;#34;&lt;/span&gt;&amp;gt;
+    本站总访问量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- UV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_uv&amp;#34;&lt;/span&gt;&amp;gt;
+  本站访客数&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_uv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;人次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 单页PV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_page_pv&amp;#34;&lt;/span&gt;&amp;gt;
+  本文总阅读量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_page_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&#34;&gt;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jdhao.github.io/2020/01/11/hugo_post_missing/&#34;&gt;https://jdhao.github.io/2020/01/11/hugo_post_missing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/024/&#34;&gt;https://mogeko.me/2018/024/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/cs/hugo/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -808,57 +1050,6 @@ Esc
 &lt;p&gt;&lt;em&gt;有人觉得用新型肺炎和亲密关系作比较是荒唐又可笑的，他们不该怪我，毕竟亲密关系本身就是荒唐又可笑的。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;2020-02-06，乐安，小雪，怕死&lt;/em&gt;&lt;/p&gt;
 - https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>下一站</title>
-        <link>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</link>
-        <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ -&lt;p&gt;不是茶山刘，是草山岭东。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;故事&#34;&gt;故事&lt;/h1&gt;
-&lt;p&gt;如果要我编个故事，我必然会这么写：&lt;/p&gt;
-&lt;p&gt;“我是刘波，百度上‘刘波’的搜索结果有一千二百八十万个，我可能不是你们认识的那个。我和其他刘波不同，我爸不是木匠，我不是山大毕业，我更不是主播也不配钥匙……我和其他刘波一样，我也喜欢一个张苇，也时常在熙攘的人群中当众孤独，我也不知道我到底想要什么……”这是人物；&lt;/p&gt;
-&lt;p&gt;“公交车顺着经十路往西，我被挤在公交车后门脸快贴到玻璃，路上拥挤的人群在整齐的标语和不整齐的广告中显得更加拥挤。我服了，于是我把自己放到了乐安县与油城的中间偏南，这里足够空旷。这里秋天的下午和别地儿一样慵懒，风挺大，云彩也不小；风吹云彩，太阳时隐时现，像极了梦里的张苇，所以我爱死了下午的太阳……”这是环境；&lt;/p&gt;
-&lt;p&gt;“我要如何体面地date张苇，她会如何体面地拒绝我，我该如何体面地认同她的拒绝，我一问三不知……”这是故事情节。&lt;/p&gt;
-&lt;p&gt;要是假期再充裕点，我可以是欧亨利，也可以是莫泊桑。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;国庆&#34;&gt;国庆&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在狼牙区 在飞虎路 那李杀神 王诛魔 还有刘斩仙 断罪小学 再度聚首 齐心协力 只因为 一个大魔头&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;大魔头是谁就不用问了吧，军人伟大，异地恋伟大，大魔头只配挨打，懂吧！&lt;/p&gt;
-&lt;p&gt;国庆加班开始前一晚上喜迎院士孙，我们几个在天没黑前走进饭店速战速决，然后各就各位。在开始电子竞技前，异口同声骂我朋张“被孙洋的小香批迷住了双眼”（我除外，我不会骂人）。&lt;/p&gt;
-&lt;p&gt;国庆加班结束前一晚上喜迎农民许，我们几个在政法学院旁边，感受到康康他们租的宾馆里浓厚的学习氛围后，在他们宾馆楼下的豪华网咖开始电子竞技，按习俗我朋张必须挨骂，“他就是个豁批犯”（不是我说的，我不会骂人）。&lt;/p&gt;
-&lt;p&gt;其实，院士孙和农民许并不配骂我朋张，因为他俩来泉城完全是路过，他俩的目的地一个是一国两制的小香批一个是油城的小香批，真是五十步笑百步。&lt;/p&gt;
-&lt;p&gt;世界与我都不完美，万物都有美中不足之处（我除外，我只有不足）。国庆长假也不例外，除了长假不够长这一明显不足外还有两个。&lt;/p&gt;
-&lt;p&gt;一是由于各种原因没吃上公司旁边刚开业生意兴隆的蟹黄生煎。&lt;/p&gt;
-&lt;p&gt;二是没在6号晚上及时亲手接过院士孙给我代的大地，然后大声让他滚出我屋。&lt;/p&gt;
-&lt;p&gt;但总体上来说国庆长假还算圆满。这是我在泉城过得第一个国庆，康康说泉城比琴岛宜居，其实我也感觉到了，冬暖夏凉怕是琴岛唯一的优势了。&lt;/p&gt;
-&lt;p&gt;还有一个有关国庆的就是，这几天除了路灯挂上了五星红旗，路边还多了挺多标语……&lt;/p&gt;
-&lt;p&gt;“灭霸扫痞”与“除暴安良”不停地交配、繁殖，与“鼓励二胎”一起平分了原本属于“计划生育好”的天下。虽然比“年产一零七零万吨钢铁”要些许得靠谱，但还是难免让多愁善感的人叹一口气，“时过境迁，物是人非”（我爱国爱党，没有任何暗示，如果有，也与本人无关）。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;活着&#34;&gt;活着&lt;/h1&gt;
-&lt;p&gt;其实，除了国庆也没啥可以说道的。&lt;/p&gt;
-&lt;p&gt;自打中秋节画了个月亮里的张苇，就没动过画笔，樱花牌的固体颜料都裂开了，像极了樱花。&lt;/p&gt;
-&lt;p&gt;这半年我也还是没做到不以物喜不以己悲。&lt;/p&gt;
-&lt;p&gt;拿到大地后特意发了个微博。我没做到不以物喜，我对不起范仲淹。&lt;/p&gt;
-&lt;p&gt;在一群贪财好色的人中，有的成了冯唐、王小波、王朔、渡边淳一、杜拉斯、萨德、劳伦斯、三岛由纪夫……有的成了空山基、金政基、席勒、莫迪里阿尼、前田俊夫、佐伯俊男……（还有很多我就不列举了，不然就成当众开车了）却只有我成了刘波。我没做到不以己悲，我对不起范仲淹。&lt;/p&gt;
-&lt;p&gt;我现在做的，能做的也就只有活着了，大地也不能让我在活着前面加个“好好”。&lt;/p&gt;
-&lt;p&gt;然后呢，这几个完成“豁小香批”成就的（此处并非特指男生，也包括个别女生）和我妈一样开始担心起我的感情生活了。他们从正面侧面反面对我的将来进行大胆预测，让我对未来根本不抱有任何期望。&lt;/p&gt;
-&lt;p&gt;他们与其问我什么时候能在我结婚典礼上听到我背唐诗宋词汉乐府，还不如问我在结婚典礼上会背长恨歌还是孔雀东南飞。懂吧，我起码能给他们个确切的答案。&lt;/p&gt;
-&lt;p&gt;说起往南飞，你说如果世上没有了南这个方向……&lt;/p&gt;
-&lt;p&gt;那我要撞张苇的南墙，是不是就要从佛王村出发，带足干粮或者带足银行卡一直往北，途径北极、南极，行程40万公里，才能一头撞死我自己或者撞瞎张苇？&lt;/p&gt;
-&lt;p&gt;虽然我极力地避免在多事之秋出门，但故事里一旦有张苇，那我内心与肉体必肿胀，这40万公里是逃不掉的。舔狗舔到最后一无所有，但没办法，大地毕竟不是聚斯金德笔下的格雷诺耶谋杀二十六个少女后制成的香水，并不能让我***永久占有（包括进行占有）***张苇。&lt;/p&gt;
-&lt;p&gt;我会继续努力的，努力方向可以是张苇，但没必要。&lt;/p&gt;
-&lt;p&gt;不以物喜不以己悲，不用互勉，我自己勉自己。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2018年10月7日&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
