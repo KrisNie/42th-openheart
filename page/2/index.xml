@@ -652,7 +652,7 @@ str1 is abc,str2 is ab
 &lt;h3 id=&#34;concurrentdictionary-or-dictionary&#34;&gt;ConcurrentDictionary or Dictionary&lt;/h3&gt;
 &lt;p&gt;ConcurrentDictionary是&lt;code&gt;System.Collections.Concurrent&lt;/code&gt;中线程安全的字典类&lt;/p&gt;
 &lt;h3 id=&#34;kestrel&#34;&gt;Kestrel&lt;/h3&gt;
-&lt;p&gt;Kestrel 是 ASP.NET Core 项目模板指定的默认 Web 服务器。&lt;/p&gt;
+&lt;p&gt;Kestrel 是 ASP.NET Core 项目模板指定的默认 Web 服务器。（&lt;em&gt;2020-08-15面试问到，确实没了解，看来需要MSDN完整过一遍&lt;/em&gt;）&lt;/p&gt;
 &lt;p&gt;以下部署方案中的 ASP.NET Core 支持 &lt;a href=&#34;https://httpwg.org/specs/rfc7540.html&#34;&gt;HTTP/2&lt;/a&gt;：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Kestrel
