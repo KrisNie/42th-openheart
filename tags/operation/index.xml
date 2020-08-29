@@ -204,5 +204,17 @@ user = nginx group = users </description>
       <description># 退出编辑模式，输入以下命令： Esc # 保存后退出vi，若为 :wq! 则为强制储存后退出（常用） :wq # 保存但不退出（常用） :w # 若文件属性为『只读』时，强制写入该档案 :w! # 离开 vi （常用） :q # 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。 :q! # 将档案还原到最原始的状态！ :e! </description>
     </item>
     
+    <item>
+      <title>聚集索引与非聚集索引</title>
+      <link>https://www.openheart.icu/cs/%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%E4%B8%8E%E9%9D%9E%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%E4%B8%8E%E9%9D%9E%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95/</guid>
+      <description>什么是索引
+​	为什么加索引后会使查询变快？
+​	为什么加索引后会使写入、修改、删除变慢？
+索引的种类</description>
+    </item>
+    
   </channel>
 </rss>

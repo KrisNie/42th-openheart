@@ -48,5 +48,17 @@ like查询是以%开头
       <description>Install MySQL 准备操作 lsb_release -a	# 查看操作系统版本 # LSB Version:	:core-4.1-amd64:core-4.1-noarch # Distributor ID:	CentOS # Description:	CentOS Linux release 7.8.2003 (Core) # Release:	7.8.2003 # Codename:	Core cat /etc/redhat-release	# 查看Linux内核版本 # CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	# 查看系统位数 # 64 yum -y update	# 更新 yum rpm -qa | grep mysql	# 查看是否安装过MySQL 安装MySQL # 此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm # 安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm # 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.</description>
     </item>
     
+    <item>
+      <title>聚集索引与非聚集索引</title>
+      <link>https://www.openheart.icu/cs/%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%E4%B8%8E%E9%9D%9E%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%E4%B8%8E%E9%9D%9E%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95/</guid>
+      <description>什么是索引
+​	为什么加索引后会使查询变快？
+​	为什么加索引后会使写入、修改、删除变慢？
+索引的种类</description>
+    </item>
+    
   </channel>
 </rss>

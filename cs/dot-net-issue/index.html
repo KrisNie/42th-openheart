@@ -1647,7 +1647,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </ul>
 <p>.net core 框架自带<a href="https://docs.microsoft.com/en-us/dotnet/api/system.iserviceprovider">IServiceProvider</a>以实现依赖注入</p>
 <h3 id="lifetime">LifeTime</h3>
-<p>MSDOC指出了有关<code>AddTransient</code>/<code>AddScoped</code>/<code>AddSingleton</code>的区别，并带有一个小示例：</p>
+<p>MSDN指出了有关<code>AddTransient</code>/<code>AddScoped</code>/<code>AddSingleton</code>的区别，并带有一个小示例：</p>
 <p>创建一个Operation接口然后分别对应实现上述三种依赖注入，为Operation添加属性<code>Guid OperationId</code>，凭借此属性值，我们可以在逻辑层与controller控制器中分别implement，对比两处implement的OperationId可以发现这三种模式的lifetime。（<em>The <code>IOperationSingletonInstance</code> service is using a specific instance with a known ID of <code>Guid.Empty</code>. It&rsquo;s clear when this type is in use (its GUID is all zeroes).</em>）</p>
 <p>IOperation：</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">interface</span> IOperation
