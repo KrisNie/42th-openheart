@@ -2163,7 +2163,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             46 min
                             
-                            40 s.
+                            10 s.
                         
                     </div>
                 </div>
@@ -2386,11 +2386,12 @@ str1 is abc,str2 is ab
 <h4 id="linq是什么">LINQ是什么</h4>
 <p>语言级集成查询（Language INtegrated Query），是一组用于c#和Visual Basic语言的扩展。它允许编写C#或者Visual Basic代码以查询数据库相同的方式操作内存数据。</p>
 <h3 id="工作之外您看哪些技术相关的书网站社区项目等等您还接触哪些net以外的技术能和net或net中有针对性的部分做个对比吗">工作之外您看哪些技术相关的书、网站、社区、项目等等？您还接触哪些.NET以外的技术，能和.NET或.NET中有针对性的部分做个对比吗？</h3>
+<hr>
 <h2 id="面试题">面试题</h2>
 <h3 id="concurrentdictionary-or-dictionary">ConcurrentDictionary or Dictionary</h3>
 <p>仅知道ConcurrentDictionary是<code>System.Collections.Concurrent</code>中<strong>线程安全</strong>的字典类</p>
 <h3 id="kestrel">Kestrel</h3>
-<p>Kestrel 是 ASP.NET Core 项目模板指定的默认 Web 服务器。（<em>2020-08-15面试问到，确实没了解，看来需要MSDN完整过一遍</em>）</p>
+<p>Kestrel 是 ASP.NET Core 项目模板指定的默认 Web 服务器。</p>
 <p>以下部署方案中的 ASP.NET Core 支持 <a href="https://httpwg.org/specs/rfc7540.html">HTTP/2</a>：</p>
 <ul>
 <li>Kestrel
@@ -2427,14 +2428,14 @@ str1 is abc,str2 is ab
 </ul>
 <h3 id="聚集索引与非聚集索引">聚集索引与非聚集索引</h3>
 <p>有场面试，对方问我一张百万级的用户表如何在登录的时候根据登录用户名去查询用户信息。</p>
-<p>我直接就更新analysis、分库分区分表。问我还又啥操作的时候，我蒙了。最后他说加索引也可以。我更一头雾水，百万级的表还需要考虑用索引去深入优化查询么？</p>
-<p>过后详细看MSDN上索引的介绍，索引创建有如下Typical Implementations：</p>
+<p>我直接就更新执行计划、分库分区分表。最后他说加索引也可以，但百万级的表还需要考虑用索引去深入优化查询么？</p>
+<p>面试结束后，查了一下MSDN上的介绍，索引创建有如下Typical Implementations：</p>
 <blockquote>
 <p>在创建 PRIMARY KEY 约束时，如果不存在该表的聚集索引且未指定唯一非聚集索引，则将自动对一列或多列创建唯一聚集索引。 主键列不允许空值。</p>
 <p>在创建 UNIQUE 约束时，默认情况下将创建唯一非聚集索引，以便强制 UNIQUE 约束。 如果不存在该表的聚集索引，则可以指定唯一聚集索引。</p>
 <p>将索引创建为约束的一部分后，会自动将索引命名为与约束名称相同的名称。</p>
 </blockquote>
-<p>PRIMARY KEY and UNIQUE constraints会自动创建索引。登录用户名必然是unique的，所以现在一想，更是一头雾水。（<em>当然，面试挂了，已经收到letter of apology，但感觉我和对方就这个问题还是五五开的</em>）</p>
+<p>PRIMARY KEY and UNIQUE constraints会自动创建索引。登录用户名必然是unique的，So&hellip;</p>
 
                     
                     <HR width="100%" id="EOF">

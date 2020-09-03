@@ -876,9 +876,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            21 min
+                            22 min
                             
-                            48 s.
+                            51 s.
                         
                     </div>
                 </div>
@@ -1076,6 +1076,56 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 <p>解决方案5很优雅，但比2或4棘手，而且正如我上面所说，它提供的好处似乎很少有用。如果您使用的是.NET 4，则解决方案6是实现懒惰的一种更简单的方法，它还具有明显的惰性。我目前倾向于仅通过习惯就使用解决方案4，但是如果我与经验不足的开发人员一起工作，我很可能会选择解决方案6作为一种简单且普遍适用的模式开始。</p>
 <p>（我不会使用解决方案1，因为它是有缺陷的，我不会使用解决方案3，因为它比不过5。）</p>
 <hr>
+<p>用上述第六种方式实现读取文件的方法</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#8b008b;font-weight:bold">using</span> <span style="color:#008b45;text-decoration:underline">System</span>;
+<span style="color:#8b008b;font-weight:bold">using</span> <span style="color:#008b45;text-decoration:underline">System.Collections.Generic</span>;
+<span style="color:#8b008b;font-weight:bold">using</span> <span style="color:#008b45;text-decoration:underline">System.IO</span>;
+<span style="color:#8b008b;font-weight:bold">using</span> <span style="color:#008b45;text-decoration:underline">System.Text</span>;
+<span style="color:#8b008b;font-weight:bold">using</span> <span style="color:#008b45;text-decoration:underline">System.Web</span>;
+
+<span style="color:#8b008b;font-weight:bold">namespace</span> <span style="color:#008b45;text-decoration:underline">Demo</span>
+{
+    <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">MyFileReader</span>
+    {
+        <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">readonly</span> Lazy&lt;MyFileReader&gt; lazy = <span style="color:#8b008b;font-weight:bold">new</span> Lazy&lt;MyFileReader&gt;(() =&gt; <span style="color:#8b008b;font-weight:bold">new</span> MyFileReader());
+
+        <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> MyFileReader Instance =&gt; lazy.Value;
+
+        <span style="color:#8b008b;font-weight:bold">private</span> MyFileReader()
+        {
+        }
+
+        <span style="color:#228b22">/// &lt;summary&gt;
+</span><span style="color:#228b22"></span>        <span style="color:#228b22">///  读取json格式文件
+</span><span style="color:#228b22"></span>        <span style="color:#228b22">/// &lt;returns&gt;&lt;/returns&gt;
+</span><span style="color:#228b22"></span>        <span style="color:#228b22">/// &lt;/summary&gt;
+</span><span style="color:#228b22"></span>        <span style="color:#228b22">/// &lt;param name=&#34;filePath&#34;&gt;eg：\\Demo\\Config.txt&lt;/param&gt;
+</span><span style="color:#228b22"></span>        <span style="color:#228b22">/// &lt;param name=&#34;encodType&#34;&gt;默认为 Encoding.Default&lt;/param&gt;
+</span><span style="color:#228b22"></span>        <span style="color:#228b22">/// &lt;returns&gt;&lt;/returns&gt;
+</span><span style="color:#228b22"></span>        <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#00688b;font-weight:bold">string</span> JsonReader(<span style="color:#00688b;font-weight:bold">string</span> filePath, Encoding encodType)
+        {
+            <span style="color:#8b008b;font-weight:bold">if</span> (encodType == <span style="color:#8b008b;font-weight:bold">null</span>)
+            {
+                encodType = Encoding.Default;
+            }
+            <span style="color:#00688b;font-weight:bold">string</span> jsonobj = <span style="color:#00688b;font-weight:bold">string</span>.Empty;
+
+            <span style="color:#8b008b;font-weight:bold">using</span> (StreamReader sr = <span style="color:#8b008b;font-weight:bold">new</span> StreamReader(System.Web.HttpRuntime.AppDomainAppPath + filePath, encodType))
+            {
+                <span style="color:#00688b;font-weight:bold">string</span> line;
+                <span style="color:#8b008b;font-weight:bold">while</span> ((line = sr.ReadLine()) != <span style="color:#8b008b;font-weight:bold">null</span>)
+                {
+                    jsonobj = jsonobj + line.ToString();
+                }
+            }
+
+            <span style="color:#8b008b;font-weight:bold">return</span> jsonobj;
+        }
+    }
+}
+</code></pre></div><p>调用：</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#00688b;font-weight:bold">string</span> json = fileReader.JsonReader(<span style="color:#cd5555">&#34;\\Demo\\Config.txt&#34;</span>, <span style="color:#8b008b;font-weight:bold">null</span>);
+</code></pre></div><hr>
 <h2 id="reference">Reference</h2>
 <ol>
 <li><a href="https://csharpindepth.com/articles/Singleton">https://csharpindepth.com/articles/Singleton</a></li>

@@ -13,120 +13,6 @@
     
     
         <item>
-        <title>Oracle</title>
-        <link>https://www.openheart.icu/cs/oracle/</link>
-        <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/oracle/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/oracle/ -&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
-&lt;h2 id=&#34;删除操作前一定要先执行一遍查询&#34;&gt;删除操作前一定要先执行一遍查询&lt;/h2&gt;
-&lt;p&gt;如题， 带的一个新员工做补丁把项目历史数据干掉了 My bad.&lt;/p&gt;
-&lt;p&gt;2020-8-7&lt;/p&gt;
-&lt;h1 id=&#34;optimize&#34;&gt;Optimize&lt;/h1&gt;
-&lt;h2 id=&#34;索引失效&#34;&gt;索引失效&lt;/h2&gt;
-&lt;p&gt;SQL在&lt;code&gt;WHERE&lt;/code&gt;条件里面使用了&lt;code&gt;IN&lt;/code&gt;导致有一个关联表的索引失效，Oracle版本为11g&lt;/p&gt;
-&lt;p&gt;条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引&lt;/p&gt;
-&lt;p&gt;like查询是以%开头&lt;/p&gt;
-&lt;p&gt;如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引&lt;/p&gt;
-&lt;h2 id=&#34;分库-分表-分区&#34;&gt;分库 分表 分区&lt;/h2&gt;
-&lt;h2 id=&#34;视图优化&#34;&gt;视图优化&lt;/h2&gt;
-&lt;h3 id=&#34;基表增加索引&#34;&gt;基表增加索引&lt;/h3&gt;
-&lt;p&gt;对基表中，视图查询SQL的&lt;code&gt;WHERE&lt;/code&gt;条件中用到的字段增加索引&lt;/p&gt;
-&lt;h3 id=&#34;重新进行表分析&#34;&gt;重新进行表分析&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;-- 视图查询慢
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;delete&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; compute &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;-- 在当前用户下执行
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;analyze table &amp;#39;&lt;/span&gt;||&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt;||&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39; compute statistics;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; user_tables &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;IN&lt;/span&gt; (&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;tablename&amp;#39;&lt;/span&gt;);   
-
-&lt;span style=&#34;color:#228b22&#34;&gt;-- 得到如下语句，将这些语句整体执行一遍
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; PRODUCT_REF_LIST_NESTEDTAB compute &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
-    &lt;span style=&#34;color:#228b22&#34;&gt;-- ....
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;-- 查看统计信息
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt;,num_rows &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; user_tables;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;分析的结果被Oracle用于基于成本的优化生成更好的查询计划。&lt;/p&gt;
-&lt;p&gt;遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。&lt;/li&gt;
-&lt;li&gt;如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;error&#34;&gt;ERROR&lt;/h1&gt;
-&lt;h2 id=&#34;ora-01779-无法修改与非键值保存表对应的列&#34;&gt;ORA-01779: 无法修改与非键值保存表对应的列&lt;/h2&gt;
-&lt;p&gt;这里要搞清楚三个概念：视图、联接视图、可更新的联接视图&lt;/p&gt;
-&lt;h3 id=&#34;视图&#34;&gt;视图&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;视图&lt;/strong&gt;可以分为视图对象和内嵌视图两种。&lt;/p&gt;
-&lt;h4 id=&#34;视图对象view-object&#34;&gt;视图对象（View Object）&lt;/h4&gt;
-&lt;p&gt;数据库里的&lt;strong&gt;视图对象&lt;/strong&gt;跟一张表或索引等一样，是数据库对象中的一种，它其实是将基于表中原始数据的查询给虚拟了一层之后，提供给外部查询的一种对象。
-其本质是并不保存查询的实际结果，而只是将查询语句保存在数据库中，当用户查询某张视图的时候，就会找到并执行这个视图的语句。
-而&lt;strong&gt;联接视图&lt;/strong&gt;其实就是在一个视图中将两个表建立关联就是了。&lt;/p&gt;
-&lt;h4 id=&#34;内嵌视图inline-view&#34;&gt;内嵌视图（Inline View）&lt;/h4&gt;
-&lt;p&gt;在SQL语句中，很多地方都可以写嵌套的语句，比如说，FROM后面可以套括号嵌套其他的语句，WHERE、SELECT、UPDATE、INSERT、DELETE后面都是可以写的。只是写的位置不同，执行的方式还有处理时的一些限制不同，这些SQL中嵌套的SQL被称为&lt;strong&gt;子查询（Subquery）&lt;/strong&gt; 。子查询可以分为如下几类：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;内嵌视图：位置位于FROM语句中，也相当于一个预处理结果集的概念&lt;/li&gt;
-&lt;li&gt;标量子查询（Scalar Subquery）：只返还一个结果值的子查询。位于SELECT语句的子查询只能返还一个值，所以必然是标量子查询，WHERE语句里也会出现这样的子查询&lt;/li&gt;
-&lt;li&gt;关联子查询：将查询的结果传递给子查询作为参数的使用的形式&lt;/li&gt;
-&lt;li&gt;一般子查询：除了那些特殊形式的子查询以外的一般用法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;可更新联接视图updatable-join-view-&#34;&gt;可更新联接视图（Updatable Join View ）&lt;/h4&gt;
-&lt;p&gt;将一个联接视图（包括视图对象和内嵌视图）放到UPADTE语句中这样的语法形式。&lt;/p&gt;
-&lt;p&gt;同样的道理，如果只是用一个表来作为视图的基表，则可以对该视图直接进行&lt;code&gt;DELETE&lt;/code&gt;和&lt;code&gt;UPDATE&lt;/code&gt;，但无法直接执行&lt;code&gt;INSERT&lt;/code&gt;，因为该视图没有默认值的非空列(&lt;code&gt;brand_id&lt;/code&gt;)。该视图称为&lt;strong&gt;可更新视图&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;报错原理&#34;&gt;报错原理&lt;/h3&gt;
-&lt;p&gt;Oracle的键值保存表&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-SQL&#34; data-lang=&#34;SQL&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FROM&lt;/span&gt; DBA_UPDATABLE_COLUMNS
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;SCOTT&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;EMP_DEPT_V&amp;#39;&lt;/span&gt;;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;COLUMN_NAME&lt;/span&gt; | UPDATABLE | INSERTABLE | DELETABLE
-SCOTT   EMP_DEPT_V     EMPNO            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
-SCOTT   EMP_DEPT_V     ENAME            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
-SCOTT   EMP_DEPT_V     SAL              &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
-SCOTT   EMP_DEPT_V     DEPTNO           &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
-SCOTT   EMP_DEPT_V     DNAME            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;视图&lt;code&gt;EMP_DEPT_V&lt;/code&gt;里的字段都无法变更。&lt;/p&gt;
-&lt;p&gt;如果能保证DEPT_T表里的数据是唯一的就能够更新。也就是说在DEPT_T表上加&lt;code&gt;主键约束&lt;/code&gt;或&lt;code&gt;唯一约束&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; DEPT_T
-     &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ADD&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CONSTRAINT&lt;/span&gt; PK_DEPT_T &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;KEY&lt;/span&gt; (DEPTNO);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再看一下之前的视图：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FROM&lt;/span&gt; DBA_UPDATABLE_COLUMNS
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;SCOTT&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;EMP_DEPT_V&amp;#39;&lt;/span&gt;;
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;COLUMN_NAME&lt;/span&gt; | UPDATABLE | INSERTABLE | DELETABLE
-SCOTT   EMP_DEPT_V     EMPNO            YES         YES         YES
-SCOTT   EMP_DEPT_V     ENAME            YES         YES         YES
-SCOTT   EMP_DEPT_V     SAL              YES         YES         YES
-SCOTT   EMP_DEPT_V     DEPTNO           YES         YES         YES
-SCOTT   EMP_DEPT_V     DNAME             &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个时候就可以看到，视图中&lt;code&gt;EMP_DEPT_V&lt;/code&gt;表中原来的字段都是可以更新的了。&lt;/p&gt;
-&lt;p&gt;在对联接视图进行变更的时候，必须保证修改后的值是唯一的，并且这个事实要让数据库知道，而告知数据库的方法是建立主键约束或唯一约束。&lt;/p&gt;
-&lt;p&gt;并不是所有的表都可以随意建这些约束，有什么方法能够不添加约束也能变更？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;添加&lt;code&gt;/*+ BYPASS_UJVC */&lt;/code&gt; 提示，让ORACLE跳过检查（11g R2之后无效，不建议使用）&lt;/li&gt;
-&lt;li&gt;改写&lt;code&gt;UPDATE&lt;/code&gt;语句，通过其他方式判断后处理&lt;/li&gt;
-&lt;li&gt;将&lt;code&gt;UPDATE&lt;/code&gt;改成&lt;code&gt;MERGE&lt;/code&gt;语句&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Oracle：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The concept of a &lt;strong&gt;key-preserved table&lt;/strong&gt; is fundamental to understanding the restrictions on &lt;strong&gt;modifying join views&lt;/strong&gt;. A table is key-preserved if every key of the table can also be a key of the result of the join. So, a key-preserved table has its keys preserved through a join.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;An &lt;strong&gt;updatable join view&lt;/strong&gt; (also referred to as a &lt;strong&gt;modifiable join view&lt;/strong&gt;) is a view that contains multiple tables in the top-level FROM clause of the SELECT statement, and is not restricted by the WITH READ ONLY clause.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/60a56760b19f&#34;&gt;https://www.jianshu.com/p/60a56760b19f&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.yiibai.com/oracle/oracle-updatable-view.html&#34;&gt;https://www.yiibai.com/oracle/oracle-updatable-view.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-- https://www.openheart.icu/cs/oracle/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
         <title>Speech</title>
         <link>https://www.openheart.icu/cs/speech/</link>
         <pubDate>Tue, 21 Jul 2020 19:45:28 +0000</pubDate>
@@ -682,11 +568,12 @@ str1 is abc,str2 is ab
 &lt;h4 id=&#34;linq是什么&#34;&gt;LINQ是什么&lt;/h4&gt;
 &lt;p&gt;语言级集成查询（Language INtegrated Query），是一组用于c#和Visual Basic语言的扩展。它允许编写C#或者Visual Basic代码以查询数据库相同的方式操作内存数据。&lt;/p&gt;
 &lt;h3 id=&#34;工作之外您看哪些技术相关的书网站社区项目等等您还接触哪些net以外的技术能和net或net中有针对性的部分做个对比吗&#34;&gt;工作之外您看哪些技术相关的书、网站、社区、项目等等？您还接触哪些.NET以外的技术，能和.NET或.NET中有针对性的部分做个对比吗？&lt;/h3&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;面试题&#34;&gt;面试题&lt;/h2&gt;
 &lt;h3 id=&#34;concurrentdictionary-or-dictionary&#34;&gt;ConcurrentDictionary or Dictionary&lt;/h3&gt;
 &lt;p&gt;仅知道ConcurrentDictionary是&lt;code&gt;System.Collections.Concurrent&lt;/code&gt;中&lt;strong&gt;线程安全&lt;/strong&gt;的字典类&lt;/p&gt;
 &lt;h3 id=&#34;kestrel&#34;&gt;Kestrel&lt;/h3&gt;
-&lt;p&gt;Kestrel 是 ASP.NET Core 项目模板指定的默认 Web 服务器。（&lt;em&gt;2020-08-15面试问到，确实没了解，看来需要MSDN完整过一遍&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;Kestrel 是 ASP.NET Core 项目模板指定的默认 Web 服务器。&lt;/p&gt;
 &lt;p&gt;以下部署方案中的 ASP.NET Core 支持 &lt;a href=&#34;https://httpwg.org/specs/rfc7540.html&#34;&gt;HTTP/2&lt;/a&gt;：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Kestrel
@@ -723,14 +610,14 @@ str1 is abc,str2 is ab
 &lt;/ul&gt;
 &lt;h3 id=&#34;聚集索引与非聚集索引&#34;&gt;聚集索引与非聚集索引&lt;/h3&gt;
 &lt;p&gt;有场面试，对方问我一张百万级的用户表如何在登录的时候根据登录用户名去查询用户信息。&lt;/p&gt;
-&lt;p&gt;我直接就更新analysis、分库分区分表。问我还又啥操作的时候，我蒙了。最后他说加索引也可以。我更一头雾水，百万级的表还需要考虑用索引去深入优化查询么？&lt;/p&gt;
-&lt;p&gt;过后详细看MSDN上索引的介绍，索引创建有如下Typical Implementations：&lt;/p&gt;
+&lt;p&gt;我直接就更新执行计划、分库分区分表。最后他说加索引也可以，但百万级的表还需要考虑用索引去深入优化查询么？&lt;/p&gt;
+&lt;p&gt;面试结束后，查了一下MSDN上的介绍，索引创建有如下Typical Implementations：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在创建 PRIMARY KEY 约束时，如果不存在该表的聚集索引且未指定唯一非聚集索引，则将自动对一列或多列创建唯一聚集索引。 主键列不允许空值。&lt;/p&gt;
 &lt;p&gt;在创建 UNIQUE 约束时，默认情况下将创建唯一非聚集索引，以便强制 UNIQUE 约束。 如果不存在该表的聚集索引，则可以指定唯一聚集索引。&lt;/p&gt;
 &lt;p&gt;将索引创建为约束的一部分后，会自动将索引命名为与约束名称相同的名称。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;PRIMARY KEY and UNIQUE constraints会自动创建索引。登录用户名必然是unique的，所以现在一想，更是一头雾水。（&lt;em&gt;当然，面试挂了，已经收到letter of apology，但感觉我和对方就这个问题还是五五开的&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;PRIMARY KEY and UNIQUE constraints会自动创建索引。登录用户名必然是unique的，So&amp;hellip;&lt;/p&gt;
 - https://www.openheart.icu/cs/dot-net-interview/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -907,6 +794,248 @@ git config --global user.email krisnie@qq.com
 &lt;/ul&gt;
 &lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
 - https://www.openheart.icu/cs/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Hugo</title>
+        <link>https://www.openheart.icu/cs/hugo/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/hugo/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/hugo/ -&lt;h1 id=&#34;install&#34;&gt;Install&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz
+
+cp ./hugo /usr/local/bin/
+
+hugo new site site42
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
+
+hugo version
+
+rm -r public
+hugo server -b &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://openheart.icu:1313/&amp;#34;&lt;/span&gt; -p &lt;span style=&#34;color:#b452cd&#34;&gt;1313&lt;/span&gt; --bind &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#mac 安装&lt;/span&gt;
+brew install hugo
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# show the location of the hugo executable&lt;/span&gt;
+which hugo
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# show the installed version&lt;/span&gt;
+ls -l &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt; which hugo &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#lrwxr-xr-x  1 hyomin  admin  30  7 17 22:46 /usr/local/bin/hugo -&amp;gt; ../Cellar/hugo/0.74.1/bin/hugo&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# verify that hugo runs correctly&lt;/span&gt;
+hugo version
+Hugo Static Site Generator v0.74.1/extended darwin/amd64 BuildDate: unknown
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;quick-start-guide&#34;&gt;Quick start guide&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new site site42
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ archetypes/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ doc/content/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ data/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ layouts/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ static/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#    config.toml&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#创建文章&lt;/span&gt;
+hugo new about.md
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#安装皮肤&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; themes
+&lt;span style=&#34;color:#228b22&#34;&gt;#git clone https://github.com/gevhaz/hugo-theme-notrack.git&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#https://github.com/spf13/hyde.git&lt;/span&gt;
+git clone https://github.com/AmazingRise/hugo-theme-diary.git themes/diary
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#下载所有hugoThemes&lt;/span&gt;
+git clone --depth &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt; --recursive https://github.com/spf13/hugoThemes.git themes
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#运行 Hugo&lt;/span&gt;
+hugo server --theme=hyde --buildDrafts
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#想要了解更多其他的选项，执行：&lt;/span&gt;
+hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#想要了解 server 相关的选项：&lt;/span&gt;
+hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt; server
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#打开你喜欢的 编辑器 ，编辑和保存你的文章内容，然后等待 Hugo 重新编译并自动重新加载&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hugo-post-missing&#34;&gt;Hugo Post Missing&lt;/h1&gt;
+&lt;p&gt;偶然发现存在有文章无法被生成的情况，经过检查发现在文章yaml配置文件中的date的问题。&lt;/p&gt;
+&lt;p&gt;具体对比后发现并没有规律，既不是纽约时间也不是北京时间，但改时间确实会影响文章的生成。&lt;/p&gt;
+&lt;p&gt;查阅之后发现如下两个解决办法&lt;/p&gt;
+&lt;h4 id=&#34;修改configtoml文件&#34;&gt;修改&lt;code&gt;config.toml&lt;/code&gt;文件&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;buildFuture = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;build-add---buildfuture&#34;&gt;build add &amp;ndash;buildFuture&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server --theme=diary --buildDrafts --buildFuture
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;添加谈笑风生区&#34;&gt;添加谈笑风生区&lt;/h1&gt;
+&lt;p&gt;申请地址：&lt;a href=&#34;https://github.com/settings/applications/new&#34;&gt;Authorization callback URL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;查看自己的OAuth Apps：&lt;a href=&#34;https://github.com/settings/developers&#34;&gt;OAuth Apps&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Application name&lt;/td&gt;
+&lt;td&gt;42th-openheart&lt;/td&gt;
+&lt;td&gt;填写应用名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Homepage URL&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.openheart.icu/&#34;&gt;https://www.openheart.icu/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;主页地址&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Application description&lt;/td&gt;
+&lt;td&gt;第四十二次不开心&lt;/td&gt;
+&lt;td&gt;备注&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Authorization callback URL&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.openheart.icu/&#34;&gt;https://www.openheart.icu/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;回调地址&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;创建模板&#34;&gt;创建模板&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;{{ if and (.Site.Params.enableGitalk) (.IsPage) }}
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;rel&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;href&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;#34;&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;vendor&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;js&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;md5&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;min&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;js&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;relURL&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;}}&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; gitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Gitalk({
+  clientID: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.client_id }}&amp;#39;&lt;/span&gt;,
+  clientSecret: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.client_secret }}&amp;#39;&lt;/span&gt;,
+  repo: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.repo }}&amp;#39;&lt;/span&gt;,
+  owner: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.owner }}&amp;#39;&lt;/span&gt;,
+  admin: [&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.owner }}&amp;#39;&lt;/span&gt;],
+  id: md5(location.pathname),
+  distractionFreeMode: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;false&amp;#39;&lt;/span&gt;
+  });
+  &lt;span style=&#34;color:#658b00&#34;&gt;window&lt;/span&gt;.onload = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; () {
+        gitalk.render(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;gitalk-container&amp;#39;&lt;/span&gt;)
+  }
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;添加配置&#34;&gt;添加配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[params]
+  enableGitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
+
+[params.gitalk]
+  owner = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hyominn&amp;#34;&lt;/span&gt;
+  repo = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;42th-openheart&amp;#34;&lt;/span&gt;
+  client_id = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_id&amp;#34;&lt;/span&gt;
+  client_secret = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_secret&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;webhook&#34;&gt;Webhook&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 本地public文件夹关联到GitHub&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; public
+git init
+git remote add origin https://github.com/Hyominn/42th-openheart.git
+git add -A
+git commit -m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
+git push -u origin master
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 服务端操作&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# cd 到目录blog2&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; hugoblog
+&lt;span style=&#34;color:#228b22&#34;&gt;# git 初始化&lt;/span&gt;
+git init
+git remote add origin https://github.com/Hyominn/42th-openheart.git
+&lt;span style=&#34;color:#228b22&#34;&gt;# 从 Github第一次抓取&lt;/span&gt;
+git pull origin master
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建目录 webhook目录需要创建在当前项目路径下&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 如 /usr/project/hugoblog/webhook&lt;/span&gt;
+mkdir webhook
+&lt;span style=&#34;color:#228b22&#34;&gt;#进入目录&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; webhook
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建脚本&lt;/span&gt;
+vim git_pull.sh
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#在脚本中保存以下内容：&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; /root/blog2
+git pull origin master
+&lt;span style=&#34;color:#658b00&#34;&gt;exit&lt;/span&gt; &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装并配置webhook&#34;&gt;安装并配置webhook&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;npm install github-webhook-handler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;新建github_webhookjs脚本&#34;&gt;新建&lt;code&gt;github_webhook.js&lt;/code&gt;脚本&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; http = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; exec = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt;).exec
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; createHandler = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;github-webhook-handler&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; handler = createHandler({ path: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/webhook&amp;#39;&lt;/span&gt;, secret: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;111111&amp;#39;&lt;/span&gt; })
+
+http.createServer(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (req, res) {
+handler(req, res, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (err) {
+    res.statusCode = &lt;span style=&#34;color:#b452cd&#34;&gt;404&lt;/span&gt;
+    res.end(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;no such location&amp;#39;&lt;/span&gt;)
+  })
+}).listen(&lt;span style=&#34;color:#b452cd&#34;&gt;7777&lt;/span&gt;)
+
+handler.on(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;push&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (event) {
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;let&lt;/span&gt; currentTime = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;Date&lt;/span&gt;();
+    console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\n--&amp;gt; &amp;#39;&lt;/span&gt; + currentTime.toLocaleString());
+    console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Received a push event for %s to %s&amp;#39;&lt;/span&gt;, event.payload.repository.name, event.payload.ref);
+    exec(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;sh git_pull.sh&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (error, stdout, stderr) {
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt;(error) {
+            console.error(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;error:\n&amp;#39;&lt;/span&gt; + error);
+            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt;;
+        }
+        console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;stdout:\n&amp;#39;&lt;/span&gt; + stdout);
+        console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;stderr:\n&amp;#39;&lt;/span&gt; + stderr);
+    });
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pm2运行&#34;&gt;pm2运行&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;pm2 start github_webhook.js
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;增加nginx配置&#34;&gt;增加nginx配置&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# NodeJS 将 Web 服务跑在了 7777 端口，我们可以用 Nginx 反向代理到 80 端口&lt;/span&gt;
+location /webhook {
+  &lt;span style=&#34;color:#658b00&#34;&gt;alias&lt;/span&gt; /root/webhook;
+  proxy_pass http://127.0.0.1:7777;  
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github配置&#34;&gt;Github配置&lt;/h2&gt;
+&lt;p&gt;&amp;lsquo;webhook&amp;rsquo;即 ‘github_webhook.js’ 中配置的path，比如：&lt;code&gt;https://www.openheart.icu/webhook&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;必须选择‘application/json’,否则不起作用&lt;/p&gt;
+&lt;p&gt;‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
+一定要和脚本中设置一致&lt;/p&gt;
+&lt;h1 id=&#34;pv-uv&#34;&gt;pv uv&lt;/h1&gt;
+&lt;p&gt;两行代码 搞定计数：&lt;a href=&#34;http://busuanzi.ibruce.info/&#34;&gt;不蒜子&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 网站head引用 --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- PV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_pv&amp;#34;&lt;/span&gt;&amp;gt;
+    本站总访问量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- UV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_uv&amp;#34;&lt;/span&gt;&amp;gt;
+  本站访客数&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_uv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;人次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 单页PV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_page_pv&amp;#34;&lt;/span&gt;&amp;gt;
+  本文总阅读量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_page_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&#34;&gt;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jdhao.github.io/2020/01/11/hugo_post_missing/&#34;&gt;https://jdhao.github.io/2020/01/11/hugo_post_missing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/024/&#34;&gt;https://mogeko.me/2018/024/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/cs/hugo/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

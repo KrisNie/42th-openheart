@@ -18,7 +18,7 @@
       <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/sqlserver/</guid>
-      <description>Common Operation Index 聚集索引 非聚集索引  </description>
+      <description>Common Operation Index 聚集索引 非聚集索引 </description>
     </item>
     
     <item>
@@ -32,20 +32,6 @@
  使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
 Note that run time is not included in this list by default. To change this behaviour:
  Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services .</description>
-    </item>
-    
-    <item>
-      <title>SessionStorage &amp; LocalStorage &amp; Cookie</title>
-      <link>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</link>
-      <pubDate>Sat, 25 Jul 2020 11:42:23 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</guid>
-      <description>Window.sessionStorage sessionStorage 属性允许你访问一个，对应当前源的 session Storage 对象。它与 localStorage 相似，不同之处在于 localStorage 里面存储的数据没有过期时间设置，而存储在 sessionStorage 里面的数据在页面会话结束时会被清除。
- 页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话。 在新标签或窗口打开一个页面时会复制顶级浏览会话的上下文作为新会话的上下文，这点和 session cookies 的运行方式不同。 打开多个相同的URL的Tabs页面，会创建各自的sessionStorage。 关闭对应浏览器tab，会清除对应的sessionStorage。   应该注意，存储在sessionStorage或localStorage中的数据特定于页面的协议。也就是说http://example.com 与 https://example.com的sessionStorage相互隔离。
- 语法 // 保存数据到 sessionStorage sessionStorage.setItem(&amp;#39;key&amp;#39;, &amp;#39;value&amp;#39;); // 从 sessionStorage 获取数据 let data = sessionStorage.getItem(&amp;#39;key&amp;#39;); // 从 sessionStorage 删除保存的数据 sessionStorage.removeItem(&amp;#39;key&amp;#39;); // 从 sessionStorage 删除所有保存的数据 sessionStorage.clear(); 返回值 一个 Storage 对象。
-示例 下面的代码访问当前域名的 session Storage 对象，并使用 Storage.setItem() 访问往里面添加一个数据条目。
-sessionStorage.setItem(&amp;#39;myCat&amp;#39;, &amp;#39;Tom&amp;#39;); 下面的示例会自动保存一个文本输入框的内容，如果浏览器因偶然因素被刷新了，文本输入框里面的内容会被恢复，因此写入的内容不会丢失。
-// 获取文本输入框 let field = document.getElementById(&amp;#34;field&amp;#34;); // 检测是否存在 autosave 键值 // (这个会在页面偶然被刷新的情况下存在) if (sessionStorage.</description>
     </item>
     
     <item>
@@ -131,7 +117,7 @@ git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.c
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/linux/</guid>
-      <description>chown -R nginx:users ./* # 查看当前文件夹下权限 ls -l netstat -npa | grep 9000 # 查看当前路径 pwd # 安装git yum -y install git </description>
+      <description>Operation $ chown -R nginx:users ./* # 查看当前文件夹下权限 $ ls -l $ netstat -npa | grep 9000 # 查看当前路径 $ pwd # 安装git $ yum -y install git vim # 退出编辑模式，输入以下命令： Esc # 保存后退出vi，若为 :wq! 则为强制储存后退出（常用） :wq # 保存但不退出（常用） :w # 若文件属性为『只读』时，强制写入该档案 :w! # 离开 vi （常用） :q # 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。 :q! # 将档案还原到最原始的状态！ :e! tail # 现有itbilu.log日志文件，查看其后5行： $ tail -n -5 itbilu.log # 或 $ tail -n 5 itbilu.</description>
     </item>
     
     <item>
@@ -142,7 +128,7 @@ git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.c
       <guid>https://www.openheart.icu/cs/mac/</guid>
       <description>brew使用国内镜像源（不好使） 中科大：
 # 步骤一 cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git* # 步骤二 cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git* #步骤三 brew update 复原：
-cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core brew update 配置item2代理 # 打开配置文件 vim ~/.bash_profile # 如果用了`oh-my-zsh` 那么修改`~/.zshrc` # 在后面新增配置 export http_proxy=http://127.0.0.1:1087 export https_proxy=socks5://127.0.0.1:1080 # 同理，可能执行 source ~/.zshrc source ~/.bash_profile iTerm2 + Oh My Zsh 安装Oh my zsh # curl 安装方式 sh -c &amp;#34;$(curl -fsSL https://raw.</description>
+cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core brew update  配置item2代理 # 打开配置文件 vim ~/.bash_profile # 如果用了`oh-my-zsh` 那么修改`~/.zshrc` # 在后面新增配置 export http_proxy=http://127.0.0.1:1087 export https_proxy=socks5://127.0.0.1:1080 # 同理，可能执行 source ~/.zshrc source ~/.bash_profile  iTerm2 + Oh My Zsh 安装Oh my zsh # curl 安装方式 sh -c &amp;#34;$(curl -fsSL https://raw.</description>
     </item>
     
     <item>
@@ -193,27 +179,6 @@ server{listen80;server_namesite42.openheart.icu;location/{root/usr/project/openh
       <guid>https://www.openheart.icu/cs/php/</guid>
       <description>Operation systemctl start php-fpm systemctl restart php-fpm service php-fpm start service php-fpm restart service php-fpm stop service php-fpm reload Problem 1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组
 user = nginx group = users </description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://www.openheart.icu/cs/vim/</link>
-      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/vim/</guid>
-      <description># 退出编辑模式，输入以下命令： Esc # 保存后退出vi，若为 :wq! 则为强制储存后退出（常用） :wq # 保存但不退出（常用） :w # 若文件属性为『只读』时，强制写入该档案 :w! # 离开 vi （常用） :q # 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。 :q! # 将档案还原到最原始的状态！ :e! </description>
-    </item>
-    
-    <item>
-      <title>聚集索引与非聚集索引</title>
-      <link>https://www.openheart.icu/cs/%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%E4%B8%8E%E9%9D%9E%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95/</link>
-      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%E4%B8%8E%E9%9D%9E%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95/</guid>
-      <description>什么是索引
-​	为什么加索引后会使查询变快？
-​	为什么加索引后会使写入、修改、删除变慢？
-索引的种类</description>
     </item>
     
   </channel>

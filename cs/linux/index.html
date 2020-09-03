@@ -222,6 +222,73 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
     <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
 
 
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#operation" onclick="onNavClick(`#operation-nav`)" id="operation-nav">
+									Operation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#vim" onclick="onNavClick(`#vim-nav`)" id="vim-nav">
+									vim
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tail" onclick="onNavClick(`#tail-nav`)" id="tail-nav">
+									tail
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
 </div>
     
     <div class="pagination">
@@ -315,6 +382,73 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
             <div class="toc">
 
 
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#operation" onclick="onNavClick(`#operation-nav`)" id="operation-nav">
+									Operation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#vim" onclick="onNavClick(`#vim-nav`)" id="vim-nav">
+									vim
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tail" onclick="onNavClick(`#tail-nav`)" id="tail-nav">
+									tail
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
 </div>
             
         </div>
@@ -404,7 +538,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            10 s.
+                            2 min
+                            
+                            50 s.
                         
                     </div>
                 </div>
@@ -414,18 +550,70 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 <div class="post-body" v-pre>
                 
-                    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chown -R nginx:users ./*
+                    <h1 id="operation">Operation</h1>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ chown -R nginx:users ./*
 
 <span style="color:#228b22"># 查看当前文件夹下权限</span>
-ls -l
+$ ls -l
 
-netstat -npa | grep <span style="color:#b452cd">9000</span>
+$ netstat -npa | grep <span style="color:#b452cd">9000</span>
 
 <span style="color:#228b22"># 查看当前路径</span>
-<span style="color:#658b00">pwd</span>
+$ <span style="color:#658b00">pwd</span>
 
 <span style="color:#228b22"># 安装git</span>
-yum -y install git
+$ yum -y install git
+</code></pre></div><h1 id="vim">vim</h1>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 退出编辑模式，输入以下命令：</span>
+Esc 
+
+<span style="color:#228b22"># 保存后退出vi，若为 :wq! 则为强制储存后退出（常用）</span>
+:wq
+
+<span style="color:#228b22"># 保存但不退出（常用）</span>
+:w
+
+<span style="color:#228b22"># 若文件属性为『只读』时，强制写入该档案</span>
+:w!
+
+<span style="color:#228b22"># 离开 vi （常用）</span>
+:q    
+
+<span style="color:#228b22"># 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。</span>
+:q!   
+
+<span style="color:#228b22"># 将档案还原到最原始的状态！</span>
+:e!
+</code></pre></div><h1 id="tail">tail</h1>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 现有itbilu.log日志文件，查看其后5行：</span>
+$ tail -n -5 itbilu.log
+<span style="color:#228b22"># 或</span>
+$ tail -n <span style="color:#b452cd">5</span> itbilu.log
+<span style="color:#228b22"># 或</span>
+$ tail -5 itbilu.log
+
+<span style="color:#228b22"># 查看第100行至文件末尾：</span>
+$ tail -n +100 itbilu.log
+<span style="color:#228b22"># 或</span>
+$ tail +100 itbilu.log
+<span style="color:#228b22"># 配合head命令，实现查看文件的第10到20行：</span>
+$ head -20 itbilu.log | tail -10
+
+
+<span style="color:#228b22"># 实时查看日志</span>
+<span style="color:#228b22"># 通过-f参数，我们可以实时查看文件的新增内容：</span>
+$ tail -f itbilu.log
+<span style="color:#228b22"># 注意：使用-f参数时不会中断文件监视，需要通过ctrl+c手动结束。</span>
+
+<span style="color:#228b22"># 实时日志查看与grep过滤关键字</span>
+<span style="color:#228b22"># 通过-f参数，并配合grep命令，可以实现对文件内容的过滤。如：查看前几行、后几行、或前后几行，这时可以通过以下几个参数实现：</span>
+<span style="color:#228b22"># -A &lt;显示行数&gt;            除了显示符合匹配内容的那一行之外，并显示该行之后的内容</span>
+<span style="color:#228b22"># -B &lt;显示行数&gt;            在显示符合匹配内容的那一行之外，并显示该行之前的内容</span>
+<span style="color:#228b22"># -C &lt;显示行数&gt;或-&lt;显示行数&gt; 除了显示符合匹配内容的那一列之外，并显示该列之前后的内容</span>
+<span style="color:#228b22"># 监控itbilu.log日志件，并查看含有&#39;foo&#39;关键字的前后5行：</span>
+$ tail -f itbilu.log|grep <span style="color:#cd5555">&#39;foo&#39;</span> -C <span style="color:#b452cd">5</span>
+<span style="color:#228b22"># 或</span>
+$ tail -f itbilu.log|grep <span style="color:#cd5555">&#39;foo&#39;</span> -5
 </code></pre></div>
                     
                     <HR width="100%" id="EOF">

