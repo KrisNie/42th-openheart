@@ -107,11 +107,13 @@ First version - not thread-safe // Bad code! Do not use! public sealed class Sin
       <description>区分高可靠性与高可用性 Reliability和Availability分别对应可靠性和可用性, 这两个概念既有区别也有联系:
  Reliability定义为一个服务连续无故障运行的时间，无故障运行的时间越长，可靠性就越高。 Availiability定义为在足够长的时间里，比如一年的时间里，一个服务可用的时间，服务可用时间越长越好。一般用可服务时间除于总时间算出一个百分比，用百分比作为度量。比如一个服务如果有5个9的可用性，指的就是一年里99.999%时间里服务都是可用的。  有两个极端的例子可以很好的说明这两个概念的区别:
  假想一个服务，可靠性很高，平均来说可以稳定运行10年，但是一旦服务中断，要用一年的时间来恢复，那么它的可用性只有90%。 假想另一个服务，可靠性很差，运行10秒就会宕机，但是恢复服务只需要1ms, 那么它的可用性是99.99%  从这两个极端的例子可以看出，提高可用性有两条路:
- 一是提高可靠性，当然影响可靠性的原因有很多，包括硬件，软件，网络，运维等。但是有人做过统计，软件的bug是影响可靠性的最主要的因素。并且提高软件质量相较于使用更可靠的硬件也算成本较低的方式了， 二是减少恢复时间，一旦出现宕机，如果能在秒级恢复，那对业务影响是很小的。  高可靠性的实现 &amp;hellip;
-高可用性的实现 高可用HA（High Availability）是分布式系统架构设计中必须考虑的因素之一，它通常是指，通过设计减少系统不能提供服务的时间。
-方法论上，高可用是通过冗余+自动故障转移来实现的。
-整个互联网分层系统架构的高可用，又是通过每一层的冗余+自动故障转移来综合实现的，具体的：
- 【客户端层】到【反向代理层】的高可用，是通过反向代理层的冗余实现的，常见实践是keepalived + virtual IP自动故障转移 【反向代理层】到【站点层】的高可用，是通过站点层的冗余实现的，常见实践是nginx与web-server之间的存活性探测与自动故障转移 【站点层】到【服务层】的高可用，是通过服务层的冗余实现的，常见实践是通过service-connection-pool来保证自动故障转移 【服务层】到【缓存层】的高可用，是通过缓存数据的冗余实现的，常见实践是缓存客户端双读双写，或者利用缓存集群的主从数据同步与sentinel保活与自动故障转移；更多的业务场景，对缓存没有高可用要求，可以使用缓存服务化来对调用方屏蔽底层复杂性 【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移 【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移  </description>
+ 一是提高可靠性，当然影响可靠性的原因有很多，包括硬件，软件，网络，运维等。但是有人做过统计，软件的bug是影响可靠性的最主要的因素。并且提高软件质量相较于使用更可靠的硬件也算成本较低的方式了， 二是减少恢复时间，一旦出现宕机，如果能在秒级恢复，那对业务影响是很小的。   高可靠性的实现 &amp;hellip;
+ 高可用性的实现 高可用HA（High Availability）是分布式系统架构设计中必须考虑的因素之一，它通常是指，通过设计减少系统不能提供服务的时间。
+在设计高可用性策略时应该首先考虑下述因素 ​ • RTO（Recovery Time Objective）-也就是恢复时间目标，意味着允许多少宕机时间，通常用几个9表示，比如说99.999%的可用性意味着每年的宕机时间不超过5分钟、99.99%的可用性意味着每年的宕机时间不超过52.5分钟、99.9%的可用性意味着每年的宕机时间不超过8.75小时。值得注意的是，RTO的计算方法要考虑系统是24*365，还是仅仅是上午6点到下午9点等。您还需要注意是否维护窗口的时间在算在宕机时间之内，如果允许在维护窗口时间进行数据库维护和打补丁，则更容易实现更高的可用性。
+​ • RPO（Recovery Point Objective）-也就是恢复点目标，意味着允许多少数据损失。通常只要做好备份，可以比较容易的实现零数据损失。但当灾难发生时，取决于数据库损坏的程度，从备份恢复数据所需要的时间会导致数据库不可用，这会影响RTO的实现。一个早期比较著名的例子是某欧美的银行系统，只考虑的RPO，系统里只存在了完整备份和日志备份，每3个月一次完整备份，每15分钟一次日志备份，当灾难发生时，只能够通过完整备份和日志备份来恢复数据，因此虽然没有数据丢失，但由于恢复数据花了整整两天时间，造成银行系统2天时间不可用，因此流失了大量客户。另外一个相反的例子是国内某在线视频网站，使用SQL Server作为后端关系数据库，前端使用了No-SQL，定期将No-SQL的数据导入关系数据库作为备份，当灾难发生时最多允许丢失一天的数据，但是要保证高可用性。
+高可用的实现 整个互联网分层系统架构的高可用，又是通过每一层的冗余+自动故障转移来综合实现的，具体的：
+ 【客户端层】到【反向代理层】的高可用，是通过反向代理层的冗余实现的，常见实践是keepalived + virtual IP自动故障转移 【反向代理层】到【站点层】的高可用，是通过站点层的冗余实现的，常见实践是nginx与web-server之间的存活性探测与自动故障转移 【站点层】到【服务层】的高可用，是通过服务层的冗余实现的，常见实践是通过service-connection-pool来保证自动故障转移 【服务层】到【缓存层】的高可用，是通过缓存数据的冗余实现的，常见实践是缓存客户端双读双写，或者利用缓存集群的主从数据同步与sentinel保活与自动故障转移；更多的业务场景，对缓存没有高可用要求，可以使用缓存服务化来对调用方屏蔽底层复杂性 【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移 【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移  SQlServer所支持的高可用特性 SQL Server中所支持的高可用性功能与版本息息相关，企业版支持所有的高可用性功能，这些功能包括：
+ 故障转移集群 数据库镜像（在SQL Server 2012中被标记为“过时”） 事务日志传送 数据库快照 AlwaysOn可用性组 热加载内存 在线索引操作 数据库部分在线（只还原了主文件组或主文件组和额外的NDF文件）  故障转移集群  故障转移集群为整个SQL Server实例提供高可用性支持，这意味着在集群上某个节点的SQL Server实例发生了硬件错误、操作系统错误等会故障转移到该集群上的其它节点。通过多个服务器（节点）共享一个或多个磁盘来实现高可用性，故障转移集群在网络中出现的方式就像单台计算机一样，但是具有高可用特性。值得注意的是，由于故障转移集群是基于共享磁盘，因此会存在磁盘单点故障，因此需要在磁盘层面部署SAN复制等额外的保护措施。常见的故障转移集群是双节点的故障转移集群，包括主主节点和主从节点。  事务日志传送   事务日志传送提供了数据库级别的高可用性保护。日志传送可用来维护相应生产数据库（称为“主数据库”）的一个或多个备用数据库（称为“辅助数据库”）。发生故障转移之前，必须通过手动应用全部未还原的日志备份来完全更新辅助数据库。日志传送具有支持多个备用数据库的灵活性。如果需要多个备用数据库，可以单独使用日志传送或将其作为数据库镜像的补充。当这些解决方案一起使用时，当前数据库镜像配置的主体数据库同时也是当前日志传送配置的主数据库。</description>
     </item>
     
     <item>
@@ -334,6 +336,16 @@ server{listen80;server_namesite42.openheart.icu;location/{root/usr/project/openh
       <guid>https://www.openheart.icu/cs/php/</guid>
       <description>Operation systemctl start php-fpm systemctl restart php-fpm service php-fpm start service php-fpm restart service php-fpm stop service php-fpm reload Problem 1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组
 user = nginx group = users </description>
+    </item>
+    
+    <item>
+      <title>English</title>
+      <link>https://www.openheart.icu/cs/english/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/english/</guid>
+      <description>Apple’s glowing glass sphere is the newest spectacle on Singapore’s skyline Designed by Foster + Partners, the new Apple Marina Bay Sands store(滨海湾金沙店), due to open on Thursday, is a self-supporting dome entirely surrounded by water
+Physics loves a sphere, its preferred, purest form. For architects though, the box trumps the bubble(盒子胜过透明原型罩). They’re easier to engineer and offer more useful space. The new Apple Marina Bay Sands store in Singapore goes with the physics.</description>
     </item>
     
   </channel>
