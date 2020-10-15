@@ -185,6 +185,7 @@ vi ~/.zshrc
 $$
 \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
 $$&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;希腊字母&#34;&gt;希腊字母&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -367,6 +368,7 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;角标&#34;&gt;角标&lt;/h2&gt;
 &lt;p&gt;Markdown Language is a superset of HTML, so you can use html tag &lt;strong&gt;sub,sup&lt;/strong&gt; to achieve this&lt;/p&gt;
 &lt;p&gt;上标和下标分别使用&lt;code&gt;^&lt;/code&gt;和&lt;code&gt;_&lt;/code&gt;来表示，下标也可以用&lt;code&gt;~&lt;/code&gt;表示&lt;/p&gt;
@@ -381,6 +383,7 @@ NIKE&lt;!-- raw HTML omitted --&gt;®&lt;!-- raw HTML omitted --&gt;
 H~2~0~2~&lt;/p&gt;
 &lt;p&gt;如果要在左右两边都有上下标，可以用&lt;code&gt;\sideset&lt;/code&gt;来表示：&lt;/p&gt;
 &lt;p&gt;eg: &lt;code&gt;\sideset{^1_2}{^3_4}\bigotimes&lt;/code&gt;：$\sideset{^1_2}{^3_4}\bigotimes$。&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;括号&#34;&gt;括号&lt;/h2&gt;
 &lt;h3 id=&#34;小括号与方括号&#34;&gt;小括号与方括号&lt;/h3&gt;
 &lt;p&gt;使用原始的&lt;code&gt;()&lt;/code&gt;和&lt;code&gt;[]&lt;/code&gt;即可。&lt;/p&gt;
@@ -400,6 +403,7 @@ H~2~0~2~&lt;/p&gt;
 &lt;p&gt;需要注意的是，原始括号并不会随着公式大小缩放。&lt;/p&gt;
 &lt;p&gt;eg: &lt;code&gt;(\frac12)&lt;/code&gt;：$(\frac12)$。可以使用\left( &amp;hellip;\right)来自适应的调整括号: &lt;code&gt;\left( \frac12 \right)&lt;/code&gt;：$\left( \frac12 \right)$。&lt;/p&gt;
 &lt;p&gt;可以明显看出，后一组公式中的括号是经过缩放的。&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;求和与积分&#34;&gt;求和与积分&lt;/h2&gt;
 &lt;h3 id=&#34;求和&#34;&gt;求和&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;\sum&lt;/code&gt;用来表示求和符号，其下标表示求和下限，上标表示上线。&lt;/p&gt;
@@ -418,6 +422,7 @@ $$
 &lt;p&gt;&lt;code&gt;\bigcup&lt;/code&gt;：$\bigcup$&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;\bigcap&lt;/code&gt;：$\bigcap$&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;\iint&lt;/code&gt;：$\iint$&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;分式与根式&#34;&gt;分式与根式&lt;/h2&gt;
 &lt;h3 id=&#34;分式&#34;&gt;分式&lt;/h3&gt;
 &lt;p&gt;分式有两种表示方法。&lt;/p&gt;
@@ -436,7 +441,8 @@ $$
 &lt;h3 id=&#34;乘号&#34;&gt;乘号&lt;/h3&gt;
 &lt;p&gt;叉乘\times&lt;/p&gt;
 &lt;p&gt;eg: $\times$&lt;/p&gt;
-&lt;h2 id=&#34;字体&#34;&gt;字体&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;字体&#34;&gt;字体&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;使用&lt;code&gt;\it&lt;/code&gt;显示意大利体（公式默认字体）：&lt;/p&gt;
@@ -455,6 +461,10 @@ $$
 &lt;p&gt;$\tt ABCDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;图片&#34;&gt;图片&lt;/h1&gt;
+&lt;p&gt;题注：&lt;!-- raw HTML omitted --&gt;Apple Marina Bay Sands is the first Apple store to sit directly on the water.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;hr&gt;
 - https://www.openheart.icu/cs/markdown/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
