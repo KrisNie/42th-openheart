@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html><head>
+<title>Idempotent</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="幂等">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="Idempotent" />
+<meta property="og:description" content="幂等" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/cs/idempotent/" />
+<meta property="article:published_time" content="2020-11-12T15:58:21+00:00" />
+<meta property="article:modified_time" content="2020-11-12T17:34:23+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Idempotent"/>
+<meta name="twitter:description" content="幂等"/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<script src="/vendor/js/vue.min.js" ></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="https://www.openheart.icu//js/loadCSS.js"></script>
+
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://www.openheart.icu//js/toc-collapse.js"></script>
+
+  
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'Hyominn',
+  admin: ['Hyominn'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/boom">
+                Gossip
+            </a>
+            
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+Case42
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@gmail.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+鲁ICP备20007116号
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2020 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%b9%82%e7%ad%89" onclick="onNavClick(`#什么是幂等-nav`)" id="什么是幂等-nav">
+									什么是幂等？
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8e%a5%e5%8f%a3%e5%b9%82%e7%ad%89%e6%80%a7" onclick="onNavClick(`#接口幂等性-nav`)" id="接口幂等性-nav">
+									接口幂等性
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b9%82%e7%ad%89%e6%80%a7%e5%ae%9e%e7%8e%b0%e6%96%b9%e5%bc%8f" onclick="onNavClick(`#幂等性实现方式-nav`)" id="幂等性实现方式-nav">
+									幂等性实现方式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e6%9f%a5%e8%af%a2%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#查询操作-nav`)" id="查询操作-nav">
+									查询操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%88%a0%e9%99%a4%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#删除操作-nav`)" id="删除操作-nav">
+									删除操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%94%af%e4%b8%80%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#唯一索引-nav`)" id="唯一索引-nav">
+									唯一索引
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8e%bb%e9%87%8d%e8%a1%a8%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#去重表机制-nav`)" id="去重表机制-nav">
+									去重表机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#token%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#token机制-nav`)" id="token机制-nav">
+									Token机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b9%90%e8%a7%82%e9%94%81%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#乐观锁机制-nav`)" id="乐观锁机制-nav">
+									乐观锁机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%88%86%e5%b8%83%e5%bc%8f%e9%94%81" onclick="onNavClick(`#分布式锁-nav`)" id="分布式锁-nav">
+									分布式锁
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%8a%b6%e6%80%81%e6%9c%ba" onclick="onNavClick(`#状态机-nav`)" id="状态机-nav">
+									状态机
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#select--insert" onclick="onNavClick(`#select--insert-nav`)" id="select--insert-nav">
+									select &#43; insert
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%af%b9%e5%a4%96%e6%8f%90%e4%be%9b%e6%8e%a5%e5%8f%a3%e7%9a%84api%e5%a6%82%e4%bd%95%e4%bf%9d%e8%af%81%e5%b9%82%e7%ad%89" onclick="onNavClick(`#对外提供接口的api如何保证幂等-nav`)" id="对外提供接口的api如何保证幂等-nav">
+									对外提供接口的api如何保证幂等
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/boom">
+                    Gossip
+                </a>
+                
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%b9%82%e7%ad%89" onclick="onNavClick(`#什么是幂等-nav`)" id="什么是幂等-nav">
+									什么是幂等？
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8e%a5%e5%8f%a3%e5%b9%82%e7%ad%89%e6%80%a7" onclick="onNavClick(`#接口幂等性-nav`)" id="接口幂等性-nav">
+									接口幂等性
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b9%82%e7%ad%89%e6%80%a7%e5%ae%9e%e7%8e%b0%e6%96%b9%e5%bc%8f" onclick="onNavClick(`#幂等性实现方式-nav`)" id="幂等性实现方式-nav">
+									幂等性实现方式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e6%9f%a5%e8%af%a2%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#查询操作-nav`)" id="查询操作-nav">
+									查询操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%88%a0%e9%99%a4%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#删除操作-nav`)" id="删除操作-nav">
+									删除操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%94%af%e4%b8%80%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#唯一索引-nav`)" id="唯一索引-nav">
+									唯一索引
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8e%bb%e9%87%8d%e8%a1%a8%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#去重表机制-nav`)" id="去重表机制-nav">
+									去重表机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#token%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#token机制-nav`)" id="token机制-nav">
+									Token机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b9%90%e8%a7%82%e9%94%81%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#乐观锁机制-nav`)" id="乐观锁机制-nav">
+									乐观锁机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%88%86%e5%b8%83%e5%bc%8f%e9%94%81" onclick="onNavClick(`#分布式锁-nav`)" id="分布式锁-nav">
+									分布式锁
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%8a%b6%e6%80%81%e6%9c%ba" onclick="onNavClick(`#状态机-nav`)" id="状态机-nav">
+									状态机
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#select--insert" onclick="onNavClick(`#select--insert-nav`)" id="select--insert-nav">
+									select &#43; insert
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%af%b9%e5%a4%96%e6%8f%90%e4%be%9b%e6%8e%a5%e5%8f%a3%e7%9a%84api%e5%a6%82%e4%bd%95%e4%bf%9d%e8%af%81%e5%b9%82%e7%ad%89" onclick="onNavClick(`#对外提供接口的api如何保证幂等-nav`)" id="对外提供接口的api如何保证幂等-nav">
+									对外提供接口的api如何保证幂等
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Idempotent
+                    
+                    <div class="post-subtitle">
+                        幂等
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-11-12 15:58
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/operation">Operation</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            16 min
+                            
+                            20 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="什么是幂等">什么是幂等？</h2>
+<p>在<a href="https://zh.wikipedia.org/wiki/%E6%95%B8%E5%AD%B8">数学</a>里，<strong>幂等</strong>有两种主要的定义。</p>
+<ul>
+<li>在某<a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E9%81%8B%E7%AE%97">二元运算</a>下，<strong>幂等元素</strong>是指被自己重复运算（或对于<a href="https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B8">函数</a>是为<a href="https://zh.wikipedia.org/wiki/%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0">复合</a>）的结果等于它自己的元素。例如，乘法下唯一两个幂等<a href="https://zh.wikipedia.org/wiki/%E5%AF%A6%E6%95%B8">实数</a>为0和1。</li>
+<li>某<a href="https://zh.wikipedia.org/wiki/%E4%B8%80%E5%85%83%E9%81%8B%E7%AE%97">一元运算</a>为<strong>幂等</strong>的时，其作用在任一元素两次后会和其作用一次的结果相同。例如，<a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E7%AC%A6%E8%99%9F">高斯符号</a>便是幂等的。</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%80%E5%85%83%E9%81%8B%E7%AE%97">一元运算</a>的定义是<a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E9%81%8B%E7%AE%97">二元运算</a>定义的特例</li>
+</ul>
+<p>In <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>, the term <em>idempotence</em> may have a different meaning depending on the context in which it is applied:</p>
+<ul>
+<li>in <a href="https://en.wikipedia.org/wiki/Imperative_programming">imperative programming</a>(命令编程), a <a href="https://en.wikipedia.org/wiki/Subroutine">subroutine</a>(子程序) with <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a> is idempotent if the system state remains the same after one or several calls, in other words if the function from the system state space to itself associated to the subroutine is idempotent in the mathematical sense given in the <a href="https://en.wikipedia.org/wiki/Idempotence#Definition">definition</a>;</li>
+<li>in <a href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a>, a <a href="https://en.wikipedia.org/wiki/Pure_function">pure function</a> is idempotent if it is idempotent in the mathematical sense given in the <a href="https://en.wikipedia.org/wiki/Idempotence#Definition">definition</a>.</li>
+</ul>
+<p>This is a very useful property in many situations, as it means that an operation can be repeated or retried as often as necessary without causing unintended effects. With non-idempotent operations, the algorithm may have to keep track of whether the operation was already performed or not.</p>
+<p>一个HTTP方法是<strong>幂等</strong>的，指的是同样的请求被执行一次与连续执行多次的效果是一样的，服务器的状态也是一样的。换句话说就是，幂等方法不应该具有副作用（统计用途除外）。在正确实现的条件下，<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/GET"><code>GET</code></a>，<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/HEAD"><code>HEAD</code></a>，<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/PUT"><code>PUT</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE"><code>DELETE</code></a> 等方法都是<strong>幂等</strong>的，而 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/POST"><code>POST</code></a> 方法不是。所有的 <a href="https://developer.mozilla.org/en-US/docs/Glossary/safe">safe</a> 方法也都是幂等的。</p>
+<p>幂等性只与后端服务器的实际状态有关，而每一次请求接收到的状态码不一定相同。例如，第一次调用<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE"><code>DELETE</code></a> 方法有可能返回 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/200"><code>200</code></a>，但是后续的请求可能会返回<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/404"><code>404</code></a>。<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE"><code>DELETE</code></a> 的言外之意是，开发者不应该使用<code>DELETE</code>方法实现具有删除最后条目功能的 RESTful API。</p>
+<p>需要注意的是，服务器不一定会确保请求方法的幂等性，有些应用可能会错误地打破幂等性约束。</p>
+<h2 id="接口幂等性">接口幂等性</h2>
+<p>在分布式系统中，一般都会有重试机制。但重复机制又有一定几率出现重复的数据。例如订单系统消费了消息，但是由于网络等问题消息系统未收到反馈是否已成功处理，此时消息系统会根据配置的规则隔断时间就retry一次。但如果此时网络恢复正常，我第一次收到的消息成功处理了，这是又收到一条消息，如果没有防护措施，就有可能出现重复数据。</p>
+<p>幂等性指<strong>任意多次执行所产生的影响均与一次执行的影响相同。多次调用对系统的产生的影响是一样的，即对资源的作用是一样的，但是返回值允许不同。</strong></p>
+<p>对于业务中需要考虑幂等性的地方一般都是接口的重复请求，重复请求是指同一个请求因为某些原因被多次提交。导致这个情况会有几种场景：</p>
+<ul>
+<li><strong>前端重复提交</strong>：提交订单，用户快速重复点击多次，造成后端生成多个内容重复的订单。</li>
+<li><strong>接口超时重试</strong>：对于给第三方调用的接口，为了防止网络抖动或其他原因造成请求丢失，这样的接口一般都会设计成超时重试多次。</li>
+<li><strong>消息重复消费</strong>：MQ消息中间件，消息重复消费。</li>
+</ul>
+<h2 id="幂等性实现方式">幂等性实现方式</h2>
+<h4 id="查询操作">查询操作</h4>
+<p>查询一次和查询多次，在数据不变的情况下，查询结果是一样的。select是天然的幂等操作；</p>
+<h4 id="删除操作">删除操作</h4>
+<p>删除操作也是幂等的，删除一次和多次删除都是把数据删除。(注意可能返回结果不一样，删除的数据不存在，返回0，删除的数据多条，返回结果多个)</p>
+<h4 id="唯一索引">唯一索引</h4>
+<p>这个机制是<strong>利用了数据库的主键唯一约束的特性</strong>，解决了在<strong>insert场景</strong>时幂等问题。但主键的要求不是自增的主键，这样就需要业务<strong>生成全局唯一</strong>的主键，之前老顾的文章也介绍过<strong>分布式唯一主键ID</strong>的生成，可自行查阅。如果是<strong>分库分表场景下</strong>，<strong>路由规则要保证相同请求下</strong>，<strong>落地在同一个数据库和同一表中</strong>，要不然<strong>数据库主键约束就不起效果</strong>了，因为是不同的数据库和表主键不相关。因为对主键有一定的要求，这个方案就跟业务有点耦合了，<strong>无法用自增主键了</strong>。</p>
+<p>防止新增脏数据。比如：支付宝的资金账户，支付宝也有用户账户，每个用户只能有一个资金账户，怎么防止给用户创建资金账户多个，那么给资金账户表中的用户ID加唯一索引，所以一个用户新增成功一个资金账户记录。要点：唯一索引或唯一组合索引来防止新增数据存在脏数据。</p>
+<h4 id="去重表机制">去重表机制</h4>
+<p>往去重表里插入数据的时候，利用数据库的唯一索引特性，保证唯一的逻辑。唯一序列号可以是一个字段，也可以是多字段的唯一性组合。</p>
+<p>这里要注意的是，<strong>去重表和业务表应该在同一库中</strong>，这样就保证了在同一个事务，即使业务操作失败了，也会把去重表的数据回滚。<strong>这个很好的保证了数据一致性</strong>。</p>
+<p>另外，使用数据库防重表的方式它有个严重的缺点，那就是系统容错性不高，如果幂等表所在的数据库连接异常或所在的服务器异常，则会导致整个系统幂等性校验出问题。</p>
+<h4 id="token机制">Token机制</h4>
+<p><img src="/image/Token-20201112171801.jpeg" alt="Token"></p>
+<ol>
+<li>服务端提供了发送token的接口，我们在分析业务的时候，哪些是存在幂等问题的，就必须在执行业务前，前去获取token，服务器会把token保存到redis中；</li>
+<li>然后调用业务接口请求时，把token携带过去，一般反正请求头部；</li>
+<li>服务器判断token是否存在redis中，存在表示第一次请求，可以继续执行业务，业务完成后，<strong>需要把redis中的token删掉</strong>；</li>
+<li>如果判断token不存在redis中，就表示是重复操作，直接返回重复标记给client，这样就保证了业务代码，不被重复执行。</li>
+</ol>
+<p>服务器端第一次验证相同过后，会将session中的Token值更新下，若用户重复提交，第二次的验证判断将失败，因为用户提交的表单中的Token没变，但服务器端session中Token已经改变了。</p>
+<p>这就是token+redis的幂等方案。适用于绝大部分场景。主要针对前端重复连续多次点击的情况，网上也有另一个版本的Token方案，不同的地方是：<strong>网上方案检验token存在后，就立刻删除token，再进行业务处理</strong>。而上面的方式是检验token存在后，先进行业务处理，再删除token。</p>
+<p>网上方案的缺点是<strong>先删除token</strong>，这是出现系统问题导致<strong>业务处理出现异常</strong>，业务处理没有成功，接口调用方也没有获取到明确的结果，然后<strong>进行重试，但token已经删除掉了</strong>，服务端判断token不存在，<strong>认为是重复请求，就直接返回了</strong>，无法进行业务处理了。</p>
+<p>而上面的方案<strong>后删除token</strong>也是会存在问题的，如果进行业务处理成功后，删除redis中的token失败了，这样就导致了有可能会发生重复请求，因为token没有被删除。</p>
+<h4 id="乐观锁机制">乐观锁机制</h4>
+<p>乐观锁只是在更新数据那一刻锁表，其他时间不锁表，所以相对于悲观锁，效率更高。乐观锁的实现方式多种多样可以通过version或者其他状态条件：</p>
+<ol>
+<li>通过版本号实现update table_xxx set name=#name#,version=version+1 where version=#version#；</li>
+<li>通过条件限制 update table_xxx set avai_amount=avai_amount-#subAmount# where avai_amount-#subAmount# &gt;= 0</li>
+</ol>
+<p>加上了版本号后，就让此计算赋值型业务，具备了幂等性。</p>
+<p>要求：quality-#subQuality# &gt;= ，这个情景适合不用版本号，只更新是做数据安全校验，适合库存模型，扣份额和回滚份额，性能更高。</p>
+<p>乐观锁缺点：在操作业务前，需要先查询出当前的version版本。</p>
+<h4 id="分布式锁">分布式锁</h4>
+<p>如果是分布是系统，构建全局唯一索引比较困难，例如唯一性的字段没法确定，这时候可以引入分布式锁，通过第三方的系统(redis或zookeeper)，在业务系统插入数据或者更新数据，获取分布式锁，然后做操作，之后释放锁，这样其实是把多线程并发的锁的思路，引入多多个系统，也就是分布式系统中得解决思路。要点：某个长流程处理过程要求不能并发执行，可以在流程执行之前根据某个标志(用户ID+后缀等)获取分布式锁，其他流程执行时获取锁就会失败，也就是同一时间该流程只能有一个能执行成功，执行完成后，释放分布式锁(分布式锁要第三方系统提供)。</p>
+<h4 id="状态机">状态机</h4>
+<p>对于很多业务有一个业务流转状态的，每个状态都有前置状态和后置状态，以及最后的结束状态。例如流程的待审批，审批中，驳回，重新发起，审批通过，审批拒绝。订单的待提交，待支付，已支付，取消。</p>
+<p>在设计单据相关的业务，或者是任务相关的业务，肯定会涉及到状态机，就是业务单据上面有个状态，状态在不同的情况下会发生变更，一般情况下存在有限状态机，这时候，如果状态机已经处于下一个状态，这时候来了一个上一个状态的变更，理论上是不能够变更的，这样的话，保证了有限状态机的幂等。注意：订单等单据类业务，存在很长的状态流转，一定要深刻理解状态机，对业务系统设计能力提高有很大帮助。</p>
+<h4 id="select--insert">select + insert</h4>
+<p>并发不高的后台系统，或者一些任务JOB，为了支持幂等，支持重复执行，简单的处理方法是，先查询下一些关键数据，判断是否已经执行过，在进行业务处理，就可以了。注意：核心高并发流程不要用这种方法。</p>
+<h4 id="对外提供接口的api如何保证幂等">对外提供接口的api如何保证幂等</h4>
+<p>如银联提供的付款接口：需要接入商户提交付款请求时附带：source来源，seq序列号；source+seq在数据库里面做唯一索引，防止多次付款(并发时，只能处理一个请求) 。
+重点：对外提供接口为了支持幂等调用，接口有两个字段必须传，一个是来源source，一个是来源方序列号seq，这个两个字段在提供方系统里面做联合唯一索引，这样当第三方调用时，先在本方系统里面查询一下，是否已经处理过，返回相应处理结果；没有处理过，进行相应处理，返回结果。注意，为了幂等友好，一定要先查询一下，是否处理过该笔业务，不查询直接插入业务系统，会报错，但实际已经处理了。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">
+                        Last modified on 2020-11-12 17:34
+                        &nbsp;
+                        <span id="busuanzi_container_page_pv" style="color:#777;">
+                            This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
+                        </span>
+                    </p>
+                    
+                </div>
+
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/boom/%E6%AD%A3%E5%B8%B8%E4%BA%BA%E4%B8%8D%E5%86%99%E6%97%A5%E8%AE%B0/">
+			Previous<br>正常人谁写日记啊！？
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	Case42
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@gmail.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2020 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://www.openheart.icu//js/journal.js"></script>
+
+    </body>
+</html>

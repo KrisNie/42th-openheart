@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 15 Aug 2020 16:27:30 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2020 15:58:21 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/categories/technical/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Idempotent</title>
+      <link>https://www.openheart.icu/cs/idempotent/</link>
+      <pubDate>Thu, 12 Nov 2020 15:58:21 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/idempotent/</guid>
+      <description>什么是幂等？ 在数学里，幂等有两种主要的定义。
+ 在某二元运算下，幂等元素是指被自己重复运算（或对于函数是为复合）的结果等于它自己的元素。例如，乘法下唯一两个幂等实数为0和1。 某一元运算为幂等的时，其作用在任一元素两次后会和其作用一次的结果相同。例如，高斯符号便是幂等的。 一元运算的定义是二元运算定义的特例  In computer science, the term idempotence may have a different meaning depending on the context in which it is applied:
+ in imperative programming(命令编程), a subroutine(子程序) with side effects is idempotent if the system state remains the same after one or several calls, in other words if the function from the system state space to itself associated to the subroutine is idempotent in the mathematical sense given in the definition; in functional programming, a pure function is idempotent if it is idempotent in the mathematical sense given in the definition.</description>
+    </item>
     
     <item>
       <title>SQLserver</title>

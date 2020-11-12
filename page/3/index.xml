@@ -6,9 +6,54 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sun, 01 Nov 2020 19:55:40 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2020 15:58:21 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Git</title>
+        <link>https://www.openheart.icu/cs/git/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/git/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/git/ -&lt;h2 id=&#34;idea设置git&#34;&gt;idea设置git&lt;/h2&gt;
+&lt;p&gt;idea -&amp;gt;VSC -&amp;gt;Create Git Repository
+右击工程文件 -&amp;gt;git-&amp;gt;add
+右击工程文件 -&amp;gt;git-&amp;gt;commit&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git remote add origin git@github.com:Hyominn/java_demo.git
+git pull git@github.com:Hyominn/java_demo.git
+git add .
+dir                                                &lt;span style=&#34;color:#228b22&#34;&gt;# 查看有哪些文件夹&lt;/span&gt;
+git rm -r --cached target   &lt;span style=&#34;color:#228b22&#34;&gt;# 删除target文件夹&lt;/span&gt;
+git commit –m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;版本更新信息&amp;#34;&lt;/span&gt;
+git push git@github.com:Hyominn/java_demo.git   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置git代理&#34;&gt;设置git代理&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global https.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080
+
+git config --global http.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
+git config --global https.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
+
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+npm config delete proxy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;遇到pull不下来&#34;&gt;遇到pull不下来&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git reset --hard FETCH_HEAD
+git clone  https://www.github.com/Hyominn/openheart.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;更改用户名邮箱&#34;&gt;更改用户名邮箱&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global user.name &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris Nie&amp;#34;&lt;/span&gt;
+git config --global user.email krisnie@qq.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;查看git安装路径&#34;&gt;查看git安装路径&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mac: &lt;code&gt;which git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Windows: &lt;code&gt;where git&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+- https://www.openheart.icu/cs/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -1086,57 +1131,6 @@ service php-fpm reload
 &lt;p&gt;&lt;em&gt;有人觉得用新型肺炎和亲密关系作比较是荒唐又可笑的，他们不该怪我，毕竟亲密关系本身就是荒唐又可笑的。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;2020-02-06，乐安，小雪，怕死&lt;/em&gt;&lt;/p&gt;
 - https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>下一站</title>
-        <link>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</link>
-        <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ -&lt;p&gt;不是茶山刘，是草山岭东。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;故事&#34;&gt;故事&lt;/h1&gt;
-&lt;p&gt;如果要我编个故事，我必然会这么写：&lt;/p&gt;
-&lt;p&gt;“我是刘波，百度上‘刘波’的搜索结果有一千二百八十万个，我可能不是你们认识的那个。我和其他刘波不同，我爸不是木匠，我不是山大毕业，我更不是主播也不配钥匙……我和其他刘波一样，我也喜欢一个张苇，也时常在熙攘的人群中当众孤独，我也不知道我到底想要什么……”这是人物；&lt;/p&gt;
-&lt;p&gt;“公交车顺着经十路往西，我被挤在公交车后门脸快贴到玻璃，路上拥挤的人群在整齐的标语和不整齐的广告中显得更加拥挤。我服了，于是我把自己放到了乐安县与油城的中间偏南，这里足够空旷。这里秋天的下午和别地儿一样慵懒，风挺大，云彩也不小；风吹云彩，太阳时隐时现，像极了梦里的张苇，所以我爱死了下午的太阳……”这是环境；&lt;/p&gt;
-&lt;p&gt;“我要如何体面地date张苇，她会如何体面地拒绝我，我该如何体面地认同她的拒绝，我一问三不知……”这是故事情节。&lt;/p&gt;
-&lt;p&gt;要是假期再充裕点，我可以是欧亨利，也可以是莫泊桑。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;国庆&#34;&gt;国庆&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在狼牙区 在飞虎路 那李杀神 王诛魔 还有刘斩仙 断罪小学 再度聚首 齐心协力 只因为 一个大魔头&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;大魔头是谁就不用问了吧，军人伟大，异地恋伟大，大魔头只配挨打，懂吧！&lt;/p&gt;
-&lt;p&gt;国庆加班开始前一晚上喜迎院士孙，我们几个在天没黑前走进饭店速战速决，然后各就各位。在开始电子竞技前，异口同声骂我朋张“被孙洋的小香批迷住了双眼”（我除外，我不会骂人）。&lt;/p&gt;
-&lt;p&gt;国庆加班结束前一晚上喜迎农民许，我们几个在政法学院旁边，感受到康康他们租的宾馆里浓厚的学习氛围后，在他们宾馆楼下的豪华网咖开始电子竞技，按习俗我朋张必须挨骂，“他就是个豁批犯”（不是我说的，我不会骂人）。&lt;/p&gt;
-&lt;p&gt;其实，院士孙和农民许并不配骂我朋张，因为他俩来泉城完全是路过，他俩的目的地一个是一国两制的小香批一个是油城的小香批，真是五十步笑百步。&lt;/p&gt;
-&lt;p&gt;世界与我都不完美，万物都有美中不足之处（我除外，我只有不足）。国庆长假也不例外，除了长假不够长这一明显不足外还有两个。&lt;/p&gt;
-&lt;p&gt;一是由于各种原因没吃上公司旁边刚开业生意兴隆的蟹黄生煎。&lt;/p&gt;
-&lt;p&gt;二是没在6号晚上及时亲手接过院士孙给我代的大地，然后大声让他滚出我屋。&lt;/p&gt;
-&lt;p&gt;但总体上来说国庆长假还算圆满。这是我在泉城过得第一个国庆，康康说泉城比琴岛宜居，其实我也感觉到了，冬暖夏凉怕是琴岛唯一的优势了。&lt;/p&gt;
-&lt;p&gt;还有一个有关国庆的就是，这几天除了路灯挂上了五星红旗，路边还多了挺多标语……&lt;/p&gt;
-&lt;p&gt;“灭霸扫痞”与“除暴安良”不停地交配、繁殖，与“鼓励二胎”一起平分了原本属于“计划生育好”的天下。虽然比“年产一零七零万吨钢铁”要些许得靠谱，但还是难免让多愁善感的人叹一口气，“时过境迁，物是人非”（我爱国爱党，没有任何暗示，如果有，也与本人无关）。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;活着&#34;&gt;活着&lt;/h1&gt;
-&lt;p&gt;其实，除了国庆也没啥可以说道的。&lt;/p&gt;
-&lt;p&gt;自打中秋节画了个月亮里的张苇，就没动过画笔，樱花牌的固体颜料都裂开了，像极了樱花。&lt;/p&gt;
-&lt;p&gt;这半年我也还是没做到不以物喜不以己悲。&lt;/p&gt;
-&lt;p&gt;拿到大地后特意发了个微博。我没做到不以物喜，我对不起范仲淹。&lt;/p&gt;
-&lt;p&gt;在一群贪财好色的人中，有的成了冯唐、王小波、王朔、渡边淳一、杜拉斯、萨德、劳伦斯、三岛由纪夫……有的成了空山基、金政基、席勒、莫迪里阿尼、前田俊夫、佐伯俊男……（还有很多我就不列举了，不然就成当众开车了）却只有我成了刘波。我没做到不以己悲，我对不起范仲淹。&lt;/p&gt;
-&lt;p&gt;我现在做的，能做的也就只有活着了，大地也不能让我在活着前面加个“好好”。&lt;/p&gt;
-&lt;p&gt;然后呢，这几个完成“豁小香批”成就的（此处并非特指男生，也包括个别女生）和我妈一样开始担心起我的感情生活了。他们从正面侧面反面对我的将来进行大胆预测，让我对未来根本不抱有任何期望。&lt;/p&gt;
-&lt;p&gt;他们与其问我什么时候能在我结婚典礼上听到我背唐诗宋词汉乐府，还不如问我在结婚典礼上会背长恨歌还是孔雀东南飞。懂吧，我起码能给他们个确切的答案。&lt;/p&gt;
-&lt;p&gt;说起往南飞，你说如果世上没有了南这个方向……&lt;/p&gt;
-&lt;p&gt;那我要撞张苇的南墙，是不是就要从佛王村出发，带足干粮或者带足银行卡一直往北，途径北极、南极，行程40万公里，才能一头撞死我自己或者撞瞎张苇？&lt;/p&gt;
-&lt;p&gt;虽然我极力地避免在多事之秋出门，但故事里一旦有张苇，那我内心与肉体必肿胀，这40万公里是逃不掉的。舔狗舔到最后一无所有，但没办法，大地毕竟不是聚斯金德笔下的格雷诺耶谋杀二十六个少女后制成的香水，并不能让我***永久占有（包括进行占有）***张苇。&lt;/p&gt;
-&lt;p&gt;我会继续努力的，努力方向可以是张苇，但没必要。&lt;/p&gt;
-&lt;p&gt;不以物喜不以己悲，不用互勉，我自己勉自己。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2018年10月7日&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

@@ -21,7 +21,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.openheart.icu/cs/dot-net-interview/" />
 <meta property="article:published_time" content="2020-07-17T23:28:00+00:00" />
-<meta property="article:modified_time" content="2020-08-15T16:57:07+00:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="article:modified_time" content="2020-11-12T17:34:23+00:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
@@ -1051,8 +1051,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#kestrel" onclick="onNavClick(`#kestrel-nav`)" id="kestrel-nav">
-									Kestrel
+								<a href="#%e6%9c%8d%e5%8a%a1%e5%99%a8" onclick="onNavClick(`#服务器-nav`)" id="服务器-nav">
+									服务器
 								</a>
 							</li>
 						
@@ -2303,6 +2303,24 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 							
 								</ul>
 							
+						
+						
+						
+							<li>
+								<a href="#%e8%ae%bf%e9%97%ae%e4%bf%ae%e9%a5%b0%e7%ac%a6" onclick="onNavClick(`#访问修饰符-nav`)" id="访问修饰符-nav">
+									访问修饰符
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
 						
 						
 						
@@ -3241,8 +3259,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#kestrel" onclick="onNavClick(`#kestrel-nav`)" id="kestrel-nav">
-									Kestrel
+								<a href="#%e6%9c%8d%e5%8a%a1%e5%99%a8" onclick="onNavClick(`#服务器-nav`)" id="服务器-nav">
+									服务器
 								</a>
 							</li>
 						
@@ -4497,6 +4515,24 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
+								<a href="#%e8%ae%bf%e9%97%ae%e4%bf%ae%e9%a5%b0%e7%ac%a6" onclick="onNavClick(`#访问修饰符-nav`)" id="访问修饰符-nav">
+									访问修饰符
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
 								<a href="#%e6%b5%8f%e8%a7%88%e5%99%a8%e8%be%93%e5%85%a5%e7%bd%91%e5%9d%80enter%e4%b9%8b%e5%90%8e%e5%8f%91%e7%94%9f%e4%ba%86%e4%bb%80%e4%b9%88" onclick="onNavClick(`#浏览器输入网址enter之后发生了什么-nav`)" id="浏览器输入网址enter之后发生了什么-nav">
 									浏览器输入网址，Enter之后发生了什么？
 								</a>
@@ -4601,9 +4637,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            128 min
+                            131 min
                             
-                            34 s.
+                            17 s.
                         
                     </div>
                 </div>
@@ -4733,7 +4769,7 @@ struct 适用于作为经常使用的一些数据组合成的新类型。</p>
 <p>.Net BCL中常用的集合有Stack<!-- raw HTML omitted -->、Queue<!-- raw HTML omitted -->、LinkedList<!-- raw HTML omitted -->，对应的数据结构是栈、队列和链表。</p>
 <h3 id="抽象类和接口有什么区别使用时有什么需要注意的吗如何选择是定义一个完全抽象的抽象类还是接口什么是接口的显式实现为什么说它很重要">抽象类和接口有什么区别？使用时有什么需要注意的吗？如何选择是定义一个“完全抽象”的抽象类，还是接口？什么是接口的“显式实现”？为什么说它很重要？</h3>
 <p>抽象类不能实例化。
-抽象类的用途是提供多个派生类可共享的基类的公共定义。
+抽象类的用途是提供多个派生类可共享基类的公共定义。
 抽象类也可以定义抽象方法。
 抽象方法没有实现，所以方法定义后面是分号，而不是常规的方法块。
 抽象类的派生类必须实现所有抽象方法。
@@ -4838,7 +4874,8 @@ str1 is abc,str2 is ab
 <p>多了去了</p>
 <hr>
 <h2 id="面试题">面试题</h2>
-<h3 id="kestrel">Kestrel</h3>
+<h3 id="服务器">服务器</h3>
+<p><strong>Kestrel</strong></p>
 <p>Kestrel 是 ASP.NET Core 项目模板指定的默认 Web 服务器。</p>
 <p>以下部署方案中的 ASP.NET Core 支持 <a href="https://httpwg.org/specs/rfc7540.html">HTTP/2</a>：</p>
 <ul>
@@ -4874,6 +4911,10 @@ str1 is abc,str2 is ab
 </ul>
 </li>
 </ul>
+<p><strong>Apache</strong></p>
+<p><strong>Apache对每个请求都会创建一个进程</strong>, 因此请求越多，进程创建的也越多，<strong>那么整体网站的性能也就越低</strong>。这是因为每个进程都会占用一定的资源，当进程越来越多的时候，对于整个服务器的性能消耗都是一个很大的影响。当从外部境内的请求持续增长的时候，Apache服务器就会变得越来越慢，处理的越来越吃力了。因为处理的变慢了，就会导致有更多的请求积压下来，从而导致性能进一步降低。这就形成了<strong>恶性的循环</strong>。</p>
+<p><strong>Nginx</strong></p>
+<p>nginx是用另外一种方式来处理请求的。当请求处理达到一个峰值的时候，会要求这些请求等待，当<strong>有空间的时候再放进来</strong>。这就是<strong>基于事件为导向的处理方式</strong>。因为事件消耗的资源，要比进程消耗的资源小的多的多，所以nginx，在同等性能的条件下能够处理4倍于Apache服务器的请求。</p>
 <hr>
 <h3 id="集合类型和泛型">集合类型和泛型</h3>
 <h4 id="数组array">数组(Array)</h4>
@@ -5377,7 +5418,7 @@ StringBuilder.Replace   替换指定索引处的指定字符。
 <p>异步和同步是相对的，同步就是顺序执行，执行完一个再执行下一个，需要等待、协调运行。异步就是彼此独立,在等待某事件的过程中继续做自己的事，不需要等待这一事件完成后再工作。线程就是实现异步的一个方式。异步是让调用方法的主线程不需要同步等待另一线程的完成，从而可以让主线程干其它的事情。</p>
 <p>异步和多线程并不是一个同等关系,异步是最终目的,多线程只是我们实现异步的一种手段。异步是当一个调用请求发送给被调用者,而调用者不用等待其结果的返回而可以做其它的事情。实现异步可以采用多线程技术或则交给另外的进程来处理。</p>
 <p>异步和同步的区别， 在io等待的时候，同步不会切走，浪费了时间。</p>
-<p>多线程的好处，比较容易的实现了 异步切换的思想， 因为异步的程序很难写的。多线程本身程还是以同步完成，但是应该说比效率是比不上异步的。 而且多线很容易写， 相对效率也高。</p>
+<p>多线程的好处，比较容易的实现了异步切换的思想， 因为异步的程序很难写的。多线程本身程还是以同步完成，但是应该说比效率是比不上异步的。 而且多线很容易写， 相对效率也高。</p>
 <h5 id="异步原理">异步原理</h5>
 <p>await修饰的方法返回的是一个Task，而这个Task其实就是一个异步句柄，注册一个回调方法在异步操作完成后继续</p>
 <p>限制</p>
@@ -5612,13 +5653,21 @@ StringBuilder.Replace   替换指定索引处的指定字符。
 <h4 id="constreadonly">const/readonly</h4>
 <p><a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/readonly">readonly</a> 关键字与 <code>const</code> 关键字不同。 <code>const</code> 字段只能在该字段的声明中初始化。 字段可以在声明或构造函数中初始化。 因此，根据所使用的构造函数，<code>readonly</code> 字段可能具有不同的值。 另外，虽然 <code>const</code> 字段是编译时常量，但 <code>readonly</code> 字段可用于运行时常量。</p>
 <hr>
+<h3 id="访问修饰符">访问修饰符</h3>
+<p>public：同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。
+private：只有同一 class 或 struct 中的代码可以访问该类型或成员。
+protected：只有同一 class 或者从该 class 派生的 class 中的代码可以访问该类型或成员。
+internal：同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。
+protected internal：该类型或成员可由对其进行声明的程序集或另一程序集中的派生 class 中的任何代码访问。
+private protected：只有在其声明程序集内，通过相同 class 中的代码或派生自该 class 的类型，才能访问类型或成员。</p>
+<hr>
 <h3 id="浏览器输入网址enter之后发生了什么">浏览器输入网址，Enter之后发生了什么？</h3>
-<p>输入网址后DNS(域名解析协议)将网址转换成对应的IP,然后网络在路由表中查找最适合一条路由连接到对应的服务器ip，也就是刚刚转换的ip.此时，传输层tcp经过三次握手后简历连接,服务器收到http请求(get/post)等后，进行相应的处理并把结果数据返回到浏览器上,此时输入网址后对应的信息就会显示出来.</p>
+<p>输入网址后DNS(域名解析协议)将网址转换成对应的IP，然后网络在路由表中查找最适合一条路由连接到对应的服务器ip，也就是刚刚转换的ip。此时，传输层tcp经过三次握手后简历连接，服务器收到http请求(get/post)等后，进行相应的处理并把结果数据返回到浏览器上，此时输入网址后对应的信息就会显示出来。</p>
 
                     
                     <HR width="100%" id="EOF">
                     <p style="color:#777;">
-                        Last modified on 2020-08-15 16:57
+                        Last modified on 2020-11-12 17:34
                         &nbsp;
                         <span id="busuanzi_container_page_pv" style="color:#777;">
                             This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
