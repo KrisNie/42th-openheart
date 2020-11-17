@@ -6,9 +6,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Thu, 12 Nov 2020 15:58:21 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2020 16:55:11 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>处理器中的流水线技术</title>
+        <link>https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/</link>
+        <pubDate>Sat, 14 Nov 2020 16:55:11 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/ -&lt;h1 id=&#34;处理器中的流水线&#34;&gt;处理器中的流水线&lt;/h1&gt;
+&lt;p&gt;在现代处理器中，流水线是一个最基本的概念。在了解cpu的时候，很多时候会提及拥有多少级流水线。虽然这个概念并不是在计算机技术中诞生的，但是这个技术却在处理器世界中大放异彩。&lt;/p&gt;
+&lt;p&gt;流水线(Pipeline)技术是指程序在执行时候多条指令重叠进行操作的一种准并行处理实现技术。通俗的讲将一个时序过程，分解成若干个子过程，每个过程都能有效的与其他子过程同时执行。这种思想最初是在RISC的架构中出现的，旨在提高处理器处理效率，争取在一个时钟周期中完成一条指令。&lt;/p&gt;
+&lt;p&gt;最经典的当属MIPS(无内部互锁的流水线处理器)的五级流水线技术。MIPS体系结构本身就是为了流水线而设计的，cpu在高速缓存中运行，每条指令的执行过程都分成五级。每一级成为一个流水线阶段，每个阶段占用固定的时间，通常是一个时钟周期。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E4%BA%94%E7%BA%A7%E6%B5%81%E6%B0%B4%E7%BA%BF1365345053_3598.jpg&#34; alt=&#34;五级流水线&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上图是MIPS的五级流水线&lt;/p&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;IF(instruction fetch)&lt;/code&gt;：从指令高速缓存中获取下一条指令。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RD(Read register)&lt;/code&gt;：从指定的源寄存器域中指定的cpu寄存器中读取数据。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ALU(arithmetic/logic  unit)&lt;/code&gt;：算术和逻辑运算操作。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;MEM(memory R/W)&lt;/code&gt;：读写数据高速缓存中的内存变量。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WB(Write back)&lt;/code&gt;：将结果写入寄存器堆中。&lt;/p&gt;
+&lt;p&gt;很明显，如果只执行一条指令的话，流水线是不会提高效率的。但是如果要完成多条指令，利用流水线的并行原理，其实是可以提高几倍的处理速度。&lt;/p&gt;
+&lt;p&gt;由于流水线技术的高效性，后来所有的处理器都引进了该实现，当然包括x86的处理器，当年奔四号称20级的流水线结构。但是，是不是流水线级数越多越好呢？流水线级数越多，在处理多指令的时候确实也会越高效，但必然以高成本为代价，同时也会出现很多相关的一些副作用。&lt;/p&gt;
+&lt;p&gt;流水线的更多详细说明可以参阅更多书籍或者wiki。对于基础书籍推荐一下《&lt;em&gt;大话处理器&lt;/em&gt;》的部分章节。&lt;/p&gt;
+&lt;h1 id=&#34;处理器中的冒险&#34;&gt;处理器中的冒险&lt;/h1&gt;
+&lt;p&gt;流水线给处理器带来了效率，当然也有问题。称之为流水线冒险(HaZard)。&lt;/p&gt;
+&lt;h2 id=&#34;结构冒险&#34;&gt;结构冒险&lt;/h2&gt;
+&lt;p&gt;由于处理器资源冲突，而无法实现某些指令或者阶段的组合实现，就称之为处理器有结构冒险。&lt;/p&gt;
+&lt;p&gt;比如，早期的处理器中，程序和数据是存储在一起的，那么容易出现下图的情况：在第四个cycle中，IF和MEM同时访问存储器导致有一个操作要等待，此时hazard就出现了。现在的处理器已经解决了该问题：指令存储在L1P cache中，数据存储L1D cache中，单独访问，不会影响相互操作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E7%BB%93%E6%9E%84%E5%86%92%E9%99%A91365345110_7686.jpg&#34; alt=&#34;结构冒险&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据冒险&#34;&gt;数据冒险&lt;/h2&gt;
+&lt;p&gt;如果流水线中原来有先后顺序的指令同一时刻处理时，可能会导致出现访问了错误的数据的情况。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A91365345212_2478.jpg&#34; alt=&#34;数据冒险&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在汇编语句中，add R1,R2,R3 将寄存器R2和R3的和赋予R1，改变R1的值；而紧接着下面的语句：add R4,R1,R5则会使用R1的值，可是R1必须在第一条语句中的第5个cycle才能更新到寄存器中，语句二是在第4个cycle就要访问R1，也就是说第二,条指令此时在使用错误的R1的值。这是数据hazard出现了。&lt;/p&gt;
+&lt;p&gt;很容易就能想到一种方式解决：在两条指令中添加一条空指令：nop。但是会影响处理器的指令的执行效率。在现代处理器技术中，已经用forwarding的方式解决了。如下图，如果处理器在检测到当前指令的源操作数正好在流水线的EX或者MEM阶段，接直接将ex和mem寄存器的值传递给ALU的输入，而不是再从寄存器堆中获取数据了。因为此时寄存器堆中的数据可能是没有被及时更新的。&lt;/p&gt;
+&lt;p&gt;当然不仅在EX阶段有这种问题出现，在mem阶段也容易出现。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A91365345292_2683.jpg&#34; alt=&#34;解决数据冒险&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;控制冒险&#34;&gt;控制冒险&lt;/h2&gt;
+&lt;p&gt;在流水线中的的执行指令时，由于并行处理的关系，后面很多指令其实都在流水线中开始处理了，包括预取值和译码。那么，如果此时程序中出现一条跳转语句怎么办呢？因为程序已经跑到其他地址处执行，流水线中之前已经做好的预取值和译码动作都不能使用了。这些会被处理器的专有部件flush掉，重新开始新的流水线。此时我们可以称之为出现了控制hazard。这种情况对于程序和效率来说是存在很大损失的。&lt;/p&gt;
+&lt;p&gt;当然，我们也有解决方案，也就是在jump指令后面(不会被真正使用，但是会进入流水线)添加nop。在MIPS程序中，经常在jump指令后面添加nop语句。&lt;/p&gt;
+&lt;p&gt;在X86架构中，是通过硬件来实现flush，将无效的流水线排空，以保证正确运行流水线。这里会涉及到分支预测技术的使用。&lt;/p&gt;
+&lt;p&gt;在其他一些处理器中，用软件的方式来处理，添加nop。同时在编译器中通过乱序的思想用有效指令代替nop。这样也可以避免转跳带来的性能损失。&lt;/p&gt;
+- https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -87,48 +131,6 @@
 &lt;p&gt;如银联提供的付款接口：需要接入商户提交付款请求时附带：source来源，seq序列号；source+seq在数据库里面做唯一索引，防止多次付款(并发时，只能处理一个请求) 。
 重点：对外提供接口为了支持幂等调用，接口有两个字段必须传，一个是来源source，一个是来源方序列号seq，这个两个字段在提供方系统里面做联合唯一索引，这样当第三方调用时，先在本方系统里面查询一下，是否已经处理过，返回相应处理结果；没有处理过，进行相应处理，返回结果。注意，为了幂等友好，一定要先查询一下，是否处理过该笔业务，不查询直接插入业务系统，会报错，但实际已经处理了。&lt;/p&gt;
 - https://www.openheart.icu/cs/idempotent/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>正常人谁写日记啊！？</title>
-        <link>https://www.openheart.icu/boom/%E6%AD%A3%E5%B8%B8%E4%BA%BA%E4%B8%8D%E5%86%99%E6%97%A5%E8%AE%B0/</link>
-        <pubDate>Sun, 01 Nov 2020 19:55:40 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E6%AD%A3%E5%B8%B8%E4%BA%BA%E4%B8%8D%E5%86%99%E6%97%A5%E8%AE%B0/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E6%AD%A3%E5%B8%B8%E4%BA%BA%E4%B8%8D%E5%86%99%E6%97%A5%E8%AE%B0/ -&lt;h1 id=&#34;梦&#34;&gt;梦&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;2020.07.某天 WiFi没信号 不想睡觉&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;最近老是做光怪陆离乱七八糟的梦。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;可能晚上七点四十二分亮起的路灯只能照亮窄窄的草山岭南路……或许阁老山的土地老儿只想守着自己的一亩三分地不肯显灵……也许我忘了自己做了什么能让门被敲烂的亏心事……&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;五花八门的主要原因、次要原因，让凌晨三点梦魇格外嚣张跋扈。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;说实话，搁今天(2020-11-01)我看这篇日记，我都想不起当天三点我被啥梦吓醒了，反正梦魇必死就完了，也由此也可以看出——正常人谁写日记啊！？&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&#34;雨&#34;&gt;雨&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;Friday, October 16, 2020 14:28&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;武林的云彩下武林的雨，乐安的云彩下乐安的雨。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;雨后的空气中都有股土腥味，几近窒息的蚯蚓在小区积水里挣扎着，路沿石边踩水的小女孩儿在不合身的雨衣里挣扎着，忙碌的成年人拿着手机想不明白中午该吃啥，也挣扎着。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;不同的云彩用不同的雨把不同的城市画成相同的样子。我开始怀疑这些个云彩是不是被人复制粘贴出来的，它们带来的雨有的软绵绵有的强硬硬，但每个地方的雨后却如出一辙。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;站在雨后的武林街路口，我也挣扎着，我根本无法区分，我到底身处何处。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;真的，我感觉武林确实没啥特别的，我们(可能不包括永利君)私下觉得这武林就是个小乐安罢了。要硬说武林和泉城琴岛之类的鲁省大城有啥不同，那我只能说嘿，您猜怎么着，这武林市天天推着小孩儿子逛街的年轻妈妈们可真不少！希望这些小孩儿子将来都会是真真正正的主人儿翁。&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&#34;医院&#34;&gt;医院&lt;/h1&gt;
-&lt;p&gt;Sunday, October 19, 2020 19:11&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;说起来也巧，永利君住的小区对面是浙江大学医学院附属儿童医院；我朋张住的小区旁边是复旦大学附属华山医院伽马分院。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;那有机会我一定要住在香港的青山医院的旁边，兜售我家自种的无花果。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;好马配好鞍，好船配好帆，青山旁边我来住，看似交流病情，实则妙手回春，果到病除！&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&#34;又雨&#34;&gt;又雨&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;Sunday, November 1, 2020 18:17&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;在魔都待了正好半个月(一事无成！！！)，期间下过一场小雨，那天早上(九点多)我朋张一起床就问我有没有带伞来……&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;今日一整天今天一整日，半个闵行和半个徐汇的天和泉城一样雾霾霾的。果不然，刚咽下最后一口可乐，就稍微听到雨打空调外机的声音了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;也是刚刚雨下，空气还没有土腥味，只有对面二幢不知几楼炸咸鱼的腥香味；&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;也是刚刚雨停，西边的天也没有惊雷，只有莘庄立交上车水马龙的嘈杂。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;总结这三场非鲁省的雨，还是和我一样，太弱了，就连绵不断的下着，街上有人打伞也有人没打伞。这雨不把人淋透，也不让人干燥，每个人都是潮湿湿的。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;鲁省的雨却雷厉风行刚强有力——你伸出手如果第一滴雨落在你食指的第二关节，那第二三四五……便倾盆而至，砸得你脑壳疼，吓得你寒毛立。但去也匆匆，你还没跑到东边最近的屋檐下，它也就停了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;那有人就要问了，‘聂哥聂哥，那哪儿的雨你更喜欢啊？’这我只能说，‘我带伞时下的那种雨，我最爱。’&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;祝大家和我带伞必下雨，下雨必带伞！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;看上去每个人(暂时不包括我)都有光明的未来，那我也不废话了，下楼买打草纸咯！&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;2020.11.1 于魔都 阴转毛毛细雨 刚才雨停了，现在又又雨了&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E6%AD%A3%E5%B8%B8%E4%BA%BA%E4%B8%8D%E5%86%99%E6%97%A5%E8%AE%B0/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

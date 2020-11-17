@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Tags</title>
+<title>处理器中的流水线技术</title>
 
 
 
@@ -10,25 +10,26 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+<meta name="description" content="Pipeline">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content="Tags" />
-<meta property="og:description" content="My HomePage Description" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.openheart.icu/tags/" />
-<meta property="og:updated_time" content="2020-11-14T16:55:11+00:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:title" content="处理器中的流水线技术" />
+<meta property="og:description" content="Pipeline" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/" />
+<meta property="article:published_time" content="2020-11-14T16:55:11+00:00" />
+<meta property="article:modified_time" content="2020-11-14T16:55:11+00:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="My HomePage Description"/>
+<meta name="twitter:title" content="处理器中的流水线技术"/>
+<meta name="twitter:description" content="Pipeline"/>
 
 
 
@@ -68,7 +69,30 @@
 
 
 
+  
+    <script src="https://www.openheart.icu//js/toc-collapse.js"></script>
 
+  
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'Hyominn',
+  admin: ['Hyominn'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
 
 
 
@@ -108,9 +132,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/cs">
+            
+            <a class="a-block nav-link-item active" href="/cs">
                 ComputerScience
             </a>
             
@@ -148,11 +174,9 @@
             
             
             
-                
             
             
-            
-            <a class="a-block nav-link-item active" href="/tags">
+            <a class="a-block nav-link-item false" href="/tags">
                 Tags
             </a>
             
@@ -195,6 +219,118 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%ad%e7%9a%84%e6%b5%81%e6%b0%b4%e7%ba%bf" onclick="onNavClick(`#处理器中的流水线-nav`)" id="处理器中的流水线-nav">
+									处理器中的流水线
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%ad%e7%9a%84%e5%86%92%e9%99%a9" onclick="onNavClick(`#处理器中的冒险-nav`)" id="处理器中的冒险-nav">
+									处理器中的冒险
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e7%bb%93%e6%9e%84%e5%86%92%e9%99%a9" onclick="onNavClick(`#结构冒险-nav`)" id="结构冒险-nav">
+									结构冒险
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%b0%e6%8d%ae%e5%86%92%e9%99%a9" onclick="onNavClick(`#数据冒险-nav`)" id="数据冒险-nav">
+									数据冒险
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8e%a7%e5%88%b6%e5%86%92%e9%99%a9" onclick="onNavClick(`#控制冒险-nav`)" id="控制冒险-nav">
+									控制冒险
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -210,24 +346,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 brightness_7
             </i>
         </a>
-        
-        
-        
-            <div class="pagination-indicator">
-                <span style="text-align: center">
-                    1<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>2
-                </span>
-            </div>
-            
-            
-
-            
-            <a class="pagination-action" href="/tags/page/2/">
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
-            
         
         
     </div>
@@ -251,9 +369,11 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/cs">
+                
+                <a class="a-block drawer-menu-item active" href="/cs">
                     ComputerScience
                 </a>
                 
@@ -291,15 +411,125 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 
                 
-                    
                 
                 
-                
-                <a class="a-block drawer-menu-item active" href="/tags">
+                <a class="a-block drawer-menu-item false" href="/tags">
                     Tags
                 </a>
                 
             
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%ad%e7%9a%84%e6%b5%81%e6%b0%b4%e7%ba%bf" onclick="onNavClick(`#处理器中的流水线-nav`)" id="处理器中的流水线-nav">
+									处理器中的流水线
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%ad%e7%9a%84%e5%86%92%e9%99%a9" onclick="onNavClick(`#处理器中的冒险-nav`)" id="处理器中的冒险-nav">
+									处理器中的冒险
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e7%bb%93%e6%9e%84%e5%86%92%e9%99%a9" onclick="onNavClick(`#结构冒险-nav`)" id="结构冒险-nav">
+									结构冒险
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%b0%e6%8d%ae%e5%86%92%e9%99%a9" onclick="onNavClick(`#数据冒险-nav`)" id="数据冒险-nav">
+									数据冒险
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8e%a7%e5%88%b6%e5%86%92%e9%99%a9" onclick="onNavClick(`#控制冒险-nav`)" id="控制冒险-nav">
+									控制冒险
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
             
         </div>
     </div>
@@ -345,170 +575,141 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <a class="a-block">
-            <div class="post-item-wrapper post-item-wrapper-no-hover">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title post-item-title-small">
-                            Tags
-                        </div>
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    处理器中的流水线技术
+                    
+                    <div class="post-subtitle">
+                        Pipeline
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-11-14 16:55
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/operation">Operation</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            8 min
+                            
+                            0 s.
+                        
                     </div>
                 </div>
             </div>
-        </a>
-        
-        
-                <a href="https://www.openheart.icu/tags/operation/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Operation
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="处理器中的流水线">处理器中的流水线</h1>
+<p>在现代处理器中，流水线是一个最基本的概念。在了解cpu的时候，很多时候会提及拥有多少级流水线。虽然这个概念并不是在计算机技术中诞生的，但是这个技术却在处理器世界中大放异彩。</p>
+<p>流水线(Pipeline)技术是指程序在执行时候多条指令重叠进行操作的一种准并行处理实现技术。通俗的讲将一个时序过程，分解成若干个子过程，每个过程都能有效的与其他子过程同时执行。这种思想最初是在RISC的架构中出现的，旨在提高处理器处理效率，争取在一个时钟周期中完成一条指令。</p>
+<p>最经典的当属MIPS(无内部互锁的流水线处理器)的五级流水线技术。MIPS体系结构本身就是为了流水线而设计的，cpu在高速缓存中运行，每条指令的执行过程都分成五级。每一级成为一个流水线阶段，每个阶段占用固定的时间，通常是一个时钟周期。</p>
+<p><img src="/image/%E4%BA%94%E7%BA%A7%E6%B5%81%E6%B0%B4%E7%BA%BF1365345053_3598.jpg" alt="五级流水线"></p>
+<p>上图是MIPS的五级流水线</p>
+<p>其中：</p>
+<p><code>IF(instruction fetch)</code>：从指令高速缓存中获取下一条指令。</p>
+<p><code>RD(Read register)</code>：从指定的源寄存器域中指定的cpu寄存器中读取数据。</p>
+<p><code>ALU(arithmetic/logic  unit)</code>：算术和逻辑运算操作。</p>
+<p><code>MEM(memory R/W)</code>：读写数据高速缓存中的内存变量。</p>
+<p><code>WB(Write back)</code>：将结果写入寄存器堆中。</p>
+<p>很明显，如果只执行一条指令的话，流水线是不会提高效率的。但是如果要完成多条指令，利用流水线的并行原理，其实是可以提高几倍的处理速度。</p>
+<p>由于流水线技术的高效性，后来所有的处理器都引进了该实现，当然包括x86的处理器，当年奔四号称20级的流水线结构。但是，是不是流水线级数越多越好呢？流水线级数越多，在处理多指令的时候确实也会越高效，但必然以高成本为代价，同时也会出现很多相关的一些副作用。</p>
+<p>流水线的更多详细说明可以参阅更多书籍或者wiki。对于基础书籍推荐一下《<em>大话处理器</em>》的部分章节。</p>
+<h1 id="处理器中的冒险">处理器中的冒险</h1>
+<p>流水线给处理器带来了效率，当然也有问题。称之为流水线冒险(HaZard)。</p>
+<h2 id="结构冒险">结构冒险</h2>
+<p>由于处理器资源冲突，而无法实现某些指令或者阶段的组合实现，就称之为处理器有结构冒险。</p>
+<p>比如，早期的处理器中，程序和数据是存储在一起的，那么容易出现下图的情况：在第四个cycle中，IF和MEM同时访问存储器导致有一个操作要等待，此时hazard就出现了。现在的处理器已经解决了该问题：指令存储在L1P cache中，数据存储L1D cache中，单独访问，不会影响相互操作。</p>
+<p><img src="/image/%E7%BB%93%E6%9E%84%E5%86%92%E9%99%A91365345110_7686.jpg" alt="结构冒险"></p>
+<h2 id="数据冒险">数据冒险</h2>
+<p>如果流水线中原来有先后顺序的指令同一时刻处理时，可能会导致出现访问了错误的数据的情况。</p>
+<p><img src="/image/%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A91365345212_2478.jpg" alt="数据冒险"></p>
+<p>在汇编语句中，add R1,R2,R3 将寄存器R2和R3的和赋予R1，改变R1的值；而紧接着下面的语句：add R4,R1,R5则会使用R1的值，可是R1必须在第一条语句中的第5个cycle才能更新到寄存器中，语句二是在第4个cycle就要访问R1，也就是说第二,条指令此时在使用错误的R1的值。这是数据hazard出现了。</p>
+<p>很容易就能想到一种方式解决：在两条指令中添加一条空指令：nop。但是会影响处理器的指令的执行效率。在现代处理器技术中，已经用forwarding的方式解决了。如下图，如果处理器在检测到当前指令的源操作数正好在流水线的EX或者MEM阶段，接直接将ex和mem寄存器的值传递给ALU的输入，而不是再从寄存器堆中获取数据了。因为此时寄存器堆中的数据可能是没有被及时更新的。</p>
+<p>当然不仅在EX阶段有这种问题出现，在mem阶段也容易出现。</p>
+<p><img src="/image/%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A91365345292_2683.jpg" alt="解决数据冒险"></p>
+<h2 id="控制冒险">控制冒险</h2>
+<p>在流水线中的的执行指令时，由于并行处理的关系，后面很多指令其实都在流水线中开始处理了，包括预取值和译码。那么，如果此时程序中出现一条跳转语句怎么办呢？因为程序已经跑到其他地址处执行，流水线中之前已经做好的预取值和译码动作都不能使用了。这些会被处理器的专有部件flush掉，重新开始新的流水线。此时我们可以称之为出现了控制hazard。这种情况对于程序和效率来说是存在很大损失的。</p>
+<p>当然，我们也有解决方案，也就是在jump指令后面(不会被真正使用，但是会进入流水线)添加nop。在MIPS程序中，经常在jump指令后面添加nop语句。</p>
+<p>在X86架构中，是通过硬件来实现flush，将无效的流水线排空，以保证正确运行流水线。这里会涉及到分支预测技术的使用。</p>
+<p>在其他一些处理器中，用软件的方式来处理，添加nop。同时在编译器中通过乱序的思想用有效指令代替nop。这样也可以避免转跳带来的性能损失。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">
+                        Last modified on 2020-11-14 16:55
+                        &nbsp;
+                        <span id="busuanzi_container_page_pv" style="color:#777;">
+                            This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
+                        </span>
+                    </p>
+                    
+                </div>
+
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
                 </a>
-        
-                <a href="https://www.openheart.icu/tags/sql/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    SQL
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/cs/idempotent/">
+			Previous<br>Idempotent
                 </a>
-        
-                <a href="https://www.openheart.icu/tags/.net/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    .NET
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://www.openheart.icu/tags/arithmetic/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Arithmetic
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://www.openheart.icu/tags/cs/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    CS
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://www.openheart.icu/tags/data-structure/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Data Structure
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://www.openheart.icu/tags/interview/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Interview
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://www.openheart.icu/tags/java/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Java
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://www.openheart.icu/tags/translation/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Translation
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://www.openheart.icu/tags/web/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Web
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-    </div>
-</div>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
 
 
             </div>
-
-<div class="pagination">
-    
-    <a class="pagination-action" style="opacity:0">
-    
-        <i class="material-icons pagination-action-icon">
-            chevron_left
-        </i>
-    </a>
-
-        <div class="pagination-indicator">
-            <span>1/2</span>
         </div>
-
-        
-        <a class="pagination-action" href="/tags/page/2/"
-           style="opacity:1">
-        
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
+    </div>
 </div>
 
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 	
 	<i class="fa fa-weixin" aria-hidden="true"></i>
 	Case42
