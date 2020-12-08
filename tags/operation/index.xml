@@ -65,19 +65,6 @@ WB(Write back)：将结果写入寄存器堆中。
     </item>
     
     <item>
-      <title>.Net Issue</title>
-      <link>https://www.openheart.icu/cs/dot-net-issue/</link>
-      <pubDate>Fri, 31 Jul 2020 22:59:51 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
-      <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
- Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
- 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
-Note that run time is not included in this list by default. To change this behaviour:
- Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services .</description>
-    </item>
-    
-    <item>
       <title>URL</title>
       <link>https://www.openheart.icu/cs/url/</link>
       <pubDate>Wed, 22 Jul 2020 20:28:00 +0000</pubDate>

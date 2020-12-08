@@ -6,9 +6,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 14 Nov 2020 16:55:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2020 22:30:12 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Adaptive Code</title>
+        <link>https://www.openheart.icu/cs/adaptive-code/</link>
+        <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/adaptive-code/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/adaptive-code/ -&lt;h1 id=&#34;adaptive-code-agile-coding-with-design-patterns-and-solid-principleshttpsgithubcomadaptivecode&#34;&gt;&lt;a href=&#34;https://github.com/AdaptiveCode&#34;&gt;Adaptive Code: Agile coding with design patterns and SOLID principles&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;从标题中就不难发现，Adaptive Code的重点有三个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;敏捷编码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设计模式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SOLID(单一功能、开闭原则、里氏替换、接口隔离以及依赖反转)原理&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;scrum&#34;&gt;Scrum&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.scrum.org/resources/what-is-scrum&#34;&gt;scrum.org&lt;/a&gt;  2020-Scrum-Guide-US&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Scrum is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lightweight&lt;/li&gt;
+&lt;li&gt;Simple to understand&lt;/li&gt;
+&lt;li&gt;Difficult to master&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;what&#34;&gt;What&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All work is prioritized on the product backlog and, at the start of each sprint, the development team commits to the work that they will complete during the new iteration by placing it on the sprint backlog. The unit of work within Scrum is the &lt;strong&gt;story&lt;/strong&gt;. The product backlog is a prioritized queue of pending stories, and each sprint is defined by the stories that will be developed during an iteration.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之前公司也是采用的这种开发框架，将一个项目分为多个迭代（sprint），但是此处引出了一个之前没听过的story。Story在后续Hierarchy of composition中也提到并详细介绍，此处的story可以就相当于是产品积压项，Story下可以有确定的Task（一个Story需要多个人完成，每个人都有自己的任务）。&lt;/p&gt;
+&lt;h4 id=&#34;agile-software-development-敏捷软件开发与scrum&#34;&gt;Agile software development (敏捷软件开发)与Scrum&lt;/h4&gt;
+&lt;p&gt;Scrum is one of the most common implementations of an Agile process.&lt;/p&gt;
+&lt;h4 id=&#34;roles-and-responsibilities&#34;&gt;Roles and responsibilities&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Product owner&lt;/strong&gt;(PO, provides the link between the client or customer and the rest of the development team, &lt;strong&gt;what is to be done&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Scrum master&lt;/strong&gt;(SM, shields the team from any external distractions during the sprint and tackles any of the impediments that the team flags during the daily Scrum meeting, &lt;strong&gt;how it is to be done&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Development team&lt;/strong&gt;(generalizing specialists)&lt;/p&gt;
+&lt;h3 id=&#34;why&#34;&gt;Why&lt;/h3&gt;
+&lt;h4 id=&#34;cynefin-framework&#34;&gt;Cynefin framework&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lean, or Agile, approaches to software acknowledge that the problem of software delivery is at least complicated and can even be complex.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;敏捷开发或精益求精的软件，才能保证在Cynefin的第一或第二象限，避免进入Chaos或者all is not quite as it seems(一切都不尽如人意)的Obvious。我的理解是，Chaos就是毫无头绪；而Obvious就是传统的瀑布式开发，难以适应复杂的需求或者频繁的需求变更。&lt;/p&gt;
+&lt;h4 id=&#34;scrum-versus-waterfall&#34;&gt;Scrum versus waterfall&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;waterfall&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the output from one stage becomes the input to the next&lt;/li&gt;
+&lt;li&gt;each phase is completed before moving to the next phase&lt;/li&gt;
+&lt;li&gt;no errors, issues, problems, or m standings are discovered after a phase has completed&lt;/li&gt;
+&lt;li&gt;document-centric, generating a lot of documentation that does not directly improve the software product&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Agile processes：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;welcomes change and allows everyone to adapt to the changes that will occur&lt;/li&gt;
+&lt;li&gt;This is not to say that documentation is unimportant or that Agile processes never produce documentation(living documents, such as wikis)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;how&#34;&gt;How&lt;/h3&gt;
+&lt;p&gt;本章开始就提出如下问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Given that Agile frameworks are now prevalent, how can you ensure that the code you write enables and complements your development framework?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这肯定也是我们所关注的重中之重。&lt;/p&gt;
+- https://www.openheart.icu/cs/adaptive-code/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -136,133 +206,12 @@
     
     
         <item>
-        <title>SQLserver</title>
-        <link>https://www.openheart.icu/cs/sqlserver/</link>
-        <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
+        <title>Dependency Injection</title>
+        <link>https://www.openheart.icu/cs/dependency-injection/</link>
+        <pubDate>Thu, 15 Oct 2020 23:28:00 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/cs/sqlserver/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/sqlserver/ -&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
-&lt;h2 id=&#34;index&#34;&gt;Index&lt;/h2&gt;
-&lt;h3 id=&#34;聚集索引&#34;&gt;聚集索引&lt;/h3&gt;
-&lt;h3 id=&#34;非聚集索引&#34;&gt;非聚集索引&lt;/h3&gt;
-- https://www.openheart.icu/cs/sqlserver/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>.Net Issue</title>
-        <link>https://www.openheart.icu/cs/dot-net-issue/</link>
-        <pubDate>Fri, 31 Jul 2020 22:59:51 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/dot-net-issue/ -&lt;h1 id=&#34;hot-reload-razor-views&#34;&gt;Hot-Reload Razor Views&lt;/h1&gt;
-&lt;p&gt;在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（&lt;em&gt;it&amp;rsquo;s fundamentally how ASP.NET MVC Core works&lt;/em&gt;）。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Razor files are compiled at both &lt;strong&gt;build&lt;/strong&gt; and &lt;strong&gt;publish&lt;/strong&gt; time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用&lt;strong&gt;运行时编译&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note that run time is not included in this list by default.&lt;/strong&gt; To change this behaviour:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Add the Nuget package &lt;a href=&#34;https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/&#34;&gt;&lt;code&gt;Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Change your &lt;code&gt;Startup.ConfigureServices&lt;/code&gt; code to include runtime compilation:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; ConfigureServices(IServiceCollection services)
-{
-  services
-    .AddControllersWithViews()
-    .AddRazorRuntimeCompilation();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/58300922/how-to-enable-the-view-hot-reloading-in-rider&#34;&gt;How to enable the view hot-reloading in Rider? &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/zh-cn/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0&amp;amp;tabs=visual-studio#runtime-compilation&#34;&gt;Razor file compilation in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;watch-out-project-on-rider&#34;&gt;Watch out Project On Rider&lt;/h1&gt;
-&lt;p&gt;To let Project hot-reload, we can use the &amp;ldquo;Before launch&amp;rdquo; option as a run configuration to make this happen. To do so:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Select Run -&amp;gt; Edit Configuration from the menu options&lt;/li&gt;
-&lt;li&gt;Add a new &lt;code&gt;Before launch&lt;/code&gt;Click the + icon and select the &amp;ldquo;Run Executnal Tool &amp;quot; option from the list&lt;/li&gt;
-&lt;li&gt;In the options that are displayed, provide the following&amp;hellip;
-&lt;ul&gt;
-&lt;li&gt;Name: Watch (or whatever you prefer)&lt;/li&gt;
-&lt;li&gt;Exe path: /usr/local/share/dotnet/dotnet&lt;/li&gt;
-&lt;li&gt;Program Arguments: watch run&lt;/li&gt;
-&lt;li&gt;Working directory: [path to your project where .csproj file resides]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Click &amp;ldquo;OK&amp;rdquo; to apply/save the changes.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;reference-1&#34;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/46349038/jetbrains-rider-run-with-watch&#34;&gt;JetBrains Rider run with watch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;newguid&#34;&gt;NewGuid()&lt;/h1&gt;
-&lt;h2 id=&#34;guid&#34;&gt;GUID&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;全局唯一标识符&lt;/strong&gt;（Globally Unique &lt;strong&gt;Id&lt;/strong&gt;entifier，缩写：&lt;strong&gt;GUID&lt;/strong&gt;；发音为/ˈɡuːɪd/或/ˈɡwɪd/）是一种由&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%AE%97%E6%B3%95&#34;&gt;算法&lt;/a&gt;生成的唯一标识，通常表示成32个16进制数字（0－9，A－F）组成的字符串，如：&lt;code&gt;{21EC2020-3AEA-1069-A2DD-08002B30309D}&lt;/code&gt;，它实质上是一个128位长的二进制整数。GUID一词有时也专指微软对UUID标准的实现。&lt;/p&gt;
-&lt;p&gt;GUID的主要目的是产生完全唯一的数字。在理想情况下，任何计算机和计算机集群都不会生成两个相同的GUID。GUID的总数也足够大，达到了2128（3.4×1038）个，所以随机生成两个相同GUID的可能性是非常小的，但并不为0。所以，用于生成GUID的算法通常都加入了非随机的参数（时间），以保证这种重复的情况不会发生。&lt;/p&gt;
-&lt;p&gt;GUID 主要用于在拥有多个节点、多台计算机的网络或系统中，分配必须具有唯一性的标识符。在 Windows 平台上，GUID 应用非常广泛：注册表、类及接口标识、数据库、甚至自动生成的机器名、目录名等。&lt;/p&gt;
-&lt;p&gt;与自增长id相比较：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;优点&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;GUID&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;1. GUID过长，看表现形式，至少都有32位，长的38位，浪费存储空间 2. GUID是根据硬件设备相关ID以及时间戳生成的 3. GUID不利于检索、外键关联&lt;/td&gt;
-&lt;td&gt;1. 一般来说不担心有冲突的影响，而且，根据GUID的生成规则，还能大致知道生成的计算机硬件设备、时间等信息（但这个有多少意义呢）2. 能在业务层就知道目标ID，而不是数据提交给数据库系统后才确定&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;自增长&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;1. 多数据库同步、读写分离十分不方便。&lt;/td&gt;
-&lt;td&gt;1. 使用简单&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;systemguidnewguidtostring&#34;&gt;System.Guid.NewGuid().ToString()&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Guid.NewGuid()是指生成唯一码的规则&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;systemguidnewguidtostringformat&#34;&gt;System.Guid.NewGuid().ToString(format)&lt;/h3&gt;
-&lt;p&gt;说明符 返回值的格式&lt;/p&gt;
-&lt;p&gt;N 32 位字符：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/p&gt;
-&lt;p&gt;D 由连字符分隔的 32 位数字：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&lt;/p&gt;
-&lt;p&gt;B 括在大括号中、由连字符分隔的 32 位数字：{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}&lt;/p&gt;
-&lt;p&gt;P 括在圆括号中、由连字符分隔的 32 位数字：(xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString()		  : 1f13a943-4c7e-4bfc-aac5-935886591424&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;N&amp;rdquo;)	: 3a81013f9ee549b38f11ee3d50f5bd78&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;D&amp;rdquo;)	: c4219375-c2c8-4639-86e8-8d910ed12186 &amp;ndash; 默认为：D&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;B&amp;rdquo;)	: {a793927d-9a1b-4d25-9562-0a59522db9c0}&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;P&amp;rdquo;)	: (a99839b9-da94-40fd-87a5-4a5e73677b1f)&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;X&amp;rdquo;)	: {0xb294a44e,0x43d9,0x4b60,{0xb5,0xb9,0x32,0x29,0xae,0x46,0x45,0x17}}&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;如果在程序中使用&lt;strong&gt;D&lt;/strong&gt;，则需要注意数据库字段长应为&lt;code&gt;36&lt;/code&gt;而不是32&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;model--entity--dto--viewmodel&#34;&gt;model &amp;amp; entity &amp;amp; dto &amp;amp; viewmodel&lt;/h1&gt;
-&lt;h2 id=&#34;model&#34;&gt;model&lt;/h2&gt;
-&lt;p&gt;model是一个模型，里面装了各种数据，将一个model传递给view，在试图页面就可以使用model里面的数据来呈现到页面上。&lt;/p&gt;
-&lt;h2 id=&#34;entity&#34;&gt;entity&lt;/h2&gt;
-&lt;p&gt;entity是实体，就是和数据表一一对应的，一个实体一张表&lt;/p&gt;
-&lt;p&gt;官方的demo没有entity这个说法，他只有model，model就是表，也是传递给view的model，就是说他的model即是model又是entity。而我们实际运用需要将model分成ViewModel和Entity，甚至还要加入Dto。&lt;/p&gt;
-&lt;h2 id=&#34;viewmodel&#34;&gt;viewmodel&lt;/h2&gt;
-&lt;p&gt;MSDOC详细介绍页面直接返回一个model，这个model就是表中的一条数据。但是在我们实际建站需求中页面上怎么可能只需要一条数据就完了，很多时候还需要其他的数据。比如一个&lt;code&gt;List&amp;lt;entity&amp;gt;&lt;/code&gt;，此时就需要使用ViewModel。&lt;/p&gt;
-&lt;h2 id=&#34;dtodata-transfer-object&#34;&gt;dto(Data transfer object)&lt;/h2&gt;
-&lt;p&gt;entity里包含的是表所有的字段，但在实际应用的时候我们可能不会使用到所有的字段，可能只需要一个名称和编号即可，所以就需要使用dto（数据传输对象）。此时ViewModel就可以使用&lt;code&gt;List&amp;lt;dto&amp;gt;&lt;/code&gt;返回我们部分数据而不是整个表数据。&lt;/p&gt;
-&lt;h2 id=&#34;final&#34;&gt;Final&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们可以花一部分精力去考虑这方面问题，但也不用纠结太多，头大且对项目也没太大帮助。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-2&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/194493331&#34;&gt;什么时候用Model，什么时候用Entity？ - 虚若影的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/30290376&#34;&gt;什么时候用Model，什么时候用Entity？ - 赵劼的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;dependency-injection&#34;&gt;Dependency Injection&lt;/h1&gt;
+        <guid>https://www.openheart.icu/cs/dependency-injection/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/dependency-injection/ -&lt;h1 id=&#34;dependency-injection&#34;&gt;Dependency Injection&lt;/h1&gt;
 &lt;h2 id=&#34;ioc&#34;&gt;IOC&lt;/h2&gt;
 &lt;p&gt;Spring 框架为Java提供了IOC（Inversion of Control），只是提供了一个服务容器，程序控制我们需要的对象，而不是在使用对象时我们亲自直接控制。既然提到了IOC就详细了解一下这种设计思想：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Coupling-20200808133032885.png&#34; alt=&#34;Coupling-20200808133032885.png&#34;&gt;&lt;/p&gt;
@@ -391,7 +340,7 @@
 &lt;li&gt;Scoped 对象在请求中是相同的，但在不同的请求中是不同的。&lt;/li&gt;
 &lt;li&gt;Singleton 对象对于每个对象和每个请求都是一样的（不管&lt;code&gt;ConfigureServices&lt;/code&gt;中是否提供一个实例）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;reference-3&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC%E5%8E%9F%E5%88%99&#34;&gt;依赖反转原则&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/07af9dbbbc4b&#34;&gt;控制反转（IOC）与依赖注入（DI）&lt;/a&gt;&lt;/li&gt;
@@ -400,156 +349,22 @@
 &lt;li&gt;&lt;a href=&#34;https://flylib.com/books/en/4.444.1.71/1/&#34;&gt;A Simple DIP Example&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1&#34;&gt;Dependency injection in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;iviewlocationexpander&#34;&gt;IViewLocationExpander&lt;/h1&gt;
-&lt;p&gt;实现&lt;code&gt;IViewLocationExpander&lt;/code&gt;接口，&lt;code&gt;location&lt;/code&gt;为build时程序检查的views层路径&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;ViewLocationExpander&lt;/span&gt;: IViewLocationExpander
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IEnumerable&amp;lt;String&amp;gt; ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable&amp;lt;String&amp;gt; locations)
-  {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (RazorViewEngine.GetNormalizedRouteValue(context.ActionContext, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;area&amp;#34;&lt;/span&gt;) != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-    {
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[]
-      {
-        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{2}/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{2}/{1}/{0}.cshtml&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;
-      };
-    }
-
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[]
-    {
-      &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{1}/{0}.cshtml&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;
-    };
-  }
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; PopulateValues(ViewLocationExpanderContext context)
-  {
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在Startup注册我们的implement&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;services.AddMvc()
-  .AddRazorOptions(options =&amp;gt; options.ViewLocationExpanders.Add(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; ViewLocationExpander()));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference-4&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.c-sharpcorner.com/article/expanding-razor-view-location-and-sub-areas-in-asp-net-core/&#34;&gt;Expanding Razor View Location And Sub Areas In ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/NonFactors/AspNetCore.Template/blob/378d64f6900f0cc95eee921b5caf81d2bc9efc11/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&#34;&gt;AspNetCore.Template/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;error-the-database-provider-attempted-to-register-an-implementation&#34;&gt;Error: The database provider attempted to register an implementation&amp;hellip;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The database provider attempted to register an implementation of the &amp;lsquo;IRelationalTypeMappingSource&amp;rsquo; service. This is not a service defined by EF and as such must be registered as a provider-specific service using the &amp;lsquo;TryAddProviderSpecificServices&amp;rsquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;检查一下EF版本！！！&lt;/p&gt;
-&lt;p&gt;You are mixing different versions of EF Core!!!&lt;/p&gt;
-&lt;h2 id=&#34;reference-5&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/npgsql/efcore.pg/issues/1441&#34;&gt;Cannot register IRelationalTypeMappingSource #1441&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;c编程规范&#34;&gt;C#编程规范&lt;/h1&gt;
-&lt;h2 id=&#34;命名规范&#34;&gt;命名规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】代码中的命名均不能以&lt;code&gt;下划线或美元符号&lt;/code&gt;开始，也不能以下划线或美元符号结束。&lt;/li&gt;
-&lt;li&gt;【强制】代码中的命名&lt;code&gt;严禁使用拼音与英文混合&lt;/code&gt;的方式，更不允许直接使用中文的方式。&lt;/li&gt;
-&lt;li&gt;【强制】&lt;code&gt;类名&lt;/code&gt;，&lt;code&gt;方法名&lt;/code&gt;，&lt;code&gt;属性&lt;/code&gt;，&lt;code&gt;枚举名&lt;/code&gt;，&lt;code&gt;接口名&lt;/code&gt;，&lt;code&gt;委托&lt;/code&gt;，&lt;code&gt;事件&lt;/code&gt;，&lt;code&gt;命名空间&lt;/code&gt;，使用&lt;code&gt;UpperCamelCase&lt;/code&gt;风格，必须遵从驼峰形式。通用缩写除外，如BO&lt;/li&gt;
-&lt;li&gt;【强制】&lt;code&gt;参数名&lt;/code&gt;、&lt;code&gt;成员变量&lt;/code&gt;、&lt;code&gt;局部变量&lt;/code&gt;都统一使用&lt;code&gt;lowerCamelCase&lt;/code&gt; 风格，必须遵从驼峰形式。如&lt;code&gt;localValue&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;【强制】常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。如&lt;code&gt;MAX_STOCK_COUNT&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;【强制】抽象类命名使用&lt;code&gt;Abstract&lt;/code&gt;或&lt;code&gt;Base&lt;/code&gt;开头；异常类命名使用&lt;code&gt;Exception&lt;/code&gt;结尾；测试类命名以它要测试的类的名称开始，以&lt;code&gt;Test&lt;/code&gt; 结尾。&lt;/li&gt;
-&lt;li&gt;【强制】杜绝完全不规范的缩写，避免望文不知义。&lt;code&gt;AbstractClass&lt;/code&gt;缩写命名成&lt;code&gt;AbsClass&lt;/code&gt;；&lt;code&gt;condition&lt;/code&gt;缩写命名成&lt;code&gt;condi&lt;/code&gt;，此类随意缩写严重降低了代码的可阅读性。&lt;/li&gt;
-&lt;li&gt;【推荐】如果使用到了设计模式，建议在类名中体现出具体模式。如&lt;code&gt;public class OrderFactory&lt;/code&gt;;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;格式规范&#34;&gt;格式规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】大括号的使用约定。如果是大括号内为空，则简洁地写成&lt;code&gt;{}&lt;/code&gt;即可，不需要换行；如果是非空代码块则两个半括号都另起一行和类首对齐。&lt;/li&gt;
-&lt;li&gt;【强制】左小括号和右边相邻字符之间不出现空格；同样，右小括号和左边相邻字符之间也不出现空格。&lt;/li&gt;
-&lt;li&gt;【强制】&lt;code&gt;if/for/while/switch/do&lt;/code&gt;等保留字与小括号之间都必须加空格。&lt;/li&gt;
-&lt;li&gt;【强制】任何运算符左右必须加一个空格。&lt;/li&gt;
-&lt;li&gt;【强制】缩进采用&lt;code&gt;4个空格&lt;/code&gt;，禁止使用tab字符。或者在设置里面把tab设置为四个空格&lt;/li&gt;
-&lt;li&gt;【强制】单行字符数限制不超过120个，超出需要换行，换行时遵循如下原则：
-1） 第二行相对第一行缩进4个空格，从第三行开始，不再继续缩进，参考示例。
-2） 运算符与下文一起换行。
-3） 方法调用的点符号与下文一起换行。
-4） 在多个参数超长，逗号后进行换行。
-5） 在括号前不要换行。&lt;/li&gt;
-&lt;li&gt;【强制】方法参数在定义和传入时，多个参数逗号后边必须加空格。&lt;/li&gt;
-&lt;li&gt;【强制】IDE 的&lt;code&gt;text file encoding&lt;/code&gt;设置为&lt;code&gt;UTF-8&lt;/code&gt;;IDE中文件的&lt;code&gt;换行符&lt;/code&gt;使用&lt;code&gt;Unix&lt;/code&gt;格式，不要使用windows格式。&lt;/li&gt;
-&lt;li&gt;【推荐】没有必要增加若干空格来使某一行的字符与上一行的相应字符对齐。&lt;/li&gt;
-&lt;li&gt;【推荐】方法体内的执行语句组、变量的定义语句组、不同的业务逻辑之间或者不同的语义之间插入一个&lt;code&gt;空行&lt;/code&gt;。相同业务逻辑和语义之间不需要插入空行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;oop-规范&#34;&gt;OOP 规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】避免通过一个类的对象引用访问此类的静态变量或静态方法，无谓增加编译器解析成本，直接用类名来访问即可。&lt;/li&gt;
-&lt;li&gt;【强制】所有的相同类型的包装类对象之间值的比较，全部使用&lt;code&gt;Equals&lt;/code&gt;方法比较。&lt;/li&gt;
-&lt;li&gt;【强制】构造方法里面禁止加入任何业务逻辑，如果有初始化逻辑，请放在&lt;code&gt;Init&lt;/code&gt;方法中。。&lt;/li&gt;
-&lt;li&gt;【推荐】使用索引访问用String的&lt;code&gt;Split&lt;/code&gt;方法得到的数组时，需做最后一个分隔符后有无内容的检查，否则会有抛IndexOutOfBoundsException的风险。&lt;/li&gt;
-&lt;li&gt;【推荐】当一个类有多个构造方法，或者多个同名方法，这些方法应该按顺序放置在一起，便于阅读。&lt;/li&gt;
-&lt;li&gt;【推荐】 类内方法定义顺序依次是：&lt;code&gt;公有方法或保护方法&lt;/code&gt; &amp;gt; &lt;code&gt;属性&lt;/code&gt; &amp;gt; &lt;code&gt;私有方法&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;【推荐】循环体内，字符串的连接方式，使用&lt;code&gt;StringBuilder的append&lt;/code&gt;方法进行扩展。&lt;/li&gt;
-&lt;li&gt;【推荐】类成员与方法&lt;code&gt;访问控制从严&lt;/code&gt;：
-1） 如果不允许外部直接通过new来创建对象，那么构造方法必须是private。
-2） 工具类不允许有public或default构造方法。
-3） 类非static成员变量并且与子类共享，必须是protected。
-4） 类非static成员变量并且仅在本类使用，必须是private。
-5） 类static成员变量如果仅在本类使用，必须是private。
-6） 若是static成员变量，必须考虑是否为final。
-7） 类成员方法只供类内部调用，必须是private。
-8） 类成员方法只对继承类公开，那么限制为protected。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;控制语句&#34;&gt;控制语句&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】在一个&lt;code&gt;switch块&lt;/code&gt;内，每个&lt;code&gt;case&lt;/code&gt;要么通过&lt;code&gt;break/return&lt;/code&gt;等来终止，要么注释说明程序将继续执行到哪一个case为止；在一个switch块内，都必须包含一个&lt;code&gt;default&lt;/code&gt;语句并且放在最后，即使它什么代码也没有。&lt;/li&gt;
-&lt;li&gt;在&lt;code&gt;if/else/for/while/do&lt;/code&gt;语句中必须使用大括号。即使只有一行代码，避免使用单行的形式&lt;/li&gt;
-&lt;li&gt;【推荐】表达异常的分支时，&lt;code&gt;少用if-else&lt;/code&gt;方式，这种方式可以改写成：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (condition) 
-{
-    ...
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; obj;
-}
-&lt;span style=&#34;color:#228b22&#34;&gt;// 接着写else的业务逻辑代码;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【推荐】除常用方法（如getXxx/isXxx）等外，不要在条件判断中执行其它复杂的语句，将复杂逻辑判断的结果赋值给一个有意义的布尔变量名，以提高可读性。&lt;/li&gt;
-&lt;li&gt;【推荐】&lt;code&gt;循环体&lt;/code&gt;中的语句要&lt;code&gt;考量性能&lt;/code&gt;，以下操作尽量移至循环体外处理，如&lt;code&gt;定义对象、变量、获取数据库连接&lt;/code&gt;，进行不必要的try-catch操作（这个try-catch是否可以移至循环体外）。&lt;/li&gt;
-&lt;li&gt;【参考】下列情形，需要进行&lt;code&gt;参数校验&lt;/code&gt;：
-1） 调用频次低的方法。
-2） 执行时间开销很大的方法。此情形中，参数校验时间几乎可以忽略不计，但如果因为参数错误导致中间执行回退，或者错误，那得不偿失。
-3） 需要极高稳定性和可用性的方法。
-4） 对外提供的开放接口，不管是RPC/API/HTTP接口。
-5） 敏感权限入口。&lt;/li&gt;
-&lt;li&gt;【参考】下列情形，不需要进行参数校验：
-1） 极有可能被循环调用的方法。但在方法说明里必须注明外部参数检查要求。
-2） 底层调用频度比较高的方法。
-3） 被声明成private只会被自己代码所调用的方法，如果能够确定调用方法的代码传入参数已经做过检查或者肯定不会有问题，此时可以不校验参数。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;注释规范&#34;&gt;注释规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】所有的类都必须添加创建者和创建日期。&lt;/li&gt;
-&lt;li&gt;【强制】方法内部单行注释，在被注释语句上方另起一行，使用&lt;code&gt;//&lt;/code&gt;注释。方法内部多行注释使用&lt;code&gt;/* */&lt;/code&gt;注释，注意与代码对齐。&lt;/li&gt;
-&lt;li&gt;【强制】所有的枚举类型字段必须要有&lt;code&gt;注释&lt;/code&gt;，说明每个数据项的用途。&lt;/li&gt;
-&lt;li&gt;【推荐】代码修改的同时，注释也要进行相应的修改，尤其是参数、返回值、异常、核心逻辑等的修改。&lt;/li&gt;
-&lt;li&gt;【参考】合理处理注释掉的代码。尽量在目标代码上方&lt;code&gt;详细说明&lt;/code&gt;，而不是简单的注释掉。如果无用，则&lt;code&gt;直接删除&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;【参考】对于注释的要求：
-第一、能够准确反应设计思想和代码逻辑；
-第二、能够描述业务含义，使别的程序员能够迅速了解到代码背后的信息。完全没有注释的大段代码对于阅读者形同天书，注释是给自己看的，即使隔很长时间，也能清晰理解当时的思路；注释也是给继任者看的，使其能够快速接替自己的工作。&lt;/li&gt;
-&lt;li&gt;【参考】好的命名、代码结构是自解释的，注释力求精简准确、表达到位。避免出现注释的一个极端：过多过滥的注释，代码的逻辑一旦修改，修改注释是相当大的负担。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-- https://www.openheart.icu/cs/dot-net-issue/ - ALL RIGHTS RESERVED KRIS NIE</description>
+- https://www.openheart.icu/cs/dependency-injection/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>SQLserver</title>
+        <link>https://www.openheart.icu/cs/sqlserver/</link>
+        <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/sqlserver/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/sqlserver/ -&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
+&lt;h2 id=&#34;index&#34;&gt;Index&lt;/h2&gt;
+&lt;h3 id=&#34;聚集索引&#34;&gt;聚集索引&lt;/h3&gt;
+&lt;h3 id=&#34;非聚集索引&#34;&gt;非聚集索引&lt;/h3&gt;
+- https://www.openheart.icu/cs/sqlserver/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -1250,73 +1065,6 @@ a[11] = {0, 1, 16, 24, 35, 47, 59, 62, 73, 88, 99}&lt;/p&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 - https://www.openheart.icu/cs/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E5%92%8C%E9%AB%98%E5%8F%AF%E9%9D%A0%E6%80%A7/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>URL</title>
-        <link>https://www.openheart.icu/cs/url/</link>
-        <pubDate>Wed, 22 Jul 2020 20:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/url/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/url/ -&lt;h1 id=&#34;url解析&#34;&gt;URL解析&lt;/h1&gt;
-&lt;h2 id=&#34;urlencode&#34;&gt;UrlEncode&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;符号&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;意义&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Encode&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;+&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;表示空格&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;%2B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;(空格)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;可以用+号替代&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;%20&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;/&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;分隔目录和子目录&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;%2F&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;？&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;分隔实际的URL和参数&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;%3F&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;%&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;指定特殊字符&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;%25&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;#&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;表示书签&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;%23&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;amp;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;URL 中指定的参数间的分隔符&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;%26&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;=&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;URL 中指定参数的值&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;%3D&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;ie11url解析问题&#34;&gt;IE11URL解析问题&lt;/h3&gt;
-&lt;p&gt;今天(2020-8-3 14:41:03)，发现项目中使用IE11时打开连接出现&lt;code&gt;HTTP400&lt;/code&gt;的问题，有且仅在IE11里面，chrome正常。&lt;/p&gt;
-&lt;p&gt;后来查资料发现，是因为我传参的时候带了中文字符，而IE对中文字符是有限制的，所以不成功，而要解决这个问题就需要转码，把要传的中文参数用UrlEncode方法给转一下码就ok。&lt;/p&gt;
-- https://www.openheart.icu/cs/url/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

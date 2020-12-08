@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 14 Nov 2020 16:55:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2020 22:30:12 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/cs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adaptive Code</title>
+      <link>https://www.openheart.icu/cs/adaptive-code/</link>
+      <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/adaptive-code/</guid>
+      <description>Adaptive Code: Agile coding with design patterns and SOLID principles 从标题中就不难发现，Adaptive Code的重点有三个：
+  敏捷编码
+  设计模式
+  SOLID(单一功能、开闭原则、里氏替换、接口隔离以及依赖反转)原理
+  Scrum scrum.org 2020-Scrum-Guide-US
+ Scrum is:
+ Lightweight Simple to understand Difficult to master   What  All work is prioritized on the product backlog and, at the start of each sprint, the development team commits to the work that they will complete during the new iteration by placing it on the sprint backlog.</description>
+    </item>
     
     <item>
       <title>处理器中的流水线技术</title>
@@ -56,25 +71,35 @@ WB(Write back)：将结果写入寄存器堆中。
     </item>
     
     <item>
+      <title>Dependency Injection</title>
+      <link>https://www.openheart.icu/cs/dependency-injection/</link>
+      <pubDate>Thu, 15 Oct 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/dependency-injection/</guid>
+      <description>Dependency Injection IOC Spring 框架为Java提供了IOC（Inversion of Control），只是提供了一个服务容器，程序控制我们需要的对象，而不是在使用对象时我们亲自直接控制。既然提到了IOC就详细了解一下这种设计思想：
+为了解决对象间耦合度过高的问题，软件专家Michael Mattson提出了IOC理论，用来实现对象之间的“解耦”。
+控制反转是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。
+软件系统在没有引入IOC容器之前，对象A依赖于对象B，那么对象A在初始化或者运行到某一点的时候，自己必须主动去创建对象B或者使用已经创建的对象B。无论是创建还是使用对象B，控制权都在自己手上。
+软件系统在引入IOC容器之后，这种情形就完全改变了，由于IOC容器的加入，对象A与对象B之间失去了直接联系，所以，当对象A运行到需要对象B的时候，IOC容器会主动创建一个对象B注入到对象A需要的地方。
+通过前后的对比，我们不难看出来：对象A获得依赖对象B的过程，由主动行为变为了被动行为，控制权颠倒过来了，这就是“控制反转”这个名称的由来。
+控制反转可以用来减低计算机代码之间的耦合度。 其中最常见的方式叫做依赖注入（Dependency Injection，简称DI），还有一种方式叫“依赖查找”（Dependency Lookup）。
+DIP 要了解控制反转( Inversion of Control ), 我觉得有必要先了解软件设计的一个重要思想：依赖倒置原则（Dependency Inversion Principle ）。
+依赖倒置原则（Dependence Inversion Principle）是程序要依赖于抽象接口，不要依赖于具体实现。 简单的说就是要求对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。
+在面向对象编程领域中，依赖反转原则（Dependency inversion principle，DIP）是指一种特定的解耦（传统的依赖关系创建在高层次上，而具体的策略设置则应用在低层次的模块上）形式，使得高层次的模块不依赖于低层次的模块的实现细节，依赖关系被颠倒（反转），从而使得低层次模块依赖于高层次模块的需求抽象。
+该原则规定：
+ 高层次的模块不应该依赖于低层次的模块，两者都应该依赖于抽象接口。 抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。  该原则颠倒了一部分人对于面向对象设计的认识方式。如高层次和低层次对象都应该依赖于相同的抽象接口。控制反转就是依赖倒置原则的一种代码设计的思路。具体采用的方法就是所谓的依赖注入（Dependency Injection）。
+设计模式中的五大原则 SOLID 中的 D 指代的就是依赖反转原则。
+eg: Lamp and Button：A Simple DIP Example
+DI IOC与DI的区别  控制反转是一种在软件工程中解耦合的思想，调用类只依赖接口，而不依赖具体的实现类，减少了耦合。控制权交给了容器，在运行的时候才由容器决定将具体的实现动态的“注入”到调用类的对象中。 依赖注入是一种设计模式，可以作为控制反转的一种实现方式。依赖注入就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。 通过IOC框架，类A依赖类B的强耦合关系可以在运行时通过容器建立，也就是说把创建B实例的工作移交给容器，类A只管使用就可以。  .net core 框架自带IServiceProvider以实现依赖注入</description>
+    </item>
+    
+    <item>
       <title>SQLserver</title>
       <link>https://www.openheart.icu/cs/sqlserver/</link>
       <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/sqlserver/</guid>
       <description>Common Operation Index 聚集索引 非聚集索引 </description>
-    </item>
-    
-    <item>
-      <title>.Net Issue</title>
-      <link>https://www.openheart.icu/cs/dot-net-issue/</link>
-      <pubDate>Fri, 31 Jul 2020 22:59:51 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
-      <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
- Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
- 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
-Note that run time is not included in this list by default. To change this behaviour:
- Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services .</description>
     </item>
     
     <item>
@@ -384,6 +409,19 @@ user = nginx group = users </description>
     </item>
     
     <item>
+      <title></title>
+      <link>https://www.openheart.icu/cs/dot-net-issue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
+      <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
+ Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
+ 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
+Note that run time is not included in this list by default. To change this behaviour:
+ Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services .</description>
+    </item>
+    
+    <item>
       <title>English</title>
       <link>https://www.openheart.icu/cs/english/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -391,6 +429,20 @@ user = nginx group = users </description>
       <guid>https://www.openheart.icu/cs/english/</guid>
       <description>Apple’s glowing glass sphere is the newest spectacle on Singapore’s skyline  Designed by Foster + Partners, the new Apple Marina Bay Sands store(滨海湾金沙店), due to open on Thursday, is a self-supporting dome entirely surrounded by water
  Physics loves a sphere, its preferred, purest form. For architects though, the box trumps the bubble(盒子胜过透明原型罩). They’re easier to engineer and offer more useful space. The new Apple Marina Bay Sands store in Singapore goes with the physics.</description>
+    </item>
+    
+    <item>
+      <title>I am a freshman</title>
+      <link>https://www.openheart.icu/cs/i-am-a-freshman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/i-am-a-freshman/</guid>
+      <description>Step out of my comfort zone Sentence We have a new team member onboard from 1st Dec 2020.
+Please join me in welcoming Kris to Infor and give them your great support in every way possible!
+Welcome to the team!
+Thank you. It is my honor to be able to join our team.
+Don&amp;rsquo;t spin your wheels! 这里的spin your wheels(cambridge.org) 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;rdquo;
+You&amp;rsquo;re in good company.</description>
     </item>
     
   </channel>

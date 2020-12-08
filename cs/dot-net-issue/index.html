@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>.Net Issue</title>
+<title></title>
 
 
 
@@ -10,26 +10,33 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content=".net踩坑">
+<meta name="description" content="">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content=".Net Issue" />
-<meta property="og:description" content=".net踩坑" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&rsquo;s fundamentally how ASP.NET MVC Core works）。
+ Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
+ 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
+Note that run time is not included in this list by default. To change this behaviour:
+ Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.openheart.icu/cs/dot-net-issue/" />
-<meta property="article:published_time" content="2020-07-31T22:59:51+00:00" />
-<meta property="article:modified_time" content="2020-08-09T14:14:56+00:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=".Net Issue"/>
-<meta name="twitter:description" content=".net踩坑"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&rsquo;s fundamentally how ASP.NET MVC Core works）。
+ Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
+ 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
+Note that run time is not included in this list by default. To change this behaviour:
+ Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services ."/>
 
 
 
@@ -549,148 +556,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#dependency-injection" onclick="onNavClick(`#dependency-injection-nav`)" id="dependency-injection-nav">
-									Dependency Injection
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#ioc" onclick="onNavClick(`#ioc-nav`)" id="ioc-nav">
-									IOC
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#dip" onclick="onNavClick(`#dip-nav`)" id="dip-nav">
-									DIP
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#di" onclick="onNavClick(`#di-nav`)" id="di-nav">
-									DI
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#ioc%e4%b8%8edi%e7%9a%84%e5%8c%ba%e5%88%ab" onclick="onNavClick(`#ioc与di的区别-nav`)" id="ioc与di的区别-nav">
-									IOC与DI的区别
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#lifetime" onclick="onNavClick(`#lifetime-nav`)" id="lifetime-nav">
-									LifeTime
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#reference-3" onclick="onNavClick(`#reference-3-nav`)" id="reference-3-nav">
-									Reference
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
 								<a href="#iviewlocationexpander" onclick="onNavClick(`#iviewlocationexpander-nav`)" id="iviewlocationexpander-nav">
 									IViewLocationExpander
 								</a>
@@ -713,7 +578,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#reference-4" onclick="onNavClick(`#reference-4-nav`)" id="reference-4-nav">
+								<a href="#reference-3" onclick="onNavClick(`#reference-3-nav`)" id="reference-3-nav">
 									Reference
 								</a>
 							</li>
@@ -757,7 +622,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#reference-5" onclick="onNavClick(`#reference-5-nav`)" id="reference-5-nav">
+								<a href="#reference-4" onclick="onNavClick(`#reference-4-nav`)" id="reference-4-nav">
 									Reference
 								</a>
 							</li>
@@ -875,6 +740,86 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 							<li>
 								<a href="#%e6%b3%a8%e9%87%8a%e8%a7%84%e8%8c%83" onclick="onNavClick(`#注释规范-nav`)" id="注释规范-nav">
 									注释规范
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#http-error-50019---internal-server-error" onclick="onNavClick(`#http-error-50019---internal-server-error-nav`)" id="http-error-50019---internal-server-error-nav">
+									HTTP Error 500.19 - Internal Server Error
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#detailed-error-information" onclick="onNavClick(`#detailed-error-information-nav`)" id="detailed-error-information-nav">
+									Detailed Error Information:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#solution" onclick="onNavClick(`#solution-nav`)" id="solution-nav">
+									Solution
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference-5" onclick="onNavClick(`#reference-5-nav`)" id="reference-5-nav">
+									Reference
 								</a>
 							</li>
 						
@@ -1305,148 +1250,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#dependency-injection" onclick="onNavClick(`#dependency-injection-nav`)" id="dependency-injection-nav">
-									Dependency Injection
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#ioc" onclick="onNavClick(`#ioc-nav`)" id="ioc-nav">
-									IOC
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#dip" onclick="onNavClick(`#dip-nav`)" id="dip-nav">
-									DIP
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#di" onclick="onNavClick(`#di-nav`)" id="di-nav">
-									DI
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#ioc%e4%b8%8edi%e7%9a%84%e5%8c%ba%e5%88%ab" onclick="onNavClick(`#ioc与di的区别-nav`)" id="ioc与di的区别-nav">
-									IOC与DI的区别
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#lifetime" onclick="onNavClick(`#lifetime-nav`)" id="lifetime-nav">
-									LifeTime
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#reference-3" onclick="onNavClick(`#reference-3-nav`)" id="reference-3-nav">
-									Reference
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
 								<a href="#iviewlocationexpander" onclick="onNavClick(`#iviewlocationexpander-nav`)" id="iviewlocationexpander-nav">
 									IViewLocationExpander
 								</a>
@@ -1469,7 +1272,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#reference-4" onclick="onNavClick(`#reference-4-nav`)" id="reference-4-nav">
+								<a href="#reference-3" onclick="onNavClick(`#reference-3-nav`)" id="reference-3-nav">
 									Reference
 								</a>
 							</li>
@@ -1513,7 +1316,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#reference-5" onclick="onNavClick(`#reference-5-nav`)" id="reference-5-nav">
+								<a href="#reference-4" onclick="onNavClick(`#reference-4-nav`)" id="reference-4-nav">
 									Reference
 								</a>
 							</li>
@@ -1638,6 +1441,86 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#http-error-50019---internal-server-error" onclick="onNavClick(`#http-error-50019---internal-server-error-nav`)" id="http-error-50019---internal-server-error-nav">
+									HTTP Error 500.19 - Internal Server Error
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#detailed-error-information" onclick="onNavClick(`#detailed-error-information-nav`)" id="detailed-error-information-nav">
+									Detailed Error Information:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#solution" onclick="onNavClick(`#solution-nav`)" id="solution-nav">
+									Solution
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference-5" onclick="onNavClick(`#reference-5-nav`)" id="reference-5-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -1696,34 +1579,13 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
             >
                 <div class="post-title">
-                    .Net Issue
                     
-                    <div class="post-subtitle">
-                        .net踩坑
-                    </div>
                     
                     <div class="post-meta">
                         
-                        <time itemprop="datePublished">
-                            2020-07-31 22:59
-                        </time>
-                        
 
                         
-                            <i class="material-icons" style="">folder</i>
-                                <a href="/categories/technical">Technical</a>
-                                &nbsp;
-                        
 
-                        
-                            <i class="material-icons" style="">label</i>
-                            
-                                <a href="/tags/.net">.NET</a>
-                                &nbsp;
-                            
-                                <a href="/tags/operation">Operation</a>
-                                &nbsp;
-                            
                         
                         
                             <i class="material-icons" style="">schedule</i>
@@ -1733,9 +1595,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            31 min
+                            22 min
                             
-                            8 s.
+                            30 s.
                         
                     </div>
                 </div>
@@ -1851,145 +1713,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 <li><a href="https://www.zhihu.com/question/25256772/answer/30290376">什么时候用Model，什么时候用Entity？ - 赵劼的回答 - 知乎</a></li>
 </ol>
 <hr>
-<h1 id="dependency-injection">Dependency Injection</h1>
-<h2 id="ioc">IOC</h2>
-<p>Spring 框架为Java提供了IOC（Inversion of Control），只是提供了一个服务容器，程序控制我们需要的对象，而不是在使用对象时我们亲自直接控制。既然提到了IOC就详细了解一下这种设计思想：</p>
-<p><img src="/image/Coupling-20200808133032885.png" alt="Coupling-20200808133032885.png"></p>
-<p>为了解决对象间耦合度过高的问题，软件专家Michael Mattson提出了IOC理论，用来实现对象之间的“解耦”。</p>
-<p>控制反转是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。</p>
-<p><img src="/image/IOC-20200808134840983.png" alt="IOC-20200808134840983"></p>
-<p>软件系统在没有引入IOC容器之前，对象A依赖于对象B，那么对象A在初始化或者运行到某一点的时候，自己必须主动去创建对象B或者使用已经创建的对象B。无论是创建还是使用对象B，控制权都在自己手上。</p>
-<p>软件系统在引入IOC容器之后，这种情形就完全改变了，由于IOC容器的加入，对象A与对象B之间失去了直接联系，所以，当对象A运行到需要对象B的时候，IOC容器会主动创建一个对象B注入到对象A需要的地方。</p>
-<p>通过前后的对比，我们不难看出来：对象A获得依赖对象B的过程，由主动行为变为了被动行为，控制权颠倒过来了，这就是“控制反转”这个名称的由来。</p>
-<p>控制反转可以用来减低计算机代码之间的耦合度。 其中最常见的方式叫做依赖注入（Dependency Injection，简称DI），还有一种方式叫“依赖查找”（Dependency Lookup）。</p>
-<h2 id="dip">DIP</h2>
-<p>要了解控制反转( Inversion of Control ), 我觉得有必要先了解软件设计的一个重要思想：依赖倒置原则（Dependency Inversion Principle ）。</p>
-<p>依赖倒置原则（Dependence Inversion Principle）是程序要依赖于抽象接口，不要依赖于具体实现。 简单的说就是要求对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。</p>
-<p>在<a href="https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B">面向对象编程</a>领域中，<strong>依赖反转原则</strong>（Dependency inversion principle，DIP）是指一种特定的<a href="https://zh.wikipedia.org/wiki/%E8%80%A6%E5%90%88%E6%80%A7_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)">解耦</a>（传统的<a href="https://zh.wikipedia.org/wiki/%E8%80%A6%E5%90%88%E6%80%A7_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)">依赖</a>关系创建在高层次上，而具体的策略设置则应用在低层次的模块上）形式，使得高层次的模块不依赖于低层次的模块的实现细节，依赖关系被颠倒（反转），从而使得低层次模块依赖于高层次模块的需求抽象。</p>
-<p>该原则规定：</p>
-<ol>
-<li>高层次的模块不应该依赖于低层次的模块，两者都应该依赖于<a href="https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)">抽象接口</a>。</li>
-<li>抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。</li>
-</ol>
-<p>该原则颠倒了一部分人对于面向对象设计的认识方式。如高层次和低层次对象都应该依赖于相同的抽象接口。控制反转就是依赖倒置原则的一种代码设计的思路。具体采用的方法就是所谓的依赖注入（Dependency Injection）。</p>
-<p>设计模式中的五大原则 <a href="https://zh.wikipedia.org/wiki/SOLID_(%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1)">SOLID</a> 中的 D 指代的就是依赖反转原则。</p>
-<p>eg: <a href="https://flylib.com/books/en/4.444.1.71/1/">Lamp and Button：A Simple DIP Example</a></p>
-<h2 id="di">DI</h2>
-<h3 id="ioc与di的区别">IOC与DI的区别</h3>
-<ul>
-<li>控制反转是一种在软件工程中解耦合的思想，调用类只依赖接口，而不依赖具体的实现类，减少了耦合。控制权交给了容器，在运行的时候才由容器决定将具体的实现动态的“注入”到调用类的对象中。</li>
-<li>依赖注入是一种设计模式，可以作为控制反转的一种实现方式。依赖注入就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。</li>
-<li>通过IOC框架，类A依赖类B的强耦合关系可以在运行时通过容器建立，也就是说把创建B实例的工作移交给容器，类A只管使用就可以。</li>
-</ul>
-<p>.net core 框架自带<a href="https://docs.microsoft.com/en-us/dotnet/api/system.iserviceprovider">IServiceProvider</a>以实现依赖注入</p>
-<h3 id="lifetime">LifeTime</h3>
-<p>MSDN指出了有关<code>AddTransient</code>/<code>AddScoped</code>/<code>AddSingleton</code>的区别，并带有一个小示例：</p>
-<p>创建一个Operation接口然后分别对应实现上述三种依赖注入，为Operation添加属性<code>Guid OperationId</code>，凭借此属性值，我们可以在逻辑层与controller控制器中分别implement，对比两处implement的OperationId可以发现这三种模式的lifetime。（<em>The <code>IOperationSingletonInstance</code> service is using a specific instance with a known ID of <code>Guid.Empty</code>. It&rsquo;s clear when this type is in use (its GUID is all zeroes).</em>）</p>
-<p>IOperation：</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">interface</span> IOperation
-{
-  Guid OperationId { <span style="color:#8b008b;font-weight:bold">get</span>; }
-}
-
-<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">interface</span> IOperationTransient : IOperation
-{
-}
-<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">interface</span> IOperationScoped : IOperation
-{
-}
-<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">interface</span> IOperationSingleton : IOperation
-{
-}
-<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">interface</span> IOperationSingletonInstance : IOperation
-{
-}
-</code></pre></div><p>Operation:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Operation</span> : IOperation, IOperationTransient, IOperationScoped, IOperationSingleton, IOperationSingletonInstance
-{
-  <span style="color:#8b008b;font-weight:bold">public</span> Guid OperationId { <span style="color:#8b008b;font-weight:bold">get</span>; }
-
-  <span style="color:#8b008b;font-weight:bold">public</span> Operation(Guid operationId)
-  {
-    OperationId = operationId;
-  }
-
-  <span style="color:#8b008b;font-weight:bold">public</span> Operation() : <span style="color:#8b008b;font-weight:bold">this</span>(Guid.NewGuid())
-  {
-  }
-}
-</code></pre></div><p>OperationSercice:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">OperationService</span>
-{
-  <span style="color:#8b008b;font-weight:bold">public</span> IOperationTransient TransientOperation { <span style="color:#8b008b;font-weight:bold">get</span>; }
-  <span style="color:#8b008b;font-weight:bold">public</span> IOperationScoped ScopedOperation { <span style="color:#8b008b;font-weight:bold">get</span>; }
-  <span style="color:#8b008b;font-weight:bold">public</span> IOperationSingleton SingletonOperation { <span style="color:#8b008b;font-weight:bold">get</span>; }
-  <span style="color:#8b008b;font-weight:bold">public</span> IOperationSingletonInstance SingletonInstanceOperation { <span style="color:#8b008b;font-weight:bold">get</span>; }
-
-  <span style="color:#8b008b;font-weight:bold">public</span> OperationService(IOperationTransient transientOperation,
-                          IOperationScoped scopedOperation,
-                          IOperationSingleton singletonOperation,
-                          IOperationSingletonInstance instanceOperation)
-  {
-    TransientOperation = transientOperation;
-    ScopedOperation = scopedOperation;
-    SingletonOperation = singletonOperation;
-    SingletonInstanceOperation = instanceOperation;
-  }
-}
-</code></pre></div><p>OperationController:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">OperationsController</span> : Controller
-{
-  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">readonly</span> OperationService _operationService;
-  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">readonly</span> IOperationTransient _transientOperation;
-  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">readonly</span> IOperationScoped _scopedOperation;
-  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">readonly</span> IOperationSingleton _singletonOperation;
-  <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">readonly</span> IOperationSingletonInstance _singletonInstanceOperation;
-
-  <span style="color:#8b008b;font-weight:bold">public</span> OperationsController(OperationService operationService,
-                              IOperationTransient transientOperation,
-                              IOperationScoped scopedOperation,
-                              IOperationSingleton singletonOperation,
-                              IOperationSingletonInstance singletonInstanceOperation)
-  {
-    _operationService = operationService;
-    _transientOperation = transientOperation;
-    _scopedOperation = scopedOperation;
-    _singletonOperation = singletonOperation;
-    _singletonInstanceOperation = singletonInstanceOperation;
-  }
-
-  <span style="color:#8b008b;font-weight:bold">public</span> IActionResult Index()
-  {
-    <span style="color:#228b22">// viewbag contains controller-requested services
-</span><span style="color:#228b22"></span>    ViewBag.Transient = _transientOperation;
-    ViewBag.Scoped = _scopedOperation;
-    ViewBag.Singleton = _singletonOperation;
-    ViewBag.SingletonInstance = _singletonInstanceOperation;
-
-    <span style="color:#228b22">// operation service has its own requested services
-</span><span style="color:#228b22"></span>    ViewBag.Service = _operationService;
-    <span style="color:#8b008b;font-weight:bold">return</span> View();
-  }
-}
-</code></pre></div><p>两次请求对比如下：</p>
-<p><img src="/image/DI-20200809140803.png" alt="DI-20200809140803"></p>
-<p><img src="/image/DI-20200809140837.png" alt="DI-20200809140837"></p>
-<p>观察在请求中以及请求之间的哪个<code>OperationId</code>值有所不同。</p>
-<ul>
-<li>Transient 对象总是不同的; 每个控制器和每个服务都提供了一个新的实例。</li>
-<li>Scoped 对象在请求中是相同的，但在不同的请求中是不同的。</li>
-<li>Singleton 对象对于每个对象和每个请求都是一样的（不管<code>ConfigureServices</code>中是否提供一个实例）</li>
-</ul>
-<h2 id="reference-3">Reference</h2>
-<ol>
-<li><a href="https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC%E5%8E%9F%E5%88%99">依赖反转原则</a></li>
-<li><a href="https://www.jianshu.com/p/07af9dbbbc4b">控制反转（IOC）与依赖注入（DI）</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/91218464">.NET Core中的IoC和DI</a></li>
-<li><a href="https://www.martinfowler.com/articles/injection.html">Inversion of Control Containers and the Dependency Injection pattern</a></li>
-<li><a href="https://flylib.com/books/en/4.444.1.71/1/">A Simple DIP Example</a></li>
-<li><a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1">Dependency injection in ASP.NET Core</a></li>
-</ol>
-<hr>
 <h1 id="iviewlocationexpander">IViewLocationExpander</h1>
 <p>实现<code>IViewLocationExpander</code>接口，<code>location</code>为build时程序检查的views层路径</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">ViewLocationExpander</span>: IViewLocationExpander
@@ -2019,7 +1742,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </code></pre></div><p>在Startup注册我们的implement</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">services.AddMvc()
   .AddRazorOptions(options =&gt; options.ViewLocationExpanders.Add(<span style="color:#8b008b;font-weight:bold">new</span> ViewLocationExpander()));
-</code></pre></div><h2 id="reference-4">Reference</h2>
+</code></pre></div><h2 id="reference-3">Reference</h2>
 <ol>
 <li><a href="https://www.c-sharpcorner.com/article/expanding-razor-view-location-and-sub-areas-in-asp-net-core/">Expanding Razor View Location And Sub Areas In ASP.NET Core</a></li>
 <li><a href="https://github.com/NonFactors/AspNetCore.Template/blob/378d64f6900f0cc95eee921b5caf81d2bc9efc11/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs">AspNetCore.Template/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs</a></li>
@@ -2031,7 +1754,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </blockquote>
 <p>检查一下EF版本！！！</p>
 <p>You are mixing different versions of EF Core!!!</p>
-<h2 id="reference-5">Reference</h2>
+<h2 id="reference-4">Reference</h2>
 <p><a href="https://github.com/npgsql/efcore.pg/issues/1441">Cannot register IRelationalTypeMappingSource #1441</a></p>
 <hr>
 <h1 id="c编程规范">C#编程规范</h1>
@@ -2138,16 +1861,49 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </ul>
 </blockquote>
 <hr>
+<h1 id="http-error-50019---internal-server-error">HTTP Error 500.19 - Internal Server Error</h1>
+<p>The requested page cannot be accessed because the related configuration data for the page is invalid.</p>
+<h2 id="detailed-error-information">Detailed Error Information:</h2>
+<table>
+<thead>
+<tr>
+<th align="right">Module</th>
+<th>IIS Web Core</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Notification</td>
+<td>BeginRequest</td>
+</tr>
+<tr>
+<td align="right">Handler</td>
+<td>Not yet determined</td>
+</tr>
+<tr>
+<td align="right">Error Code</td>
+<td>0x80070021</td>
+</tr>
+<tr>
+<td align="right">Config Error</td>
+<td>This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&quot;Deny&rdquo;), or set explicitly by a location tag with overrideMode=&quot;Deny&rdquo; or the legacy allowOverride=&quot;false&rdquo;.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="solution">Solution</h2>
+<p>Heres what worked for me, had a similar problem on my new laptop which had windows 10.</p>
+<ul>
+<li>Search for &ldquo;Turn windows features on or off&rdquo;</li>
+<li>Check &ldquo;Internet Information Services&rdquo;</li>
+<li>Check &ldquo;World Wide Web Services&rdquo;</li>
+<li>Check &ldquo;Application Development Features&rdquo;</li>
+<li><strong>Enable all items under this</strong></li>
+</ul>
+<p>try again, now it should work.</p>
+<h2 id="reference-5">Reference</h2>
+<p><a href="https://stackoverflow.com/questions/34199976/iis-config-error-this-configuration-section-cannot-be-used-at-this-path">IIS Config Error - This configuration section cannot be used at this path</a></p>
+<hr>
 
-                    
-                    <HR width="100%" id="EOF">
-                    <p style="color:#777;">
-                        Last modified on 2020-08-09 14:14
-                        &nbsp;
-                        <span id="busuanzi_container_page_pv" style="color:#777;">
-                            This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
-                        </span>
-                    </p>
                     
                 </div>
 
@@ -2157,14 +1913,14 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="https://www.openheart.icu/cs/sqlserver/">
-			Next<br>SQLserver
+                <a class="newer-posts" href="https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/">
+			Next<br>智者不弱
                 </a>
                 
                 
                 
-                <a class="older-posts" href="https://www.openheart.icu/cs/%E5%8A%A8%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%8E%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8/">
-			Previous<br>Static Search Table &amp; Dynamic Search Table
+                <a class="older-posts" href="https://www.openheart.icu/untitled/">
+			Previous<br>
                 </a>
                 
             </nav>

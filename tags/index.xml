@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 14 Nov 2020 16:55:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2020 22:30:12 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CS</title>
+      <link>https://www.openheart.icu/tags/cs/</link>
+      <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/tags/cs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Operation</title>
@@ -18,6 +27,15 @@
       <pubDate>Sat, 14 Nov 2020 16:55:11 +0000</pubDate>
       
       <guid>https://www.openheart.icu/tags/operation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.NET</title>
+      <link>https://www.openheart.icu/tags/.net/</link>
+      <pubDate>Thu, 15 Oct 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/tags/.net/</guid>
       <description></description>
     </item>
     
@@ -31,29 +49,11 @@
     </item>
     
     <item>
-      <title>.NET</title>
-      <link>https://www.openheart.icu/tags/.net/</link>
-      <pubDate>Fri, 31 Jul 2020 22:59:51 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/tags/.net/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Arithmetic</title>
       <link>https://www.openheart.icu/tags/arithmetic/</link>
       <pubDate>Sat, 25 Jul 2020 18:32:23 +0000</pubDate>
       
       <guid>https://www.openheart.icu/tags/arithmetic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CS</title>
-      <link>https://www.openheart.icu/tags/cs/</link>
-      <pubDate>Sat, 25 Jul 2020 18:32:23 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/tags/cs/</guid>
       <description></description>
     </item>
     

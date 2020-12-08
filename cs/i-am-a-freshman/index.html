@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Operation</title>
+<title>I am a freshman</title>
 
 
 
@@ -10,25 +10,25 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+<meta name="description" content="职场新人">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content="Operation" />
-<meta property="og:description" content="My HomePage Description" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.openheart.icu/tags/operation/" />
-<meta property="og:updated_time" content="2020-11-14T16:55:11+00:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:title" content="I am a freshman" />
+<meta property="og:description" content="职场新人" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/cs/i-am-a-freshman/" />
+<meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Operation"/>
-<meta name="twitter:description" content="My HomePage Description"/>
+<meta name="twitter:title" content="I am a freshman"/>
+<meta name="twitter:description" content="职场新人"/>
 
 
 
@@ -68,7 +68,30 @@
 
 
 
+  
+    <script src="https://www.openheart.icu//js/toc-collapse.js"></script>
 
+  
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'Hyominn',
+  admin: ['Hyominn'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
 
 
 
@@ -108,9 +131,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/cs">
+            
+            <a class="a-block nav-link-item active" href="/cs">
                 ComputerScience
             </a>
             
@@ -148,11 +173,9 @@
             
             
             
-                
             
             
-            
-            <a class="a-block nav-link-item active" href="/tags">
+            <a class="a-block nav-link-item false" href="/tags">
                 Tags
             </a>
             
@@ -195,6 +218,140 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#step-out-of-my-comfort-zone" onclick="onNavClick(`#step-out-of-my-comfort-zone-nav`)" id="step-out-of-my-comfort-zone-nav">
+									Step out of my comfort zone
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#sentence" onclick="onNavClick(`#sentence-nav`)" id="sentence-nav">
+									Sentence
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#phrase" onclick="onNavClick(`#phrase-nav`)" id="phrase-nav">
+									Phrase
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#abbreviation" onclick="onNavClick(`#abbreviation-nav`)" id="abbreviation-nav">
+									Abbreviation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#phrase-1" onclick="onNavClick(`#phrase-1-nav`)" id="phrase-1-nav">
+									Phrase
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#title-and-department-name" onclick="onNavClick(`#title-and-department-name-nav`)" id="title-and-department-name-nav">
+									Title and department name
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -210,24 +367,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 brightness_7
             </i>
         </a>
-        
-        
-        
-            <div class="pagination-indicator">
-                <span style="text-align: center">
-                    2<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>2
-                </span>
-            </div>
-            
-            
-            <a class="pagination-action" href="/tags/operation/">
-                <i class="material-icons pagination-action-icon">
-                    chevron_left
-                </i>
-            </a>
-            
-
-            
         
         
     </div>
@@ -251,9 +390,11 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/cs">
+                
+                <a class="a-block drawer-menu-item active" href="/cs">
                     ComputerScience
                 </a>
                 
@@ -291,15 +432,147 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 
                 
-                    
                 
                 
-                
-                <a class="a-block drawer-menu-item active" href="/tags">
+                <a class="a-block drawer-menu-item false" href="/tags">
                     Tags
                 </a>
                 
             
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#step-out-of-my-comfort-zone" onclick="onNavClick(`#step-out-of-my-comfort-zone-nav`)" id="step-out-of-my-comfort-zone-nav">
+									Step out of my comfort zone
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#sentence" onclick="onNavClick(`#sentence-nav`)" id="sentence-nav">
+									Sentence
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#phrase" onclick="onNavClick(`#phrase-nav`)" id="phrase-nav">
+									Phrase
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#abbreviation" onclick="onNavClick(`#abbreviation-nav`)" id="abbreviation-nav">
+									Abbreviation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#phrase-1" onclick="onNavClick(`#phrase-1-nav`)" id="phrase-1-nav">
+									Phrase
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#title-and-department-name" onclick="onNavClick(`#title-and-department-name-nav`)" id="title-and-department-name-nav">
+									Title and department name
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
             
         </div>
     </div>
@@ -345,475 +618,207 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <div class="post-item-wrapper post-item-wrapper-no-hover">
-            <div class="post-item post-item-no-gaps">
-                <div class="post-item-info-wrapper">
-                    <div class="post-item-title  post-item-title-small">
-                        <a href="https://www.openheart.icu/">42th openheart</a> / Operation
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    I am a freshman
+                    
+                    <div class="post-subtitle">
+                        职场新人
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/business-english">Business English</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/interesting">Interesting</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            7 min
+                            
+                            40 s.
+                        
                     </div>
                 </div>
             </div>
-        </div><a href="/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            处理器中的流水线技术
-                        </div>
-                        <div class="post-item-meta">
-    2020-11-14
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="step-out-of-my-comfort-zone">Step out of my comfort zone</h1>
+<h2 id="sentence">Sentence</h2>
+<p>We have a new team member onboard from 1st Dec 2020.</p>
+<p>Please join me in welcoming Kris to Infor and give them your great support in every way possible!</p>
+<p>Welcome to the team!</p>
+<p>Thank you. It is my honor to be able to join our team.</p>
+<p>Don&rsquo;t spin your wheels! 这里的spin your wheels<a href="https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD/spin-your-wheels">(cambridge.org)</a> 可以理解为&quot;to waste time doing things that achieve nothing&rdquo;</p>
+<p>You&rsquo;re in good company. 你是一个好合作伙伴。此处的company为朋友、同伴</p>
+<p>I really enjoy your company. 我很喜欢你的陪伴。此处的company为陪伴</p>
+<p>She&rsquo;s not coming – she&rsquo;s got company. 她来不了了，她家里有客人。此处的company为客人</p>
+<p>Please be aware that the security team run <em>phishing simulations(网络钓鱼模拟)</em> that are designed to help you practice recognizing the common <em>tactics scammers(欺诈者)</em> use to get you to reveal sensitive information or install <em>malware(恶意软件)</em>.</p>
+<p>And give our warm welcome to Mr. Kris Nie 聂志勇 joins Infor China effective 1st December 2020, as Software Engineer, reporting to Jeking Pan, Manager, Software Development.</p>
+<p>What do you make of this. 你觉得这个怎么样。</p>
+<p>Last I checked/Last time I checked. 如假包换/据我所知</p>
+<p>This is the way.</p>
+<p>You have my word.</p>
+<p>I have spoken.</p>
+<p>That is the most beautiful moonrise I&rsquo;ve seen in my entire life. 那是我这辈子见过的最美的月出时分。</p>
+<p>This page intentionally  left blank.</p>
+<p>This is a performance review for the first month of your probation period.</p>
+<p>It is a good time to show myself/prove I am a five.</p>
+<p>Any questions please just let me know.</p>
+<p>This is a final session for the Probation Review meeting.</p>
+<p>You can list all the things that you have completed or you have concerned with in the week and your plan for the next week.</p>
+<p>Any other topics are welcome to be listed in your update too.</p>
+<p>Of course! I will submit weekly report to you every Friday.</p>
+<p>The things that I have completed and my simple plan as shown in the table below. Attached please find the excel file. I will be very grateful if you can help me improve my study planning.</p>
+<p>Enter up to 20 characters. 最多输入20个字符</p>
+<p>If you have already done it, please ignore the email. Otherwise, please follow below steps to update your MFS settings.</p>
+<h2 id="phrase">Phrase</h2>
+<p>Carbon Copy 副本、抄送，outlook中的<em>cc</em></p>
+<p>lead time 交付周期，订货至交货的时间</p>
+<p>Intranet 内联网</p>
+<p>General Ledger 总账</p>
+<p>Work in process 在制品，在产品</p>
+<p>Mfg. Order/Manufacturing Order 制造订单</p>
+<p>Job Orders 工单</p>
+<p>Floor plan 平面图</p>
+<p>Break rules 犯规，破例</p>
+<p>Referral fee 推荐费</p>
+<p>Per Lot Quantity 每手数量</p>
+<p>Scope of work</p>
+<p>Firm a planned order 确定计划订单</p>
+<p>the effects can ripple down 效率下降</p>
+<p>over-conservative plan 过度保守的计划</p>
+<p>purchase order(PO) 订购单</p>
+<p>maintain a comprehensive audit trail of changes 保持全面的变更审计跟踪</p>
+<p><strong>engineering change notice</strong> (<strong>ECN</strong>)</p>
+<p>mass material substitution</p>
+<hr>
+<h2 id="abbreviation">Abbreviation</h2>
+<h3 id="phrase-1">Phrase</h3>
+<p>ASAP（as soon as possible 尽快）</p>
+<p>BID（break it down 细分明细）</p>
+<p>BTW（by the way 顺带一提）</p>
+<p>COB（close of business 下班时）</p>
+<p>EOB（end of business 下班时）</p>
+<p>EOD（end of day 今天以內）</p>
+<p>DOE（depending on experience 视工作经验而定）</p>
+<p>ETA（estimated time of arrival 预计达到时间）</p>
+<p>FAQ（frequently asked questions 常见问题）</p>
+<p>FTE（full-time employee 全体职工）</p>
+<p>FWIW（for what it’s worth 不管有沒有用）</p>
+<p>FYI（for your information 供你参考）</p>
+<p>FYR（for your reference 供你参考）</p>
+<p>FYU（for your use 供你使用）</p>
+<p>IAM（in a meeting 会议中）</p>
+<p>IMO（in my opinion 在我看来）</p>
+<p>LET（leaving early today 今天提早走）</p>
+<p>LMK（let me know 通知我）</p>
+<p>MoM（month over month 月度比较）</p>
+<p>MTD（month to date 月初到现在）</p>
+<p>OOO（out of office 不在办公室）</p>
+<p>OT（over time 加班）</p>
+<p>OTP（on the phone 通话中）</p>
+<p>PA（performance appraisal 绩效考核）</p>
+<p>POC（point of contact 联系人）</p>
+<p>PTE（part-time employee 兼职雇员）</p>
+<p>PTO（paid time off 带薪休假）</p>
+<p>NDA（Non-disclosure agreement 保密协议）</p>
+<p>NRN（no reply necessary 不需回复）</p>
+<p>NSFW（not safe for work）</p>
+<p>RFD（request for discussion 请求讨论）</p>
+<p>RSVP（Répondez s’il vous plait 法文的请回复）</p>
+<p>TBA（to be announced）</p>
+<p>TBD（to be determined）</p>
+<p>TCC（teleconference call 电话会议）</p>
+<p>TED（Tell me, explain to me, describe to me）</p>
+<p>TL;DR（Too long didn’t read 太長，沒讀）</p>
+<p>TOS（terms of service 服務條款）</p>
+<p>TYT（take your time 別著急、慢慢來）</p>
+<p>WFH（work from home 在家辦公）</p>
+<p>WIIFM（what’s in it for me 這對我有什麼好處？）</p>
+<p>WOM（word of mouth 口碑傳播）</p>
+<p>YTD（year to date 年底、今年之內）</p>
+<h3 id="title-and-department-name">Title and department name</h3>
+<p>CDO（chief data officer 首席數據長）</p>
+<p>CEO（chief executive officer 首席執行長）</p>
+<p>CFO（chief financial officer 首席財務長）</p>
+<p>CIO（chief information officer 首席資訊長）</p>
+<p>CMO（chief marketing officer 首席行銷長）</p>
+<p>COO（chief operating officer 首席營運長）</p>
+<p>CPA（certified public accountant 註冊會計師）</p>
+<p>CSO（chief security officer 首席安全長）</p>
+<p>CSR（corporate social responsibility 企業社會責任）</p>
+<p>CTO（chief technology officer 首席技術長）</p>
+<p>CFP（certified financial planner 註冊金融理財師）</p>
+<p>GC（general counsel 首席法律顧問）</p>
+<p>HR（human resources 人力資源）</p>
+<p>PM（project manager 專案經理）</p>
+<p>PR（public relations 公共關係）</p>
+<p>R&amp;D（research and development 研發）</p>
 
-    
-    
-
-    
-    8 min
-    
-    0 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
+                    
                 </div>
-            </div>
-        </a><a href="/cs/idempotent/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            Idempotent
-                        </div>
-                        <div class="post-item-meta">
-    2020-11-12
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    16 min
-    
-    20 s
-    
-    
-    &emsp;
-    
-    <span class="draft-label">DRAFT</span>
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/sqlserver/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            SQLserver
-                        </div>
-                        <div class="post-item-meta">
-    2020-08-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    3 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/url/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            URL
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-22
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    1 min
-    
-    10 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/oracle/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            Oracle
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-21
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    7 min
-    
-    58 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/dns/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            DNS
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-19
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    1 min
-    
-    19 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/git/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            Git
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    48 s
-    
-    
-    &emsp;
-    
-    <span class="draft-label">DRAFT</span>
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/hugo/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            Hugo
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    5 min
-    
-    52 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/linux/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            Linux
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    2 min
-    
-    50 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/mac/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            Mac Operation
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    1 min
-    
-    34 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/markdown/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            Markdown
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    6 min
-    
-    6 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/mysql/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            MySQL
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    2 min
-    
-    33 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/nginx/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            Nginx
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    2 min
-    
-    41 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/cs/php/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            PHP
-                        </div>
-                        <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    16 s
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a></div>
-</div>
 
             </div>
+            
+            
+            <nav class="post-pagination">
 
-<div class="pagination">
-    
-    <a class="pagination-action" href="/tags/operation/" style="opacity:1">
-    
-        <i class="material-icons pagination-action-icon">
-            chevron_left
-        </i>
-    </a>
+                
+                <a class="newer-posts" href="https://www.openheart.icu/cs/english/">
+			Next<br>English
+                </a>
+                
+                
+                
+                <a class="older-posts">
+			Previous<br>No older posts.
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
 
-        <div class="pagination-indicator">
-            <span>2/2</span>
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+            </div>
         </div>
-
-        
-            <a class="pagination-action" style="opacity:0">
-        
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
+    </div>
 </div>
 
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 	
 	<i class="fa fa-weixin" aria-hidden="true"></i>
 	Case42
