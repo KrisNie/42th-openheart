@@ -281,44 +281,26 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e9%81%87%e5%88%b0pull%e4%b8%8d%e4%b8%8b%e6%9d%a5" onclick="onNavClick(`#遇到pull不下来-nav`)" id="遇到pull不下来-nav">
-									遇到pull不下来
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e6%9b%b4%e6%94%b9%e7%94%a8%e6%88%b7%e5%90%8d%e9%82%ae%e7%ae%b1" onclick="onNavClick(`#更改用户名邮箱-nav`)" id="更改用户名邮箱-nav">
-									更改用户名邮箱
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
 								<a href="#%e6%9f%a5%e7%9c%8bgit%e5%ae%89%e8%a3%85%e8%b7%af%e5%be%84" onclick="onNavClick(`#查看git安装路径-nav`)" id="查看git安装路径-nav">
 									查看git安装路径
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#common-operation" onclick="onNavClick(`#common-operation-nav`)" id="common-operation-nav">
+									Common Operation
 								</a>
 							</li>
 						
@@ -481,44 +463,26 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e9%81%87%e5%88%b0pull%e4%b8%8d%e4%b8%8b%e6%9d%a5" onclick="onNavClick(`#遇到pull不下来-nav`)" id="遇到pull不下来-nav">
-									遇到pull不下来
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e6%9b%b4%e6%94%b9%e7%94%a8%e6%88%b7%e5%90%8d%e9%82%ae%e7%ae%b1" onclick="onNavClick(`#更改用户名邮箱-nav`)" id="更改用户名邮箱-nav">
-									更改用户名邮箱
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
 								<a href="#%e6%9f%a5%e7%9c%8bgit%e5%ae%89%e8%a3%85%e8%b7%af%e5%be%84" onclick="onNavClick(`#查看git安装路径-nav`)" id="查看git安装路径-nav">
 									查看git安装路径
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#common-operation" onclick="onNavClick(`#common-operation-nav`)" id="common-operation-nav">
+									Common Operation
 								</a>
 							</li>
 						
@@ -618,7 +582,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            48 s.
+                            1 min
+                            
+                            7 s.
                         
                     </div>
                 </div>
@@ -640,29 +606,43 @@ git rm -r --cached target   <span style="color:#228b22"># 删除target文件夹<
 git commit –m <span style="color:#cd5555">&#34;版本更新信息&#34;</span>
 git push git@github.com:Hyominn/java_demo.git   
 </code></pre></div><h2 id="设置git代理">设置git代理</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git config --global https.proxy http://127.0.0.1:1080
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># http</span>
+git config --global https.proxy http://127.0.0.1:1080
 git config --global https.proxy https://127.0.0.1:1080
 
+<span style="color:#228b22"># socks5</span>
 git config --global http.proxy <span style="color:#cd5555">&#39;socks5://127.0.0.1:1080&#39;</span>
 git config --global https.proxy <span style="color:#cd5555">&#39;socks5://127.0.0.1:1080&#39;</span>
 
+<span style="color:#228b22"># 取消代理</span>
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 
 npm config delete proxy
-</code></pre></div><h2 id="遇到pull不下来">遇到pull不下来</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git reset --hard FETCH_HEAD
-git clone  https://www.github.com/Hyominn/openheart.git
-</code></pre></div><h2 id="更改用户名邮箱">更改用户名邮箱</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git config --global user.name <span style="color:#cd5555">&#34;Kris Nie&#34;</span>
-git config --global user.email krisnie@qq.com
 </code></pre></div><h2 id="查看git安装路径">查看git安装路径</h2>
 <ul>
 <li>Mac: <code>which git</code></li>
-<li>Windows: <code>where git</code></li>
+<li>Windows: <code>where git</code> powershell用where.exe git.exe</li>
 </ul>
-<h2 id="heading"></h2>
+<h2 id="common-operation">Common Operation</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 遇到pull不下来</span>
+git reset --hard FETCH_HEAD
+git clone  https://www.github.com/XXXX/XXX.git
 
+<span style="color:#228b22"># 修改邮箱</span>
+git config --global user.name <span style="color:#cd5555">&#34;Kris Nie&#34;</span>
+git config --global user.email krisnie@qq.com
+
+<span style="color:#228b22"># Commit undo</span>
+git reset HEAD~ <span style="color:#228b22">#只undo最后一次</span>
+
+git reflog <span style="color:#228b22">#显示所有操作</span>
+git reset d0988e7a0d
+
+<span style="color:#228b22"># delete branch</span>
+git branch -D mybranch
+git remote prune origin
+</code></pre></div>
                     
                     <HR width="100%" id="EOF">
                     <p style="color:#777;">

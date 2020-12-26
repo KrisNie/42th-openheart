@@ -35,7 +35,7 @@ You&amp;rsquo;re in good company.</description>
       <description>Adaptive Code: Agile coding with design patterns and SOLID principles 从标题中就不难发现，Adaptive Code的重点有三个：
   敏捷编码
   设计模式
-  SOLID(单一功能、开闭原则、里氏替换、接口隔离以及依赖反转)原理
+  SOLID(单一功能、开闭原则、里氏替换、接口隔离以及依赖反转)原则
   Scrum scrum.org 2020-Scrum-Guide-US
  Scrum is:
  Lightweight Simple to understand Difficult to master   What  All work is prioritized on the product backlog and, at the start of each sprint, the development team commits to the work that they will complete during the new iteration by placing it on the sprint backlog.</description>
@@ -105,6 +105,19 @@ DIP 要了解控制反转( Inversion of Control ), 我觉得有必要先了解�
 设计模式中的五大原则 SOLID 中的 D 指代的就是依赖反转原则。
 eg: Lamp and Button：A Simple DIP Example
 DI IOC与DI的区别  控制反转是一种在软件工程中解耦合的思想，调用类只依赖接口，而不依赖具体的实现类，减少了耦合。控制权交给了容器，在运行的时候才由容器决定将具体的实现动态的“注入”到调用类的对象中。 依赖注入是一种设计模式，可以作为控制反转的一种实现方式。依赖注入就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。 通过IOC框架，类A依赖类B的强耦合关系可以在运行时通过容器建立，也就是说把创建B实例的工作移交给容器，类A只管使用就可以。  .net core 框架自带IServiceProvider以实现依赖注入</description>
+    </item>
+    
+    <item>
+      <title>Dot Net Issue</title>
+      <link>https://www.openheart.icu/cs/dot-net-issue/</link>
+      <pubDate>Thu, 10 Sep 2020 11:00:35 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
+      <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
+ Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
+ 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
+Note that run time is not included in this list by default. To change this behaviour:
+ Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services .</description>
     </item>
     
     <item>
@@ -340,7 +353,7 @@ IPv6地址(实验) ​ 2620:0:ccc::2
       
       <guid>https://www.openheart.icu/cs/git/</guid>
       <description>idea设置git idea -&amp;gt;VSC -&amp;gt;Create Git Repository 右击工程文件 -&amp;gt;git-&amp;gt;add 右击工程文件 -&amp;gt;git-&amp;gt;commit
-git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.com:Hyominn/java_demo.git git add . dir # 查看有哪些文件夹 git rm -r --cached target # 删除target文件夹 git commit –m &amp;#34;版本更新信息&amp;#34; git push git@github.com:Hyominn/java_demo.git 设置git代理 git config --global https.proxy http://127.0.0.1:1080 git config --global https.proxy https://127.0.0.1:1080 git config --global http.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global https.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global --unset http.proxy git config --global --unset https.proxy npm config delete proxy 遇到pull不下来 git reset --hard FETCH_HEAD git clone https://www.</description>
+git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.com:Hyominn/java_demo.git git add . dir # 查看有哪些文件夹 git rm -r --cached target # 删除target文件夹 git commit –m &amp;#34;版本更新信息&amp;#34; git push git@github.com:Hyominn/java_demo.git 设置git代理 # http git config --global https.proxy http://127.0.0.1:1080 git config --global https.proxy https://127.0.0.1:1080 # socks5 git config --global http.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global https.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; # 取消代理 git config --global --unset http.proxy git config --global --unset https.</description>
     </item>
     
     <item>
@@ -420,19 +433,6 @@ server{listen80;server_namesite42.openheart.icu;location/{root/usr/project/openh
       <guid>https://www.openheart.icu/cs/php/</guid>
       <description>Operation systemctl start php-fpm systemctl restart php-fpm service php-fpm start service php-fpm restart service php-fpm stop service php-fpm reload Problem 1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组
 user = nginx group = users </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.openheart.icu/cs/dot-net-issue/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
-      <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
- Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
- 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
-Note that run time is not included in this list by default. To change this behaviour:
- Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services .</description>
     </item>
     
     <item>

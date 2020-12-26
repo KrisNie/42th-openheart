@@ -13,6 +13,39 @@
     
     
         <item>
+        <title>Distributed cache</title>
+        <link>https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/</link>
+        <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/ -&lt;p&gt;&lt;em&gt;简单了解分布式缓存的各种概念&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;缓存雪崩&#34;&gt;缓存雪崩&lt;/h1&gt;
+&lt;p&gt;缓存雪崩我们可以简单的理解为：由于原有&lt;strong&gt;缓存失效&lt;/strong&gt;，新缓存未到期间所有原本应该访问缓存的请求都去查询数据库了，而对数据库 CPU 和内存造成巨大压力，严重的会造成数据库宕机。从而形成一系列连锁反应，造成整个系统崩溃。&lt;/p&gt;
+&lt;p&gt;关键词：缓存失效，针对这种情况一般有三种处理办法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一般并发量不是特别多的时候，使用最多的解决方案是加锁排队。&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;给每一个缓存数据增加相应的缓存标记，记录缓存的是否失效，如果缓存标记失效，则更新数据缓存。&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;为 key 设置不同的缓存失效时间。&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;第二、第三中方法在面试中均被提到过，很遗憾我只想到了第一种解决办法（纯粹靠蒙），被连续问到两次后觉得分布式缓存需要整体都了解一下，于是去查资料整理了本文&lt;/em&gt; 😁&lt;/p&gt;
+&lt;h1 id=&#34;缓存穿透&#34;&gt;缓存穿透&lt;/h1&gt;
+&lt;p&gt;缓存穿透是指用户查询数据，在数据库没有，自然在缓存中也不会有。这样就导致用户查询的时候，在 缓存中找不到，每次都要去数据库再查询一遍，然后返回空（相当于进行了两次无用的查询）。这样请求就绕过缓存直接查数据库，这也是经常提的缓存命中率问题。&lt;/p&gt;
+&lt;p&gt;有很多种方法可以有效地解决缓存穿透问题，最常见的则是采用布隆过滤器，将所有可能存在的数据哈 希到一个足够大的 bitmap 中，一个一定不存在的数据会被这个 bitmap 拦截掉，从而避免了对底层存 储系统的查询压力。&lt;/p&gt;
+&lt;p&gt;另外也有一个更为简单粗暴的方法，如果一个查询返回的数据为空（不管是数据不 存在，还是系统故障），我们仍然把这个空结果进行缓存，但它的过期时间会很短，最长不超过五分钟。 通过这个直接设置的默认值存放到缓存，这样第二次到缓冲中获取就有值了，而不会继续访问数据库。&lt;/p&gt;
+&lt;h1 id=&#34;缓存预热&#34;&gt;缓存预热&lt;/h1&gt;
+&lt;p&gt;缓存预热就是系统上线后，将相关的缓存数据直接加载到缓存系统。这样就可以避免在用户请求的时候，先查询数据库，然后再将数据缓存的问题。用户直接查询事先被预热的缓存数据。&lt;/p&gt;
+&lt;h1 id=&#34;缓存更新&#34;&gt;缓存更新&lt;/h1&gt;
+&lt;p&gt;缓存更新除了缓存服务器自带的缓存失效策略之外（Redis 默认的有 6 中策略可供选择），我们还可以根据具体的业务需求进行自定义的缓存淘汰，常见的策略有两种：&lt;/p&gt;
+&lt;p&gt;（1）定时去清理过期的缓存；&lt;/p&gt;
+&lt;p&gt;（2）当有用户请求过来时，再判断这个请求所用到的缓存是否过期，过期的话就去底层系统得到新数据并更新缓存。&lt;/p&gt;
+&lt;h1 id=&#34;缓存降级&#34;&gt;缓存降级&lt;/h1&gt;
+&lt;p&gt;当访问量剧增、服务出现问题（如响应时间慢或不响应）或非核心服务影响到核心流程的性能时，仍然需要保证服务还是可用的，即使是有损服务。系统可以根据一些关键数据进行自动降级，也可以配置开关实现人工降级。 降级的最终目的是保证核心服务可用，即使是有损的。 而且有些服务是无法降级的（如加入购物车、结算）。&lt;/p&gt;
+- https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
         <title>Reliability&amp;Availability</title>
         <link>https://www.openheart.icu/cs/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E5%92%8C%E9%AB%98%E5%8F%AF%E9%9D%A0%E6%80%A7/</link>
         <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
@@ -2263,78 +2296,6 @@ private protected：只有在其声明程序集内，通过相同 class 中的�
 &lt;p&gt;输入网址后DNS(域名解析协议)将网址转换成对应的IP，然后网络在路由表中查找最适合一条路由连接到对应的服务器ip，也就是刚刚转换的ip。此时，传输层tcp经过三次握手后简历连接，服务器收到http请求(get/post)等后，进行相应的处理并把结果数据返回到浏览器上，此时输入网址后对应的信息就会显示出来。&lt;/p&gt;
 &lt;hr&gt;
 - https://www.openheart.icu/cs/dot-net-interview/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>206. Reverse Linked List</title>
-        <link>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</guid>
-        <description>42th openheart https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ -&lt;h1 id=&#34;reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/reverse-linked-list&#34;&gt;Reverse a singly linked list.&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Example:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
-Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Follow up:&lt;/p&gt;
-&lt;p&gt;A linked list can be reversed either iteratively or recursively. Could you implement both?&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;迭代&#34;&gt;迭代&lt;/h2&gt;
-&lt;p&gt;将&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;转化为&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NULL&amp;lt;-1&amp;lt;-2&amp;lt;-3&amp;lt;-4&amp;lt;-5&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;使用一个prev节点存储上一个节点（初始为NULL），将当前curr节点的next指向prev节点，prev节点存储curr节点，curr存储curr的原next节点，完成一次迭代。最后返回prev（最后的curr是原ListNode的NULL）&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * Definition for singly-linked list.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * public class ListNode {
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     int val;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     ListNode next;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     ListNode(int x) { val = x; }
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * }
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; */&lt;/span&gt;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ListNode &lt;span style=&#34;color:#008b45&#34;&gt;reverseList&lt;/span&gt;(ListNode head) {
-    ListNode prev = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-    ListNode curr = head;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;while&lt;/span&gt; (curr != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) {
-        ListNode nextTemp = curr.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;;
-        curr.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = prev;
-        prev = curr;
-        curr = nextTemp;
-    }
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; prev;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;时间复杂度分析&#34;&gt;时间复杂度分析&lt;/h3&gt;
-&lt;p&gt;时间复杂度：&lt;em&gt;O&lt;/em&gt;(n)&lt;/p&gt;
-&lt;p&gt;空间复杂度：&lt;em&gt;O&lt;/em&gt;(1)&lt;/p&gt;
-&lt;h2 id=&#34;递归&#34;&gt;递归&lt;/h2&gt;
-&lt;p&gt;将
-$$
-n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}→&amp;hellip;→n_m→∅
-$$
-转化为
-$$
-n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}←&amp;hellip;←n_m
-$$
-先转化原链表最后一个节点，然后依次转化直到n&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ListNode &lt;span style=&#34;color:#008b45&#34;&gt;reverseList&lt;/span&gt;(ListNode head) {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (head == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt; || head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; head;
-    ListNode p = reverseList(head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;);
-    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = head;
-    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; p;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;时间复杂度分析-1&#34;&gt;时间复杂度分析&lt;/h3&gt;
-&lt;p&gt;时间复杂度：O(n)，假设 n 是列表的长度，那么时间复杂度为 O(n)。&lt;/p&gt;
-&lt;p&gt;空间复杂度：O(n)，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。&lt;/p&gt;
-- https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

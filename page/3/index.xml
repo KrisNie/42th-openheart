@@ -13,6 +13,110 @@
     
     
         <item>
+        <title>About</title>
+        <link>https://www.openheart.icu/about/</link>
+        <pubDate>Fri, 17 Jul 2020 22:57:45 +0800</pubDate>
+        
+        <guid>https://www.openheart.icu/about/</guid>
+        <description>42th openheart https://www.openheart.icu/about/ -&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
+&lt;p&gt;I am Kris Nie.&lt;/p&gt;
+&lt;p&gt;Github: &lt;a href=&#34;https://github.com/Hyominn&#34;&gt;@Hyominn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ins: &lt;a href=&#34;https://www.instagram.com/krisnie42/&#34;&gt;@krisnie42&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Twitter: &lt;a href=&#34;https://twitter.com/hehe54213&#34;&gt;@hehe54213&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Weibo: &lt;a href=&#34;https://weibo.com/1772713151/profile&#34;&gt;@她的头发蓬松如云&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
+&lt;p&gt;This is my Hugo blog :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;42th openheart.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用来记录我的第42次不开心&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.
+├── Gossip			#谨言慎行
+├── ComputerScience		#计算机科学
+├── Arithmetic			#算法
+├── About			#关于
+├── Category			#归类
+└── Tags			#标签
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Thanks for theme makers:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hugo Theme &lt;a href=&#34;https://github.com/amazingrise/hugo-theme-diary&#34;&gt;Diary&lt;/a&gt; by &lt;a href=&#34;https://amazingrise.net/&#34;&gt;Rise&lt;/a&gt; Ported from &lt;a href=&#34;https://mak1t0.cc/&#34;&gt;Makito&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://github.com/SumiMakito/hexo-theme-journal/&#34;&gt;Journal.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/about/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>206. Reverse Linked List</title>
+        <link>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/arithmetic/206.-reverse-linked-list/</guid>
+        <description>42th openheart https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ -&lt;h1 id=&#34;reverse-a-singly-linked-listhttpsleetcode-cncomproblemsreverse-linked-list&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/reverse-linked-list&#34;&gt;Reverse a singly linked list.&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
+Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Follow up:&lt;/p&gt;
+&lt;p&gt;A linked list can be reversed either iteratively or recursively. Could you implement both?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;迭代&#34;&gt;迭代&lt;/h2&gt;
+&lt;p&gt;将&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;转化为&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NULL&amp;lt;-1&amp;lt;-2&amp;lt;-3&amp;lt;-4&amp;lt;-5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用一个prev节点存储上一个节点（初始为NULL），将当前curr节点的next指向prev节点，prev节点存储curr节点，curr存储curr的原next节点，完成一次迭代。最后返回prev（最后的curr是原ListNode的NULL）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * Definition for singly-linked list.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * public class ListNode {
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     int val;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     ListNode next;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; *     ListNode(int x) { val = x; }
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; * }
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ListNode &lt;span style=&#34;color:#008b45&#34;&gt;reverseList&lt;/span&gt;(ListNode head) {
+    ListNode prev = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
+    ListNode curr = head;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;while&lt;/span&gt; (curr != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) {
+        ListNode nextTemp = curr.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;;
+        curr.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = prev;
+        prev = curr;
+        curr = nextTemp;
+    }
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; prev;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;时间复杂度分析&#34;&gt;时间复杂度分析&lt;/h3&gt;
+&lt;p&gt;时间复杂度：&lt;em&gt;O&lt;/em&gt;(n)&lt;/p&gt;
+&lt;p&gt;空间复杂度：&lt;em&gt;O&lt;/em&gt;(1)&lt;/p&gt;
+&lt;h2 id=&#34;递归&#34;&gt;递归&lt;/h2&gt;
+&lt;p&gt;将
+$$
+n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}→&amp;hellip;→n_m→∅
+$$
+转化为
+$$
+n_1→&amp;hellip;→n_{k−1}→n_k→n_{k+1}←&amp;hellip;←n_m
+$$
+先转化原链表最后一个节点，然后依次转化直到n&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ListNode &lt;span style=&#34;color:#008b45&#34;&gt;reverseList&lt;/span&gt;(ListNode head) {
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (head == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt; || head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; head;
+    ListNode p = reverseList(head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;);
+    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt;.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = head;
+    head.&lt;span style=&#34;color:#658b00&#34;&gt;next&lt;/span&gt; = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; p;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;时间复杂度分析-1&#34;&gt;时间复杂度分析&lt;/h3&gt;
+&lt;p&gt;时间复杂度：O(n)，假设 n 是列表的长度，那么时间复杂度为 O(n)。&lt;/p&gt;
+&lt;p&gt;空间复杂度：O(n)，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。&lt;/p&gt;
+- https://www.openheart.icu/arithmetic/206.-reverse-linked-list/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
         <title>Computer network</title>
         <link>https://www.openheart.icu/cs/computer-network/</link>
         <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
@@ -57,29 +161,43 @@ git rm -r --cached target   &lt;span style=&#34;color:#228b22&#34;&gt;# 删除ta
 git commit –m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;版本更新信息&amp;#34;&lt;/span&gt;
 git push git@github.com:Hyominn/java_demo.git   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置git代理&#34;&gt;设置git代理&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global https.proxy http://127.0.0.1:1080
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# http&lt;/span&gt;
+git config --global https.proxy http://127.0.0.1:1080
 git config --global https.proxy https://127.0.0.1:1080
 
+&lt;span style=&#34;color:#228b22&#34;&gt;# socks5&lt;/span&gt;
 git config --global http.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
 git config --global https.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
 
+&lt;span style=&#34;color:#228b22&#34;&gt;# 取消代理&lt;/span&gt;
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 
 npm config delete proxy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;遇到pull不下来&#34;&gt;遇到pull不下来&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git reset --hard FETCH_HEAD
-git clone  https://www.github.com/Hyominn/openheart.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;更改用户名邮箱&#34;&gt;更改用户名邮箱&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global user.name &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris Nie&amp;#34;&lt;/span&gt;
-git config --global user.email krisnie@qq.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;查看git安装路径&#34;&gt;查看git安装路径&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Mac: &lt;code&gt;which git&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Windows: &lt;code&gt;where git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Windows: &lt;code&gt;where git&lt;/code&gt; powershell用where.exe git.exe&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
-- https://www.openheart.icu/cs/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
+&lt;h2 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 遇到pull不下来&lt;/span&gt;
+git reset --hard FETCH_HEAD
+git clone  https://www.github.com/XXXX/XXX.git
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 修改邮箱&lt;/span&gt;
+git config --global user.name &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris Nie&amp;#34;&lt;/span&gt;
+git config --global user.email krisnie@qq.com
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Commit undo&lt;/span&gt;
+git reset HEAD~ &lt;span style=&#34;color:#228b22&#34;&gt;#只undo最后一次&lt;/span&gt;
+
+git reflog &lt;span style=&#34;color:#228b22&#34;&gt;#显示所有操作&lt;/span&gt;
+git reset d0988e7a0d
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# delete branch&lt;/span&gt;
+git branch -D mybranch
+git remote prune origin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -918,223 +1036,6 @@ nginx -c /etc/nginx/nginx.conf
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;1h;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/nginx/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>PHP</title>
-        <link>https://www.openheart.icu/cs/php/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/php/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/php/ -&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl start php-fpm
-systemctl restart php-fpm
-
-service php-fpm start
-service php-fpm restart
-service php-fpm stop
-service php-fpm reload
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt; = nginx
-&lt;span style=&#34;color:#00688b&#34;&gt;group&lt;/span&gt; = users
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/php/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>想吃肉</title>
-        <link>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</link>
-        <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ -&lt;p&gt;去年&lt;/p&gt;
-&lt;p&gt;这个时候&lt;/p&gt;
-&lt;p&gt;我们&lt;/p&gt;
-&lt;p&gt;在想&lt;/p&gt;
-&lt;p&gt;那个女人&lt;/p&gt;
-&lt;p&gt;下月结婚的话&lt;/p&gt;
-&lt;p&gt;书狗&lt;/p&gt;
-&lt;p&gt;去不去&lt;/p&gt;
-&lt;p&gt;今年&lt;/p&gt;
-&lt;p&gt;这个时候&lt;/p&gt;
-&lt;p&gt;我们&lt;/p&gt;
-&lt;p&gt;在想&lt;/p&gt;
-&lt;p&gt;那个女人&lt;/p&gt;
-&lt;p&gt;去年结婚的话&lt;/p&gt;
-&lt;p&gt;书狗&lt;/p&gt;
-&lt;p&gt;去不去&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;我把&lt;/p&gt;
-&lt;p&gt;非自来的&lt;/p&gt;
-&lt;p&gt;农夫山泉水&lt;/p&gt;
-&lt;p&gt;烧开&lt;/p&gt;
-&lt;p&gt;期间&lt;/p&gt;
-&lt;p&gt;蒙眼喝掉&lt;/p&gt;
-&lt;p&gt;每100毫升&lt;/p&gt;
-&lt;p&gt;含180千焦能量的&lt;/p&gt;
-&lt;p&gt;两块五毛钱&lt;/p&gt;
-&lt;p&gt;发现&lt;/p&gt;
-&lt;p&gt;蒙眼&lt;/p&gt;
-&lt;p&gt;并不能防止&lt;/p&gt;
-&lt;p&gt;两块五毛钱&lt;/p&gt;
-&lt;p&gt;让我&lt;/p&gt;
-&lt;p&gt;疯狂&lt;/p&gt;
-&lt;p&gt;打嗝儿&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;往不值一提的&lt;/p&gt;
-&lt;p&gt;玻璃容器中&lt;/p&gt;
-&lt;p&gt;加随意毫升的&lt;/p&gt;
-&lt;p&gt;烫水&lt;/p&gt;
-&lt;p&gt;5粒红黑红黑红相间的&lt;/p&gt;
-&lt;p&gt;枸杞&lt;/p&gt;
-&lt;p&gt;4节长短长短不齐的&lt;/p&gt;
-&lt;p&gt;金银花&lt;/p&gt;
-&lt;p&gt;1粒没掉到过地上的&lt;/p&gt;
-&lt;p&gt;胎菊&lt;/p&gt;
-&lt;p&gt;如果&lt;/p&gt;
-&lt;p&gt;算上&lt;/p&gt;
-&lt;p&gt;掉到过地上的&lt;/p&gt;
-&lt;p&gt;那就是3粒&lt;/p&gt;
-&lt;p&gt;胎菊&lt;/p&gt;
-&lt;p&gt;不需要&lt;/p&gt;
-&lt;p&gt;用咖啡勺&lt;/p&gt;
-&lt;p&gt;从容&lt;/p&gt;
-&lt;p&gt;潇洒&lt;/p&gt;
-&lt;p&gt;肆意&lt;/p&gt;
-&lt;p&gt;老练&lt;/p&gt;
-&lt;p&gt;地搅动一周&lt;/p&gt;
-&lt;p&gt;又一周&lt;/p&gt;
-&lt;p&gt;直接加入2.5块冰糖&lt;/p&gt;
-&lt;p&gt;即可&lt;/p&gt;
-&lt;p&gt;完美&lt;/p&gt;
-&lt;p&gt;复刻&lt;/p&gt;
-&lt;p&gt;爷爷泡的茶&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;反复&lt;/p&gt;
-&lt;p&gt;轻捻&lt;/p&gt;
-&lt;p&gt;揉搓&lt;/p&gt;
-&lt;p&gt;爱抚&lt;/p&gt;
-&lt;p&gt;玻璃杯的&lt;/p&gt;
-&lt;p&gt;把手&lt;/p&gt;
-&lt;p&gt;等待&lt;/p&gt;
-&lt;p&gt;149秒后&lt;/p&gt;
-&lt;p&gt;凭心情&lt;/p&gt;
-&lt;p&gt;吹几下热茶&lt;/p&gt;
-&lt;p&gt;喝完&lt;/p&gt;
-&lt;p&gt;第一杯&lt;/p&gt;
-&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
-&lt;p&gt;拿出&lt;/p&gt;
-&lt;p&gt;富士康工厂&lt;/p&gt;
-&lt;p&gt;都是双眼皮员工的&lt;/p&gt;
-&lt;p&gt;高端车间里装配的&lt;/p&gt;
-&lt;p&gt;高级电脑&lt;/p&gt;
-&lt;p&gt;开机&lt;/p&gt;
-&lt;p&gt;打开神秘的编程软件&lt;/p&gt;
-&lt;p&gt;配着&lt;/p&gt;
-&lt;p&gt;窗外经十路上&lt;/p&gt;
-&lt;p&gt;无法逃避的&lt;/p&gt;
-&lt;p&gt;车流声&lt;/p&gt;
-&lt;p&gt;双手&lt;/p&gt;
-&lt;p&gt;在键盘上&lt;/p&gt;
-&lt;p&gt;从容&lt;/p&gt;
-&lt;p&gt;潇洒&lt;/p&gt;
-&lt;p&gt;肆意&lt;/p&gt;
-&lt;p&gt;老练&lt;/p&gt;
-&lt;p&gt;地敲打&lt;/p&gt;
-&lt;p&gt;表情&lt;/p&gt;
-&lt;p&gt;老成持重&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;经过&lt;/p&gt;
-&lt;p&gt;简单的&lt;/p&gt;
-&lt;p&gt;数学高阶计算&lt;/p&gt;
-&lt;p&gt;复杂的&lt;/p&gt;
-&lt;p&gt;量子力学分析&lt;/p&gt;
-&lt;p&gt;2899秒后&lt;/p&gt;
-&lt;p&gt;我改完&lt;/p&gt;
-&lt;p&gt;13行代码&lt;/p&gt;
-&lt;p&gt;如果&lt;/p&gt;
-&lt;p&gt;多一秒&lt;/p&gt;
-&lt;p&gt;或者&lt;/p&gt;
-&lt;p&gt;少一行&lt;/p&gt;
-&lt;p&gt;那就只能&lt;/p&gt;
-&lt;p&gt;全部删掉&lt;/p&gt;
-&lt;p&gt;然后背着&lt;/p&gt;
-&lt;p&gt;比我年轻3岁半&lt;/p&gt;
-&lt;p&gt;正如花似玉&lt;/p&gt;
-&lt;p&gt;含苞待放的&lt;/p&gt;
-&lt;p&gt;女同事&lt;/p&gt;
-&lt;p&gt;偷偷&lt;/p&gt;
-&lt;p&gt;换掉&lt;/p&gt;
-&lt;p&gt;报错的代码&lt;/p&gt;
-&lt;p&gt;我依旧是&lt;/p&gt;
-&lt;p&gt;那个没有BUG的&lt;/p&gt;
-&lt;p&gt;美男子&lt;/p&gt;
-&lt;p&gt;女同事&lt;/p&gt;
-&lt;p&gt;今晚&lt;/p&gt;
-&lt;p&gt;依旧会&lt;/p&gt;
-&lt;p&gt;做梦&lt;/p&gt;
-&lt;p&gt;梦到&lt;/p&gt;
-&lt;p&gt;我&lt;/p&gt;
-&lt;p&gt;的代码&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;继续&lt;/p&gt;
-&lt;p&gt;喝完&lt;/p&gt;
-&lt;p&gt;第二杯&lt;/p&gt;
-&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
-&lt;p&gt;我认为&lt;/p&gt;
-&lt;p&gt;Apple Music&lt;/p&gt;
-&lt;p&gt;下首要播放的&lt;/p&gt;
-&lt;p&gt;《突然想起你》&lt;/p&gt;
-&lt;p&gt;用的是不是&lt;/p&gt;
-&lt;p&gt;三峡大坝&lt;/p&gt;
-&lt;p&gt;发的电&lt;/p&gt;
-&lt;p&gt;对书狗&lt;/p&gt;
-&lt;p&gt;去不去&lt;/p&gt;
-&lt;p&gt;那个女人的&lt;/p&gt;
-&lt;p&gt;婚礼&lt;/p&gt;
-&lt;p&gt;没有&lt;/p&gt;
-&lt;p&gt;任何影响&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;今年&lt;/p&gt;
-&lt;p&gt;没人&lt;/p&gt;
-&lt;p&gt;送我&lt;/p&gt;
-&lt;p&gt;他们自酿的&lt;/p&gt;
-&lt;p&gt;散装红酒&lt;/p&gt;
-&lt;p&gt;我只有&lt;/p&gt;
-&lt;p&gt;75度的&lt;/p&gt;
-&lt;p&gt;医用酒精&lt;/p&gt;
-&lt;p&gt;但我&lt;/p&gt;
-&lt;p&gt;没有烧杯&lt;/p&gt;
-&lt;p&gt;不能&lt;/p&gt;
-&lt;p&gt;精确配比&lt;/p&gt;
-&lt;p&gt;勾兑出82年的&lt;/p&gt;
-&lt;p&gt;波尔多&lt;em&gt;Lafite&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;所以&lt;/p&gt;
-&lt;p&gt;只能&lt;/p&gt;
-&lt;p&gt;全部&lt;/p&gt;
-&lt;p&gt;倒掉&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;我好想&lt;/p&gt;
-&lt;p&gt;十块钱一瓶的&lt;/p&gt;
-&lt;p&gt;一厂小优&lt;/p&gt;
-&lt;p&gt;八十一箱的&lt;/p&gt;
-&lt;p&gt;勇闯天涯&lt;/p&gt;
-&lt;p&gt;一直没喝惯的&lt;/p&gt;
-&lt;p&gt;泰山原浆&lt;/p&gt;
-&lt;p&gt;极大部分是辣椒的&lt;/p&gt;
-&lt;p&gt;辣炒花嘎&lt;/p&gt;
-&lt;p&gt;我好想&lt;/p&gt;
-&lt;p&gt;好想&lt;/p&gt;
-&lt;p&gt;好想&lt;/p&gt;
-&lt;p&gt;出去&lt;/p&gt;
-&lt;p&gt;吃肉&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2020-02-14，泉城，小雨&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

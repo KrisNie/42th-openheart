@@ -129,7 +129,7 @@ IPv6地址(实验) ​ 2620:0:ccc::2
       
       <guid>https://www.openheart.icu/cs/git/</guid>
       <description>idea设置git idea -&amp;gt;VSC -&amp;gt;Create Git Repository 右击工程文件 -&amp;gt;git-&amp;gt;add 右击工程文件 -&amp;gt;git-&amp;gt;commit
-git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.com:Hyominn/java_demo.git git add . dir # 查看有哪些文件夹 git rm -r --cached target # 删除target文件夹 git commit –m &amp;#34;版本更新信息&amp;#34; git push git@github.com:Hyominn/java_demo.git 设置git代理 git config --global https.proxy http://127.0.0.1:1080 git config --global https.proxy https://127.0.0.1:1080 git config --global http.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global https.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global --unset http.proxy git config --global --unset https.proxy npm config delete proxy 遇到pull不下来 git reset --hard FETCH_HEAD git clone https://www.</description>
+git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.com:Hyominn/java_demo.git git add . dir # 查看有哪些文件夹 git rm -r --cached target # 删除target文件夹 git commit –m &amp;#34;版本更新信息&amp;#34; git push git@github.com:Hyominn/java_demo.git 设置git代理 # http git config --global https.proxy http://127.0.0.1:1080 git config --global https.proxy https://127.0.0.1:1080 # socks5 git config --global http.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global https.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; # 取消代理 git config --global --unset http.proxy git config --global --unset https.</description>
     </item>
     
     <item>

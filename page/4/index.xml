@@ -13,6 +13,223 @@
     
     
         <item>
+        <title>PHP</title>
+        <link>https://www.openheart.icu/cs/php/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/php/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/php/ -&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl start php-fpm
+systemctl restart php-fpm
+
+service php-fpm start
+service php-fpm restart
+service php-fpm stop
+service php-fpm reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt; = nginx
+&lt;span style=&#34;color:#00688b&#34;&gt;group&lt;/span&gt; = users
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/php/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>想吃肉</title>
+        <link>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</link>
+        <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ -&lt;p&gt;去年&lt;/p&gt;
+&lt;p&gt;这个时候&lt;/p&gt;
+&lt;p&gt;我们&lt;/p&gt;
+&lt;p&gt;在想&lt;/p&gt;
+&lt;p&gt;那个女人&lt;/p&gt;
+&lt;p&gt;下月结婚的话&lt;/p&gt;
+&lt;p&gt;书狗&lt;/p&gt;
+&lt;p&gt;去不去&lt;/p&gt;
+&lt;p&gt;今年&lt;/p&gt;
+&lt;p&gt;这个时候&lt;/p&gt;
+&lt;p&gt;我们&lt;/p&gt;
+&lt;p&gt;在想&lt;/p&gt;
+&lt;p&gt;那个女人&lt;/p&gt;
+&lt;p&gt;去年结婚的话&lt;/p&gt;
+&lt;p&gt;书狗&lt;/p&gt;
+&lt;p&gt;去不去&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我把&lt;/p&gt;
+&lt;p&gt;非自来的&lt;/p&gt;
+&lt;p&gt;农夫山泉水&lt;/p&gt;
+&lt;p&gt;烧开&lt;/p&gt;
+&lt;p&gt;期间&lt;/p&gt;
+&lt;p&gt;蒙眼喝掉&lt;/p&gt;
+&lt;p&gt;每100毫升&lt;/p&gt;
+&lt;p&gt;含180千焦能量的&lt;/p&gt;
+&lt;p&gt;两块五毛钱&lt;/p&gt;
+&lt;p&gt;发现&lt;/p&gt;
+&lt;p&gt;蒙眼&lt;/p&gt;
+&lt;p&gt;并不能防止&lt;/p&gt;
+&lt;p&gt;两块五毛钱&lt;/p&gt;
+&lt;p&gt;让我&lt;/p&gt;
+&lt;p&gt;疯狂&lt;/p&gt;
+&lt;p&gt;打嗝儿&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;往不值一提的&lt;/p&gt;
+&lt;p&gt;玻璃容器中&lt;/p&gt;
+&lt;p&gt;加随意毫升的&lt;/p&gt;
+&lt;p&gt;烫水&lt;/p&gt;
+&lt;p&gt;5粒红黑红黑红相间的&lt;/p&gt;
+&lt;p&gt;枸杞&lt;/p&gt;
+&lt;p&gt;4节长短长短不齐的&lt;/p&gt;
+&lt;p&gt;金银花&lt;/p&gt;
+&lt;p&gt;1粒没掉到过地上的&lt;/p&gt;
+&lt;p&gt;胎菊&lt;/p&gt;
+&lt;p&gt;如果&lt;/p&gt;
+&lt;p&gt;算上&lt;/p&gt;
+&lt;p&gt;掉到过地上的&lt;/p&gt;
+&lt;p&gt;那就是3粒&lt;/p&gt;
+&lt;p&gt;胎菊&lt;/p&gt;
+&lt;p&gt;不需要&lt;/p&gt;
+&lt;p&gt;用咖啡勺&lt;/p&gt;
+&lt;p&gt;从容&lt;/p&gt;
+&lt;p&gt;潇洒&lt;/p&gt;
+&lt;p&gt;肆意&lt;/p&gt;
+&lt;p&gt;老练&lt;/p&gt;
+&lt;p&gt;地搅动一周&lt;/p&gt;
+&lt;p&gt;又一周&lt;/p&gt;
+&lt;p&gt;直接加入2.5块冰糖&lt;/p&gt;
+&lt;p&gt;即可&lt;/p&gt;
+&lt;p&gt;完美&lt;/p&gt;
+&lt;p&gt;复刻&lt;/p&gt;
+&lt;p&gt;爷爷泡的茶&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;反复&lt;/p&gt;
+&lt;p&gt;轻捻&lt;/p&gt;
+&lt;p&gt;揉搓&lt;/p&gt;
+&lt;p&gt;爱抚&lt;/p&gt;
+&lt;p&gt;玻璃杯的&lt;/p&gt;
+&lt;p&gt;把手&lt;/p&gt;
+&lt;p&gt;等待&lt;/p&gt;
+&lt;p&gt;149秒后&lt;/p&gt;
+&lt;p&gt;凭心情&lt;/p&gt;
+&lt;p&gt;吹几下热茶&lt;/p&gt;
+&lt;p&gt;喝完&lt;/p&gt;
+&lt;p&gt;第一杯&lt;/p&gt;
+&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
+&lt;p&gt;拿出&lt;/p&gt;
+&lt;p&gt;富士康工厂&lt;/p&gt;
+&lt;p&gt;都是双眼皮员工的&lt;/p&gt;
+&lt;p&gt;高端车间里装配的&lt;/p&gt;
+&lt;p&gt;高级电脑&lt;/p&gt;
+&lt;p&gt;开机&lt;/p&gt;
+&lt;p&gt;打开神秘的编程软件&lt;/p&gt;
+&lt;p&gt;配着&lt;/p&gt;
+&lt;p&gt;窗外经十路上&lt;/p&gt;
+&lt;p&gt;无法逃避的&lt;/p&gt;
+&lt;p&gt;车流声&lt;/p&gt;
+&lt;p&gt;双手&lt;/p&gt;
+&lt;p&gt;在键盘上&lt;/p&gt;
+&lt;p&gt;从容&lt;/p&gt;
+&lt;p&gt;潇洒&lt;/p&gt;
+&lt;p&gt;肆意&lt;/p&gt;
+&lt;p&gt;老练&lt;/p&gt;
+&lt;p&gt;地敲打&lt;/p&gt;
+&lt;p&gt;表情&lt;/p&gt;
+&lt;p&gt;老成持重&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;经过&lt;/p&gt;
+&lt;p&gt;简单的&lt;/p&gt;
+&lt;p&gt;数学高阶计算&lt;/p&gt;
+&lt;p&gt;复杂的&lt;/p&gt;
+&lt;p&gt;量子力学分析&lt;/p&gt;
+&lt;p&gt;2899秒后&lt;/p&gt;
+&lt;p&gt;我改完&lt;/p&gt;
+&lt;p&gt;13行代码&lt;/p&gt;
+&lt;p&gt;如果&lt;/p&gt;
+&lt;p&gt;多一秒&lt;/p&gt;
+&lt;p&gt;或者&lt;/p&gt;
+&lt;p&gt;少一行&lt;/p&gt;
+&lt;p&gt;那就只能&lt;/p&gt;
+&lt;p&gt;全部删掉&lt;/p&gt;
+&lt;p&gt;然后背着&lt;/p&gt;
+&lt;p&gt;比我年轻3岁半&lt;/p&gt;
+&lt;p&gt;正如花似玉&lt;/p&gt;
+&lt;p&gt;含苞待放的&lt;/p&gt;
+&lt;p&gt;女同事&lt;/p&gt;
+&lt;p&gt;偷偷&lt;/p&gt;
+&lt;p&gt;换掉&lt;/p&gt;
+&lt;p&gt;报错的代码&lt;/p&gt;
+&lt;p&gt;我依旧是&lt;/p&gt;
+&lt;p&gt;那个没有BUG的&lt;/p&gt;
+&lt;p&gt;美男子&lt;/p&gt;
+&lt;p&gt;女同事&lt;/p&gt;
+&lt;p&gt;今晚&lt;/p&gt;
+&lt;p&gt;依旧会&lt;/p&gt;
+&lt;p&gt;做梦&lt;/p&gt;
+&lt;p&gt;梦到&lt;/p&gt;
+&lt;p&gt;我&lt;/p&gt;
+&lt;p&gt;的代码&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;继续&lt;/p&gt;
+&lt;p&gt;喝完&lt;/p&gt;
+&lt;p&gt;第二杯&lt;/p&gt;
+&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
+&lt;p&gt;我认为&lt;/p&gt;
+&lt;p&gt;Apple Music&lt;/p&gt;
+&lt;p&gt;下首要播放的&lt;/p&gt;
+&lt;p&gt;《突然想起你》&lt;/p&gt;
+&lt;p&gt;用的是不是&lt;/p&gt;
+&lt;p&gt;三峡大坝&lt;/p&gt;
+&lt;p&gt;发的电&lt;/p&gt;
+&lt;p&gt;对书狗&lt;/p&gt;
+&lt;p&gt;去不去&lt;/p&gt;
+&lt;p&gt;那个女人的&lt;/p&gt;
+&lt;p&gt;婚礼&lt;/p&gt;
+&lt;p&gt;没有&lt;/p&gt;
+&lt;p&gt;任何影响&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;今年&lt;/p&gt;
+&lt;p&gt;没人&lt;/p&gt;
+&lt;p&gt;送我&lt;/p&gt;
+&lt;p&gt;他们自酿的&lt;/p&gt;
+&lt;p&gt;散装红酒&lt;/p&gt;
+&lt;p&gt;我只有&lt;/p&gt;
+&lt;p&gt;75度的&lt;/p&gt;
+&lt;p&gt;医用酒精&lt;/p&gt;
+&lt;p&gt;但我&lt;/p&gt;
+&lt;p&gt;没有烧杯&lt;/p&gt;
+&lt;p&gt;不能&lt;/p&gt;
+&lt;p&gt;精确配比&lt;/p&gt;
+&lt;p&gt;勾兑出82年的&lt;/p&gt;
+&lt;p&gt;波尔多&lt;em&gt;Lafite&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;所以&lt;/p&gt;
+&lt;p&gt;只能&lt;/p&gt;
+&lt;p&gt;全部&lt;/p&gt;
+&lt;p&gt;倒掉&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我好想&lt;/p&gt;
+&lt;p&gt;十块钱一瓶的&lt;/p&gt;
+&lt;p&gt;一厂小优&lt;/p&gt;
+&lt;p&gt;八十一箱的&lt;/p&gt;
+&lt;p&gt;勇闯天涯&lt;/p&gt;
+&lt;p&gt;一直没喝惯的&lt;/p&gt;
+&lt;p&gt;泰山原浆&lt;/p&gt;
+&lt;p&gt;极大部分是辣椒的&lt;/p&gt;
+&lt;p&gt;辣炒花嘎&lt;/p&gt;
+&lt;p&gt;我好想&lt;/p&gt;
+&lt;p&gt;好想&lt;/p&gt;
+&lt;p&gt;好想&lt;/p&gt;
+&lt;p&gt;出去&lt;/p&gt;
+&lt;p&gt;吃肉&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;2020-02-14，泉城，小雨&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
         <title>亲密关系2020</title>
         <link>https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/</link>
         <pubDate>Thu, 06 Feb 2020 10:58:08 -0400</pubDate>
@@ -223,10 +440,6 @@
 &lt;p&gt;&lt;em&gt;2017.12.01&lt;/em&gt;&lt;/p&gt;
 - https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
-    
-    
-    
-    
     
     
     
