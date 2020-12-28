@@ -4977,13 +4977,13 @@ s.Paint(); <span style="color:#228b22">// Calls ISurface.Paint on SampleClass.
 }
 <span style="color:#8b008b;font-weight:bold">interface</span> IRight
 {
-    <span style="color:#00688b;font-weight:bold">int</span> P();
+	<span style="color:#00688b;font-weight:bold">int</span> P();
 }
 </code></pre></div><p>为了同时实现两个接口，类必须对属性 P 和/或方法 P 使用显式实现以避免编译器错误。</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Middle</span> : ILeft, IRight
 {
-    <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#00688b;font-weight:bold">int</span> P() { <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#b452cd">0</span>; }
     <span style="color:#00688b;font-weight:bold">int</span> ILeft.P { <span style="color:#8b008b;font-weight:bold">get</span> { <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#b452cd">0</span>; } }
+    <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#00688b;font-weight:bold">int</span> P() { <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#b452cd">0</span>; }
 }
 </code></pre></div><h4 id="抽象类和接口的使用">抽象类和接口的使用</h4>
 <ol>

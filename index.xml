@@ -166,44 +166,41 @@
 &lt;p&gt;SVP, Senior Vice President 高级副总裁&lt;/p&gt;
 &lt;p&gt;President of Products 产品总裁&lt;/p&gt;
 &lt;h2 id=&#34;mark&#34;&gt;Mark&lt;/h2&gt;
-&lt;dl&gt;
-&lt;dt&gt;! 叹号 exclamation mark/bang&lt;/dt&gt;
-&lt;dt&gt;? 问号 question mark&lt;/dt&gt;
-&lt;dt&gt;, 逗号 comma&lt;/dt&gt;
-&lt;dt&gt;. 点号 dot/period/point&lt;/dt&gt;
-&lt;dd&gt;冒号 colon
-; 分号 semicolon
-” 双引号 quotation marks/double quote
-‘ 单引号/撇号 apostrophe/single quote
-` 重音号 backquote/grave accent
-* 星号 asterisk/star
-+ 加号 plus sign
-- 减号/横线 hyphen/dash/minus sign/
-= 等号 equal sign
-/ 斜线 slash
-\ 反斜线 backslash/escape
-| 竖线 bar/pipe/vertical bar
-_ 下划线 underline/underscore
-$ 美元符号 dollar sign
-@ at at sign
-# 井号 crosshatch/sharp/hash
-% 百分号 percent sign/mod
-&amp;amp; and/和/兼 and/ampersand
-^ 折音号 circumflex/caret
-~ 波浪号 tilde
-{} （左右）花括号/大括号 (left/right|open/close) braces
-[] （左右）方括号/中括号 (left/right|open/close) brackets
-() （左右）圆括号/小括号 (left/right|open/close) parentheses
-&amp;lt;&amp;gt; 尖括号 angle brackets
-&amp;lt; 大于号 less than
-&amp;gt; 小于号 greater than&lt;/dd&gt;
-&lt;/dl&gt;
+&lt;p&gt;&lt;code&gt;!&lt;/code&gt; 叹号 exclamation mark/bang&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;?&lt;/code&gt; 问号 question mark&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,&lt;/code&gt; 逗号 comma&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.&lt;/code&gt; 点号 dot/period/point&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:&lt;/code&gt; 冒号 colon&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;;&lt;/code&gt; 分号 semicolon&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;”&lt;/code&gt; 双引号 quotation marks/double quote&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;‘&lt;/code&gt; 单引号/撇号 apostrophe/single quote&lt;/p&gt;
+&lt;p&gt;`  重音号 backquote/grave accent&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;+&lt;/code&gt; 加号 plus sign&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-&lt;/code&gt; 减号/横线 hyphen/dash/minus sign/&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;=&lt;/code&gt; 等号 equal sign&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/&lt;/code&gt; 斜线 slash&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\ &lt;/code&gt;反斜线 backslash/escape&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;|&lt;/code&gt;竖线 bar/pipe/vertical bar&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;_&lt;/code&gt;下划线 underline/underscore&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$&lt;/code&gt; 美元符号 dollar sign&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@&lt;/code&gt; at at sign&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;#&lt;/code&gt; 井号 crosshatch/sharp/hash&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;%&lt;/code&gt; 百分号 percent sign/mod&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;amp;&lt;/code&gt; and/和/兼 and/ampersand&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;^&lt;/code&gt; 折音号 circumflex/caret&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;~&lt;/code&gt; 波浪号 tilde&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{}&lt;/code&gt; （左右）花括号/大括号 (left/right|open/close) braces&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[]&lt;/code&gt; （左右）方括号/中括号 (left/right|open/close) brackets&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;()&lt;/code&gt; （左右）圆括号/小括号 (left/right|open/close) parentheses&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; 尖括号 angle brackets&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;&lt;/code&gt; 大于号 less than&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt;&lt;/code&gt; 小于号 greater than&lt;/p&gt;
 &lt;p&gt;葡语中的变音符号（diacritic mark）在英文中的读法：&lt;/p&gt;
-&lt;p&gt;^ circumflex/caret
-~ tilde/squiggle
-´ acute
-` grave
-ç cedilla&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;^&lt;/code&gt; circumflex/care&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;~&lt;/code&gt; tilde/squiggle&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;´&lt;/code&gt; acute&lt;/p&gt;
+&lt;p&gt;` grave&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ç&lt;/code&gt; cedilla&lt;/p&gt;
 &lt;p&gt;希腊字母表&lt;/p&gt;
 &lt;p&gt;α　Α　alpha /alpha/ h表示送气音，在古希腊语中尚没有音位/f/，所以/pha/的发音类似普通话的“趴”。&lt;/p&gt;
 &lt;p&gt;β　Β　beta /be:ta/ /e:/表示长元音，/e/的发音不是英语D.J.音标里的[e]，而类似K.K.音标里的/e/或者法语的/e/。/t/不送气，所以/ta/类似普通话“搭”而不是“他”。&lt;/p&gt;
@@ -296,7 +293,7 @@ $ 美元符号 dollar sign
 &lt;blockquote&gt;
 &lt;p&gt;Lean, or Agile, approaches to software acknowledge that the problem of software delivery is at least complicated and can even be complex.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;敏捷开发或精益求精的软件，才能保证在Cynefin的第一或第二象限，避免进入Chaos或者all is not quite as it seems(一切都不尽如人意)的Obvious。我的理解是，Chaos就是毫无头绪；而Obvious就是传统的瀑布式开发，难以适应复杂的需求或者频繁的需求变更。&lt;/p&gt;
+&lt;p&gt;敏捷开发或精益求精的软件，才能保证在Cynefin的第一或第二象限，避免进入Chaos或者all is not quite as it seems(一切都不尽如人意)的Obvious。我的理解是，Chaos就是毫无头绪；而Obvious就是传统的瀑布式开发，难以&lt;strong&gt;适应复杂的需求或者频繁的需求变更&lt;/strong&gt;。&lt;/p&gt;
 &lt;h4 id=&#34;scrum-versus-waterfall&#34;&gt;Scrum versus waterfall&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;waterfall&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
@@ -317,7 +314,7 @@ $ 美元符号 dollar sign
 &lt;p&gt;&lt;em&gt;Given that Agile frameworks are now prevalent, how can you ensure that the code you write enables and complements your development framework?&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;这肯定也是我们所关注的重中之重。&lt;/p&gt;
-&lt;p&gt;敏捷开发流程之外还需要主义的问题：&lt;/p&gt;
+&lt;p&gt;敏捷开发流程之外还需要注意的问题：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Rigidity&lt;/li&gt;
 &lt;li&gt;Lack of abstractions&lt;/li&gt;
@@ -331,6 +328,7 @@ $ 美元符号 dollar sign
 &lt;/ul&gt;
 &lt;h2 id=&#34;kanban&#34;&gt;Kanban&lt;/h2&gt;
 &lt;p&gt;Kanban is a very &lt;strong&gt;simple&lt;/strong&gt; process &lt;strong&gt;with minimal rules&lt;/strong&gt; and a &lt;strong&gt;handful&lt;/strong&gt; of general guidelines.&lt;/p&gt;
+&lt;p&gt;看板是一个非常简单的过程，具有最少的规则和一些通用准则。&lt;/p&gt;
 &lt;p&gt;看板常被用来指代流程本身。简单的看板可以包含only a high-level process(SIPOC模型？，Supplier Input Process Output Customer)：To Do, Doing, and Done(the states map, 类似个人的timesheet，正因为看板的简单通用小到个人大到集体都可以使用)。当然也可以定义许多的规则严格把控整个软件的流程（Analyze/Implement/Verify/Deliver）&lt;/p&gt;
 &lt;p&gt;The popular online work-tracking software : &lt;a href=&#34;https://trello.com/&#34;&gt;Trello&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;limiting-work-in-progress&#34;&gt;Limiting work in progress&lt;/h3&gt;
@@ -363,7 +361,7 @@ $ 美元符号 dollar sign
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;analysis&#34;&gt;Analysis&lt;/h3&gt;
-&lt;h4 id=&#34;lead-time--cycle-time&#34;&gt;Lead time &amp;amp; Cycle time&lt;/h4&gt;
+&lt;h4 id=&#34;lead-time--cycle-time&#34;&gt;Lead time &amp;amp; Cycle time&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Cycle time = Time spent in progress&lt;/p&gt;
@@ -396,14 +394,20 @@ $ 美元符号 dollar sign
 &lt;li&gt;Delivery plateau: 交付平稳期&lt;/li&gt;
 &lt;li&gt;Regulated deployment phase: 团队限制，比如只有周五才可以发布……&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Scrum管理变更的方法是对Sprint设置时间并锁定输入，以便在Sprint开始后到达的新工作必须等到下一次迭代后才能确定优先级和计划时间。看板允许随时添加新工作，但仅提供有关完成新工作可能需要多长时间的服务级别协议（SLA）。看板限制进行中的工作，以确保优先于完成工作而不是重新开始工作。&lt;/p&gt;
+&lt;p&gt;Scrum管理变更的方法是对Sprint设置时间并锁定输入，以便在Sprint开始后到达的新工作必须等到下一次迭代后才能确定优先级和计划时间。看板允许随时添加新工作，但仅提供有关完成新工作可能需要多长时间的服务级别协议（SLA）。WIP Limts看板限制进行中的工作，以确保优先于完成工作而不是开始新的工作。&lt;/p&gt;
 &lt;p&gt;Scrum is Agile for new teams, while Kanban is Agile for mature teams. 如果工作只是项目的一部分，并且时间和金钱资源有限，那么Scrum是最好的选择，因为每个冲刺都可以单独进行成本估算。如果工作是连续的，没有确定的结束日期，则看板更适合。&lt;/p&gt;
 &lt;h2 id=&#34;dependencies-and-layering&#34;&gt;Dependencies and layering&lt;/h2&gt;
-&lt;h3 id=&#34;framework-dependencies&#34;&gt;Framework dependencies&lt;/h3&gt;
-&lt;h3 id=&#34;third-party-dependencies&#34;&gt;Third-party dependencies&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Framework dependencies&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Third-party dependencies&lt;/p&gt;
 &lt;p&gt;The main reason to use a third-party dependency is to exchange the effort required for implementing some features or infrastructure for the effort of integrating something that is already written and suitable for the job.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;.net core 可以使用NuGet依赖管理工具&lt;/p&gt;
-&lt;p&gt;directed graph(acyclic digraphs/cyclic digraph) 用有向图对依赖结构建模 A-&amp;gt;B 为B依赖A；此方式只能展示出依赖关系，并不能展示出依赖关系的具体分类（集成、聚合、复合、关联）。&lt;/p&gt;
+&lt;p&gt;directed graph(acyclic digraphs/cyclic digraph) 用有向图对依赖结构建模 A-&amp;gt;B 为A依赖B；此方式只能展示出依赖关系，并不能展示出依赖关系的具体分类（集成、聚合、复合、关联）。&lt;/p&gt;
 &lt;h3 id=&#34;managing-dependencies&#34;&gt;Managing dependencies&lt;/h3&gt;
 &lt;p&gt;patterns: 经验总结后可以重用的模式&lt;/p&gt;
 &lt;p&gt;anti-patterns: 实际开发中发先存在许多不仅没多少优点，甚至会引入很多问题的模式&lt;/p&gt;
@@ -435,8 +439,71 @@ $ 美元符号 dollar sign
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer&#34;&gt;The Fusion log(程序集绑定日志)&lt;/a&gt;&lt;/strong&gt;  用来打印CLR加载程序集失败的问题，开启以后，任何托管应用程序的所有尝试（无论成功与否）都会被记录到日志中。&lt;/p&gt;
 &lt;p&gt;Not all dependencies require assembly references. One alternative is to deploy the service code as a hosted service. This requires inter-process or inter-network communication, but it minimizes the assembly references required between client and server.&lt;/p&gt;
-&lt;h4 id=&#34;services&#34;&gt;Services&lt;/h4&gt;
+&lt;h4 id=&#34;services待深入了解&#34;&gt;Services(待深入了解)&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;已知端点(编译时就知道服务的位置，直接为客户端创建一个服务代理)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;创建Proxy的两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用Visual Studio为项目添加一个服务引用&lt;/li&gt;
+&lt;li&gt;使用.NET Framework的&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.channelfactory-1?view=dotnet-plat-ext-5.0&#34;&gt;Channel Factory&lt;/a&gt;类编码创建服务代理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;服务发现(只知道服务的绑定类型或协定，但并不清楚服务的宿主地址)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Managed mode
+&lt;ul&gt;
+&lt;li&gt;客户端请求中心服务&lt;/li&gt;
+&lt;li&gt;single point of failure (SPOF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ad-Hoc mode
+&lt;ul&gt;
+&lt;li&gt;采用组播网路消息(multicast network messages)&lt;/li&gt;
+&lt;li&gt;使用UDP协议，每个可发现的服务都会在一个特定的IP地址和端口上等待查询请求(The default implementation of this uses the User Datagram Protocol (UDP), with each discoverable service listening on a specified IP address 1 for queries)， 不可用的服务是不会被发现的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/wcf-discovery&#34;&gt;WCF(Windows Communication Foundation) Discovery&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For an alternative to &lt;em&gt;WCF&lt;/em&gt;, consider gRPC. - - DOTNET 5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;REST(REpresentational State Transfer))ful services&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/archive/msdn-magazine/2009/january/service-station-an-introduction-to-restful-services-with-wcf&#34;&gt;An Introduction To RESTful Services With WCF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;.net core web api 和 grpc 都属于RESTful的服务，更适合跨平台&lt;/p&gt;
+&lt;h3 id=&#34;layering&#34;&gt;Layering&lt;/h3&gt;
+&lt;p&gt;逻辑层与物理层(Layers vs. tiers)&lt;/p&gt;
+&lt;p&gt;两层：用户界面-访问数据&lt;/p&gt;
+&lt;p&gt;三层：用户界面-业务逻辑-数据访问(MVC属于用户界面层)&lt;/p&gt;
+&lt;h4 id=&#34;cross-cutting-concerns切面&#34;&gt;Cross-cutting concerns(切面)&lt;/h4&gt;
+&lt;p&gt;Sometimes a component’s responsibilities are not easily limited to a single layer. Functions such as auditing, security, and caching can permeate through the entire application, because they are applicable at every layer.&lt;/p&gt;
+&lt;p&gt;Aspect-oriented programming (AOP)&lt;/p&gt;
+&lt;p&gt;比如使用扩展属性更加明显优雅简介的完成可以大量重用操作。&lt;/p&gt;
+&lt;h4 id=&#34;asymmetric-layering非对称分层&#34;&gt;Asymmetric layering(非对称分层)&lt;/h4&gt;
+&lt;p&gt;Command/Query Separation(CQS): Bertrand Meyer, in his book Object-Oriented Software Construction (Prentice Hall, 1997), used the phrase command/query separation (CQS) to explain that all object methods should be one of only two things: a command or a query.&lt;/p&gt;
+&lt;p&gt;Command/Query Responsibility Segregation(CQRS): Commands and queries follow much the same rules as with CQS, but CQRS goes one step further: it acknowledges that commands and queries might need to follow different paths through the layering in order to be best handled.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/CQRS-20201227140634.jpg&#34; alt=&#34;Domain models should only be used for handling commands.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Sound management of dependencies很重要&lt;/p&gt;
 &lt;h2 id=&#34;interfaces-and-design-patterns&#34;&gt;Interfaces and design patterns&lt;/h2&gt;
+&lt;h3 id=&#34;diamond-inheritance-problem&#34;&gt;Diamond inheritance problem&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Diamond-20201227143025.png&#34; alt=&#34;Diamond inheritance&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Because of this ambiguity, the .NET Framework does not allow multiple inheritance of classes.&lt;/p&gt;
+&lt;h3 id=&#34;explicit-implementation&#34;&gt;Explicit implementation&lt;/h3&gt;
+&lt;h3 id=&#34;polymorphism多态&#34;&gt;Polymorphism(多态)&lt;/h3&gt;
+&lt;p&gt;The ability to use an object of one type and have it implicitly act as if it were of a different type is called polymorphism.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Polymorphism-20201227144730.png&#34; alt=&#34;ploymorphism&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;adaptive-design-patterns&#34;&gt;Adaptive design patterns&lt;/h3&gt;
+&lt;h4 id=&#34;the-null-object-pattern&#34;&gt;The Null Object pattern&lt;/h4&gt;
+&lt;h4 id=&#34;the-isnull-property-anti-pattern&#34;&gt;The IsNull property anti-pattern&lt;/h4&gt;
+&lt;h4 id=&#34;the-adapter-pattern&#34;&gt;The Adapter pattern&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;The Class Adapter pattern&lt;/li&gt;
+&lt;li&gt;The Object Adapter pattern&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;the-strategy-pattern&#34;&gt;The Strategy pattern&lt;/h4&gt;
+&lt;h4 id=&#34;further-versatility&#34;&gt;Further versatility&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Duck-typing&lt;/li&gt;
+&lt;li&gt;Mixins&lt;/li&gt;
+&lt;li&gt;Fluent interfaces&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;dependency-inversion&#34;&gt;Dependency inversion&lt;/h2&gt;
 - https://www.openheart.icu/cs/adaptive-code/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
