@@ -24,7 +24,7 @@
 &lt;p&gt;Please join me in welcoming Kris to Infor and give them your great support in every way possible!&lt;/p&gt;
 &lt;p&gt;Welcome to the team!&lt;/p&gt;
 &lt;p&gt;Thank you. It is my honor to be able to join our team.&lt;/p&gt;
-&lt;p&gt;Don&amp;rsquo;t spin your wheels! 这里的spin your wheels&lt;a href=&#34;https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD/spin-your-wheels&#34;&gt;(cambridge.org)&lt;/a&gt; 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;quot;&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t spin your wheels! 这里的spin your wheels&lt;a href=&#34;https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD/spin-your-wheels&#34;&gt;(cambridge.org)&lt;/a&gt; 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;You&amp;rsquo;re in good company. 你是一个好合作伙伴。此处的company为朋友、同伴&lt;/p&gt;
 &lt;p&gt;I really enjoy your company. 我很喜欢你的陪伴。此处的company为陪伴&lt;/p&gt;
 &lt;p&gt;She&amp;rsquo;s not coming – she&amp;rsquo;s got company. 她来不了了，她家里有客人。此处的company为客人&lt;/p&gt;
@@ -504,7 +504,7 @@
 &lt;li&gt;Mixins&lt;/li&gt;
 &lt;li&gt;Fluent interfaces&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;dependency-inversionhttpswwwopenhearticucsdependency-injection&#34;&gt;&lt;a href=&#34;https://www.openheart.icu/cs/dependency-injection/&#34;&gt;Dependency inversion&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;dependency-inversion&#34;&gt;Dependency inversion&lt;/h2&gt;
 - https://www.openheart.icu/cs/adaptive-code/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -1048,26 +1048,26 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:right&#34;&gt;Module&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Module&lt;/th&gt;
 &lt;th&gt;IIS Web Core&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Notification&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Notification&lt;/td&gt;
 &lt;td&gt;BeginRequest&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Handler&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Handler&lt;/td&gt;
 &lt;td&gt;Not yet determined&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Error Code&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Error Code&lt;/td&gt;
 &lt;td&gt;0x80070021&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Config Error&lt;/td&gt;
-&lt;td&gt;This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&amp;ldquo;Deny&amp;rdquo;), or set explicitly by a location tag with overrideMode=&amp;ldquo;Deny&amp;rdquo; or the legacy allowOverride=&amp;ldquo;false&amp;rdquo;.&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Config Error&lt;/td&gt;
+&lt;td&gt;This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&amp;quot;Deny&amp;rdquo;), or set explicitly by a location tag with overrideMode=&amp;quot;Deny&amp;rdquo; or the legacy allowOverride=&amp;quot;false&amp;rdquo;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
