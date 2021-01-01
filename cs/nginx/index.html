@@ -672,7 +672,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             2 min
                             
-                            41 s.
+                            6 s.
                         
                     </div>
                 </div>
@@ -707,21 +707,21 @@ nginx -c /etc/nginx/nginx.conf
 <p>增加一个新的<code>listen 80</code></p>
 <p><code>server_name</code>设置为二级域名地址</p>
 <p><code>root</code>指向项目地址</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">server<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>listen<span style="color:#bbb">       </span><span style="color:#b452cd">80</span>;<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>server_name<span style="color:#bbb">  </span>site42.openheart.icu;<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>location<span style="color:#bbb"> </span>/<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>root<span style="color:#bbb">         </span>/usr/project/openheart;<span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">server {<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>listen       80;<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>server_name  site42.openheart.icu;<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>location / {<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>root         /usr/project/openheart;<span style="color:#bbb">
 </span><span style="color:#bbb">    </span>}<span style="color:#bbb">
 </span><span style="color:#bbb"></span>}<span style="color:#bbb">
 </span></code></pre></div><h2 id="强制浏览器使用本地缓存">强制浏览器使用本地缓存</h2>
 <p>cache-control/expires</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#228b22"># nginx.conf 中配置</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span>location<span style="color:#bbb"> </span>~<span style="color:#bbb"> </span>.<span style="color:#1e889b">*\.(gif|jpg|jpeg|png|bmp|swf)${</span><span style="color:#bbb">
-</span><span style="color:#bbb">		</span>expires<span style="color:#bbb"> </span>30d;<span style="color:#bbb">
+</span><span style="color:#bbb"></span>location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)${<span style="color:#bbb">
+</span><span style="color:#bbb">		</span>expires 30d;<span style="color:#bbb">
 </span><span style="color:#bbb"></span>}<span style="color:#bbb">
-</span><span style="color:#bbb"></span>location<span style="color:#bbb"> </span>~<span style="color:#bbb"> </span>.<span style="color:#1e889b">*\.(js|css)?${</span><span style="color:#bbb">
-</span><span style="color:#bbb">		</span>expires<span style="color:#bbb"> </span>1h;<span style="color:#bbb">
+</span><span style="color:#bbb"></span>location ~ .*\.(js|css)?${<span style="color:#bbb">
+</span><span style="color:#bbb">		</span>expires 1h;<span style="color:#bbb">
 </span><span style="color:#bbb"></span>}<span style="color:#bbb">
 </span></code></pre></div>
                     
