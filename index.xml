@@ -24,7 +24,7 @@
 &lt;p&gt;Please join me in welcoming Kris to Infor and give them your great support in every way possible!&lt;/p&gt;
 &lt;p&gt;Welcome to the team!&lt;/p&gt;
 &lt;p&gt;Thank you. It is my honor to be able to join our team.&lt;/p&gt;
-&lt;p&gt;Don&amp;rsquo;t spin your wheels! 这里的spin your wheels&lt;a href=&#34;https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD/spin-your-wheels&#34;&gt;(cambridge.org)&lt;/a&gt; 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;quot;&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t spin your wheels! 这里的spin your wheels&lt;a href=&#34;https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD/spin-your-wheels&#34;&gt;(cambridge.org)&lt;/a&gt; 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;You&amp;rsquo;re in good company. 你是一个好合作伙伴。此处的company为朋友、同伴&lt;/p&gt;
 &lt;p&gt;I really enjoy your company. 我很喜欢你的陪伴。此处的company为陪伴&lt;/p&gt;
 &lt;p&gt;She&amp;rsquo;s not coming – she&amp;rsquo;s got company. 她来不了了，她家里有客人。此处的company为客人&lt;/p&gt;
@@ -68,6 +68,8 @@
 &lt;p&gt;Per my understanding, ……&lt;/p&gt;
 &lt;p&gt;Sorry for the inconvenience.&lt;/p&gt;
 &lt;p&gt;&amp;ndash;I&amp;rsquo;m going to the bar. Anyone else coming?/I&amp;rsquo;m going hunting, are you coming with me?  &amp;ndash; Count me in!&lt;/p&gt;
+&lt;p&gt;Will you please write me a letter sometime when you get the time?&lt;/p&gt;
+&lt;p&gt;Congrats.&lt;/p&gt;
 &lt;h2 id=&#34;phrase&#34;&gt;Phrase&lt;/h2&gt;
 &lt;p&gt;Carbon Copy 副本、抄送，outlook中的&lt;em&gt;cc&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;lead time 交付周期，订货至交货的时间&lt;/p&gt;
@@ -100,6 +102,9 @@
 &lt;p&gt;the logistics of distribution 分销&lt;/p&gt;
 &lt;p&gt;semifinished good 半成品&lt;/p&gt;
 &lt;p&gt;Business as usual (BAU)&lt;/p&gt;
+&lt;p&gt;Cute as a button&lt;/p&gt;
+&lt;p&gt;I have the final say&lt;/p&gt;
+&lt;p&gt;vicious circle&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;abbreviation&#34;&gt;Abbreviation&lt;/h2&gt;
 &lt;h3 id=&#34;phrase-1&#34;&gt;Phrase&lt;/h3&gt;
@@ -321,7 +326,26 @@
 &lt;li&gt;Too many abstractions&lt;/li&gt;
 &lt;li&gt;Mixed responsibilities&lt;/li&gt;
 &lt;li&gt;Untestability&lt;/li&gt;
-&lt;li&gt;Skyhooks vs. cranes(All skyhooks should be replaced with appropriate cranes.)&lt;/li&gt;
+&lt;li&gt;Skyhooks vs. cranes(All skyhooks should be replaced with appropriate cranes.)
+&lt;ul&gt;
+&lt;li&gt;Skyhooks:
+&lt;ul&gt;
+&lt;li&gt;Static methods&lt;/li&gt;
+&lt;li&gt;Static classes (including singletons)&lt;/li&gt;
+&lt;li&gt;Object construction that uses new&lt;/li&gt;
+&lt;li&gt;Extension methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cranes:
+&lt;ul&gt;
+&lt;li&gt;Interfaces&lt;/li&gt;
+&lt;li&gt;Dependency injection&lt;/li&gt;
+&lt;li&gt;Inversion of control&lt;/li&gt;
+&lt;li&gt;Factories&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Metrics&lt;/li&gt;
 &lt;li&gt;Unit test coverage&lt;/li&gt;
 &lt;li&gt;Cyclomatic complexity&lt;/li&gt;
@@ -448,13 +472,13 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;服务发现(只知道服务的绑定类型或协定，但并不清楚服务的宿主地址)&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Managed mode
+&lt;li&gt;Managed mode 托管模式
 &lt;ul&gt;
 &lt;li&gt;客户端请求中心服务&lt;/li&gt;
 &lt;li&gt;single point of failure (SPOF)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Ad-Hoc mode
+&lt;li&gt;Ad-Hoc mode 临时模式
 &lt;ul&gt;
 &lt;li&gt;采用组播网路消息(multicast network messages)&lt;/li&gt;
 &lt;li&gt;使用UDP协议，每个可发现的服务都会在一个特定的IP地址和端口上等待查询请求(The default implementation of this uses the User Datagram Protocol (UDP), with each discoverable service listening on a specified IP address 1 for queries)， 不可用的服务是不会被发现的&lt;/li&gt;
@@ -1048,26 +1072,26 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:right&#34;&gt;Module&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Module&lt;/th&gt;
 &lt;th&gt;IIS Web Core&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Notification&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Notification&lt;/td&gt;
 &lt;td&gt;BeginRequest&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Handler&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Handler&lt;/td&gt;
 &lt;td&gt;Not yet determined&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Error Code&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Error Code&lt;/td&gt;
 &lt;td&gt;0x80070021&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Config Error&lt;/td&gt;
-&lt;td&gt;This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&amp;ldquo;Deny&amp;rdquo;), or set explicitly by a location tag with overrideMode=&amp;ldquo;Deny&amp;rdquo; or the legacy allowOverride=&amp;ldquo;false&amp;rdquo;.&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Config Error&lt;/td&gt;
+&lt;td&gt;This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&amp;quot;Deny&amp;rdquo;), or set explicitly by a location tag with overrideMode=&amp;quot;Deny&amp;rdquo; or the legacy allowOverride=&amp;quot;false&amp;rdquo;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

@@ -584,7 +584,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             1 min
                             
-                            7 s.
+                            25 s.
                         
                     </div>
                 </div>
@@ -622,7 +622,7 @@ npm config delete proxy
 </code></pre></div><h2 id="查看git安装路径">查看git安装路径</h2>
 <ul>
 <li>Mac: <code>which git</code></li>
-<li>Windows: <code>where git</code> powershell用where.exe git.exe</li>
+<li>Windows: <code>where git</code> powershell用 <code>where.exe git.exe</code></li>
 </ul>
 <h2 id="common-operation">Common Operation</h2>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 遇到pull不下来</span>
@@ -635,13 +635,19 @@ git config --global user.email krisnie@qq.com
 
 <span style="color:#228b22"># Commit undo</span>
 git reset HEAD~ <span style="color:#228b22">#只undo最后一次</span>
-
 git reflog <span style="color:#228b22">#显示所有操作</span>
 git reset d0988e7a0d
 
 <span style="color:#228b22"># delete branch</span>
 git branch -D mybranch
 git remote prune origin
+
+<span style="color:#228b22"># update commit after git push</span>
+git commit --amend <span style="color:#228b22"># 进入vim修改 修改完成后:wq 保存</span>
+git push --force-with-lease origin mybranch <span style="color:#228b22">#强制修改</span>
+git fetch origin <span style="color:#228b22"># 如果有人已经pull了未修改前的</span>
+git reset --hard origin/branch <span style="color:#228b22"># 本地端的修改會不見</span>
+
 </code></pre></div>
                     
                     <HR width="100%" id="EOF">

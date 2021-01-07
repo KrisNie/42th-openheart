@@ -7,7 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 14 Nov 2020 16:55:11 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/operation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Nov 2020 16:55:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.openheart.icu/tags/operation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>处理器中的流水线技术</title>
       <link>https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/</link>
@@ -193,8 +197,8 @@ Reverse Proxy（反向代理） 当我们在访问 www.baidu.com 时，百度背
 Common Operation $sudo nginx sudo pkill -f nginx &amp;amp; wait $! sudo systemctl start nginx sudo systemctl restart nginx nginx -c /etc/nginx/nginx.conf # 重启服务 设置二级域名 增加一个新的listen 80
 server_name设置为二级域名地址
 root指向项目地址
-server {listen 80;server_name site42.openheart.icu;location / {root /usr/project/openheart;}}强制浏览器使用本地缓存 cache-control/expires
-# nginx.conf 中配置location ~ .</description>
+server{listen80;server_namesite42.openheart.icu;location/{root/usr/project/openheart;}}强制浏览器使用本地缓存 cache-control/expires
+# nginx.conf 中配置location~.</description>
     </item>
     
     <item>
