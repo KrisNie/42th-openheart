@@ -14,38 +14,6 @@
     
         <item>
         <title>About</title>
-        <link>https://www.openheart.icu/about-%E5%A8%87%E7%BE%9E%E7%A8%9A%E5%AB%A9%E7%9A%84%E5%B0%8F%E8%8F%8A%E8%8A%B1/</link>
-        <pubDate>Fri, 17 Jul 2020 22:57:45 +0800</pubDate>
-        
-        <guid>https://www.openheart.icu/about-%E5%A8%87%E7%BE%9E%E7%A8%9A%E5%AB%A9%E7%9A%84%E5%B0%8F%E8%8F%8A%E8%8A%B1/</guid>
-        <description>42th openheart https://www.openheart.icu/about-%E5%A8%87%E7%BE%9E%E7%A8%9A%E5%AB%A9%E7%9A%84%E5%B0%8F%E8%8F%8A%E8%8A%B1/ -&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;m Kris.&lt;/p&gt;
-&lt;p&gt;Github: &lt;a href=&#34;https://github.com/Hyominn&#34;&gt;@Hyominn&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Ins: &lt;a href=&#34;https://www.instagram.com/krisnie42/&#34;&gt;@krisnie42&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Twitter: &lt;a href=&#34;https://twitter.com/hehe54213&#34;&gt;@hehe54213&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Weibo: &lt;a href=&#34;https://weibo.com/1772713151/profile&#34;&gt;@她的头发蓬松如云&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
-&lt;p&gt;This is my Hugo blog :&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;42th openheart.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;用来记录我的第42次不开心&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.
-├── Gossip #谨言慎行
-├── ComputerScience #计算机科学
-├── Arithmetic #算法
-├── About #关于
-├── Category #归类
-└── Tags #标签
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Thanks for theme makers:&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Hugo Theme &lt;a href=&#34;https://github.com/amazingrise/hugo-theme-diary&#34;&gt;Diary&lt;/a&gt; by &lt;a href=&#34;https://amazingrise.net/&#34;&gt;Rise&lt;/a&gt; Ported from &lt;a href=&#34;https://mak1t0.cc/&#34;&gt;Makito&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://github.com/SumiMakito/hexo-theme-journal/&#34;&gt;Journal.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/about-%E5%A8%87%E7%BE%9E%E7%A8%9A%E5%AB%A9%E7%9A%84%E5%B0%8F%E8%8F%8A%E8%8A%B1/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>About</title>
         <link>https://www.openheart.icu/about/</link>
         <pubDate>Fri, 17 Jul 2020 22:57:45 +0800</pubDate>
         
@@ -63,12 +31,12 @@
 &lt;/blockquote&gt;
 &lt;p&gt;用来记录我的第42次不开心&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;.
-├── Gossip			#谨言慎行
-├── ComputerScience		#计算机科学
-├── Arithmetic			#算法
-├── About			#关于
-├── Category			#归类
-└── Tags			#标签
+├── Gossip #谨言慎行
+├── ComputerScience #计算机科学
+├── Arithmetic #算法
+├── About #关于
+├── Category #归类
+└── Tags #标签
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Thanks for theme makers:&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Hugo Theme &lt;a href=&#34;https://github.com/amazingrise/hugo-theme-diary&#34;&gt;Diary&lt;/a&gt; by &lt;a href=&#34;https://amazingrise.net/&#34;&gt;Rise&lt;/a&gt; Ported from &lt;a href=&#34;https://mak1t0.cc/&#34;&gt;Makito&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://github.com/SumiMakito/hexo-theme-journal/&#34;&gt;Journal.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 - https://www.openheart.icu/about/ - ALL RIGHTS RESERVED KRIS NIE</description>
@@ -1022,6 +990,58 @@ flush privileges;
 &lt;span style=&#34;color:#228b22&#34;&gt;# 修改host 将kris用作登录账户名&lt;/span&gt;
 update mysql.user &lt;span style=&#34;color:#658b00&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; where &lt;span style=&#34;color:#00688b&#34;&gt;User&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mysql/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Nginx</title>
+        <link>https://www.openheart.icu/cs/nginx/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/nginx/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/nginx/ -&lt;h1 id=&#34;reverse-proxy--forward-proxy&#34;&gt;Reverse Proxy &amp;amp; Forward Proxy&lt;/h1&gt;
+&lt;h2 id=&#34;forward-proxy正向代理&#34;&gt;Forward Proxy（正向代理）&lt;/h2&gt;
+&lt;p&gt;我想访问 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; ，然而大家都知道它被墙了，我没法直接访问它。于是我连接了一个 VPN 服务并设定其为本地 HTTP 访问的代理，然后我再访问 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; ，此时我的请求被该 VPN 服务代理了，它帮我访问了 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; 然后把结果返回给我。&lt;/p&gt;
+&lt;p&gt;正向代理隐藏真实客户端，www.google.com 并不知道访问他的是我。&lt;/p&gt;
+&lt;h2 id=&#34;reverse-proxy反向代理&#34;&gt;Reverse Proxy（反向代理）&lt;/h2&gt;
+&lt;p&gt;当我们在访问 &lt;a href=&#34;http://www.baidu.com&#34;&gt;www.baidu.com&lt;/a&gt; 时，百度背后有成千上万个服务器为我们服务，但具体是哪一台，我们并不知道。此时 &lt;a href=&#34;http://www.baidu.com&#34;&gt;www.baidu.com&lt;/a&gt; 就充当一个反向代理服务器，帮我们把请求转发到真实的服务器。&lt;/p&gt;
+&lt;p&gt;反向代理隐藏真实服务端，Nginx就是很好的反向代理服务器，用来做&lt;strong&gt;负载均衡&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;正向代理与反向代理两者的区别在于代理的对象不一样：&lt;strong&gt;正向代理&lt;/strong&gt;代理的对象是客户端，&lt;strong&gt;反向代理&lt;/strong&gt;代理的对象是服务端。&lt;/p&gt;
+&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;$sudo&lt;/span&gt; nginx
+
+sudo pkill -f nginx &amp;amp; &lt;span style=&#34;color:#658b00&#34;&gt;wait&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;$!&lt;/span&gt;
+
+sudo systemctl start nginx
+
+sudo systemctl restart nginx
+
+nginx -c /etc/nginx/nginx.conf
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 重启服务&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置二级域名&#34;&gt;设置二级域名&lt;/h2&gt;
+&lt;p&gt;增加一个新的&lt;code&gt;listen 80&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;server_name&lt;/code&gt;设置为二级域名地址&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;root&lt;/code&gt;指向项目地址&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;server&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;{&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;listen&lt;span style=&#34;color:#bbb&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#b452cd&#34;&gt;80&lt;/span&gt;;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;server_name&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;site42.openheart.icu;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;/&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;{&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;root&lt;span style=&#34;color:#bbb&#34;&gt;         &lt;/span&gt;/usr/project/openheart;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;强制浏览器使用本地缓存&#34;&gt;强制浏览器使用本地缓存&lt;/h2&gt;
+&lt;p&gt;cache-control/expires&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# nginx.conf 中配置&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;~&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;.&lt;span style=&#34;color:#1e889b&#34;&gt;*\.(gif|jpg|jpeg|png|bmp|swf)${&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;30d;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;~&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;.&lt;span style=&#34;color:#1e889b&#34;&gt;*\.(js|css)?${&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;1h;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/nginx/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
