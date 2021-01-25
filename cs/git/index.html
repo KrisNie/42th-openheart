@@ -210,7 +210,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 
 &copy;
 	
-	2021 ALL RIGHTS RESERVED KRIS NIE
+	2020 ALL RIGHTS RESERVED KRIS NIE
 	
 
 
@@ -584,7 +584,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             1 min
                             
-                            30 s.
+                            25 s.
                         
                     </div>
                 </div>
@@ -595,13 +595,16 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 <div class="post-body" v-pre>
                 
                     <h2 id="idea设置git">idea设置git</h2>
+<p>idea -&gt;VSC -&gt;Create Git Repository
+右击工程文件 -&gt;git-&gt;add
+右击工程文件 -&gt;git-&gt;commit</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git remote add origin git@github.com:Hyominn/java_demo.git
 git pull git@github.com:Hyominn/java_demo.git
 git add .
 dir                                                <span style="color:#228b22"># 查看有哪些文件夹</span>
 git rm -r --cached target   <span style="color:#228b22"># 删除target文件夹</span>
 git commit –m <span style="color:#cd5555">&#34;版本更新信息&#34;</span>
-git push kris@github.com:Hyominn/java_demo.git   
+git push git@github.com:Hyominn/java_demo.git   
 </code></pre></div><h2 id="设置git代理">设置git代理</h2>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># http</span>
 git config --global https.proxy http://127.0.0.1:1080
@@ -635,23 +638,15 @@ git reset HEAD~ <span style="color:#228b22">#只undo最后一次</span>
 git reflog <span style="color:#228b22">#显示所有操作</span>
 git reset d0988e7a0d
 
-<span style="color:#228b22"># delete commit</span>
-git reset --soft HEAD~1 <span style="color:#228b22"># 保留修改</span>
-git reset --hard HEAD~1 <span style="color:#228b22"># 不保留修改</span>
-git push origin mybranch --force <span style="color:#228b22"># 强制推送到远端</span>
-
 <span style="color:#228b22"># delete branch</span>
 git branch -D mybranch
 git remote prune origin
-git push origin --delete mybranch
 
 <span style="color:#228b22"># update commit after git push</span>
 git commit --amend <span style="color:#228b22"># 进入vim修改 修改完成后:wq 保存</span>
 git push --force-with-lease origin mybranch <span style="color:#228b22">#强制修改</span>
-
 git fetch origin <span style="color:#228b22"># 如果有人已经pull了未修改前的</span>
 git reset --hard origin/branch <span style="color:#228b22"># 本地端的修改會不見</span>
-
 
 </code></pre></div>
                     
@@ -720,7 +715,7 @@ git reset --hard origin/branch <span style="color:#228b22"># 本地端的修改�
 	
 	&copy;
 		
-		2021 ALL RIGHTS RESERVED KRIS NIE
+		2020 ALL RIGHTS RESERVED KRIS NIE
 		
 	<script>
 		$(function(){
