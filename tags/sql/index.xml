@@ -7,18 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 15 Aug 2020 16:27:30 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.openheart.icu/tags/sql/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 15 Aug 2020 16:27:30 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQLserver</title>
       <link>https://www.openheart.icu/cs/sqlserver/</link>
       <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/sqlserver/</guid>
-      <description>Common Operation Index 聚集索引 非聚集索引 </description>
+      <description>Common Operation Index 聚集索引 非聚集索引 Optimize Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF SET IDENTITY_INSERT Table1 ON --Do INSERT  SET IDENTITY_INSERT Table1 OFF SQL-Server: The backup set holds a backup of a database other than the existing   Don&amp;rsquo;t create an empty database and restore the .bak file on to it. Use &amp;lsquo;Restore Database&amp;rsquo; option accessible by right clicking the &amp;ldquo;Databases&amp;rdquo; branch of the SQL Server Management Studio and provide the database name while providing the source to restore.</description>
     </item>
     
     <item>

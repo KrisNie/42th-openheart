@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html><head>
+<title>C# Special Characters</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="?$@">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="C# Special Characters" />
+<meta property="og:description" content="?$@" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/cs/c#-special-characters/" />
+<meta property="article:published_time" content="2021-01-23T12:14:19+00:00" />
+<meta property="article:modified_time" content="2021-01-23T12:14:26+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C# Special Characters"/>
+<meta name="twitter:description" content="?$@"/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<script src="/vendor/js/vue.min.js" ></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="https://www.openheart.icu//js/loadCSS.js"></script>
+
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://www.openheart.icu//js/toc-collapse.js"></script>
+
+  
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'Hyominn',
+  admin: ['Hyominn'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/boom">
+                Gossip
+            </a>
+            
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+Case42
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@gmail.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2021 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#heading" onclick="onNavClick(`#heading-nav`)" id="heading-nav">
+									?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#1-the--operator-since-visual-studio-2003" onclick="onNavClick(`#1-the--operator-since-visual-studio-2003-nav`)" id="1-the--operator-since-visual-studio-2003-nav">
+									1) The ?: Operator (since Visual Studio 2003)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#2-the-nullable-types-since-visual-studio-2005" onclick="onNavClick(`#2-the-nullable-types-since-visual-studio-2005-nav`)" id="2-the-nullable-types-since-visual-studio-2005-nav">
+									2) The Nullable Types (since Visual Studio 2005)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#3-the-null-conditional-operators-since-visual-studio-2015" onclick="onNavClick(`#3-the-null-conditional-operators-since-visual-studio-2015-nav`)" id="3-the-null-conditional-operators-since-visual-studio-2015-nav">
+									3) The Null-conditional Operators (since Visual Studio 2015)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#4-the---null-coalescing-operator-operator-since-visual-studio-2005" onclick="onNavClick(`#4-the---null-coalescing-operator-operator-since-visual-studio-2005-nav`)" id="4-the---null-coalescing-operator-operator-since-visual-studio-2005-nav">
+									4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#heading-1" onclick="onNavClick(`#heading-1-nav`)" id="heading-1-nav">
+									$
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading-2" onclick="onNavClick(`#heading-2-nav`)" id="heading-2-nav">
+									@
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/boom">
+                    Gossip
+                </a>
+                
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#heading" onclick="onNavClick(`#heading-nav`)" id="heading-nav">
+									?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#1-the--operator-since-visual-studio-2003" onclick="onNavClick(`#1-the--operator-since-visual-studio-2003-nav`)" id="1-the--operator-since-visual-studio-2003-nav">
+									1) The ?: Operator (since Visual Studio 2003)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#2-the-nullable-types-since-visual-studio-2005" onclick="onNavClick(`#2-the-nullable-types-since-visual-studio-2005-nav`)" id="2-the-nullable-types-since-visual-studio-2005-nav">
+									2) The Nullable Types (since Visual Studio 2005)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#3-the-null-conditional-operators-since-visual-studio-2015" onclick="onNavClick(`#3-the-null-conditional-operators-since-visual-studio-2015-nav`)" id="3-the-null-conditional-operators-since-visual-studio-2015-nav">
+									3) The Null-conditional Operators (since Visual Studio 2015)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#4-the---null-coalescing-operator-operator-since-visual-studio-2005" onclick="onNavClick(`#4-the---null-coalescing-operator-operator-since-visual-studio-2005-nav`)" id="4-the---null-coalescing-operator-operator-since-visual-studio-2005-nav">
+									4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#heading-1" onclick="onNavClick(`#heading-1-nav`)" id="heading-1-nav">
+									$
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading-2" onclick="onNavClick(`#heading-2-nav`)" id="heading-2-nav">
+									@
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    C# Special Characters
+                    
+                    <div class="post-subtitle">
+                        ?$@
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-01-23 12:14
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/.net">.NET</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            4 min
+                            
+                            32 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="heading">?</h2>
+<p>There are 4 question marks <code>?</code> used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.</p>
+<h3 id="1-the--operator-since-visual-studio-2003">1) The ?: Operator (since Visual Studio 2003)</h3>
+<p>The format : <code>condition ? first_expression : second_expression;</code></p>
+<p>If <code>condition</code> evaluates to <code>true</code>, <code>first_expression</code> shall be returned, otherwise <code>second_expression</code>.</p>
+<p>Example</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">Random rnd = <span style="color:#8b008b;font-weight:bold">new</span> Random();
+<span style="color:#00688b;font-weight:bold">var</span> randomNo = rnd.Next();
+
+<span style="color:#00688b;font-weight:bold">var</span> status = randomNo % <span style="color:#b452cd">2</span> == <span style="color:#b452cd">0</span> ? <span style="color:#cd5555">&#34;Generated number is an even number.&#34;</span> : <span style="color:#cd5555">&#34;Generated number is an odd number.&#34;</span>;
+Console.WriteLine(randomNo);
+Console.WriteLine(status);
+</code></pre></div><h3 id="2-the-nullable-types-since-visual-studio-2005">2) The Nullable Types (since Visual Studio 2005)</h3>
+<p>Definition on msdn</p>
+<blockquote>
+<p>Nullable types can represent all the values of an underlying type, and an additional null value.</p>
+</blockquote>
+<p>How do you use a nullable, let say nullable integer. Simple</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#00688b;font-weight:bold">int?</span> x = <span style="color:#b452cd">0</span>; <span style="color:#228b22">// x can hold any integer values plus the null value
+</span><span style="color:#228b22"></span>x = <span style="color:#8b008b;font-weight:bold">null</span>;
+<span style="color:#00688b;font-weight:bold">var</span> isXNull = (x == <span style="color:#8b008b;font-weight:bold">null</span>) ? <span style="color:#8b008b;font-weight:bold">true</span>: <span style="color:#8b008b;font-weight:bold">false</span>;
+Console.WriteLine(isXNull); <span style="color:#228b22">// True
+</span><span style="color:#228b22"></span>
+x = <span style="color:#b452cd">15</span>;
+isXNull = (x == <span style="color:#8b008b;font-weight:bold">null</span>) ? <span style="color:#8b008b;font-weight:bold">true</span>: <span style="color:#8b008b;font-weight:bold">false</span>;
+Console.WriteLine(isXNull); <span style="color:#228b22">// False
+</span></code></pre></div><h3 id="3-the-null-conditional-operators-since-visual-studio-2015">3) The Null-conditional Operators (since Visual Studio 2015)</h3>
+<p>Example of a pretty common mistake</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">void</span> Main() {
+ <span style="color:#00688b;font-weight:bold">var</span> student1 = CreateStudent(<span style="color:#cd5555">&#34;Quan&#34;</span>, <span style="color:#b452cd">27</span>);
+ Console.WriteLine(student1.Name); <span style="color:#228b22">// Quan
+</span><span style="color:#228b22"></span> <span style="color:#00688b;font-weight:bold">var</span> student2 = CreateStudent(<span style="color:#cd5555">&#34;&#34;</span>, <span style="color:#b452cd">27</span>); <span style="color:#228b22">// student2 is null because no student name is given to the fiction method CreateStudent
+</span><span style="color:#228b22"></span> Console.WriteLine(student2.Name); <span style="color:#228b22">// System.NullReferenceException: Object reference not set to an instance of an object.
+</span><span style="color:#228b22"></span>}
+</code></pre></div><p>The method <code>CreateStudent</code> returns a <code>null</code> value instead of creating a new student if the student name is not given. Trying to access its <code>Name</code> property after that will throw a <code>NullReferenceException</code></p>
+<p>What you can do (without the Null-conditional Operators)</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">var</span> student2 = CreateStudent(<span style="color:#cd5555">&#34;&#34;</span>, <span style="color:#b452cd">27</span>); <span style="color:#228b22">// student2 is null
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">if</span> (student2 != <span style="color:#8b008b;font-weight:bold">null</span>){
+ Console.WriteLine(student2.Name); <span style="color:#228b22">// No more System.NullReferenceException
+</span><span style="color:#228b22"></span>}
+</code></pre></div><p>What you can do (with the Null-conditional Operators)</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">var</span> student2 = CreateStudent(<span style="color:#cd5555">&#34;&#34;</span>, <span style="color:#b452cd">27</span>); <span style="color:#228b22">// student2 is null
+</span><span style="color:#228b22"></span>Console.WriteLine(student2?.Name); <span style="color:#228b22">// No more System.NullReferenceException
+</span></code></pre></div><p>What happended? Thanks to the question mark after <code>student2</code>, you are telling C# that <code>student2</code> may be null. If <code>student2</code> is indeed <code>null</code>, C# will not try to access <code>Name</code> anymore, it returns <code>null</code> instead and <code>Console.WriteLine</code>will happily ignore the <code>null</code> value and only add a new line.</p>
+<h3 id="4-the---null-coalescing-operator-operator-since-visual-studio-2005">4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)</h3>
+<p>This is a special case of the ?: Operator in section 1</p>
+<p>The format : <code>asking_value ?? just_in_case;</code></p>
+<p>if <code>asking_value</code> is <code>null</code>, <code>just_in_case</code> is returned, otherwise <code>asking_value</code>is returned.</p>
+<p>Example</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">int?</span> x = <span style="color:#8b008b;font-weight:bold">null</span>; <span style="color:#228b22">// x is nullable so it can be null
+</span><span style="color:#228b22"></span><span style="color:#00688b;font-weight:bold">var</span> y = x ?? <span style="color:#b452cd">0</span>; <span style="color:#228b22">// if x is null, set y to 0, otherwise set y = x;
+</span><span style="color:#228b22">// which is essentially the same as
+</span><span style="color:#228b22"></span><span style="color:#00688b;font-weight:bold">var</span> y = (x == <span style="color:#8b008b;font-weight:bold">null</span>) ? <span style="color:#b452cd">0</span> : x;
+</code></pre></div><h3 id="reference">Reference</h3>
+<p><a href="https://quannt.github.io/programming/c%23/2017/01/07/question-marks-c-sharp.html">Four question marks you should know in C#</a></p>
+<hr>
+<h2 id="heading-1">$</h2>
+<hr>
+<h2 id="heading-2">@</h2>
+<p>The <code>@</code> special character serves as a verbatim identifier. It can be used in the following ways:</p>
+<ol>
+<li>
+<p>To enable C# keywords to be used as identifiers. The <code>@</code> character prefixes a code element that the compiler is to interpret as an identifier rather than a C# keyword. The following example uses the <code>@</code> character to define an identifier named <code>for</code> that it uses in a <code>for</code>loop.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#00688b;font-weight:bold">string</span>[] @for = { <span style="color:#cd5555">&#34;John&#34;</span>, <span style="color:#cd5555">&#34;James&#34;</span>, <span style="color:#cd5555">&#34;Joan&#34;</span>, <span style="color:#cd5555">&#34;Jamie&#34;</span> };
+<span style="color:#8b008b;font-weight:bold">for</span> (<span style="color:#00688b;font-weight:bold">int</span> ctr = <span style="color:#b452cd">0</span>; ctr &lt; @for.Length; ctr++)
+{
+   Console.WriteLine(<span style="color:#cd5555">$&#34;Here is your gift, {@for[ctr]}!&#34;</span>);
+}
+<span style="color:#228b22">// The example displays the following output:
+</span><span style="color:#228b22">//     Here is your gift, John!
+</span><span style="color:#228b22">//     Here is your gift, James!
+</span><span style="color:#228b22">//     Here is your gift, Joan!
+</span><span style="color:#228b22">//     Here is your gift, Jamie!
+</span></code></pre></div></li>
+<li>
+<p>To indicate that a string literal is to be interpreted verbatim. The <code>@</code> character in this instance defines a <em>verbatim string literal</em>. Simple escape sequences (such as <code>&quot;\\&quot;</code> for a backslash), hexadecimal escape sequences (such as <code>&quot;\x0041&quot;</code> for an uppercase A), and Unicode escape sequences (such as <code>&quot;\u0041&quot;</code> for an uppercase A) are interpreted literally. Only a quote escape sequence (<code>&quot;&quot;</code>) is not interpreted literally; it produces one double quotation mark. Additionally, in case of a verbatim <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated">interpolated string</a> brace escape sequences (<code>{{</code> and <code>}}</code>) are not interpreted literally; they produce single brace characters. The following example defines two identical file paths, one by using a regular string literal and the other by using a verbatim string literal. This is one of the more common uses of verbatim string literals.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#00688b;font-weight:bold">string</span> filename1 = <span style="color:#cd5555">@&#34;c:\documents\files\u0066.txt&#34;</span>;
+<span style="color:#00688b;font-weight:bold">string</span> filename2 = <span style="color:#cd5555">&#34;c:\\documents\\files\\u0066.txt&#34;</span>;
+   
+Console.WriteLine(filename1);
+Console.WriteLine(filename2);
+<span style="color:#228b22">// The example displays the following output:
+</span><span style="color:#228b22">//     c:\documents\files\u0066.txt
+</span><span style="color:#228b22">//     c:\documents\files\u0066.txt
+</span></code></pre></div><p>The following example illustrates the effect of defining a regular string literal and a verbatim string literal that contain identical character sequences.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#00688b;font-weight:bold">string</span> s1 = <span style="color:#cd5555">&#34;He said, \&#34;This is the last \u0063hance\x0021\&#34;&#34;</span>;
+<span style="color:#00688b;font-weight:bold">string</span> s2 = <span style="color:#cd5555">@&#34;He said, &#34;&#34;This is the last \u0063hance\x0021&#34;&#34;&#34;</span>;
+   
+Console.WriteLine(s1);
+Console.WriteLine(s2);
+<span style="color:#228b22">// The example displays the following output:
+</span><span style="color:#228b22">//     He said, &#34;This is the last chance!&#34;
+</span><span style="color:#228b22">//     He said, &#34;This is the last \u0063hance\x0021&#34;
+</span></code></pre></div></li>
+<li>
+<p>To enable the compiler to distinguish between attributes in cases of a naming conflict. An attribute is a class that derives from <a href="https://docs.microsoft.com/en-us/dotnet/api/system.attribute">Attribute</a>. Its type name typically includes the suffix <strong>Attribute</strong>, although the compiler does not enforce this convention. The attribute can then be referenced in code either by its full type name (for example, <code>[InfoAttribute]</code> or its shortened name (for example, <code>[Info]</code>). However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the <strong>Attribute</strong>suffix but the other does not. For example, the following code fails to compile because the compiler cannot determine whether the <code>Info</code> or <code>InfoAttribute</code> attribute is applied to the <code>Example</code> class. See <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1614">CS1614</a> for more information.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#8b008b;font-weight:bold">using</span> <span style="color:#008b45;text-decoration:underline">System</span>;
+<span style="color:#658b00">   
+</span><span style="color:#658b00">[AttributeUsage(AttributeTargets.Class)]</span>
+<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Info</span> : Attribute
+{
+   <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#00688b;font-weight:bold">string</span> information;
+   
+   <span style="color:#8b008b;font-weight:bold">public</span> Info(<span style="color:#00688b;font-weight:bold">string</span> info)
+   {
+      information = info;
+   }
+}
+<span style="color:#658b00">   
+</span><span style="color:#658b00">[AttributeUsage(AttributeTargets.Method)]</span>
+<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">InfoAttribute</span> : Attribute
+{
+   <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#00688b;font-weight:bold">string</span> information;
+   
+   <span style="color:#8b008b;font-weight:bold">public</span> InfoAttribute(<span style="color:#00688b;font-weight:bold">string</span> info)
+   {
+      information = info;
+   }
+}
+<span style="color:#658b00">   
+</span><span style="color:#658b00">[Info(&#34;A simple executable.&#34;)]</span> 
+<span style="color:#228b22">// Generates compiler error CS1614. Ambiguous Info and InfoAttribute.
+</span><span style="color:#228b22">// Prepend &#39;@&#39; to select &#39;Info&#39;. Specify the full name &#39;InfoAttribute&#39; to select it.
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Example</span>
+{
+<span style="color:#658b00">   [InfoAttribute(&#34;The entry point.&#34;)]</span>
+   <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">void</span> Main()
+   {
+   }
+}
+</code></pre></div></li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">
+                        Last modified on 2021-01-23 12:14
+                        &nbsp;
+                        <span id="busuanzi_container_page_pv" style="color:#777;">
+                            This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
+                        </span>
+                    </p>
+                    
+                </div>
+
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/cs/effective-c#6.0/">
+			Previous<br>Effective C#
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	Case42
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@gmail.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2021 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://www.openheart.icu//js/journal.js"></script>
+
+    </body>
+</html>
