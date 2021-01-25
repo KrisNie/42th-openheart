@@ -14,11 +14,11 @@
     
         <item>
         <title>C# Special Characters</title>
-        <link>https://www.openheart.icu/cs/c#-special-characters/</link>
+        <link>https://www.openheart.icu/cs/csharp-special-characters/</link>
         <pubDate>Sat, 23 Jan 2021 12:14:19 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/cs/c#-special-characters/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/c#-special-characters/ -&lt;h2 id=&#34;heading&#34;&gt;?&lt;/h2&gt;
+        <guid>https://www.openheart.icu/cs/csharp-special-characters/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/csharp-special-characters/ -&lt;h2 id=&#34;heading&#34;&gt;?&lt;/h2&gt;
 &lt;p&gt;There are 4 question marks &lt;code&gt;?&lt;/code&gt; used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.&lt;/p&gt;
 &lt;h3 id=&#34;1-the--operator-since-visual-studio-2003&#34;&gt;1) The ?: Operator (since Visual Studio 2003)&lt;/h3&gt;
 &lt;p&gt;The format : &lt;code&gt;condition ? first_expression : second_expression;&lt;/code&gt;&lt;/p&gt;
@@ -150,18 +150,18 @@ Console.WriteLine(s2);
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
-- https://www.openheart.icu/cs/c#-special-characters/ - ALL RIGHTS RESERVED KRIS NIE</description>
+- https://www.openheart.icu/cs/csharp-special-characters/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
     
         <item>
-        <title>Effective C#</title>
-        <link>https://www.openheart.icu/cs/effective-c#6.0/</link>
+        <title>Effective CSharp</title>
+        <link>https://www.openheart.icu/cs/effective-csharp6.0/</link>
         <pubDate>Sat, 09 Jan 2021 16:22:42 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/cs/effective-c#6.0/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/effective-c#6.0/ -&lt;h1 id=&#34;effective-c&#34;&gt;Effective C#&lt;/h1&gt;
+        <guid>https://www.openheart.icu/cs/effective-csharp6.0/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/effective-csharp6.0/ -&lt;h1 id=&#34;effective-c&#34;&gt;Effective C#&lt;/h1&gt;
 &lt;p&gt;Effective C# does not take you on a historical journey through the changes in the language. Rather, I provide advice on how to use the current C# language.&lt;/p&gt;
 &lt;h2 id=&#34;c--language-idioms&#34;&gt;C # Language Idioms&lt;/h2&gt;
 &lt;p&gt;You change tools or languages because you can be more productive.&lt;/p&gt;
@@ -418,7 +418,7 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is quite an important difference, and working on &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb351562.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt; can in many cases save you from returning too many rows from the database. Another prime example is doing paging: If you use &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb300906.aspx&#34;&gt;&lt;code&gt;Take&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb357513.aspx&#34;&gt;&lt;code&gt;Skip&lt;/code&gt;&lt;/a&gt; on &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/system.linq.iqueryable.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt;, you will only get the number of rows requested; doing that on an &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/9eekhta0.aspx&#34;&gt;&lt;code&gt;IEnumerable&lt;/code&gt;&lt;/a&gt; will cause all of your rows to be loaded in memory.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Expression tree: a data structure that holds all the logic that makes up the actions in the query.&lt;/p&gt;
-- https://www.openheart.icu/cs/effective-c#6.0/ - ALL RIGHTS RESERVED KRIS NIE</description>
+- https://www.openheart.icu/cs/effective-csharp6.0/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
