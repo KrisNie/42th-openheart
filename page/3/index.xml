@@ -6,9 +6,1063 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 01 Dec 2020 09:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Jan 2021 12:14:19 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title> 当面调试</title>
+        <link>https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/</link>
+        <pubDate>Sat, 18 Jul 2020 10:28:50 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/ -&lt;p&gt;当我在被面试的时候我再想些什么？&lt;/p&gt;
+- https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>.NET INTERVIEW</title>
+        <link>https://www.openheart.icu/cs/dot-net-interview/</link>
+        <pubDate>Fri, 17 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/dot-net-interview/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/dot-net-interview/ -&lt;h1 id=&#34;net-interview&#34;&gt;.NET INTERVIEW&lt;/h1&gt;
+&lt;h2 id=&#34;from-jeffrey-zhaos-blog&#34;&gt;from Jeffrey Zhao&amp;rsquo;s blog&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://blog.zhaojie.me/2011/03/my-interview-questions-for-dotnet-programmers.html&#34;&gt;我在面试.NET/C#程序员时会提出的问题&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;什么是net什么是cli什么是clril是什么jit是什么它是如何工作的gc是什么简述一下gc的工作方式&#34;&gt;什么是.NET？什么是CLI？什么是CLR？IL是什么？JIT是什么，它是如何工作的？GC是什么，简述一下GC的工作方式？&lt;/h3&gt;
+&lt;h4 id=&#34;什么是net&#34;&gt;什么是.net&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;.NET是个平台，你就把它看成C#&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;一个.NET应用是一个运行于.NET Framework之上的应用程序。（更精确的说，一个.NET应用是一个使用.NET Framework类库来编写，并运行于公共语言运行时 Common Language Runtime之上的应用程序。）如果一个应用程序跟.NET Framework无关，它就不能叫做.NET程序。比如，仅仅使用了XML并不就是.NET应用，仅仅使用SOAP SDK调用一个Web Service也不是.NET应用&lt;/p&gt;
+&lt;p&gt;开发平台（Dot Net Framework）：包含通用语言运行时（CLR）和Dot Net框架类库（FCL）两个部分。他们提供了一致的编程模型，简化的编程方式，可靠的版本机制（用全局程序集缓存GAC来避免DLL Hell），轻便的部署管理（程序集自带的元数据可以避免ini文件和注册表） ，广泛的平台支持（只要这台机器兼容标准下的CLR和FCL就可以部署，当然运行的时候IL会变成本机代码），无缝的语言集成，自动化的内存管理（垃圾收集），类型安全（CLR会阻止利用缓冲区溢出错误进行的攻击），CLR支持跨语言调试，统一的错误报告，全新的安全策略（CAS），兼容以往的COM组件&lt;/p&gt;
+&lt;h4 id=&#34;什么是clr&#34;&gt;什么是CLR&lt;/h4&gt;
+&lt;p&gt;CLR(公用语言运行时)和Java虚拟机一样也是一个&lt;strong&gt;运行时环境&lt;/strong&gt;，它负责资源管理（内存分配和垃圾收集），并保证应用和底层操作系统之间必要的分离。.NET Framework 提供了一个称为公共语言运行时的运行时环境**（Commen Language Runtime）**，它运行代码并提供使开发过程更轻松的服务。公共语言运行时的功能通过编译器和工具公开，你可以编写利用此托管执行环境的代码。 使用基于公共语言运行时的语言编译器开发的代码称为托管代码；托管代码具有许多优点，例如：跨语言集成、跨语言异常处理、增强的安全性、版本控制和部署支持、简化的组件交互模型、调试和分析服务等。&lt;/p&gt;
+&lt;h4 id=&#34;什么是cli&#34;&gt;什么是CLI&lt;/h4&gt;
+&lt;p&gt;通用语言基础结构（Common Language Infrastructure，CLI）是CLR的一个子集，也就是.NET中最终对编译成MSIL代码的应用程序的运行环境进行管理的那一部分。在 CLR结构图中CLI位于下半部分，主要包括类加载器(Class Loader)、实时编译器(IL To Native Compilers)和一个运行时环境的垃圾收集器(Garbage Collector)。CLI是.Net和CLR的灵魂，CLI为IL代码提供运行的环境，你可以将使用任何语言编写的代码通过其特定的编译器转换为 MSIL代码之后运行其上，甚至还可以自己写MSIL代码在CLI上面运行。&lt;/p&gt;
+&lt;h4 id=&#34;什么是il&#34;&gt;什么是IL&lt;/h4&gt;
+&lt;p&gt;IL是微软.NET平台上衍生出来的一门中间语言，.NET平台上的各种高级语言（如C#，VB，F#）的编译器会将各自的文字表述方式转化为 IL。各种不同的文字形式最终被统一到了IL的表述方式，其中包含了.NET平台上的各种元素，如“范型”，“类”、、“接口”、“模块”、“属性”等 等。值得注意的是，各种高级语言本身可能根本没有这些“概念”在里头，如IronScheme是一个在.NET平台上的Scheme语言实现，其中根本没有前面提到的这些IL——亦或说是.NET平台上的名词。IL本身并不知道自己是由哪种高级语言转化而来的，哪种语言中有哪些特性，IL也根本不会关心。&lt;/p&gt;
+&lt;h4 id=&#34;什么是jit&#34;&gt;什么是JIT&lt;/h4&gt;
+&lt;p&gt;JIT（Just In Time, JIT）是.Net边运行边编译的一种机制。&lt;/p&gt;
+&lt;p&gt;开发人员需要通过IL与CLR进行交流，虽然IL本身支持一些面向对象的概念，但是对于开发人员来讲还是过于复杂低效，于是C#应运而生，程序员只需编写C#代码，csc编译器会将其翻译成IL；虽然CLR理解IL，但是CPU只认识二进制指令，所以CLR需要JIT的帮助，将IL翻译成CPU指令. JIT按需工作，当一个.NET方法即将被执行时，JIT会介入，把该方法（IL指令）编译成CPU指令，并保存以供重用。&lt;/p&gt;
+&lt;h4 id=&#34;什么是gc以及它的工作方式&#34;&gt;什么是GC，以及它的工作方式&lt;/h4&gt;
+&lt;p&gt;GC:.NET Framework 的垃圾回收器管理应用程序的内存分配和释放&lt;/p&gt;
+&lt;h5 id=&#34;分配内存&#34;&gt;分配内存&lt;/h5&gt;
+&lt;p&gt;初始化新进程时，运行时会为进程保留一个连续的地址空间区域。 这个保留的地址空间被称为托管堆。 托管堆维护着一个指针，用它指向将在堆中分配的下一个对象的地址。 最初，该指针设置为指向托管堆的基址。 托管堆上包含了所有&lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/common-type-system&#34;&gt;引用类型&lt;/a&gt;。 应用程序创建第一个引用类型时，将为托管堆的基址中的类型分配内存。 应用程序创建下一个对象时，垃圾回收器在紧接第一个对象后面的地址空间内为它分配内存。 只要地址空间可用，垃圾回收器就会继续以这种方式为新对象分配空间。&lt;/p&gt;
+&lt;p&gt;从托管堆中分配内存要比非托管内存分配速度快。 由于运行时通过为指针添加值来为对象分配内存，所以这几乎和从堆栈中分配内存一样快。 另外，由于连续分配的新对象在托管堆中是连续存储，所以应用程序可以快速访问这些对象。&lt;/p&gt;
+&lt;h5 id=&#34;释放内存&#34;&gt;释放内存&lt;/h5&gt;
+&lt;p&gt;垃圾回收器的优化引擎根据所执行的分配决定执行回收的最佳时间。 垃圾回收器在执行回收时，会释放应用程序不再使用的对象的内存。 它通过检查应用程序的根来确定不再使用的对象。 每个应用程序都有一组根。 每个根或者引用托管堆中的对象，或者设置为空。 应用程序的根包含线程堆栈上的静态字段、局部变量和参数以及 CPU 寄存器。 垃圾回收器可以访问由&lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/standard/managed-execution-process&#34;&gt;实时 (JIT) 编译器&lt;/a&gt;和运行时维护的活动根的列表。 垃圾回收器对照此列表检查应用程序的根，并在此过程中创建一个图表，在其中包含所有可从这些根中访问的对象。&lt;/p&gt;
+&lt;p&gt;不在该图表中的对象将无法从应用程序的根中访问。 垃圾回收器会考虑无法访问的对象垃圾，并释放为它们分配的内存。 在回收中，垃圾回收器检查托管堆，查找无法访问对象所占据的地址空间块。 发现无法访问的对象时，它就使用内存复制功能来压缩内存中可以访问的对象，释放分配给不可访问对象的地址空间块。 在压缩了可访问对象的内存后，垃圾回收器就会做出必要的指针更正，以便应用程序的根指向新地址中的对象。 它还将托管堆指针定位至最后一个可访问对象之后。 请注意，只有在回收发现大量的无法访问的对象时，才会压缩内存。 如果托管堆中的所有对象均未被回收，则不需要压缩内存。&lt;/p&gt;
+&lt;p&gt;为了改进性能，运行时为单独堆中的大型对象分配内存。 垃圾回收器会自动释放大型对象的内存。 但是，为了避免移动内存中的大型对象，不会压缩此内存。&lt;/p&gt;
+&lt;h5 id=&#34;级别和性能&#34;&gt;级别和性能&lt;/h5&gt;
+&lt;p&gt;为优化垃圾回收器的性能，将托管堆分为三代：第 0 代、第 1 代和第 2 代。运行时的垃圾回收算法基于以下几个普遍原理，这些垃圾回收方案的原理已在计算机软件业通过实验得到了证实。 首先，压缩托管堆的一部分内存要比压缩整个托管堆速度快。 其次，较新的对象生存期较短，而较旧的对象生存期则较长。 最后，较新的对象趋向于相互关联，并且大致同时由应用程序访问。&lt;/p&gt;
+&lt;p&gt;运行时的垃圾回收器将新对象存储在第 0 级中。 在应用程序生存期的早期创建的对象如果未被回收，则被升级并存储在第 1 级和第 2 级中。因为压缩托管堆的一部分要比压缩整个托管堆速度快，所以此方案允许垃圾回收器在每次执行回收时释放特定级别的内存，而不是整个托管堆的内存。&lt;/p&gt;
+&lt;p&gt;实际上，垃圾回收器在第 0 级托管堆已满时执行回收。 如果应用程序在第 0 级托管堆已满时尝试新建对象，垃圾回收器将会发现第 0 级托管堆中没有可分配给该对象的剩余地址空间。 垃圾回收器执行回收，尝试为对象释放第 0 级托管堆中的地址空间。 垃圾回收器从检查第 0 级托管堆中的对象（而不是托管堆中的所有对象）开始执行回收。 这是最有效的途径，因为新对象的生存期往往较短，并且期望在执行回收时，应用程序不再使用第 0 级托管堆中的许多对象。 另外，单独回收第 0 级托管堆通常可以回收足够的内存，这样，应用程序便可以继续创建新对象。&lt;/p&gt;
+&lt;p&gt;垃圾回收器执行第 0 级托管堆的回收后，会压缩可访问对象的内存，如本主题前面的&lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/standard/automatic-memory-management#cpconautomaticmemorymanagementreleasingmemoryanchor1&#34;&gt;释放内存&lt;/a&gt;中所述。 然后，垃圾回收器升级这些对象，并考虑第 1 级托管堆的这一部分。 因为未被回收的对象往往具有较长的生存期，所以将它们升级至更高的级别很有意义。 因此，垃圾回收器在每次执行第 0 级托管堆的回收时，不必重新检查第 1 级和第 2 级托管堆中的对象。&lt;/p&gt;
+&lt;p&gt;在执行第 0 级托管堆的首次回收并把可访问的对象升级至第 1 级托管堆后，垃圾回收器将考虑第 0 级托管堆的其余部分。 它将继续为第 0 级托管堆中的新对象分配内存，直至第 0 级托管堆已满并需执行另一回收为止。 这时，垃圾回收器的优化引擎会决定是否需要检查较旧的级别中的对象。 例如，如果第 0 级托管堆的回收没有回收足够的内存，不能使应用程序成功完成创建新对象的尝试，垃圾回收器就会先执行第 1 级托管堆的回收，然后再执行第 2 级托管堆的回收。 如果这样仍不能回收足够的内存，垃圾回收器将执行第 2、1 和 0 级托管堆的回收。 每次回收后，垃圾回收器都会压缩第 0 级托管堆中的可访问对象并将它们升级至第 1 级托管堆。 第 1 级托管堆中未被回收的对象将会升级至第 2 级托管堆。 由于垃圾回收器只支持三个级别，因此第 2 级托管堆中未被回收的对象会继续保留在第 2 级托管堆中，直到在将来的回收中确定它们为无法访问为止。&lt;/p&gt;
+&lt;p&gt;托管代码就是执行过程交由运行时管理的代码。 在这种情况下，相关的运行时称为公共语言运行时 (CLR)，不管使用的是哪种实现（Mono、.NET Framework 或.NET Core）。 CLR 负责提取托管代码、将其编译成机器代码，然后执行它。 除此之外，运行时还提供多个重要服务，例如自动内存管理、安全边界、类型安全，等等。&lt;/p&gt;
+&lt;p&gt;托管的执行过程包括以下步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;选择编译器。若要获取公共语言运行时提供的好处，必须使用一个或多个面向运行时的语言编译器。&lt;/li&gt;
+&lt;li&gt;将代码编译为 MSIL。编译将你的源代码转换为 Microsoft 中间语言 (MSIL) 并生成必需的元数据。&lt;/li&gt;
+&lt;li&gt;将 MSIL 编译为本机代码。在执行时，实时 (JIT) 编译器将 MSIL 转换为本机代码。 在此编译期间，代码必须通过检查 MSIL 和元数据的验证过程以查明是否可以将代码确定为类型安全。&lt;/li&gt;
+&lt;li&gt;运行代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;公共语言运行时提供启用要发生的执行的基础结构以及执行期间可使用的服务。&lt;/p&gt;
+&lt;p&gt;//TODO:还可以在深入一下&lt;/p&gt;
+&lt;h3 id=&#34;类class和结构struct的区别是什么它们对性能有影响吗net-bcl里有哪些是类结构为什么它们不是结构类在自定义类型时您如何选择是类还是结构&#34;&gt;类（class）和结构（struct）的区别是什么？它们对性能有影响吗？.NET BCL里有哪些是类（结构），为什么它们不是结构（类）？在自定义类型时，您如何选择是类还是结构？&lt;/h3&gt;
+&lt;h4 id=&#34;什么是class和struct&#34;&gt;什么是class和struct&lt;/h4&gt;
+&lt;p&gt;class 和struct 最本质的区别: class 是引用类型，它在堆中分配空间，栈中保存的只是引用；而struct 是值类型，它在栈中分配空间。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什么是class?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;class（类）是面向对象编程的基本概念，是一种自定义数据结构类型，通常包含字段、属性、方法、构造函数、索引器、操作符等。在.NET中，所有的类都最终继承自 System.Object 类，因此是一种引用类型，也就是说，new 一个类的实例时，在栈（stack）上存放该实例在托管堆（Managed Heap）中的地址，而实例的值保存在托管堆（Managed Heap）中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;托管堆&lt;/strong&gt;（&lt;strong&gt;Managed Heap&lt;/strong&gt;） ：&lt;strong&gt;托管堆&lt;/strong&gt;分配在被操作系统保留的一段内存区域中，这段内存区域是由 CLR 来管理的，这段内存称之为&lt;strong&gt;托管堆&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什么是struct?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;struct（结构）是一种值类型，用于将一组相关的变量组织为一个单一的变量实体 。所有的结构直接派生自 System.ValueType，间接派生自System.Object，但&lt;strong&gt;结构是隐式密封&lt;/strong&gt;的，不能作为基类再派生出其他的结构，也不能从类派生，但可以从接口派生。struct 实例在创建时分配在线程的栈（stack）上，它本身存储了值。所以在使用 struct 时，我们可以将其当作 int、char 这样的基本类型对待。&lt;/p&gt;
+&lt;h4 id=&#34;使用区别&#34;&gt;使用区别&lt;/h4&gt;
+&lt;p&gt;class是引用类型，struct是值类型；既然 class 是引用类型，class 可以设为 null；但是我们不能将 struct 设为 null，因为它是值类型。&lt;/p&gt;
+&lt;p&gt;当你实例化一个 class，它将创建在&lt;strong&gt;堆&lt;/strong&gt;上。
+而你实例化一个 struct，它将创建在&lt;strong&gt;栈&lt;/strong&gt;上。&lt;/p&gt;
+&lt;p&gt;你使用的是一个对 class 实例的引用。
+而你使用的不是对一个 struct 的引用（而是直接使用它们）。&lt;/p&gt;
+&lt;p&gt;当我们将 class 作为参数传给一个方法，
+我们传递的是一个引用。struct 传递的是值而非引用。&lt;/p&gt;
+&lt;p&gt;class 可以定义析构器，但是 struct 不可以。&lt;/p&gt;
+&lt;p&gt;class可以有显示的无参构造器，但是 struct不可以。&lt;/p&gt;
+&lt;p&gt;class 的构造器不需要初始化全部字段。
+struct 的构造器必须初始化所有字段。&lt;/p&gt;
+&lt;p&gt;struct 在声明时不能对实例字段进行赋值。&lt;/p&gt;
+&lt;p&gt;class使用前必须new关键字实例化(静态类除外)，struct不需要。&lt;/p&gt;
+&lt;p&gt;class 支持继承和多态，struct 不支持。注意：但是 struct 可以和类一样实现接口。&lt;/p&gt;
+&lt;p&gt;既然 struct 不支持继承，其成员不能以 protected 或 protected internal 修饰。&lt;/p&gt;
+&lt;p&gt;class 比较适合大的和复杂的数据。
+struct 适用于作为经常使用的一些数据组合成的新类型。&lt;/p&gt;
+&lt;p&gt;struct 类型总是隐式密封的，因此在定义结构时不能使用 sealed 和 abstract 关键字。&lt;/p&gt;
+&lt;p&gt;struct的函数成员不能声明为 abstract 和 virtual，但是可以使用 override 关键字，用以覆写它的基类 System.ValueType 中的方法。&lt;/p&gt;
+&lt;h4 id=&#34;适用场合&#34;&gt;适用场合&lt;/h4&gt;
+&lt;p&gt;struct 有性能优势，class 有面向对象的扩展优势.&lt;/p&gt;
+&lt;p&gt;由于结构是值类型，并且直接存储数据，因此在一个对象的主要成员为数据且数据量不大的情况下，使用结构会带来更好的性能.&lt;/p&gt;
+&lt;p&gt;将一个结构变量赋值给另一个结构变量，就是把数据从一个结构复制到另一个结构。而类则不同，在类的变量之间，复制的是引用，而不是类数据.&lt;/p&gt;
+&lt;p&gt;当把一个结构类型的变量赋值给另一个结构时，对性能的影响取决于结构的大小，当数据比较大的时候，这种数据复制机制会带来较大的开销.&lt;/p&gt;
+&lt;p&gt;对于点、矩形和颜色这样的轻量对象，假如要声明一个含有许多个颜色对象的数组，则 CLR 需要为每个对象分配内存，在此情况下，使用结构的成本较低.&lt;/p&gt;
+&lt;p&gt;当堆栈的空间很有限，且有大量的逻辑对象时，创建类要比创建结构好一些.&lt;/p&gt;
+&lt;p&gt;在表现抽象和多级别的对象层次时，类是最好的选择，因为结构不支持继承.&lt;/p&gt;
+&lt;p&gt;用于底层数据存储的类型设计为 struct 类型，将用于定义应用程序行为的类型设计为 class。如果对类型将来的应用情况不能确定，应该使用 class.&lt;/p&gt;
+&lt;h3 id=&#34;泛型的作用是什么它有什么优势它对性能有影响吗它在执行时的行为是什么net-bcl中有哪些泛型类型举例说明平时编程中您定义的泛型类型&#34;&gt;泛型的作用是什么？它有什么优势？它对性能有影响吗？它在执行时的行为是什么？.NET BCL中有哪些泛型类型？举例说明平时编程中您定义的泛型类型。&lt;/h3&gt;
+&lt;h4 id=&#34;泛型的作用&#34;&gt;泛型的作用&lt;/h4&gt;
+&lt;p&gt;泛型的作用在于“算法的重用”。&lt;/p&gt;
+&lt;p&gt;比如，原来的ArrayList只能接受Object，现在通过List可以接受任何类型，也就是说ArrayList的方法都被各个类型重用了。但是Dot Net的泛型有个比较制肘地方，就是你很难对数值类型（值类型）进行算法抽象，因为这牵涉到运算符重载的问题，同时Dot Net的泛型的类型参数也不能约束成一个基元值类型，如int、double、float。&lt;/p&gt;
+&lt;h4 id=&#34;泛型的优势&#34;&gt;泛型的优势&lt;/h4&gt;
+&lt;p&gt;1.源代码保护。&lt;/p&gt;
+&lt;p&gt;如果你知道C++模板对泛型的实现机制，就会知道C++在编译的时候根据对泛型的调用，自动“内联”了一个实现，这样泛型的内容就暴露了，尔DotNet的实现方式就不同了，泛型类和方法会被编译成IL，在执行的时候由JIT负责将IL变化为指定类型参数的本地代码，从而保护了源代码。&lt;/p&gt;
+&lt;p&gt;2.类型安全。&lt;/p&gt;
+&lt;p&gt;这点是最显而易见的，抛弃了使用ArrayList时各种丑陋的强制类型转换&lt;/p&gt;
+&lt;p&gt;3.更清晰地代码。&lt;/p&gt;
+&lt;p&gt;因为没有了强制类型转换，所以代码自然显得更清晰，但是使用泛型时候带来的&amp;lt;&amp;gt;有时候确实也会让人搞糊涂，幸好泛型方法可以用类型推断或者using语句来进一步简化写法。&lt;/p&gt;
+&lt;p&gt;4.更好的性能。&lt;/p&gt;
+&lt;p&gt;因为值类型可以避免装箱和拆箱所带来的损耗（垃圾回收的次数也会减少）。这点正是泛型神奇的地方，开发历史上抽象能力的上升往往意味着性能的下降，但是泛型却不是！泛型抽象了算法，但是C++和DotNet对泛型的实现能够让性能无损，并且更快。Java的擦除法泛型就没有这种性能上的好处。&lt;/p&gt;
+&lt;h4 id=&#34;对性能的影响&#34;&gt;对性能的影响&lt;/h4&gt;
+&lt;p&gt;对性能有积极的影响，因为值类型可以避免装箱和拆箱所带来的负面影响，避免了垃圾回收，使得性能显著提高。但是对引用类型这种影响就不明显了。但是需要注意的是首次为一个特定数据类型调用方法时，CLR都会为这个方法生成本地代码。这会增大应用程序的工作集大小，从而影响性能。&lt;/p&gt;
+&lt;h4 id=&#34;泛型在执行时的行为是什么&#34;&gt;泛型在执行时的行为是什么&lt;/h4&gt;
+&lt;p&gt;使用泛型类型参数的一个方法在进行JIT编译时，CLR获取IL，用指定的类型实参进行替换，然后创建本地代码。需要特别注意的是引用类型是共享代码的，而对值类型就会为每一种生成独立的一份类型代码。但是需要指出的是引用类型的这种代码共享并不会造成封闭类型只执行一次构造函数（包括静态构造函数）。&lt;/p&gt;
+&lt;h4 id=&#34;net-bcl中有哪些泛型类型&#34;&gt;.NET BCL中有哪些泛型类型&lt;/h4&gt;
+&lt;p&gt;List、Dictionary、Queue、Stack、SortedList和SortedDictionary、LinkedList等等。&lt;/p&gt;
+&lt;h3 id=&#34;异常的作用是什么net-bcl中有哪些常见的异常在代码中您是如何捕获处理异常的在catch-ex中throw和throw-ex有什么区别您会如何设计异常的结构什么情况下您会抛出异常&#34;&gt;异常的作用是什么？.NET BCL中有哪些常见的异常？在代码中您是如何捕获/处理异常的？在“catch (ex)”中，“throw”和“throw ex”有什么区别？您会如何设计异常的结构，什么情况下您会抛出异常？&lt;/h3&gt;
+&lt;h4 id=&#34;异常的作用是什么&#34;&gt;异常的作用是什么&lt;/h4&gt;
+&lt;p&gt;异常用于处理系统级或者应用程序级的错误状态。异常处理是一种结构化的处理过程，个人认为他最大的优点就在于将“成功场景”剥离出来，使得代码更加清晰自然。但是异常处理相对于返回错误码有一个缺点，那就是他会失去发生异常的位置。不过异常本身提供了很多帮助调试问题的工具，一般都带有栈跟踪，这样位置的问题就得到一定程度的解决。还有就是IF和异常之间的选择，我记得以前有人讨论过在各种分支下是使用异常来处理各种“失败场景”的分支还是使用IF或者SWITCH来处理呢？这其实是一个假问题，因为异常和错误是有概念上的不同的，这里的错误是指有违“主成功场景”的“异常场景”，尔异常是指当程序不能完成其名字所表示功能时的错误。&lt;/p&gt;
+&lt;h4 id=&#34;net-bcl中有哪些常见的异常&#34;&gt;.NET BCL中有哪些常见的异常&lt;/h4&gt;
+&lt;p&gt;随便说几个，最著名的恐怕就是那句像绕口令一样的“&lt;strong&gt;未将对象引用设置到对象实例&lt;/strong&gt;”了，还有那些基本一出现整个应用程序就被判死刑的“&lt;strong&gt;堆栈溢出&lt;/strong&gt;”、“&lt;strong&gt;内存无法分配&lt;/strong&gt;”异常了&lt;/p&gt;
+&lt;h4 id=&#34;在代码中您是如何捕获处理异常的&#34;&gt;在代码中您是如何捕获/处理异常的&lt;/h4&gt;
+&lt;p&gt;的最多的CATCH就是抓住数据的异常，然后回滚数据库来事务处理。这是一个典型的场景，因为你明确并且能够很好的恢复状态&lt;/p&gt;
+&lt;h4 id=&#34;在catch-ex中throw和throw-ex有什么区别&#34;&gt;在“catch (ex)”中，“throw”和“throw ex”有什么区别&lt;/h4&gt;
+&lt;p&gt;throw 重新抛出异常但是不破坏异常发生的调用栈尔“throw ex”会重置调用栈这样捕获异常的人会以为代码出错在这里。&lt;/p&gt;
+&lt;p&gt;直接使用throw ex会导致吃掉原始异常点，重置堆栈中的异常起始点&lt;/p&gt;
+&lt;p&gt;推荐使用&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;try&lt;/span&gt;{}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;catch&lt;/span&gt; (Exception ex)
+{
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;经过进一步包装的异常&amp;#34;&lt;/span&gt;, ex);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;listt和t的区别是什么平时你如何进行选择dictionarytkey-tvalue是做什么的net-bcl中还有哪些常用的容器它们分别是如何实现的哪种数据结构分别是适用于哪些场景&#34;&gt;List&lt;!-- raw HTML omitted --&gt;和T[]的区别是什么，平时你如何进行选择？Dictionary&amp;lt;TKey, TValue&amp;gt;是做什么的？.NET BCL中还有哪些常用的容器？它们分别是如何实现的（哪种数据结构）？分别是适用于哪些场景？&lt;/h3&gt;
+&lt;p&gt;List&lt;!-- raw HTML omitted --&gt;长度不固定，动态变化，支持方法较多；T[]固定大小的泛型数组。&lt;/p&gt;
+&lt;p&gt;Dictionary&amp;lt;TKey, TValue&amp;gt;是泛型字典，提供一对一的关系；&lt;/p&gt;
+&lt;p&gt;.Net BCL中常用的集合有Stack&lt;!-- raw HTML omitted --&gt;、Queue&lt;!-- raw HTML omitted --&gt;、LinkedList&lt;!-- raw HTML omitted --&gt;，对应的数据结构是栈、队列和链表。&lt;/p&gt;
+&lt;h3 id=&#34;抽象类和接口有什么区别使用时有什么需要注意的吗如何选择是定义一个完全抽象的抽象类还是接口什么是接口的显式实现为什么说它很重要&#34;&gt;抽象类和接口有什么区别？使用时有什么需要注意的吗？如何选择是定义一个“完全抽象”的抽象类，还是接口？什么是接口的“显式实现”？为什么说它很重要？&lt;/h3&gt;
+&lt;p&gt;抽象类不能实例化。
+抽象类的用途是提供多个派生类可共享基类的公共定义。
+抽象类也可以定义抽象方法。
+抽象方法没有实现，所以方法定义后面是分号，而不是常规的方法块。
+抽象类的派生类必须实现所有抽象方法。
+抽象类只能单继承&lt;/p&gt;
+&lt;p&gt;接口类似于抽象基类：实现接口的任何非抽象类型都必须实现接口的所有成员。
+不能直接实例化接口。
+接口可以包含事件、索引器、方法和属性。
+接口不包含方法的实现。
+类和结构可继承多个接口。
+接口自身可从多个接口继承。&lt;/p&gt;
+&lt;p&gt;相同点：都不能被实例化，都可以通过继承实现其抽象方法；&lt;/p&gt;
+&lt;p&gt;不同点：接口支持多继承，抽象类不能；接口只能定义行为，抽象类既可以定义行为，还能提供实现；接口只包含方法、属性、索引器和事件的签名，不能包括自定义字段和实现方法，抽象类可以包含自定义字段和实现方法。&lt;/p&gt;
+&lt;h4 id=&#34;显式地实现接口成员&#34;&gt;显式地实现接口成员&lt;/h4&gt;
+&lt;p&gt;即创建一个仅通过该接口调用并且特定于该接口的类成员&lt;/p&gt;
+&lt;p&gt;类成员 IControl.Paint 只能通过 IControl 接口使用， ISurface.Paint 只能通过 ISurface 使用。&lt;/p&gt;
+&lt;p&gt;两个方法实现都是分离的，都不可以直接在类中使用。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IControl
+{
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Paint();
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; ISurface
+{
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Paint();
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;SampleClass&lt;/span&gt; : IControl, ISurface
+{
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Paint()
+    {
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;SampleClass obj = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; SampleClass();
+&lt;span style=&#34;color:#228b22&#34;&gt;//obj.Paint(); // Compiler error.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+IControl c = (IControl)obj;
+c.Paint(); &lt;span style=&#34;color:#228b22&#34;&gt;// Calls IControl.Paint on SampleClass.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+ISurface s = (ISurface)obj;
+s.Paint(); &lt;span style=&#34;color:#228b22&#34;&gt;// Calls ISurface.Paint on SampleClass.
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显式实现还用于解决两个接口分别声明具有相同名称的不同成员（如属性和方法）的情况：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; ILeft
+{
+	&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; P { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;;}
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IRight
+{
+	&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; P();
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;为了同时实现两个接口，类必须对属性 P 和/或方法 P 使用显式实现以避免编译器错误。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Middle&lt;/span&gt; : ILeft, IRight
+{
+    &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; ILeft.P { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt; { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; } }
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; P() { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;抽象类和接口的使用&#34;&gt;抽象类和接口的使用&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;如果预计要创建组件的多个版本，则创建抽象类。抽象类提供简单的方法来控制组件版本；&lt;/li&gt;
+&lt;li&gt;如果创建的功能将在大范围的全异对象间使用，则使用接口。如果要设计小而简练的功能块，则使用接口；&lt;/li&gt;
+&lt;li&gt;如果要设计大的功能单元，则使用抽象类。如果要在组件的所有实现间提供通用的已实现功能，则使用抽象类；&lt;/li&gt;
+&lt;li&gt;抽象类主要用于关系密切的对象；而接口适合为不相关的类提供通用功能。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;字符串是引用类型类型还是结构类型它和普通的引用类型相比有什么特别的地方吗使用字符串时有什么需要注意的地方为什么说stringbuilder比较高效在连接多个字符串时它无论何时都比直接相加更高效吗&#34;&gt;字符串是引用类型类型还是结构类型？它和普通的引用类型相比有什么特别的地方吗？使用字符串时有什么需要注意的地方？为什么说StringBuilder比较高效？在连接多个字符串时，它无论何时都比直接相加更高效吗？&lt;/h3&gt;
+&lt;p&gt;MSDN 中明确指出 String 是引用类型而不是值类型，但 String 表面上用起来却像是值类型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//值类型
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; a = &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; b = a;
+a = &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;;
+Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;a is {0},b is {1}&amp;#34;&lt;/span&gt;, a, b);
+ 
+&lt;span style=&#34;color:#228b22&#34;&gt;//引用类型
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; str1 = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;ab&amp;#34;&lt;/span&gt;;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; str2 = str1;
+str1 = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;;
+Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;str1 is {0},str2 is {1}&amp;#34;&lt;/span&gt;, str1, str2);
+Console.Read();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;//结果：
+a is 2,b is 1
+str1 is abc,str2 is ab
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;原因：string对象是不可变的，包括长度和其中任何字符都是不可以改变的。&lt;/p&gt;
+&lt;h4 id=&#34;string的不变性&#34;&gt;String的不变性&lt;/h4&gt;
+&lt;p&gt;string 对象称为不可变的（只读），即字符串恒定性(Immutability)，字符串一经创建，就不可改变。有的时候看来似乎修改了，实际是string经过了特殊处理，每次改变值时都会建立一个新的string对象，变量会指向这个新的对象，而原来的还是指向原来的对象，所以不会改变。这也是string效率低下的原因。如果经常改变string的值则应该使用StringBuilder而不使用string。&lt;/p&gt;
+&lt;h4 id=&#34;stringstringbuilder&#34;&gt;String、StringBuilder&lt;/h4&gt;
+&lt;p&gt;当大量使用string进行拼接的时候，直接使用string+会影响效率，使用StringBuilder更为合适；&lt;/p&gt;
+&lt;p&gt;在连接多个字符串时，StringBuilder并不总是比String高效，对于简单的字符串连接操作，在性能上StringBuilder不一定总是优于String，因为StringBuilder对象的创建代价比较大，在字符串连接目标较少的情况下，过度滥用StringBuilder会导致性能的浪费而非节约。只有大量的或者无法预知次数的字符串操作，才考虑以StringBuilder实现。&lt;/p&gt;
+&lt;h3 id=&#34;如何高效地进行数组复制二维数组和数组的数组有什么区别在使用双重循环遍历一个二维数组时如何选择内外层的遍历顺序&#34;&gt;如何高效地进行数组复制？“二维数组”和“数组的数组”有什么区别？在使用双重循环遍历一个二维数组时，如何选择内外层的遍历顺序？&lt;/h3&gt;
+&lt;h3 id=&#34;什么是元编程net有哪些元编程的手段和场景什么是反射能否举一些反射的常用场景有人说反射性能较差您怎么看待这个问题有什么办法可以提高反射的性能吗&#34;&gt;什么是元编程，.NET有哪些元编程的手段和场景？什么是反射？能否举一些反射的常用场景？有人说反射性能较差，您怎么看待这个问题？有什么办法可以提高反射的性能吗？&lt;/h3&gt;
+&lt;h3 id=&#34;委托是什么匿名方法是什么在c-30中lambda表达式是什么扩展方法是什么linq是什么您觉得c-30中还有哪些重要的特性它们带来了什么优势bcl中哪些类库和这些特性有关您平时最常用哪些&#34;&gt;委托是什么？匿名方法是什么？在C# 3.0中，Lambda表达式是什么？扩展方法是什么？LINQ是什么？您觉得C# 3.0中还有哪些重要的特性，它们带来了什么优势？BCL中哪些类库和这些特性有关？您平时最常用哪些？&lt;/h3&gt;
+&lt;h4 id=&#34;委托是什么&#34;&gt;委托是什么&lt;/h4&gt;
+&lt;p&gt;MSND:委托是一种引用方法的类型，太抽象了这定义，看不懂&lt;/p&gt;
+&lt;p&gt;我的理解是：委托就是对于一组方法的抽象，代表一组方法的共同特征。&lt;/p&gt;
+&lt;h4 id=&#34;匿名方法是什么&#34;&gt;匿名方法是什么&lt;/h4&gt;
+&lt;p&gt;匿名方法是指将一段代码块作为委托参数传递给另外一个方法中。&lt;/p&gt;
+&lt;p&gt;匿名方法能访问方法中的变量和类中的成员。&lt;/p&gt;
+&lt;p&gt;使用匿名方法，则不必创建当独的方法，因此减少了实例化委托所需的编码开销。&lt;/p&gt;
+&lt;h4 id=&#34;lamdba表达式是什么&#34;&gt;lamdba表达式是什么&lt;/h4&gt;
+&lt;p&gt;“Lambda 表达式”是一个匿名函数，它可以包含表达式和语句，并且可用于创建委托或表达式树类型。&lt;/p&gt;
+&lt;h4 id=&#34;扩展方法是什么&#34;&gt;扩展方法是什么&lt;/h4&gt;
+&lt;p&gt;扩展方法是使我们能在现有类型的基础上添加新方法，而无需创建派生类、重新编译或以其他方式修改原始类型。&lt;/p&gt;
+&lt;h4 id=&#34;linq是什么&#34;&gt;LINQ是什么&lt;/h4&gt;
+&lt;p&gt;语言级集成查询（Language INtegrated Query），是一组用于c#和Visual Basic语言的扩展。它允许编写C#或者Visual Basic代码以查询数据库相同的方式操作内存数据。&lt;/p&gt;
+&lt;h3 id=&#34;工作之外您看哪些技术相关的书网站社区项目等等您还接触哪些net以外的技术能和net或net中有针对性的部分做个对比吗&#34;&gt;工作之外您看哪些技术相关的书、网站、社区、项目等等？您还接触哪些.NET以外的技术，能和.NET或.NET中有针对性的部分做个对比吗？&lt;/h3&gt;
+&lt;p&gt;多了去了&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-u-should-know&#34;&gt;What u should know&lt;/h2&gt;
+&lt;h3 id=&#34;server&#34;&gt;Server&lt;/h3&gt;
+&lt;h4 id=&#34;kestrel&#34;&gt;Kestrel&lt;/h4&gt;
+&lt;p&gt;Kestrel 是 ASP.NET Core 项目模板指定的默认 Web 服务器。&lt;/p&gt;
+&lt;h5 id=&#34;何时结合使用-kestrel-和反向代理&#34;&gt;何时结合使用 Kestrel 和反向代理：&lt;/h5&gt;
+&lt;p&gt;可以单独使用 Kestrel，也可以将其与反向代理服务器（如 &lt;a href=&#34;https://www.iis.net/&#34;&gt;Internet Information Services (IIS)&lt;/a&gt;、&lt;a href=&#34;https://nginx.org/&#34;&gt;Nginx&lt;/a&gt; 或 &lt;a href=&#34;https://httpd.apache.org/&#34;&gt;Apache&lt;/a&gt;）结合使用。 反向代理服务器接收来自网络的 HTTP 请求，并将这些请求转发到 Kestrel。&lt;/p&gt;
+&lt;p&gt;Kestrel 用作边缘（面向 Internet）Web 服务器：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/servers/kestrel/_static/kestrel-to-internet2.png?view=aspnetcore-5.0&#34; alt=&#34;Kestrel 直接与 Internet 通信，不使用反向代理服务器&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Kestrel 用于反向代理配置：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/servers/kestrel/_static/kestrel-to-internet.png?view=aspnetcore-5.0&#34; alt=&#34;Kestrel 通过反向代理服务器（如 IIS、Nginx 或 Apache）间接与 Internet 进行通信&#34;&gt;&lt;/p&gt;
+&lt;p&gt;无论配置是否使用反向代理服务器，都是受支持的托管配置。&lt;/p&gt;
+&lt;p&gt;在没有反向代理服务器的情况下用作边缘服务器的 Kestrel 不支持在多个进程间共享相同的 IP 和端口。 如果将 Kestrel 配置为侦听某个端口，Kestrel 会处理该端口的所有流量（无视请求的 &lt;code&gt;Host&lt;/code&gt; 标头）。 可以共享端口的反向代理能在唯一的 IP 和端口上将请求转发至 Kestrel。&lt;/p&gt;
+&lt;p&gt;即使不需要反向代理服务器，使用反向代理服务器可能也是个不错的选择。&lt;/p&gt;
+&lt;p&gt;反向代理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以限制所承载的应用中的公开的公共外围应用。&lt;/li&gt;
+&lt;li&gt;提供额外的配置和防护层。&lt;/li&gt;
+&lt;li&gt;可以更好地与现有基础结构集成。&lt;/li&gt;
+&lt;li&gt;简化了负载均和和安全通信 (HTTPS) 配置。 仅反向代理服务器需要 X.509 证书，并且该服务器可使用普通 HTTP 在内部网络上与应用服务器通信。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;相关资料&#34;&gt;相关资料：&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://dotnetcoretutorials.com/2019/12/25/kestrel-vs-iis/%5B&#34;&gt;Kestrel vs IIS&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;apache&#34;&gt;Apache&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Apache对每个请求都会创建一个进程&lt;/strong&gt;, 因此请求越多，进程创建的也越多，&lt;strong&gt;那么整体网站的性能也就越低&lt;/strong&gt;。这是因为每个进程都会占用一定的资源，当进程越来越多的时候，对于整个服务器的性能消耗都是一个很大的影响。当从外部境内的请求持续增长的时候，Apache服务器就会变得越来越慢，处理的越来越吃力了。因为处理的变慢了，就会导致有更多的请求积压下来，从而导致性能进一步降低。这就形成了&lt;strong&gt;恶性的循环&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;nginx&#34;&gt;Nginx&lt;/h4&gt;
+&lt;p&gt;nginx是用另外一种方式来处理请求的。当请求处理达到一个峰值的时候，会要求这些请求等待，当&lt;strong&gt;有空间的时候再放进来&lt;/strong&gt;。这就是&lt;strong&gt;基于事件为导向的处理方式&lt;/strong&gt;。因为事件消耗的资源，要比进程消耗的资源小的多的多，所以nginx，在同等性能的条件下能够处理4倍于Apache服务器的请求。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;集合类型和泛型&#34;&gt;集合类型和泛型&lt;/h3&gt;
+&lt;h4 id=&#34;数组array&#34;&gt;数组(Array)&lt;/h4&gt;
+&lt;p&gt;数组具有以下的特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数组属于线性结构，在内存中是连续存放的。&lt;/li&gt;
+&lt;li&gt;数组的元素类型必须相同。&lt;/li&gt;
+&lt;li&gt;数组可以直接通过下标访问。&lt;/li&gt;
+&lt;li&gt;数组的查找速度非常快，新增和删除速度慢。&lt;/li&gt;
+&lt;li&gt;数组在初始化时要指定数组长度。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;动态数组arraylist&#34;&gt;动态数组(ArrayList)&lt;/h4&gt;
+&lt;p&gt;动态数组具有以下的特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ArrayList的底层其实就是一个数组。&lt;/li&gt;
+&lt;li&gt;ArrayList在声明时不必指定长度，会根据存储的数据动态的增加或减少长度。&lt;/li&gt;
+&lt;li&gt;ArrayList会把所有的元素都当做Object处理，因此可以存储不同数据类型的元素。&lt;/li&gt;
+&lt;li&gt;插入和删除一个元素时，会移动它之后所有元素的位置，效率低，频繁进行插入或者删除元素推荐使用LinkedList。&lt;/li&gt;
+&lt;li&gt;ArrayList是非类型安全的，在插入和删除元素时会进行拆箱和装箱问题，影响性能，效率低。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;泛型list&#34;&gt;泛型List&lt;/h4&gt;
+&lt;p&gt;泛型List具有以下的特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;List是ArrayList的泛型类。&lt;/li&gt;
+&lt;li&gt;泛型List需要在声明时指定具体的类型。&lt;/li&gt;
+&lt;li&gt;泛型List没有装箱和拆箱操作，因此List比ArrayList效率高而且类型安全。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;双向链表linkedlist&#34;&gt;双向链表（LinkedList）&lt;/h4&gt;
+&lt;p&gt;双向链表具有如下特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;链表的节点在内存中的空间是不连续的，每块空间称作一个节点，每个节点都存有一个前驱和后置指针，分别指向前一个节点和后一个节点，因此向链表中添加和删除元素的效果高，只需要更改相应节点的指针指向即可。&lt;/li&gt;
+&lt;li&gt;链表的查找效率低。查找元素时不能通过下标进行访问，只能从头开始通过地址按顺序查找。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;堆栈stack&#34;&gt;堆栈（Stack）&lt;/h4&gt;
+&lt;p&gt;堆栈具有如下特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;堆栈是先进后出的原则，最先插入的元素最后被访问，最后插入的元素最先被访问。&lt;/li&gt;
+&lt;li&gt;Push入栈，Pop出栈并返回栈顶元素，Peek只返回栈顶元素。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;queue队列&#34;&gt;Queue（队列）&lt;/h4&gt;
+&lt;p&gt;队列具有以下特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;队列是先进先出的原则，最先进入的元素最先被访问，最后进入的元素最后被访问。&lt;/li&gt;
+&lt;li&gt;Enqueue入队列，Dequeue出队列并返回列首元素，Peek只返回列首元素。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;字典dictionary&#34;&gt;字典（Dictionary）&lt;/h4&gt;
+&lt;p&gt;字典具有以下特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建字典时需要指定key和value的数据类型。&lt;/li&gt;
+&lt;li&gt;字典中的key值是唯一的，value的值可以不唯一。&lt;/li&gt;
+&lt;li&gt;可以通过key快速查找对应的value，速度快，但是消耗内存。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在字典中,数组entries用来存储数据,buckets作为桥梁,每次通过hash function获取了key的哈希值后,对这个哈希值进行取余,即&lt;code&gt;hashResult%bucketsLength=bucketIndex&lt;/code&gt;,余数作为buckets的index,而buckets的value就是这个key对应的entry所在entries中的索引,所以最终我们就可以通过这个索引在entries中拿到我们想要的数据,整个过程不需要对所有数据进行遍历,的时间复杂度为1.&lt;/p&gt;
+&lt;h4 id=&#34;几种常见数据结构的使用情景&#34;&gt;几种常见数据结构的使用情景&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;数据结构&lt;/th&gt;
+&lt;th&gt;使用场景&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;需要处理的元素数量确定并且需要使用下标进行访问时可以考虑，不过建议使用List&lt;!-- raw HTML omitted --&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ArrayList&lt;/td&gt;
+&lt;td&gt;不推荐使用，建议使用泛型List&lt;!-- raw HTML omitted --&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;需要处理的元素数量不确定时，通常建议使用。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LinkedList&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;链表适合元素数量不固定，而且需要经常增减节点的情况，链表增减元素效率高。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Queue&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;队列适合于先进先出的情况。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stack&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;堆栈适合于先进后出的情况。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dictionary&amp;lt;K,T&amp;gt;&lt;/td&gt;
+&lt;td&gt;字典适合于需要键值对操作的情况。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;许多泛型集合类型均为非泛型类型的直接模拟。 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.dictionary-2?view=dotnet-plat-ext-3.1&#34;&gt;Dictionary&lt;/a&gt; 是 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.hashtable?view=dotnet-plat-ext-3.1&#34;&gt;Hashtable&lt;/a&gt; 的泛型版本；它使用枚举的泛型结构 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.keyvaluepair-2?view=dotnet-plat-ext-3.1&#34;&gt;KeyValuePair&lt;/a&gt;而不是 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.dictionaryentry?view=dotnet-plat-ext-3.1&#34;&gt;DictionaryEntry&lt;/a&gt;。 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.list-1?view=dotnet-plat-ext-3.1&#34;&gt;List&lt;/a&gt; 是 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.arraylist?view=dotnet-plat-ext-3.1&#34;&gt;ArrayList&lt;/a&gt; 的泛型版本。 存在响应非泛型版本的泛型 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.queue-1?view=dotnet-plat-ext-3.1&#34;&gt;Queue&lt;/a&gt; 和 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.stack-1?view=dotnet-plat-ext-3.1&#34;&gt;Stack&lt;/a&gt; 类。 存在 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.sortedlist-2?view=dotnet-plat-ext-3.1&#34;&gt;SortedList&lt;/a&gt; 的泛型和非泛型版本。 这两个版本均为字典和列表的混合。&lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.sorteddictionary-2?view=dotnet-plat-ext-3.1&#34;&gt;SortedDictionary&lt;/a&gt; 泛型类是一个纯字典，并且没有任何非泛型对应项。 &lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.linkedlist-1?view=dotnet-plat-ext-3.1&#34;&gt;LinkedList&lt;/a&gt;泛型类是真正的链接列表，不包含任何非泛型。&lt;/p&gt;
+&lt;h4 id=&#34;线程安全&#34;&gt;线程安全&lt;/h4&gt;
+&lt;p&gt;ConcurrentDictionary是&lt;code&gt;System.Collections.Concurrent&lt;/code&gt;中&lt;strong&gt;线程安全&lt;/strong&gt;的字典类&lt;/p&gt;
+&lt;h4 id=&#34;和equals方法的区别&#34;&gt;==和equals方法的区别&lt;/h4&gt;
+&lt;p&gt;首先的区别是，equals 是方法，而 == 是操作符；&lt;/p&gt;
+&lt;p&gt;对于基本类型的变量来说（如 short、 int、 long、 float、 double），只能使用 == ，因为这些基本类型的变量没有 equals 方法。对于基本类型变量的比较，使用 == 比较， &lt;code&gt;一般比较的是它们的值&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;对于引用类型的变量来说（例如 String 类）才有 equals 方法，因为 String 继承了 Object 类， equals 是 Object 类的通用方法。对于该类型对象的比较，默认情况下，也就是没有复写 Object 类的 equals 方法，使用 == 和 equals 比较是一样效果的，都是比较的是它们在内存中的存放地址。但是对于某些类来说，为了满足自身业务需求，可能存在 equals 方法被复写的情况，这时使用 equals 方法比较需要看具体的情况，例如 String 类，使用 equals 方法会比较它们的值；&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;聚集索引与非聚集索引&#34;&gt;聚集索引与非聚集索引&lt;/h3&gt;
+&lt;p&gt;MSDN介绍索引创建有如下Typical Implementations：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在创建 PRIMARY KEY 约束时，如果不存在该表的聚集索引且未指定唯一非聚集索引，则将自动对一列或多列创建唯一聚集索引。 主键列不允许空值。&lt;/p&gt;
+&lt;p&gt;在创建 UNIQUE 约束时，默认情况下将创建唯一非聚集索引，以便强制 UNIQUE 约束。 如果不存在该表的聚集索引，则可以指定唯一聚集索引。&lt;/p&gt;
+&lt;p&gt;将索引创建为约束的一部分后，会自动将索引命名为与约束名称相同的名称。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PRIMARY KEY and UNIQUE constraints会自动创建索引。登录时，用户名必然是unique的，所以使用用户名查询进行SQL优化时无需再考虑创建索引。&lt;/p&gt;
+&lt;h4 id=&#34;聚集索引&#34;&gt;聚集索引&lt;/h4&gt;
+&lt;p&gt;MSDN上讲到 &lt;em&gt;A heap is a table without a clustered index&lt;/em&gt; (没有聚集索引的表叫做堆)。B+树是应数据库所需而出现的一种B树的变形树，存储在堆中的数据是无序的（&lt;em&gt;Data is stored in the heap without specifying an order&lt;/em&gt;），那怎么让数据按照B+树的结构存储并以方便查找呢？bingo, it&amp;rsquo;s clustered index.&lt;/p&gt;
+&lt;p&gt;在primary key或者unique constraints加上聚集索引后，数据以B+树结构排序，以方便数据库进行查找（B+树的所在章并非树而是查找）。数据库数据存储结构（B+树）如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/B+Tree-20200916191519.png&#34; alt=&#34;B+Tree&#34;&gt;&lt;/p&gt;
+&lt;p&gt;使用B+树进行查找在提高关系数据库查找效率的同时，如果频繁的对数据进行增删改树的结构必然会被破坏，数据库将重新梳理索引重建树，聚集索引会给查询以外的操作带来的byproduct，影响增删改的效率。&lt;/p&gt;
+&lt;h4 id=&#34;非聚集索引&#34;&gt;非聚集索引&lt;/h4&gt;
+&lt;p&gt;非聚集索引与聚集索引类似，只不过是针对unique contraints字段创建的。可以给表中多个字段都加上非聚集索引，数据库就会有多个独立的树结构，每个索引互相之间不存在关联。&lt;/p&gt;
+&lt;p&gt;每次给字段建一个新索引， 字段中的数据就会被复制一份出来， 用于生成索引。 因此， 给表添加索引，会增加表的体积， 占用磁盘存储空间。&lt;/p&gt;
+&lt;h4 id=&#34;引申&#34;&gt;引申&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;非聚集索引和聚集索引的区别&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过聚集索引可以一次查到需要查找的数据（聚集索引的叶子节点直接指向数据）， 而通过非聚集索引第一次只能查到记录对应的主键值 ， 再使用主键的值通过聚集索引查找到需要的数据（非聚簇索引的叶节点仍然是索引节点，然后由该索引结点指向对应的数据块）。&lt;/p&gt;
+&lt;p&gt;聚集索引一张表只能有一个，而非聚集索引一张表可以有多个。&lt;/p&gt;
+&lt;p&gt;一般来说聚簇索引 B 树的叶子节点存储的数据，非聚簇索引叶子节点存储指针，所以非聚簇索引要多一次I/O操作才能读取到数据&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;B+ Tree索引和Hash索引区别&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;哈希索引适合等值查询，但是不无法进行范围查询哈希索引没办法利用索引完成排序，哈希索引不支持多列联合索引的最左匹配规则，如果有大量重复键值得情况下，哈希索引的效率会很低，因为存在哈希碰撞问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;何时使用聚集索引或者非聚集索引&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;动作描述&lt;/th&gt;
+&lt;th&gt;使用聚集索引&lt;/th&gt;
+&lt;th&gt;使用非聚集索引&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;列经常被分组排序&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;返回某范围内的数据&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;td&gt;不应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;一个或极少不同值&lt;/td&gt;
+&lt;td&gt;不应&lt;/td&gt;
+&lt;td&gt;不应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;小数目的不同值&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;td&gt;不应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大数目的不同值&lt;/td&gt;
+&lt;td&gt;不应&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;频繁更新的列&lt;/td&gt;
+&lt;td&gt;不应&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;外键列&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主键列&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;频繁修改索引列&lt;/td&gt;
+&lt;td&gt;不应&lt;/td&gt;
+&lt;td&gt;应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;复合索引&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它们可以是不允许作为索引键列的数据类型。&lt;/li&gt;
+&lt;li&gt;在计算索引键列数或索引键大小时， 数据库引擎不考虑它们。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在where条件中字段用索引，如果用多字段就用复合索引。当查询中的所有列都作为键列或非键列包含在索引中时，带有包含性非键列的索引可以显著提高查询性能。 这样可以实现性能提升，因为查询优化器可以在索引中找到所有列值；不访问表或聚集索引数据，从而减少磁盘 I/O 操作。&lt;/p&gt;
+&lt;p&gt;当索引包含查询引用的所有列时，它通常称为“覆盖查询”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;查询优化&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;explain，使用执行计划去分析是否走索引，没有索引创建索引，有的话判断索引为什么失效？&lt;/p&gt;
+&lt;p&gt;索引什么时候会失效？最左匹配原则、or条件两边有一边没有使用索引、条件字段函数操作、字段类型隐式转换、like以%开头、表中数据较少导致全表比索引快，这些条件都会导致索引失效。&lt;/p&gt;
+&lt;p&gt;最左匹配原则：以最左边的为起点任何连续的索引都能匹配上。同时遇到范围查询(&amp;gt;、&amp;lt;、between、like)就会停止匹配&lt;/p&gt;
+&lt;p&gt;sqlserver创建分区表的步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建文件组&lt;/li&gt;
+&lt;li&gt;创建数据文件&lt;/li&gt;
+&lt;li&gt;创建分区函数&lt;/li&gt;
+&lt;li&gt;创建分区方案&lt;/li&gt;
+&lt;li&gt;创建分区表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sqlserver中varcharmaxtextxml的区别&#34;&gt;sqlserver中varchar(max)/text/xml的区别&lt;/h3&gt;
+&lt;p&gt;varchar(max)=text&lt;/p&gt;
+&lt;p&gt;nvarchar(max)=ntext&lt;/p&gt;
+&lt;p&gt;varbinary(max)=image&lt;/p&gt;
+&lt;p&gt;有了大值数据类型之后，在对大值数据操作的时候要比以前灵活的多了。比如：之前text是不能用‘like’ ‘=’&lt;/p&gt;
+&lt;p&gt;如果能保证XML格式的字段永远只存储XMl，而应当用xml数据类型存储XML，XML能的保证格式，并且可能要使用服务器端验证并查询XML。&lt;/p&gt;
+&lt;p&gt;char是定长的，会自动空格补足&lt;/p&gt;
+&lt;p&gt;varchar(n)&lt;/p&gt;
+&lt;p&gt;长度为 n 个字节的可变长度且非 Unicode 的字符数据。n 必须是一个介于 1 和 8,000 之间的数值。存储大小为输入数据的字节的实际长度，而不是 n 个字节。&lt;/p&gt;
+&lt;p&gt;nvarchar(n)&lt;/p&gt;
+&lt;p&gt;包含 n 个字符的可变长度 Unicode 字符数据。n 的值必须介于 1 与 4,000 之间。字节的存储大小是所输入字符个数的两倍。&lt;/p&gt;
+&lt;p&gt;两字段分别有字段值：我和coffee&lt;/p&gt;
+&lt;p&gt;那么varchar字段占2×2+6=10个字节的存储空间，而nvarchar字段占8×2=16个字节的存储空间。&lt;/p&gt;
+&lt;p&gt;如字段值只是英文可选择varchar，而字段值存在较多的双字节（中文、韩文等）字符时用nvarchar&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sql-join&#34;&gt;SQL JOIN&lt;/h3&gt;
+&lt;p&gt;内连接：（只有2张表匹配的行才能显示）&lt;/p&gt;
+&lt;p&gt;左连接：（左边的表不加限制）&lt;/p&gt;
+&lt;p&gt;右连接：（右边的表不加限制）&lt;/p&gt;
+&lt;p&gt;全外连接：(左右2张表都不加限制）&lt;/p&gt;
+&lt;p&gt;UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型 UNION 只选取记录，而UNION ALL会列出所有记录&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;deletetruncate&#34;&gt;delete/truncate&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;delete可以删除表中的一条或多条数据，也可以删除全部数据；而truncate只能将表中的全部数据删除。&lt;/li&gt;
+&lt;li&gt;delete删除表数据后，标识字段不能复用。也就是说如果你把id=10（假如id是标识字段）的那行数据删除了，你也不可能再插入一条数据让id=10.&lt;/li&gt;
+&lt;li&gt;truncate删除表数据后，标识重新恢复初始状态。默认为初始值为1，也就是说，truncate之后，再插入一条数据，id=1.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;时间复杂度&#34;&gt;时间复杂度&lt;/h3&gt;
+&lt;h4 id=&#34;c-中列表字典集合操作的时间复杂度&#34;&gt;C# 中列表、字典、集合操作的时间复杂度&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;List&lt;/strong&gt;列表是顺序线性表，Add操作是O(1)或O(N)，因为List是动态扩容的，在未扩容之前，其Add操作是O(1)，而在扩容的时候，Add操作是O(N)的。其Contains方法，是按照线性检索的，其复杂度是O(n)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SortedList&lt;/strong&gt;列表是有序线性表，Add操作是O(n)，其Contains方法是通过二分查找检索元素的，因此复杂度是O(log n)，其Containskey方法也是通过二分查找检索元素，复杂度也是O(log n)，ContainsValue方法是使用线性查找元素，复杂度是O(n)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HashSet&lt;/strong&gt;集合类是包含不重复项的无序hash表(非线性)，它本身是一个一维数组，但是二维链表结构(扩展：一维数组的大小总是2的N次方)。Add操作是O(1)或是O(N)的，原因同List集合类。Contains方法是O(1)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SortedSet&lt;/strong&gt;集合类是基于红黑树实现的，其Add方法是O(lg n)，Contains方法也是O(lg n)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dictionary&lt;/strong&gt;字典类是hash表，Add操作是O(1)或是O(N)的，原理同上。其Containskey方法是O(1)，原因是通过hash来查找元素而不是遍历元素。ContainsValue方法的时间复杂度是O(N)，原因是内部通过遍历key来查找value，而不是通过hash来查找。Item[Key]属性根据key来检索value，其时间复杂度也是O(1)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SortedDictionary&lt;/strong&gt;字典类是基于平衡二叉树实现的，其Add方法是O(lg n),ContainsKey方法也是O(lg n)，而ContainsValue方法则是O(n)。&lt;/p&gt;
+&lt;h4 id=&#34;常见算法时间复杂度&#34;&gt;常见算法时间复杂度&lt;/h4&gt;
+&lt;p&gt;以下表格统整了一些常用的时间复杂度类。表中，poly(&lt;em&gt;x&lt;/em&gt;) = $x^{O(1)}$，也就是 &lt;em&gt;x&lt;/em&gt; 的多项式。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;名称&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%B1%BB&#34;&gt;复杂度类&lt;/a&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;运行时间（{\displaystyle T(n)}&lt;img src=&#34;https://wikimedia.org/api/rest_v1/media/math/render/svg/0be5a46684e1279c27414b285fa995f30407d002&#34; alt=&#34;T(n)&#34;&gt;）&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;运行时间举例&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;算法举例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%99%82%E9%96%93&#34;&gt;常数时间&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(1)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;判断一个二进制数的奇偶&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;反&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%98%BF%E5%85%8B%E6%9B%BC%E5%87%BD%E6%95%B0&#34;&gt;阿克曼&lt;/a&gt;时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(\alpha(n))$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%B9%B6%E6%9F%A5%E9%9B%86&#34;&gt;并查集&lt;/a&gt;的单个操作的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%B9%B3%E6%91%8A%E6%97%B6%E9%97%B4&#34;&gt;平摊时间&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%BF%AD%E4%BB%A3%E5%B0%8D%E6%95%B8&#34;&gt;迭代对数&lt;/a&gt;时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(\log^*n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%9B%BE%E7%9D%80%E8%89%B2%E9%97%AE%E9%A2%98&#34;&gt;分布式圆环着色问题&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;对数对数时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(\log \log n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;有界&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97&#34;&gt;优先队列&lt;/a&gt;的单个操作[&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6#cite_note-1&#34;&gt;1]&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;对数时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/DLOGTIME&#34;&gt;DLOGTIME&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(\log n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$\log n$，$\log n^{2}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2&#34;&gt;二分搜索&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%B9%82%E5%AF%B9%E6%95%B0&#34;&gt;幂对数&lt;/a&gt;时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$(\log n)^{O(1)}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$(\log n)^{2}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;（小于1次）幂时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(n^{c})$，其中$ 0&amp;lt;c&amp;lt;1$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$n^{\frac {1}{2}}$，$n^{\frac {2}{3}}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/K-d%E6%A0%91&#34;&gt;K-d树&lt;/a&gt;的搜索操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%B7%9A%E6%80%A7%E6%99%82%E9%96%93&#34;&gt;线性时间&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$n$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;无序&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%95%B0%E7%BB%84&#34;&gt;数组&lt;/a&gt;的搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;线性迭代对数时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(n\log ^{*}n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=%E8%90%8A%E5%A7%86%E5%BE%B7%C2%B7%E8%B3%BD%E5%BE%B7%E7%88%BE&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;莱姆德·赛德尔&lt;/a&gt;的&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=%E4%B8%89%E8%A7%92%E5%88%86%E5%89%B2%E5%A4%9A%E8%BE%B9%E5%BD%A2&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;三角分割多边形&lt;/a&gt;算法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;线性对数时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(n\log n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$n\log n$，$\log n!$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;最快的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%AF%94%E8%BE%83%E6%8E%92%E5%BA%8F&#34;&gt;比较排序&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;二次时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(n^{2})$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$ n^{2}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F&#34;&gt;冒泡排序&lt;/a&gt;、&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F&#34;&gt;插入排序&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;三次时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(n^{3})$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$n^{3}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95&#34;&gt;矩阵乘法&lt;/a&gt;的基本实现，计算&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=%E9%83%A8%E5%88%86%E7%9B%B8%E5%85%B3%E6%80%A7&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;部分相关性&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;多项式时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=P_(%E5%A4%8D%E6%9D%82%E6%80%A7)&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;P&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$2^{O(\log n)}=n^{O(1)}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$n$，$n\log n$，$n^{10}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92&#34;&gt;线性规划&lt;/a&gt;中的&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=%E5%8D%A1%E9%A6%AC%E5%8D%A1%E6%BC%94%E7%AE%97%E6%B3%95&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;卡马卡算法&lt;/a&gt;，&lt;a href=&#34;https://zh.wikipedia.org/wiki/AKS%E8%B3%AA%E6%95%B8%E6%B8%AC%E8%A9%A6&#34;&gt;AKS质数测试&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;准多项式时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;QP&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$2^{(\log n)O(1)}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;关于&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%9C%89%E5%90%91%E5%9B%BE&#34;&gt;有向&lt;/a&gt;&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=%E6%96%AF%E5%9D%A6%E7%BA%B3%E6%A0%91%E9%97%AE%E9%A2%98&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;斯坦纳树问题&lt;/a&gt;最著名的{\displaystyle O(\log ^{2}n)}&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%BF%91%E4%BC%BC%E7%AE%97%E6%B3%95&#34;&gt;近似算法&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;次指数时间（第一定义）&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=SUBEXP&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;SUBEXP&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(2^{n^{\epsilon }})$，对任意的$ε &amp;gt; 0$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(2^{(\log n)^{\log \log n}}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;假设复杂性理论推测，&lt;a href=&#34;https://zh.wikipedia.org/wiki/BPP_(%E8%A4%87%E9%9B%9C%E5%BA%A6)&#34;&gt;BPP&lt;/a&gt; 包含在 SUBEXP 中。[&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6#cite_note-bpp-2&#34;&gt;2]&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;次指数时间（第二定义）&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$2O(n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$2^{n^{1/3}}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;用于&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3&#34;&gt;整数分解&lt;/a&gt;与&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=%E5%9C%96%E5%BD%A2%E5%90%8C%E6%A7%8B%E5%95%8F%E9%A1%8C&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;图形同构问题&lt;/a&gt;的著名算法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%8C%87%E6%95%B8%E6%99%82%E9%96%93&#34;&gt;指数时间&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=E_(complexity)&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;E&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$2O(n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$1.1^n, 10^n$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;使用&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92&#34;&gt;动态规划&lt;/a&gt;解决&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%97%85%E8%A1%8C%E6%8E%A8%E9%94%80%E5%91%98%E9%97%AE%E9%A2%98&#34;&gt;旅行推销员问题&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;阶乘时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$O(n!)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;em&gt;n&lt;/em&gt;!&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;通过&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%9A%B4%E5%8A%9B%E6%90%9C%E7%B4%A2&#34;&gt;暴力搜索&lt;/a&gt;解决旅行推销员问题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%8C%87%E6%95%B8%E6%99%82%E9%96%93&#34;&gt;指数时间&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/EXPTIME&#34;&gt;EXPTIME&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$2poly(n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$2^n, 2^{n^{2}}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;双重指数时间&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/2-EXPTIME&#34;&gt;2-EXPTIME&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$22poly(n)$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$2^{2^n}$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;在&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=%E9%A0%90%E8%86%A8%E8%84%B9%E7%AE%97%E8%A1%93&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;预膨胀算术&lt;/a&gt;中决定一个给定描述的真实性&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;字符串操作&#34;&gt;字符串操作&lt;/h3&gt;
+&lt;h4 id=&#34;拼接字符串&#34;&gt;拼接字符串&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lsquo;&amp;lsquo;+&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第一步先在内存中分配空间，存储变量的对象。“+=”时，又会重新创建一个对象来存储新的字符串，把创建的字符串指向这个新的地址。&lt;/p&gt;
+&lt;p&gt;只有简单拼接无伤大雅，如果有时候需要循环拼接时，就会不断创建新的对象，很浪费性能和内存。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;String.Format()&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;可以看到是先创建一个StringBuilder类型的变量，长度为第一个参数的长度+参数长度的8倍。.Net自动分配一个比较大的容量来存储&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;StringBuilder.Append&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;StringBuilder 是预先创建一个比较大的内存，以后每次操作时判断容量上限是否不够用，如果不够用就自动把容量扩大一倍，修改的还是第一次创建的对象的值。&lt;/p&gt;
+&lt;p&gt;如果是简单的拼写时，可以用 &amp;ldquo;+=&amp;rdquo;, string.format，循环内拼写很长的字符串时，就需要用到StringBuilder来节省性能和内存了。&lt;/p&gt;
+&lt;h4 id=&#34;stringbuilder&#34;&gt;StringBuilder&lt;/h4&gt;
+&lt;p&gt;String 对象是不可改变的。每次使用 System.String 类中的方法之一时，都要在内存中创建一个新的字符串对象，这就需要为该新对象分配新的空间。在需要对字符串执行重复修改的情况下，与创建新的 String 对象相关的系统开销可能会非常昂贵。如果要修改字符串而不创建新的对象，则可以使用 System.Text.StringBuilder 类。例如，当在一个循环中将许多字符串连接在一起时，使用 StringBuilder 类可以提升性能。&lt;/p&gt;
+&lt;p&gt;通过用一个重载的构造函数方法初始化变量，可以创建 StringBuilder 类的新实例，正如以下示例中所阐释的那样。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;StringBuilder  MyStringBuilder = new StringBuilder(&amp;quot;Hello   World!&amp;quot;); 
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;设置容量和长度&#34;&gt;设置容量和长度&lt;/h5&gt;
+&lt;p&gt;虽然 StringBuilder 对象是动态对象，允许扩充它所封装的字符串中字符的数量，但是您可以为它可容纳的最大字符数指定一个值。此值称为该对象的容量，不应将它与当前 StringBuilder 对象容纳的字符串长度混淆在一起。例如，可以创建 StringBuilder 类的带有字符串“Hello”（长度为5）的一个新实例，同时可以指定该对象的最大容量为25。当修改 StringBuilder 时，在达到容量之前，它不会为其自己重新分配空间。当达到容量时，将自动分配新的空间且容量翻倍。可以使用重载的构造函数之一来指定 StringBuilder 类的容量。以下代码示例指定可以将 MyStringBuilder 对象扩充到最大 25 个空白。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;StringBuilder MyStringBuilder = new StringBuilder(&amp;quot;Hello   World!&amp;quot;,   25); 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;另外，可以使用读/写 Capacity 属性来设置对象的最大长度。以下代码示例使用 Capacity 属性来定义对象的最大长度。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; MyStringBuilder.Capacity = 25;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;EnsureCapacity 方法可用来检查当前 StringBuilder 的容量。如果容量大于传递的值，则不进行任何更改；但是，如果容量小于传递的值，则会更改当前的容量以使其与传递的值匹配。&lt;/p&gt;
+&lt;p&gt;也可以查看或设置 Length 属性。如果将 Length 属性设置为大于 Capacity 属性的值，则自动将 Capacity 属性更改为与 Length 属性相同的值。如果将 Length 属性设置为小于当前 StringBuilder 对象内的字符串长度的值，则会缩短该字符串。&lt;/p&gt;
+&lt;p&gt;无参的构造方法默认父类AbstractStringBuilder的构造方法，并默认容量为16。&lt;/p&gt;
+&lt;p&gt;有参的构造方法初始化容量为参数字符串的长度+16。&lt;/p&gt;
+&lt;h5 id=&#34;扩容&#34;&gt;扩容&lt;/h5&gt;
+&lt;p&gt;StringBuilder.Length属性指示对象当前包含的字符数 StringBuilder 。 如果向对象添加字符 StringBuilder ，则其长度将增加，直到它等于属性的大小 StringBuilder.Capacity ，该大小定义对象可以包含的字符数。 如果添加的字符数导致对象的长度 StringBuilder 超过其当前容量，则分配新内存，属性的值 Capacity 翻倍，新字符将添加到 StringBuilder 对象中，并 Length 调整其属性。 对象的额外内存 StringBuilder 会动态分配，直到达到属性定义的值 StringBuilder.MaxCapacity 。 达到最大容量时，不能为该对象分配更多的内存 StringBuilder ，尝试添加字符或将其扩展到超出其最大容量后，会引发 ArgumentOutOfRangeException 或 OutOfMemoryException 例外。&lt;/p&gt;
+&lt;p&gt;使用append()方法在字符串后面追加东西的时候，如果长度超过了该字符串存储空间大小了就需要进行扩容：构建新的存储空间更大的字符串，将久的复制过去；&lt;/p&gt;
+&lt;p&gt;再进行字符串append添加的时候，会先计算添加后字符串大小，先检查是否需要扩容。需要扩容就尝试将新容量扩为大小变成2倍，容量如果还不够，直接扩充到需要的容量大小。&lt;/p&gt;
+&lt;p&gt;发生扩容时就可能非常浪费内存，所以在创建时要考虑好字符串的长度，避免扩容的发生。&lt;/p&gt;
+&lt;h5 id=&#34;修改-stringbuilder-字符串&#34;&gt;修改 StringBuilder 字符串&lt;/h5&gt;
+&lt;p&gt;下表列出了可以用来修改 StringBuilder 的内容的方法。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;StringBuilder.Append   将信息追加到当前   StringBuilder   的结尾。 将根据需要自动分配空间    
+StringBuilder.AppendFormat   用带格式文本替换字符串中传递的格式说明符。     
+StringBuilder.Insert   将字符串或对象插入到当前   StringBuilder   对象的指定索引处。     
+StringBuilder.Remove   从当前   StringBuilder   对象中移除指定数量的字符。     
+StringBuilder.Replace   替换指定索引处的指定字符。     
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id=&#34;析构函数&#34;&gt;析构函数&lt;/h3&gt;
+&lt;h4 id=&#34;using-的本质&#34;&gt;using 的本质&lt;/h4&gt;
+&lt;p&gt;using 语句可确保调用 Dispose 或 DisposeAsync，即使 using 块中发生异常也是如此。 通过将对象放入 try 块中，然后调用 finally 块中的 Dispose（或 DisposeAsync），可以实现相同的结果；实际上，这就是编译器转换 using 语句的方式。&lt;/p&gt;
+&lt;h4 id=&#34;托管代码和非托管代码unmanaged-code&#34;&gt;托管代码和非托管代码(unmanaged code)&lt;/h4&gt;
+&lt;p&gt;简而言之，托管代码就是执行过程交由运行时管理的代码。 在这种情况下，相关的运行时称为公共语言运行时 (CLR)，不管使用的是哪种实现（例如 &lt;a href=&#34;https://www.mono-project.com/&#34;&gt;Mono&lt;/a&gt;、.NET Framework 或 .NET Core/.NET 5+）。 CLR 负责提取托管代码、将其编译成机器代码，然后执行它。 除此之外，运行时还提供多个重要服务，例如自动内存管理、安全边界、类型安全，等等。&lt;/p&gt;
+&lt;p&gt;相反，如果运行 C/C++ 程序，则运行的代码也称为“非托管代码”。 在非托管环境中，程序员需要亲自负责处理相当多的事情。 实际的程序在本质上是操作系统 (OS) 载入内存，然后启动的二进制代码。 其他任何工作 - 从内存管理到安全考虑因素 - 对于程序员来说是一个不小的负担。&lt;/p&gt;
+&lt;p&gt;非托管代码必须提供自己的垃圾回收、类型检查、安全支持等服务，它与托管代码不同，后者从公共语言运行库中获得这些服务，而非托管代码是在运行库之外运行的代码。例如COM 组件、ActiveX 接口和 Win32 API 函数都是非托管代码的示例。C#可以使用非托管数据结构例如指针（在代码中使用unsafe关键字的内容）。该部分内容也不被CLR托管。&lt;/p&gt;
+&lt;p&gt;托管代码是使用可在 .NET 上运行的一种高级语言（例如 C#、Visual Basic、F# 等）编写的。 使用相应的编译器编译以这些语言编写的代码时，无法获得机器代码， 而是获得中间语言代码，然后运行时会对其进行编译并将其执行。 C++ 是这条规则的一个例外，因为它也能够生成可在 Windows 上运行的本机非托管二进制代码。&lt;/p&gt;
+&lt;h4 id=&#34;析构函数finalizers-dispose-和-idisposable区别&#34;&gt;析构函数Finalizers Dispose 和 IDisposable区别&lt;/h4&gt;
+&lt;p&gt;析构函数(destructor，Finalizers)与构造函数相反，当对象结束其生命周期，如对象所在的函数已调用完毕时，系统自动执行析构函数。 析构函数往往用来做“清理善后” 的工作（例如在建立对象时用new开辟了一片内存空间，delete会自动调用析构函数后释放内存）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无法在结构中定义终结器。 它们仅用于类。&lt;/li&gt;
+&lt;li&gt;一个类只能有一个终结器。&lt;/li&gt;
+&lt;li&gt;不能继承或重载终结器。&lt;/li&gt;
+&lt;li&gt;不能手动调用终结器。 可以自动调用它们。&lt;/li&gt;
+&lt;li&gt;终结器不使用修饰符或参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finalize方法（C#中是析构函数，以下称析构函数）是用于释放非托管资源的，而托管资源会由GC自动回收。所以，我们也可以这样来区分 托管和非托管资源。所有会由GC自动回收的资源，就是托管的资源，而不能由GC自动回收的资源，就是非托管资源。在我们的类中直接使用非托管资源的情况很 少，所以基本上不用我们写析构函数。&lt;/p&gt;
+&lt;p&gt;大部分的非托管资源会给系统带来很多负面影响，例如数据库连接不被释放就可能导致连接池中的可用数据库连接用尽。文件不关闭会导致其它进程无法读写这个文件等等。&lt;/p&gt;
+&lt;p&gt;实现模型：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;由于大多数的非托管资源都要求可以手动释放，所以，我们应该专门为释放非托管资源公开一个方法。实现IDispose接口的Dispose方法是最好的模型，因为C#支持using语句块，可以在离开语句块时自动调用Dispose方法。&lt;/li&gt;
+&lt;li&gt;虽然可以手动释放非托管资源，我们仍然要在析构函数中释放非托管资源，这样才是安全的应用程序。否则如果因为程序员的疏忽忘记了手动释放非托管资源，那么就会带来灾难性的后果。所以说在析构函数中释放非托管资源，是一种补救的措施，至少对于大多数类来说是如此。&lt;/li&gt;
+&lt;li&gt;由于析构函数的调用将导致GC对对象回收的效率降低，所以如果已经完成了析构函数该干的事情（例如释放非托管资源），就应当使用SuppressFinalize方法告诉GC不需要再执行某个对象的析构函数。&lt;/li&gt;
+&lt;li&gt;析构函数中只能释放非托管资源而不能对任何托管的对象/资源进行操作。因为你无法预测析构函数的运行时机，所以，当析构函数被执行的时候，也许你进行操作的托管资源已经被释放了。这样将导致严重的后果。&lt;/li&gt;
+&lt;li&gt;（这是一个规则）如果一个类拥有一个实现了IDispose接口类型的成员，并创建（注意是创建，而不是接收，必须是由类自己创建）它的实例对象，则这个类也应该实现IDispose接口，并在Dispose方法中调用所有实现了IDispose接口的成员的Dispose方法。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;.NET 垃圾回收器不会分配或释放非托管内存，实现 Dispose 方法主要用于释放非托管资源（Dispose释放托管和非托管资源）。 处理 IDisposable 实现的实例成员时，通常会级联 Dispose 调用。 实现 Dispose 有其他原因，例如，为了释放已分配的内存、删除已添加到集合中的项，或发出释放已获取的锁的信号。&lt;/p&gt;
+&lt;p&gt;IDisposable接口提供了一种机制，允许类的用户控制释放资源的时间，但需要确保执行Dispose()&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;reflection&#34;&gt;Reflection&lt;/h3&gt;
+&lt;h4 id=&#34;用处与优缺点&#34;&gt;用处与优缺点&lt;/h4&gt;
+&lt;p&gt;反射在以下情况下很有用：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;需要访问程序元数据中的特性时。&lt;/li&gt;
+&lt;li&gt;检查和实例化程序集中的类型。&lt;/li&gt;
+&lt;li&gt;在运行时构建新类型。 使用 System.Reflection.Emit 中的类。&lt;/li&gt;
+&lt;li&gt;执行后期绑定，访问在运行时创建的类型上的方法。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;反射提高了程序的灵活性和扩展性。&lt;/li&gt;
+&lt;li&gt;降低耦合性，提高自适应能力。&lt;/li&gt;
+&lt;li&gt;它允许程序创建和控制任何类的对象，无需提前硬编码目标类。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;性能问题：使用反射基本上是一种解释操作，用于字段和方法接入时要远慢于直接代码。因此反射机制主要应用在对灵活性和拓展性要求很高的系统框架上，普通程序不建议使用。&lt;/li&gt;
+&lt;li&gt;使用反射会模糊程序内部逻辑；程序员希望在源代码中看到程序的逻辑，反射却绕过了源代码的技术，因而会带来维护的问题，反射代码比相应的直接代码更复杂。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;如何优化&#34;&gt;如何优化&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;利用反射读取attribute的时候可以使用静态变量对读取内容进行缓存，减少反射使用次数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;项目更新方式&#34;&gt;项目更新方式&lt;/h3&gt;
+&lt;h4 id=&#34;蓝绿部署&#34;&gt;蓝绿部署&lt;/h4&gt;
+&lt;p&gt;蓝绿部署涉及两个生产环境：蓝色环境指代正在使用的生产环境。绿色环境则将发布一个新版本。&lt;/p&gt;
+&lt;p&gt;以下是蓝绿部署的一些优点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;可在绿色环境下进行测试，而不会中断蓝色环境。&lt;/li&gt;
+&lt;li&gt;切换到绿色环境不需要停机，只需要重定向用户流量。&lt;/li&gt;
+&lt;li&gt;问题发生时，可很方便地从绿色环境回滚到蓝色环境，只要将流量重定向回蓝色环境即可，而无需重新构建。&lt;/li&gt;
+&lt;li&gt;需要变更时，利用不可变基础设施原则初始化新的实例，避免实例配置产生不一致性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;滚动发布&#34;&gt;滚动发布&lt;/h4&gt;
+&lt;p&gt;滚动发布能够解决掉蓝绿部署时对硬件要求增倍的问题。&lt;/p&gt;
+&lt;p&gt;先将几台机器从集群中隔离，将流量打到其它机器上。然后升级隔离的机器，进行发布和验证，验证通过后将流量接回。然后循环这个过程，直到集群中所有机器都升级完毕&lt;/p&gt;
+&lt;h4 id=&#34;灰度发布金丝雀发布&#34;&gt;灰度发布（金丝雀发布）&lt;/h4&gt;
+&lt;p&gt;在灰度发布开始后，先启动一个新版本应用，但是并不直接将流量切过来，而是测试人员对新版本进行线上测试，启动的这个新版本应用，就是我们的金丝雀。如果没有问题，那么可以将少量的用户流量导入到新版本上，然后再对新版本做运行状态观察，收集各种运行时数据，如果此时对新旧版本做各种数据对比，就是所谓的A/B测试。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;多线程异步并发的区别&#34;&gt;多线程/异步/并发的区别&lt;/h3&gt;
+&lt;h4 id=&#34;多线程&#34;&gt;多线程&lt;/h4&gt;
+&lt;p&gt;多线程是对cpu剩余劳动力的压榨，是一种技术，强调的是并发（想想web server 需要处理大量并发请求的场景）。多线程是程序设计的逻辑层概念，它是进程中并发运行的一段代码。多线程可以实现线程间的切换执行。&lt;/p&gt;
+&lt;h4 id=&#34;异步&#34;&gt;异步&lt;/h4&gt;
+&lt;p&gt;异步强调的是非阻塞，是一种编程模式（pattern），主要解决了UI响应被阻塞的问题，可借助线程技术或者硬件本身的计算能力解决。&lt;/p&gt;
+&lt;p&gt;异步和同步是相对的，同步就是顺序执行，执行完一个再执行下一个，需要等待、协调运行。异步就是彼此独立,在等待某事件的过程中继续做自己的事，不需要等待这一事件完成后再工作。线程就是实现异步的一个方式。异步是让调用方法的主线程不需要同步等待另一线程的完成，从而可以让主线程干其它的事情。&lt;/p&gt;
+&lt;p&gt;异步和多线程并不是一个同等关系,异步是最终目的,多线程只是我们实现异步的一种手段。异步是当一个调用请求发送给被调用者,而调用者不用等待其结果的返回而可以做其它的事情。实现异步可以采用多线程技术或则交给另外的进程来处理。&lt;/p&gt;
+&lt;p&gt;异步和同步的区别， 在io等待的时候，同步不会切走，浪费了时间。&lt;/p&gt;
+&lt;p&gt;多线程的好处，比较容易的实现了异步切换的思想， 因为异步的程序很难写的。多线程本身程还是以同步完成，但是应该说比效率是比不上异步的。 而且多线很容易写， 相对效率也高。&lt;/p&gt;
+&lt;h5 id=&#34;异步原理&#34;&gt;异步原理&lt;/h5&gt;
+&lt;p&gt;await修饰的方法返回的是一个Task，而这个Task其实就是一个异步句柄，注册一个回调方法在异步操作完成后继续&lt;/p&gt;
+&lt;p&gt;限制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用程序的Main方法不能转变成异步函数&lt;/li&gt;
+&lt;li&gt;构造函数、属性、事件不能转变成异步函数&lt;/li&gt;
+&lt;li&gt;不能在catch、finally、unsafe块中使用await操作符&lt;/li&gt;
+&lt;li&gt;不能在支持线程锁中使用await操作符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Linq中，只能在from子句的第一个集合表达式或join子句的集合表达式中使用await操作符。&lt;/p&gt;
+&lt;h4 id=&#34;并发&#34;&gt;并发&lt;/h4&gt;
+&lt;p&gt;并行虽然同样也是对cpu剩余劳动力的压榨，且基于多线程技术，但它强调的是高效完成计算任务，而不是并发数量。&lt;/p&gt;
+&lt;p&gt;在操作系统中，是指一个时间段中有几个程序都处于已启动运行到运行完毕之间，且这几个程序都是在同一个处理机上运行。其中两种并发关系分别是同步和互斥。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;互斥&lt;/strong&gt;：进程间相互排斥的使用临界资源的现象，就叫互斥。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;同步&lt;/strong&gt;：进程之间的关系不是相互排斥临界资源的关系，而是相互依赖的关系。进一步的说明：就是前一个进程的输出作为后一个进程的输入，当第一个进程没有输出时第二个进程必须等待。具有同步关系的一组并发进程相互发送的信息称为消息或事件。&lt;/p&gt;
+&lt;p&gt;其中并发又有伪并发和真并发，伪并发是指单核处理器的并发，真并发是指多核处理器的并发。&lt;/p&gt;
+&lt;p&gt;在单处理器中多道程序设计系统中，进程被交替执行，表现出一种并发的外部特种；在多处理器系统中，进程不仅可以交替执行，而且可以重叠执行。在多处理器上的程序才可实现并行处理。从而可知，并行是针对多处理器而言的。并行是同时发生的多个并发事件，具有并发的含义，但并发不一定并行，也亦是说并发事件之间不一定要同一时刻发生。&lt;/p&gt;
+&lt;p&gt;在CSAPP中并发编程一章讲到，现代操作系统提供了三种基本的构造并发程序的方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进程，每个逻辑控制流都是一个进程，由内核调度和维护，进程有独立的虚拟地址空间，要想共享数据，必须显示的IPC机制&lt;/li&gt;
+&lt;li&gt;I/O多路复用，应用程序在一个进程的上下文中显示地调度它们自己的逻辑流，因为程序是一个单独的进程，所有的流共享同一个地址空间&lt;/li&gt;
+&lt;li&gt;线程，由内核进行调度，可以看做是以上两种方式的混合体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;并发问题：&lt;/p&gt;
+&lt;p&gt;当一个函数被多个线程反复地调用时，它会一直产生正确的结果，这个函数是线程安全的。反之，该函数是线程不安全的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;四个线程不安全函数类：
+1、不保护共享变量的函数
+2、保持跨越多个调用的状态的函数
+3、返回指向静态变量的指针的函数
+4、调用线程不安全函数的函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线程安全函数：
+可重入函数：当它们被多个线程调用时，不会引用任何共享数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;死锁：一组线程被阻塞了，等待一个永远不可能为真的条件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;规避死锁：给定所有互斥操作的一个全序，如果每个线程都是以一种顺序获得互斥锁并以相反的顺序释放，那么这个程序就是无死锁的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sessioncookieapplicationcache&#34;&gt;Session/Cookie/Application/Cache&lt;/h3&gt;
+&lt;h4 id=&#34;session&#34;&gt;Session&lt;/h4&gt;
+&lt;p&gt;session值是保存在服务器内存上,那么,可以肯定,大量的使用session将导致服务器负担加重. 而viewstate由于只是将数据存入到页面隐藏控件里,不再占用服务器资源,因此, 我们可以将一些需要服务器&amp;quot;记住&amp;quot;的变量和对象保存到viewstate里面. 而sesson则只应该应用在需要跨页面且与每个访问用户相关的变量和对象存储上.&lt;/p&gt;
+&lt;p&gt;session在默认情况下20分钟就过期,而viewstate则永远不会过期.&lt;/p&gt;
+&lt;p&gt;但viewstate并不是能存储所有的.net类型数据,它仅仅支持String、Integer、Boolean、Array、ArrayList、Hashtable 以及自定义的一些类型。&lt;/p&gt;
+&lt;h5 id=&#34;session是如何实现区分用户&#34;&gt;session是如何实现区分用户&lt;/h5&gt;
+&lt;p&gt;在服务器端有一个session池，用来存储每个用户提交session中的数据，Session对于每一个客户端（或者说浏览器实例）是“人手一份”，用户首次与Web服务器建立连接的时候，服务器会给用户分发一个SessionID作为标识。SessionID是一个由24个字符组成的随机字符串。用户每次提交页面，浏览器都会把这个SessionID包含在HTTP头中提交给Web服务器，这样Web服务器就能区分当前请求页面的是哪一个客户端,而这个SessionID是一cookie的方式保存的在客户端的内存中的，如果想要得到Session池中的数据，服务器就会根据客户端提交的唯一SessionID标识给出相应的数据返回。&lt;/p&gt;
+&lt;p&gt;如果说&lt;strong&gt;Cookie机制是通过检查客户身上的“通行证”来确定客户身份的话，那么Session机制就是通过检查服务器上的“客户明细表”来确认客户身份。Session相当于程序在服务器上建立的一份客户档案，客户来访的时候只需要查询客户档案表就可以了。&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;生命周期&#34;&gt;生命周期&lt;/h5&gt;
+&lt;p&gt;Session保存在服务器端。&lt;strong&gt;为了获得更高的存取速度，服务器一般把Session放在内存里。每个用户都会有一个独立的Session。如果Session内容过于复杂，当大量客户访问服务器时可能会导致内存溢出。因此，Session里的信息应该尽量精简。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Session在用户第一次访问服务器的时候自动创建&lt;/strong&gt;。需要注意只有访问JSP、Servlet等程序时才会创建Session，只访问HTML、IMAGE等静态资源并不会创建Session。如果尚未生成Session，也可以使用request.getSession(true)强制生成Session。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Session生成后，只要用户继续访问，服务器就会更新Session的最后访问时间，并维护该Session&lt;/strong&gt;。用户每访问服务器一次，无论是否读写Session，服务器都认为该用户的Session“活跃（active）”了一次。&lt;/p&gt;
+&lt;h4 id=&#34;cookies&#34;&gt;Cookies&lt;/h4&gt;
+&lt;p&gt;HTTP协议下的一种方式,通过该方式,服务器或脚本能够在客户机上维护状态信息；&lt;/p&gt;
+&lt;p&gt;就是在客户端保存客户端单独使用的数据的一种方式；&lt;/p&gt;
+&lt;p&gt;String格式存放。&lt;/p&gt;
+&lt;h4 id=&#34;application全局对象&#34;&gt;Application（全局对象）&lt;/h4&gt;
+&lt;p&gt;Application对象生存期和Web应用程序生存期一样长，生存期从Web应用程序网页被访问开始，HttpApplication类对象Application被自动创建，直到没有一个网页被访问时结束，Application对象被自动撤销。因此Application对象中的变量也有相同生存期，并且变量可以被Web应用程序中的所有网页访问。因此，可以在Application对象中建立一些全局的公用变量，由于存储在Application对象中的数值可以被应用程序的所有网页读取，所以Application对象的属性也适合在应用程序的网页之间传递信息。Application对象主要有以下用途：&lt;/p&gt;
+&lt;p&gt;​        ● 存储记录在线人数或访问网站总人数的变量。&lt;/p&gt;
+&lt;p&gt;​        ● 存储网站共用最新消息，供所有网页更新。&lt;/p&gt;
+&lt;p&gt;​        ● 记录网站中个网页同一条广告被点击的次数或时间。&lt;/p&gt;
+&lt;p&gt;​        ● 存储供所有网页使用的数据库数据。&lt;/p&gt;
+&lt;p&gt;​        ● 不同用之间通讯，例如多用户聊天室，多用户游戏等&lt;/p&gt;
+&lt;h4 id=&#34;cache&#34;&gt;Cache&lt;/h4&gt;
+&lt;p&gt;​    吃Server記憶體。&lt;/p&gt;
+&lt;p&gt;​    可設定時間、hit rate或先進先出來當作條件。&lt;/p&gt;
+&lt;p&gt;​    通常應用在靜態網頁快取。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;mvc原理&#34;&gt;MVC原理&lt;/h3&gt;
+&lt;p&gt;request-》Controller-》提取数据并完成数据处理工作-》将数据或处理结果呈现给用户-》response&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Convention over Configuration&lt;/strong&gt; (&lt;!-- raw HTML omitted --&gt;约定优先于配置&lt;!-- raw HTML omitted --&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;控制器的名字以Controller结束，但在URL中不需要写出&amp;quot;Controller&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;所有的Controller默认情况下放到名为&amp;quot;Controllers&amp;quot;的文件夹中。&lt;/li&gt;
+&lt;li&gt;所有视图放到名为&amp;quot;Views&amp;quot;的文件夹中。每个Controller对应一个与其同名的视图文件夹。&lt;/li&gt;
+&lt;li&gt;每个视图文件与对应的Controller中的Action方法同名。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;net-core&#34;&gt;.net core&lt;/h4&gt;
+&lt;p&gt;​    1. ASP.NET Core 在运行时首先加载 Program 类下面的 Main 方法，在 Main 方法中指定托管服务器，并调用 Startup 类中的 Configure 和 ConfigureServices 方法等完成初始化；&lt;/p&gt;
+&lt;p&gt;​    2.在 ASP.NET Core 中 HTTP 请求是以中间件管道的形式进行处理，每个中间件都可以在 HTTP 请求开始和结束对它进行处理；&lt;/p&gt;
+&lt;p&gt;​    3.ASP.NET Core 可以构建跨平台应用，服务运行在 Http.Sys（仅适用于Windows平台）和 Kestrel 上，不需要用IIS进行托管，所以相比传统 ASP.NET 来说性能更高效也更加灵活。&lt;/p&gt;
+&lt;h4 id=&#34;net-mvc&#34;&gt;.net mvc&lt;/h4&gt;
+&lt;p&gt;​    请求被UrlRoutingModule部件拦截&lt;/p&gt;
+&lt;p&gt;​    封装请求上下文HttpContext，成为HttpContextWrapper对象。&lt;/p&gt;
+&lt;p&gt;​    根据当前的HttpContext，从Routes集合中得到与当前请求URL相符合的RouteData对象。&lt;/p&gt;
+&lt;p&gt;​    将RouteData与HttpContext请求封装成一个RequestContext对象。&lt;/p&gt;
+&lt;p&gt;​    根据RequestContext对象，从RouteData的RouteHandler中获取IHttpHandler（MVC里面会有一个IHttpHandler的实现类MvcHandler）。&lt;/p&gt;
+&lt;p&gt;​    执行IHttpHandler（MvcHandler），然后就是通过反射激活具体的controller，执行具体的action。&lt;/p&gt;
+&lt;p&gt;​    整个过程有两个核心的组件：UrlRoutingModule和MvcHandler，上文提到的各个过程都和两个组件有紧密的联系。而这两个组件分别继承至IHttpModule和IHttpHandler接口，这两个接口在管道事件里面这两个接口扮演着重要角色。&lt;/p&gt;
+&lt;p&gt;​        1.UrlRoutingModule的作用可以理解为通过一系列的与路由相关的组件去解析当前请求的Controller与Action名称，其实简单点理解，比如我们请求http://localhost:8080/Home/Index这个url的时候，UrlRoutingModule拦截到这个请求，然后通过一系列的方式得到这里的“Home”和“Index”，这样理解有没有简单一点呢。&lt;/p&gt;
+&lt;p&gt;​        2.MvcHandler的作用就更加直接，上述通过拦截组件得到了请求的Controller和Action的名称，MvcHandler组件将当前请求的Controller名称反射得到对应的控制器对象，然后执行对应的Action方法。比如还是上述http://localhost:8080/Home/Index这个请求，通过字符串“Home”反射成为Home这个类型的控制器对象，然后调用这个对象的Index()方法。&lt;/p&gt;
+&lt;p&gt;​    综上，联合这两个组件来理解，UrlRoutingMudule组件的主要作用是解析当前的Controller与Action名称，MvcHandler的作用是将得到的Controller名称激活，得到具体的Controller对象，然后执行对应的Action方法。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;js闭包httpsdevelopermozillaorgzh-cndocswebjavascriptclosures&#34;&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures&#34;&gt;JS闭包&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个函数和对其周围状态（&lt;strong&gt;lexical environment，词法环境&lt;/strong&gt;）的引用捆绑在一起（或者说函数被引用包围），这样的组合就是&lt;strong&gt;闭包&lt;/strong&gt;（&lt;strong&gt;closure&lt;/strong&gt;）。也就是说，闭包让你可以在一个内层函数中访问到其外层函数的作用域。在 JavaScript 中，每当创建一个函数，闭包就会在函数创建的同时被创建出来。&lt;/p&gt;
+&lt;p&gt;闭包是由函数以及声明该函数的词法环境组合而成的。该环境包含了这个闭包创建时作用域内的任何局部变量。&lt;/p&gt;
+&lt;p&gt;闭包很有用，因为它允许将函数与其所操作的某些数据（环境）关联起来。这显然类似于面向对象编程。在面向对象编程中，对象允许我们将某些数据（对象的属性）与一个或者多个方法相关联。&lt;/p&gt;
+&lt;p&gt;因此，通常你使用只有一个方法的对象的地方，都可以使用闭包。&lt;/p&gt;
+&lt;p&gt;在 Web 中，你想要这样做的情况特别常见。大部分我们所写的 JavaScript 代码都是基于事件的 — 定义某种行为，然后将其添加到用户触发的事件之上（比如点击或者按键）。我们的代码通常作为回调：为响应事件而执行的函数。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html&#34;&gt;阮一峰&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;css盒子模型&#34;&gt;CSS盒子模型&lt;/h3&gt;
+&lt;p&gt;所有HTML元素可以看作盒子，在CSS中，&amp;ldquo;box model&amp;quot;这一术语是用来设计和布局时使用。CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Margin(外边距)&lt;/strong&gt; - 清除边框外的区域，外边距是透明的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Border(边框)&lt;/strong&gt; - 围绕在内边距和内容外的边框。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Padding(内边距)&lt;/strong&gt; - 清除内容周围的区域，内边距是透明的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Content(内容)&lt;/strong&gt; - 盒子的内容，显示文本和图像。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;浏览器的兼容性问题&#34;&gt;浏览器的兼容性问题&lt;/h4&gt;
+&lt;p&gt;一旦为页面设置了恰当的 DTD，大多数浏览器都会按照上面的图示来呈现内容。然而 IE 5 和 6 的呈现却是不正确的。根据 W3C 的规范，元素内容占据的空间是由 width 属性设置的，而内容周围的 padding 和 border 值是另外计算的。不幸的是，IE5.X 和 6 在怪异模式中使用自己的非标准模型。这些浏览器的 width 属性不是内容的宽度，而是内容、内边距和边框的宽度的总和。&lt;/p&gt;
+&lt;p&gt;虽然有方法解决这个问题。但是目前最好的解决方案是回避这个问题。也就是，不要给元素添加具有指定宽度的内边距，而是尝试将内边距或外边距添加到元素的父元素和子元素。&lt;/p&gt;
+&lt;p&gt;IE8 及更早IE版本不支持设置填充的宽度和边框的宽度属性。&lt;/p&gt;
+&lt;p&gt;解决IE8及更早版本不兼容问题可以在HTML页面声明 &lt;!-- raw HTML omitted --&gt;即可。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model&#34;&gt;MDN&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;性能监控&#34;&gt;性能监控&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;这个问题遇到过好几次，但之前的工作里面确实没用过性能监控 2020-10-27 18:24:23&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;OneAPM 通过自动探知 Web 端用户、关键应用、数据库请求、外部调用等各层级应用组件，绘制全局拓扑，直观展示组件性能及相互调用时间，其中包括网络耗时。可以实时了解哪些环节成为了系统的性能瓶颈，做出有针对性的优化&lt;/p&gt;
+&lt;p&gt;百度应用性能监测中心(&lt;a href=&#34;http://developer.baidu.com/apm/&#34;&gt;http://developer.baidu.com/apm/&lt;/a&gt;)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;实现用户验证区分角色根据不同的角色访问不同的页面&#34;&gt;实现用户验证/区分角色/根据不同的角色访问不同的页面&lt;/h3&gt;
+&lt;p&gt;传统的aspx 在pageload方法中判断session&lt;/p&gt;
+&lt;p&gt;MVC razor 直接重写IViewLocationExpander 分权限去不同路径寻找对应views / 如果是前台后台中台 直接使用区域路由 两套多套各自实现各自逻辑&lt;/p&gt;
+&lt;p&gt;前后端分离 第一次请求api返回权限，前端控制能否显示，后端控制能否访问 axios ajax&lt;/p&gt;
+&lt;p&gt;页面拦截 控制直接浏览器输入访问非本权限页面&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;documentready和onload&#34;&gt;document.ready和onload&lt;/h3&gt;
+&lt;p&gt;JavaScript文档加载完成事件&lt;/p&gt;
+&lt;p&gt;页面加载完成有两种事件：&lt;/p&gt;
+&lt;p&gt;一是ready，表示文档结构已经加载完成（不包含图片等非文字媒体文件）；&lt;/p&gt;
+&lt;p&gt;二是onload，指示页面包含图片等文件在内的所有元素都加载完成。&lt;/p&gt;
+&lt;p&gt;Dom Ready是在dom加载完成后就可以直接对dom进行操作，比如一张图片只要&lt;!-- raw HTML omitted --&gt;标签完成，不用等这个图片加载完成，就可以设置图片的宽高的属性或样式等；&lt;/p&gt;
+&lt;p&gt;Dom Load是在整个document文档（包括了加载图片等其他信息）加载完成后就可以直接对dom进行操作，比如一张图片要等这个图标加载完成之后才能设置图片的宽高的属性或样式等；&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;设计模式&#34;&gt;设计模式&lt;/h3&gt;
+&lt;h4 id=&#34;简单工厂工厂方法抽象工厂的区别&#34;&gt;简单工厂/工厂方法/抽象工厂的区别&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;简单工厂&lt;/strong&gt; &lt;!-- raw HTML omitted --&gt;描述了一个类， 它拥有一个包含大量条件语句的构建方法， 可根据方法的参数来选择对何种产品进行初始化并将其返回。&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;人们通常会将简单工厂与普通的工厂或其它创建型设计模式混淆。 在绝大多数情况下， 简单工厂是引入工厂方法或抽象工厂模式时的一个中间步骤。&lt;/p&gt;
+&lt;p&gt;简单工厂通常没有子类。 但当从一个简单工厂中抽取出子类后， 它看上去就会更像经典的工厂方法模式了。顺便提一句， 如果你将一个简单工厂声明为 abstract类型， 它并不会神奇地变成抽象工厂模式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工厂方法&lt;/strong&gt; &lt;!-- raw HTML omitted --&gt;是一种创建型设计模式， 其在父类中提供一个创建对象的方法， 允许子类决定实例化对象的类型。&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;如果在基类及其扩展的子类中都有一个构建方法的话， 那它可能就是工厂方法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;抽象工厂&lt;/strong&gt;  &lt;!-- raw HTML omitted --&gt;是一种创建型设计模式， 它能创建一系列相关或相互依赖的对象， 而无需指定其具体类。&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;什么是 “系列对象”？ 例如有这样一组的对象：  运输工具+ 引擎+ 控制器 。 它可能会有几个变体：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;汽车+ 内燃机+ 方向盘&lt;/li&gt;
+&lt;li&gt;飞机+ 喷气式发动机+ 操纵杆&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你的程序中并不涉及产品系列的话， 那就不需要抽象工厂。再次重申， 许多人分不清抽象工厂模式和声明为 abstract 的简单工厂。 不要犯这个错误！&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;排序&#34;&gt;排序&lt;/h3&gt;
+&lt;p&gt;每一次排序之后都能确定至少一个元素位置的排序方法包括：&lt;/p&gt;
+&lt;p&gt;1.选择排序：每次将最大的数放到最后。所以最大的数排一次序后位置就确定了。&lt;/p&gt;
+&lt;p&gt;2.冒泡排序：同选择排序。每一次排序最大的值位置确定。&lt;/p&gt;
+&lt;p&gt;3.快排：每一次排序pivot的位置确定。&lt;/p&gt;
+&lt;p&gt;4.堆排序：每一次排序时，都是将堆顶的元素和最后一个节点互换，然后调整堆，再将堆大小减1。所以每一次排序堆顶元素确定。&lt;/p&gt;
+&lt;p&gt;不能至少确定一个元素的位置的方法包括：&lt;/p&gt;
+&lt;p&gt;1.插入排序：不到最后一步求的都是相对位置。&lt;/p&gt;
+&lt;p&gt;2.shell排序：对简单插入排序的改进。不到最后一步，是无法确定每个元素位置的。&lt;/p&gt;
+&lt;p&gt;3.归并排序：局部有序，并不能确定任一元素在全局的位置。&lt;/p&gt;
+&lt;p&gt;4.基数排序，计数排序：利用桶排序的思路，不是基于比较的排序，也无法在一次排序中确定某个元素的位置。因为每一次排序都是整体处理。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;webservicewcfwebapi&#34;&gt;WebService/WCF/WebAPI&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Web Service&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​    它是基于SOAP协议的，数据格式是XML&lt;/p&gt;
+&lt;p&gt;​    只支持HTTP协议&lt;/p&gt;
+&lt;p&gt;​    它不是开源的，但可以被任意一个了解XML的人使用&lt;/p&gt;
+&lt;p&gt;​    它只能部署在IIS上&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WCF&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​    这个也是基于SOAP的，数据格式是XML&lt;/p&gt;
+&lt;p&gt;​    这个是Web Service（ASMX）的进化版，可以支持各种各样的协议，像TCP，HTTP，HTTPS，Named Pipes, MSMQ.&lt;/p&gt;
+&lt;p&gt;​    WCF的主要问题是，它配置起来特别的繁琐&lt;/p&gt;
+&lt;p&gt;​    它不是开源的，但可以被任意一个了解XML的人使用&lt;/p&gt;
+&lt;p&gt;​    它可以部署应用程序中或者IIS上或者Windows服务中&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WCF Rest&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​    想使用WCF Rest service，你必须在WCF中使用webHttpBindings&lt;/p&gt;
+&lt;p&gt;​    它分别用[WebGet]和[WebInvoke]属性，实现了HTTP的GET和POST动词&lt;/p&gt;
+&lt;p&gt;​    要想使用其他的HTTP动词，你需要在IIS中做一些配置，使.svc文件可以接受这些动词的请求&lt;/p&gt;
+&lt;p&gt;​    使用WebGet通过参数传输数据，也需要配置。而且必须指定UriTemplate&lt;/p&gt;
+&lt;p&gt;​    它支持XML、JSON以及ATOM这些数据格式&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Web API&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​    这是一个简单的构建HTTP服务的新框架&lt;/p&gt;
+&lt;p&gt;​    在.net平台上Web API 是一个开源的、理想的、构建REST-ful 服务的技术&lt;/p&gt;
+&lt;p&gt;​    不像WCF REST Service.它可以使用HTTP的全部特点（比如URIs、request/response头，缓存，版本控制，多种内容格式）&lt;/p&gt;
+&lt;p&gt;​    它也支持MVC的特征，像路由、控制器、action、filter、模型绑定、控制反转（IOC）或依赖注入（DI），单元测试。这些可以使程序更简单、更健壮&lt;/p&gt;
+&lt;p&gt;​    它可以部署在应用程序和IIS上&lt;/p&gt;
+&lt;p&gt;​    这是一个轻量级的框架，并且对限制带宽的设备，比如智能手机等支持的很好&lt;/p&gt;
+&lt;p&gt;​    Response可以被Web API的MediaTypeFormatter转换成Json、XML 或者任何你想转换的格式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WCF和WEB API我该选择哪个？&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当你想创建一个支持消息、消息队列、双工通信的服务时，你应该选择WCF&lt;/li&gt;
+&lt;li&gt;当你想创建一个服务，可以用更快速的传输通道时，像TCP、Named Pipes或者甚至是UDP（在WCF4.5中）,在其他传输通道不可用的时候也可以支持HTTP。&lt;/li&gt;
+&lt;li&gt;当你想创建一个基于HTTP的面向资源的服务并且可以使用HTTP的全部特征时（比如URIs、request/response头，缓存，版本控制，多种内容格式），你应该选择Web API&lt;/li&gt;
+&lt;li&gt;当你想让你的服务用于浏览器、手机、iPhone和平板电脑时，你应该选择Web API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;ajax-httprequest过程&#34;&gt;AJAX HttpRequest过程&lt;/h3&gt;
+&lt;p&gt;创建XMLHttpRequest&lt;/p&gt;
+&lt;p&gt;连接服务器&lt;/p&gt;
+&lt;p&gt;发送请求&lt;/p&gt;
+&lt;p&gt;服务器做出响应&lt;/p&gt;
+&lt;p&gt;接收响应数据&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;容灾&#34;&gt;容灾&lt;/h3&gt;
+&lt;p&gt;软件复制：应用高可用、应用负载均衡、应用配置文件同步、VMware HA&lt;/p&gt;
+&lt;p&gt;数据库复制：Oracle DG、MySQL 主从、MSSQL 镜像、日志同步；&lt;/p&gt;
+&lt;p&gt;存储复制：EMC Vplex 、IBM SVC、NetAPP MetroCluster。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;aspnet页面生命周期&#34;&gt;ASP.Net页面生命周期&lt;/h3&gt;
+&lt;p&gt;每个页面的生命周期为用户的每一次访问，也就是说每一次客户端与服务器之间的一个往返过程.全局变量的生命周期在此之间.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Page_Init();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Load ViewState and Postback data;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Page_Load();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Handle control events;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Page_PreRender();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Page_Render();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Unload event;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dispose method called;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sql防注入&#34;&gt;SQL防注入&lt;/h3&gt;
+&lt;p&gt;使用orm框架/预编译(参数化查询)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;缓存和db之间怎么保证数据一致性&#34;&gt;缓存和DB之间怎么保证数据一致性&lt;/h3&gt;
+&lt;p&gt;缓存预留模式&lt;/p&gt;
+&lt;p&gt;​    读操作：先读缓存，缓存没有的话读DB，然后取出数据放入缓存，最后响应数据&lt;/p&gt;
+&lt;p&gt;​    写操作：先更新DB，再删除缓存&lt;/p&gt;
+&lt;p&gt;为什么是删除而不是更新呢？&lt;/p&gt;
+&lt;p&gt;​    原因很简单，复杂场景下缓存不单单是DB中直接取出来的值，此外更新缓存的代价是很高的，频繁更新的缓存到底会不会被频繁访问到？可能更新到缓存里面的数据都是冷数据，频繁失效，所以一般用到再去加载缓存，lazy加载的思想&lt;/p&gt;
+&lt;p&gt;先更新DB，再删除缓存的问题，如果更新DB成功，删除缓存失败会导致数据不一致&lt;/p&gt;
+&lt;p&gt;​    所以一般是先删除缓存，再更新DB&lt;/p&gt;
+&lt;p&gt;还是有问题，A先删除了缓存，但还没更新DB，这时B过来请求数据，发现缓存没有，去请求DB拿到旧数据，然后再写到缓存，等A更新完了DB之后就会出现缓存和DB数据不一致的情况了&lt;/p&gt;
+&lt;p&gt;​    更新数据时，根据数据的唯一标识路由到队列中，读取数据时，如果发现数据不再缓存中，那么把读取数据+更新缓存的操作，根据唯一标识路由之后，也发送到相应队列中。一个队列对应一个工作线程，线程串行拿到队列里的操作一一执行&lt;/p&gt;
+&lt;p&gt;带来的新问题：&lt;/p&gt;
+&lt;p&gt;​    可能数据更新频繁，导致队列中积压了大量的更新操作，读请求长时间阻塞，所以要压测&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;关键字&#34;&gt;关键字&lt;/h3&gt;
+&lt;h4 id=&#34;constreadonly&#34;&gt;const/readonly&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/readonly&#34;&gt;readonly&lt;/a&gt; 关键字与 &lt;code&gt;const&lt;/code&gt; 关键字不同。 &lt;code&gt;const&lt;/code&gt; 字段只能在该字段的声明中初始化。 字段可以在声明或构造函数中初始化。 因此，根据所使用的构造函数，&lt;code&gt;readonly&lt;/code&gt; 字段可能具有不同的值。 另外，虽然 &lt;code&gt;const&lt;/code&gt; 字段是编译时常量，但 &lt;code&gt;readonly&lt;/code&gt; 字段可用于运行时常量。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;访问修饰符&#34;&gt;访问修饰符&lt;/h3&gt;
+&lt;p&gt;public：同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。
+private：只有同一 class 或 struct 中的代码可以访问该类型或成员。
+protected：只有同一 class 或者从该 class 派生的 class 中的代码可以访问该类型或成员。
+internal：同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。
+protected internal：该类型或成员可由对其进行声明的程序集或另一程序集中的派生 class 中的任何代码访问。
+private protected：只有在其声明程序集内，通过相同 class 中的代码或派生自该 class 的类型，才能访问类型或成员。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;浏览器输入网址enter之后发生了什么&#34;&gt;浏览器输入网址，Enter之后发生了什么？&lt;/h3&gt;
+&lt;p&gt;输入网址后DNS(域名解析协议)将网址转换成对应的IP，然后网络在路由表中查找最适合一条路由连接到对应的服务器ip，也就是刚刚转换的ip。此时，传输层tcp经过三次握手后简历连接，服务器收到http请求(get/post)等后，进行相应的处理并把结果数据返回到浏览器上，此时输入网址后对应的信息就会显示出来。&lt;/p&gt;
+&lt;hr&gt;
+- https://www.openheart.icu/cs/dot-net-interview/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -150,16 +1204,13 @@ $$
         
         <guid>https://www.openheart.icu/cs/git/</guid>
         <description>42th openheart https://www.openheart.icu/cs/git/ -&lt;h2 id=&#34;idea设置git&#34;&gt;idea设置git&lt;/h2&gt;
-&lt;p&gt;idea -&amp;gt;VSC -&amp;gt;Create Git Repository
-右击工程文件 -&amp;gt;git-&amp;gt;add
-右击工程文件 -&amp;gt;git-&amp;gt;commit&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git remote add origin git@github.com:Hyominn/java_demo.git
 git pull git@github.com:Hyominn/java_demo.git
 git add .
 dir                                                &lt;span style=&#34;color:#228b22&#34;&gt;# 查看有哪些文件夹&lt;/span&gt;
 git rm -r --cached target   &lt;span style=&#34;color:#228b22&#34;&gt;# 删除target文件夹&lt;/span&gt;
 git commit –m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;版本更新信息&amp;#34;&lt;/span&gt;
-git push git@github.com:Hyominn/java_demo.git   
+git push kris@github.com:Hyominn/java_demo.git   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置git代理&#34;&gt;设置git代理&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# http&lt;/span&gt;
 git config --global https.proxy http://127.0.0.1:1080
@@ -193,15 +1244,23 @@ git reset HEAD~ &lt;span style=&#34;color:#228b22&#34;&gt;#只undo最后一次&l
 git reflog &lt;span style=&#34;color:#228b22&#34;&gt;#显示所有操作&lt;/span&gt;
 git reset d0988e7a0d
 
+&lt;span style=&#34;color:#228b22&#34;&gt;# delete commit&lt;/span&gt;
+git reset --soft HEAD~1 &lt;span style=&#34;color:#228b22&#34;&gt;# 保留修改&lt;/span&gt;
+git reset --hard HEAD~1 &lt;span style=&#34;color:#228b22&#34;&gt;# 不保留修改&lt;/span&gt;
+git push origin mybranch --force &lt;span style=&#34;color:#228b22&#34;&gt;# 强制推送到远端&lt;/span&gt;
+
 &lt;span style=&#34;color:#228b22&#34;&gt;# delete branch&lt;/span&gt;
 git branch -D mybranch
 git remote prune origin
+git push origin --delete mybranch
 
 &lt;span style=&#34;color:#228b22&#34;&gt;# update commit after git push&lt;/span&gt;
 git commit --amend &lt;span style=&#34;color:#228b22&#34;&gt;# 进入vim修改 修改完成后:wq 保存&lt;/span&gt;
 git push --force-with-lease origin mybranch &lt;span style=&#34;color:#228b22&#34;&gt;#强制修改&lt;/span&gt;
+
 git fetch origin &lt;span style=&#34;color:#228b22&#34;&gt;# 如果有人已经pull了未修改前的&lt;/span&gt;
 git reset --hard origin/branch &lt;span style=&#34;color:#228b22&#34;&gt;# 本地端的修改會不見&lt;/span&gt;
+
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
@@ -599,6 +1658,9 @@ vi ~/.zshrc
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;operation&#34;&gt;Operation&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 检查应用签名&lt;/span&gt;
+pkgutil --check-signature /Applications/Flume.app
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mac/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -904,144 +1966,6 @@ $$
 &lt;p&gt;题注：&lt;!-- raw HTML omitted --&gt;Apple Marina Bay Sands is the first Apple store to sit directly on the water.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;hr&gt;
 - https://www.openheart.icu/cs/markdown/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>MySQL</title>
-        <link>https://www.openheart.icu/cs/mysql/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/mysql/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/mysql/ -&lt;h1 id=&#34;install-mysql&#34;&gt;Install MySQL&lt;/h1&gt;
-&lt;h2 id=&#34;准备操作&#34;&gt;准备操作&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;lsb_release -a						&lt;span style=&#34;color:#228b22&#34;&gt;# 查看操作系统版本&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# LSB Version:	:core-4.1-amd64:core-4.1-noarch&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Distributor ID:	CentOS&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Description:	CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Release:	7.8.2003&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Codename:	Core&lt;/span&gt;
-
-cat /etc/redhat-release		&lt;span style=&#34;color:#228b22&#34;&gt;# 查看Linux内核版本&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
-
-getconf LONG_BIT					&lt;span style=&#34;color:#228b22&#34;&gt;# 查看系统位数&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 64&lt;/span&gt;
-
-yum -y update							&lt;span style=&#34;color:#228b22&#34;&gt;# 更新 yum&lt;/span&gt;
-rpm -qa | grep mysql			&lt;span style=&#34;color:#228b22&#34;&gt;# 查看是否安装过MySQL&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装mysql&#34;&gt;安装MySQL&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 此处版本为在CentOS7下安装MySQL8.0&lt;/span&gt;
-wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 安装&lt;/span&gt;
-sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#mysql80-community-release-el7-3.noarch&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 禁用 mysql8.0:&lt;/span&gt;
-sudo yum-config-manager --disable mysql80-community
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 启用 mysql8.0&lt;/span&gt;
-sudo yum-config-manager --enable mysql80-community
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 校验当前启用(enable)的 mysql 版本是否为 5.7:&lt;/span&gt;
-yum repolist enabled | grep mysql
-&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-connectors-community/x86_64 MySQL Connectors Community                 165&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-tools-community/x86_64      MySQL Tools Community                      115&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# mysql80-community/x86_64          MySQL 8.0 Community Server                 193&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 安装MySQL&lt;/span&gt;
-sudo yum install -y mysql-community-server
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 启动 mysql 服务&lt;/span&gt;
-sudo service mysqld start
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 查看 mysql 服务状态&lt;/span&gt;
-sudo service mysqld status
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;mysql初始化设置&#34;&gt;MySQL初始化设置&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 查看初始密码&lt;/span&gt;
-sudo grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;temporary password&amp;#39;&lt;/span&gt; /var/log/mysqld.log
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 使用初始密码进行登录&lt;/span&gt;
-mysql -u root -p
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 登录成功之后设置新密码&lt;/span&gt;
-ALTER USER &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 创建用户&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 允许本地 IP（localhost, 127.0.0.1）访问：&lt;/span&gt;
-create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 允许任何 IP 访问：&lt;/span&gt;
-create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 刷新权限&lt;/span&gt;
-FLUSH PRIVILEGES;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 8.0版本后&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 创建账户&lt;/span&gt;
-create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; identified by  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人&lt;/span&gt;
-grant all privileges on *.* to &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; with grant option;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 改密码&amp;amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里&lt;/span&gt;
-flush privileges;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 修改host 将kris用作登录账户名&lt;/span&gt;
-update mysql.user &lt;span style=&#34;color:#658b00&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; where &lt;span style=&#34;color:#00688b&#34;&gt;User&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mysql/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Nginx</title>
-        <link>https://www.openheart.icu/cs/nginx/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/nginx/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/nginx/ -&lt;h1 id=&#34;reverse-proxy--forward-proxy&#34;&gt;Reverse Proxy &amp;amp; Forward Proxy&lt;/h1&gt;
-&lt;h2 id=&#34;forward-proxy正向代理&#34;&gt;Forward Proxy（正向代理）&lt;/h2&gt;
-&lt;p&gt;我想访问 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; ，然而大家都知道它被墙了，我没法直接访问它。于是我连接了一个 VPN 服务并设定其为本地 HTTP 访问的代理，然后我再访问 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; ，此时我的请求被该 VPN 服务代理了，它帮我访问了 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; 然后把结果返回给我。&lt;/p&gt;
-&lt;p&gt;正向代理隐藏真实客户端，www.google.com 并不知道访问他的是我。&lt;/p&gt;
-&lt;h2 id=&#34;reverse-proxy反向代理&#34;&gt;Reverse Proxy（反向代理）&lt;/h2&gt;
-&lt;p&gt;当我们在访问 &lt;a href=&#34;http://www.baidu.com&#34;&gt;www.baidu.com&lt;/a&gt; 时，百度背后有成千上万个服务器为我们服务，但具体是哪一台，我们并不知道。此时 &lt;a href=&#34;http://www.baidu.com&#34;&gt;www.baidu.com&lt;/a&gt; 就充当一个反向代理服务器，帮我们把请求转发到真实的服务器。&lt;/p&gt;
-&lt;p&gt;反向代理隐藏真实服务端，Nginx就是很好的反向代理服务器，用来做&lt;strong&gt;负载均衡&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;正向代理与反向代理两者的区别在于代理的对象不一样：&lt;strong&gt;正向代理&lt;/strong&gt;代理的对象是客户端，&lt;strong&gt;反向代理&lt;/strong&gt;代理的对象是服务端。&lt;/p&gt;
-&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;$sudo&lt;/span&gt; nginx
-
-sudo pkill -f nginx &amp;amp; &lt;span style=&#34;color:#658b00&#34;&gt;wait&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;$!&lt;/span&gt;
-
-sudo systemctl start nginx
-
-sudo systemctl restart nginx
-
-nginx -c /etc/nginx/nginx.conf
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 重启服务&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置二级域名&#34;&gt;设置二级域名&lt;/h2&gt;
-&lt;p&gt;增加一个新的&lt;code&gt;listen 80&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;server_name&lt;/code&gt;设置为二级域名地址&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;root&lt;/code&gt;指向项目地址&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;server&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;{&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;listen&lt;span style=&#34;color:#bbb&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#b452cd&#34;&gt;80&lt;/span&gt;;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;server_name&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;site42.openheart.icu;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;/&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;{&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;root&lt;span style=&#34;color:#bbb&#34;&gt;         &lt;/span&gt;/usr/project/openheart;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;强制浏览器使用本地缓存&#34;&gt;强制浏览器使用本地缓存&lt;/h2&gt;
-&lt;p&gt;cache-control/expires&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# nginx.conf 中配置&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;~&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;.&lt;span style=&#34;color:#1e889b&#34;&gt;*\.(gif|jpg|jpeg|png|bmp|swf)${&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;30d;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;~&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;.&lt;span style=&#34;color:#1e889b&#34;&gt;*\.(js|css)?${&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;1h;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/nginx/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

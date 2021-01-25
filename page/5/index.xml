@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>42th openheart</title>
+    <link>https://www.openheart.icu/</link>
+    <description>Recent content on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Sat, 23 Jan 2021 12:14:19 +0000</lastBuildDate>
+    
+        <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    
+  </channel>
+</rss> 

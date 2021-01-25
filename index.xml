@@ -6,9 +6,420 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 01 Dec 2020 09:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Jan 2021 12:14:19 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>C# Special Characters</title>
+        <link>https://www.openheart.icu/cs/c#-special-characters/</link>
+        <pubDate>Sat, 23 Jan 2021 12:14:19 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/c#-special-characters/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/c#-special-characters/ -&lt;h2 id=&#34;heading&#34;&gt;?&lt;/h2&gt;
+&lt;p&gt;There are 4 question marks &lt;code&gt;?&lt;/code&gt; used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.&lt;/p&gt;
+&lt;h3 id=&#34;1-the--operator-since-visual-studio-2003&#34;&gt;1) The ?: Operator (since Visual Studio 2003)&lt;/h3&gt;
+&lt;p&gt;The format : &lt;code&gt;condition ? first_expression : second_expression;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;condition&lt;/code&gt; evaluates to &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;first_expression&lt;/code&gt; shall be returned, otherwise &lt;code&gt;second_expression&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;Random rnd = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Random();
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; randomNo = rnd.Next();
+
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; status = randomNo % &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt; == &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt; ? &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Generated number is an even number.&amp;#34;&lt;/span&gt; : &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Generated number is an odd number.&amp;#34;&lt;/span&gt;;
+Console.WriteLine(randomNo);
+Console.WriteLine(status);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-the-nullable-types-since-visual-studio-2005&#34;&gt;2) The Nullable Types (since Visual Studio 2005)&lt;/h3&gt;
+&lt;p&gt;Definition on msdn&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nullable types can represent all the values of an underlying type, and an additional null value.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;How do you use a nullable, let say nullable integer. Simple&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt; x = &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// x can hold any integer values plus the null value
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;x = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; isXNull = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;false&lt;/span&gt;;
+Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// True
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+x = &lt;span style=&#34;color:#b452cd&#34;&gt;15&lt;/span&gt;;
+isXNull = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;false&lt;/span&gt;;
+Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// False
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-the-null-conditional-operators-since-visual-studio-2015&#34;&gt;3) The Null-conditional Operators (since Visual Studio 2015)&lt;/h3&gt;
+&lt;p&gt;Example of a pretty common mistake&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main() {
+ &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student1 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Quan&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;);
+ Console.WriteLine(student1.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// Quan
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null because no student name is given to the fiction method CreateStudent
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt; Console.WriteLine(student2.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// System.NullReferenceException: Object reference not set to an instance of an object.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The method &lt;code&gt;CreateStudent&lt;/code&gt; returns a &lt;code&gt;null&lt;/code&gt; value instead of creating a new student if the student name is not given. Trying to access its &lt;code&gt;Name&lt;/code&gt; property after that will throw a &lt;code&gt;NullReferenceException&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;What you can do (without the Null-conditional Operators)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (student2 != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;){
+ Console.WriteLine(student2.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// No more System.NullReferenceException
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What you can do (with the Null-conditional Operators)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(student2?.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// No more System.NullReferenceException
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What happended? Thanks to the question mark after &lt;code&gt;student2&lt;/code&gt;, you are telling C# that &lt;code&gt;student2&lt;/code&gt; may be null. If &lt;code&gt;student2&lt;/code&gt; is indeed &lt;code&gt;null&lt;/code&gt;, C# will not try to access &lt;code&gt;Name&lt;/code&gt; anymore, it returns &lt;code&gt;null&lt;/code&gt; instead and &lt;code&gt;Console.WriteLine&lt;/code&gt;will happily ignore the &lt;code&gt;null&lt;/code&gt; value and only add a new line.&lt;/p&gt;
+&lt;h3 id=&#34;4-the---null-coalescing-operator-operator-since-visual-studio-2005&#34;&gt;4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)&lt;/h3&gt;
+&lt;p&gt;This is a special case of the ?: Operator in section 1&lt;/p&gt;
+&lt;p&gt;The format : &lt;code&gt;asking_value ?? just_in_case;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;if &lt;code&gt;asking_value&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt;, &lt;code&gt;just_in_case&lt;/code&gt; is returned, otherwise &lt;code&gt;asking_value&lt;/code&gt;is returned.&lt;/p&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt; x = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// x is nullable so it can be null
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; y = x ?? &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// if x is null, set y to 0, otherwise set y = x;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// which is essentially the same as
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; y = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt; : x;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://quannt.github.io/programming/c%23/2017/01/07/question-marks-c-sharp.html&#34;&gt;Four question marks you should know in C#&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;$&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;heading-2&#34;&gt;@&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;@&lt;/code&gt; special character serves as a verbatim identifier. It can be used in the following ways:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;To enable C# keywords to be used as identifiers. The &lt;code&gt;@&lt;/code&gt; character prefixes a code element that the compiler is to interpret as an identifier rather than a C# keyword. The following example uses the &lt;code&gt;@&lt;/code&gt; character to define an identifier named &lt;code&gt;for&lt;/code&gt; that it uses in a &lt;code&gt;for&lt;/code&gt;loop.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;[] @for = { &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;John&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;James&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Joan&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Jamie&amp;#34;&lt;/span&gt; };
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; ctr = &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; ctr &amp;lt; @for.Length; ctr++)
+{
+   Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;Here is your gift, {@for[ctr]}!&amp;#34;&lt;/span&gt;);
+}
+&lt;span style=&#34;color:#228b22&#34;&gt;// The example displays the following output:
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, John!
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, James!
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, Joan!
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, Jamie!
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To indicate that a string literal is to be interpreted verbatim. The &lt;code&gt;@&lt;/code&gt; character in this instance defines a &lt;em&gt;verbatim string literal&lt;/em&gt;. Simple escape sequences (such as &lt;code&gt;&amp;quot;\\&amp;quot;&lt;/code&gt; for a backslash), hexadecimal escape sequences (such as &lt;code&gt;&amp;quot;\x0041&amp;quot;&lt;/code&gt; for an uppercase A), and Unicode escape sequences (such as &lt;code&gt;&amp;quot;\u0041&amp;quot;&lt;/code&gt; for an uppercase A) are interpreted literally. Only a quote escape sequence (&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;) is not interpreted literally; it produces one double quotation mark. Additionally, in case of a verbatim &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated&#34;&gt;interpolated string&lt;/a&gt; brace escape sequences (&lt;code&gt;{{&lt;/code&gt; and &lt;code&gt;}}&lt;/code&gt;) are not interpreted literally; they produce single brace characters. The following example defines two identical file paths, one by using a regular string literal and the other by using a verbatim string literal. This is one of the more common uses of verbatim string literals.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; filename1 = &lt;span style=&#34;color:#cd5555&#34;&gt;@&amp;#34;c:\documents\files\u0066.txt&amp;#34;&lt;/span&gt;;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; filename2 = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;c:\\documents\\files\\u0066.txt&amp;#34;&lt;/span&gt;;
+   
+Console.WriteLine(filename1);
+Console.WriteLine(filename2);
+&lt;span style=&#34;color:#228b22&#34;&gt;// The example displays the following output:
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     c:\documents\files\u0066.txt
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     c:\documents\files\u0066.txt
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following example illustrates the effect of defining a regular string literal and a verbatim string literal that contain identical character sequences.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; s1 = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;He said, \&amp;#34;This is the last \u0063hance\x0021\&amp;#34;&amp;#34;&lt;/span&gt;;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; s2 = &lt;span style=&#34;color:#cd5555&#34;&gt;@&amp;#34;He said, &amp;#34;&amp;#34;This is the last \u0063hance\x0021&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;;
+   
+Console.WriteLine(s1);
+Console.WriteLine(s2);
+&lt;span style=&#34;color:#228b22&#34;&gt;// The example displays the following output:
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     He said, &amp;#34;This is the last chance!&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     He said, &amp;#34;This is the last \u0063hance\x0021&amp;#34;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To enable the compiler to distinguish between attributes in cases of a naming conflict. An attribute is a class that derives from &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.attribute&#34;&gt;Attribute&lt;/a&gt;. Its type name typically includes the suffix &lt;strong&gt;Attribute&lt;/strong&gt;, although the compiler does not enforce this convention. The attribute can then be referenced in code either by its full type name (for example, &lt;code&gt;[InfoAttribute]&lt;/code&gt; or its shortened name (for example, &lt;code&gt;[Info]&lt;/code&gt;). However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the &lt;strong&gt;Attribute&lt;/strong&gt;suffix but the other does not. For example, the following code fails to compile because the compiler cannot determine whether the &lt;code&gt;Info&lt;/code&gt; or &lt;code&gt;InfoAttribute&lt;/code&gt; attribute is applied to the &lt;code&gt;Example&lt;/code&gt; class. See &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1614&#34;&gt;CS1614&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System&lt;/span&gt;;
+&lt;span style=&#34;color:#658b00&#34;&gt;   
+&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[AttributeUsage(AttributeTargets.Class)]&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Info&lt;/span&gt; : Attribute
+{
+   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; information;
+   
+   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Info(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; info)
+   {
+      information = info;
+   }
+}
+&lt;span style=&#34;color:#658b00&#34;&gt;   
+&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[AttributeUsage(AttributeTargets.Method)]&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;InfoAttribute&lt;/span&gt; : Attribute
+{
+   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; information;
+   
+   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; InfoAttribute(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; info)
+   {
+      information = info;
+   }
+}
+&lt;span style=&#34;color:#658b00&#34;&gt;   
+&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[Info(&amp;#34;A simple executable.&amp;#34;)]&lt;/span&gt; 
+&lt;span style=&#34;color:#228b22&#34;&gt;// Generates compiler error CS1614. Ambiguous Info and InfoAttribute.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Prepend &amp;#39;@&amp;#39; to select &amp;#39;Info&amp;#39;. Specify the full name &amp;#39;InfoAttribute&amp;#39; to select it.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Example&lt;/span&gt;
+{
+&lt;span style=&#34;color:#658b00&#34;&gt;   [InfoAttribute(&amp;#34;The entry point.&amp;#34;)]&lt;/span&gt;
+   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main()
+   {
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+- https://www.openheart.icu/cs/c#-special-characters/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Effective C#</title>
+        <link>https://www.openheart.icu/cs/effective-c#6.0/</link>
+        <pubDate>Sat, 09 Jan 2021 16:22:42 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/effective-c#6.0/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/effective-c#6.0/ -&lt;h1 id=&#34;effective-c&#34;&gt;Effective C#&lt;/h1&gt;
+&lt;p&gt;Effective C# does not take you on a historical journey through the changes in the language. Rather, I provide advice on how to use the current C# language.&lt;/p&gt;
+&lt;h2 id=&#34;c--language-idioms&#34;&gt;C # Language Idioms&lt;/h2&gt;
+&lt;p&gt;You change tools or languages because you can be more productive.&lt;/p&gt;
+&lt;h3 id=&#34;item-1-prefer-implicitly-typed-local-variableshttpsdocsmicrosoftcomen-usdotnetcsharpprogramming-guideclasses-and-structsimplicitly-typed-local-variables&#34;&gt;Item 1: &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables&#34;&gt;Prefer Implicitly Typed Local Variables&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;var&lt;/code&gt; keyword may be used in the following contexts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;On local variables (variables declared at method scope).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// i is compiled as an int
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; i = &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;;
+  
+&lt;span style=&#34;color:#228b22&#34;&gt;// s is compiled as a string
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; s = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;;
+  
+&lt;span style=&#34;color:#228b22&#34;&gt;// a is compiled as int[]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; a = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[] { &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt; };
+  
+&lt;span style=&#34;color:#228b22&#34;&gt;// expr is compiled as IEnumerable&amp;lt;Customer&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// or perhaps IQueryable&amp;lt;Customer&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; expr =
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; c &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; customers
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; c.City == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;London&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; c;
+  
+&lt;span style=&#34;color:#228b22&#34;&gt;// anon is compiled as an anonymous type
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; anon = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; { Name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Terry&amp;#34;&lt;/span&gt;, Age = &lt;span style=&#34;color:#b452cd&#34;&gt;34&lt;/span&gt; };
+  
+&lt;span style=&#34;color:#228b22&#34;&gt;// list is compiled as List&amp;lt;int&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; list = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; List&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for&#34;&gt;for&lt;/a&gt; initialization statement.&lt;/p&gt;
+&lt;p&gt;C#Copy&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; x = &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;; x &amp;lt; &lt;span style=&#34;color:#b452cd&#34;&gt;10&lt;/span&gt;; x++)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in&#34;&gt;foreach&lt;/a&gt; initialization statement.&lt;/p&gt;
+&lt;p&gt;C#Copy&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; item &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; list) {...}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement&#34;&gt;using&lt;/a&gt; statement.&lt;/p&gt;
+&lt;p&gt;C#Copy&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; file = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; StreamReader(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;C:\\myfile.txt&amp;#34;&lt;/span&gt;)) {...}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression&#34;&gt;use implicitly typed local variables and arrays in a query expression.&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; QueryNames(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;char&lt;/span&gt; firstLetter)
+{
+    &lt;span style=&#34;color:#228b22&#34;&gt;// Create the query. Use of var is required because
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// the query produces a sequence of anonymous types:
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.IEnumerable&amp;lt;????&amp;gt;.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; studentQuery =
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; student &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; students
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; student.FirstName[&lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;] == firstLetter
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; { student.FirstName, student.LastName };
+  
+    &lt;span style=&#34;color:#228b22&#34;&gt;// Execute the query and display the results.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; anonType &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; studentQuery)
+    {
+        Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;First = {0}, Last = {1}&amp;#34;&lt;/span&gt;, anonType.FirstName, anonType.LastName);
+    }
+      
+    &lt;span style=&#34;color:#228b22&#34;&gt;// Variable queryId could be declared by using
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.IEnumerable&amp;lt;string&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// instead of var.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; queryId =
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; student &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; students
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; student.Id &amp;gt; &lt;span style=&#34;color:#b452cd&#34;&gt;111&lt;/span&gt;
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; student.LastName;
+  
+    &lt;span style=&#34;color:#228b22&#34;&gt;// Variable str could be declared by using var instead of string.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; str &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; queryId)
+    {
+        Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Last name: {0}&amp;#34;&lt;/span&gt;, str);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using var also improves a developer’s comprehension of the code. With var, you are not telling the compiler which type you’re creating; the compiler declares the type for you. The compiler examines the compile-time type and infers the type of the local variable based on those declarations.&lt;/p&gt;
+&lt;p&gt;At other times, however, overusing var only decreases the readability of your code.&lt;/p&gt;
+&lt;h3 id=&#34;item-2-prefer-readonly-to-const&#34;&gt;Item 2: Prefer &lt;code&gt;readonly&lt;/code&gt; to &lt;code&gt;const&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly&#34;&gt;&lt;code&gt;readonly&lt;/code&gt;: runtime constants.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const&#34;&gt;&lt;code&gt;const&lt;/code&gt;: compile-time constants, slightly faster but far less flexible&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly&#34;&gt;readonly&lt;/a&gt; keyword differs from the &lt;code&gt;const&lt;/code&gt; keyword. A &lt;code&gt;const&lt;/code&gt; field can only be initialized at the declaration of the field. A &lt;code&gt;readonly&lt;/code&gt; field can be initialized either at the declaration or in a constructor. Therefore, &lt;code&gt;readonly&lt;/code&gt; fields can have different values depending on the constructor used. Also, although a &lt;code&gt;const&lt;/code&gt; field is a compile-time constant, the &lt;code&gt;readonly&lt;/code&gt; field can be used for run-time constants, as in this line:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;uint&lt;/span&gt; l1 = (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;uint&lt;/span&gt;)DateTime.Now.Ticks;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;const&lt;/code&gt; must be used when the value must be available at compile time: attribute parameters, &lt;code&gt;switch case&lt;/code&gt; labels, and &lt;code&gt;enum&lt;/code&gt; definitions, and those rare times when you mean to define a value that does not change from release to release. For everything else, prefer the increased flexibility of &lt;code&gt;readonly&lt;/code&gt; constants.&lt;/p&gt;
+&lt;h3 id=&#34;item-3-prefer-the-is-or-as-operators-to-casts&#34;&gt;Item 3: Prefer the &lt;code&gt;is&lt;/code&gt; or &lt;code&gt;as&lt;/code&gt; Operators to Casts&lt;/h3&gt;
+&lt;p&gt;You can use the following operators and expressions to perform type checking or type conversion:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#is-operator&#34;&gt;is operator&lt;/a&gt;: to check if the runtime type of an expression is compatible with a given type&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator&#34;&gt;as operator&lt;/a&gt;: to explicitly convert an expression to a given type if its runtime type is compatible with that type&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression&#34;&gt;cast expression&lt;/a&gt;: to perform an explicit conversion&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#typeof-operator&#34;&gt;typeof operator&lt;/a&gt;: to obtain the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.type&#34;&gt;System.Type&lt;/a&gt; instance for a type&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ishttpsdocsmicrosoftcomen-usdotnetcsharplanguage-referencekeywordsis&#34;&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/is&#34;&gt;&lt;code&gt;is&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;The following example demonstrates that the &lt;code&gt;is&lt;/code&gt; operator returns &lt;code&gt;true&lt;/code&gt; if the runtime type of an expression result derives from a given type, that is, there exists a reference conversion between types:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Base&lt;/span&gt; { }
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Derived&lt;/span&gt; : Base { }
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;IsOperatorExample&lt;/span&gt;
+{
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main()
+    {
+        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; b = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Base();
+        Console.WriteLine(b &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Base);  
+      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        Console.WriteLine(b &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Derived);  
+      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: False
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; d = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Derived();
+        Console.WriteLine(d &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Base);  
+      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        Console.WriteLine(d &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Derived); 
+      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The next example shows that the &lt;code&gt;is&lt;/code&gt; operator takes into account boxing and unboxing conversions but doesn&amp;rsquo;t consider &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions&#34;&gt;numeric conversions&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; i = &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;;
+Console.WriteLine(i &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; System.IFormattable);  
+&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; iBoxed = i;
+Console.WriteLine(iBoxed &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;);  
+&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(iBoxed &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;long&lt;/span&gt;);  
+&lt;span style=&#34;color:#228b22&#34;&gt;// output: False
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following example demonstrates the usage of the &lt;code&gt;is&lt;/code&gt; operator with the type pattern(Beginning with &lt;strong&gt;C# 7.0&lt;/strong&gt;, the &lt;code&gt;is&lt;/code&gt; operator also tests an expression result against a pattern. Or Called: Type testing with &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching&#34;&gt;pattern matching&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; i = &lt;span style=&#34;color:#b452cd&#34;&gt;23&lt;/span&gt;;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; iBoxed = i;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt; jNullable = &lt;span style=&#34;color:#b452cd&#34;&gt;7&lt;/span&gt;;
+&lt;span style=&#34;color:#228b22&#34;&gt;//e.g. If the result of iBoxed is non-null and can be converted to int by a reference, boxing(or unboxing conversion), the iBoxed is int a expression returns true and the converted value of the result of iBoxed is assigned to variable a.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (iBoxed &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; a &amp;amp;&amp;amp; jNullable &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; b)
+{
+    Console.WriteLine(a + b);
+  	&lt;span style=&#34;color:#228b22&#34;&gt;// output 30
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;as&#34;&gt;&lt;code&gt;as&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Notice that the cast version must check &lt;code&gt;null&lt;/code&gt; in addition to catching exceptions. &lt;code&gt;null&lt;/code&gt; can be converted to any reference type using a cast, but the as operator returns &lt;code&gt;null&lt;/code&gt; when used on a &lt;code&gt;null&lt;/code&gt; reference. If the conversion is not possible, the &lt;code&gt;as&lt;/code&gt; operator returns &lt;code&gt;null&lt;/code&gt;. Unlike a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression&#34;&gt;cast expression&lt;/a&gt;, the &lt;code&gt;as&lt;/code&gt; operator never throws an exception.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;IEnumerable&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; numbers = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[] { &lt;span style=&#34;color:#b452cd&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;20&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;30&lt;/span&gt; };
+IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; indexable = numbers &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;as&lt;/span&gt; IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt;;
+&lt;span style=&#34;color:#228b22&#34;&gt;// numbers is IList&amp;lt;int&amp;gt; ? (IList&amp;lt;int&amp;gt;)(numbers) : (IList&amp;lt;int&amp;gt;)null
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (indexable != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
+{
+    Console.WriteLine(indexable[&lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;] + indexable[indexable.Count - &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;]);  
+  	&lt;span style=&#34;color:#228b22&#34;&gt;// output: 40
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following program fragment won’t compile:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; o = Factory.GetValue(); 
+&lt;span style=&#34;color:#228b22&#34;&gt;// int i = o as int; 
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Does not compile.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; i = o &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt;;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (i != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) 
+  Console.WriteLine(i.Value);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;cast-expression&#34;&gt;Cast expression&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;double&lt;/span&gt; x = &lt;span style=&#34;color:#b452cd&#34;&gt;1234.7&lt;/span&gt;;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; a = (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;)x;
+Console.WriteLine(a);   
+&lt;span style=&#34;color:#228b22&#34;&gt;// output: 1234
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+IEnumerable&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; numbers = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;[] { &lt;span style=&#34;color:#b452cd&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;20&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;30&lt;/span&gt; };
+IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; list = (IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt;)numbers;
+Console.WriteLine(list.Count);  
+&lt;span style=&#34;color:#228b22&#34;&gt;// output: 3
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(list[&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;]);  
+&lt;span style=&#34;color:#228b22&#34;&gt;// output: 20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;typeof-operator&#34;&gt;Typeof operator&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; PrintType&amp;lt;T&amp;gt;() =&amp;gt; Console.WriteLine(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(T));
+
+Console.WriteLine(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(List&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;&amp;gt;));
+PrintType&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt;();
+PrintType&amp;lt;System.Int32&amp;gt;();
+PrintType&amp;lt;Dictionary&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;, &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;char&lt;/span&gt;&amp;gt;&amp;gt;();
+&lt;span style=&#34;color:#228b22&#34;&gt;// Output:
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.List`1[System.String]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Int32
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Int32
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.Dictionary`2[System.Int32,System.Char]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+Console.WriteLine(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(Dictionary&amp;lt;,&amp;gt;));
+&lt;span style=&#34;color:#228b22&#34;&gt;// Output:
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.Dictionary`2[TKey,TValue]
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Type testing with the &lt;code&gt;typeof&lt;/code&gt; operator:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Animal&lt;/span&gt; { }
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Giraffe&lt;/span&gt; : Animal { }
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;TypeOfExample&lt;/span&gt;
+{
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main()
+    {
+        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; b = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Giraffe();
+        Console.WriteLine(b &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Animal);  
+      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        Console.WriteLine(b.GetType() == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(Animal));  
+      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: False
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+        Console.WriteLine(b &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Giraffe);  
+      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        Console.WriteLine(b.GetType() == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(Giraffe));  
+      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;item-4-replace-stringformat-with-interpolated-strings&#34;&gt;Item 4: Replace &lt;code&gt;string.Format()&lt;/code&gt; with Interpolated Strings&lt;/h3&gt;
+&lt;p&gt;Using &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated&#34;&gt;string interpolation&lt;/a&gt; greatly improves readability. It’s easy to read the replacement expressions in place in the format strings. The result is easy verification. The expressions are inline in the format string instead of in a separate array, you can’t have the wrong number of arguments in the replacement array. You can’t easily put the wrong expression in the wrong spot in the string.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Mark&amp;#34;&lt;/span&gt;;
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; date = DateTime.Now;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;// Composite formatting:
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Fred&amp;#34;&lt;/span&gt;;
+String.Format(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Name = {0}, hours = {1:hh}&amp;#34;&lt;/span&gt;, name, DateTime.Now);
+Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello, {0}! Today is {1}, it&amp;#39;s {2:HH:mm} now.&amp;#34;&lt;/span&gt;, name, date.DayOfWeek, date);
+&lt;span style=&#34;color:#228b22&#34;&gt;// String interpolation:
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;Hello, {name}! Today is {date.DayOfWeek}, it&amp;#39;s {date:HH:mm} now.&amp;#34;&lt;/span&gt;);
+&lt;span style=&#34;color:#228b22&#34;&gt;// Both calls produce the same output that is similar to:
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Hello, Mark! Today is Wednesday, it&amp;#39;s 19:40 now.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value of pi is {Math.PI}&amp;#34;&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Note&lt;/p&gt;
+&lt;p&gt;Starting with C# 8.0, you can use the &lt;code&gt;$&lt;/code&gt; and &lt;code&gt;@&lt;/code&gt; tokens in any order: both &lt;code&gt;$@&amp;quot;...&amp;quot;&lt;/code&gt; and &lt;code&gt;@$&amp;quot;...&amp;quot;&lt;/code&gt; are valid interpolated verbatim strings. In earlier C# versions, the &lt;code&gt;$&lt;/code&gt; token must appear before the &lt;code&gt;@&lt;/code&gt; token.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This feature is even being incorporated into the Razor View engine for ASP.NET MVC. This can make it much easier to generate HTML output in a Web application:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;asp-controller&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Manage&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;asp-action&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Index&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;title&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Manage&amp;#34;&lt;/span&gt;&amp;gt;Hello@User.GetUserName()!&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;a&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And Other :&lt;/p&gt;
+&lt;p&gt;ASPX/JSP&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://aui.github.io/art-template/&#34;&gt;art-template&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://baidufe.github.io/BaiduTemplate/&#34;&gt;BaiduTemplate&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;item-5-prefer-formattablestring-for-culture-specific-strings&#34;&gt;Item 5: Prefer &lt;code&gt;FormattableString&lt;/code&gt; for Culture-Specific Strings&lt;/h3&gt;
+&lt;h3 id=&#34;item-6-avoid-string-ly-typed-apis&#34;&gt;Item 6: Avoid String-ly Typed APIs&lt;/h3&gt;
+&lt;h3 id=&#34;item-7-express-callbacks-with-delegates&#34;&gt;Item 7: Express Callbacks with Delegates&lt;/h3&gt;
+&lt;h3 id=&#34;item-8-use-the-null-conditional-operator-for-event-invocations&#34;&gt;Item 8: Use the Null Conditional Operator for Event Invocations&lt;/h3&gt;
+&lt;h3 id=&#34;item-10-use-the-new-modifier-only-to-react-to-base-class-updates&#34;&gt;Item 10: Use the new Modifier Only to React to Base Class Updates&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;working-with-linq&#34;&gt;Working with LINQ&lt;/h2&gt;
+&lt;h3 id=&#34;item-42-distinguish-between-ienumerable-and-iqueryable-data-sourceshttpsdocsmicrosoftcomen-usdotnetframeworkdataadoneteflanguage-referencequery-executionredirectedfrommsdnanchor_0&#34;&gt;Item 42: &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/query-execution?redirectedfrom=MSDN#Anchor_0&#34;&gt;Distinguish between IEnumerable and IQueryable Data Sources&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/2876616/returning-ienumerablet-vs-iqueryablet&#34;&gt;Returning IEnumerable vs. IQueryable&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The difference is that &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb351562.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt; is the interface that allows LINQ-to-SQL (LINQ.-to-anything really) to work. So if you further refine your query on an &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb351562.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt;, that query will be executed in the database, if possible.&lt;/p&gt;
+&lt;p&gt;For the &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/9eekhta0.aspx&#34;&gt;&lt;code&gt;IEnumerable&lt;/code&gt;&lt;/a&gt; case, it will be LINQ-to-object, meaning that all objects matching the original query will have to be loaded into memory from the database.&lt;/p&gt;
+&lt;p&gt;In code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;IQueryable&amp;lt;Customer&amp;gt; custs = ...;
+&lt;span style=&#34;color:#228b22&#34;&gt;// Later on...
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; goldCustomers = custs.Where(c =&amp;gt; c.IsGold);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;That code will execute SQL to only select gold customers. The following code, on the other hand, will execute the original query in the database, then filtering out the non-gold customers in the memory:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;IEnumerable&amp;lt;Customer&amp;gt; custs = ...;
+&lt;span style=&#34;color:#228b22&#34;&gt;// Later on...
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; goldCustomers = custs.Where(c =&amp;gt; c.IsGold);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is quite an important difference, and working on &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb351562.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt; can in many cases save you from returning too many rows from the database. Another prime example is doing paging: If you use &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb300906.aspx&#34;&gt;&lt;code&gt;Take&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb357513.aspx&#34;&gt;&lt;code&gt;Skip&lt;/code&gt;&lt;/a&gt; on &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/system.linq.iqueryable.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt;, you will only get the number of rows requested; doing that on an &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/9eekhta0.aspx&#34;&gt;&lt;code&gt;IEnumerable&lt;/code&gt;&lt;/a&gt; will cause all of your rows to be loaded in memory.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Expression tree: a data structure that holds all the logic that makes up the actions in the query.&lt;/p&gt;
+- https://www.openheart.icu/cs/effective-c#6.0/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -70,6 +481,8 @@
 &lt;p&gt;&amp;ndash;I&amp;rsquo;m going to the bar. Anyone else coming?/I&amp;rsquo;m going hunting, are you coming with me?  &amp;ndash; Count me in!&lt;/p&gt;
 &lt;p&gt;Will you please write me a letter sometime when you get the time?&lt;/p&gt;
 &lt;p&gt;Congrats.&lt;/p&gt;
+&lt;p&gt;There are many people to whom I owe thanks for their contributions to this book.&lt;/p&gt;
+&lt;p&gt;My pleasure./It&amp;rsquo;s my pleasure.乐意效劳，这是我的荣幸 Sure/Sure thing.应该的 Of course!没事，这是当然的 You bet!当然的，不客气，不用谢 Anytime 别客气，随时愿为您效劳 Happy to help!很开心能帮到你 No worries.没问题 No sweat. 小意思 That&amp;rsquo;s all right.不用谢，不客气，没关系&lt;/p&gt;
 &lt;h2 id=&#34;phrase&#34;&gt;Phrase&lt;/h2&gt;
 &lt;p&gt;Carbon Copy 副本、抄送，outlook中的&lt;em&gt;cc&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;lead time 交付周期，订货至交货的时间&lt;/p&gt;
@@ -104,7 +517,12 @@
 &lt;p&gt;Business as usual (BAU)&lt;/p&gt;
 &lt;p&gt;Cute as a button&lt;/p&gt;
 &lt;p&gt;I have the final say&lt;/p&gt;
-&lt;p&gt;vicious circle&lt;/p&gt;
+&lt;p&gt;Vicious circle 恶性循环&lt;/p&gt;
+&lt;p&gt;Fireside chat&lt;/p&gt;
+&lt;p&gt;Suit yourself/it&amp;rsquo;s up to u/I don&amp;rsquo;t care/as u wish/whatever 随便&lt;/p&gt;
+&lt;p&gt;Whatever u think is fine with me&lt;/p&gt;
+&lt;p&gt;Receive the package 收快递，fragile 易碎品，发快递用send&lt;/p&gt;
+&lt;p&gt;Collect the package 取快递，locker 快递柜，快递 express delivery&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;abbreviation&#34;&gt;Abbreviation&lt;/h2&gt;
 &lt;h3 id=&#34;phrase-1&#34;&gt;Phrase&lt;/h3&gt;
@@ -528,6 +946,148 @@
 &lt;li&gt;Mixins&lt;/li&gt;
 &lt;li&gt;Fluent interfaces&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;testinghttpsdocsmicrosoftcomen-usvisualstudiotestviewvs-2019&#34;&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/?view=vs-2019&#34;&gt;Testing&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;unit-testing&#34;&gt;Unit Testing&lt;/h3&gt;
+&lt;p&gt;Unit test: Testing a single unit of code, very small atomic test.&lt;/p&gt;
+&lt;p&gt;Integration test: Testing multiple units of code integrated together, to go through the different layers and ensure they are using eachother correctly. These should be done after unit tests have verified the individual units work independently. Many people mistakenly refer to these as unit tests.&lt;/p&gt;
+&lt;p&gt;Built Verification Test: Testing the built product by deploying it and running tests that will interact with it in the manner a user would. Also mistakenly referred to as unit tests frequently. These are the largest most full featured tests and often just done manually by testing teams rather than being automated.&lt;/p&gt;
+&lt;p&gt;Unit testing is the discipline of writing code that tests other code. Every unit test is composed of three distinct parts(AAA):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;strong&gt;arrange&lt;/strong&gt;ment of the preconditions of the test 准备&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The performance of the &lt;strong&gt;act&lt;/strong&gt; that is being tested 操作&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;strong&gt;assert&lt;/strong&gt;ion that the expected behavior occurred 断言&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[TestClass]&lt;/span&gt; 
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;AccountTest&lt;/span&gt; 
+{
+&lt;span style=&#34;color:#658b00&#34;&gt;    [TestMethod]&lt;/span&gt; 
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; AddingTransactionChangesBalance() {
+        &lt;span style=&#34;color:#228b22&#34;&gt;// Arrange
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; account = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Account();
+        &lt;span style=&#34;color:#228b22&#34;&gt;// Act 
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;      	account.AddTransaction(&lt;span style=&#34;color:#b452cd&#34;&gt;200&lt;/span&gt;m);
+        &lt;span style=&#34;color:#228b22&#34;&gt;// Assert 
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;      	Assert.AreEqual(&lt;span style=&#34;color:#b452cd&#34;&gt;200&lt;/span&gt;m, account.Balance);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer?view=vs-2019&#34;&gt;Running the tests&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MSTest is a convenient choice for unit tests—hence its use for the examples in this chapter—but it is not a great choice. NUnit and XUnit are better alternative testing frameworks that rely on external dependencies.&lt;/p&gt;
+&lt;h4 id=&#34;test-driven-development&#34;&gt;Test-driven development&lt;/h4&gt;
+&lt;p&gt;When you use a TDD approach to writing software, you write the unit tests and the production code in tandem, with a failing test written for every expected behavior exhibited by every method of every class in the production code. The failing test fails only because the production code does not exist yet. The test states—via assertions—that the production code should act in some way, but because it does not yet, the test fails. After the production code is implemented in the simplest way possible to satisfy the test’s requirements, the test will succeed.&lt;/p&gt;
+&lt;p&gt;Red, green, refactor:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Write a failing test that targets the expected behavior of the SUT.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Implement just enough of the SUT so that the new test passes without breaking existing successful tests.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If any refactoring can be done on the SUT to improve its design or overall quality, now is the time to do so.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After the transition from red to green for each unit test, you had the opportunity to refactor the implementation of the SUT.&lt;/p&gt;
+&lt;p&gt;Addition: &lt;a href=&#34;https://martinfowler.com/articles/is-tdd-dead/&#34;&gt;Is TDD Dead?&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;test-double&#34;&gt;Test double&lt;/h4&gt;
+&lt;p&gt;测试替身&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dummies&lt;/strong&gt; This is the simplest of all test doubles. Dummies are intended to fulfil parameter lists and have no special behavior. Often, real implementations are used as dummies and might be primitive types, which are nevertheless required to turn a unit test green.&lt;/p&gt;
+&lt;p&gt;被测试方法需要一些参数，但是这些参数实际上并没有用到，它们的存在只是为了满足调用方法的参数要求&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Spies&lt;/strong&gt; A spy records the calls that have been made to its methods, along with the parameters that were supplied to each call. The record of these calls can then be used in assertions to ensure that certain calls were made.&lt;/p&gt;
+&lt;p&gt;确认方法调用记录如何调用，并在断言中可以使用调用结果，断言程序运行的正确性&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stubs&lt;/strong&gt; A stub is a dependency that is required by the system under test and that will return a pre-supplied answer whenever queried. Stubs are most useful at the seams of an application, where external dependencies are required. Instead of depending on a database, you can depend on a stub that can return dummy data.&lt;/p&gt;
+&lt;p&gt;在测试中为每个调用提供一个封装好的响应，它可以使用很直接的方式模拟依赖项的行为。例如我们可以使用Stub把相关数据放到内存里查询而不是查询真实的数据库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fakes&lt;/strong&gt; A fake is very similar to a stub, but the intent is subtly different. Fakes are not supplied with any preconceived responses to queries, but are instead closer to real implementations with some necessary concession to avoid an external dependency. Personally, I make a distinction between a manually implemented mock and a mock that is supplied by a mocking framework: manual mocks are called fakes.&lt;/p&gt;
+&lt;p&gt;Fake 可以是某个 Data Access Object 或者 Repository 的基于内存的实现；该实现并不会真的去进行数据库操作。这就允许了我们能够在并没有真的启动数据库或者执行耗时的外部请求的情况下进行服务的测试。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mocks&lt;/strong&gt; Whereas stubs and fakes provide test doubles for dependencies that are indirect queries, mocks are test doubles for dependencies that have indirect commands. Mocks are useful to determine whether a command was executed on a dependency of the system under test.&lt;/p&gt;
+&lt;p&gt;模拟一个具有特性行为的对象，在测试开始前根据期望提供需要的结果。被测试对象往往调用这个对象的方法时，根据条件得到不同的输入，从而满足测试对象的不同场景。例如，mock 数据库的存储层，返回正常数据、空或者丢出异常等情况。当我们并不希望真的调用生产环境下的代码或者在测试中难于验证真实代码执行效果的时候，我们会用 Mock 来替代那些真实的对象。典型的例子即是对邮件发送服务的测试，我们并不希望每次进行测试的时候都发送一封邮件，毕竟我们很难去验证邮件是否真的被发出了或者被接收了。我们更多地关注于邮件服务是否按照我们的预期在合适的业务流中被调用。&lt;/p&gt;
+&lt;h4 id=&#34;manual-test-fakery&#34;&gt;Manual test fakery&lt;/h4&gt;
+&lt;h4 id=&#34;mocking-frameworks&#34;&gt;Mocking frameworks&lt;/h4&gt;
+&lt;p&gt;The most popular: &lt;a href=&#34;https://github.com/Moq/moq4/wiki/Quickstart&#34;&gt;MOQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在一个项目里, 我们经常需要把某一部分程序独立出来以便我们可以对这部分进行测试. 这就要求我们不要考虑项目其余部分的复杂性, 我们只想关注需要被测试的那部分. 这里就需要用到模拟(Mock)技术.&lt;/p&gt;
+&lt;p&gt;Mocking is the act of taking a small piece of code that may depend on other things, mocking those other things up so that you can control the circumstances surrounding the piece of code you want to test.&lt;/p&gt;
+&lt;p&gt;The purpose of mocking is atomicity in tests. It allows you to test just the individual piece of code you want, without having it&amp;rsquo;s tests affected due to bugs in dependent code pieces. Also mocking gives you the ability to fabricate a variety of scenarios to test the edge cases of each piece of code.&lt;/p&gt;
+&lt;p&gt;Mocking is generally purposed for creating boundaries around the target code in unit tests, though it&amp;rsquo;s not uncommon to use it in integration tests too for fabricating a resource that acts as the seed to the integrated code chain you&amp;rsquo;re targeting.&lt;/p&gt;
+&lt;p&gt;Moq lets you set the following expectations on a method call:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Call some other lambda expression.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Return a specific value.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Throw a specified type of exception.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verify that this method was called.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mocks and test over-specification: An over-specified test is fragile, but you can avoid this fragility by changing what you assert. In other words, a test is over-specified when it has knowledge of the SUT’s &lt;em&gt;implementation&lt;/em&gt; rather than its &lt;em&gt;expected behavior&lt;/em&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;testing-all-control-flows&#34;&gt;Testing all control flows&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Happy Path&lt;/em&gt;: the execution path through the code that yields no errors and causes no problems.&lt;/p&gt;
+&lt;p&gt;There are a few gaps that need to be addressed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What if the account repository is a null reference?&lt;/li&gt;
+&lt;li&gt;What if the repository cannot find the account?&lt;/li&gt;
+&lt;li&gt;What if the account method throws an exception?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To avoid leaking dependencies between layers, it is good practice to wrap an exception thrown at a lower layer in a new exception for this layer. The exceptions that the domain model throws will be specific to that layer. If the service layer allows this to propagate up to the controller, the controller will need knowledge of the DomainException type to catch and handle these exceptions. This introduces a dependency between the controller and the domain model layer, which should be avoided. Instead, the service will catch the domain model exceptions and wrap them in ServiceException instances before throwing them up to the controller. Due to the controller’s dependency on the service layer, it is able to catch the exceptions that it defines. It is important to acknowledge that the ServiceException contains the DomainException as an inner exception—without this, valuable context about the original exception is lost: the entry point of the application might be able to unwrap this exception in a global exception handler, for example.&lt;/p&gt;
+&lt;h4 id=&#34;test-setup&#34;&gt;Test setup&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[TestInitialize]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;writing-tests-first&#34;&gt;Writing tests first&lt;/h3&gt;
+&lt;h4 id=&#34;what-is-tdd&#34;&gt;What is TDD?&lt;/h4&gt;
+&lt;p&gt;The “&lt;strong&gt;purist&lt;/strong&gt;” idea of TDD is that it is a design tool—that developers should approach the keyboard without forethought of the production code they might implement.&lt;/p&gt;
+&lt;p&gt;The “&lt;strong&gt;pragmatic&lt;/strong&gt;” idea of TDD is that developers write the unit tests first.&lt;/p&gt;
+&lt;h4 id=&#34;test-driven-design&#34;&gt;Test-driven design&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Write exactly one new test. It should be the smallest test which seems to point in the direction of a solution.&lt;/li&gt;
+&lt;li&gt;Run the test to make sure it fails.&lt;/li&gt;
+&lt;li&gt;Make the test from (1) pass by writing the least amount of implementation code you can IN THE TEST METHOD.&lt;/li&gt;
+&lt;li&gt;Refactor to remove duplication or otherwise as required to improve the design. Be strict about the refactorings. Only introduce new abstractions (methods, classes, etc) when they will help to improve the design of the code. Specifically:
+&lt;ol&gt;
+&lt;li&gt;ONLY Extract a new method if there is sufficient code duplication in the test methods.&lt;/li&gt;
+&lt;li&gt;When extracting a method, initially extract it to the test class (don’t create a new class yet). ONLY create a new class when a clear grouping of methods emerges and when the test class starts to feel crowded or too large.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Repeat the process by writing another test (go back to step 1).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;test-first-development&#34;&gt;Test-first development&lt;/h4&gt;
+&lt;p&gt;TDD = TFD + Refactoring&lt;/p&gt;
+&lt;p&gt;TDD是测试驱动，TFD是测试优先，测试优先出现红色就需要重构，这样就靠向了TDD。&lt;/p&gt;
+&lt;h3 id=&#34;further-testing&#34;&gt;Further testing&lt;/h3&gt;
+&lt;h4 id=&#34;the-testing-pyramid&#34;&gt;The testing pyramid&lt;/h4&gt;
+&lt;p&gt;The testing pyramid reminds you of the relative number of tests that you should aim to maintain.&lt;/p&gt;
+&lt;h4 id=&#34;the-testing-quadrant&#34;&gt;The testing quadrant&lt;/h4&gt;
+&lt;p&gt;The testing quadrant diagram explains that tests can be useful to different stakeholders and for different reasons.&lt;/p&gt;
+&lt;h3 id=&#34;testing-for-prevention-and-cure&#34;&gt;Testing for prevention and cure&lt;/h3&gt;
+&lt;h4 id=&#34;how-do-you-decrease-mttr&#34;&gt;How do you decrease MTTR?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;logging&lt;/li&gt;
+&lt;li&gt;alerting&lt;/li&gt;
+&lt;li&gt;monitoring&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.elastic.co/what-is/elk-stack&#34;&gt;ELK Stack&lt;/a&gt;  集中日志系统&lt;/p&gt;
+&lt;h2 id=&#34;refactoring&#34;&gt;Refactoring&lt;/h2&gt;
+&lt;p&gt;Refactoring is the process of incrementally improving the design of existing code.&lt;/p&gt;
+&lt;p&gt;This is an important point—refactoring changes the &lt;em&gt;arrangement&lt;/em&gt; of the code, not the &lt;em&gt;outcome&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;changing-existing-code&#34;&gt;Changing existing code&lt;/h3&gt;
+&lt;h4 id=&#34;replacing-magic-numbers-with-constants&#34;&gt;Replacing “magic numbers” with constants&lt;/h4&gt;
+&lt;p&gt;To the person who wrote the code, their significance might be obvious because that person has prior knowledge of what it all means. In reality, that will probably only be true for a week, perhaps two, before the person’s memory starts to fade and they lose track of what that 5, or that 2, means.&lt;/p&gt;
+&lt;h4 id=&#34;replacing-a-conditional-expression-with-polymorphism&#34;&gt;Replacing a conditional expression with polymorphism&lt;/h4&gt;
+&lt;p&gt;子类继承父类以替换Switch&lt;/p&gt;
+&lt;h4 id=&#34;replacing-a-constructor-with-a-factory-method&#34;&gt;Replacing a constructor with a factory method&lt;/h4&gt;
+&lt;h4 id=&#34;replacing-inheritance-with-delegation&#34;&gt;Replacing inheritance with delegation&lt;/h4&gt;
+&lt;h4 id=&#34;code-smell-refused-bequest&#34;&gt;Code smell: Refused bequest&lt;/h4&gt;
+&lt;p&gt;如果存在一个子类与其他子类不一致，比如不需要实现一个基类中的方法，此时可以有两种方法&lt;/p&gt;
+&lt;h3 id=&#34;aggressive-refactoring&#34;&gt;Aggressive refactoring&lt;/h3&gt;
+&lt;p&gt;Code is never done. Code can be working, good enough, sufficient, valuable, and producing revenue. But it is rarely, if ever, complete.&lt;/p&gt;
+&lt;h4 id=&#34;red-green-refactorredesign&#34;&gt;Red, green, refactor…redesign&lt;/h4&gt;
 &lt;h2 id=&#34;dependency-inversionhttpswwwopenhearticucsdependency-injection&#34;&gt;&lt;a href=&#34;https://www.openheart.icu/cs/dependency-injection/&#34;&gt;Dependency inversion&lt;/a&gt;&lt;/h2&gt;
 - https://www.openheart.icu/cs/adaptive-code/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
@@ -1123,6 +1683,36 @@
 &lt;h2 id=&#34;index&#34;&gt;Index&lt;/h2&gt;
 &lt;h3 id=&#34;聚集索引&#34;&gt;聚集索引&lt;/h3&gt;
 &lt;h3 id=&#34;非聚集索引&#34;&gt;非聚集索引&lt;/h3&gt;
+&lt;h1 id=&#34;optimize&#34;&gt;Optimize&lt;/h1&gt;
+&lt;h2 id=&#34;cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1334012/cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity&#34;&gt;Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SET&lt;/span&gt; IDENTITY_INSERT Table1 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ON&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;--Do INSERT
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SET&lt;/span&gt; IDENTITY_INSERT Table1 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OFF&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/10204480/sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing&#34;&gt;SQL-Server: The backup set holds a backup of a database other than the existing&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t create an empty database and restore the &lt;code&gt;.bak&lt;/code&gt; file on to it.&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;&amp;lsquo;Restore Database&amp;rsquo;&lt;/strong&gt; option accessible by right clicking the &amp;ldquo;Databases&amp;rdquo; branch of the SQL Server Management Studio and provide the database name while providing the source to restore.&lt;/li&gt;
+&lt;li&gt;Also change the file names at &amp;ldquo;Files&amp;rdquo; if the other database still exists. Otherwise you get &amp;ldquo;The file &amp;lsquo;&amp;hellip;&amp;rsquo; cannot be overwritten. It is being used by database &amp;lsquo;yourFirstDb&amp;rsquo;&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/125457/what-is-the-t-sql-syntax-to-connect-to-another-sql-server&#34;&gt;What is the T-SQL syntax to connect to another SQL Server?&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor?view=sql-server-ver15&#34;&gt;Edit SQLCMD Scripts with Query Editor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In SQL Server Management Studio, turn on SQLCMD mode from the Query menu. Then at the top of your script, type in the command below&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;:&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;connect&lt;/span&gt; USDB -U sa -P mypassword
+USE [&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;database&lt;/span&gt;]
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; site;
+
+:&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CONNECT&lt;/span&gt; CNDB
+USE [&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;database&lt;/span&gt;]
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; site;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: IntelliSense is turned off in the Database Engine Query Editor when the SQLCMD mode is set on.&lt;/p&gt;
 - https://www.openheart.icu/cs/sqlserver/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -1430,272 +2020,6 @@ a[11] = {0, 1, 16, 24, 35, 47, 59, 62, 73, 88, 99}&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.geeksforgeeks.org/fibonacci-search/&#34;&gt;Fibonacci Search on GeeksforGeeks&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 - https://www.openheart.icu/cs/%E5%8A%A8%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%8E%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>C# in Depth</title>
-        <link>https://www.openheart.icu/cs/csharp-in-depth/</link>
-        <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/csharp-in-depth/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/csharp-in-depth/ -&lt;p&gt;&lt;em&gt;本文为「C# in Depth」(4th edition)学习记录。&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/cs/csharp-in-depth/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Implementing the Singleton Pattern in C#</title>
-        <link>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</link>
-        <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/ -&lt;h1 id=&#34;implementing-the-singleton-pattern-in-chttpscsharpindepthcomarticlessingleton&#34;&gt;&lt;a href=&#34;https://csharpindepth.com/articles/Singleton&#34;&gt;Implementing the Singleton Pattern in C#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;在C＃中实现单例模式。该模式是非常常见的设计模式之一，某个对象全局只需要一个实例时，就可以使用单例模式。它的优点也显而易见：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;它能够避免对象重复创建，节约空间并提升效率&lt;/li&gt;
-&lt;li&gt;避免由于操作不同实例导致的逻辑错误&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;以下是原文作者Jon Skeet 对C#单例模式的介绍。&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;单例模式是软件工程中最著名的模式之一。本质上，单例是仅允许创建其自身的单个实例的类，并且通常提供对该实例的简单访问。最常见的是，单例在创建实例时不允许指定任何参数，否则对实例的第二次请求但参数不同可能会出现问题！ （如果应该为具有相同参数的所有请求访问相同的实例，则使用工厂模式更为合适。）本文仅涉及不需要参数的情况。通常，单例的要求是它们是懒惰地创建的，即：直到首次需要实例时才创建实例。&lt;/p&gt;
-&lt;p&gt;在C＃中有多种不同的方式来实现单例模式。我将在这里以从简到难顺序（&lt;em&gt;in reverse order of elegance&lt;/em&gt;）介绍它们，从最常见的线程安全性开始，逐步发展为完全延迟加载，线程安全，简单且高性能的版本。&lt;/p&gt;
-&lt;p&gt;所有这些实现都有四个共同的特征，但是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;单个构造函数，私有且无参数。这样可以防止其他类实例化它（这将违反模式）。请注意，它还防止了子类化（&lt;em&gt;subclassing&lt;/em&gt;）如果一个单例可以被子类化一次，则可以被子类化两次，并且如果每个子类都可以创建一个实例，则将违反（&lt;em&gt;violated&lt;/em&gt;）该模式。如果您需要基本类型的单个实例，则可以使用工厂模式，但是直到运行时才知道确切的类型。&lt;/li&gt;
-&lt;li&gt;该类是密封的。严格来说，由于上述几点，这是不必要的，但可以帮助&lt;code&gt;JIT&lt;/code&gt;进行更多优化。&lt;/li&gt;
-&lt;li&gt;一个静态变量，其中包含对创建的单个实例的引用（如果有）。&lt;/li&gt;
-&lt;li&gt;公共静态方法是获取对创建的单个实例的引用，并在必要时创建一个实例。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;请注意，所有这些实现还使用公共静态属性&lt;code&gt;Instance&lt;/code&gt;作为访问实例的方式。在所有情况下，都可以轻松地将属性转换为方法，而不会影响线程安全性或性能。&lt;/p&gt;
-&lt;h2 id=&#34;first-version---not-thread-safe&#34;&gt;First version - not thread-safe&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Bad code! Do not use!
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;sealed&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Singleton&lt;/span&gt;
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton instance = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; Singleton()
-  {
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton Instance
-  {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;
-    {
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (instance == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-      {
-        instance = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Singleton();
-      }
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; instance;
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如前所述，以上内容不是线程安全的。&lt;/p&gt;
-&lt;p&gt;两个不同的线程都可以执行判断（&lt;em&gt;evaluated the test&lt;/em&gt;）&lt;code&gt;if(instance == null)&lt;/code&gt;并发现它为&lt;code&gt;true&lt;/code&gt;，然后都创建实例，这违反了单例模式。请注意，实际上可能已经在计算表达式之前创建了实例，但是内存模型不能保证实例的新值能暴露给其他线程，除非已传递适当的内存屏障（互斥锁）（&lt;em&gt;memory barriers&lt;/em&gt;）。&lt;/p&gt;
-&lt;h2 id=&#34;second-version---simple-thread-safety&#34;&gt;Second version - simple thread-safety&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;sealed&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Singleton&lt;/span&gt;
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton instance = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; padlock = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt;();
-
-  Singleton()
-  {
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton Instance
-  {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;
-    {
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;lock&lt;/span&gt; (padlock)
-      {
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (instance == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-        {
-          instance = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Singleton();
-        }
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; instance;
-      }
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此实现是线程安全的。线程在共享对象上加锁（&lt;em&gt;takes out a lock&lt;/em&gt;），然后在创建实例之前检查是否已创建实例。这可以解决内存屏障问题（因为锁定可确保所有读取均在获取锁之后逻辑发生，而解锁可确保所有写入均在锁释放之前逻辑发生）并确保只有一个线程将创建一个实例（仅一个线程一次可以位于代码的该部分中，到第二个线程进入该线程时，第一个线程将创建该实例，因此该表达式的计算结果为&lt;code&gt;false&lt;/code&gt;）。不幸的是，每次请求实例时都需要获取锁，因此性能会受到影响。&lt;/p&gt;
-&lt;p&gt;请注意，我没有像此实现的某些版本那样锁定&lt;code&gt;typeof(Singleton)&lt;/code&gt;，而是锁定了类私有的静态变量的值。锁定其他类可以访问和锁定的对象（such as the type）可能会导致性能问题甚至死锁。这是我的一般样式首选项-尽可能仅锁定专门为锁定目的而创建的对象，或者为特定目的而将其锁定在哪个文档上（例如用于等待/触发队列）。通常，此类对象应为使用它们的类所专用。这有助于使编写线程安全的应用程序变得更加容易。&lt;/p&gt;
-&lt;h2 id=&#34;third-version---attempted-thread-safety-using-double-check-locking&#34;&gt;Third version - attempted thread-safety using double-check locking&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Bad code! Do not use!
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;sealed&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Singleton&lt;/span&gt;
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton instance = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; padlock = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt;();
-
-  Singleton()
-  {
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton Instance
-  {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;
-    {
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (instance == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-      {
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;lock&lt;/span&gt; (padlock)
-        {
-          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (instance == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-          {
-            instance = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Singleton();
-          }
-        }
-      }
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; instance;
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此实现方式（&lt;em&gt;implementation&lt;/em&gt;）尝试不再每次都加锁，同时保证线程安全。遗憾的是，该模式有四个缺点（&lt;em&gt;there are four downsides to the pattern&lt;/em&gt;）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;它在Java中不起作用。这么说这似乎有些不合理，但是值得一提的是，您是否需要Java中的单例模式，C＃程序员也很可能是Java程序员。 Java内存模型无法确保在将对新对象的引用分配给实例之前，执行完构造函数。 Java内存模型针对1.5版进行了重新加工，但是在此之后，在没有易失性变量的情况下，双重检查锁定仍然被破坏（像C＃一样）。&lt;/li&gt;
-&lt;li&gt;没有任何内存障碍，它在&lt;code&gt;ECMA CLI&lt;/code&gt;规范中也被打破。在.NET 2.0内存模型（比ECMA规范更强）下，它很可能是安全的，但我宁愿不依赖那些更强的语义，尤其是在对安全性有任何疑问的情况下。将实例变量设置为&lt;code&gt;volatile&lt;/code&gt;也有效，就像显式的内存屏障调用一样，但这样的话即使是大佬也无法确切地确定需要哪些屏障。我倾向于不去用大佬们有争议的方法！&lt;/li&gt;
-&lt;li&gt;很容易出错。该模式必须与上面的完全一样-任何重大更改都可能影响性能或正确性。&lt;/li&gt;
-&lt;li&gt;它的性能仍然不如后来的实现方式。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;fourth-version---not-quite-as-lazy-but-thread-safe-without-using-locks&#34;&gt;Fourth version - not quite as lazy, but thread-safe without using locks&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;sealed&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Singleton&lt;/span&gt;
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; Singleton instance = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Singleton();
-
-  &lt;span style=&#34;color:#228b22&#34;&gt;// Explicit static constructor to tell C# compiler
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#228b22&#34;&gt;// not to mark type as beforefieldinit
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton()
-  {
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; Singleton()
-  {
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton Instance
-  {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;
-    {
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; instance;
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如您所见，这确实非常简单，那它是怎么实现线程安全的，它有多懒呢？Well，将C＃中的静态构造函数指定为仅在创建类的实例或引用静态成员时执行，并且每个&lt;code&gt;AppDomain&lt;/code&gt;仅执行一次。鉴于无论其他情况如何都需要执行对新构造的类型的检查，因此比在前面的示例中添加额外的检查要快。&lt;/p&gt;
-&lt;p&gt;但是，这种方法也有一些缺点（&lt;em&gt;wrinkles&lt;/em&gt;）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;它没有其他实现那么懒。特别是，当具有实例以外的静态成员时，对这些成员的首次引用将涉及创建实例。在下一个实现中将对此进行更正。&lt;/li&gt;
-&lt;li&gt;如果一个静态构造函数调用另一个而又再次调用第一个静态构造函数，则会带来复杂性。请查阅&lt;code&gt;.NET规范（currently section 9.5.3 of partition II&lt;/code&gt;），以获取有关类型初始值设定项的确切性质的更多详细信息。它们不太可能会影响程序（&lt;em&gt;they&amp;rsquo;re unlikely to bite you&lt;/em&gt;），但值得一提的是，静态构造函数在生命周期内存在互相引用（&lt;em&gt;the consequences of static constructors which refer to each other in a cycle&lt;/em&gt;）。&lt;/li&gt;
-&lt;li&gt;只有当类型未使用称为&lt;code&gt;beforefieldinit&lt;/code&gt;的特殊标志进行标记时，.NET才能保证类型初始化程序的惰性。不幸的是，C＃编译器（至少是.NET 1.1运行时中提供的）将所有没有静态构造函数（即看起来像构造函数但被标记为静态的块）的类型都标记为&lt;code&gt;beforefieldinit&lt;/code&gt;。我有一篇&lt;a href=&#34;https://csharpindepth.com/articles/BeforeFieldInit&#34;&gt;文章&lt;/a&gt;，详细介绍了这个问题。还要注意，它会影响性能，如页面底部所述。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这种实现方式可以采取的一种捷径：仅使实例成为公共静态只读变量，并完全摆脱该属性。这使得基本框架代码绝对很小！但是，许多人更喜欢拥有属性，以防将来需要采取进一步的措施，并且&lt;code&gt;JIT&lt;/code&gt;内联可能使性能相同。 （请注意，如果您需要惰性，则仍然需要静态构造函数本身。）&lt;/p&gt;
-&lt;h2 id=&#34;fifth-version---fully-lazy-instantiation&#34;&gt;Fifth version - fully lazy instantiation&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;sealed&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Singleton&lt;/span&gt;
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; Singleton()
-  {
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton Instance
-  {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt; { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; Nested.instance; }
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Nested&lt;/span&gt;
-  {
-    &lt;span style=&#34;color:#228b22&#34;&gt;// Explicit static constructor to tell C# compiler
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// not to mark type as beforefieldinit
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Nested()
-    {
-    }
-
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;internal&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; Singleton instance = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Singleton();
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在这里，实例化是由对嵌套类的静态成员的第一次引用触发的，该实例仅在&lt;code&gt;Instance&lt;/code&gt;中发生。这意味着该实现完全是懒的，同事具有先前性能的所有性能优势。请注意，尽管嵌套类可以访问封闭类的私有成员，但事实并非如此，因此这里需要实例化。但是，由于类本身是私有的，所以这不会引起任何其他问题。但是，为了使实例化变得懒惰，代码有些复杂。&lt;/p&gt;
-&lt;h2 id=&#34;sixth-version---using-net-4s-lazyt-type&#34;&gt;Sixth version - using .NET 4&amp;rsquo;s &lt;code&gt;Lazy&amp;lt;T&amp;gt;&lt;/code&gt; type&lt;/h2&gt;
-&lt;p&gt;如果使用的是.NET 4（或更高版本），则可以使用&lt;a href=&#34;http://msdn.microsoft.com/en-us/library/dd642331.aspx&#34;&gt;System.Lazy&lt;/a&gt;类型使懒变得非常简单。您需要做的就是将委托传递给构造函数，该构造函数调用Singleton构造函数，使用&lt;code&gt;lambda表达式&lt;/code&gt;最容易完成。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;sealed&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Singleton&lt;/span&gt;
-{
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; Lazy&amp;lt;Singleton&amp;gt; lazy = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Lazy&amp;lt;Singleton&amp;gt; (() =&amp;gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Singleton());
-
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton Instance { 
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt; { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; lazy.Value; }
-    }
-
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; Singleton()
-    {
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;它很简单，性能也很好。如果需要，还可以使用&lt;a href=&#34;http://msdn.microsoft.com/en-us/library/dd642334.aspx&#34;&gt;IsValueCreated&lt;/a&gt;属性检查实例是否已创建。&lt;/p&gt;
-&lt;p&gt;上面的代码隐式地使用&lt;code&gt;LazyThreadSafetyMode.ExecutionAndPublication&lt;/code&gt;作为&lt;code&gt;Lazy&amp;lt;Singleton&amp;gt;&lt;/code&gt;的线程安全模式。根据您的要求，您可能希望尝试其他模式。&lt;/p&gt;
-&lt;h2 id=&#34;performance-vs-laziness&#34;&gt;Performance vs laziness&lt;/h2&gt;
-&lt;p&gt;在许多情况下，您实际上并不需要完全的懒，除非类初始化时需要做特别耗时的事情，或者在其他地方有副作用，否则可以忽略上面有关显式静态构造函数的实现方法。这可以提高性能，因为它允许&lt;code&gt;JIT&lt;/code&gt;编译器进行一次检查（例如，在方法开始时进行检查），以确保类型已初始化，然后从此开始进行假定。如果您的单例实例是在相对紧凑的循环中引用的，则这可能会（相对）产生明显的性能差异。您应该确定是否需要完全延迟的实例化，并在类中适当地记录此决定。&lt;/p&gt;
-&lt;p&gt;该页面存在的很多原因是人们试图变得聪明（&lt;em&gt;A lot of the reason for this page&amp;rsquo;s existence is people trying to be clever&lt;/em&gt;），因此提出了双重检查的锁定算法。人们常常认为加锁是付出昂贵代价的操作，这是普遍的并且是错误的。我编写了一个非常快速的基准测试，它以十亿次尝试各种变体，以循环方式获取单例实例。这并不是十分科学（&lt;em&gt;It&amp;rsquo;s not terribly scientific&lt;/em&gt;），因为在现实生活中，您可能想知道，如果每次迭代实际上都涉及到对获取单例的方法的调用等，该过程有多快。但是，它确实显示了重要的意义。在我的笔记本电脑上，最慢的解决方案（约为5倍）是加锁的解决方法（解决方案2）。那重要吗？当您记住它仍然可以在40秒内成功获取十亿次单例时，可能就不会了。 （注意：本文最初是在很早以前写的，我希望现在可以有更好的性能。）这意味着，如果您“仅”每秒获取40万次单例，则获取的成本将不断增加达到1％的性能。因此，改善性能并不会起到太大作用。现在，如果您经常使用单例模式，您是否是在循环中使用它？如果您非常在乎提高性能，为什么不在循环之外声明局部变量，请获取一次单例然后循环。所以，即使是最慢的实现也很容易做到。&lt;/p&gt;
-&lt;p&gt;我非常有兴趣看到一个现实世界的应用程序，在该应用程序中，使用简单的加锁和使用较快速的解决方案之一之间的差异实际上带来了显着的性能差异。&lt;/p&gt;
-&lt;h2 id=&#34;exceptions&#34;&gt;Exceptions&lt;/h2&gt;
-&lt;p&gt;有时，您需要在单例构造函数中进行工作，这可能会引发异常，但对整个应用程序可能不会致命。您的应用程序可能能够解决问题，并希望重试。在这个阶段，使用类型初始值设定项构造单例成为问题。不同的运行时对这种情况的处理方式不同，但是我不知道哪个运行者可以做所需的事情（再次运行类型初始化器），即使这样做，您的代码也会在其他运行时中损坏。为了避免这些问题，我建议使用页面上列出的第二种模式，只需使用一个简单的锁，然后每次都要进行检查，如果尚未成功构建该实例，则可以在方法/属性中进行构建。&lt;/p&gt;
-&lt;h2 id=&#34;conclusion-modified-slightly-on-january-7th-2006-updated-feb-12th-2011&#34;&gt;Conclusion (modified slightly on January 7th 2006; updated Feb 12th 2011)&lt;/h2&gt;
-&lt;p&gt;在C＃中有多种不同的方式来实现单例模式。读者写信给我，详细介绍了他封装同步方面的一种方式，尽管我承认这在某些非常特殊的情况下（特别是在您想要非常高性能的情况下，并且能够确定单例是否已经被使用的能力）很有用。创建，并且完全懒惰（无论是否调用其他静态成员）。我个人认为这种情况不会经常出现，值得在此页面上进行进一步介绍，但是如果您遇到这种情况，请发&lt;a href=&#34;skeet@pobox.com&#34;&gt;邮件&lt;/a&gt;给我。&lt;/p&gt;
-&lt;p&gt;我的个人偏爱是解决方案4：通常，我只有在我需要能够在不触发初始化的情况下调用其他静态方法，或者如果我需要知道单例是否已经被实例化，或者是否需要知道单例是否已被实例化时才不会使用该方法。我不记得我上次遇到这种情况，假设我有过，在这种情况下，我可能会选择解决方案2，该解决方案仍然很不错，而且很容易就可以实现。&lt;/p&gt;
-&lt;p&gt;解决方案5很优雅，但比2或4棘手，而且正如我上面所说，它提供的好处似乎很少有用。如果您使用的是.NET 4，则解决方案6是实现懒惰的一种更简单的方法，它还具有明显的惰性。我目前倾向于仅通过习惯就使用解决方案4，但是如果我与经验不足的开发人员一起工作，我很可能会选择解决方案6作为一种简单且普遍适用的模式开始。&lt;/p&gt;
-&lt;p&gt;（我不会使用解决方案1，因为它是有缺陷的，我不会使用解决方案3，因为它比不过5。）&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;用上述第六种方式实现读取文件的方法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System&lt;/span&gt;;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System.Collections.Generic&lt;/span&gt;;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System.IO&lt;/span&gt;;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System.Text&lt;/span&gt;;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System.Web&lt;/span&gt;;
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;namespace&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;Demo&lt;/span&gt;
-{
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;MyFileReader&lt;/span&gt;
-    {
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; Lazy&amp;lt;MyFileReader&amp;gt; lazy = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Lazy&amp;lt;MyFileReader&amp;gt;(() =&amp;gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; MyFileReader());
-
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; MyFileReader Instance =&amp;gt; lazy.Value;
-
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; MyFileReader()
-        {
-        }
-
-        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;summary&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;///  读取json格式文件
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;/summary&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;param name=&amp;#34;filePath&amp;#34;&amp;gt;eg：\\Demo\\Config.txt&amp;lt;/param&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;param name=&amp;#34;encodType&amp;#34;&amp;gt;默认为 Encoding.Default&amp;lt;/param&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; JsonReader(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; filePath, Encoding encodType)
-        {
-            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (encodType == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-            {
-                encodType = Encoding.Default;
-            }
-            &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; jsonobj = &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;.Empty;
-
-            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; (StreamReader sr = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; StreamReader(System.Web.HttpRuntime.AppDomainAppPath + filePath, encodType))
-            {
-                &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; line;
-                &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;while&lt;/span&gt; ((line = sr.ReadLine()) != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-                {
-                    jsonobj = jsonobj + line.ToString();
-                }
-            }
-
-            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; jsonobj;
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;调用：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; json = fileReader.JsonReader(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;\\Demo\\Config.txt&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://csharpindepth.com/articles/Singleton&#34;&gt;https://csharpindepth.com/articles/Singleton&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/leolion/p/10241822.html&#34;&gt;https://www.cnblogs.com/leolion/p/10241822.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-- https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

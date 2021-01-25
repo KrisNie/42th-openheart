@@ -7,10 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 21 Nov 2020 22:30:12 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Jan 2021 12:14:19 +0000</lastBuildDate>
     
 	<atom:link href="https://www.openheart.icu/categories/technical/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C# Special Characters</title>
+      <link>https://www.openheart.icu/cs/c#-special-characters/</link>
+      <pubDate>Sat, 23 Jan 2021 12:14:19 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/c#-special-characters/</guid>
+      <description>? There are 4 question marks ? used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.
+1) The ?: Operator (since Visual Studio 2003) The format : condition ? first_expression : second_expression;
+If condition evaluates to true, first_expression shall be returned, otherwise second_expression.
+Example
+Random rnd = new Random(); var randomNo = rnd.Next(); var status = randomNo % 2 == 0 ?</description>
+    </item>
+    
+    <item>
+      <title>Effective C#</title>
+      <link>https://www.openheart.icu/cs/effective-c#6.0/</link>
+      <pubDate>Sat, 09 Jan 2021 16:22:42 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/effective-c#6.0/</guid>
+      <description>Effective C# Effective C# does not take you on a historical journey through the changes in the language. Rather, I provide advice on how to use the current C# language.
+C # Language Idioms You change tools or languages because you can be more productive.
+Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in the following contexts:
+  On local variables (variables declared at method scope).</description>
+    </item>
     
     <item>
       <title>Adaptive Code</title>
@@ -112,7 +137,7 @@ Note that run time is not included in this list by default. To change this behav
       <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/sqlserver/</guid>
-      <description>Common Operation Index 聚集索引 非聚集索引 </description>
+      <description>Common Operation Index 聚集索引 非聚集索引 Optimize Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF SET IDENTITY_INSERT Table1 ON --Do INSERT  SET IDENTITY_INSERT Table1 OFF SQL-Server: The backup set holds a backup of a database other than the existing   Don&amp;rsquo;t create an empty database and restore the .bak file on to it. Use &amp;lsquo;Restore Database&amp;rsquo; option accessible by right clicking the &amp;ldquo;Databases&amp;rdquo; branch of the SQL Server Management Studio and provide the database name while providing the source to restore.</description>
     </item>
     
     <item>
@@ -326,8 +351,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/git/</guid>
-      <description>idea设置git idea -&amp;gt;VSC -&amp;gt;Create Git Repository 右击工程文件 -&amp;gt;git-&amp;gt;add 右击工程文件 -&amp;gt;git-&amp;gt;commit
-git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.com:Hyominn/java_demo.git git add . dir # 查看有哪些文件夹 git rm -r --cached target # 删除target文件夹 git commit –m &amp;#34;版本更新信息&amp;#34; git push git@github.com:Hyominn/java_demo.git 设置git代理 # http git config --global https.proxy http://127.0.0.1:1080 git config --global https.proxy https://127.0.0.1:1080 # socks5 git config --global http.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global https.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; # 取消代理 git config --global --unset http.proxy git config --global --unset https.</description>
+      <description>idea设置git git remote add origin git@github.com:Hyominn/java_demo.git git pull git@github.com:Hyominn/java_demo.git git add . dir # 查看有哪些文件夹 git rm -r --cached target # 删除target文件夹 git commit –m &amp;#34;版本更新信息&amp;#34; git push kris@github.com:Hyominn/java_demo.git 设置git代理 # http git config --global https.proxy http://127.0.0.1:1080 git config --global https.proxy https://127.0.0.1:1080 # socks5 git config --global http.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; git config --global https.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; # 取消代理 git config --global --unset http.proxy git config --global --unset https.proxy npm config delete proxy 查看git安装路径  Mac: which git Windows: where git powershell用 where.</description>
     </item>
     
     <item>
@@ -417,6 +441,18 @@ user = nginx group = users </description>
       <guid>https://www.openheart.icu/cs/english/</guid>
       <description>Apple’s glowing glass sphere is the newest spectacle on Singapore’s skyline  Designed by Foster + Partners, the new Apple Marina Bay Sands store(滨海湾金沙店), due to open on Thursday, is a self-supporting dome entirely surrounded by water
  Physics loves a sphere, its preferred, purest form. For architects though, the box trumps the bubble(盒子胜过透明原型罩). They’re easier to engineer and offer more useful space. The new Apple Marina Bay Sands store in Singapore goes with the physics.</description>
+    </item>
+    
+    <item>
+      <title>Win Operation</title>
+      <link>https://www.openheart.icu/cs/windows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/windows/</guid>
+      <description>Windows PowerShell oh-my-posh Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease PSReadLine PowerShell/PSReadLine
+Install-Module PSReadLine -AllowPrerelease -Force notepad $profile
+Import-Module PSReadLine Set-PSReadLineOption -PredictionSource History # 下面是三条是文档里推荐的，根据自己的习惯决定是否添加 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward Set-PSReadLineKeyHandler -Key Tab -Function Complete # Hot-Key Set-PSReadLineKeyHandler -Key &amp;#34;Ctrl+g&amp;#34; -Function MenuComplete posh-git dahlbyk/posh-git
+Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force Import-Module posh-git </description>
     </item>
     
   </channel>
