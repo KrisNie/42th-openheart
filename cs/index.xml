@@ -7,7 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 23 Jan 2021 12:14:19 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jan 2021 12:14:19 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.openheart.icu/cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>CSharp Special Characters</title>
       <link>https://www.openheart.icu/cs/csharp-special-characters/</link>
@@ -43,7 +47,7 @@ Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in t
 Please join me in welcoming Kris to Infor and give them your great support in every way possible!
 Welcome to the team!
 Thank you. It is my honor to be able to join our team.
-Don&amp;rsquo;t spin your wheels! 这里的spin your wheels(cambridge.org) 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;quot;
+Don&amp;rsquo;t spin your wheels! 这里的spin your wheels(cambridge.org) 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;rdquo;
 You&amp;rsquo;re in good company.</description>
     </item>
     
@@ -441,8 +445,8 @@ Reverse Proxy（反向代理） 当我们在访问 www.baidu.com 时，百度背
 Common Operation $sudo nginx sudo pkill -f nginx &amp;amp; wait $! sudo systemctl start nginx sudo systemctl restart nginx nginx -c /etc/nginx/nginx.conf # 重启服务 设置二级域名 增加一个新的listen 80
 server_name设置为二级域名地址
 root指向项目地址
-server {listen 80;server_name site42.openheart.icu;location / {root /usr/project/openheart;}}强制浏览器使用本地缓存 cache-control/expires
-# nginx.conf 中配置location ~ .</description>
+server{listen80;server_namesite42.openheart.icu;location/{root/usr/project/openheart;}}强制浏览器使用本地缓存 cache-control/expires
+# nginx.conf 中配置location~.</description>
     </item>
     
     <item>

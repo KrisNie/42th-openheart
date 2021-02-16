@@ -133,7 +133,7 @@
 &lt;p&gt;正直、勇敢、独立。&lt;/p&gt;
 &lt;p&gt;我希望你是一个优秀的人。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;这首散文诗选自张敏老师的《&lt;a href=&#34;https://book.douban.com/subject/26687021/&#34;&gt;木屐声声&lt;/a&gt;》 ，我读了好几遍，想从头当个孩子。&lt;/p&gt;
+&lt;p&gt;这首散文诗选自张梅老师的《&lt;a href=&#34;https://book.douban.com/subject/26687021/&#34;&gt;木屐声声&lt;/a&gt;》 ，我读了好几遍，想从头当个孩子。&lt;/p&gt;
 - https://www.openheart.icu/boom/%E5%86%99%E7%BB%99%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%AD%A9%E5%AD%90/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -562,7 +562,7 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;Please join me in welcoming Kris to Infor and give them your great support in every way possible!&lt;/p&gt;
 &lt;p&gt;Welcome to the team!&lt;/p&gt;
 &lt;p&gt;Thank you. It is my honor to be able to join our team.&lt;/p&gt;
-&lt;p&gt;Don&amp;rsquo;t spin your wheels! 这里的spin your wheels&lt;a href=&#34;https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD/spin-your-wheels&#34;&gt;(cambridge.org)&lt;/a&gt; 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;quot;&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t spin your wheels! 这里的spin your wheels&lt;a href=&#34;https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD/spin-your-wheels&#34;&gt;(cambridge.org)&lt;/a&gt; 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;You&amp;rsquo;re in good company. 你是一个好合作伙伴。此处的company为朋友、同伴&lt;/p&gt;
 &lt;p&gt;I really enjoy your company. 我很喜欢你的陪伴。此处的company为陪伴&lt;/p&gt;
 &lt;p&gt;She&amp;rsquo;s not coming – she&amp;rsquo;s got company. 她来不了了，她家里有客人。此处的company为客人&lt;/p&gt;
@@ -1774,26 +1774,26 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:right&#34;&gt;Module&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Module&lt;/th&gt;
 &lt;th&gt;IIS Web Core&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Notification&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Notification&lt;/td&gt;
 &lt;td&gt;BeginRequest&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Handler&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Handler&lt;/td&gt;
 &lt;td&gt;Not yet determined&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Error Code&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Error Code&lt;/td&gt;
 &lt;td&gt;0x80070021&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Config Error&lt;/td&gt;
-&lt;td&gt;This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&amp;ldquo;Deny&amp;rdquo;), or set explicitly by a location tag with overrideMode=&amp;ldquo;Deny&amp;rdquo; or the legacy allowOverride=&amp;ldquo;false&amp;rdquo;.&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Config Error&lt;/td&gt;
+&lt;td&gt;This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&amp;quot;Deny&amp;rdquo;), or set explicitly by a location tag with overrideMode=&amp;quot;Deny&amp;rdquo; or the legacy allowOverride=&amp;quot;false&amp;rdquo;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
