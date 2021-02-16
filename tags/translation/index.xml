@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 00:14:11 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.openheart.icu/tags/translation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 25 Jul 2020 00:14:11 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/translation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Implementing the Singleton Pattern in C#</title>
       <link>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</link>
