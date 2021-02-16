@@ -129,21 +129,21 @@ nginx -c /etc/nginx/nginx.conf
 &lt;p&gt;增加一个新的&lt;code&gt;listen 80&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;server_name&lt;/code&gt;设置为二级域名地址&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;root&lt;/code&gt;指向项目地址&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;server {&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;listen       80;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;server_name  site42.openheart.icu;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;location / {&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;root         /usr/project/openheart;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;server&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;{&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;listen&lt;span style=&#34;color:#bbb&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#b452cd&#34;&gt;80&lt;/span&gt;;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;server_name&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;site42.openheart.icu;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;/&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;{&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;root&lt;span style=&#34;color:#bbb&#34;&gt;         &lt;/span&gt;/usr/project/openheart;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;强制浏览器使用本地缓存&#34;&gt;强制浏览器使用本地缓存&lt;/h2&gt;
 &lt;p&gt;cache-control/expires&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# nginx.conf 中配置&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)${&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires 30d;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;~&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;.&lt;span style=&#34;color:#1e889b&#34;&gt;*\.(gif|jpg|jpeg|png|bmp|swf)${&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;30d;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location ~ .*\.(js|css)?${&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires 1h;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;~&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;.&lt;span style=&#34;color:#1e889b&#34;&gt;*\.(js|css)?${&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;1h;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/nginx/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
@@ -442,36 +442,6 @@ service php-fpm reload
     
     
         <item>
-        <title> Children</title>
-        <link>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</link>
-        <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ -&lt;blockquote&gt;
-&lt;p&gt;你的儿女，其实并不是你的儿女&lt;/p&gt;
-&lt;p&gt;他们的诞生源自于你的情欲以及自身对于生命的渴望&lt;/p&gt;
-&lt;p&gt;他们借助你来到这个世界，却非为了你而来&lt;/p&gt;
-&lt;p&gt;他们在你身旁，然而并不是你的私人物品&lt;/p&gt;
-&lt;p&gt;你可以给予他们的是你的爱，不是你的想法&lt;/p&gt;
-&lt;p&gt;你可以庇护的是他们的身体，不是他们的灵魂&lt;/p&gt;
-&lt;p&gt;因为他们的灵魂属于明天&lt;/p&gt;
-&lt;p&gt;属于你做梦也无法到达的明天&lt;/p&gt;
-&lt;p&gt;你可以拼尽全力，变得像他们一样&lt;/p&gt;
-&lt;p&gt;你不能绞尽脑汁，让他们变得和你一样&lt;/p&gt;
-&lt;p&gt;因为生命不会后退，时间也不在过去停留&lt;/p&gt;
-&lt;p&gt;你是弓，儿女是箭&lt;/p&gt;
-&lt;p&gt;弓箭手望着未来之路上的箭靶&lt;/p&gt;
-&lt;p&gt;他用尽力气将你拉开，使他的箭射得又快又远&lt;/p&gt;
-&lt;p&gt;所以怀着快乐的心情，在弓箭手的手中弯曲吧&lt;/p&gt;
-&lt;p&gt;因为他爱一路飞翔的箭，也爱无比稳定的弓&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这首诗是纪伯伦的《On Children》，我把这诗读给了我爸妈，于是我来到了你身边。&lt;/p&gt;
-- https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
         <title>Abstinence</title>
         <link>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</link>
         <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
@@ -499,6 +469,36 @@ service php-fpm reload
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;2017.10.10&lt;/em&gt;&lt;/p&gt;
 - https://www.openheart.icu/boom/%E6%88%92%E9%85%92/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Children</title>
+        <link>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</link>
+        <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ -&lt;blockquote&gt;
+&lt;p&gt;你的儿女，其实并不是你的儿女&lt;/p&gt;
+&lt;p&gt;他们的诞生源自于你的情欲以及自身对于生命的渴望&lt;/p&gt;
+&lt;p&gt;他们借助你来到这个世界，却非为了你而来&lt;/p&gt;
+&lt;p&gt;他们在你身旁，然而并不是你的私人物品&lt;/p&gt;
+&lt;p&gt;你可以给予他们的是你的爱，不是你的想法&lt;/p&gt;
+&lt;p&gt;你可以庇护的是他们的身体，不是他们的灵魂&lt;/p&gt;
+&lt;p&gt;因为他们的灵魂属于明天&lt;/p&gt;
+&lt;p&gt;属于你做梦也无法到达的明天&lt;/p&gt;
+&lt;p&gt;你可以拼尽全力，变得像他们一样&lt;/p&gt;
+&lt;p&gt;你不能绞尽脑汁，让他们变得和你一样&lt;/p&gt;
+&lt;p&gt;因为生命不会后退，时间也不在过去停留&lt;/p&gt;
+&lt;p&gt;你是弓，儿女是箭&lt;/p&gt;
+&lt;p&gt;弓箭手望着未来之路上的箭靶&lt;/p&gt;
+&lt;p&gt;他用尽力气将你拉开，使他的箭射得又快又远&lt;/p&gt;
+&lt;p&gt;所以怀着快乐的心情，在弓箭手的手中弯曲吧&lt;/p&gt;
+&lt;p&gt;因为他爱一路飞翔的箭，也爱无比稳定的弓&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这首诗是纪伯伦的《On Children》，我把这诗读给了我爸妈，于是我来到了你身边。&lt;/p&gt;
+- https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
