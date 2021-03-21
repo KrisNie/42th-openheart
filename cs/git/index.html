@@ -584,7 +584,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             1 min
                             
-                            30 s.
+                            35 s.
                         
                     </div>
                 </div>
@@ -641,9 +641,11 @@ git reset --hard HEAD~1 <span style="color:#228b22"># 不保留修改</span>
 git push origin mybranch --force <span style="color:#228b22"># 强制推送到远端</span>
 
 <span style="color:#228b22"># delete branch</span>
+git branch -d mybranch
 git branch -D mybranch
 git remote prune origin
-git push origin --delete mybranch
+git push origin --delete mybranch <span style="color:#228b22"># delete remote branch</span>
+git push origin :mybranch <span style="color:#228b22"># delete remote branch</span>
 
 <span style="color:#228b22"># update commit after git push</span>
 git commit --amend <span style="color:#228b22"># 进入vim修改 修改完成后:wq 保存</span>

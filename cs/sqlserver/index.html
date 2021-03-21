@@ -21,7 +21,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.openheart.icu/cs/sqlserver/" />
 <meta property="article:published_time" content="2020-08-15T16:27:30+00:00" />
-<meta property="article:modified_time" content="2020-08-15T16:27:47+00:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="article:modified_time" content="2021-03-02T22:57:39+00:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
@@ -241,6 +241,28 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
+								<a href="#sqlserver" onclick="onNavClick(`#sqlserver-nav`)" id="sqlserver-nav">
+									SQLserver
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
 								<a href="#common-operation" onclick="onNavClick(`#common-operation-nav`)" id="common-operation-nav">
 									Common Operation
 								</a>
@@ -263,8 +285,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#index" onclick="onNavClick(`#index-nav`)" id="index-nav">
-									Index
+								<a href="#sqlcmd" onclick="onNavClick(`#sqlcmd-nav`)" id="sqlcmd-nav">
+									SQLCMD
 								</a>
 							</li>
 						
@@ -278,48 +300,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#%e8%81%9a%e9%9b%86%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#聚集索引-nav`)" id="聚集索引-nav">
-									聚集索引
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%9d%9e%e8%81%9a%e9%9b%86%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#非聚集索引-nav`)" id="非聚集索引-nav">
-									非聚集索引
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
 							
 								</ul>
 							
@@ -509,6 +489,28 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
+								<a href="#sqlserver" onclick="onNavClick(`#sqlserver-nav`)" id="sqlserver-nav">
+									SQLserver
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
 								<a href="#common-operation" onclick="onNavClick(`#common-operation-nav`)" id="common-operation-nav">
 									Common Operation
 								</a>
@@ -531,8 +533,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#index" onclick="onNavClick(`#index-nav`)" id="index-nav">
-									Index
+								<a href="#sqlcmd" onclick="onNavClick(`#sqlcmd-nav`)" id="sqlcmd-nav">
+									SQLCMD
 								</a>
 							</li>
 						
@@ -546,48 +548,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
-						
-							<li>
-								<a href="#%e8%81%9a%e9%9b%86%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#聚集索引-nav`)" id="聚集索引-nav">
-									聚集索引
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%9d%9e%e8%81%9a%e9%9b%86%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#非聚集索引-nav`)" id="非聚集索引-nav">
-									非聚集索引
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
 							
 								</ul>
 							
@@ -757,7 +717,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            55 s.
+                            1 min
+                            
+                            2 s.
                         
                     </div>
                 </div>
@@ -767,18 +729,22 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 <div class="post-body" v-pre>
                 
-                    <h1 id="common-operation">Common Operation</h1>
-<h2 id="index">Index</h2>
-<h3 id="聚集索引">聚集索引</h3>
-<h3 id="非聚集索引">非聚集索引</h3>
-<h1 id="optimize">Optimize</h1>
-<h2 id="cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity"><a href="https://stackoverflow.com/questions/1334012/cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity">Cannot insert explicit value for identity column in table &lsquo;table&rsquo; when IDENTITY_INSERT is set to OFF</a></h2>
+                    <h1 id="sqlserver">SQLserver</h1>
+<h2 id="common-operation">Common Operation</h2>
+<h3 id="sqlcmd">SQLCMD</h3>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqlcmd -S localhost -d CSI10 -q <span style="color:#cd5555">&#34;SELECT * FROM SITE&#34;</span>
+sqlcmd -S localhost -d CSI10 -Q <span style="color:#cd5555">&#34;SELECT * FROM SITE&#34;</span>
+sqlcmd -S localhost -U SA -Q <span style="color:#cd5555">&#39;select @@VERSION&#39;</span>
+sqlcmd -S localhost
+</code></pre></div><hr>
+<h2 id="optimize">Optimize</h2>
+<h3 id="cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity"><a href="https://stackoverflow.com/questions/1334012/cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity">Cannot insert explicit value for identity column in table &lsquo;table&rsquo; when IDENTITY_INSERT is set to OFF</a></h3>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">SET</span> IDENTITY_INSERT Table1 <span style="color:#8b008b;font-weight:bold">ON</span>
 
 <span style="color:#228b22">--Do INSERT
 </span><span style="color:#228b22"></span>
 <span style="color:#8b008b;font-weight:bold">SET</span> IDENTITY_INSERT Table1 <span style="color:#8b008b;font-weight:bold">OFF</span> 
-</code></pre></div><h2 id="sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing"><a href="https://stackoverflow.com/questions/10204480/sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing">SQL-Server: The backup set holds a backup of a database other than the existing</a></h2>
+</code></pre></div><h3 id="sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing"><a href="https://stackoverflow.com/questions/10204480/sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing">SQL-Server: The backup set holds a backup of a database other than the existing</a></h3>
 <blockquote>
 <ul>
 <li>Don&rsquo;t create an empty database and restore the <code>.bak</code> file on to it.</li>
@@ -786,7 +752,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 <li>Also change the file names at &ldquo;Files&rdquo; if the other database still exists. Otherwise you get &ldquo;The file &lsquo;&hellip;&rsquo; cannot be overwritten. It is being used by database &lsquo;yourFirstDb&rsquo;&rdquo;.</li>
 </ul>
 </blockquote>
-<h2 id="what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server"><a href="https://stackoverflow.com/questions/125457/what-is-the-t-sql-syntax-to-connect-to-another-sql-server">What is the T-SQL syntax to connect to another SQL Server?</a></h2>
+<h3 id="what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server"><a href="https://stackoverflow.com/questions/125457/what-is-the-t-sql-syntax-to-connect-to-another-sql-server">What is the T-SQL syntax to connect to another SQL Server?</a></h3>
 <p><a href="https://docs.microsoft.com/en-us/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor?view=sql-server-ver15">Edit SQLCMD Scripts with Query Editor</a></p>
 <p>In SQL Server Management Studio, turn on SQLCMD mode from the Query menu. Then at the top of your script, type in the command below</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">:<span style="color:#8b008b;font-weight:bold">connect</span> USDB -U sa -P mypassword
@@ -805,7 +771,7 @@ USE [<span style="color:#8b008b;font-weight:bold">database</span>]
                     
                     <HR width="100%" id="EOF">
                     <p style="color:#777;">
-                        Last modified on 2020-08-15 16:27
+                        Last modified on 2021-03-02 22:57
                         &nbsp;
                         <span id="busuanzi_container_page_pv" style="color:#777;">
                             This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>

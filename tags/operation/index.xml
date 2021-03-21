@@ -7,7 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 14 Nov 2020 16:55:11 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/operation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Nov 2020 16:55:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.openheart.icu/tags/operation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>处理器中的流水线技术</title>
       <link>https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/</link>
@@ -57,7 +61,7 @@ WB(Write back)：将结果写入寄存器堆中。
       <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/sqlserver/</guid>
-      <description>Common Operation Index 聚集索引 非聚集索引 Optimize Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF SET IDENTITY_INSERT Table1 ON --Do INSERT  SET IDENTITY_INSERT Table1 OFF SQL-Server: The backup set holds a backup of a database other than the existing   Don&amp;rsquo;t create an empty database and restore the .bak file on to it. Use &amp;lsquo;Restore Database&amp;rsquo; option accessible by right clicking the &amp;ldquo;Databases&amp;rdquo; branch of the SQL Server Management Studio and provide the database name while providing the source to restore.</description>
+      <description>SQLserver Common Operation SQLCMD sqlcmd -S localhost -d CSI10 -q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -d CSI10 -Q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -U SA -Q &amp;#39;select @@VERSION&amp;#39; sqlcmd -S localhost  Optimize Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF SET IDENTITY_INSERT Table1 ON --Do INSERT  SET IDENTITY_INSERT Table1 OFF SQL-Server: The backup set holds a backup of a database other than the existing   Don&amp;rsquo;t create an empty database and restore the .</description>
     </item>
     
     <item>
@@ -192,8 +196,8 @@ Reverse Proxy（反向代理） 当我们在访问 www.baidu.com 时，百度背
 Common Operation $sudo nginx sudo pkill -f nginx &amp;amp; wait $! sudo systemctl start nginx sudo systemctl restart nginx nginx -c /etc/nginx/nginx.conf # 重启服务 设置二级域名 增加一个新的listen 80
 server_name设置为二级域名地址
 root指向项目地址
-server {listen 80;server_name site42.openheart.icu;location / {root /usr/project/openheart;}}强制浏览器使用本地缓存 cache-control/expires
-# nginx.conf 中配置location ~ .</description>
+server{listen80;server_namesite42.openheart.icu;location/{root/usr/project/openheart;}}强制浏览器使用本地缓存 cache-control/expires
+# nginx.conf 中配置location~.</description>
     </item>
     
     <item>
