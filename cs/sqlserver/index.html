@@ -374,6 +374,46 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server" onclick="onNavClick(`#enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server-nav`)" id="enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server-nav">
+									Enable ‘xp_cmdshell’ SQL Server
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#use-xp_cmdshell-to-print-variables-into-a-file" onclick="onNavClick(`#use-xp_cmdshell-to-print-variables-into-a-file-nav`)" id="use-xp_cmdshell-to-print-variables-into-a-file-nav">
+									Use ‘xp_cmdshell’ to print variables into a file
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -622,6 +662,46 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server" onclick="onNavClick(`#enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server-nav`)" id="enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server-nav">
+									Enable ‘xp_cmdshell’ SQL Server
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#use-xp_cmdshell-to-print-variables-into-a-file" onclick="onNavClick(`#use-xp_cmdshell-to-print-variables-into-a-file-nav`)" id="use-xp_cmdshell-to-print-variables-into-a-file-nav">
+									Use ‘xp_cmdshell’ to print variables into a file
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -719,7 +799,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             1 min
                             
-                            2 s.
+                            55 s.
                         
                     </div>
                 </div>
@@ -767,7 +847,47 @@ USE [<span style="color:#8b008b;font-weight:bold">database</span>]
 
 <span style="color:#8b008b;font-weight:bold">select</span> * <span style="color:#8b008b;font-weight:bold">from</span> site;
 </code></pre></div><p><strong>NOTE</strong>: IntelliSense is turned off in the Database Engine Query Editor when the SQLCMD mode is set on.</p>
+<h2 id="enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server"><a href="https://stackoverflow.com/questions/5131491/enable-xp-cmdshell-sql-server">Enable &lsquo;xp_cmdshell&rsquo; SQL Server</a></h2>
+<p><a href="https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/xp-cmdshell-server-configuration-option?redirectedfrom=MSDN&amp;view=sql-server-ver15">If you need to enable <strong>xp_cmdshell</strong>, you can use Policy-Based Managementhttps://docs.microsoft.com/en-us/sql/relational-databases/policy-based-management/administer-servers-by-using-policy-based-management?view=sql-server-ver15 or run the <strong>sp_configure</strong> system stored procedure as shown in the following code example:</a></p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">-- To allow advanced options to be changed.  
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">EXECUTE</span> sp_configure <span style="color:#cd5555">&#39;show advanced options&#39;</span>, <span style="color:#b452cd">1</span>;  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+<span style="color:#228b22">-- To update the currently configured value for advanced options.  
+</span><span style="color:#228b22"></span>RECONFIGURE;  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+<span style="color:#228b22">-- To enable the feature.  
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">EXECUTE</span> sp_configure <span style="color:#cd5555">&#39;xp_cmdshell&#39;</span>, <span style="color:#b452cd">1</span>;  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+<span style="color:#228b22">-- To update the currently configured value for this feature.  
+</span><span style="color:#228b22"></span>RECONFIGURE;  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+</code></pre></div><h2 id="use-xp_cmdshell-to-print-variables-into-a-file">Use &lsquo;xp_cmdshell&rsquo; to print variables into a file</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">-- print variables 
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">DECLARE</span> @cmdtxt <span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">4000</span>);
+<span style="color:#8b008b;font-weight:bold">select</span> @cmdtxt = <span style="color:#cd5555">&#39;echo &#39;</span> +<span style="color:#cd5555">&#39;@TtPmtpckCurrCode&#39;</span>+ <span style="color:#8b008b;font-weight:bold">CAST</span>(@TtPmtpckCurrCode <span style="color:#8b008b;font-weight:bold">AS</span> <span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">2</span>))  + <span style="color:#cd5555">&#39;@CurrparmsCurrCode&#39;</span>+<span style="color:#8b008b;font-weight:bold">CAST</span>(@CurrparmsCurrCode <span style="color:#8b008b;font-weight:bold">AS</span> <span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">2</span>)) +<span style="color:#cd5555">&#39; &gt;&gt; C:\Development\SubFolder\outPut.txt&#39;</span>;
+<span style="color:#8b008b;font-weight:bold">exec</span> master..xp_cmdshell @cmdtxt
 
+<span style="color:#228b22">-- use FOR XML to print table-valued variable
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">declare</span> @rates <span style="color:#8b008b;font-weight:bold">table</span> (
+  curr_code CurrCodeType
+, site_ref SiteType
+, exch_rate ExchRateType
+, rate_is_divisor ListYesNoType
+, <span style="color:#8b008b;font-weight:bold">primary</span> <span style="color:#8b008b;font-weight:bold">key</span> (curr_code, site_ref)
+)
+
+<span style="color:#8b008b;font-weight:bold">insert</span> <span style="color:#8b008b;font-weight:bold">into</span> @rates (curr_code, site_ref)
+<span style="color:#8b008b;font-weight:bold">select</span> <span style="color:#8b008b;font-weight:bold">distinct</span> curr_code, site
+<span style="color:#8b008b;font-weight:bold">from</span> tt_pmtpck
+<span style="color:#8b008b;font-weight:bold">where</span> tt_pmtpck.ProcessId = @PProcessId
+<span style="color:#8b008b;font-weight:bold">and</span> (tt_pmtpck.exch_rate <span style="color:#8b008b;font-weight:bold">is</span> <span style="color:#8b008b;font-weight:bold">null</span>
+  <span style="color:#8b008b;font-weight:bold">or</span> tt_pmtpck.dom_amt_applied <span style="color:#8b008b;font-weight:bold">is</span> <span style="color:#8b008b;font-weight:bold">null</span>
+  <span style="color:#8b008b;font-weight:bold">or</span> tt_pmtpck.dom_disc_amt <span style="color:#8b008b;font-weight:bold">is</span> <span style="color:#8b008b;font-weight:bold">null</span>)
+  
+<span style="color:#8b008b;font-weight:bold">DECLARE</span> @xmltmp xml = (<span style="color:#8b008b;font-weight:bold">SELECT</span> rat.curr_code,rat.site_ref,rat.exch_rate,rat.rate_is_divisor <span style="color:#8b008b;font-weight:bold">FROM</span> @rates <span style="color:#8b008b;font-weight:bold">AS</span> rat <span style="color:#8b008b;font-weight:bold">FOR</span> XML AUTO,ELEMENTS XSINIL);
+<span style="color:#8b008b;font-weight:bold">SELECT</span> @cmdtxt = <span style="color:#cd5555">&#39;echo &#39;</span> +<span style="color:#cd5555">&#39;@rates &#34;&#39;</span>+ <span style="color:#8b008b;font-weight:bold">CONVERT</span>(<span style="color:#658b00">VARCHAR</span>(<span style="color:#8b008b;font-weight:bold">max</span>),@xmltmp) + <span style="color:#cd5555">&#39;&#34; &gt;&gt; C:\Development\SubFolder\outPut.txt&#39;</span>;
+<span style="color:#8b008b;font-weight:bold">exec</span> master..xp_cmdshell @cmdtxt;
+</code></pre></div>
                     
                     <HR width="100%" id="EOF">
                     <p style="color:#777;">
