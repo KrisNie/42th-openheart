@@ -6,9 +6,56 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Wed, 17 Feb 2021 00:54:02 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 May 2021 23:29:58 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>剑指 Offer 46. 把数字翻译成字符串</title>
+        <link>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</link>
+        <pubDate>Tue, 21 Jul 2020 19:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/</guid>
+        <description>42th openheart https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/ -&lt;h1 id=&#34;把数字翻译成字符串httpsleetcode-cncomproblemsba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/&#34;&gt;把数字翻译成字符串&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: 12258
+输出: 5
+解释: 12258有5种不同的翻译，分别是&lt;code&gt;bccfi&lt;/code&gt;, &lt;code&gt;bwfi&lt;/code&gt;, &lt;code&gt;bczi&lt;/code&gt;, &lt;code&gt;mcfi&lt;/code&gt;和&lt;code&gt;mzi&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;提示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0 &amp;lt;= num &amp;lt; 2&lt;!-- raw HTML omitted --&gt;31&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;动态规划&#34;&gt;动态规划&lt;/h2&gt;
+&lt;p&gt;拿示例看&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先考虑每个数字单独翻译的情况，即翻译&lt;code&gt;[1,2,2,4,8]&lt;/code&gt;，结果为&lt;code&gt;bccfi&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以将数字拼接为两位的情况，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[12,2,4,8]&lt;/code&gt; &lt;code&gt;mcfi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[12,24,8]&lt;/code&gt; &lt;code&gt;mzi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[12,2,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,22,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,22,4,8]&lt;/code&gt; &lt;code&gt;bwfi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,2,24,8]&lt;/code&gt; &lt;code&gt;bczi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[1,2,2,48]&lt;/code&gt; 48&amp;gt;25&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;归纳规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以单独作为一位来翻译&lt;/li&gt;
+&lt;li&gt;如果第 &lt;code&gt;i−1&lt;/code&gt; 位和第 &lt;code&gt;i&lt;/code&gt; 位组成的数字在 10 到 25 之间，可以把这两位连起来翻译&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/arithmetic/%E5%89%91%E6%8C%87-offer-46.-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-lcof/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -1114,25 +1161,30 @@ private protected：只有在其声明程序集内，通过相同 class 中的�
         <pubDate>Fri, 17 Jul 2020 22:57:45 +0800</pubDate>
         
         <guid>https://www.openheart.icu/about/</guid>
-        <description>42th openheart https://www.openheart.icu/about/ -&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
+        <description>42th openheart https://www.openheart.icu/about/ -&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
 &lt;p&gt;I am Kris Nie.&lt;/p&gt;
 &lt;p&gt;Github: &lt;a href=&#34;https://github.com/KrisNie&#34;&gt;@KrisNie&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ins: &lt;a href=&#34;https://www.instagram.com/krisnie42/&#34;&gt;@krisnie42&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Twitter: &lt;a href=&#34;https://twitter.com/hehe54213&#34;&gt;@hehe54213&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Weibo: &lt;a href=&#34;https://weibo.com/u/1772713151&#34;&gt;@她的头发蓬松如云&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;about-this-site&#34;&gt;About This Site&lt;/h2&gt;
 &lt;p&gt;This is my Hugo blog :&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;42th openheart.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;用来记录我的第42次不开心&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contents&#34;&gt;Contents&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;.
 ├── Gossip #谨言慎行
-├── ComputerScience #计算机科学
-├── Arithmetic #算法
-├── About #关于
-├── Category #归类
-└── Tags #标签
+├── ComputerScience
+├── Arithmetic
+├── Finance
+├── Speech
+├── About # This page
+├── Category
+└── Tags
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Thanks for theme makers:&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Hugo Theme &lt;a href=&#34;https://github.com/amazingrise/hugo-theme-diary&#34;&gt;Diary&lt;/a&gt; by &lt;a href=&#34;https://amazingrise.net/&#34;&gt;Rise&lt;/a&gt; Ported from &lt;a href=&#34;https://mak1t0.cc/&#34;&gt;Makito&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://github.com/SumiMakito/hexo-theme-journal/&#34;&gt;Journal.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 - https://www.openheart.icu/about/ - ALL RIGHTS RESERVED KRIS NIE</description>
@@ -1294,7 +1346,7 @@ git push origin mybranch --force &lt;span style=&#34;color:#228b22&#34;&gt;# 强
 &lt;span style=&#34;color:#228b22&#34;&gt;# delete branch&lt;/span&gt;
 git branch -d mybranch
 git branch -D mybranch
-git remote prune origin
+git remote prune origin &lt;span style=&#34;color:#228b22&#34;&gt;# automatically get rid of remote branches that no longer exist on the remote&lt;/span&gt;
 git push origin --delete mybranch &lt;span style=&#34;color:#228b22&#34;&gt;# delete remote branch&lt;/span&gt;
 git push origin :mybranch &lt;span style=&#34;color:#228b22&#34;&gt;# delete remote branch&lt;/span&gt;
 
@@ -1305,6 +1357,18 @@ git push --force-with-lease origin mybranch &lt;span style=&#34;color:#228b22&#3
 git fetch origin &lt;span style=&#34;color:#228b22&#34;&gt;# 如果有人已经pull了未修改前的&lt;/span&gt;
 git reset --hard origin/branch &lt;span style=&#34;color:#228b22&#34;&gt;# 本地端的修改會不見&lt;/span&gt;
 
+&lt;span style=&#34;color:#228b22&#34;&gt;# Stash changes&lt;/span&gt;
+git stash pop
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Operate Commit&lt;/span&gt;
+git rebase -i Head~3 &lt;span style=&#34;color:#228b22&#34;&gt;# it will open a vim for u, i to insert, wq to save&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Change repositories URL&lt;/span&gt;
+git remote -v &lt;span style=&#34;color:#228b22&#34;&gt;# show yoru remote URL&lt;/span&gt;
+git remote set-url origin ssh://git@XXX.com/XXX/XXX.git &lt;span style=&#34;color:#228b22&#34;&gt;# reset your remote URL&lt;/span&gt;
+
+
+git mv -f .&lt;span style=&#34;color:#cd5555&#34;&gt;\a&lt;/span&gt;bc.js  .&lt;span style=&#34;color:#cd5555&#34;&gt;\A&lt;/span&gt;BC.js
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -1571,7 +1635,7 @@ $ &lt;span style=&#34;color:#658b00&#34;&gt;pwd&lt;/span&gt;
 
 &lt;span style=&#34;color:#228b22&#34;&gt;# 安装git&lt;/span&gt;
 $ yum -y install git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;vim&#34;&gt;vim&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;vim&#34;&gt;vim&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 退出编辑模式，输入以下命令：&lt;/span&gt;
 Esc 
 
@@ -1592,7 +1656,7 @@ Esc
 
 &lt;span style=&#34;color:#228b22&#34;&gt;# 将档案还原到最原始的状态！&lt;/span&gt;
 :e!
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;tail&#34;&gt;tail&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tail&#34;&gt;tail&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 现有itbilu.log日志文件，查看其后5行：&lt;/span&gt;
 $ tail -n -5 itbilu.log
 &lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
@@ -1622,93 +1686,12 @@ $ tail -f itbilu.log
 $ tail -f itbilu.log|grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt; -C &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;
 &lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
 $ tail -f itbilu.log|grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt; -5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/linux/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Mac Operation</title>
-        <link>https://www.openheart.icu/cs/mac/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/mac/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/mac/ -&lt;h1 id=&#34;brew使用国内镜像源不好使&#34;&gt;brew使用国内镜像源（不好使）&lt;/h1&gt;
-&lt;p&gt;中科大：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤一&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
-git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git*
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
-git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git*
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#步骤三&lt;/span&gt;
-brew update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;复原：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
-git remote set-url origin https://github.com/Homebrew/brew.git
-
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
-git remote set-url origin https://github.com/Homebrew/homebrew-core
-
-brew update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;配置item2代理&#34;&gt;配置item2代理&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 打开配置文件&lt;/span&gt;
-vim ~/.bash_profile 
-&lt;span style=&#34;color:#228b22&#34;&gt;# 如果用了`oh-my-zsh` 那么修改`~/.zshrc`&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 在后面新增配置&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;http_proxy&lt;/span&gt;=http://127.0.0.1:1087 
-&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;https_proxy&lt;/span&gt;=socks5://127.0.0.1:1080
-&lt;span style=&#34;color:#228b22&#34;&gt;# 同理，可能执行 source ~/.zshrc&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;source&lt;/span&gt; ~/.bash_profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;iterm2--oh-my-zsh&#34;&gt;iTerm2 + Oh My Zsh&lt;/h1&gt;
-&lt;h2 id=&#34;安装oh-my-zsh&#34;&gt;安装Oh my zsh&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# curl 安装方式&lt;/span&gt;
-sh -c &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装powerline&#34;&gt;安装PowerLine&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 安装 pip&lt;/span&gt;
-sudo easy_install pip
-
-pip install powerline-status --user
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装powerfonts&#34;&gt;安装PowerFonts&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# git clone&lt;/span&gt;
-git clone https://github.com/powerline/fonts.git --depth=&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# cd to folder&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; fonts
-&lt;span style=&#34;color:#228b22&#34;&gt;# run install shell&lt;/span&gt;
-./install.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Text 设置item2字体为Meslo LG&lt;/p&gt;
-&lt;h2 id=&#34;安装主题&#34;&gt;安装主题&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/Desktop/OpenSource
-git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; oh-my-zsh-agnoster-fcamblor/
-./install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行上面的命令会将主题拷贝到oh my zsh的themes中&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vi ~/.zshrc
-&lt;span style=&#34;color:#228b22&#34;&gt;# 将ZSH_THEME后面的字段改为agnoster&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装高亮插件&#34;&gt;安装高亮插件&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins/
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-git clone https://github.com/zsh-users/zsh-autosuggestions
-vi ~/.zshrc
-&lt;span style=&#34;color:#228b22&#34;&gt;# 修改zshrc&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;plugins信息：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;plugins=(
-	git
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;operation&#34;&gt;Operation&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 检查应用签名&lt;/span&gt;
-pkgutil --check-signature /Applications/Flume.app
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 清空DNS缓存&lt;/span&gt;
-dscacheutil -flushcache
-sudo dscacheutil -flushcache
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mac/ - ALL RIGHTS RESERVED KRIS NIE</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;issues&#34;&gt;Issues&lt;/h1&gt;
+&lt;h2 id=&#34;how-is-it-possible-for-fork-to-return-two-valueshttpsstackoverflowcomquestions4207656how-is-it-possible-for-fork-to-return-two-values&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4207656/how-is-it-possible-for-fork-to-return-two-values&#34;&gt;How is it possible for fork() to return two values?&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;fork&lt;/code&gt; does not return two values. Right after a &lt;code&gt;fork&lt;/code&gt; system call you simply have two independent processes executing the same code, and the returned pid from &lt;code&gt;fork&lt;/code&gt; is the only way to distinguish which process are you in - the parent or the child.&lt;/p&gt;
+&lt;/blockquote&gt;
+- https://www.openheart.icu/cs/linux/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

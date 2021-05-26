@@ -212,10 +212,10 @@ user = nginx group = users </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/windows/</guid>
-      <description>Windows PowerShell oh-my-posh Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease PSReadLine PowerShell/PSReadLine
+      <description>Windows Terminal oh-my-posh Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease PSReadLine PowerShell/PSReadLine
 Install-Module PSReadLine -AllowPrerelease -Force notepad $profile
 Import-Module PSReadLine Set-PSReadLineOption -PredictionSource History # 下面是三条是文档里推荐的，根据自己的习惯决定是否添加 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward Set-PSReadLineKeyHandler -Key Tab -Function Complete # Hot-Key Set-PSReadLineKeyHandler -Key &amp;#34;Ctrl+g&amp;#34; -Function MenuComplete posh-git dahlbyk/posh-git
-Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force Import-Module posh-git Scoop iwr -useb get.scoop.sh | iex </description>
+Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force Import-Module posh-git Scoop iwr -useb get.scoop.sh | iex  Command net share # view your pc&amp;#39;s share folder </description>
     </item>
     
   </channel>

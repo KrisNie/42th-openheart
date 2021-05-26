@@ -430,25 +430,15 @@ user = nginx group = users </description>
     </item>
     
     <item>
-      <title>English</title>
-      <link>https://www.openheart.icu/cs/english/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/english/</guid>
-      <description>Apple’s glowing glass sphere is the newest spectacle on Singapore’s skyline  Designed by Foster + Partners, the new Apple Marina Bay Sands store(滨海湾金沙店), due to open on Thursday, is a self-supporting dome entirely surrounded by water
- Physics loves a sphere, its preferred, purest form. For architects though, the box trumps the bubble(盒子胜过透明原型罩). They’re easier to engineer and offer more useful space. The new Apple Marina Bay Sands store in Singapore goes with the physics.</description>
-    </item>
-    
-    <item>
       <title>Win Operation</title>
       <link>https://www.openheart.icu/cs/windows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/windows/</guid>
-      <description>Windows PowerShell oh-my-posh Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease PSReadLine PowerShell/PSReadLine
+      <description>Windows Terminal oh-my-posh Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease PSReadLine PowerShell/PSReadLine
 Install-Module PSReadLine -AllowPrerelease -Force notepad $profile
 Import-Module PSReadLine Set-PSReadLineOption -PredictionSource History # 下面是三条是文档里推荐的，根据自己的习惯决定是否添加 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward Set-PSReadLineKeyHandler -Key Tab -Function Complete # Hot-Key Set-PSReadLineKeyHandler -Key &amp;#34;Ctrl+g&amp;#34; -Function MenuComplete posh-git dahlbyk/posh-git
-Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force Import-Module posh-git Scoop iwr -useb get.scoop.sh | iex </description>
+Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force Import-Module posh-git Scoop iwr -useb get.scoop.sh | iex  Command net share # view your pc&amp;#39;s share folder </description>
     </item>
     
   </channel>

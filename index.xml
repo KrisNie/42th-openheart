@@ -6,9 +6,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Wed, 17 Feb 2021 00:54:02 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 May 2021 23:29:58 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Economics &amp; Finance &amp; Management</title>
+        <link>https://www.openheart.icu/finance/economicsfinancemanagement/</link>
+        <pubDate>Tue, 25 May 2021 23:29:58 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/finance/economicsfinancemanagement/</guid>
+        <description>42th openheart https://www.openheart.icu/finance/economicsfinancemanagement/ -&lt;h1 id=&#34;economics&#34;&gt;Economics&lt;/h1&gt;
+&lt;h1 id=&#34;finance&#34;&gt;Finance&lt;/h1&gt;
+&lt;h1 id=&#34;management&#34;&gt;Management&lt;/h1&gt;
+- https://www.openheart.icu/finance/economicsfinancemanagement/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -145,9 +159,9 @@
         <pubDate>Sat, 23 Jan 2021 12:14:19 +0000</pubDate>
         
         <guid>https://www.openheart.icu/cs/csharp-special-characters/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/csharp-special-characters/ -&lt;h2 id=&#34;heading&#34;&gt;?&lt;/h2&gt;
+        <description>42th openheart https://www.openheart.icu/cs/csharp-special-characters/ -&lt;h1 id=&#34;heading&#34;&gt;?&lt;/h1&gt;
 &lt;p&gt;There are 4 question marks &lt;code&gt;?&lt;/code&gt; used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.&lt;/p&gt;
-&lt;h3 id=&#34;1-the--operator-since-visual-studio-2003&#34;&gt;1) The ?: Operator (since Visual Studio 2003)&lt;/h3&gt;
+&lt;h2 id=&#34;1-the--operator-since-visual-studio-2003&#34;&gt;1) The ?: Operator (since Visual Studio 2003)&lt;/h2&gt;
 &lt;p&gt;The format : &lt;code&gt;condition ? first_expression : second_expression;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;If &lt;code&gt;condition&lt;/code&gt; evaluates to &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;first_expression&lt;/code&gt; shall be returned, otherwise &lt;code&gt;second_expression&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Example&lt;/p&gt;
@@ -157,7 +171,7 @@
 &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; status = randomNo % &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt; == &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt; ? &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Generated number is an even number.&amp;#34;&lt;/span&gt; : &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Generated number is an odd number.&amp;#34;&lt;/span&gt;;
 Console.WriteLine(randomNo);
 Console.WriteLine(status);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-the-nullable-types-since-visual-studio-2005&#34;&gt;2) The Nullable Types (since Visual Studio 2005)&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-the-nullable-types-since-visual-studio-2005&#34;&gt;2) The Nullable Types (since Visual Studio 2005)&lt;/h2&gt;
 &lt;p&gt;Definition on msdn&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Nullable types can represent all the values of an underlying type, and an additional null value.&lt;/p&gt;
@@ -171,7 +185,7 @@ Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// True
 x = &lt;span style=&#34;color:#b452cd&#34;&gt;15&lt;/span&gt;;
 isXNull = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;false&lt;/span&gt;;
 Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// False
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-the-null-conditional-operators-since-visual-studio-2015&#34;&gt;3) The Null-conditional Operators (since Visual Studio 2015)&lt;/h3&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-the-null-conditional-operators-since-visual-studio-2015&#34;&gt;3) The Null-conditional Operators (since Visual Studio 2015)&lt;/h2&gt;
 &lt;p&gt;Example of a pretty common mistake&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main() {
  &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student1 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Quan&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;);
@@ -189,7 +203,7 @@ Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// False
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(student2?.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// No more System.NullReferenceException
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What happended? Thanks to the question mark after &lt;code&gt;student2&lt;/code&gt;, you are telling C# that &lt;code&gt;student2&lt;/code&gt; may be null. If &lt;code&gt;student2&lt;/code&gt; is indeed &lt;code&gt;null&lt;/code&gt;, C# will not try to access &lt;code&gt;Name&lt;/code&gt; anymore, it returns &lt;code&gt;null&lt;/code&gt; instead and &lt;code&gt;Console.WriteLine&lt;/code&gt;will happily ignore the &lt;code&gt;null&lt;/code&gt; value and only add a new line.&lt;/p&gt;
-&lt;h3 id=&#34;4-the---null-coalescing-operator-operator-since-visual-studio-2005&#34;&gt;4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)&lt;/h3&gt;
+&lt;h2 id=&#34;4-the---null-coalescing-operator-operator-since-visual-studio-2005&#34;&gt;4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)&lt;/h2&gt;
 &lt;p&gt;This is a special case of the ?: Operator in section 1&lt;/p&gt;
 &lt;p&gt;The format : &lt;code&gt;asking_value ?? just_in_case;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;if &lt;code&gt;asking_value&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt;, &lt;code&gt;just_in_case&lt;/code&gt; is returned, otherwise &lt;code&gt;asking_value&lt;/code&gt;is returned.&lt;/p&gt;
@@ -198,12 +212,12 @@ Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// False
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; y = x ?? &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// if x is null, set y to 0, otherwise set y = x;
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// which is essentially the same as
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; y = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt; : x;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://quannt.github.io/programming/c%23/2017/01/07/question-marks-c-sharp.html&#34;&gt;Four question marks you should know in C#&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;$&lt;/h2&gt;
+&lt;h1 id=&#34;heading-1&#34;&gt;$&lt;/h1&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;@&lt;/h2&gt;
+&lt;h1 id=&#34;heading-2&#34;&gt;@&lt;/h1&gt;
 &lt;p&gt;The &lt;code&gt;@&lt;/code&gt; special character serves as a verbatim identifier. It can be used in the following ways:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -277,6 +291,8 @@ Console.WriteLine(s2);
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;heading-3&#34;&gt;!&lt;/h1&gt;
 - https://www.openheart.icu/cs/csharp-special-characters/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -370,6 +386,7 @@ Console.WriteLine(s2);
 &lt;/ul&gt;
 &lt;p&gt;Using var also improves a developer’s comprehension of the code. With var, you are not telling the compiler which type you’re creating; the compiler declares the type for you. The compiler examines the compile-time type and infers the type of the local variable based on those declarations.&lt;/p&gt;
 &lt;p&gt;At other times, however, overusing var only decreases the readability of your code.&lt;/p&gt;
+&lt;p&gt;I recommend explicitly declaring all numeric types (int, float, double, and others) rather than using a var declaration.&lt;/p&gt;
 &lt;h3 id=&#34;item-2-prefer-readonly-to-const&#34;&gt;Item 2: Prefer &lt;code&gt;readonly&lt;/code&gt; to &lt;code&gt;const&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly&#34;&gt;&lt;code&gt;readonly&lt;/code&gt;: runtime constants.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const&#34;&gt;&lt;code&gt;const&lt;/code&gt;: compile-time constants, slightly faster but far less flexible&lt;/a&gt;&lt;/p&gt;
@@ -431,7 +448,7 @@ Console.WriteLine(iBoxed &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;
   	&lt;span style=&#34;color:#228b22&#34;&gt;// output 30
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;as&#34;&gt;&lt;code&gt;as&lt;/code&gt;&lt;/h4&gt;
-&lt;p&gt;Notice that the cast version must check &lt;code&gt;null&lt;/code&gt; in addition to catching exceptions. &lt;code&gt;null&lt;/code&gt; can be converted to any reference type using a cast, but the as operator returns &lt;code&gt;null&lt;/code&gt; when used on a &lt;code&gt;null&lt;/code&gt; reference. If the conversion is not possible, the &lt;code&gt;as&lt;/code&gt; operator returns &lt;code&gt;null&lt;/code&gt;. Unlike a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression&#34;&gt;cast expression&lt;/a&gt;, the &lt;code&gt;as&lt;/code&gt; operator never throws an exception.&lt;/p&gt;
+&lt;p&gt;Notice that the cast version must check &lt;code&gt;null&lt;/code&gt; in addition to catching exceptions. &lt;code&gt;null&lt;/code&gt; can be converted to any reference type using a cast, but the as operator returns &lt;code&gt;null&lt;/code&gt; when used on a &lt;code&gt;null&lt;/code&gt; reference. The &lt;code&gt;as&lt;/code&gt; operator explicitly converts the result of an expression to a given reference or nullable value type. If the conversion is not possible, the &lt;code&gt;as&lt;/code&gt; operator returns &lt;code&gt;null&lt;/code&gt;. Unlike a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression&#34;&gt;cast expression&lt;/a&gt;, the &lt;code&gt;as&lt;/code&gt; operator never throws an exception.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;IEnumerable&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; numbers = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[] { &lt;span style=&#34;color:#b452cd&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;20&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;30&lt;/span&gt; };
 IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; indexable = numbers &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;as&lt;/span&gt; IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt;;
 &lt;span style=&#34;color:#228b22&#34;&gt;// numbers is IList&amp;lt;int&amp;gt; ? (IList&amp;lt;int&amp;gt;)(numbers) : (IList&amp;lt;int&amp;gt;)null
@@ -552,11 +569,11 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
     
         <item>
         <title>I am a freshman</title>
-        <link>https://www.openheart.icu/cs/i-am-a-freshman/</link>
+        <link>https://www.openheart.icu/speech/i-am-a-freshman/</link>
         <pubDate>Tue, 01 Dec 2020 09:28:00 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/cs/i-am-a-freshman/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/i-am-a-freshman/ -&lt;h1 id=&#34;step-out-of-my-comfort-zone&#34;&gt;Step out of my comfort zone&lt;/h1&gt;
+        <guid>https://www.openheart.icu/speech/i-am-a-freshman/</guid>
+        <description>42th openheart https://www.openheart.icu/speech/i-am-a-freshman/ -&lt;h1 id=&#34;step-out-of-my-comfort-zone&#34;&gt;Step out of my comfort zone&lt;/h1&gt;
 &lt;h2 id=&#34;sentence&#34;&gt;Sentence&lt;/h2&gt;
 &lt;p&gt;We have a new team member onboard from 1st Dec 2020.&lt;/p&gt;
 &lt;p&gt;Please join me in welcoming Kris to Infor and give them your great support in every way possible!&lt;/p&gt;
@@ -621,10 +638,8 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;Do I paint a correct picture, or do I exaggerate?&lt;/p&gt;
 &lt;p&gt;We mated.&lt;/p&gt;
 &lt;p&gt;Attached is the SQLCMD doc introducing SQLCMD Model In MSSMS Query Editor. I am glad to share SQLCMD with you. It shows me an easy way of changing SQL Server connection in MSSMS. And more commands of SQLCMD is collected. Hope it helps in your work.&lt;/p&gt;
-&lt;p&gt;Suit yourself/it&amp;rsquo;s up to u/I don&amp;rsquo;t care/as u wish/whatever 随便&lt;/p&gt;
-&lt;p&gt;Whatever u think is fine with me&lt;/p&gt;
-&lt;p&gt;Receive the package 收快递，fragile 易碎品，发快递用send&lt;/p&gt;
-&lt;p&gt;Collect the package 取快递，locker 快递柜，快递 express delivery&lt;/p&gt;
+&lt;p&gt;Suit yourself/it&amp;rsquo;s up to u/I don&amp;rsquo;t care/as u wish/whatever. 随便。&lt;/p&gt;
+&lt;p&gt;Whatever u think is fine with me.&lt;/p&gt;
 &lt;p&gt;Okay, if you have been paying attention unlike a couple people, you&amp;rsquo;re going to be very concerned about the size of these page tables.&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s a kind of jaw-dropping.&lt;/p&gt;
 &lt;p&gt;The unstoppable marching of time that is slowly guiding us all towards an inevitable death, it scares me the most.&lt;/p&gt;
@@ -642,7 +657,16 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;How do you walk to me.&lt;/p&gt;
 &lt;p&gt;Like lambs to the slaughter.&lt;/p&gt;
 &lt;p&gt;What a saint you are.&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;e.g.&amp;rdquo; means &amp;ldquo;for example&amp;rdquo;, &amp;ldquo;i.e.&amp;rdquo; means &amp;ldquo;in other words&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;e.g.&amp;rdquo; means &amp;ldquo;for example&amp;rdquo;, &amp;ldquo;i.e.&amp;rdquo; means &amp;ldquo;in other words&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s the memory embedded in me.&lt;/p&gt;
+&lt;p&gt;How about now?&lt;/p&gt;
+&lt;p&gt;Today is my day, whatever I want do.&lt;/p&gt;
+&lt;p&gt;Keep going.&lt;/p&gt;
+&lt;p&gt;I can&amp;rsquo;t wait to be inside you.&lt;/p&gt;
+&lt;p&gt;Call me dirty. Maybe Daddy.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s a good clue.&lt;/p&gt;
+&lt;p&gt;If I&amp;rsquo;m reading this right&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Not sure where we&amp;rsquo;ll land on this one.&lt;/p&gt;
 &lt;h2 id=&#34;phrase&#34;&gt;Phrase&lt;/h2&gt;
 &lt;p&gt;Carbon Copy 副本、抄送，outlook中的&lt;em&gt;cc&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;lead time 交付周期，订货至交货的时间&lt;/p&gt;
@@ -684,7 +708,15 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;Rare 一分熟， Medium rare 三分熟，Medium well 七分熟，Well done 全熟&lt;/p&gt;
 &lt;p&gt;Cook 厨师，Chef 主厨，Absolutely delicious! 好吃&lt;/p&gt;
 &lt;p&gt;nippy and zippy.&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;last mile: （死刑犯从牢房走到刑场的）最后路程&lt;/p&gt;
+&lt;p&gt;Shop floor&lt;/p&gt;
+&lt;p&gt;Receive the package 收快递，fragile 易碎品，发快递用send&lt;/p&gt;
+&lt;p&gt;Collect the package 取快递，locker 快递柜，快递 express delivery&lt;/p&gt;
+&lt;p&gt;Common Sense Series 常识&lt;/p&gt;
+&lt;p&gt;Code of Conduct 行为准则&lt;/p&gt;
+&lt;p&gt;Making Tax Digital, MTD 数字化税收&lt;/p&gt;
+&lt;p&gt;Value-added tax, VAT 增值税&lt;/p&gt;
+&lt;p&gt;Venture capital fund, 风险投资基金; VC, 风投&lt;/p&gt;
 &lt;h2 id=&#34;abbreviation&#34;&gt;Abbreviation&lt;/h2&gt;
 &lt;h3 id=&#34;phrase-1&#34;&gt;Phrase&lt;/h3&gt;
 &lt;p&gt;ASAP, as soon as possible 尽快&lt;/p&gt;
@@ -785,6 +817,7 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;&lt;code&gt;´&lt;/code&gt; acute&lt;/p&gt;
 &lt;p&gt;` grave&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ç&lt;/code&gt; cedilla&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;...&lt;/code&gt; ellipsis&lt;/p&gt;
 &lt;h3 id=&#34;希腊字母表&#34;&gt;希腊字母表&lt;/h3&gt;
 &lt;p&gt;α　Α　alpha /alpha/ h表示送气音，在古希腊语中尚没有音位/f/，所以/pha/的发音类似普通话的“趴”。&lt;/p&gt;
 &lt;p&gt;β　Β　beta /be:ta/ /e:/表示长元音，/e/的发音不是英语D.J.音标里的[e]，而类似K.K.音标里的/e/或者法语的/e/。/t/不送气，所以/ta/类似普通话“搭”而不是“他”。&lt;/p&gt;
@@ -810,7 +843,13 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;χ　Χ　chi /khi:/ c在古代拉丁语里的读音总是为/k/，/kh/为送气音。&lt;/p&gt;
 &lt;p&gt;ψ　Ψ　psi /psi:/&lt;/p&gt;
 &lt;p&gt;ω　Ω　omega /o:me:ga/ /o:/是长音，因为mega表示大的意思，即“大的o”&lt;/p&gt;
-- https://www.openheart.icu/cs/i-am-a-freshman/ - ALL RIGHTS RESERVED KRIS NIE</description>
+&lt;h2 id=&#34;time-zone&#34;&gt;Time Zone&lt;/h2&gt;
+&lt;p&gt;SGT (Singapore, GMT+08:00)&lt;/p&gt;
+&lt;p&gt;IST (Mumbai, GMT+05:30)&lt;/p&gt;
+&lt;p&gt;BST (London, GMT+0100)&lt;/p&gt;
+&lt;p&gt;EDT (New York, GMT-05:00)&lt;/p&gt;
+&lt;p&gt;PDT (San Francisco, GMT-08:00)&lt;/p&gt;
+- https://www.openheart.icu/speech/i-am-a-freshman/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -1225,6 +1264,7 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;h4 id=&#34;the-testing-pyramid&#34;&gt;The testing pyramid&lt;/h4&gt;
 &lt;p&gt;The testing pyramid reminds you of the relative number of tests that you should aim to maintain.&lt;/p&gt;
 &lt;h4 id=&#34;the-testing-quadrant&#34;&gt;The testing quadrant&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://lisacrispin.com/wp-content/uploads/2011/11/Agile-Testing-Quadrants.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The testing quadrant diagram explains that tests can be useful to different stakeholders and for different reasons.&lt;/p&gt;
 &lt;h3 id=&#34;testing-for-prevention-and-cure&#34;&gt;Testing for prevention and cure&lt;/h3&gt;
 &lt;h4 id=&#34;how-do-you-decrease-mttr&#34;&gt;How do you decrease MTTR?&lt;/h4&gt;
@@ -1233,7 +1273,11 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;li&gt;alerting&lt;/li&gt;
 &lt;li&gt;monitoring&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.elastic.co/what-is/elk-stack&#34;&gt;ELK Stack&lt;/a&gt;  集中日志系统&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://lisacrispin.com/2011/11/08/using-the-agile-testing-quadrants/&#34;&gt;Using the Agile Testing Quadrants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.elastic.co/what-is/elk-stack&#34;&gt;ELK Stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;refactoring&#34;&gt;Refactoring&lt;/h2&gt;
 &lt;p&gt;Refactoring is the process of incrementally improving the design of existing code.&lt;/p&gt;
 &lt;p&gt;This is an important point—refactoring changes the &lt;em&gt;arrangement&lt;/em&gt; of the code, not the &lt;em&gt;outcome&lt;/em&gt;.&lt;/p&gt;
@@ -1369,7 +1413,7 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;对于很多业务有一个业务流转状态的，每个状态都有前置状态和后置状态，以及最后的结束状态。例如流程的待审批，审批中，驳回，重新发起，审批通过，审批拒绝。订单的待提交，待支付，已支付，取消。&lt;/p&gt;
 &lt;p&gt;在设计单据相关的业务，或者是任务相关的业务，肯定会涉及到状态机，就是业务单据上面有个状态，状态在不同的情况下会发生变更，一般情况下存在有限状态机，这时候，如果状态机已经处于下一个状态，这时候来了一个上一个状态的变更，理论上是不能够变更的，这样的话，保证了有限状态机的幂等。注意：订单等单据类业务，存在很长的状态流转，一定要深刻理解状态机，对业务系统设计能力提高有很大帮助。&lt;/p&gt;
 &lt;h4 id=&#34;select--insert&#34;&gt;select + insert&lt;/h4&gt;
-&lt;p&gt;并发不高的后台系统，或者一些任务JOB，为了支持幂等，支持重复执行，简单的处理方法是，先查询下一些关键数据，判断是否已经执行过，在进行业务处理，就可以了。注意：核心高并发流程不要用这种方法。&lt;/p&gt;
+&lt;p&gt;并发不高的后台系统，或者一些任务JOB，为了支持幂等，支持重复执行，简单的处理方法是，先查询下一些关键数据，判断是否已经执行过，再进行业务处理，就可以了。注意：核心高并发流程不要用这种方法。&lt;/p&gt;
 &lt;h4 id=&#34;对外提供接口的api如何保证幂等&#34;&gt;对外提供接口的api如何保证幂等&lt;/h4&gt;
 &lt;p&gt;如银联提供的付款接口：需要接入商户提交付款请求时附带：source来源，seq序列号；source+seq在数据库里面做唯一索引，防止多次付款(并发时，只能处理一个请求) 。
 重点：对外提供接口为了支持幂等调用，接口有两个字段必须传，一个是来源source，一个是来源方序列号seq，这个两个字段在提供方系统里面做联合唯一索引，这样当第三方调用时，先在本方系统里面查询一下，是否已经处理过，返回相应处理结果；没有处理过，进行相应处理，返回结果。注意，为了幂等友好，一定要先查询一下，是否处理过该笔业务，不查询直接插入业务系统，会报错，但实际已经处理了。&lt;/p&gt;
@@ -1836,96 +1880,37 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;h2 id=&#34;reference-6&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/office/troubleshoot/excel/copy-formulas-over-large-area&#34;&gt;&amp;ldquo;Not enough memory&amp;rdquo; when you copy formulas over large area in Excel&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-- https://www.openheart.icu/cs/dot-net-issue/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>SQLserver</title>
-        <link>https://www.openheart.icu/cs/sqlserver/</link>
-        <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/sqlserver/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/sqlserver/ -&lt;h1 id=&#34;sqlserver&#34;&gt;SQLserver&lt;/h1&gt;
-&lt;h2 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h2&gt;
-&lt;h3 id=&#34;sqlcmd&#34;&gt;SQLCMD&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sqlcmd -S localhost -d CSI10 -q &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;SELECT * FROM SITE&amp;#34;&lt;/span&gt;
-sqlcmd -S localhost -d CSI10 -Q &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;SELECT * FROM SITE&amp;#34;&lt;/span&gt;
-sqlcmd -S localhost -U SA -Q &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;select @@VERSION&amp;#39;&lt;/span&gt;
-sqlcmd -S localhost
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;optimize&#34;&gt;Optimize&lt;/h2&gt;
-&lt;h3 id=&#34;cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1334012/cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity&#34;&gt;Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF&lt;/a&gt;&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SET&lt;/span&gt; IDENTITY_INSERT Table1 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ON&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;--Do INSERT
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SET&lt;/span&gt; IDENTITY_INSERT Table1 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OFF&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/10204480/sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing&#34;&gt;SQL-Server: The backup set holds a backup of a database other than the existing&lt;/a&gt;&lt;/h3&gt;
+&lt;h1 id=&#34;httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4019466/httplistener-access-denied&#34;&gt;HttpListener Access Denied&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Don&amp;rsquo;t create an empty database and restore the &lt;code&gt;.bak&lt;/code&gt; file on to it.&lt;/li&gt;
-&lt;li&gt;Use &lt;strong&gt;&amp;lsquo;Restore Database&amp;rsquo;&lt;/strong&gt; option accessible by right clicking the &amp;ldquo;Databases&amp;rdquo; branch of the SQL Server Management Studio and provide the database name while providing the source to restore.&lt;/li&gt;
-&lt;li&gt;Also change the file names at &amp;ldquo;Files&amp;rdquo; if the other database still exists. Otherwise you get &amp;ldquo;The file &amp;lsquo;&amp;hellip;&amp;rsquo; cannot be overwritten. It is being used by database &amp;lsquo;yourFirstDb&amp;rsquo;&amp;rdquo;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;netsh http add urlacl &lt;span style=&#34;color:#00688b&#34;&gt;url&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://+:3032/&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt;=everyone
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Documentation is &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/ms733768.aspx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/125457/what-is-the-t-sql-syntax-to-connect-to-another-sql-server&#34;&gt;What is the T-SQL syntax to connect to another SQL Server?&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor?view=sql-server-ver15&#34;&gt;Edit SQLCMD Scripts with Query Editor&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In SQL Server Management Studio, turn on SQLCMD mode from the Query menu. Then at the top of your script, type in the command below&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;:&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;connect&lt;/span&gt; USDB -U sa -P mypassword
-USE [&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;database&lt;/span&gt;]
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; site;
-
-:&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CONNECT&lt;/span&gt; CNDB
-USE [&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;database&lt;/span&gt;]
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; site;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: IntelliSense is turned off in the Database Engine Query Editor when the SQLCMD mode is set on.&lt;/p&gt;
-&lt;h2 id=&#34;enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/5131491/enable-xp-cmdshell-sql-server&#34;&gt;Enable &amp;lsquo;xp_cmdshell&amp;rsquo; SQL Server&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/xp-cmdshell-server-configuration-option?redirectedfrom=MSDN&amp;amp;view=sql-server-ver15&#34;&gt;If you need to enable &lt;strong&gt;xp_cmdshell&lt;/strong&gt;, you can use Policy-Based Managementhttps://docs.microsoft.com/en-us/sql/relational-databases/policy-based-management/administer-servers-by-using-policy-based-management?view=sql-server-ver15 or run the &lt;strong&gt;sp_configure&lt;/strong&gt; system stored procedure as shown in the following code example:&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;-- To allow advanced options to be changed.  
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;EXECUTE&lt;/span&gt; sp_configure &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;show advanced options&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;;  
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;  
-&lt;span style=&#34;color:#228b22&#34;&gt;-- To update the currently configured value for advanced options.  
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;RECONFIGURE;  
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;  
-&lt;span style=&#34;color:#228b22&#34;&gt;-- To enable the feature.  
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;EXECUTE&lt;/span&gt; sp_configure &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;xp_cmdshell&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;;  
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;  
-&lt;span style=&#34;color:#228b22&#34;&gt;-- To update the currently configured value for this feature.  
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;RECONFIGURE;  
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;use-xp_cmdshell-to-print-variables-into-a-file&#34;&gt;Use &amp;lsquo;xp_cmdshell&amp;rsquo; to print variables into a file&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;-- print variables 
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;DECLARE&lt;/span&gt; @cmdtxt &lt;span style=&#34;color:#658b00&#34;&gt;VARCHAR&lt;/span&gt;(&lt;span style=&#34;color:#b452cd&#34;&gt;4000&lt;/span&gt;);
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; @cmdtxt = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;echo &amp;#39;&lt;/span&gt; +&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;@TtPmtpckCurrCode&amp;#39;&lt;/span&gt;+ &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CAST&lt;/span&gt;(@TtPmtpckCurrCode &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;VARCHAR&lt;/span&gt;(&lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;))  + &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;@CurrparmsCurrCode&amp;#39;&lt;/span&gt;+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CAST&lt;/span&gt;(@CurrparmsCurrCode &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;VARCHAR&lt;/span&gt;(&lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;)) +&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39; &amp;gt;&amp;gt; C:\Development\SubFolder\outPut.txt&amp;#39;&lt;/span&gt;;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;exec&lt;/span&gt; master..xp_cmdshell @cmdtxt
-
-&lt;span style=&#34;color:#228b22&#34;&gt;-- use FOR XML to print table-valued variable
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;declare&lt;/span&gt; @rates &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; (
-  curr_code CurrCodeType
-, site_ref SiteType
-, exch_rate ExchRateType
-, rate_is_divisor ListYesNoType
-, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;primary&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;key&lt;/span&gt; (curr_code, site_ref)
-)
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;into&lt;/span&gt; @rates (curr_code, site_ref)
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;distinct&lt;/span&gt; curr_code, site
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; tt_pmtpck
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; tt_pmtpck.ProcessId = @PProcessId
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;and&lt;/span&gt; (tt_pmtpck.exch_rate &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;or&lt;/span&gt; tt_pmtpck.dom_amt_applied &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;or&lt;/span&gt; tt_pmtpck.dom_disc_amt &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-  
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;DECLARE&lt;/span&gt; @xmltmp xml = (&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; rat.curr_code,rat.site_ref,rat.exch_rate,rat.rate_is_divisor &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FROM&lt;/span&gt; @rates &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AS&lt;/span&gt; rat &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FOR&lt;/span&gt; XML AUTO,ELEMENTS XSINIL);
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; @cmdtxt = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;echo &amp;#39;&lt;/span&gt; +&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;@rates &amp;#34;&amp;#39;&lt;/span&gt;+ &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CONVERT&lt;/span&gt;(&lt;span style=&#34;color:#658b00&#34;&gt;VARCHAR&lt;/span&gt;(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;max&lt;/span&gt;),@xmltmp) + &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;&amp;#34; &amp;gt;&amp;gt; C:\Development\SubFolder\outPut.txt&amp;#39;&lt;/span&gt;;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;exec&lt;/span&gt; master..xp_cmdshell @cmdtxt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/sqlserver/ - ALL RIGHTS RESERVED KRIS NIE</description>
+&lt;hr&gt;
+&lt;h1 id=&#34;internalsvisibleto&#34;&gt;internalsvisibleto&lt;/h1&gt;
+&lt;p&gt;To make interal type class/method or other object be visible in Tests project. In this way, we can use those object in our Unit Test.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[assembly: InternalsVisibleTo(&amp;#34;UnitTests&amp;#34;)]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;.csproj:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-XML&#34; data-lang=&#34;XML&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;ItemGroup&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;InternalsVisibleToSuffix&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;Include=&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;.Tests&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;/&amp;gt;&lt;/span&gt; 
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/ItemGroup&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference-7&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=net-5.0&#34;&gt;InternalsVisibleToAttribute Class&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1211707/how-to-access-classes-in-another-assembly-for-unit-testing-purposes&#34;&gt;How to access classes in another assembly for unit-testing purposes?&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;use-fake-method-in-unit-test-to-implement-the-non-mockable-object&#34;&gt;Use Fake Method in Unit Test to implement the non-mockable Object.&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Microsoft Fakes helps you isolate the code you are testing by replacing other parts of the application with &lt;em&gt;stubs&lt;/em&gt; or &lt;em&gt;shims&lt;/em&gt;. These are small pieces of code that are under the control of your tests. By isolating your code for testing, you know that if the test fails, the cause is there and not somewhere else. Stubs and shims also let you test your code even if other parts of your application are not working yet.&lt;/p&gt;
+&lt;p&gt;Fakes come in two flavors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019#get-started-with-stubs&#34;&gt;stub&lt;/a&gt; replaces a class with a small substitute that implements the same interface. To use stubs, you have to design your application so that each component depends only on interfaces, and not on other components. (By &amp;ldquo;component&amp;rdquo; we mean a class or group of classes that are designed and updated together and typically contained in an assembly.)&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019#get-started-with-shims&#34;&gt;shim&lt;/a&gt; modifies the compiled code of your application at run time so that instead of making a specified method call, it runs the shim code that your test provides. Shims can be used to replace calls to assemblies that you cannot modify, such as .NET assemblies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.microsoft.com/en-us/visualstudio/test/media/fakes-2.png?view=vs-2019&#34; alt=&#34;Fakes replace other components&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;reference-8&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019&#34;&gt;Isolate code under test with Microsoft Fakes&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+- https://www.openheart.icu/cs/dot-net-issue/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

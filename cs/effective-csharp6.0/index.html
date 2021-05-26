@@ -156,6 +156,26 @@
             
             
             
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
             <a class="a-block nav-link-item false" href="/about">
                 About
             </a>
@@ -629,6 +649,26 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 
                 
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
                 <a class="a-block drawer-menu-item false" href="/about">
                     About
                 </a>
@@ -1092,7 +1132,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             7 min
                             
-                            20 s.
+                            30 s.
                         
                     </div>
                 </div>
@@ -1184,6 +1224,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </ul>
 <p>Using var also improves a developer’s comprehension of the code. With var, you are not telling the compiler which type you’re creating; the compiler declares the type for you. The compiler examines the compile-time type and infers the type of the local variable based on those declarations.</p>
 <p>At other times, however, overusing var only decreases the readability of your code.</p>
+<p>I recommend explicitly declaring all numeric types (int, float, double, and others) rather than using a var declaration.</p>
 <h3 id="item-2-prefer-readonly-to-const">Item 2: Prefer <code>readonly</code> to <code>const</code></h3>
 <p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly"><code>readonly</code>: runtime constants.</a></p>
 <p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const"><code>const</code>: compile-time constants, slightly faster but far less flexible</a></p>
@@ -1245,7 +1286,7 @@ Console.WriteLine(iBoxed <span style="color:#8b008b;font-weight:bold">is</span> 
   	<span style="color:#228b22">// output 30
 </span><span style="color:#228b22"></span>}
 </code></pre></div><h4 id="as"><code>as</code></h4>
-<p>Notice that the cast version must check <code>null</code> in addition to catching exceptions. <code>null</code> can be converted to any reference type using a cast, but the as operator returns <code>null</code> when used on a <code>null</code> reference. If the conversion is not possible, the <code>as</code> operator returns <code>null</code>. Unlike a <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression">cast expression</a>, the <code>as</code> operator never throws an exception.</p>
+<p>Notice that the cast version must check <code>null</code> in addition to catching exceptions. <code>null</code> can be converted to any reference type using a cast, but the as operator returns <code>null</code> when used on a <code>null</code> reference. The <code>as</code> operator explicitly converts the result of an expression to a given reference or nullable value type. If the conversion is not possible, the <code>as</code> operator returns <code>null</code>. Unlike a <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression">cast expression</a>, the <code>as</code> operator never throws an exception.</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">IEnumerable&lt;<span style="color:#00688b;font-weight:bold">int</span>&gt; numbers = <span style="color:#8b008b;font-weight:bold">new</span>[] { <span style="color:#b452cd">10</span>, <span style="color:#b452cd">20</span>, <span style="color:#b452cd">30</span> };
 IList&lt;<span style="color:#00688b;font-weight:bold">int</span>&gt; indexable = numbers <span style="color:#8b008b;font-weight:bold">as</span> IList&lt;<span style="color:#00688b;font-weight:bold">int</span>&gt;;
 <span style="color:#228b22">// numbers is IList&lt;int&gt; ? (IList&lt;int&gt;)(numbers) : (IList&lt;int&gt;)null
@@ -1384,7 +1425,7 @@ Console.WriteLine(<span style="color:#cd5555">$&#34;The value of pi is {Math.PI}
                 
                 
                 
-                <a class="older-posts" href="https://www.openheart.icu/cs/i-am-a-freshman/">
+                <a class="older-posts" href="https://www.openheart.icu/speech/i-am-a-freshman/">
 			Previous<br>I am a freshman
                 </a>
                 

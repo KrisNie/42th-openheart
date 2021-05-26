@@ -156,6 +156,26 @@
             
             
             
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
             <a class="a-block nav-link-item false" href="/about">
                 About
             </a>
@@ -239,10 +259,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
-						
 						
 							<li>
 								<a href="#heading" onclick="onNavClick(`#heading-nav`)" id="heading-nav">
@@ -381,6 +397,24 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 							<li>
 								<a href="#heading-2" onclick="onNavClick(`#heading-2-nav`)" id="heading-2-nav">
 									@
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading-3" onclick="onNavClick(`#heading-3-nav`)" id="heading-3-nav">
+									!
 								</a>
 							</li>
 						
@@ -455,6 +489,26 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 
                 
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
                 <a class="a-block drawer-menu-item false" href="/about">
                     About
                 </a>
@@ -500,10 +554,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 						
-						
-							
-								<ul class="collapse" data-toggle="collapse">
-							
 						
 						
 							<li>
@@ -643,6 +693,24 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 							<li>
 								<a href="#heading-2" onclick="onNavClick(`#heading-2-nav`)" id="heading-2-nav">
 									@
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading-3" onclick="onNavClick(`#heading-3-nav`)" id="heading-3-nav">
+									!
 								</a>
 							</li>
 						
@@ -754,9 +822,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 <div class="post-body" v-pre>
                 
-                    <h2 id="heading">?</h2>
+                    <h1 id="heading">?</h1>
 <p>There are 4 question marks <code>?</code> used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.</p>
-<h3 id="1-the--operator-since-visual-studio-2003">1) The ?: Operator (since Visual Studio 2003)</h3>
+<h2 id="1-the--operator-since-visual-studio-2003">1) The ?: Operator (since Visual Studio 2003)</h2>
 <p>The format : <code>condition ? first_expression : second_expression;</code></p>
 <p>If <code>condition</code> evaluates to <code>true</code>, <code>first_expression</code> shall be returned, otherwise <code>second_expression</code>.</p>
 <p>Example</p>
@@ -766,7 +834,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 <span style="color:#00688b;font-weight:bold">var</span> status = randomNo % <span style="color:#b452cd">2</span> == <span style="color:#b452cd">0</span> ? <span style="color:#cd5555">&#34;Generated number is an even number.&#34;</span> : <span style="color:#cd5555">&#34;Generated number is an odd number.&#34;</span>;
 Console.WriteLine(randomNo);
 Console.WriteLine(status);
-</code></pre></div><h3 id="2-the-nullable-types-since-visual-studio-2005">2) The Nullable Types (since Visual Studio 2005)</h3>
+</code></pre></div><h2 id="2-the-nullable-types-since-visual-studio-2005">2) The Nullable Types (since Visual Studio 2005)</h2>
 <p>Definition on msdn</p>
 <blockquote>
 <p>Nullable types can represent all the values of an underlying type, and an additional null value.</p>
@@ -780,7 +848,7 @@ Console.WriteLine(isXNull); <span style="color:#228b22">// True
 x = <span style="color:#b452cd">15</span>;
 isXNull = (x == <span style="color:#8b008b;font-weight:bold">null</span>) ? <span style="color:#8b008b;font-weight:bold">true</span>: <span style="color:#8b008b;font-weight:bold">false</span>;
 Console.WriteLine(isXNull); <span style="color:#228b22">// False
-</span></code></pre></div><h3 id="3-the-null-conditional-operators-since-visual-studio-2015">3) The Null-conditional Operators (since Visual Studio 2015)</h3>
+</span></code></pre></div><h2 id="3-the-null-conditional-operators-since-visual-studio-2015">3) The Null-conditional Operators (since Visual Studio 2015)</h2>
 <p>Example of a pretty common mistake</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">void</span> Main() {
  <span style="color:#00688b;font-weight:bold">var</span> student1 = CreateStudent(<span style="color:#cd5555">&#34;Quan&#34;</span>, <span style="color:#b452cd">27</span>);
@@ -798,7 +866,7 @@ Console.WriteLine(isXNull); <span style="color:#228b22">// False
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">var</span> student2 = CreateStudent(<span style="color:#cd5555">&#34;&#34;</span>, <span style="color:#b452cd">27</span>); <span style="color:#228b22">// student2 is null
 </span><span style="color:#228b22"></span>Console.WriteLine(student2?.Name); <span style="color:#228b22">// No more System.NullReferenceException
 </span></code></pre></div><p>What happended? Thanks to the question mark after <code>student2</code>, you are telling C# that <code>student2</code> may be null. If <code>student2</code> is indeed <code>null</code>, C# will not try to access <code>Name</code> anymore, it returns <code>null</code> instead and <code>Console.WriteLine</code>will happily ignore the <code>null</code> value and only add a new line.</p>
-<h3 id="4-the---null-coalescing-operator-operator-since-visual-studio-2005">4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)</h3>
+<h2 id="4-the---null-coalescing-operator-operator-since-visual-studio-2005">4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)</h2>
 <p>This is a special case of the ?: Operator in section 1</p>
 <p>The format : <code>asking_value ?? just_in_case;</code></p>
 <p>if <code>asking_value</code> is <code>null</code>, <code>just_in_case</code> is returned, otherwise <code>asking_value</code>is returned.</p>
@@ -807,12 +875,12 @@ Console.WriteLine(isXNull); <span style="color:#228b22">// False
 </span><span style="color:#228b22"></span><span style="color:#00688b;font-weight:bold">var</span> y = x ?? <span style="color:#b452cd">0</span>; <span style="color:#228b22">// if x is null, set y to 0, otherwise set y = x;
 </span><span style="color:#228b22">// which is essentially the same as
 </span><span style="color:#228b22"></span><span style="color:#00688b;font-weight:bold">var</span> y = (x == <span style="color:#8b008b;font-weight:bold">null</span>) ? <span style="color:#b452cd">0</span> : x;
-</code></pre></div><h3 id="reference">Reference</h3>
+</code></pre></div><h2 id="reference">Reference</h2>
 <p><a href="https://quannt.github.io/programming/c%23/2017/01/07/question-marks-c-sharp.html">Four question marks you should know in C#</a></p>
 <hr>
-<h2 id="heading-1">$</h2>
+<h1 id="heading-1">$</h1>
 <hr>
-<h2 id="heading-2">@</h2>
+<h1 id="heading-2">@</h1>
 <p>The <code>@</code> special character serves as a verbatim identifier. It can be used in the following ways:</p>
 <ol>
 <li>
@@ -886,6 +954,8 @@ Console.WriteLine(s2);
 }
 </code></pre></div></li>
 </ol>
+<hr>
+<h1 id="heading-3">!</h1>
 
                     
                     <HR width="100%" id="EOF">

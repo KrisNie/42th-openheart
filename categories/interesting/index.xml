@@ -27,10 +27,10 @@ Makefile 的静态网站实现 现在有各种各样的静态网站工具，比�
     
     <item>
       <title>Speech</title>
-      <link>https://www.openheart.icu/cs/speech/</link>
+      <link>https://www.openheart.icu/speech/speech/</link>
       <pubDate>Tue, 21 Jul 2020 19:45:28 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/speech/</guid>
+      <guid>https://www.openheart.icu/speech/speech/</guid>
       <description>唯一不适应远程工作的是中层管理人员。
 基层员工对于在家工作感到很高兴，只要把活做好就可以了。高层管理人员只需要对销售和产量数字负责。中层管理人员的不适应在于，他们的职责是直接监控基层员工，最常用的判断方法是通过是否坐在座位上等迹象，来判断工作量和工作是否勤奋。
  &amp;ndash; Hacker news 读者
@@ -53,6 +53,15 @@ Makefile 的静态网站实现 现在有各种各样的静态网站工具，比�
    本站100%无 JavaScript。
  &amp;ndash; swiftbysundell.com
    我希望 JavaScript 程序员、Java 程序员、PHP 程序员、Perl 程序员、Python 程序员、C 程序员、C ++ 程序员、以及其他重要语言的程序员，大家聚在一起开个会，一劳永逸地提出一个大家都遵守的解决方案，我们应该如何处理时间和日期。我厌倦了每个语言都有自己一套处理时间和日期的方法。</description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>https://www.openheart.icu/speech/music/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/speech/music/</guid>
+      <description>Music  La Mia Vita - Ferrari Roma - Official Video  </description>
     </item>
     
   </channel>
