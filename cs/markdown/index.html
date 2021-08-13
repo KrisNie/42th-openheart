@@ -261,8 +261,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%85%ac%e5%bc%8f" onclick="onNavClick(`#公式-nav`)" id="公式-nav">
-									公式
+								<a href="#expressions" onclick="onNavClick(`#expressions-nav`)" id="expressions-nav">
+									Expressions
 								</a>
 							</li>
 						
@@ -641,8 +641,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%ad%97%e4%bd%93" onclick="onNavClick(`#字体-nav`)" id="字体-nav">
-									字体
+								<a href="#font" onclick="onNavClick(`#font-nav`)" id="font-nav">
+									Font
 								</a>
 							</li>
 						
@@ -659,8 +659,26 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%9b%be%e7%89%87" onclick="onNavClick(`#图片-nav`)" id="图片-nav">
-									图片
+								<a href="#image" onclick="onNavClick(`#image-nav`)" id="image-nav">
+									Image
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#diff" onclick="onNavClick(`#diff-nav`)" id="diff-nav">
+									Diff
 								</a>
 							</li>
 						
@@ -803,8 +821,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%85%ac%e5%bc%8f" onclick="onNavClick(`#公式-nav`)" id="公式-nav">
-									公式
+								<a href="#expressions" onclick="onNavClick(`#expressions-nav`)" id="expressions-nav">
+									Expressions
 								</a>
 							</li>
 						
@@ -1183,8 +1201,8 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%ad%97%e4%bd%93" onclick="onNavClick(`#字体-nav`)" id="字体-nav">
-									字体
+								<a href="#font" onclick="onNavClick(`#font-nav`)" id="font-nav">
+									Font
 								</a>
 							</li>
 						
@@ -1201,8 +1219,26 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
-								<a href="#%e5%9b%be%e7%89%87" onclick="onNavClick(`#图片-nav`)" id="图片-nav">
-									图片
+								<a href="#image" onclick="onNavClick(`#image-nav`)" id="image-nav">
+									Image
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#diff" onclick="onNavClick(`#diff-nav`)" id="diff-nav">
+									Diff
 								</a>
 							</li>
 						
@@ -1304,7 +1340,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
                             6 min
                             
-                            6 s.
+                            15 s.
                         
                     </div>
                 </div>
@@ -1314,7 +1350,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 <div class="post-body" v-pre>
                 
-                    <h1 id="公式">公式</h1>
+                    <h1 id="expressions">Expressions</h1>
 <h2 id="公式标记">公式标记</h2>
 <h3 id="行内公式inline">行内公式（inline）</h3>
 <p>eg: $ E=mc^2 $，写法是：<code>$E=mc^2$</code></p>
@@ -1584,7 +1620,7 @@ $$
 <p>叉乘\times</p>
 <p>eg: $\times$</p>
 <hr>
-<h1 id="字体">字体</h1>
+<h1 id="font">Font</h1>
 <ul>
 <li>
 <p>使用<code>\it</code>显示意大利体（公式默认字体）：</p>
@@ -1604,9 +1640,14 @@ $$
 </li>
 </ul>
 <hr>
-<h1 id="图片">图片</h1>
-<p>题注：<!-- raw HTML omitted -->Apple Marina Bay Sands is the first Apple store to sit directly on the water.<!-- raw HTML omitted --></p>
-<hr>
+<h1 id="image">Image</h1>
+<p>Credit line：</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XML" data-lang="XML"><span style="color:#8b008b;font-weight:bold">&lt;center&gt;</span>Apple Marina Bay Sands is the first Apple store to sit directly on the water.<span style="color:#8b008b;font-weight:bold">&lt;/center&gt;</span>
+</code></pre></div><hr>
+<h1 id="diff">Diff</h1>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#a00">-if(v &gt; 100)
+</span><span style="color:#a00"></span><span style="color:#0a0">+if(v &gt; 120)
+</span></code></pre></div><p>代码块的语法类型为<code>diff</code>，在删除行加上 <code>-</code>，在新增行加上 <code>+</code>。</p>
 
                     
                     <HR width="100%" id="EOF">

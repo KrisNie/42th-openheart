@@ -622,9 +622,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            1 min
+                            2 min
                             
-                            53 s.
+                            0 s.
                         
                     </div>
                 </div>
@@ -696,6 +696,7 @@ git reset --hard origin/branch <span style="color:#228b22"># 本地端的修改�
 
 <span style="color:#228b22"># Stash changes</span>
 git stash pop
+git stash list
 
 <span style="color:#228b22"># Operate Commit</span>
 git rebase -i Head~3 <span style="color:#228b22"># it will open a vim for u, i to insert, wq to save</span>
@@ -704,8 +705,11 @@ git rebase -i Head~3 <span style="color:#228b22"># it will open a vim for u, i t
 git remote -v <span style="color:#228b22"># show yoru remote URL</span>
 git remote set-url origin ssh://git@XXX.com/XXX/XXX.git <span style="color:#228b22"># reset your remote URL</span>
 
+git mv -f .<span style="color:#cd5555">\a</span>bc.js  .<span style="color:#cd5555">\A</span>BC.js <span style="color:#228b22"># rename</span>
 
-git mv -f .<span style="color:#cd5555">\a</span>bc.js  .<span style="color:#cd5555">\A</span>BC.js
+git clean -f -d -X <span style="color:#228b22"># remove ignored files, untracked files and directories</span>
+
+git show --pretty=fuller commit_id <span style="color:#228b22"># View Author&amp;Authordate&amp;Commit&amp;CommitDate </span>
 </code></pre></div>
                     
                     <HR width="100%" id="EOF">

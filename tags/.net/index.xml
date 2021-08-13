@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 23 Jan 2021 12:14:19 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Aug 2021 15:57:23 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design Patterns</title>
+      <link>https://www.openheart.icu/cs/design-patterns/</link>
+      <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/design-patterns/</guid>
+      <description>Structural Design Patterns Creational Design Patterns Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.
+Implementing the pattern requires that you provide the following:</description>
+    </item>
+    
     <item>
       <title>CSharp Special Characters</title>
       <link>https://www.openheart.icu/cs/csharp-special-characters/</link>
@@ -31,6 +41,31 @@ Random rnd = new Random(); var randomNo = rnd.Next(); var status = randomNo % 2 
 C # Language Idioms You change tools or languages because you can be more productive.
 Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in the following contexts:
   On local variables (variables declared at method scope).</description>
+    </item>
+    
+    <item>
+      <title>Dot Net Runtime</title>
+      <link>https://www.openheart.icu/cs/dot-net-runtime/</link>
+      <pubDate>Sat, 26 Dec 2020 11:25:57 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/dot-net-runtime/</guid>
+      <description>Source Code Learning for 「Dot Net Runtime」.
+ Microsoft.Extensions.DependencyInjection Branch: release/5.0
+之前使用的都是.NET MVC DI，相对封装较为严重。公司的设计为Composition Root实现MVC中的ConfigureDependencies然后创建BuildServiceProvider。在对方法进行调用前通过IServiceProvider.GetService注入所需类构造函数中的依赖。
+ Dependency injection addresses these problems through:
+ The use of an interface or base class to abstract the dependency implementation. Registration of the dependency in a service container. .NET provides a built-in service container, IServiceProvider. Services are typically registered at the app&amp;rsquo;s start-up, and appended to an IServiceCollection. Once all services are added, you use BuildServiceProvider to create the service container.</description>
+    </item>
+    
+    <item>
+      <title>Unit Test Practice</title>
+      <link>https://www.openheart.icu/cs/unit-test-practice/</link>
+      <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/unit-test-practice/</guid>
+      <description>Unit Test Practice  纸上得来终觉浅，绝知此事要躬行。
+ Shifting Left 所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )
+ Shift Left is a practice intended to find and prevent defects early in the software delivery process. The idea is to improve quality by moving tasks to the left as early in the lifecycle as possible.
+In the traditional software development model, requirements are kept on the left side of the plan, and the delivery and testing requirements on the right.</description>
     </item>
     
     <item>
@@ -75,7 +110,10 @@ Note that run time is not included in this list by default. To change this behav
       <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/csharp-in-depth/</guid>
-      <description>本文为「C# in Depth」(4th edition)学习记录。</description>
+      <description>本文为「C# in Depth」(4th edition)学习记录。
+Part 1 C# in context Survival of the sharpest 本章主要讲C#的由来与介绍（吹嘘）。
+开始前可以回顾一下C#的历史，现在是北京时间2021-05-29 14:06:54，the last C# version is C# 9.
+Reference  The history of C#  Part 2 C# in 2-5 C# 3: LINQ and everything that comes with it Extension methods  Extension methods allow existing classes to be extended without relying on inheritance or having to change the class&amp;rsquo;s source code. This means that if you want to add some methods into the existing String class you can do it quite easily.</description>
     </item>
     
     <item>

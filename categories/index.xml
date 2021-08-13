@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 25 May 2021 23:29:58 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Aug 2021 15:15:57 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technical</title>
+      <link>https://www.openheart.icu/categories/technical/</link>
+      <pubDate>Thu, 12 Aug 2021 15:15:57 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/categories/technical/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Finance</title>
       <link>https://www.openheart.icu/categories/finance/</link>
@@ -27,18 +36,9 @@
     </item>
     
     <item>
-      <title>Technical</title>
-      <link>https://www.openheart.icu/categories/technical/</link>
-      <pubDate>Sat, 23 Jan 2021 12:14:19 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/categories/technical/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>English</title>
       <link>https://www.openheart.icu/categories/english/</link>
-      <pubDate>Tue, 01 Dec 2020 09:28:00 +0000</pubDate>
+      <pubDate>Tue, 01 Dec 2020 16:39:46 +0000</pubDate>
       
       <guid>https://www.openheart.icu/categories/english/</guid>
       <description></description>

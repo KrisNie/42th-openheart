@@ -6,9 +6,100 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 25 May 2021 23:29:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Aug 2021 15:15:57 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Working Effectively with Legacy Code</title>
+        <link>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</link>
+        <pubDate>Thu, 12 Aug 2021 15:15:57 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/working-effectively-with-legacy-code/ -&lt;h1 id=&#34;the-mechanics-of-change&#34;&gt;The Mechanics of Change&lt;/h1&gt;
+&lt;h2 id=&#34;changing-software&#34;&gt;Changing Software&lt;/h2&gt;
+&lt;h3 id=&#34;four-reasons-to-change-software&#34;&gt;Four Reasons to Change Software&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Adding a feature&lt;/li&gt;
+&lt;li&gt;Fixing a bug&lt;/li&gt;
+&lt;li&gt;Improving the design&lt;/li&gt;
+&lt;li&gt;Optimizing resource usage&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;changing-software-1&#34;&gt;Changing Software&lt;/h1&gt;
+&lt;h1 id=&#34;dependency-breaking-techniques&#34;&gt;Dependency-Breaking Techniques&lt;/h1&gt;
+- https://www.openheart.icu/cs/working-effectively-with-legacy-code/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>CS Conferences</title>
+        <link>https://www.openheart.icu/cs/cs-conferences/</link>
+        <pubDate>Mon, 09 Aug 2021 13:43:10 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/cs-conferences/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/cs-conferences/ -&lt;h1 id=&#34;list-of-computer-science-conferenceshttpsenwikipediaorgwikilist_of_computer_science_conferences&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_computer_science_conferences&#34;&gt;List of computer science conferences&lt;/a&gt;&lt;/h1&gt;
+- https://www.openheart.icu/cs/cs-conferences/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Design Patterns</title>
+        <link>https://www.openheart.icu/cs/design-patterns/</link>
+        <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/design-patterns/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/design-patterns/ -&lt;h1 id=&#34;structural-design-patterns&#34;&gt;Structural Design Patterns&lt;/h1&gt;
+&lt;h1 id=&#34;creational-design-patterns&#34;&gt;Creational Design Patterns&lt;/h1&gt;
+&lt;h1 id=&#34;behavioral-design-patterns&#34;&gt;Behavioral Design Patterns&lt;/h1&gt;
+&lt;h2 id=&#34;observer&#34;&gt;Observer&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/e/e2/Observer-pattern-class-diagram.png&#34; alt=&#34;File:Observer-pattern-class-diagram.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.&lt;/p&gt;
+&lt;p&gt;Implementing the pattern requires that you provide the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A provider or subject, which is the object that sends notifications to observers. A provider is a class or structure that implements the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; interface. The provider must implement a single method, &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1.subscribe&#34;&gt;IObservable.Subscribe&lt;/a&gt;, which is called by observers that wish to receive notifications from the provider.&lt;/li&gt;
+&lt;li&gt;An observer, which is an object that receives notifications from a provider. An observer is a class or structure that implements the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; interface. The observer must implement three methods, all of which are called by the provider:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.onnext&#34;&gt;IObserver.OnNext&lt;/a&gt;, which supplies the observer with new or current information.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.onerror&#34;&gt;IObserver.OnError&lt;/a&gt;, which informs the observer that an error has occurred.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.oncompleted&#34;&gt;IObserver.OnCompleted&lt;/a&gt;, which indicates that the provider has finished sending notifications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A mechanism that allows the provider to keep track of observers. Typically, the provider uses a container object, such as a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1&#34;&gt;System.Collections.Generic.List&lt;/a&gt; object, to hold references to the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; implementations that have subscribed to notifications. Using a storage container for this purpose enables the provider to handle zero to an unlimited number of observers. The order in which observers receive notifications is not defined; the provider is free to use any method to determine the order.&lt;/li&gt;
+&lt;li&gt;An &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable&#34;&gt;IDisposable&lt;/a&gt; implementation that enables the provider to remove observers when notification is complete. Observers receive a reference to the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable&#34;&gt;IDisposable&lt;/a&gt; implementation from the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1.subscribe&#34;&gt;Subscribe&lt;/a&gt; method, so they can also call the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose&#34;&gt;IDisposable.Dispose&lt;/a&gt; method to unsubscribe before the provider has finished sending notifications.&lt;/li&gt;
+&lt;li&gt;An object that contains the data that the provider sends to its observers. The type of this object corresponds to the generic type parameter of the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; and &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; interfaces. Although this object can be the same as the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; implementation, most commonly it is a separate type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Implementing the pattern requires that you provide the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A provider or subject, which is the object that sends notifications to observers. A provider is a class or structure that implements the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; interface. The provider must implement a single method, &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1.subscribe&#34;&gt;IObservable.Subscribe&lt;/a&gt;, which is called by observers that wish to receive notifications from the provider.&lt;/li&gt;
+&lt;li&gt;An observer, which is an object that receives notifications from a provider. An observer is a class or structure that implements the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; interface. The observer must implement three methods, all of which are called by the provider:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.onnext&#34;&gt;IObserver.OnNext&lt;/a&gt;, which supplies the observer with new or current information.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.onerror&#34;&gt;IObserver.OnError&lt;/a&gt;, which informs the observer that an error has occurred.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.oncompleted&#34;&gt;IObserver.OnCompleted&lt;/a&gt;, which indicates that the provider has finished sending notifications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A mechanism(&lt;em&gt;方法&lt;/em&gt;) that allows the provider to keep track of observers. Typically, the provider uses a container object, such as a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1&#34;&gt;System.Collections.Generic.List&lt;/a&gt; object, to hold references to the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; implementations that have subscribed to notifications. Using a storage container for this purpose enables the provider to handle zero to an unlimited number of observers. The order in which observers receive notifications is not defined; the provider is free to use any method to determine the order.&lt;/li&gt;
+&lt;li&gt;An &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable&#34;&gt;IDisposable&lt;/a&gt; implementation that enables the provider to remove observers when notification is complete. Observers receive a reference to the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable&#34;&gt;IDisposable&lt;/a&gt; implementation from the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1.subscribe&#34;&gt;Subscribe&lt;/a&gt; method, so they can also call the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose&#34;&gt;IDisposable.Dispose&lt;/a&gt; method to unsubscribe before the provider has finished sending notifications.&lt;/li&gt;
+&lt;li&gt;An object that contains the data that the provider sends to its observers. The type of this object corresponds to the generic type parameter of the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; and &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; interfaces. Although this object can be the same as the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; implementation, most commonly it is a separate type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.runoob.com/design-pattern/observer-pattern.html&#34;&gt;观察者模式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://refactoring.guru/design-patterns/observer&#34;&gt;Observer - guru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Observer_pattern&#34;&gt;Observer pattern - Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/events/observer-design-pattern&#34;&gt;Observer Design Pattern - MSDN&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+- https://www.openheart.icu/cs/design-patterns/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -18,9 +109,30 @@
         <pubDate>Tue, 25 May 2021 23:29:58 +0000</pubDate>
         
         <guid>https://www.openheart.icu/finance/economicsfinancemanagement/</guid>
-        <description>42th openheart https://www.openheart.icu/finance/economicsfinancemanagement/ -&lt;h1 id=&#34;economics&#34;&gt;Economics&lt;/h1&gt;
-&lt;h1 id=&#34;finance&#34;&gt;Finance&lt;/h1&gt;
-&lt;h1 id=&#34;management&#34;&gt;Management&lt;/h1&gt;
+        <description>42th openheart https://www.openheart.icu/finance/economicsfinancemanagement/ -&lt;h1 id=&#34;如何区分并界定经济学金融学与管理学&#34;&gt;如何区分并界定经济学、金融学与管理学？&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这24份期刊涵盖了6大领域：会计(Accounting)、金融(Finance)、IS(Information System)、营销(Marketing)、运营(Operation)和管理(Management)，除了Management Science是一份集合刊物，其他各份刊物都能对号入座&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/v2-c15b2a92974141515f1198c23e784b04_r.jpg?source=1940ef5c&#34; alt=&#34;preview&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;economics&#34;&gt;Economics&lt;/h2&gt;
+&lt;p&gt;经济学是针对人类经济活动、经济关系以及经济规律的社会科学，所谓经济活动，是指将有限或者稀缺资源进行合理配置的行为。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;微观经济&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;宏观经济&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;finance&#34;&gt;Finance&lt;/h2&gt;
+&lt;p&gt;金融学是将“货币资金”视作这个“有限或者稀缺资源”来进行深入研究，是经济学在货币领域的深化和细化。通俗讲，是研究怎么赚钱，通过什么方式赚钱的学科，研究个人、组织和公司等在一段时间内如何有效地筹集，分配和利用资金，是研究资金融通的学科。金融的具体内容有货币、证券、银行、保险、资本市场、衍生证券、投资理财等等。&lt;/p&gt;
+&lt;h2 id=&#34;management&#34;&gt;Management&lt;/h2&gt;
+&lt;p&gt;财务会计属于管理学。&lt;/p&gt;
+&lt;p&gt;The Logics of Management 管理逻辑学&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/26976012&#34;&gt;商学、经济学、金融学与管理学有哪些相似与不同之处，如何具体区分？&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 - https://www.openheart.icu/finance/economicsfinancemanagement/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -299,6 +411,41 @@ Console.WriteLine(s2);
     
     
         <item>
+        <title>Win Operation</title>
+        <link>https://www.openheart.icu/cs/windows/</link>
+        <pubDate>Tue, 12 Jan 2021 11:47:28 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/windows/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/windows/ -&lt;h1 id=&#34;windows-terminal&#34;&gt;Windows Terminal&lt;/h1&gt;
+&lt;h2 id=&#34;oh-my-posh&#34;&gt;oh-my-posh&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; oh-my-posh -Scope CurrentUser -AllowPrerelease
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;psreadline&#34;&gt;PSReadLine&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/PowerShell/PSReadLine&#34;&gt;PowerShell/PSReadLine&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; PSReadLine -AllowPrerelease -Force
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;notepad $profile&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Import-Module&lt;/span&gt; PSReadLine
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineOption&lt;/span&gt; -PredictionSource &lt;span style=&#34;color:#658b00&#34;&gt;History
+&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 下面是三条是文档里推荐的，根据自己的习惯决定是否添加&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key UpArrow -Function HistorySearchBackward
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key DownArrow -Function HistorySearchForward
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key Tab -Function Complete
+&lt;span style=&#34;color:#228b22&#34;&gt;# Hot-Key&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Ctrl+g&amp;#34;&lt;/span&gt; -Function MenuComplete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;posh-git&#34;&gt;posh-git&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/dahlbyk/posh-git&#34;&gt;dahlbyk/posh-git&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; posh-git -Scope CurrentUser -AllowPrerelease -Force
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Import-Module&lt;/span&gt; posh-git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;scoop&#34;&gt;Scoop&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;iwr -useb get.scoop.sh | iex
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;command&#34;&gt;Command&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;net share &lt;span style=&#34;color:#228b22&#34;&gt;# view your pc&amp;#39;s share folder&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/windows/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
         <title>Effective CSharp</title>
         <link>https://www.openheart.icu/cs/effective-csharp6.0/</link>
         <pubDate>Sat, 09 Jan 2021 16:22:42 +0000</pubDate>
@@ -568,12 +715,83 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
     
     
         <item>
+        <title>Dot Net Runtime</title>
+        <link>https://www.openheart.icu/cs/dot-net-runtime/</link>
+        <pubDate>Sat, 26 Dec 2020 11:25:57 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/dot-net-runtime/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/dot-net-runtime/ -&lt;hr&gt;
+&lt;p&gt;Source Code Learning for 「&lt;a href=&#34;https://github.com/dotnet/runtime&#34;&gt;&lt;em&gt;Dot Net Runtime&lt;/em&gt;&lt;/a&gt;」.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;microsoftextensionsdependencyinjection&#34;&gt;Microsoft.Extensions.DependencyInjection&lt;/h1&gt;
+&lt;p&gt;Branch: &lt;a href=&#34;release/5.0&#34;&gt;release/5.0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之前使用的都是.NET MVC DI，相对封装较为严重。公司的设计为Composition Root实现MVC中的ConfigureDependencies然后创建BuildServiceProvider。在对方法进行调用前通过IServiceProvider.GetService注入所需类构造函数中的依赖。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dependency injection addresses these problems through:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The use of an interface or base class to abstract the dependency implementation.&lt;/li&gt;
+&lt;li&gt;Registration of the dependency in a service container. .NET provides a built-in service container, &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iserviceprovider&#34;&gt;IServiceProvider&lt;/a&gt;. Services are typically registered at the app&amp;rsquo;s start-up, and appended to an &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection&#34;&gt;IServiceCollection&lt;/a&gt;. Once all services are added, you use &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.servicecollectioncontainerbuilderextensions.buildserviceprovider&#34;&gt;BuildServiceProvider&lt;/a&gt; to create the service container.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Injection&lt;/em&gt; of the service into the constructor of the class where it&amp;rsquo;s used. The framework takes on the responsibility of creating an instance of the dependency and disposing of it when it&amp;rsquo;s no longer needed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Microsoft.Extensions.DependencyInjection 命名空间下还有Microsoft.Extensions.DependencyInjection.Abstractions，是Service相关的interface与Extensions。&lt;/p&gt;
+&lt;h2 id=&#34;servicedescriptor&#34;&gt;ServiceDescriptor&lt;/h2&gt;
+&lt;p&gt;ServiceDescriptor 的包含的属性如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ServiceLifetime Lifetime { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Type ServiceType { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+&lt;span style=&#34;color:#658b00&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)]&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Type? ImplementationType { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object?&lt;/span&gt; ImplementationInstance { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Func&amp;lt;IServiceProvider, &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt;&amp;gt;? ImplementationFactory { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一般，在register services的时候，使用ServiceType和ImplementationType来构造一个ServiceDescriptor ，&lt;/p&gt;
+&lt;h2 id=&#34;servicecollection&#34;&gt;ServiceCollection&lt;/h2&gt;
+&lt;p&gt;IServiceCollection是ServiceDescriptor的Ilist接口。&lt;/p&gt;
+&lt;p&gt;很显然，ServiceDescriptor就是register的每一个service，ServiceCollection必然是对Ilist接口的常规方法实现。register services的方法（AddTransient/AddScoped/AddSingletonAdd）都由ServiceCollectionServiceExtensions实现，而其他部分方法（Add/TryAdd/TryAddTransient/TryAddScoped/TryAddSingleton/TryAddEnumerable/Replace/RemoveAll）由ServiceCollectionDescriptorExtensions（为ServiceCollection的Extension）实现。&lt;/p&gt;
+&lt;h2 id=&#34;buildserviceprovider&#34;&gt;BuildServiceProvider&lt;/h2&gt;
+&lt;p&gt;BuildServiceProvider方法也是IServiceCollection的扩展，其有三个重载，最终是要创建ServiceProvider的实例。&lt;/p&gt;
+&lt;p&gt;BuildServiceProvider的三个重载分别参数为空、一个布尔类型的validateScopes、一个ServiceProviderOptions；其实如果参数为空，实际是创建一个Default的ServiceProviderOptions（ValidateScopes与ValidateOnBuild均为false）；传递布尔类型的validateScopes后，会根据此值创建对应的ServiceProviderOptions（ValidateOnBuild为false）。&lt;/p&gt;
+&lt;p&gt;BuildServiceProvider最终是构造一个ServiceProvider，出去上面提到的ServiceProviderOptions与ServiceCollection本身之外，ServiceProvider的构造函数还需要IServiceProviderEngine。&lt;/p&gt;
+&lt;h2 id=&#34;serviceprovider&#34;&gt;ServiceProvider&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;namespace&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;Microsoft.Extensions.DependencyInjection&lt;/span&gt;
+{
+    &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;summary&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;/// The default IServiceProvider.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;/summary&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;sealed&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;ServiceProvider&lt;/span&gt; : IServiceProvider, IDisposable, IServiceProviderEngineCallback, IAsyncDisposable
+    {
+    	&lt;span style=&#34;color:#228b22&#34;&gt;//...
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ServiceProvider实现了IServiceProvider（System.ComponentModel）、IDisposable、IServiceProviderEngineCallback（Microsoft.Extensions.DependencyInjection.ServiceLookup）和IAsyncDisposable。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;microsoftextensionsdependencyinjectionservicelookup&#34;&gt;Microsoft.Extensions.DependencyInjection.ServiceLookup&lt;/h1&gt;
+&lt;h2 id=&#34;iserviceproviderengine&#34;&gt;IServiceProviderEngine&lt;/h2&gt;
+&lt;p&gt;DynamicServiceProviderEngine/RuntimeServiceProviderEngine/ExpressionsServiceProviderEngine/ILEmitServiceProviderEngine都去继承了ServiceProviderEngine（抽象类），并重写了RealizeService方法。&lt;/p&gt;
+&lt;h2 id=&#34;callsitevalidator&#34;&gt;CallSiteValidator&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;systemdiagnostics&#34;&gt;System.Diagnostics&lt;/h1&gt;
+&lt;h2 id=&#34;debuggerdisplayattribute&#34;&gt;DebuggerDisplayAttribute&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;systemdiagnosticscodeanalysis&#34;&gt;System.Diagnostics.CodeAnalysis&lt;/h1&gt;
+&lt;h2 id=&#34;dynamicallyaccessedmembersattribute&#34;&gt;DynamicallyAccessedMembersAttribute&lt;/h2&gt;
+&lt;h2 id=&#34;dynamicallyaccessedmembertypes&#34;&gt;DynamicallyAccessedMemberTypes&lt;/h2&gt;
+- https://www.openheart.icu/cs/dot-net-runtime/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
         <title>I am a freshman</title>
         <link>https://www.openheart.icu/speech/i-am-a-freshman/</link>
-        <pubDate>Tue, 01 Dec 2020 09:28:00 +0000</pubDate>
+        <pubDate>Tue, 01 Dec 2020 16:39:46 +0000</pubDate>
         
         <guid>https://www.openheart.icu/speech/i-am-a-freshman/</guid>
         <description>42th openheart https://www.openheart.icu/speech/i-am-a-freshman/ -&lt;h1 id=&#34;step-out-of-my-comfort-zone&#34;&gt;Step out of my comfort zone&lt;/h1&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;sentence&#34;&gt;Sentence&lt;/h2&gt;
 &lt;p&gt;We have a new team member onboard from 1st Dec 2020.&lt;/p&gt;
 &lt;p&gt;Please join me in welcoming Kris to Infor and give them your great support in every way possible!&lt;/p&gt;
@@ -598,7 +816,6 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;This is a final session for the Probation Review meeting.&lt;/p&gt;
 &lt;p&gt;You can list all the things that you have completed or you have concerned with in the week and your plan for the next week.&lt;/p&gt;
 &lt;p&gt;Any other topics are welcome to be listed in your update too.&lt;/p&gt;
-&lt;p&gt;Of course! I will submit weekly report to you every Friday.&lt;/p&gt;
 &lt;p&gt;The things that I have completed and my simple plan as shown in the table below. Attached please find the excel file. I will be very grateful if you can help me improve my study planning.&lt;/p&gt;
 &lt;p&gt;Enter up to 20 characters. 最多输入20个字符&lt;/p&gt;
 &lt;p&gt;If you have already done it, please ignore the email. Otherwise, please follow below steps to update your MFS settings.&lt;/p&gt;
@@ -667,6 +884,25 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;That&amp;rsquo;s a good clue.&lt;/p&gt;
 &lt;p&gt;If I&amp;rsquo;m reading this right&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Not sure where we&amp;rsquo;ll land on this one.&lt;/p&gt;
+&lt;p&gt;There is nothing more expensive than something free.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll correct my CMD command and prevent it from happening again.&lt;/p&gt;
+&lt;p&gt;Thanks for your kind reminder.&lt;/p&gt;
+&lt;p&gt;Thanks for your reminding me of the meeting.&lt;/p&gt;
+&lt;p&gt;The process is fluid and changes are expected before it is rolled out to customers.&lt;/p&gt;
+&lt;p&gt;Feedback is expected and encouraged.&lt;/p&gt;
+&lt;p&gt;It can be reopened if found to still be an issue.&lt;/p&gt;
+&lt;p&gt;I hope this letter finds you well.&lt;/p&gt;
+&lt;p&gt;Every second you&amp;rsquo;re not running, I&amp;rsquo;m only getting closer.&lt;/p&gt;
+&lt;p&gt;I have no sight into her heart.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve heard it said that Daisy&amp;rsquo;s murmur was only to make people lean toward her.&lt;/p&gt;
+&lt;p&gt;A sort of apology arose to my lips.&lt;/p&gt;
+&lt;p&gt;I enjoyed looking at her.&lt;/p&gt;
+&lt;p&gt;It occurred to me now that I had seen her, or a picture of her, somewhere before.&lt;/p&gt;
+&lt;p&gt;As though he were moving a checker to another square.&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;I hate that word hulking, &#39; objected Tom crossly, &amp;lsquo;even in kidding. &#39;&lt;/p&gt;
+&lt;p&gt;Why the agression? Is this your time of the month?&lt;/p&gt;
+&lt;p&gt;framing her in narcotic related crimes.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;phrase&#34;&gt;Phrase&lt;/h2&gt;
 &lt;p&gt;Carbon Copy 副本、抄送，outlook中的&lt;em&gt;cc&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;lead time 交付周期，订货至交货的时间&lt;/p&gt;
@@ -717,6 +953,24 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;Making Tax Digital, MTD 数字化税收&lt;/p&gt;
 &lt;p&gt;Value-added tax, VAT 增值税&lt;/p&gt;
 &lt;p&gt;Venture capital fund, 风险投资基金; VC, 风投&lt;/p&gt;
+&lt;p&gt;take note of&lt;/p&gt;
+&lt;p&gt;may I have a look at/on&lt;/p&gt;
+&lt;p&gt;Drastic measures 强硬措施&lt;/p&gt;
+&lt;p&gt;Plastic surgery 整形外科&lt;/p&gt;
+&lt;p&gt;Haute couture 高级定制&lt;/p&gt;
+&lt;p&gt;Mass market 大众市场&lt;/p&gt;
+&lt;p&gt;Menswear 男装&lt;/p&gt;
+&lt;p&gt;Womenswear 女装&lt;/p&gt;
+&lt;p&gt;Spring/summer 春夏&lt;/p&gt;
+&lt;p&gt;Autumn/winter 秋冬&lt;/p&gt;
+&lt;p&gt;Fall/winter 秋冬&lt;/p&gt;
+&lt;p&gt;Ready-to-wear （RTW）高级成衣&lt;/p&gt;
+&lt;p&gt;Resort 早春度假&lt;/p&gt;
+&lt;p&gt;Pre-Fall 早秋&lt;/p&gt;
+&lt;p&gt;Spring-couture 春季高定&lt;/p&gt;
+&lt;p&gt;Fall-couture 秋季高定&lt;/p&gt;
+&lt;p&gt;Bridal 婚礼系列&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;abbreviation&#34;&gt;Abbreviation&lt;/h2&gt;
 &lt;h3 id=&#34;phrase-1&#34;&gt;Phrase&lt;/h3&gt;
 &lt;p&gt;ASAP, as soon as possible 尽快&lt;/p&gt;
@@ -762,6 +1016,9 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;WIIFM, what’s in it for me 这对我有什么好处&lt;/p&gt;
 &lt;p&gt;WOM, word of mouth 口碑传播&lt;/p&gt;
 &lt;p&gt;YTD, year to date 年底、今年之內&lt;/p&gt;
+&lt;p&gt;POC, &lt;a href=&#34;https://en.wikipedia.org/wiki/Proof_of_concept&#34;&gt;Proof of concept&lt;/a&gt; 概念证明&lt;/p&gt;
+&lt;p&gt;E12, Early Offer Year 12 education&lt;/p&gt;
+&lt;p&gt;ACM, Association for Computing Machinery 计算机协会&lt;/p&gt;
 &lt;h3 id=&#34;title-and-department-name&#34;&gt;Title and department name&lt;/h3&gt;
 &lt;p&gt;CDO, chief data officer&lt;/p&gt;
 &lt;p&gt;CEO, chief executive officer&lt;/p&gt;
@@ -781,6 +1038,7 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;R&amp;amp;D, research and development 研发&lt;/p&gt;
 &lt;p&gt;SVP, Senior Vice President 高级副总裁&lt;/p&gt;
 &lt;p&gt;President of Products 产品总裁&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;mark&#34;&gt;Mark&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;!&lt;/code&gt; 叹号 exclamation mark/bang&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;?&lt;/code&gt; 问号 question mark&lt;/p&gt;
@@ -843,6 +1101,7 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;χ　Χ　chi /khi:/ c在古代拉丁语里的读音总是为/k/，/kh/为送气音。&lt;/p&gt;
 &lt;p&gt;ψ　Ψ　psi /psi:/&lt;/p&gt;
 &lt;p&gt;ω　Ω　omega /o:me:ga/ /o:/是长音，因为mega表示大的意思，即“大的o”&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;time-zone&#34;&gt;Time Zone&lt;/h2&gt;
 &lt;p&gt;SGT (Singapore, GMT+08:00)&lt;/p&gt;
 &lt;p&gt;IST (Mumbai, GMT+05:30)&lt;/p&gt;
@@ -850,1067 +1109,6 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;EDT (New York, GMT-05:00)&lt;/p&gt;
 &lt;p&gt;PDT (San Francisco, GMT-08:00)&lt;/p&gt;
 - https://www.openheart.icu/speech/i-am-a-freshman/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Adaptive Code</title>
-        <link>https://www.openheart.icu/cs/adaptive-code/</link>
-        <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/adaptive-code/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/adaptive-code/ -&lt;h1 id=&#34;adaptive-code-agile-coding-with-design-patterns-and-solid-principleshttpsgithubcomadaptivecode&#34;&gt;&lt;a href=&#34;https://github.com/AdaptiveCode&#34;&gt;Adaptive Code: Agile coding with design patterns and SOLID principles&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;从标题中就不难发现，Adaptive Code的重点有三个：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;敏捷编码&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;设计模式&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;SOLID(单一功能、开闭原则、里氏替换、接口隔离以及依赖反转)原则&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;scrum&#34;&gt;Scrum&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.scrum.org/resources/what-is-scrum&#34;&gt;scrum.org&lt;/a&gt;  2020-Scrum-Guide-US&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Scrum is:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Lightweight&lt;/li&gt;
-&lt;li&gt;Simple to understand&lt;/li&gt;
-&lt;li&gt;Difficult to master&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;what&#34;&gt;What&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;All work is prioritized on the product backlog and, at the start of each sprint, the development team commits to the work that they will complete during the new iteration by placing it on the sprint backlog. The unit of work within Scrum is the &lt;strong&gt;story&lt;/strong&gt;. The product backlog is a prioritized queue of pending stories, and each sprint is defined by the stories that will be developed during an iteration.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;之前公司也是采用的这种开发框架，将一个项目分为多个迭代（sprint），但是此处引出了一个之前没听过的story。Story在后续Hierarchy of composition中也提到并详细介绍，此处的story可以就相当于是产品积压项，Story下可以有确定的Task（一个Story需要多个人完成，每个人都有自己的任务）。&lt;/p&gt;
-&lt;h4 id=&#34;agile-software-development-敏捷软件开发与scrum&#34;&gt;Agile software development (敏捷软件开发)与Scrum&lt;/h4&gt;
-&lt;p&gt;Scrum is one of the most common implementations of an Agile process.&lt;/p&gt;
-&lt;h4 id=&#34;roles-and-responsibilities&#34;&gt;Roles and responsibilities&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Product owner&lt;/strong&gt;(PO, provides the link between the client or customer and the rest of the development team, &lt;strong&gt;what is to be done&lt;/strong&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Scrum master&lt;/strong&gt;(SM, shields the team from any external distractions during the sprint and tackles any of the impediments that the team flags during the daily Scrum meeting, &lt;strong&gt;how it is to be done&lt;/strong&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Development team&lt;/strong&gt;(generalizing specialists)&lt;/p&gt;
-&lt;h4 id=&#34;the-scrum-board&#34;&gt;The Scrum board&lt;/h4&gt;
-&lt;p&gt;Physical Scrum boards/Digital Scrum boards.&lt;/p&gt;
-&lt;h4 id=&#34;sprint-burndown-chart&#34;&gt;Sprint burndown chart&lt;/h4&gt;
-&lt;p&gt;closely to the path of perfection.&lt;/p&gt;
-&lt;h4 id=&#34;product-backlog&#34;&gt;Product backlog&lt;/h4&gt;
-&lt;p&gt;产品积压项，对应产品的新feature。&lt;/p&gt;
-&lt;h4 id=&#34;sprint-planning&#34;&gt;Sprint planning&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Avoiding Parkinson’s Law&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Parkinson’s Law states: “Work expands so as to fill the time available for its completion.” —Cyril Northcote Parkinson&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://wiki.mbalib.com/wiki/%E5%B8%95%E9%87%91%E6%A3%AE%E5%AE%9A%E5%BE%8B&#34;&gt;帕金森定律&lt;/a&gt;是指企业在发展过程中往往会因业务的扩展或其他原因而出现的一种现象，这一效应使得企业的机构迅速膨胀资源浪费员工积极性下降。&lt;/p&gt;
-&lt;p&gt;The focus should remain on completing the story—that is, on meeting the definition of done—as quickly as possible.&lt;/p&gt;
-&lt;p&gt;Affinity estimation &lt;strong&gt;合理&lt;/strong&gt;的工时分配（取决于对项目业务、研发人员的能力的了解程度，以及对其他突发情况的风险应对计划）&lt;/p&gt;
-&lt;p&gt;从大到小排序所有的stories，然后从小到大开始。&lt;/p&gt;
-&lt;h4 id=&#34;stand-up-meeting&#34;&gt;Stand-up meeting&lt;/h4&gt;
-&lt;p&gt;死亡询问What did you do yesterday? What will you do today? What impediments do you face?&lt;/p&gt;
-&lt;h3 id=&#34;why&#34;&gt;Why&lt;/h3&gt;
-&lt;h4 id=&#34;cynefin-framework&#34;&gt;Cynefin framework&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lean, or Agile, approaches to software acknowledge that the problem of software delivery is at least complicated and can even be complex.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;敏捷开发或精益求精的软件，才能保证在Cynefin的第一或第二象限，避免进入Chaos或者all is not quite as it seems(一切都不尽如人意)的Obvious。我的理解是，Chaos就是毫无头绪；而Obvious就是传统的瀑布式开发，难以&lt;strong&gt;适应复杂的需求或者频繁的需求变更&lt;/strong&gt;。&lt;/p&gt;
-&lt;h4 id=&#34;scrum-versus-waterfall&#34;&gt;Scrum versus waterfall&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;waterfall&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the output from one stage becomes the input to the next&lt;/li&gt;
-&lt;li&gt;each phase is completed before moving to the next phase&lt;/li&gt;
-&lt;li&gt;no errors, issues, problems, or m standings are discovered after a phase has completed&lt;/li&gt;
-&lt;li&gt;document-centric, generating a lot of documentation that does not directly improve the software product&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Agile processes：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;welcomes change and allows everyone to adapt to the changes that will occur&lt;/li&gt;
-&lt;li&gt;This is not to say that documentation is unimportant or that Agile processes never produce documentation(living documents, such as wikis)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;shortcoming&#34;&gt;Shortcoming&lt;/h4&gt;
-&lt;h3 id=&#34;how&#34;&gt;How&lt;/h3&gt;
-&lt;p&gt;本章开始就提出如下问题：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Given that Agile frameworks are now prevalent, how can you ensure that the code you write enables and complements your development framework?&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这肯定也是我们所关注的重中之重。&lt;/p&gt;
-&lt;p&gt;敏捷开发流程之外还需要注意的问题：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Rigidity&lt;/li&gt;
-&lt;li&gt;Lack of abstractions&lt;/li&gt;
-&lt;li&gt;Too many abstractions&lt;/li&gt;
-&lt;li&gt;Mixed responsibilities&lt;/li&gt;
-&lt;li&gt;Untestability&lt;/li&gt;
-&lt;li&gt;Skyhooks vs. cranes(All skyhooks should be replaced with appropriate cranes.)
-&lt;ul&gt;
-&lt;li&gt;Skyhooks:
-&lt;ul&gt;
-&lt;li&gt;Static methods&lt;/li&gt;
-&lt;li&gt;Static classes (including singletons)&lt;/li&gt;
-&lt;li&gt;Object construction that uses new&lt;/li&gt;
-&lt;li&gt;Extension methods&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Cranes:
-&lt;ul&gt;
-&lt;li&gt;Interfaces&lt;/li&gt;
-&lt;li&gt;Dependency injection&lt;/li&gt;
-&lt;li&gt;Inversion of control&lt;/li&gt;
-&lt;li&gt;Factories&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Metrics&lt;/li&gt;
-&lt;li&gt;Unit test coverage&lt;/li&gt;
-&lt;li&gt;Cyclomatic complexity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;kanban&#34;&gt;Kanban&lt;/h2&gt;
-&lt;p&gt;Kanban is a very &lt;strong&gt;simple&lt;/strong&gt; process &lt;strong&gt;with minimal rules&lt;/strong&gt; and a &lt;strong&gt;handful&lt;/strong&gt; of general guidelines.&lt;/p&gt;
-&lt;p&gt;看板是一个非常简单的过程，具有最少的规则和一些通用准则。&lt;/p&gt;
-&lt;p&gt;看板常被用来指代流程本身。简单的看板可以包含only a high-level process(SIPOC模型？，Supplier Input Process Output Customer)：To Do, Doing, and Done(the states map, 类似个人的timesheet，正因为看板的简单通用小到个人大到集体都可以使用)。当然也可以定义许多的规则严格把控整个软件的流程（Analyze/Implement/Verify/Deliver）&lt;/p&gt;
-&lt;p&gt;The popular online work-tracking software : &lt;a href=&#34;https://trello.com/&#34;&gt;Trello&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;limiting-work-in-progress&#34;&gt;Limiting work in progress&lt;/h3&gt;
-&lt;p&gt;用来避免流程中受到需求变更的影响  right-sizing work(Imaportant)&lt;/p&gt;
-&lt;h3 id=&#34;event-driven-ceremoniesmeeting&#34;&gt;Event-driven ceremonies(meeting)&lt;/h3&gt;
-&lt;p&gt;避免频繁甚至意义不大的会议打断研发的思路&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;You would never have been precisely accurate.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;classes-of-servicepriority&#34;&gt;Classes of service(priority)&lt;/h3&gt;
-&lt;p&gt;当工作具有不同的风险特征时，使用Classes of service使团队能够确定紧急性或重要性很高的工作，并在必要时将精力集中在那里。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;service level agreements (SLAs) 服务级别协议&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;第95个百分位(95th percentile) 指的是所给数集中超过其95%的数，95th百分点是统计时所采用的最高值，超过的5%的数据将被舍弃。百分位数的意义就在于，我们可以了解到某一个样本在整个样本集合中所处的位置或者某一个样本组的值大概是怎么样分布的。计算百分位数的方法：
-&lt;ul&gt;
-&lt;li&gt;最近序数方法（The Nearest Rank method）n = ((p / 100) * N) eg.p=95 N=20 n=19 则20个序列中第19个为95th percentile&lt;/li&gt;
-&lt;li&gt;在最近序数间线性插值的方法（The Linear Interpolation Between Closest Ranks method）&lt;/li&gt;
-&lt;li&gt;权重百分位数方法（The Weighted Percentile method）&lt;/li&gt;
-&lt;li&gt;微软excel表格算法（Microsoft Excel method）&lt;/li&gt;
-&lt;li&gt;NIST方法（NIST method）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;class WIP limits. 限制使用的典型例子就是重构，并根据工作量大小调整。如果重构的工作量大，则设定高限制（宽松eg.整个限制的75%）；相反则低限制（紧张eg.整个限制的25%）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;People as a class of service 开发人员也可以进行灵活的分配，比如通过看板的SLA和95th percentile得知项目中的前端工作确实很高时，可以重新分配足够的前端研发到项目中加速任务的完成。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;analysis&#34;&gt;Analysis&lt;/h3&gt;
-&lt;h4 id=&#34;lead-time--cycle-time&#34;&gt;Lead time &amp;amp; Cycle time&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Cycle time = Time spent in progress&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Lead time = Time spent waiting in backlog + cycle time&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Lead time measures the time elapsed between order and delivery, thus it measures your production process from your customer’s perspective. Cycle time starts when the actual work begins on the unit and ends when it is ready for delivery.&lt;/p&gt;
-&lt;p&gt;In other words, cycle time measures the completion rate and lead time measures the arrival rate.&lt;/p&gt;
-&lt;h4 id=&#34;cumulative-flow-diagrams&#34;&gt;Cumulative flow diagrams&lt;/h4&gt;
-&lt;p&gt;By graphing the data as a stacked area chart with the number of &lt;strong&gt;work items on the y-axis&lt;/strong&gt; and the &lt;strong&gt;day number on the x-axis&lt;/strong&gt;……&lt;/p&gt;
-&lt;p&gt;如何从累积流程图中获取测量整个流程的数据&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Lead time Measuring the x-axis distance between the To Do and Done areas gives the lead time of work items.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Cycle time Measuring the x-axis distance between the Doing and Done areas gives the cycle time of work items.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Work in progress Measuring the y-axis distance between the Doing and Done areas gives &lt;strong&gt;the total number of work items that are currently in progress&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Unhealthy flows&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Too much work in progress: a lack of WIP limits&lt;/li&gt;
-&lt;li&gt;Scope creep: 将过量的任务放到TODO，没有考虑是否具有完成这些任务的能力，从而导致lead times(生产周期)变长&lt;/li&gt;
-&lt;li&gt;Long phase of delivery: most commonly the Implement phase, when coding occurs. Apply smaller WIP limits to the bottleneck&lt;/li&gt;
-&lt;li&gt;Delivery plateau: 交付平稳期&lt;/li&gt;
-&lt;li&gt;Regulated deployment phase: 团队限制，比如只有周五才可以发布……&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Scrum管理变更的方法是对Sprint设置时间并锁定输入，以便在Sprint开始后到达的新工作必须等到下一次迭代后才能确定优先级和计划时间。看板允许随时添加新工作，但仅提供有关完成新工作可能需要多长时间的服务级别协议（SLA）。WIP Limts看板限制进行中的工作，以确保优先于完成工作而不是开始新的工作。&lt;/p&gt;
-&lt;p&gt;Scrum is Agile for new teams, while Kanban is Agile for mature teams. 如果工作只是项目的一部分，并且时间和金钱资源有限，那么Scrum是最好的选择，因为每个冲刺都可以单独进行成本估算。如果工作是连续的，没有确定的结束日期，则看板更适合。&lt;/p&gt;
-&lt;h2 id=&#34;dependencies-and-layering&#34;&gt;Dependencies and layering&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Framework dependencies&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Third-party dependencies&lt;/p&gt;
-&lt;p&gt;The main reason to use a third-party dependency is to exchange the effort required for implementing some features or infrastructure for the effort of integrating something that is already written and suitable for the job.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;.net core 可以使用NuGet依赖管理工具&lt;/p&gt;
-&lt;p&gt;directed graph(acyclic digraphs/cyclic digraph) 用有向图对依赖结构建模 A-&amp;gt;B 为A依赖B；此方式只能展示出依赖关系，并不能展示出依赖关系的具体分类（集成、聚合、复合、关联）。&lt;/p&gt;
-&lt;h3 id=&#34;managing-dependencies&#34;&gt;Managing dependencies&lt;/h3&gt;
-&lt;p&gt;patterns: 经验总结后可以重用的模式&lt;/p&gt;
-&lt;p&gt;anti-patterns: 实际开发中发先存在许多不仅没多少优点，甚至会引入很多问题的模式&lt;/p&gt;
-&lt;p&gt;Code smells: 如果某段代码可能存在问题(some code is potentially problematic)，就可以说有代码味道&lt;/p&gt;
-&lt;h4 id=&#34;resolving-dependencies建议朗读并背诵&#34;&gt;Resolving dependencies(建议朗读并背诵)&lt;/h4&gt;
-&lt;h5 id=&#34;assemblies&#34;&gt;Assemblies&lt;/h5&gt;
-&lt;p&gt;The Common Language Runtime (CLR), which is the virtual machine that the .NET Framework uses to execute code instructions, is a software product like any other and has been programmed to behave in a predictable and logical way when hosting applications.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Resolution process&lt;/strong&gt; The assembly resolution process is an important facet of the CLR. This covers the gap between adding a reference to an assembly or project and having the application running with this assembly loaded. The process is as follows:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/AssemblyResolutionProcess-20201226102807.jpg&#34; alt=&#34;Assembly resolution process&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The CLR uses a just-in-time (JIT) model to resolve assemblies. As was already proven earlier in the chapter, the references contained in an application are not resolved as you start up the application, but rather when you first make use of a feature of that assembly—literally just in time.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Each assembly has an identity that is a composite of its name, version, culture, and public key token. Features such as binding redirects can change this identity, so determining it is not quite as simple as it might seem.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When the assembly’s identity has been established, the CLR is able to determine whether it has already attempted to resolve this dependency previously during the current execution of the application.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Asking this question causes the CLR to branch depending on the answer. If you have attempted to resolve this assembly, that process has either already succeeded or failed. If it succeeded, the CLR can use the assembly that has already been loaded, and it exits early. If not, the CLR knows that it need not continue attempting to resolve this assembly because it will fail.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Alternatively, if this is the first attempt to resolve the assembly, the CLR first checks the global assembly cache (GAC). The GAC is a machine-wide assembly repository that allows multiple versions of the same assembly to be executed in the same application. If the assembly is found in the GAC, the resolution process is successful and the discovered assembly is loaded. So you now know that, because the GAC is searched first, the presence of an applicable assembly in the GAC will take precedence over an assembly on the file system.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If the assembly could not be found in the GAC, the CLR starts probing a variety of directories in search of it. The directories searched depend on the app.config settings. If there is a codeBase element in the app.config, that location is checked and—if the assembly is not foundno other locations are subsequently checked. However, the default is for the application’s root directory to be searched, which is typically the /bin folder that relates to the entry point or web application. If the assembly cannot be found there, the resolution process fails and an exception is thrown by the CLR. Typically, this results in the termination of the application.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer&#34;&gt;The Fusion log(程序集绑定日志)&lt;/a&gt;&lt;/strong&gt;  用来打印CLR加载程序集失败的问题，开启以后，任何托管应用程序的所有尝试（无论成功与否）都会被记录到日志中。&lt;/p&gt;
-&lt;p&gt;Not all dependencies require assembly references. One alternative is to deploy the service code as a hosted service. This requires inter-process or inter-network communication, but it minimizes the assembly references required between client and server.&lt;/p&gt;
-&lt;h4 id=&#34;services待深入了解&#34;&gt;Services(待深入了解)&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;已知端点(编译时就知道服务的位置，直接为客户端创建一个服务代理)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;创建Proxy的两种方式：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用Visual Studio为项目添加一个服务引用&lt;/li&gt;
-&lt;li&gt;使用.NET Framework的&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.channelfactory-1?view=dotnet-plat-ext-5.0&#34;&gt;Channel Factory&lt;/a&gt;类编码创建服务代理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;服务发现(只知道服务的绑定类型或协定，但并不清楚服务的宿主地址)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Managed mode 托管模式
-&lt;ul&gt;
-&lt;li&gt;客户端请求中心服务&lt;/li&gt;
-&lt;li&gt;single point of failure (SPOF)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Ad-Hoc mode 临时模式
-&lt;ul&gt;
-&lt;li&gt;采用组播网路消息(multicast network messages)&lt;/li&gt;
-&lt;li&gt;使用UDP协议，每个可发现的服务都会在一个特定的IP地址和端口上等待查询请求(The default implementation of this uses the User Datagram Protocol (UDP), with each discoverable service listening on a specified IP address 1 for queries)， 不可用的服务是不会被发现的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/wcf-discovery&#34;&gt;WCF(Windows Communication Foundation) Discovery&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;For an alternative to &lt;em&gt;WCF&lt;/em&gt;, consider gRPC. - - DOTNET 5&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;REST(REpresentational State Transfer))ful services&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/archive/msdn-magazine/2009/january/service-station-an-introduction-to-restful-services-with-wcf&#34;&gt;An Introduction To RESTful Services With WCF&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;.net core web api 和 grpc 都属于RESTful的服务，更适合跨平台&lt;/p&gt;
-&lt;h3 id=&#34;layering&#34;&gt;Layering&lt;/h3&gt;
-&lt;p&gt;逻辑层与物理层(Layers vs. tiers)&lt;/p&gt;
-&lt;p&gt;两层：用户界面-访问数据&lt;/p&gt;
-&lt;p&gt;三层：用户界面-业务逻辑-数据访问(MVC属于用户界面层)&lt;/p&gt;
-&lt;h4 id=&#34;cross-cutting-concerns切面&#34;&gt;Cross-cutting concerns(切面)&lt;/h4&gt;
-&lt;p&gt;Sometimes a component’s responsibilities are not easily limited to a single layer. Functions such as auditing, security, and caching can permeate through the entire application, because they are applicable at every layer.&lt;/p&gt;
-&lt;p&gt;Aspect-oriented programming (AOP)&lt;/p&gt;
-&lt;p&gt;比如使用扩展属性更加明显优雅简介的完成可以大量重用操作。&lt;/p&gt;
-&lt;h4 id=&#34;asymmetric-layering非对称分层&#34;&gt;Asymmetric layering(非对称分层)&lt;/h4&gt;
-&lt;p&gt;Command/Query Separation(CQS): Bertrand Meyer, in his book Object-Oriented Software Construction (Prentice Hall, 1997), used the phrase command/query separation (CQS) to explain that all object methods should be one of only two things: a command or a query.&lt;/p&gt;
-&lt;p&gt;Command/Query Responsibility Segregation(CQRS): Commands and queries follow much the same rules as with CQS, but CQRS goes one step further: it acknowledges that commands and queries might need to follow different paths through the layering in order to be best handled.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/CQRS-20201227140634.jpg&#34; alt=&#34;Domain models should only be used for handling commands.&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Sound management of dependencies很重要&lt;/p&gt;
-&lt;h2 id=&#34;interfaces-and-design-patterns&#34;&gt;Interfaces and design patterns&lt;/h2&gt;
-&lt;h3 id=&#34;diamond-inheritance-problem&#34;&gt;Diamond inheritance problem&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Diamond-20201227143025.png&#34; alt=&#34;Diamond inheritance&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Because of this ambiguity, the .NET Framework does not allow multiple inheritance of classes.&lt;/p&gt;
-&lt;h3 id=&#34;explicit-implementation&#34;&gt;Explicit implementation&lt;/h3&gt;
-&lt;h3 id=&#34;polymorphism多态&#34;&gt;Polymorphism(多态)&lt;/h3&gt;
-&lt;p&gt;The ability to use an object of one type and have it implicitly act as if it were of a different type is called polymorphism.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Polymorphism-20201227144730.png&#34; alt=&#34;ploymorphism&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;adaptive-design-patterns&#34;&gt;Adaptive design patterns&lt;/h3&gt;
-&lt;h4 id=&#34;the-null-object-pattern&#34;&gt;The Null Object pattern&lt;/h4&gt;
-&lt;h4 id=&#34;the-isnull-property-anti-pattern&#34;&gt;The IsNull property anti-pattern&lt;/h4&gt;
-&lt;h4 id=&#34;the-adapter-pattern&#34;&gt;The Adapter pattern&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;The Class Adapter pattern&lt;/li&gt;
-&lt;li&gt;The Object Adapter pattern&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;the-strategy-pattern&#34;&gt;The Strategy pattern&lt;/h4&gt;
-&lt;h4 id=&#34;further-versatility&#34;&gt;Further versatility&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Duck-typing&lt;/li&gt;
-&lt;li&gt;Mixins&lt;/li&gt;
-&lt;li&gt;Fluent interfaces&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;testinghttpsdocsmicrosoftcomen-usvisualstudiotestviewvs-2019&#34;&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/?view=vs-2019&#34;&gt;Testing&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;unit-testing&#34;&gt;Unit Testing&lt;/h3&gt;
-&lt;p&gt;Unit test: Testing a single unit of code, very small atomic test.&lt;/p&gt;
-&lt;p&gt;Integration test: Testing multiple units of code integrated together, to go through the different layers and ensure they are using eachother correctly. These should be done after unit tests have verified the individual units work independently. Many people mistakenly refer to these as unit tests.&lt;/p&gt;
-&lt;p&gt;Built Verification Test: Testing the built product by deploying it and running tests that will interact with it in the manner a user would. Also mistakenly referred to as unit tests frequently. These are the largest most full featured tests and often just done manually by testing teams rather than being automated.&lt;/p&gt;
-&lt;p&gt;Unit testing is the discipline of writing code that tests other code. Every unit test is composed of three distinct parts(AAA):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;strong&gt;arrange&lt;/strong&gt;ment of the preconditions of the test 准备&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The performance of the &lt;strong&gt;act&lt;/strong&gt; that is being tested 操作&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;strong&gt;assert&lt;/strong&gt;ion that the expected behavior occurred 断言&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[TestClass]&lt;/span&gt; 
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;AccountTest&lt;/span&gt; 
-{
-&lt;span style=&#34;color:#658b00&#34;&gt;    [TestMethod]&lt;/span&gt; 
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; AddingTransactionChangesBalance() {
-        &lt;span style=&#34;color:#228b22&#34;&gt;// Arrange
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; account = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Account();
-        &lt;span style=&#34;color:#228b22&#34;&gt;// Act 
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;      	account.AddTransaction(&lt;span style=&#34;color:#b452cd&#34;&gt;200&lt;/span&gt;m);
-        &lt;span style=&#34;color:#228b22&#34;&gt;// Assert 
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;      	Assert.AreEqual(&lt;span style=&#34;color:#b452cd&#34;&gt;200&lt;/span&gt;m, account.Balance);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer?view=vs-2019&#34;&gt;Running the tests&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;MSTest is a convenient choice for unit tests—hence its use for the examples in this chapter—but it is not a great choice. NUnit and XUnit are better alternative testing frameworks that rely on external dependencies.&lt;/p&gt;
-&lt;h4 id=&#34;test-driven-development&#34;&gt;Test-driven development&lt;/h4&gt;
-&lt;p&gt;When you use a TDD approach to writing software, you write the unit tests and the production code in tandem, with a failing test written for every expected behavior exhibited by every method of every class in the production code. The failing test fails only because the production code does not exist yet. The test states—via assertions—that the production code should act in some way, but because it does not yet, the test fails. After the production code is implemented in the simplest way possible to satisfy the test’s requirements, the test will succeed.&lt;/p&gt;
-&lt;p&gt;Red, green, refactor:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Write a failing test that targets the expected behavior of the SUT.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Implement just enough of the SUT so that the new test passes without breaking existing successful tests.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If any refactoring can be done on the SUT to improve its design or overall quality, now is the time to do so.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;After the transition from red to green for each unit test, you had the opportunity to refactor the implementation of the SUT.&lt;/p&gt;
-&lt;p&gt;Addition: &lt;a href=&#34;https://martinfowler.com/articles/is-tdd-dead/&#34;&gt;Is TDD Dead?&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;test-double&#34;&gt;Test double&lt;/h4&gt;
-&lt;p&gt;测试替身&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Dummies&lt;/strong&gt; This is the simplest of all test doubles. Dummies are intended to fulfil parameter lists and have no special behavior. Often, real implementations are used as dummies and might be primitive types, which are nevertheless required to turn a unit test green.&lt;/p&gt;
-&lt;p&gt;被测试方法需要一些参数，但是这些参数实际上并没有用到，它们的存在只是为了满足调用方法的参数要求&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Spies&lt;/strong&gt; A spy records the calls that have been made to its methods, along with the parameters that were supplied to each call. The record of these calls can then be used in assertions to ensure that certain calls were made.&lt;/p&gt;
-&lt;p&gt;确认方法调用记录如何调用，并在断言中可以使用调用结果，断言程序运行的正确性&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Stubs&lt;/strong&gt; A stub is a dependency that is required by the system under test and that will return a pre-supplied answer whenever queried. Stubs are most useful at the seams of an application, where external dependencies are required. Instead of depending on a database, you can depend on a stub that can return dummy data.&lt;/p&gt;
-&lt;p&gt;在测试中为每个调用提供一个封装好的响应，它可以使用很直接的方式模拟依赖项的行为。例如我们可以使用Stub把相关数据放到内存里查询而不是查询真实的数据库。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Fakes&lt;/strong&gt; A fake is very similar to a stub, but the intent is subtly different. Fakes are not supplied with any preconceived responses to queries, but are instead closer to real implementations with some necessary concession to avoid an external dependency. Personally, I make a distinction between a manually implemented mock and a mock that is supplied by a mocking framework: manual mocks are called fakes.&lt;/p&gt;
-&lt;p&gt;Fake 可以是某个 Data Access Object 或者 Repository 的基于内存的实现；该实现并不会真的去进行数据库操作。这就允许了我们能够在并没有真的启动数据库或者执行耗时的外部请求的情况下进行服务的测试。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Mocks&lt;/strong&gt; Whereas stubs and fakes provide test doubles for dependencies that are indirect queries, mocks are test doubles for dependencies that have indirect commands. Mocks are useful to determine whether a command was executed on a dependency of the system under test.&lt;/p&gt;
-&lt;p&gt;模拟一个具有特性行为的对象，在测试开始前根据期望提供需要的结果。被测试对象往往调用这个对象的方法时，根据条件得到不同的输入，从而满足测试对象的不同场景。例如，mock 数据库的存储层，返回正常数据、空或者丢出异常等情况。当我们并不希望真的调用生产环境下的代码或者在测试中难于验证真实代码执行效果的时候，我们会用 Mock 来替代那些真实的对象。典型的例子即是对邮件发送服务的测试，我们并不希望每次进行测试的时候都发送一封邮件，毕竟我们很难去验证邮件是否真的被发出了或者被接收了。我们更多地关注于邮件服务是否按照我们的预期在合适的业务流中被调用。&lt;/p&gt;
-&lt;h4 id=&#34;manual-test-fakery&#34;&gt;Manual test fakery&lt;/h4&gt;
-&lt;h4 id=&#34;mocking-frameworks&#34;&gt;Mocking frameworks&lt;/h4&gt;
-&lt;p&gt;The most popular: &lt;a href=&#34;https://github.com/Moq/moq4/wiki/Quickstart&#34;&gt;MOQ&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在一个项目里, 我们经常需要把某一部分程序独立出来以便我们可以对这部分进行测试. 这就要求我们不要考虑项目其余部分的复杂性, 我们只想关注需要被测试的那部分. 这里就需要用到模拟(Mock)技术.&lt;/p&gt;
-&lt;p&gt;Mocking is the act of taking a small piece of code that may depend on other things, mocking those other things up so that you can control the circumstances surrounding the piece of code you want to test.&lt;/p&gt;
-&lt;p&gt;The purpose of mocking is atomicity in tests. It allows you to test just the individual piece of code you want, without having it&amp;rsquo;s tests affected due to bugs in dependent code pieces. Also mocking gives you the ability to fabricate a variety of scenarios to test the edge cases of each piece of code.&lt;/p&gt;
-&lt;p&gt;Mocking is generally purposed for creating boundaries around the target code in unit tests, though it&amp;rsquo;s not uncommon to use it in integration tests too for fabricating a resource that acts as the seed to the integrated code chain you&amp;rsquo;re targeting.&lt;/p&gt;
-&lt;p&gt;Moq lets you set the following expectations on a method call:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Call some other lambda expression.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Return a specific value.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Throw a specified type of exception.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Verify that this method was called.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Mocks and test over-specification: An over-specified test is fragile, but you can avoid this fragility by changing what you assert. In other words, a test is over-specified when it has knowledge of the SUT’s &lt;em&gt;implementation&lt;/em&gt; rather than its &lt;em&gt;expected behavior&lt;/em&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;testing-all-control-flows&#34;&gt;Testing all control flows&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;Happy Path&lt;/em&gt;: the execution path through the code that yields no errors and causes no problems.&lt;/p&gt;
-&lt;p&gt;There are a few gaps that need to be addressed:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;What if the account repository is a null reference?&lt;/li&gt;
-&lt;li&gt;What if the repository cannot find the account?&lt;/li&gt;
-&lt;li&gt;What if the account method throws an exception?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To avoid leaking dependencies between layers, it is good practice to wrap an exception thrown at a lower layer in a new exception for this layer. The exceptions that the domain model throws will be specific to that layer. If the service layer allows this to propagate up to the controller, the controller will need knowledge of the DomainException type to catch and handle these exceptions. This introduces a dependency between the controller and the domain model layer, which should be avoided. Instead, the service will catch the domain model exceptions and wrap them in ServiceException instances before throwing them up to the controller. Due to the controller’s dependency on the service layer, it is able to catch the exceptions that it defines. It is important to acknowledge that the ServiceException contains the DomainException as an inner exception—without this, valuable context about the original exception is lost: the entry point of the application might be able to unwrap this exception in a global exception handler, for example.&lt;/p&gt;
-&lt;h4 id=&#34;test-setup&#34;&gt;Test setup&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[TestInitialize]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;writing-tests-first&#34;&gt;Writing tests first&lt;/h3&gt;
-&lt;h4 id=&#34;what-is-tdd&#34;&gt;What is TDD?&lt;/h4&gt;
-&lt;p&gt;The “&lt;strong&gt;purist&lt;/strong&gt;” idea of TDD is that it is a design tool—that developers should approach the keyboard without forethought of the production code they might implement.&lt;/p&gt;
-&lt;p&gt;The “&lt;strong&gt;pragmatic&lt;/strong&gt;” idea of TDD is that developers write the unit tests first.&lt;/p&gt;
-&lt;h4 id=&#34;test-driven-design&#34;&gt;Test-driven design&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;Write exactly one new test. It should be the smallest test which seems to point in the direction of a solution.&lt;/li&gt;
-&lt;li&gt;Run the test to make sure it fails.&lt;/li&gt;
-&lt;li&gt;Make the test from (1) pass by writing the least amount of implementation code you can IN THE TEST METHOD.&lt;/li&gt;
-&lt;li&gt;Refactor to remove duplication or otherwise as required to improve the design. Be strict about the refactorings. Only introduce new abstractions (methods, classes, etc) when they will help to improve the design of the code. Specifically:
-&lt;ol&gt;
-&lt;li&gt;ONLY Extract a new method if there is sufficient code duplication in the test methods.&lt;/li&gt;
-&lt;li&gt;When extracting a method, initially extract it to the test class (don’t create a new class yet). ONLY create a new class when a clear grouping of methods emerges and when the test class starts to feel crowded or too large.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Repeat the process by writing another test (go back to step 1).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;test-first-development&#34;&gt;Test-first development&lt;/h4&gt;
-&lt;p&gt;TDD = TFD + Refactoring&lt;/p&gt;
-&lt;p&gt;TDD是测试驱动，TFD是测试优先，测试优先出现红色就需要重构，这样就靠向了TDD。&lt;/p&gt;
-&lt;h3 id=&#34;further-testing&#34;&gt;Further testing&lt;/h3&gt;
-&lt;h4 id=&#34;the-testing-pyramid&#34;&gt;The testing pyramid&lt;/h4&gt;
-&lt;p&gt;The testing pyramid reminds you of the relative number of tests that you should aim to maintain.&lt;/p&gt;
-&lt;h4 id=&#34;the-testing-quadrant&#34;&gt;The testing quadrant&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://lisacrispin.com/wp-content/uploads/2011/11/Agile-Testing-Quadrants.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The testing quadrant diagram explains that tests can be useful to different stakeholders and for different reasons.&lt;/p&gt;
-&lt;h3 id=&#34;testing-for-prevention-and-cure&#34;&gt;Testing for prevention and cure&lt;/h3&gt;
-&lt;h4 id=&#34;how-do-you-decrease-mttr&#34;&gt;How do you decrease MTTR?&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;logging&lt;/li&gt;
-&lt;li&gt;alerting&lt;/li&gt;
-&lt;li&gt;monitoring&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://lisacrispin.com/2011/11/08/using-the-agile-testing-quadrants/&#34;&gt;Using the Agile Testing Quadrants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.elastic.co/what-is/elk-stack&#34;&gt;ELK Stack&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;refactoring&#34;&gt;Refactoring&lt;/h2&gt;
-&lt;p&gt;Refactoring is the process of incrementally improving the design of existing code.&lt;/p&gt;
-&lt;p&gt;This is an important point—refactoring changes the &lt;em&gt;arrangement&lt;/em&gt; of the code, not the &lt;em&gt;outcome&lt;/em&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;changing-existing-code&#34;&gt;Changing existing code&lt;/h3&gt;
-&lt;h4 id=&#34;replacing-magic-numbers-with-constants&#34;&gt;Replacing “magic numbers” with constants&lt;/h4&gt;
-&lt;p&gt;To the person who wrote the code, their significance might be obvious because that person has prior knowledge of what it all means. In reality, that will probably only be true for a week, perhaps two, before the person’s memory starts to fade and they lose track of what that 5, or that 2, means.&lt;/p&gt;
-&lt;h4 id=&#34;replacing-a-conditional-expression-with-polymorphism&#34;&gt;Replacing a conditional expression with polymorphism&lt;/h4&gt;
-&lt;p&gt;子类继承父类以替换Switch&lt;/p&gt;
-&lt;h4 id=&#34;replacing-a-constructor-with-a-factory-method&#34;&gt;Replacing a constructor with a factory method&lt;/h4&gt;
-&lt;h4 id=&#34;replacing-inheritance-with-delegation&#34;&gt;Replacing inheritance with delegation&lt;/h4&gt;
-&lt;h4 id=&#34;code-smell-refused-bequest&#34;&gt;Code smell: Refused bequest&lt;/h4&gt;
-&lt;p&gt;如果存在一个子类与其他子类不一致，比如不需要实现一个基类中的方法，此时可以有两种方法&lt;/p&gt;
-&lt;h3 id=&#34;aggressive-refactoring&#34;&gt;Aggressive refactoring&lt;/h3&gt;
-&lt;p&gt;Code is never done. Code can be working, good enough, sufficient, valuable, and producing revenue. But it is rarely, if ever, complete.&lt;/p&gt;
-&lt;h4 id=&#34;red-green-refactorredesign&#34;&gt;Red, green, refactor…redesign&lt;/h4&gt;
-&lt;h2 id=&#34;dependency-inversionhttpswwwopenhearticucsdependency-injection&#34;&gt;&lt;a href=&#34;https://www.openheart.icu/cs/dependency-injection/&#34;&gt;Dependency inversion&lt;/a&gt;&lt;/h2&gt;
-- https://www.openheart.icu/cs/adaptive-code/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>处理器中的流水线技术</title>
-        <link>https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/</link>
-        <pubDate>Sat, 14 Nov 2020 16:55:11 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/ -&lt;h1 id=&#34;处理器中的流水线&#34;&gt;处理器中的流水线&lt;/h1&gt;
-&lt;p&gt;在现代处理器中，流水线是一个最基本的概念。在了解cpu的时候，很多时候会提及拥有多少级流水线。虽然这个概念并不是在计算机技术中诞生的，但是这个技术却在处理器世界中大放异彩。&lt;/p&gt;
-&lt;p&gt;流水线(Pipeline)技术是指程序在执行时候多条指令重叠进行操作的一种准并行处理实现技术。通俗的讲将一个时序过程，分解成若干个子过程，每个过程都能有效的与其他子过程同时执行。这种思想最初是在RISC的架构中出现的，旨在提高处理器处理效率，争取在一个时钟周期中完成一条指令。&lt;/p&gt;
-&lt;p&gt;最经典的当属MIPS(无内部互锁的流水线处理器)的五级流水线技术。MIPS体系结构本身就是为了流水线而设计的，cpu在高速缓存中运行，每条指令的执行过程都分成五级。每一级成为一个流水线阶段，每个阶段占用固定的时间，通常是一个时钟周期。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E4%BA%94%E7%BA%A7%E6%B5%81%E6%B0%B4%E7%BA%BF1365345053_3598.jpg&#34; alt=&#34;五级流水线&#34;&gt;&lt;/p&gt;
-&lt;p&gt;上图是MIPS的五级流水线&lt;/p&gt;
-&lt;p&gt;其中：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;IF(instruction fetch)&lt;/code&gt;：从指令高速缓存中获取下一条指令。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;RD(Read register)&lt;/code&gt;：从指定的源寄存器域中指定的cpu寄存器中读取数据。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ALU(arithmetic/logic  unit)&lt;/code&gt;：算术和逻辑运算操作。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;MEM(memory R/W)&lt;/code&gt;：读写数据高速缓存中的内存变量。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;WB(Write back)&lt;/code&gt;：将结果写入寄存器堆中。&lt;/p&gt;
-&lt;p&gt;很明显，如果只执行一条指令的话，流水线是不会提高效率的。但是如果要完成多条指令，利用流水线的并行原理，其实是可以提高几倍的处理速度。&lt;/p&gt;
-&lt;p&gt;由于流水线技术的高效性，后来所有的处理器都引进了该实现，当然包括x86的处理器，当年奔四号称20级的流水线结构。但是，是不是流水线级数越多越好呢？流水线级数越多，在处理多指令的时候确实也会越高效，但必然以高成本为代价，同时也会出现很多相关的一些副作用。&lt;/p&gt;
-&lt;p&gt;流水线的更多详细说明可以参阅更多书籍或者wiki。对于基础书籍推荐一下《&lt;em&gt;大话处理器&lt;/em&gt;》的部分章节。&lt;/p&gt;
-&lt;h1 id=&#34;处理器中的冒险&#34;&gt;处理器中的冒险&lt;/h1&gt;
-&lt;p&gt;流水线给处理器带来了效率，当然也有问题。称之为流水线冒险(HaZard)。&lt;/p&gt;
-&lt;h2 id=&#34;结构冒险&#34;&gt;结构冒险&lt;/h2&gt;
-&lt;p&gt;由于处理器资源冲突，而无法实现某些指令或者阶段的组合实现，就称之为处理器有结构冒险。&lt;/p&gt;
-&lt;p&gt;比如，早期的处理器中，程序和数据是存储在一起的，那么容易出现下图的情况：在第四个cycle中，IF和MEM同时访问存储器导致有一个操作要等待，此时hazard就出现了。现在的处理器已经解决了该问题：指令存储在L1P cache中，数据存储L1D cache中，单独访问，不会影响相互操作。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E7%BB%93%E6%9E%84%E5%86%92%E9%99%A91365345110_7686.jpg&#34; alt=&#34;结构冒险&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;数据冒险&#34;&gt;数据冒险&lt;/h2&gt;
-&lt;p&gt;如果流水线中原来有先后顺序的指令同一时刻处理时，可能会导致出现访问了错误的数据的情况。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A91365345212_2478.jpg&#34; alt=&#34;数据冒险&#34;&gt;&lt;/p&gt;
-&lt;p&gt;在汇编语句中，add R1,R2,R3 将寄存器R2和R3的和赋予R1，改变R1的值；而紧接着下面的语句：add R4,R1,R5则会使用R1的值，可是R1必须在第一条语句中的第5个cycle才能更新到寄存器中，语句二是在第4个cycle就要访问R1，也就是说第二,条指令此时在使用错误的R1的值。这是数据hazard出现了。&lt;/p&gt;
-&lt;p&gt;很容易就能想到一种方式解决：在两条指令中添加一条空指令：nop。但是会影响处理器的指令的执行效率。在现代处理器技术中，已经用forwarding的方式解决了。如下图，如果处理器在检测到当前指令的源操作数正好在流水线的EX或者MEM阶段，接直接将ex和mem寄存器的值传递给ALU的输入，而不是再从寄存器堆中获取数据了。因为此时寄存器堆中的数据可能是没有被及时更新的。&lt;/p&gt;
-&lt;p&gt;当然不仅在EX阶段有这种问题出现，在mem阶段也容易出现。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A91365345292_2683.jpg&#34; alt=&#34;解决数据冒险&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;控制冒险&#34;&gt;控制冒险&lt;/h2&gt;
-&lt;p&gt;在流水线中的的执行指令时，由于并行处理的关系，后面很多指令其实都在流水线中开始处理了，包括预取值和译码。那么，如果此时程序中出现一条跳转语句怎么办呢？因为程序已经跑到其他地址处执行，流水线中之前已经做好的预取值和译码动作都不能使用了。这些会被处理器的专有部件flush掉，重新开始新的流水线。此时我们可以称之为出现了控制hazard。这种情况对于程序和效率来说是存在很大损失的。&lt;/p&gt;
-&lt;p&gt;当然，我们也有解决方案，也就是在jump指令后面(不会被真正使用，但是会进入流水线)添加nop。在MIPS程序中，经常在jump指令后面添加nop语句。&lt;/p&gt;
-&lt;p&gt;在X86架构中，是通过硬件来实现flush，将无效的流水线排空，以保证正确运行流水线。这里会涉及到分支预测技术的使用。&lt;/p&gt;
-&lt;p&gt;在其他一些处理器中，用软件的方式来处理，添加nop。同时在编译器中通过乱序的思想用有效指令代替nop。这样也可以避免转跳带来的性能损失。&lt;/p&gt;
-- https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Idempotent</title>
-        <link>https://www.openheart.icu/cs/idempotent/</link>
-        <pubDate>Thu, 12 Nov 2020 15:58:21 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/idempotent/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/idempotent/ -&lt;h2 id=&#34;什么是幂等&#34;&gt;什么是幂等？&lt;/h2&gt;
-&lt;p&gt;在&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%95%B8%E5%AD%B8&#34;&gt;数学&lt;/a&gt;里，&lt;strong&gt;幂等&lt;/strong&gt;有两种主要的定义。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在某&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E9%81%8B%E7%AE%97&#34;&gt;二元运算&lt;/a&gt;下，&lt;strong&gt;幂等元素&lt;/strong&gt;是指被自己重复运算（或对于&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B8&#34;&gt;函数&lt;/a&gt;是为&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0&#34;&gt;复合&lt;/a&gt;）的结果等于它自己的元素。例如，乘法下唯一两个幂等&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%AF%A6%E6%95%B8&#34;&gt;实数&lt;/a&gt;为0和1。&lt;/li&gt;
-&lt;li&gt;某&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%80%E5%85%83%E9%81%8B%E7%AE%97&#34;&gt;一元运算&lt;/a&gt;为&lt;strong&gt;幂等&lt;/strong&gt;的时，其作用在任一元素两次后会和其作用一次的结果相同。例如，&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E7%AC%A6%E8%99%9F&#34;&gt;高斯符号&lt;/a&gt;便是幂等的。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%80%E5%85%83%E9%81%8B%E7%AE%97&#34;&gt;一元运算&lt;/a&gt;的定义是&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E9%81%8B%E7%AE%97&#34;&gt;二元运算&lt;/a&gt;定义的特例&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In &lt;a href=&#34;https://en.wikipedia.org/wiki/Computer_science&#34;&gt;computer science&lt;/a&gt;, the term &lt;em&gt;idempotence&lt;/em&gt; may have a different meaning depending on the context in which it is applied:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;in &lt;a href=&#34;https://en.wikipedia.org/wiki/Imperative_programming&#34;&gt;imperative programming&lt;/a&gt;(命令编程), a &lt;a href=&#34;https://en.wikipedia.org/wiki/Subroutine&#34;&gt;subroutine&lt;/a&gt;(子程序) with &lt;a href=&#34;https://en.wikipedia.org/wiki/Side_effect_(computer_science)&#34;&gt;side effects&lt;/a&gt; is idempotent if the system state remains the same after one or several calls, in other words if the function from the system state space to itself associated to the subroutine is idempotent in the mathematical sense given in the &lt;a href=&#34;https://en.wikipedia.org/wiki/Idempotence#Definition&#34;&gt;definition&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;in &lt;a href=&#34;https://en.wikipedia.org/wiki/Functional_programming&#34;&gt;functional programming&lt;/a&gt;, a &lt;a href=&#34;https://en.wikipedia.org/wiki/Pure_function&#34;&gt;pure function&lt;/a&gt; is idempotent if it is idempotent in the mathematical sense given in the &lt;a href=&#34;https://en.wikipedia.org/wiki/Idempotence#Definition&#34;&gt;definition&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This is a very useful property in many situations, as it means that an operation can be repeated or retried as often as necessary without causing unintended effects. With non-idempotent operations, the algorithm may have to keep track of whether the operation was already performed or not.&lt;/p&gt;
-&lt;p&gt;一个HTTP方法是&lt;strong&gt;幂等&lt;/strong&gt;的，指的是同样的请求被执行一次与连续执行多次的效果是一样的，服务器的状态也是一样的。换句话说就是，幂等方法不应该具有副作用（统计用途除外）。在正确实现的条件下，&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/GET&#34;&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/a&gt;，&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/HEAD&#34;&gt;&lt;code&gt;HEAD&lt;/code&gt;&lt;/a&gt;，&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/PUT&#34;&gt;&lt;code&gt;PUT&lt;/code&gt;&lt;/a&gt;和&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE&#34;&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/a&gt; 等方法都是&lt;strong&gt;幂等&lt;/strong&gt;的，而 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/POST&#34;&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/a&gt; 方法不是。所有的 &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Glossary/safe&#34;&gt;safe&lt;/a&gt; 方法也都是幂等的。&lt;/p&gt;
-&lt;p&gt;幂等性只与后端服务器的实际状态有关，而每一次请求接收到的状态码不一定相同。例如，第一次调用&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE&#34;&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/a&gt; 方法有可能返回 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/200&#34;&gt;&lt;code&gt;200&lt;/code&gt;&lt;/a&gt;，但是后续的请求可能会返回&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/404&#34;&gt;&lt;code&gt;404&lt;/code&gt;&lt;/a&gt;。&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE&#34;&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/a&gt; 的言外之意是，开发者不应该使用&lt;code&gt;DELETE&lt;/code&gt;方法实现具有删除最后条目功能的 RESTful API。&lt;/p&gt;
-&lt;p&gt;需要注意的是，服务器不一定会确保请求方法的幂等性，有些应用可能会错误地打破幂等性约束。&lt;/p&gt;
-&lt;h2 id=&#34;接口幂等性&#34;&gt;接口幂等性&lt;/h2&gt;
-&lt;p&gt;在分布式系统中，一般都会有重试机制。但重复机制又有一定几率出现重复的数据。例如订单系统消费了消息，但是由于网络等问题消息系统未收到反馈是否已成功处理，此时消息系统会根据配置的规则隔断时间就retry一次。但如果此时网络恢复正常，我第一次收到的消息成功处理了，这是又收到一条消息，如果没有防护措施，就有可能出现重复数据。&lt;/p&gt;
-&lt;p&gt;幂等性指&lt;strong&gt;任意多次执行所产生的影响均与一次执行的影响相同。多次调用对系统的产生的影响是一样的，即对资源的作用是一样的，但是返回值允许不同。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;对于业务中需要考虑幂等性的地方一般都是接口的重复请求，重复请求是指同一个请求因为某些原因被多次提交。导致这个情况会有几种场景：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;前端重复提交&lt;/strong&gt;：提交订单，用户快速重复点击多次，造成后端生成多个内容重复的订单。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;接口超时重试&lt;/strong&gt;：对于给第三方调用的接口，为了防止网络抖动或其他原因造成请求丢失，这样的接口一般都会设计成超时重试多次。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;消息重复消费&lt;/strong&gt;：MQ消息中间件，消息重复消费。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;幂等性实现方式&#34;&gt;幂等性实现方式&lt;/h2&gt;
-&lt;h4 id=&#34;查询操作&#34;&gt;查询操作&lt;/h4&gt;
-&lt;p&gt;查询一次和查询多次，在数据不变的情况下，查询结果是一样的。select是天然的幂等操作；&lt;/p&gt;
-&lt;h4 id=&#34;删除操作&#34;&gt;删除操作&lt;/h4&gt;
-&lt;p&gt;删除操作也是幂等的，删除一次和多次删除都是把数据删除。(注意可能返回结果不一样，删除的数据不存在，返回0，删除的数据多条，返回结果多个)&lt;/p&gt;
-&lt;h4 id=&#34;唯一索引&#34;&gt;唯一索引&lt;/h4&gt;
-&lt;p&gt;这个机制是&lt;strong&gt;利用了数据库的主键唯一约束的特性&lt;/strong&gt;，解决了在&lt;strong&gt;insert场景&lt;/strong&gt;时幂等问题。但主键的要求不是自增的主键，这样就需要业务&lt;strong&gt;生成全局唯一&lt;/strong&gt;的主键，之前老顾的文章也介绍过&lt;strong&gt;分布式唯一主键ID&lt;/strong&gt;的生成，可自行查阅。如果是&lt;strong&gt;分库分表场景下&lt;/strong&gt;，&lt;strong&gt;路由规则要保证相同请求下&lt;/strong&gt;，&lt;strong&gt;落地在同一个数据库和同一表中&lt;/strong&gt;，要不然&lt;strong&gt;数据库主键约束就不起效果&lt;/strong&gt;了，因为是不同的数据库和表主键不相关。因为对主键有一定的要求，这个方案就跟业务有点耦合了，&lt;strong&gt;无法用自增主键了&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;防止新增脏数据。比如：支付宝的资金账户，支付宝也有用户账户，每个用户只能有一个资金账户，怎么防止给用户创建资金账户多个，那么给资金账户表中的用户ID加唯一索引，所以一个用户新增成功一个资金账户记录。要点：唯一索引或唯一组合索引来防止新增数据存在脏数据。&lt;/p&gt;
-&lt;h4 id=&#34;去重表机制&#34;&gt;去重表机制&lt;/h4&gt;
-&lt;p&gt;往去重表里插入数据的时候，利用数据库的唯一索引特性，保证唯一的逻辑。唯一序列号可以是一个字段，也可以是多字段的唯一性组合。&lt;/p&gt;
-&lt;p&gt;这里要注意的是，&lt;strong&gt;去重表和业务表应该在同一库中&lt;/strong&gt;，这样就保证了在同一个事务，即使业务操作失败了，也会把去重表的数据回滚。&lt;strong&gt;这个很好的保证了数据一致性&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;另外，使用数据库防重表的方式它有个严重的缺点，那就是系统容错性不高，如果幂等表所在的数据库连接异常或所在的服务器异常，则会导致整个系统幂等性校验出问题。&lt;/p&gt;
-&lt;h4 id=&#34;token机制&#34;&gt;Token机制&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Token-20201112171801.jpeg&#34; alt=&#34;Token&#34;&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;服务端提供了发送token的接口，我们在分析业务的时候，哪些是存在幂等问题的，就必须在执行业务前，前去获取token，服务器会把token保存到redis中；&lt;/li&gt;
-&lt;li&gt;然后调用业务接口请求时，把token携带过去，一般反正请求头部；&lt;/li&gt;
-&lt;li&gt;服务器判断token是否存在redis中，存在表示第一次请求，可以继续执行业务，业务完成后，&lt;strong&gt;需要把redis中的token删掉&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;如果判断token不存在redis中，就表示是重复操作，直接返回重复标记给client，这样就保证了业务代码，不被重复执行。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;服务器端第一次验证相同过后，会将session中的Token值更新下，若用户重复提交，第二次的验证判断将失败，因为用户提交的表单中的Token没变，但服务器端session中Token已经改变了。&lt;/p&gt;
-&lt;p&gt;这就是token+redis的幂等方案。适用于绝大部分场景。主要针对前端重复连续多次点击的情况，网上也有另一个版本的Token方案，不同的地方是：&lt;strong&gt;网上方案检验token存在后，就立刻删除token，再进行业务处理&lt;/strong&gt;。而上面的方式是检验token存在后，先进行业务处理，再删除token。&lt;/p&gt;
-&lt;p&gt;网上方案的缺点是&lt;strong&gt;先删除token&lt;/strong&gt;，这是出现系统问题导致&lt;strong&gt;业务处理出现异常&lt;/strong&gt;，业务处理没有成功，接口调用方也没有获取到明确的结果，然后&lt;strong&gt;进行重试，但token已经删除掉了&lt;/strong&gt;，服务端判断token不存在，&lt;strong&gt;认为是重复请求，就直接返回了&lt;/strong&gt;，无法进行业务处理了。&lt;/p&gt;
-&lt;p&gt;而上面的方案&lt;strong&gt;后删除token&lt;/strong&gt;也是会存在问题的，如果进行业务处理成功后，删除redis中的token失败了，这样就导致了有可能会发生重复请求，因为token没有被删除。&lt;/p&gt;
-&lt;h4 id=&#34;乐观锁机制&#34;&gt;乐观锁机制&lt;/h4&gt;
-&lt;p&gt;乐观锁只是在更新数据那一刻锁表，其他时间不锁表，所以相对于悲观锁，效率更高。乐观锁的实现方式多种多样可以通过version或者其他状态条件：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;通过版本号实现update table_xxx set name=#name#,version=version+1 where version=#version#；&lt;/li&gt;
-&lt;li&gt;通过条件限制 update table_xxx set avai_amount=avai_amount-#subAmount# where avai_amount-#subAmount# &amp;gt;= 0&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;加上了版本号后，就让此计算赋值型业务，具备了幂等性。&lt;/p&gt;
-&lt;p&gt;要求：quality-#subQuality# &amp;gt;= ，这个情景适合不用版本号，只更新是做数据安全校验，适合库存模型，扣份额和回滚份额，性能更高。&lt;/p&gt;
-&lt;p&gt;乐观锁缺点：在操作业务前，需要先查询出当前的version版本。&lt;/p&gt;
-&lt;h4 id=&#34;分布式锁&#34;&gt;分布式锁&lt;/h4&gt;
-&lt;p&gt;如果是分布是系统，构建全局唯一索引比较困难，例如唯一性的字段没法确定，这时候可以引入分布式锁，通过第三方的系统(redis或zookeeper)，在业务系统插入数据或者更新数据，获取分布式锁，然后做操作，之后释放锁，这样其实是把多线程并发的锁的思路，引入多多个系统，也就是分布式系统中得解决思路。要点：某个长流程处理过程要求不能并发执行，可以在流程执行之前根据某个标志(用户ID+后缀等)获取分布式锁，其他流程执行时获取锁就会失败，也就是同一时间该流程只能有一个能执行成功，执行完成后，释放分布式锁(分布式锁要第三方系统提供)。&lt;/p&gt;
-&lt;h4 id=&#34;状态机&#34;&gt;状态机&lt;/h4&gt;
-&lt;p&gt;对于很多业务有一个业务流转状态的，每个状态都有前置状态和后置状态，以及最后的结束状态。例如流程的待审批，审批中，驳回，重新发起，审批通过，审批拒绝。订单的待提交，待支付，已支付，取消。&lt;/p&gt;
-&lt;p&gt;在设计单据相关的业务，或者是任务相关的业务，肯定会涉及到状态机，就是业务单据上面有个状态，状态在不同的情况下会发生变更，一般情况下存在有限状态机，这时候，如果状态机已经处于下一个状态，这时候来了一个上一个状态的变更，理论上是不能够变更的，这样的话，保证了有限状态机的幂等。注意：订单等单据类业务，存在很长的状态流转，一定要深刻理解状态机，对业务系统设计能力提高有很大帮助。&lt;/p&gt;
-&lt;h4 id=&#34;select--insert&#34;&gt;select + insert&lt;/h4&gt;
-&lt;p&gt;并发不高的后台系统，或者一些任务JOB，为了支持幂等，支持重复执行，简单的处理方法是，先查询下一些关键数据，判断是否已经执行过，再进行业务处理，就可以了。注意：核心高并发流程不要用这种方法。&lt;/p&gt;
-&lt;h4 id=&#34;对外提供接口的api如何保证幂等&#34;&gt;对外提供接口的api如何保证幂等&lt;/h4&gt;
-&lt;p&gt;如银联提供的付款接口：需要接入商户提交付款请求时附带：source来源，seq序列号；source+seq在数据库里面做唯一索引，防止多次付款(并发时，只能处理一个请求) 。
-重点：对外提供接口为了支持幂等调用，接口有两个字段必须传，一个是来源source，一个是来源方序列号seq，这个两个字段在提供方系统里面做联合唯一索引，这样当第三方调用时，先在本方系统里面查询一下，是否已经处理过，返回相应处理结果；没有处理过，进行相应处理，返回结果。注意，为了幂等友好，一定要先查询一下，是否处理过该笔业务，不查询直接插入业务系统，会报错，但实际已经处理了。&lt;/p&gt;
-- https://www.openheart.icu/cs/idempotent/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Dependency Injection</title>
-        <link>https://www.openheart.icu/cs/dependency-injection/</link>
-        <pubDate>Thu, 15 Oct 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/dependency-injection/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/dependency-injection/ -&lt;h1 id=&#34;dependency-injection&#34;&gt;Dependency Injection&lt;/h1&gt;
-&lt;h2 id=&#34;ioc&#34;&gt;IOC&lt;/h2&gt;
-&lt;p&gt;Spring 框架为Java提供了IOC（Inversion of Control），只是提供了一个服务容器，程序控制我们需要的对象，而不是在使用对象时我们亲自直接控制。既然提到了IOC就详细了解一下这种设计思想：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Coupling-20200808133032885.png&#34; alt=&#34;Coupling-20200808133032885.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;为了解决对象间耦合度过高的问题，软件专家Michael Mattson提出了IOC理论，用来实现对象之间的“解耦”。&lt;/p&gt;
-&lt;p&gt;控制反转是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/IOC-20200808134840983.png&#34; alt=&#34;IOC-20200808134840983&#34;&gt;&lt;/p&gt;
-&lt;p&gt;软件系统在没有引入IOC容器之前，对象A依赖于对象B，那么对象A在初始化或者运行到某一点的时候，自己必须主动去创建对象B或者使用已经创建的对象B。无论是创建还是使用对象B，控制权都在自己手上。&lt;/p&gt;
-&lt;p&gt;软件系统在引入IOC容器之后，这种情形就完全改变了，由于IOC容器的加入，对象A与对象B之间失去了直接联系，所以，当对象A运行到需要对象B的时候，IOC容器会主动创建一个对象B注入到对象A需要的地方。&lt;/p&gt;
-&lt;p&gt;通过前后的对比，我们不难看出来：对象A获得依赖对象B的过程，由主动行为变为了被动行为，控制权颠倒过来了，这就是“控制反转”这个名称的由来。&lt;/p&gt;
-&lt;p&gt;控制反转可以用来减低计算机代码之间的耦合度。 其中最常见的方式叫做依赖注入（Dependency Injection，简称DI），还有一种方式叫“依赖查找”（Dependency Lookup）。&lt;/p&gt;
-&lt;h2 id=&#34;dip&#34;&gt;DIP&lt;/h2&gt;
-&lt;p&gt;要了解控制反转( Inversion of Control ), 我觉得有必要先了解软件设计的一个重要思想：依赖倒置原则（Dependency Inversion Principle ）。&lt;/p&gt;
-&lt;p&gt;依赖倒置原则（Dependence Inversion Principle）是程序要依赖于抽象接口，不要依赖于具体实现。 简单的说就是要求对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。&lt;/p&gt;
-&lt;p&gt;在&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B&#34;&gt;面向对象编程&lt;/a&gt;领域中，&lt;strong&gt;依赖反转原则&lt;/strong&gt;（Dependency inversion principle，DIP）是指一种特定的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%80%A6%E5%90%88%E6%80%A7_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)&#34;&gt;解耦&lt;/a&gt;（传统的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%80%A6%E5%90%88%E6%80%A7_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)&#34;&gt;依赖&lt;/a&gt;关系创建在高层次上，而具体的策略设置则应用在低层次的模块上）形式，使得高层次的模块不依赖于低层次的模块的实现细节，依赖关系被颠倒（反转），从而使得低层次模块依赖于高层次模块的需求抽象。&lt;/p&gt;
-&lt;p&gt;该原则规定：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;高层次的模块不应该依赖于低层次的模块，两者都应该依赖于&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)&#34;&gt;抽象接口&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;该原则颠倒了一部分人对于面向对象设计的认识方式。如高层次和低层次对象都应该依赖于相同的抽象接口。控制反转就是依赖倒置原则的一种代码设计的思路。具体采用的方法就是所谓的依赖注入（Dependency Injection）。&lt;/p&gt;
-&lt;p&gt;设计模式中的五大原则 &lt;a href=&#34;https://zh.wikipedia.org/wiki/SOLID_(%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1)&#34;&gt;SOLID&lt;/a&gt; 中的 D 指代的就是依赖反转原则。&lt;/p&gt;
-&lt;p&gt;eg: &lt;a href=&#34;https://flylib.com/books/en/4.444.1.71/1/&#34;&gt;Lamp and Button：A Simple DIP Example&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;di&#34;&gt;DI&lt;/h2&gt;
-&lt;h3 id=&#34;ioc与di的区别&#34;&gt;IOC与DI的区别&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;控制反转是一种在软件工程中解耦合的思想，调用类只依赖接口，而不依赖具体的实现类，减少了耦合。控制权交给了容器，在运行的时候才由容器决定将具体的实现动态的“注入”到调用类的对象中。&lt;/li&gt;
-&lt;li&gt;依赖注入是一种设计模式，可以作为控制反转的一种实现方式。依赖注入就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。&lt;/li&gt;
-&lt;li&gt;通过IOC框架，类A依赖类B的强耦合关系可以在运行时通过容器建立，也就是说把创建B实例的工作移交给容器，类A只管使用就可以。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;.net core 框架自带&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iserviceprovider&#34;&gt;IServiceProvider&lt;/a&gt;以实现依赖注入&lt;/p&gt;
-&lt;h3 id=&#34;lifetime&#34;&gt;LifeTime&lt;/h3&gt;
-&lt;p&gt;MSDN指出了有关&lt;code&gt;AddTransient&lt;/code&gt;/&lt;code&gt;AddScoped&lt;/code&gt;/&lt;code&gt;AddSingleton&lt;/code&gt;的区别，并带有一个小示例：&lt;/p&gt;
-&lt;p&gt;创建一个Operation接口然后分别对应实现上述三种依赖注入，为Operation添加属性&lt;code&gt;Guid OperationId&lt;/code&gt;，凭借此属性值，我们可以在逻辑层与controller控制器中分别implement，对比两处implement的OperationId可以发现这三种模式的lifetime。（&lt;em&gt;The &lt;code&gt;IOperationSingletonInstance&lt;/code&gt; service is using a specific instance with a known ID of &lt;code&gt;Guid.Empty&lt;/code&gt;. It&amp;rsquo;s clear when this type is in use (its GUID is all zeroes).&lt;/em&gt;）&lt;/p&gt;
-&lt;p&gt;IOperation：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperation
-{
-  Guid OperationId { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-}
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationTransient : IOperation
-{
-}
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationScoped : IOperation
-{
-}
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationSingleton : IOperation
-{
-}
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationSingletonInstance : IOperation
-{
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Operation:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Operation&lt;/span&gt; : IOperation, IOperationTransient, IOperationScoped, IOperationSingleton, IOperationSingletonInstance
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Guid OperationId { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Operation(Guid operationId)
-  {
-    OperationId = operationId;
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Operation() : &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;this&lt;/span&gt;(Guid.NewGuid())
-  {
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OperationSercice:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;OperationService&lt;/span&gt;
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationTransient TransientOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationScoped ScopedOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationSingleton SingletonOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationSingletonInstance SingletonInstanceOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; OperationService(IOperationTransient transientOperation,
-                          IOperationScoped scopedOperation,
-                          IOperationSingleton singletonOperation,
-                          IOperationSingletonInstance instanceOperation)
-  {
-    TransientOperation = transientOperation;
-    ScopedOperation = scopedOperation;
-    SingletonOperation = singletonOperation;
-    SingletonInstanceOperation = instanceOperation;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OperationController:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;OperationsController&lt;/span&gt; : Controller
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; OperationService _operationService;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationTransient _transientOperation;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationScoped _scopedOperation;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationSingleton _singletonOperation;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationSingletonInstance _singletonInstanceOperation;
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; OperationsController(OperationService operationService,
-                              IOperationTransient transientOperation,
-                              IOperationScoped scopedOperation,
-                              IOperationSingleton singletonOperation,
-                              IOperationSingletonInstance singletonInstanceOperation)
-  {
-    _operationService = operationService;
-    _transientOperation = transientOperation;
-    _scopedOperation = scopedOperation;
-    _singletonOperation = singletonOperation;
-    _singletonInstanceOperation = singletonInstanceOperation;
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IActionResult Index()
-  {
-    &lt;span style=&#34;color:#228b22&#34;&gt;// viewbag contains controller-requested services
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    ViewBag.Transient = _transientOperation;
-    ViewBag.Scoped = _scopedOperation;
-    ViewBag.Singleton = _singletonOperation;
-    ViewBag.SingletonInstance = _singletonInstanceOperation;
-
-    &lt;span style=&#34;color:#228b22&#34;&gt;// operation service has its own requested services
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    ViewBag.Service = _operationService;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; View();
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;两次请求对比如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/DI-20200809140803.png&#34; alt=&#34;DI-20200809140803&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/DI-20200809140837.png&#34; alt=&#34;DI-20200809140837&#34;&gt;&lt;/p&gt;
-&lt;p&gt;观察在请求中以及请求之间的哪个&lt;code&gt;OperationId&lt;/code&gt;值有所不同。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Transient 对象总是不同的; 每个控制器和每个服务都提供了一个新的实例。&lt;/li&gt;
-&lt;li&gt;Scoped 对象在请求中是相同的，但在不同的请求中是不同的。&lt;/li&gt;
-&lt;li&gt;Singleton 对象对于每个对象和每个请求都是一样的（不管&lt;code&gt;ConfigureServices&lt;/code&gt;中是否提供一个实例）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC%E5%8E%9F%E5%88%99&#34;&gt;依赖反转原则&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/07af9dbbbc4b&#34;&gt;控制反转（IOC）与依赖注入（DI）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/91218464&#34;&gt;.NET Core中的IoC和DI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.martinfowler.com/articles/injection.html&#34;&gt;Inversion of Control Containers and the Dependency Injection pattern&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://flylib.com/books/en/4.444.1.71/1/&#34;&gt;A Simple DIP Example&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1&#34;&gt;Dependency injection in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-- https://www.openheart.icu/cs/dependency-injection/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Dot Net Issue</title>
-        <link>https://www.openheart.icu/cs/dot-net-issue/</link>
-        <pubDate>Thu, 10 Sep 2020 11:00:35 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/dot-net-issue/ -&lt;h1 id=&#34;hot-reload-razor-views&#34;&gt;Hot-Reload Razor Views&lt;/h1&gt;
-&lt;p&gt;在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（&lt;em&gt;it&amp;rsquo;s fundamentally how ASP.NET MVC Core works&lt;/em&gt;）。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Razor files are compiled at both &lt;strong&gt;build&lt;/strong&gt; and &lt;strong&gt;publish&lt;/strong&gt; time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用&lt;strong&gt;运行时编译&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note that run time is not included in this list by default.&lt;/strong&gt; To change this behaviour:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Add the Nuget package &lt;a href=&#34;https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/&#34;&gt;&lt;code&gt;Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Change your &lt;code&gt;Startup.ConfigureServices&lt;/code&gt; code to include runtime compilation:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; ConfigureServices(IServiceCollection services)
-{
-  services
-    .AddControllersWithViews()
-    .AddRazorRuntimeCompilation();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/58300922/how-to-enable-the-view-hot-reloading-in-rider&#34;&gt;How to enable the view hot-reloading in Rider? &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/zh-cn/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0&amp;amp;tabs=visual-studio#runtime-compilation&#34;&gt;Razor file compilation in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;watch-out-project-on-rider&#34;&gt;Watch out Project On Rider&lt;/h1&gt;
-&lt;p&gt;To let Project hot-reload, we can use the &amp;ldquo;Before launch&amp;rdquo; option as a run configuration to make this happen. To do so:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Select Run -&amp;gt; Edit Configuration from the menu options&lt;/li&gt;
-&lt;li&gt;Add a new &lt;code&gt;Before launch&lt;/code&gt;Click the + icon and select the &amp;ldquo;Run Executnal Tool &amp;quot; option from the list&lt;/li&gt;
-&lt;li&gt;In the options that are displayed, provide the following&amp;hellip;
-&lt;ul&gt;
-&lt;li&gt;Name: Watch (or whatever you prefer)&lt;/li&gt;
-&lt;li&gt;Exe path: /usr/local/share/dotnet/dotnet&lt;/li&gt;
-&lt;li&gt;Program Arguments: watch run&lt;/li&gt;
-&lt;li&gt;Working directory: [path to your project where .csproj file resides]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Click &amp;ldquo;OK&amp;rdquo; to apply/save the changes.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;reference-1&#34;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/46349038/jetbrains-rider-run-with-watch&#34;&gt;JetBrains Rider run with watch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;newguid&#34;&gt;NewGuid()&lt;/h1&gt;
-&lt;h2 id=&#34;guid&#34;&gt;GUID&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;全局唯一标识符&lt;/strong&gt;（Globally Unique &lt;strong&gt;Id&lt;/strong&gt;entifier，缩写：&lt;strong&gt;GUID&lt;/strong&gt;；发音为/ˈɡuːɪd/或/ˈɡwɪd/）是一种由&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%AE%97%E6%B3%95&#34;&gt;算法&lt;/a&gt;生成的唯一标识，通常表示成32个16进制数字（0－9，A－F）组成的字符串，如：&lt;code&gt;{21EC2020-3AEA-1069-A2DD-08002B30309D}&lt;/code&gt;，它实质上是一个128位长的二进制整数。GUID一词有时也专指微软对UUID标准的实现。&lt;/p&gt;
-&lt;p&gt;GUID的主要目的是产生完全唯一的数字。在理想情况下，任何计算机和计算机集群都不会生成两个相同的GUID。GUID的总数也足够大，达到了2128（3.4×1038）个，所以随机生成两个相同GUID的可能性是非常小的，但并不为0。所以，用于生成GUID的算法通常都加入了非随机的参数（时间），以保证这种重复的情况不会发生。&lt;/p&gt;
-&lt;p&gt;GUID 主要用于在拥有多个节点、多台计算机的网络或系统中，分配必须具有唯一性的标识符。在 Windows 平台上，GUID 应用非常广泛：注册表、类及接口标识、数据库、甚至自动生成的机器名、目录名等。&lt;/p&gt;
-&lt;p&gt;与自增长id相比较：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;优点&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;GUID&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;1. GUID过长，看表现形式，至少都有32位，长的38位，浪费存储空间 2. GUID是根据硬件设备相关ID以及时间戳生成的 3. GUID不利于检索、外键关联&lt;/td&gt;
-&lt;td&gt;1. 一般来说不担心有冲突的影响，而且，根据GUID的生成规则，还能大致知道生成的计算机硬件设备、时间等信息（但这个有多少意义呢）2. 能在业务层就知道目标ID，而不是数据提交给数据库系统后才确定&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;自增长&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;1. 多数据库同步、读写分离十分不方便。&lt;/td&gt;
-&lt;td&gt;1. 使用简单&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;systemguidnewguidtostring&#34;&gt;System.Guid.NewGuid().ToString()&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Guid.NewGuid()是指生成唯一码的规则&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;systemguidnewguidtostringformat&#34;&gt;System.Guid.NewGuid().ToString(format)&lt;/h3&gt;
-&lt;p&gt;说明符 返回值的格式&lt;/p&gt;
-&lt;p&gt;N 32 位字符：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/p&gt;
-&lt;p&gt;D 由连字符分隔的 32 位数字：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&lt;/p&gt;
-&lt;p&gt;B 括在大括号中、由连字符分隔的 32 位数字：{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}&lt;/p&gt;
-&lt;p&gt;P 括在圆括号中、由连字符分隔的 32 位数字：(xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString()		  : 1f13a943-4c7e-4bfc-aac5-935886591424&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;N&amp;rdquo;)	: 3a81013f9ee549b38f11ee3d50f5bd78&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;D&amp;rdquo;)	: c4219375-c2c8-4639-86e8-8d910ed12186 &amp;ndash; 默认为：D&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;B&amp;rdquo;)	: {a793927d-9a1b-4d25-9562-0a59522db9c0}&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;P&amp;rdquo;)	: (a99839b9-da94-40fd-87a5-4a5e73677b1f)&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;X&amp;rdquo;)	: {0xb294a44e,0x43d9,0x4b60,{0xb5,0xb9,0x32,0x29,0xae,0x46,0x45,0x17}}&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;如果在程序中使用&lt;strong&gt;D&lt;/strong&gt;，则需要注意数据库字段长应为&lt;code&gt;36&lt;/code&gt;而不是32&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;model--entity--dto--viewmodel&#34;&gt;model &amp;amp; entity &amp;amp; dto &amp;amp; viewmodel&lt;/h1&gt;
-&lt;h2 id=&#34;model&#34;&gt;model&lt;/h2&gt;
-&lt;p&gt;model是一个模型，里面装了各种数据，将一个model传递给view，在试图页面就可以使用model里面的数据来呈现到页面上。&lt;/p&gt;
-&lt;h2 id=&#34;entity&#34;&gt;entity&lt;/h2&gt;
-&lt;p&gt;entity是实体，就是和数据表一一对应的，一个实体一张表&lt;/p&gt;
-&lt;p&gt;官方的demo没有entity这个说法，他只有model，model就是表，也是传递给view的model，就是说他的model即是model又是entity。而我们实际运用需要将model分成ViewModel和Entity，甚至还要加入Dto。&lt;/p&gt;
-&lt;h2 id=&#34;viewmodel&#34;&gt;viewmodel&lt;/h2&gt;
-&lt;p&gt;MSDOC详细介绍页面直接返回一个model，这个model就是表中的一条数据。但是在我们实际建站需求中页面上怎么可能只需要一条数据就完了，很多时候还需要其他的数据。比如一个&lt;code&gt;List&amp;lt;entity&amp;gt;&lt;/code&gt;，此时就需要使用ViewModel。&lt;/p&gt;
-&lt;h2 id=&#34;dtodata-transfer-object&#34;&gt;dto(Data transfer object)&lt;/h2&gt;
-&lt;p&gt;entity里包含的是表所有的字段，但在实际应用的时候我们可能不会使用到所有的字段，可能只需要一个名称和编号即可，所以就需要使用dto（数据传输对象）。此时ViewModel就可以使用&lt;code&gt;List&amp;lt;dto&amp;gt;&lt;/code&gt;返回我们部分数据而不是整个表数据。&lt;/p&gt;
-&lt;h2 id=&#34;final&#34;&gt;Final&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们可以花一部分精力去考虑这方面问题，但也不用纠结太多，头大且对项目也没太大帮助。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-2&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/194493331&#34;&gt;什么时候用Model，什么时候用Entity？ - 虚若影的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/30290376&#34;&gt;什么时候用Model，什么时候用Entity？ - 赵劼的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;iviewlocationexpander&#34;&gt;IViewLocationExpander&lt;/h1&gt;
-&lt;p&gt;实现&lt;code&gt;IViewLocationExpander&lt;/code&gt;接口，&lt;code&gt;location&lt;/code&gt;为build时程序检查的views层路径&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;ViewLocationExpander&lt;/span&gt;: IViewLocationExpander
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IEnumerable&amp;lt;String&amp;gt; ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable&amp;lt;String&amp;gt; locations)
-  {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (RazorViewEngine.GetNormalizedRouteValue(context.ActionContext, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;area&amp;#34;&lt;/span&gt;) != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-    {
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[]
-      {
-        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{2}/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{2}/{1}/{0}.cshtml&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;
-      };
-    }
-
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[]
-    {
-      &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{1}/{0}.cshtml&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;
-    };
-  }
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; PopulateValues(ViewLocationExpanderContext context)
-  {
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在Startup注册我们的implement&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;services.AddMvc()
-  .AddRazorOptions(options =&amp;gt; options.ViewLocationExpanders.Add(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; ViewLocationExpander()));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference-3&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.c-sharpcorner.com/article/expanding-razor-view-location-and-sub-areas-in-asp-net-core/&#34;&gt;Expanding Razor View Location And Sub Areas In ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/NonFactors/AspNetCore.Template/blob/378d64f6900f0cc95eee921b5caf81d2bc9efc11/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&#34;&gt;AspNetCore.Template/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;error-the-database-provider-attempted-to-register-an-implementation&#34;&gt;Error: The database provider attempted to register an implementation&amp;hellip;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The database provider attempted to register an implementation of the &amp;lsquo;IRelationalTypeMappingSource&amp;rsquo; service. This is not a service defined by EF and as such must be registered as a provider-specific service using the &amp;lsquo;TryAddProviderSpecificServices&amp;rsquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;检查一下EF版本！！！&lt;/p&gt;
-&lt;p&gt;You are mixing different versions of EF Core!!!&lt;/p&gt;
-&lt;h2 id=&#34;reference-4&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/npgsql/efcore.pg/issues/1441&#34;&gt;Cannot register IRelationalTypeMappingSource #1441&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;c编程规范&#34;&gt;C#编程规范&lt;/h1&gt;
-&lt;h2 id=&#34;命名规范&#34;&gt;命名规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】代码中的命名均不能以&lt;code&gt;下划线或美元符号&lt;/code&gt;开始，也不能以下划线或美元符号结束。&lt;/li&gt;
-&lt;li&gt;【强制】代码中的命名&lt;code&gt;严禁使用拼音与英文混合&lt;/code&gt;的方式，更不允许直接使用中文的方式。&lt;/li&gt;
-&lt;li&gt;【强制】&lt;code&gt;类名&lt;/code&gt;，&lt;code&gt;方法名&lt;/code&gt;，&lt;code&gt;属性&lt;/code&gt;，&lt;code&gt;枚举名&lt;/code&gt;，&lt;code&gt;接口名&lt;/code&gt;，&lt;code&gt;委托&lt;/code&gt;，&lt;code&gt;事件&lt;/code&gt;，&lt;code&gt;命名空间&lt;/code&gt;，使用&lt;code&gt;UpperCamelCase&lt;/code&gt;风格，必须遵从驼峰形式。通用缩写除外，如BO&lt;/li&gt;
-&lt;li&gt;【强制】&lt;code&gt;参数名&lt;/code&gt;、&lt;code&gt;成员变量&lt;/code&gt;、&lt;code&gt;局部变量&lt;/code&gt;都统一使用&lt;code&gt;lowerCamelCase&lt;/code&gt; 风格，必须遵从驼峰形式。如&lt;code&gt;localValue&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;【强制】常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。如&lt;code&gt;MAX_STOCK_COUNT&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;【强制】抽象类命名使用&lt;code&gt;Abstract&lt;/code&gt;或&lt;code&gt;Base&lt;/code&gt;开头；异常类命名使用&lt;code&gt;Exception&lt;/code&gt;结尾；测试类命名以它要测试的类的名称开始，以&lt;code&gt;Test&lt;/code&gt; 结尾。&lt;/li&gt;
-&lt;li&gt;【强制】杜绝完全不规范的缩写，避免望文不知义。&lt;code&gt;AbstractClass&lt;/code&gt;缩写命名成&lt;code&gt;AbsClass&lt;/code&gt;；&lt;code&gt;condition&lt;/code&gt;缩写命名成&lt;code&gt;condi&lt;/code&gt;，此类随意缩写严重降低了代码的可阅读性。&lt;/li&gt;
-&lt;li&gt;【推荐】如果使用到了设计模式，建议在类名中体现出具体模式。如&lt;code&gt;public class OrderFactory&lt;/code&gt;;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;格式规范&#34;&gt;格式规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】大括号的使用约定。如果是大括号内为空，则简洁地写成&lt;code&gt;{}&lt;/code&gt;即可，不需要换行；如果是非空代码块则两个半括号都另起一行和类首对齐。&lt;/li&gt;
-&lt;li&gt;【强制】左小括号和右边相邻字符之间不出现空格；同样，右小括号和左边相邻字符之间也不出现空格。&lt;/li&gt;
-&lt;li&gt;【强制】&lt;code&gt;if/for/while/switch/do&lt;/code&gt;等保留字与小括号之间都必须加空格。&lt;/li&gt;
-&lt;li&gt;【强制】任何运算符左右必须加一个空格。&lt;/li&gt;
-&lt;li&gt;【强制】缩进采用&lt;code&gt;4个空格&lt;/code&gt;，禁止使用tab字符。或者在设置里面把tab设置为四个空格&lt;/li&gt;
-&lt;li&gt;【强制】单行字符数限制不超过120个，超出需要换行，换行时遵循如下原则：
-1） 第二行相对第一行缩进4个空格，从第三行开始，不再继续缩进，参考示例。
-2） 运算符与下文一起换行。
-3） 方法调用的点符号与下文一起换行。
-4） 在多个参数超长，逗号后进行换行。
-5） 在括号前不要换行。&lt;/li&gt;
-&lt;li&gt;【强制】方法参数在定义和传入时，多个参数逗号后边必须加空格。&lt;/li&gt;
-&lt;li&gt;【强制】IDE 的&lt;code&gt;text file encoding&lt;/code&gt;设置为&lt;code&gt;UTF-8&lt;/code&gt;;IDE中文件的&lt;code&gt;换行符&lt;/code&gt;使用&lt;code&gt;Unix&lt;/code&gt;格式，不要使用windows格式。&lt;/li&gt;
-&lt;li&gt;【推荐】没有必要增加若干空格来使某一行的字符与上一行的相应字符对齐。&lt;/li&gt;
-&lt;li&gt;【推荐】方法体内的执行语句组、变量的定义语句组、不同的业务逻辑之间或者不同的语义之间插入一个&lt;code&gt;空行&lt;/code&gt;。相同业务逻辑和语义之间不需要插入空行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;oop-规范&#34;&gt;OOP 规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】避免通过一个类的对象引用访问此类的静态变量或静态方法，无谓增加编译器解析成本，直接用类名来访问即可。&lt;/li&gt;
-&lt;li&gt;【强制】所有的相同类型的包装类对象之间值的比较，全部使用&lt;code&gt;Equals&lt;/code&gt;方法比较。&lt;/li&gt;
-&lt;li&gt;【强制】构造方法里面禁止加入任何业务逻辑，如果有初始化逻辑，请放在&lt;code&gt;Init&lt;/code&gt;方法中。。&lt;/li&gt;
-&lt;li&gt;【推荐】使用索引访问用String的&lt;code&gt;Split&lt;/code&gt;方法得到的数组时，需做最后一个分隔符后有无内容的检查，否则会有抛IndexOutOfBoundsException的风险。&lt;/li&gt;
-&lt;li&gt;【推荐】当一个类有多个构造方法，或者多个同名方法，这些方法应该按顺序放置在一起，便于阅读。&lt;/li&gt;
-&lt;li&gt;【推荐】 类内方法定义顺序依次是：&lt;code&gt;公有方法或保护方法&lt;/code&gt; &amp;gt; &lt;code&gt;属性&lt;/code&gt; &amp;gt; &lt;code&gt;私有方法&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;【推荐】循环体内，字符串的连接方式，使用&lt;code&gt;StringBuilder的append&lt;/code&gt;方法进行扩展。&lt;/li&gt;
-&lt;li&gt;【推荐】类成员与方法&lt;code&gt;访问控制从严&lt;/code&gt;：
-1） 如果不允许外部直接通过new来创建对象，那么构造方法必须是private。
-2） 工具类不允许有public或default构造方法。
-3） 类非static成员变量并且与子类共享，必须是protected。
-4） 类非static成员变量并且仅在本类使用，必须是private。
-5） 类static成员变量如果仅在本类使用，必须是private。
-6） 若是static成员变量，必须考虑是否为final。
-7） 类成员方法只供类内部调用，必须是private。
-8） 类成员方法只对继承类公开，那么限制为protected。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;控制语句&#34;&gt;控制语句&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】在一个&lt;code&gt;switch块&lt;/code&gt;内，每个&lt;code&gt;case&lt;/code&gt;要么通过&lt;code&gt;break/return&lt;/code&gt;等来终止，要么注释说明程序将继续执行到哪一个case为止；在一个switch块内，都必须包含一个&lt;code&gt;default&lt;/code&gt;语句并且放在最后，即使它什么代码也没有。&lt;/li&gt;
-&lt;li&gt;在&lt;code&gt;if/else/for/while/do&lt;/code&gt;语句中必须使用大括号。即使只有一行代码，避免使用单行的形式&lt;/li&gt;
-&lt;li&gt;【推荐】表达异常的分支时，&lt;code&gt;少用if-else&lt;/code&gt;方式，这种方式可以改写成：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (condition) 
-{
-    ...
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; obj;
-}
-&lt;span style=&#34;color:#228b22&#34;&gt;// 接着写else的业务逻辑代码;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【推荐】除常用方法（如getXxx/isXxx）等外，不要在条件判断中执行其它复杂的语句，将复杂逻辑判断的结果赋值给一个有意义的布尔变量名，以提高可读性。&lt;/li&gt;
-&lt;li&gt;【推荐】&lt;code&gt;循环体&lt;/code&gt;中的语句要&lt;code&gt;考量性能&lt;/code&gt;，以下操作尽量移至循环体外处理，如&lt;code&gt;定义对象、变量、获取数据库连接&lt;/code&gt;，进行不必要的try-catch操作（这个try-catch是否可以移至循环体外）。&lt;/li&gt;
-&lt;li&gt;【参考】下列情形，需要进行&lt;code&gt;参数校验&lt;/code&gt;：
-1） 调用频次低的方法。
-2） 执行时间开销很大的方法。此情形中，参数校验时间几乎可以忽略不计，但如果因为参数错误导致中间执行回退，或者错误，那得不偿失。
-3） 需要极高稳定性和可用性的方法。
-4） 对外提供的开放接口，不管是RPC/API/HTTP接口。
-5） 敏感权限入口。&lt;/li&gt;
-&lt;li&gt;【参考】下列情形，不需要进行参数校验：
-1） 极有可能被循环调用的方法。但在方法说明里必须注明外部参数检查要求。
-2） 底层调用频度比较高的方法。
-3） 被声明成private只会被自己代码所调用的方法，如果能够确定调用方法的代码传入参数已经做过检查或者肯定不会有问题，此时可以不校验参数。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;注释规范&#34;&gt;注释规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】所有的类都必须添加创建者和创建日期。&lt;/li&gt;
-&lt;li&gt;【强制】方法内部单行注释，在被注释语句上方另起一行，使用&lt;code&gt;//&lt;/code&gt;注释。方法内部多行注释使用&lt;code&gt;/* */&lt;/code&gt;注释，注意与代码对齐。&lt;/li&gt;
-&lt;li&gt;【强制】所有的枚举类型字段必须要有&lt;code&gt;注释&lt;/code&gt;，说明每个数据项的用途。&lt;/li&gt;
-&lt;li&gt;【推荐】代码修改的同时，注释也要进行相应的修改，尤其是参数、返回值、异常、核心逻辑等的修改。&lt;/li&gt;
-&lt;li&gt;【参考】合理处理注释掉的代码。尽量在目标代码上方&lt;code&gt;详细说明&lt;/code&gt;，而不是简单的注释掉。如果无用，则&lt;code&gt;直接删除&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;【参考】对于注释的要求：
-第一、能够准确反应设计思想和代码逻辑；
-第二、能够描述业务含义，使别的程序员能够迅速了解到代码背后的信息。完全没有注释的大段代码对于阅读者形同天书，注释是给自己看的，即使隔很长时间，也能清晰理解当时的思路；注释也是给继任者看的，使其能够快速接替自己的工作。&lt;/li&gt;
-&lt;li&gt;【参考】好的命名、代码结构是自解释的，注释力求精简准确、表达到位。避免出现注释的一个极端：过多过滥的注释，代码的逻辑一旦修改，修改注释是相当大的负担。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;http-error-50019---internal-server-error&#34;&gt;HTTP Error 500.19 - Internal Server Error&lt;/h1&gt;
-&lt;p&gt;The requested page cannot be accessed because the related configuration data for the page is invalid.&lt;/p&gt;
-&lt;h2 id=&#34;detailed-error-information&#34;&gt;Detailed Error Information:&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:right&#34;&gt;Module&lt;/th&gt;
-&lt;th&gt;IIS Web Core&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Notification&lt;/td&gt;
-&lt;td&gt;BeginRequest&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Handler&lt;/td&gt;
-&lt;td&gt;Not yet determined&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Error Code&lt;/td&gt;
-&lt;td&gt;0x80070021&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Config Error&lt;/td&gt;
-&lt;td&gt;This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&amp;ldquo;Deny&amp;rdquo;), or set explicitly by a location tag with overrideMode=&amp;ldquo;Deny&amp;rdquo; or the legacy allowOverride=&amp;ldquo;false&amp;rdquo;.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;Heres what worked for me, had a similar problem on my new laptop which had windows 10.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Search for &amp;ldquo;Turn windows features on or off&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Check &amp;ldquo;Internet Information Services&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Check &amp;ldquo;World Wide Web Services&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Check &amp;ldquo;Application Development Features&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Enable all items under this&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;try again, now it should work.&lt;/p&gt;
-&lt;h2 id=&#34;reference-5&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/34199976/iis-config-error-this-configuration-section-cannot-be-used-at-this-path&#34;&gt;IIS Config Error - This configuration section cannot be used at this path&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/43976092/excel-break-long-lines-when-importing-csv-file&#34;&gt;Excel break long lines when importing csv file&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Each instance of Microsoft Excel 2007, Excel 2010, and Excel 2013 32-bit is limited to 2 gigabyte (GB) of memory (internal heap space). &lt;strong&gt;Each instance is also limited to 32,760 source cells&lt;/strong&gt; when you perform a smart fill operation. When you copy or fill large sections of a worksheet, one or both of these limitations may affect the result.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-6&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/office/troubleshoot/excel/copy-formulas-over-large-area&#34;&gt;&amp;ldquo;Not enough memory&amp;rdquo; when you copy formulas over large area in Excel&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4019466/httplistener-access-denied&#34;&gt;HttpListener Access Denied&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;netsh http add urlacl &lt;span style=&#34;color:#00688b&#34;&gt;url&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://+:3032/&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt;=everyone
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Documentation is &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/ms733768.aspx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;internalsvisibleto&#34;&gt;internalsvisibleto&lt;/h1&gt;
-&lt;p&gt;To make interal type class/method or other object be visible in Tests project. In this way, we can use those object in our Unit Test.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[assembly: InternalsVisibleTo(&amp;#34;UnitTests&amp;#34;)]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;.csproj:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-XML&#34; data-lang=&#34;XML&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;ItemGroup&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;InternalsVisibleToSuffix&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;Include=&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;.Tests&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;/&amp;gt;&lt;/span&gt; 
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/ItemGroup&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference-7&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=net-5.0&#34;&gt;InternalsVisibleToAttribute Class&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1211707/how-to-access-classes-in-another-assembly-for-unit-testing-purposes&#34;&gt;How to access classes in another assembly for unit-testing purposes?&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;use-fake-method-in-unit-test-to-implement-the-non-mockable-object&#34;&gt;Use Fake Method in Unit Test to implement the non-mockable Object.&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Microsoft Fakes helps you isolate the code you are testing by replacing other parts of the application with &lt;em&gt;stubs&lt;/em&gt; or &lt;em&gt;shims&lt;/em&gt;. These are small pieces of code that are under the control of your tests. By isolating your code for testing, you know that if the test fails, the cause is there and not somewhere else. Stubs and shims also let you test your code even if other parts of your application are not working yet.&lt;/p&gt;
-&lt;p&gt;Fakes come in two flavors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A &lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019#get-started-with-stubs&#34;&gt;stub&lt;/a&gt; replaces a class with a small substitute that implements the same interface. To use stubs, you have to design your application so that each component depends only on interfaces, and not on other components. (By &amp;ldquo;component&amp;rdquo; we mean a class or group of classes that are designed and updated together and typically contained in an assembly.)&lt;/li&gt;
-&lt;li&gt;A &lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019#get-started-with-shims&#34;&gt;shim&lt;/a&gt; modifies the compiled code of your application at run time so that instead of making a specified method call, it runs the shim code that your test provides. Shims can be used to replace calls to assemblies that you cannot modify, such as .NET assemblies.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.microsoft.com/en-us/visualstudio/test/media/fakes-2.png?view=vs-2019&#34; alt=&#34;Fakes replace other components&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-8&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019&#34;&gt;Isolate code under test with Microsoft Fakes&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-- https://www.openheart.icu/cs/dot-net-issue/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

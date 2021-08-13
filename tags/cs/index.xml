@@ -7,7 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 21 Nov 2020 22:30:12 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Aug 2021 15:15:57 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Working Effectively with Legacy Code</title>
+      <link>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</link>
+      <pubDate>Thu, 12 Aug 2021 15:15:57 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</guid>
+      <description>The Mechanics of Change Changing Software Four Reasons to Change Software  Adding a feature Fixing a bug Improving the design Optimizing resource usage  Changing Software Dependency-Breaking Techniques </description>
+    </item>
+    
+    <item>
+      <title>CS Conferences</title>
+      <link>https://www.openheart.icu/cs/cs-conferences/</link>
+      <pubDate>Mon, 09 Aug 2021 13:43:10 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/cs-conferences/</guid>
+      <description>List of computer science conferences </description>
+    </item>
+    
+    <item>
+      <title>Design Patterns</title>
+      <link>https://www.openheart.icu/cs/design-patterns/</link>
+      <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/design-patterns/</guid>
+      <description>Structural Design Patterns Creational Design Patterns Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.
+Implementing the pattern requires that you provide the following:</description>
+    </item>
+    
     <item>
       <title>Adaptive Code</title>
       <link>https://www.openheart.icu/cs/adaptive-code/</link>
@@ -21,6 +49,18 @@
   Scrum scrum.org 2020-Scrum-Guide-US
  Scrum is:
  Lightweight Simple to understand Difficult to master   What  All work is prioritized on the product backlog and, at the start of each sprint, the development team commits to the work that they will complete during the new iteration by placing it on the sprint backlog.</description>
+    </item>
+    
+    <item>
+      <title>Unit Test Practice</title>
+      <link>https://www.openheart.icu/cs/unit-test-practice/</link>
+      <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/unit-test-practice/</guid>
+      <description>Unit Test Practice  纸上得来终觉浅，绝知此事要躬行。
+ Shifting Left 所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )
+ Shift Left is a practice intended to find and prevent defects early in the software delivery process. The idea is to improve quality by moving tasks to the left as early in the lifecycle as possible.
+In the traditional software development model, requirements are kept on the left side of the plan, and the delivery and testing requirements on the right.</description>
     </item>
     
     <item>

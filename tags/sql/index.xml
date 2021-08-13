@@ -14,7 +14,7 @@
       <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/sqlserver/</guid>
-      <description>SQLserver Common Operation SQLCMD sqlcmd -S localhost -d CSI10 -q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -d CSI10 -Q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -U SA -Q &amp;#39;select @@VERSION&amp;#39; sqlcmd -S localhost  Optimize Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF SET IDENTITY_INSERT Table1 ON --Do INSERT  SET IDENTITY_INSERT Table1 OFF SQL-Server: The backup set holds a backup of a database other than the existing   Don&amp;rsquo;t create an empty database and restore the .</description>
+      <description>Common Operation SQLCMD sqlcmd -S localhost -d CSI10 -q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -d CSI10 -Q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -U SA -Q &amp;#39;select @@VERSION&amp;#39; sqlcmd -S localhost  Issues Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF SET IDENTITY_INSERT Table1 ON --Do INSERT  SET IDENTITY_INSERT Table1 OFF SQL-Server: The backup set holds a backup of a database other than the existing   Don&amp;rsquo;t create an empty database and restore the .</description>
     </item>
     
     <item>

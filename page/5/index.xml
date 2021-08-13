@@ -6,9 +6,989 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Tue, 25 May 2021 23:29:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Aug 2021 15:15:57 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Nginx</title>
+        <link>https://www.openheart.icu/cs/nginx/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/nginx/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/nginx/ -&lt;h1 id=&#34;reverse-proxy--forward-proxy&#34;&gt;Reverse Proxy &amp;amp; Forward Proxy&lt;/h1&gt;
+&lt;h2 id=&#34;forward-proxy正向代理&#34;&gt;Forward Proxy（正向代理）&lt;/h2&gt;
+&lt;p&gt;我想访问 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; ，然而大家都知道它被墙了，我没法直接访问它。于是我连接了一个 VPN 服务并设定其为本地 HTTP 访问的代理，然后我再访问 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; ，此时我的请求被该 VPN 服务代理了，它帮我访问了 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; 然后把结果返回给我。&lt;/p&gt;
+&lt;p&gt;正向代理隐藏真实客户端，www.google.com 并不知道访问他的是我。&lt;/p&gt;
+&lt;h2 id=&#34;reverse-proxy反向代理&#34;&gt;Reverse Proxy（反向代理）&lt;/h2&gt;
+&lt;p&gt;当我们在访问 &lt;a href=&#34;http://www.baidu.com&#34;&gt;www.baidu.com&lt;/a&gt; 时，百度背后有成千上万个服务器为我们服务，但具体是哪一台，我们并不知道。此时 &lt;a href=&#34;http://www.baidu.com&#34;&gt;www.baidu.com&lt;/a&gt; 就充当一个反向代理服务器，帮我们把请求转发到真实的服务器。&lt;/p&gt;
+&lt;p&gt;反向代理隐藏真实服务端，Nginx就是很好的反向代理服务器，用来做&lt;strong&gt;负载均衡&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;正向代理与反向代理两者的区别在于代理的对象不一样：&lt;strong&gt;正向代理&lt;/strong&gt;代理的对象是客户端，&lt;strong&gt;反向代理&lt;/strong&gt;代理的对象是服务端。&lt;/p&gt;
+&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;$sudo&lt;/span&gt; nginx
+
+sudo pkill -f nginx &amp;amp; &lt;span style=&#34;color:#658b00&#34;&gt;wait&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;$!&lt;/span&gt;
+
+sudo systemctl start nginx
+
+sudo systemctl restart nginx
+
+nginx -c /etc/nginx/nginx.conf
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 重启服务&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置二级域名&#34;&gt;设置二级域名&lt;/h2&gt;
+&lt;p&gt;增加一个新的&lt;code&gt;listen 80&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;server_name&lt;/code&gt;设置为二级域名地址&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;root&lt;/code&gt;指向项目地址&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;server {&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;listen       80;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;server_name  site42.openheart.icu;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;location / {&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;root         /usr/project/openheart;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;强制浏览器使用本地缓存&#34;&gt;强制浏览器使用本地缓存&lt;/h2&gt;
+&lt;p&gt;cache-control/expires&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# nginx.conf 中配置&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)${&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires 30d;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location ~ .*\.(js|css)?${&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires 1h;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/nginx/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>PHP</title>
+        <link>https://www.openheart.icu/cs/php/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/php/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/php/ -&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl start php-fpm
+systemctl restart php-fpm
+
+service php-fpm start
+service php-fpm restart
+service php-fpm stop
+service php-fpm reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt; = nginx
+&lt;span style=&#34;color:#00688b&#34;&gt;group&lt;/span&gt; = users
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/php/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>English</title>
+        <link>https://www.openheart.icu/speech/english/</link>
+        <pubDate>Mon, 15 Jun 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/speech/english/</guid>
+        <description>42th openheart https://www.openheart.icu/speech/english/ -&lt;h1 id=&#34;apples-glowing-glass-sphere-is-the-newest-spectacle-on-singapores-skylinehttpswwwwallpapercomtechnologyapple-glowing-glass-sphere-newest-spectacle-singapore-skyline&#34;&gt;&lt;a href=&#34;https://www.wallpaper.com/technology/apple-glowing-glass-sphere-newest-spectacle-singapore-skyline&#34;&gt;Apple’s glowing glass sphere is the newest spectacle on Singapore’s skyline&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Designed by &lt;a href=&#34;https://www.wallpaper.com/tags/foster-partners&#34;&gt;Foster + Partners&lt;/a&gt;, the new &lt;em&gt;Apple Marina Bay Sands store(滨海湾金沙店)&lt;/em&gt;, due to open on Thursday, is a self-supporting dome entirely surrounded by water&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Physics loves a sphere, its preferred, purest form. For architects though, &lt;em&gt;the box trumps the bubble(盒子胜过透明原型罩)&lt;/em&gt;. They’re easier to engineer and offer more useful space. The new Apple Marina Bay Sands store in Singapore goes with the physics. And, if not actually a complete sphere, it’s near enough to be considered a daring piece of architectural &lt;em&gt;chutzpah(肆无忌惮)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Designed by &lt;a href=&#34;https://www.wallpaper.com/tags/foster-partners&#34;&gt;Foster + Partners&lt;/a&gt; – the architects behind the &lt;a href=&#34;https://www.wallpaper.com/design/jony-ive-apple-park&#34;&gt;Apple Park HQ building in Cupertino&lt;/a&gt; and many of the tech giant’s flagship stores – the new outlet appears to be a giant ball, floating if not bobbing in Marina Bay. The structure is actually a dome, 30 metres in diameter, 17 metres tall, made up of 114 glass panels and sitting on an existing concrete foundation.&lt;/p&gt;
+&lt;p&gt;‘&lt;em&gt;It’s sort of an igloo(有点像冰屋)&lt;/em&gt;,’ says Stefan Behling, Senior Executive Partner at &lt;a href=&#34;https://www.wallpaper.com/tags/foster-partners&#34;&gt;Foster + Partners&lt;/a&gt;. ’It’s all structural glass with very thin, polished stainless steel ribs, which seem to &lt;em&gt;dematerialise(使消失，使丧失物质形态)&lt;/em&gt;. And obviously no columns, which more or less goes without saying these days. You won’t find anything with a more delicate structure, probably in the world.’&lt;/p&gt;
+&lt;p&gt;Engineering the structure was tricky enough, but &lt;a href=&#34;https://www.wallpaper.com/tags/foster-partners&#34;&gt;Foster + Partners&lt;/a&gt; spent as much time and effort engineering the experience it creates. ‘Let’s just say it’s a glass bubble,’ says Behling. ‘But if it was just that it would be too hot, too bright, too noisy. Not the right thing. The idea was that to come into a space was like living in a daylight light fitting.’&lt;/p&gt;
+&lt;p&gt;Crucial to the control and regulation of light inside the store, Apple’s third in Singapore, are a series of interior baffles, smaller versions of those on the exterior of Apple Park but doing a similar job. These triangular wedges are arranged into horizontal rings that get smaller as they progress up the sides of the dome and provide shade but also bounce light upwards. ‘You see the same effect at Apple Park,’ says Behling. ‘Light bounces off one baffle to the underside of the one above. And the effect is really astonishing.’&lt;/p&gt;
+&lt;p&gt;The effect within the Marina Bay store, continues Behling, is a natural, ‘magical diffused light’ that feels congruous with the diffused light common to Singapore. ‘We’ve been saying for years that the best way to see the product is actually to see outdoors.’ In fact, Behling hopes that being inside the store should feel like being outside, only better, given the air conditioning. (And, he admits, air conditioning was unavoidable. ‘I’m obsessed with natural ventilation but in this part of the world you just can’t do it.’)&lt;/p&gt;
+&lt;p&gt;The baffles, &lt;em&gt;filled with foam and coated with fabric(填充泡沫并用织物覆盖)&lt;/em&gt;, serve another function; smoothing out what could have been &lt;em&gt;disturbingly harsh acoustics(令人不安的恶劣声学).&lt;/em&gt; And the effects of the baffles on sound and light, as well as issues of larger structural soundness, were, says Behling, ‘&lt;em&gt;obsessively modelled(痴迷建模)&lt;/em&gt;’ on computers and then tested with &lt;em&gt;full-scale mockups(全尺寸样机)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Far simpler to model was &lt;em&gt;the path of a disc of light(光线路径)&lt;/em&gt; created by a &lt;em&gt;Pantheon-style semi-transparent three-metre-wide oculus(万神殿风格半透明三米宽的眼睛)&lt;/em&gt; at the top of the dome. ‘I can tell you exactly where that &lt;em&gt;splodge(污点)&lt;/em&gt; of light will be at any time on any day of the year.’&lt;/p&gt;
+&lt;p&gt;The store’s &lt;em&gt;diffused glow(弥漫的辉光)&lt;/em&gt; should be a pull, not just from the waterfront, connected to the store via a footbridge, but also from below. That underwater concrete foundation actually &lt;em&gt;houses(位于)&lt;/em&gt; the store’s lower floor and links to an entrance within the Marina Bay Sands shopping mall.&lt;/p&gt;
+&lt;p&gt;Reaching the bubble from the basement requires two escalators and &lt;a href=&#34;https://www.wallpaper.com/tags/foster-partners&#34;&gt;Foster + Partners&lt;/a&gt; have worked on making that journey as theatrical, in a controlled Apple way, as possible. ‘There is this really dramatic sequence,’ says Behling. ‘You come into quite a compressed store in the lower level, which has the display tables which feel familiar. But then you &lt;em&gt;realise(vt.实现)&lt;/em&gt; there’s a glow at the end. And you see these escalators which travel through a quite magical polished stainless steel tunnel which creates a crazy kaleidoscopic effect and then you enter this very spectacular space. It’s definitely not a store where you will say, “yeah, I’ve seen that before”.&lt;/p&gt;
+&lt;p&gt;And if a giant glass ball could come-off as extravagant and a little show-offy, it is intended to add something a little calmer to the cluttered and chaotic Singapore skyline. ‘We always say that with the stores we design from the inside out,’ says Behling. ‘That the most important thing is the product, people interacting with the product and making that a great moment. But there was also a huge responsibility here to be a new feature on the Singapore skyline. It’s a super pure shape but there’s an enormous amount of innovation and complexity involved.’&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;INFORMATION&lt;/p&gt;
+&lt;p&gt;Apple Marina Bay Sands opens on Thursday, 10 September 2020. Visits on opening day will be by appointment only, customers can visit &lt;a href=&#34;http://apple.com/sg/marinabaysands&#34;&gt;apple.com/sg/marinabaysands&lt;/a&gt; to choose from available times&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ADDRESS&lt;/p&gt;
+&lt;p&gt;2 Bayfront Avenue, B2-06, Singapore 018972&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;apple-marina-bay-sands-opens-thursday-in-singaporehttpswwwapplecomnewsroom202009apple-marina-bay-sands-opens-thursday-in-singapore&#34;&gt;&lt;a href=&#34;https://www.apple.com/newsroom/2020/09/apple-marina-bay-sands-opens-thursday-in-singapore/&#34;&gt;Apple Marina Bay Sands opens Thursday in Singapore&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apple’s most ambitious retail project sits on the waters of Marina Bay&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.apple.com/newsroom/images/environments/stores/apple_nso-marina-bay-sands_exterior_09072020_Full-Bleed-Image.jpg.large_2x.jpg&#34; alt=&#34;Apple Marina Bay Sands&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Singapore — Apple today previewed Apple Marina Bay Sands, the first Apple Store to sit directly on the water. Appearing as a sphere floating on the iridescent Marina Bay, the store introduces a new and captivating retail experience at one of the most iconic locations in Singapore.&lt;/p&gt;
+&lt;p&gt;Entirely surrounded by water, Apple Marina Bay Sands offers uninterrupted 360-degree panoramic views of the city and its spectacular skyline. The sphere is a first-of-its-kind, all-glass dome structure that is fully self-supported, comprised of 114 pieces of glass with only 10 narrow vertical mullions for structural connection. As Apple’s third retail location in Singapore, the new store creates an unforgettable space for customers.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.apple.com/newsroom/images/environments/stores/apple_nso-marina-bay-sands_oculus_09072020_big.jpg.large_2x.jpg&#34; alt=&#34;oculus&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Inspired by the Pantheon in Rome, an oculus located at the apex of the dome provides a flooding ray of light that travels through the space. The interior of the glass is lined with custom baffles, each uniquely shaped to counter sun angles and provide a nighttime lighting effect. With trees lining the interior of the dome, the green garden city of Singapore flows into the store, providing additional shading and soft shadows through the foliage.&lt;/p&gt;
+&lt;p&gt;“We couldn’t be more excited to open the breathtaking Apple Marina Bay Sands in Singapore, building on our commitment to this special place that began more than 40 years ago,” said Deirdre O’Brien, Apple’s senior vice president of Retail + People. “Our passionate and talented team is ready to welcome this community to our new store and deliver the care and support that our customers around the world love.”&lt;/p&gt;
+&lt;p&gt;Visitors entering the store encounter a dramatic reveal into the massive volume of the dome, where they can explore curated Apple products and accessories, receive personal technical support from Geniuses, or simply take in the stunning view of Marina Bay. The Forum is centered around a Video Wall, which will serve as the stage for Today at Apple sessions featuring Singapore’s artists, musicians, and creators. Entrepreneurs and developers interested in receiving training and advice can meet with Apple team members in Apple’s first underwater Boardroom, located on the lower level of the store.&lt;/p&gt;
+&lt;p&gt;Apple’s rich history in Singapore spans more than 40 years, beginning with the first corporate office in Ang Mo Kio. In 1981, the team was responsible for producing the majority of printed circuit boards for Apple II computers worldwide. Since then, Apple has expanded its corporate and retail presence, and now supports over 55,000 jobs across the entire Apple ecosystem.&lt;/p&gt;
+&lt;p&gt;The 148-person team at Apple Marina Bay Sands, who collectively speak over 23 languages, will welcome visitors for the first time on Thursday, September 10 at 10 a.m. SGT. The store will implement the same rigorous health measures for both employees and visitors seen across all Apple Store locations, including a mask requirement, temperature checks, and social distancing.&lt;/p&gt;
+&lt;p&gt;To ensure the health and well-being of guests, visits to Apple Marina Bay Sands on Thursday will be by appointment only. Customers can visit &lt;a href=&#34;http://apple.com/sg/marinabaysands&#34;&gt;apple.com/sg/marinabaysands&lt;/a&gt; to choose from available times, and each non-transferable reservation admits one person. Capacity will be limited, so guests may experience wait times before entering the store.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.apple.com.cn/newsroom/images/environments/stores/apple_nso-marina-bay-sands_aerial-view_09072020_Full-Bleed-Image.jpg.large_2x.jpg&#34; alt=&#34;Apple Marina Bay Sands&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Apple revolutionized personal technology with the introduction of the Macintosh in 1984. Today, Apple leads the world in innovation with iPhone, iPad, Mac, Apple Watch, and Apple TV. Apple’s five software platforms — iOS, iPadOS, macOS, watchOS, and tvOS — provide seamless experiences across all Apple devices and empower people with breakthrough services including the App Store, Apple Music, Apple Pay, and iCloud. Apple’s more than 100,000 employees are dedicated to making the best products on earth, and to leaving the world better than we found it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.apple.com.cn/newsroom/2020/09/apple-marina-bay-sands-opens-thursday-in-singapore/&#34;&gt;EXPLORE Another Version In Chinese NOW&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;richard-mille-revisits-space-timehttpswwwwallpapercomw-bespokerichard-mille-7201-chronograph-launch&#34;&gt;&lt;a href=&#34;https://www.wallpaper.com/w-bespoke/richard-mille-7201-chronograph-launch&#34;&gt;Richard Mille revisits space time&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On the occasion of the RM72-01 Lifestyle In-House Chronograph launch, Benjamin Millepied &amp;amp; Thomas Roussel, two hybrid artists, have collaborated with the brand in a primal desert encounter to produce W I T H I N.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://wallpaper.froont.com/tom-knigjht/f1gsrd/_static-uploads/images/thumbnail/richard-0001-melissaroldan-melissaroldan-20200710-dsc-5650-copy-edit4_1.jpg_1600x1067.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Richard Mille’s RM 72-01 is a new kind of hybrid timepiece; the intersection of art and technology, a ‘metronome of the emotions’, all curves, warm colours and carefully detailed scale. It is also the first watch in the history of Richard Mille to be equipped with a patented flyback chronograph with oscillating double pinions that is entirely produced designed, crafted and assembled at the brand’s workshops in Les Breuleux, Switzerland.&lt;/p&gt;
+&lt;p&gt;Available in four versions—5N gold, titanium and white or black ceramic, this highly-architectural, grade 5 titanium model is a distillation of the maker’s pure mechanics and hand-crafted finishing. Driven by the in-house Calibre CRMC1, automatic winding movement with a 50 hours power reserve, its crown—in 5N gold and black TZP ceramic—is pulled to reveal a function indicator offering a choice of winding (W), time setting (H) date adjustment (D). Two pushers require the exact same force to activate the various different functions—start, stop and return to zero, whilst in flyback mode or not. The exact pressure required determined to the very last gram, so ensure engagement of the mechanism is distinct, yet gentle.&lt;/p&gt;
+&lt;p&gt;The display, and the connection between the minutes and hours, are decoupled from the seconds wheel with counters for 24 hours and 60 minutes positioned at 5 o’clock and 2 o’clock respectively. By demonstrating that a chronograph is not just for counting short periods of time, this is a watch, explains Richard Mille, that “sets its own tempo, imposes its own rhythm. Every component is interlinked and plays its part, choreographed to the last micrometre, to make an indelible mark on its era.”&lt;/p&gt;
+&lt;p&gt;To capture the spirit, aesthetics and mechanics of this extraordinary timepiece on film Richard Mille turned to two modern hybrid artists - dancer and choreographer Benjamin Millepied and composer Thomas Roussel – to make a short film. With the elegant methods of dance and the creative process of watchmaking, both sharing an obsession with achieving harmonious movement and meticulous tuning - the same actions repeated a hundred times to produce the perfect gesture, the film chose the Joshua Tree desert “an endless uncluttered, mineral environment…a landscape, out of time” for its location.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;‘Every component is interlinked and plays its part, choreographed to the last micrometre, to make an indelible mark on its era.’&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Benjamin Millepied, international choreographer, creator of the ballets for the film Black Swan, the former head of the Paris Opera and the founder of the LA Dance Project, behind the camera for the project, encouraged raw human energy to express itself with male and female dancers, demonstrate their natural vitality in an unstructured and organic pas-de-deux, the dancers follow a parallel, cyclical choreography that counts every second, and expresses time and space in an intense, life-affirming way.&lt;/p&gt;
+&lt;p&gt;The desert environment was similarly inspirational for composer Thomas Roussel. Known for his metaphysically inspired work - in 2015, his Prequell composition set gravitational waves to music, representing the distortion of time, the music for Richard Mille film project drew on a space-time theme also. “I created music where time dilates and duplicates itself, ” explains Roussel. Starting from a sample of the watch’s stopwatch, the composer injects a tempo, that matches the energy of the dancers. Around a “tourbillon of vigour”, Roussel winds a repeating, mysterious piece of primordial music. The percussion keeps the beat as if counting seconds. This collective work, explains the collective of artists and watchmakers, is “a return to a time when the core elements of earth, stone and water provided the cradle of humanity…the RM 72-01 embodying this movement of origins, this fusion of human bodies, sounds and time.”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/wp_extra_large/s3/2020/09/rm-land.jpg&#34; alt=&#34;RM72-01&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;INFORMATION&lt;/p&gt;
+&lt;p&gt;Benjamin Millepied portrait : Robert Jaso&lt;/p&gt;
+&lt;p&gt;Thomas Roussel portrait : Mathieu César&lt;/p&gt;
+&lt;p&gt;W I T H I N film and hero shots : Melissa Roldan&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;EXPLORE NOW&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.richardmille.com/page/within&#34;&gt;RICHARD MILLE&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;pat-mcgrath-labs-and-supreme-launch-new-lipstickhttpswwwwallpapercombeauty-groomingpat-mcgrath-labs-and-supreme-launch-new-lipstick&#34;&gt;&lt;a href=&#34;https://www.wallpaper.com/beauty-grooming/pat-mcgrath-labs-and-supreme-launch-new-lipstick&#34;&gt;Pat McGrath Labs and Supreme launch new lipstick&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The cult brands collaborate on the most sought after beauty launch this year.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/wp_extra_large/s3/2020/09/landscape_supreme.jpg&#34; alt=&#34;Pat McGrath Labs and Supreme&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Fashion and beauty partnerships are nothing new, but the latest collaboration between Supreme and Pat McGrath Labs has already proven to be a particularly perfect match in &lt;em&gt;hype heaven(炒作天堂)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Together, they’ve created a new ‘Supreme’ MatteTrance lipstick that combines the most recognisable aspects of their cult brands-Supreme’s signature red and white logo, McGrath’s high-intensity matte lip shades – to create what could well be the most sought after &lt;a href=&#34;https://www.wallpaper.com/beauty-grooming&#34;&gt;beauty&lt;/a&gt; debut this year.&lt;/p&gt;
+&lt;p&gt;The lipstick is available in one shade only, a deep red with cool-blue undertones designed by McGrath to be the same colour as the skatewear brand’s iconic logo.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/supremelipstick_body3_1.jpg?itok=UrXxPgL-&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It is the first time Supreme, now 26 years old, has branched into beauty and it couldn’t have found a more suitable partner in the industry than the beloved McGrath. Since launching her namesake brand four years ago, McGrath has garnered a legion of fans as devoted to her products as Supreme’s famously are to theirs.&lt;/p&gt;
+&lt;p&gt;That means those looking to get their hands on the new lipstick might have to prepare themselves for disappointment. Just launched, the product has already sold out in a mere eight seconds.&lt;/p&gt;
+&lt;p&gt;Fingers crossed there’s another drop skating our way.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;INFORMATION&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.supremenewyork.com/&#34;&gt;supremenewyork.com&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;introducing-the-mc20--the-new-maserati-super-sports-carhttpswwwwallpapercomtransportmaserati-mc20-sports-car&#34;&gt;&lt;a href=&#34;https://www.wallpaper.com/transport/maserati-mc20-sports-car&#34;&gt;Introducing the MC20 – the new Maserati super sports car&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We spoke to Klaus Busse, the man who heads up FCA’s design team, overseeing Fiat, Abarth, Lancia, and Alfa Romeo, as well as Maserati, about the origins and aspirations for the company’s new super car model&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/wp_extra_large/s3/2020/09/16858-maseratimc20_land.jpg&#34; alt=&#34;maseratimc20&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Fortune favours the brave. The 1970s were an era of mid-engine madness, when the big sports car makers explored the packaging options of putting the engine behind the driver, allowing for better balance, sleeker aerodynamics, and — most importantly of all — more outrageous styling. Some of the greatest Italian &lt;a href=&#34;https://www.wallpaper.com/tags/cars&#34;&gt;cars&lt;/a&gt; of the era benefitted from this layout, from Ferrari’s first mid-engine road car, the 1971 Berlinetta Boxer, through to the angular Lamborghini Countach that ushered in the supercar era. Their compatriots, Maserati, made a similar transition from front-engine sports &lt;a href=&#34;https://www.wallpaper.com/tags/cars&#34;&gt;cars&lt;/a&gt; and grand tourers to low-slung two-seaters, with the introduction of the 1971 Bora and its successor, the Merak (actually a four-seater, albeit with very small rear seats). For Maserati, it was an expensive foray into new territory. The 70s fuel crisis, a short but ultimately disastrous spell of ownership by the French marque Citroen, and perpetual cash flow problems meant that Maserati was never able to capitalise on the super sports genre, and the company that ultimately emerged focused almost exclusively on sports GTs and saloons. In 1993 Maserati reconnected with its Italian ancestry with its sale to Fiat and the company has been part of the FCA Group (Fiat Chrysler Automobiles) since 2011.&lt;/p&gt;
+&lt;p&gt;Now the mid-engine Maserati is back in the form of the MC20. Unveiled in early September, it is the car to take Maserati into a new decade, as well as being the first all-new product from the company since the launch of the Ghibli in 2013. On the one hand, it’s a spiritual evolution of a very limited-edition machine, the MC12 Stradale, a raw road-going version of GT racer, developed from the Ferrari Enzo in 2004 of which just 50 examples were made. But on the other it’s a challenger to the status quo established by Ferrari and Lamborghini and soon &lt;a href=&#34;https://www.wallpaper.com/tags/aston-martin&#34;&gt;Aston Martin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/16860-maseratimc20.jpg?itok=pwf4wd-x&#34; alt=&#34;MC20&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The Maserati Corse 2020 is about speed, dynamics and power. Built around a carbon-fibre monocoque, the MC20 is pared back and functional, inside and out. It exudes a compact, taut capability, and the white finish on the show car’s bodywork is a world away from the glossy, shouty reds and yellows of its rivals. Scissor doors allow access to a dark, focused cockpit, with plenty of exposed carbon-fibre and Alcantara finishes. The audio system was designed in conjunction with Sonus Faber, the acclaimed Italian loudspeaker manufacturers, and is controlled via a dash-mounted tablet. The car will debut with a twin turbo V6, with a hybrid and pure electric version further down the line.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We spoke to Klaus Busse, the man who heads up FCA’s design team, overseeing Fiat, Abarth, Lancia, and Alfa Romeo, as well as Maserati, about the origins and aspirations for the company’s new model&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Wallpaper*:&lt;/strong&gt; &lt;strong&gt;This is the first mid-engine Maserati production car for many years. Did you take inspiration from the past or is it a clean sheet design?&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Klaus Buss:&lt;/strong&gt; When it comes to designing a car, how clean sheet can the design really be? If I were to describe the design philosophy behind the MC20 in two words, they would be Purity and Contrast. As you can see from the car, the design is all about purity contrasted by extremely complex functional areas. One of our main inspirations for the MC20 came from the A6GCS Pinin Farina of the 1950s. This car in fact, is naturally pure and beautifully sculpted, creating a silhouette praised for its simplicity, which is then contrasted by the exposed exhaust pipes underneath the driver’s door showcasing its high degree of functionality. This is the same design philosophy used for the MC20 where the upper part of the car is all about purity and sculptural simplicity, while the lower part is true technical performance.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;W*: What about more recent examples from the company’s history?&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;KB:&lt;/strong&gt; MC20’s design philosophy was not the only thing that was born by looking back into Maserati’s past: there are some details in this new super sports car that are echoes from the past. For example, the new face of Maserati – as in with the low front grill and the high headlights – were inspired by the MC12. MC20 represents not only an ode to the brand’s past achievements but is also the face of Maseratis of the future.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;W*: How long has this car been in planning?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;KB:&lt;/strong&gt; The development period for the MC20 was about 24 months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;W*: What are the key visual elements that define a mid-engine Maserati?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;KB:&lt;/strong&gt; There are no key elements that are specific to a mid-engine Maserati, but there are key visual elements that define the MC20 and Maserati’s aesthetic future. As mentioned, our design philosophy is driven by purity. For the MC20, this translated in creating something with no frills, no excess, and no unnecessary details. We tried to avoid visual noise, in order for the car to speak for itself. We did not design it around the air intakes; on the contrary, we restrained ourselves and have them only where they are absolutely necessary. By doing so, we now have a car that is a pure &lt;a href=&#34;https://www.wallpaper.com/tags/sculpture&#34;&gt;sculpture&lt;/a&gt; reduced to the main proportions. A car that does not need to shout at its environment through loud detailing, but truly stands out for raw beauty and capabilities. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;W*:&lt;/strong&gt; &lt;strong&gt;How does the design express the technology of the launch V6 and possible future powertrains?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;KB:&lt;/strong&gt; The MC20, being a super sports car in every inch of its design, was created by respecting and embracing technological and performance necessities. Whether it is the silhouette of the car that defines the cabin space, or the aerodynamic flow and the downforce of the car, Maserati has brought to the market a dynamic &lt;a href=&#34;https://www.wallpaper.com/tags/sculpture&#34;&gt;sculpture&lt;/a&gt;, powered V6 twin turbo petrol engine, which will propel the brand into the future. In addition, one should notice the balance between the pure elegance of the silhouette and the integrated air intakes, which are needed to supply the necessary cooling and the thermal exhaust to the V6. However, it is fundamental to keep in mind that the true expression of MC20 is in the incredible collaboration and teamwork we had with the engineers in Modena.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/mc20_front_seats_1.jpg?itok=BSAJjw21&#34; alt=&#34;MC20&#34;&gt;&lt;/p&gt;
+&lt;p&gt;INFORMATION&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://maserati.com/&#34;&gt;maserati.com&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;your-paper-notebook-could-become-your-next-tablethttpswwwpurdueedunewsroomreleases2020q3your-paper-notebook-could-become-your-next-tablethtml&#34;&gt;&lt;a href=&#34;https://www.purdue.edu/newsroom/releases/2020/Q3/your-paper-notebook-could-become-your-next-tablet.html&#34;&gt;Your paper notebook could become your next tablet&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;WEST LAFAYETTE, Ind. – &lt;em&gt;Innovators(创新者)&lt;/em&gt; from &lt;a href=&#34;https://www.purdue.edu/&#34;&gt;Purdue University&lt;/a&gt; hope their new technology can help transform paper sheets from a notebook into a music player interface and make food packaging &lt;em&gt;interactive(互动，交互)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Purdue engineers developed a simple printing process that renders any paper or cardboard packaging into a keyboard, keypad or other easy-to-use human-machine interfaces. This technology is published in the Aug. 23 edition of &lt;a href=&#34;https://www.sciencedirect.com/science/article/abs/pii/S2211285520308788?via%3Dihub&#34;&gt;Nano Energy&lt;/a&gt;. Videos showing this technology are available at &lt;a href=&#34;https://nam03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fyoutu.be%2FTfA0d8IpjWU&amp;amp;data=02%7C01%7CCLAdam%40prf.org%7Ccbf12fe958cc413ae82c08d84acd6636%7Ce25b40edf9c844b99420fe1c86641854%7C0%7C0%7C637341593339564289&amp;amp;sdata=sNDxKvZ52utgVuw%2BIRgJIZxFbcs3cZeC6LSkf2eiOIA%3D&amp;amp;reserved=0&#34;&gt;https://youtu.be/TfA0d8IpjWU&lt;/a&gt;, &lt;a href=&#34;https://nam03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fyoutu.be%2FJ0iCxjicJIQ&amp;amp;data=02%7C01%7CCLAdam%40prf.org%7Ccbf12fe958cc413ae82c08d84acd6636%7Ce25b40edf9c844b99420fe1c86641854%7C0%7C0%7C637341593339574287&amp;amp;sdata=APkBRMeZrs4%2BqUvwSsRAW02jIiVI%2BC%2FbybvNu8m1Qx4%3D&amp;amp;reserved=0&#34;&gt;https://youtu.be/J0iCxjicJIQ&lt;/a&gt; and &lt;a href=&#34;https://nam03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fyoutu.be%2Fc9E6vXYtIw0&amp;amp;data=02%7C01%7CCLAdam%40prf.org%7Ccbf12fe958cc413ae82c08d84acd6636%7Ce25b40edf9c844b99420fe1c86641854%7C0%7C0%7C637341593339574287&amp;amp;sdata=q%2FEzjrVQ4dvM26oZuhBIABr1QcGZBKy2nGV7SFWp1zo%3D&amp;amp;reserved=0&#34;&gt;https://youtu.be/c9E6vXYtIw0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;“This is the first time a self-powered paper-based electronic device is &lt;em&gt;demonstrated(演示)&lt;/em&gt;,” said Ramses Martinez, an assistant professor in Purdue’s &lt;a href=&#34;https://engineering.purdue.edu/IE&#34;&gt;School of Industrial Engineering&lt;/a&gt; and in the &lt;a href=&#34;https://engineering.purdue.edu/BME&#34;&gt;Weldon School of Biomedical Engineering&lt;/a&gt; in Purdue’s &lt;a href=&#34;https://engineering.purdue.edu/Engr&#34;&gt;College of Engineering&lt;/a&gt;. “We developed a method to render paper &lt;em&gt;repellent to water, oil and dust(防水、防油、防尘)&lt;/em&gt; by coating it with &lt;em&gt;highly fluorinated molecules(高氟分子)&lt;/em&gt;. This &lt;em&gt;omniphobic(无所不在的)&lt;/em&gt; coating allows us to print multiple layers of circuits onto paper without getting the ink to smear from one layer to the next one.”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.purdue.edu/uns/images/2020/martinez-keypadLO.jpg&#34; alt=&#34;KeyPad&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Martinez said this innovation facilitates the fabrication of vertical pressure sensors that do not require any external battery, since they harvest the energy from their contact with the user.&lt;/p&gt;
+&lt;p&gt;This technology is compatible with conventional large-scale printing processes and could easily be implemented to rapidly convert conventional cardboard packaging or paper into smart packaging or a smart human-machine interface.&lt;/p&gt;
+&lt;p&gt;“I envision this technology to facilitate the user interaction with food packaging, to verify if the food is safe to be consumed, or enabling users to sign the package that arrives at home by dragging their finger over the box to properly identify themselves as the owner of the package,” Martinez said. “Additionally, our group demonstrated that simple paper sheets from a notebook can be transformed into music player interfaces for users to choose songs, play them and change their volume.”&lt;/p&gt;
+&lt;p&gt;Martinez and his team have worked with the &lt;a href=&#34;http://www.prf.org/&#34;&gt;Purdue Research Foundation&lt;/a&gt; &lt;a href=&#34;https://www.prf.org/otc/&#34;&gt;Office of Technology Commercialization&lt;/a&gt; to patent some of his technologies related to robots and other design innovations. For more information on licensing a Purdue innovation, contact the Office of Technology Commercialization at &lt;a href=&#34;mailto:otcip@prf.org&#34;&gt;otcip@prf.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;About Purdue Research Foundation Office of Technology Commercialization&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Purdue Research Foundation &lt;a href=&#34;https://www.prf.org/otc/&#34;&gt;Office of Technology Commercialization&lt;/a&gt; operates one of the most comprehensive technology transfer programs among leading research universities in the U.S. Services provided by this office support the economic development initiatives of Purdue University and benefit the university&amp;rsquo;s academic activities through commercializing, licensing and protecting Purdue intellectual property. The office recently moved into the Convergence Center for Innovation and Collaboration in &lt;a href=&#34;https://discoveryparkdistrict.com/&#34;&gt;Discovery Park District&lt;/a&gt;, adjacent to the Purdue campus. In fiscal year 2020, the office reported 148 deals finalized with 225 technologies signed, 408 disclosures received and 180 issued U.S. patents. The office is managed by the Purdue Research Foundation, which received the 2019 Innovation and Economic Prosperity Universities Award for Place from the Association of Public and Land-grant Universities. In 2020, &lt;a href=&#34;https://www.ipwatchdog.com/2020/04/07/evolution-university-technology-transfer/id=120451/&#34;&gt;IPWatchdog Institute&lt;/a&gt; ranked Purdue third nationally in startup creation and in the top 20 for patents. The &lt;a href=&#34;https://www.prf.org/&#34;&gt;Purdue Research Foundation&lt;/a&gt; is a private, nonprofit foundation created to advance the mission of Purdue University. Contact &lt;a href=&#34;mailto:otcip@prf.org&#34;&gt;otcip@prf.org&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;About Purdue University&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Purdue University is a top public research institution developing practical solutions to today’s toughest challenges. Ranked the No. 6 Most Innovative University in the United States by U.S. News &amp;amp; World Report, Purdue delivers world-changing research and out-of-this-world discovery. Committed to hands-on and online, real-world learning, Purdue offers a transformative education to all. Committed to affordability and accessibility, Purdue has frozen tuition and most fees at 2012-13 levels, enabling more students than ever to graduate debt-free. See how Purdue never stops in the persistent pursuit of the next giant leap at &lt;a href=&#34;https://www.purdue.edu/&#34;&gt;purdue.edu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Writer:&lt;/strong&gt; Chris Adam, &lt;a href=&#34;mailto:cladam@prf.org&#34;&gt;cladam@prf.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sources:&lt;/strong&gt; Ramses V. Martinez, &lt;a href=&#34;mailto:rmartinez@purdue.edu&#34;&gt;rmartinez@purdue.edu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Marina Sala de Medeiros**, &lt;a href=&#34;mailto:mmedeir@purdue.edu&#34;&gt;m&lt;/a&gt;**&lt;a href=&#34;mailto:mmedeir@purdue.edu&#34;&gt;medeir@purdue.edu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Moisture-insensitive, Self-powered Paper-based Flexible Electronics&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Marina Sala de Medeiros, Daniela Chanci and Ramses V. Martinez&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The fabrication of multifunctional electronic devices on ubiquitous paper substrates is gaining considerable attention due to their low cost, environmental friendliness, light weight, and flexibility. Unfortunately, the development of paper-based electronics is subject to significant challenges, such as rapid degradation with moisture, battery dependence, and limited compatibility with existing mass production technologies. This work describes omniphobic, self-powered paper-based electronics (RF SPEs), completely wireless paper-based electronic devices insensitive to moisture, liquid stains, and dust. RF SPEs can be rapidly fabricated through the sequential spray-deposition of alkylated organosilanes, conductive nanoparticles, polytetrafluoroethylene (strong electron affinity), and ethyl cellulose (weak electron affinity) over the surface of cellulose paper. RF SPEs are lightweight, inexpensive to print (&amp;lt;$0.25 per device), and capable of generating power densities up to 300 µW/cm2. Additionally, RF SPEs are flexible and exhibit excellent stability upon folding (0.3 mm radius of curvature). The simple printing process and relative low cost of RF SPEs enable the large-scale production of self-powered paper-based electronics towards the ubiquitous integration of human-machine interfaces.&lt;/p&gt;
+&lt;p&gt;More about triboelectric: &lt;strong&gt;&lt;a href=&#34;https://www.nature.com/articles/s41427-019-0176-0&#34;&gt;Material aspects of triboelectric energy generation and sensors&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;flawless-102-carat-diamond-may-join-worlds-most-expensive-jewelshttpseditioncnncomstylearticlediamond-auction-hong-kongindexhtml&#34;&gt;&lt;a href=&#34;https://edition.cnn.com/style/article/diamond-auction-hong-kong/index.html&#34;&gt;&amp;lsquo;Flawless&amp;rsquo; 102-carat diamond may join world&amp;rsquo;s most expensive jewels&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Written byOscar Holland, CNNHong Kong&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1792,c_fill,g_auto,h_1008,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200911131334-01-white-diamond-sothebys-hong-kong.jpg&#34; alt=&#34;Diamond&#34;&gt;&lt;/p&gt;
+&lt;p&gt;An exceptionally rare 102.39-carat diamond may become one of the most expensive stones ever to sell at auction when it goes under the hammer in Hong Kong next month.&lt;/p&gt;
+&lt;p&gt;Although auction house Sotheby&amp;rsquo;s declined to provide a pre-sale estimate, diamonds of similar size and quality have previously attracted bids between $12 million to more than $30 million.&lt;/p&gt;
+&lt;p&gt;Cut from a 271-carat rough diamond discovered in 2018 in Ontario, Canada, the oval stone has achieved top rankings in each of the &amp;ldquo;four Cs&amp;rdquo; &amp;ndash; cut, color, clarity and carat weight &amp;ndash; by which a diamond is judged, the auction house said.&lt;/p&gt;
+&lt;p&gt;It has been classified as &amp;ldquo;D color,&amp;rdquo; the highest grading for a white diamond, and is considered to be internally and externally &amp;ldquo;flawless,&amp;rdquo; placing it among the world&amp;rsquo;s most chemically pure, transparent and symmetrical diamonds. It also belongs to a rare subgroup of diamonds that contain little to no nitrogen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dynaimage.cdn.cnn.com/cnn/q_auto,w_727,c_fit/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200911131336-02-white-diamond-sothebys-hong-kong.jpg&#34; alt=&#34;Diamond&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Only seven D color flawless (or internally flawless) diamonds weighing more than 100 carats have ever appeared at auction before, according to Sotheby&amp;rsquo;s.&lt;/p&gt;
+&lt;p&gt;Of these, the most expensive was a rectangular 163.41-carat diamond, which &lt;a href=&#34;https://www.christies.com/lotfinder/Lot/a-sensational-diamond-and-emerald-necklace-by-6109189-details.aspx&#34;&gt;sold for $33.7 million&lt;/a&gt; at Christie&amp;rsquo;s in Geneva, while the most paid for an oval variety stands at $30.8 million &lt;a href=&#34;https://www.sothebys.com/en/auctions/ecatalogue/2013/magnificent-jewels-and-jadeite-hk0478/lot.1932.html&#34;&gt;in 2013&lt;/a&gt;. If the diamond going under the hammer in Hong Kong next month attracts the same per-carat price as this latter sale, it would sell for over $26 million.&lt;/p&gt;
+&lt;h3 id=&#34;transformative-time-for-auction-market&#34;&gt;&amp;lsquo;Transformative&amp;rsquo; time for auction market&lt;/h3&gt;
+&lt;p&gt;Unusually, the rare oval diamond is being offered without a reserve, meaning that it will be sold regardless of the size of the highest bid. Bidding will open online from September 15, with the sale concluding at a live auction in Hong Kong on October 5.&lt;/p&gt;
+&lt;p&gt;In the meantime, the item is set to go on display at appointment-only previews in Beijing, Shanghai, New York and Taipei.&lt;/p&gt;
+&lt;p&gt;In a press statement, Sotheby&amp;rsquo;s worldwide chairman of jewelry, Gary Schuler, said that it was &amp;ldquo;difficult to overstate (the stone&amp;rsquo;s) rarity and beauty.&amp;rdquo; Chair of Sotheby&amp;rsquo;s Asia, Patti Wong, meanwhile expressed confidence about the sale, despite the challenges presented by the Covid-19 pandemic, in what she called &amp;ldquo;deeply transformative months for the auction market.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dynaimage.cdn.cnn.com/cnn/q_auto,w_727,c_fit/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200911131337-03-white-diamond-sothebys-hong-kong.jpg&#34; alt=&#34;Diamond&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&amp;ldquo;Diamonds of this caliber attract interest well beyond the traditional pool of collectors,&amp;rdquo; Wong added. &amp;ldquo;This innovative sale seems to us the best way to introduce this exceptional diamond to the world in the current circumstances where travel is restricted and act as a great indicator of the vitality of the demand.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;While white diamonds can attract huge bids at auction, pink and blue varieties have achieved even larger sums in recent years. In 2017, a 59.60-carat pink diamond known as the Pink Star became the most expensive jewel ever to sell at auction when it &lt;a href=&#34;https://money.cnn.com/2017/04/04/luxury/pink-star-diamond-auction-sothebys/index.html&#34;&gt;went for $71.2 million&lt;/a&gt; at Sotheby&amp;rsquo;s in Hong Kong.&lt;/p&gt;
+&lt;p&gt;Two years earlier, the 12.03-carat &amp;ldquo;Blue Moon&amp;rdquo; diamond &lt;a href=&#34;https://www.cnn.com/style/article/most-expensive-diamond/index.html&#34;&gt;sold for $48.4 million&lt;/a&gt;, also through Sotheby&amp;rsquo;s.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;engineers-produce-a-fisheye-lens-thats-completely-flat&#34;&gt;Engineers produce a fisheye lens that’s completely flat&lt;/h1&gt;
+&lt;p&gt;The single piece of glass produces crisp panoramic images.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202009/MIT-Fisheye-Lens-01_0.jpg?itok=fqoV_DT7&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;To capture panoramic views in a single shot, photographers typically use fisheye lenses — ultra-wide-angle lenses made from multiple pieces of curved glass, which distort incoming light to produce wide, bubble-like images. Their spherical, multipiece design makes fisheye lenses inherently bulky and often costly to produce.&lt;/p&gt;
+&lt;p&gt;Now engineers at MIT and the University of Massachusetts at Lowell have designed a wide-angle lens that is completely flat. It is the first flat fisheye lens to produce crisp, 180-degree panoramic images. The design is a type of “metalens,” a wafer-thin material patterned with microscopic features that work together to manipulate light in a specific way.&lt;/p&gt;
+&lt;p&gt;In this case, the new fisheye lens consists of a single flat, millimeter-thin piece of glass covered on one side with tiny structures that precisely scatter incoming light to produce panoramic images, just as a conventional curved, multielement fisheye lens assembly would. The lens works in the infrared part of the spectrum, but the researchers say it could be modified to capture images using visible light as well.&lt;/p&gt;
+&lt;p&gt;The new design could potentially be adapted for a range of applications, with thin, ultra-wide-angle lenses built directly into smartphones and laptops, rather than physically attached as bulky add-ons. The low-profile lenses might also be integrated into medical imaging devices such as endoscopes, as well as in virtual reality glasses, wearable electronics, and other computer vision devices.&lt;/p&gt;
+&lt;p&gt;“This design comes as somewhat of a surprise, because some have thought it would be impossible to make a metalens with an ultra-wide-field view,” says Juejun Hu, associate professor in MIT’s Department of Materials Science and Engineering. “The fact that this can actually realize fisheye images is completely outside expectation.&lt;/p&gt;
+&lt;p&gt;This isn’t just light-bending — it’s mind-bending.”&lt;/p&gt;
+&lt;p&gt;Hu and his colleagues have published their results today in the journal &lt;em&gt;Nano Letters&lt;/em&gt;. Hu’s MIT coauthors are Mikhail Shalaginov, Fan Yang, Peter Su, Dominika Lyzwa, Anuradha Agarwal, and Tian Gu, along with Sensong An and Hualiang Zhang of UMass Lowell.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Design on the back side&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Metalenses, while still largely at an experimental stage, have the potential to significantly reshape the field of optics. Previously, scientists have designed metalenses that produce high-resolution and relatively wide-angle images of up to 60 degrees. To expand the field of view further would traditionally require additional optical components to correct for aberrations, or blurriness — a workaround that would add bulk to a metalens design.&lt;/p&gt;
+&lt;p&gt;Hu and his colleagues instead came up with a simple design that does not require additional components and keeps a minimum element count. Their new metalens is a single transparent piece made from calcium fluoride with a thin film of lead telluride deposited on one side. The team then used lithographic techniques to carve a pattern of optical structures into the film.&lt;/p&gt;
+&lt;p&gt;Each structure, or “meta-atom,” as the team refers to them, is shaped into one of several nanoscale geometries, such as a rectangular or a bone-shaped configuration, that refracts light in a specific way. For instance, light may take longer to scatter, or propagate off one shape versus another — a phenomenon known as phase delay.&lt;/p&gt;
+&lt;p&gt;In conventional fisheye lenses, the curvature of the glass naturally creates a distribution of phase delays that ultimately produces a panoramic image. The team determined the corresponding pattern of meta-atoms and carved this pattern into the back side of the flat glass.&lt;/p&gt;
+&lt;p&gt;‘We’ve designed the back side structures in such a way that each part can produce a perfect focus,” Hu says.&lt;/p&gt;
+&lt;p&gt;On the front side, the team placed an optical aperture, or opening for light.&lt;/p&gt;
+&lt;p&gt;“When light comes in through this aperture, it will refract at the first surface of the glass, and then will get angularly dispersed,” Shalaginov explains. “The light will then hit different parts of the backside, from different and yet continuous angles. As long as you design the back side properly, you can be sure to achieve high-quality imaging across the entire panoramic view.”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Across the panorama&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In one demonstration, the new lens is tuned to operate in the mid-infrared region of the spectrum. The team used the imaging setup equipped with the metalens to snap pictures of a striped target. They then compared the quality of pictures taken at various angles across the scene, and found the new lens produced images of the stripes that were crisp and clear, even at the edges of the camera’s view, spanning nearly 180 degrees.&lt;/p&gt;
+&lt;p&gt;“It shows we can achieve perfect imaging performance across almost the whole 180-degree view, using our methods,” Gu says.&lt;/p&gt;
+&lt;p&gt;In another study, the team designed the metalens to operate at a near-infrared wavelength using amorphous silicon nanoposts as the meta-atoms. They plugged the metalens into a simulation used to test imaging instruments. Next, they fed the simulation a scene of Paris, composed of black and white images stitched together to make a panoramic view. They then ran the simulation to see what kind of image the new lens would produce.&lt;/p&gt;
+&lt;p&gt;“The key question was, does the lens cover the entire field of view? And we see that it captures everything across the panorama,” Gu says. “You can see buildings and people, and the resolution is very good, regardless of whether you’re looking at the center or the edges.”&lt;/p&gt;
+&lt;p&gt;The team says the new lens can be adapted to other wavelengths of light. To make a similar flat fisheye lens for visible light, for instance, Hu says the optical features may have to be made smaller than they are now, to better refract that particular range of wavelengths. The lens material would also have to change. But the general architecture that the team has designed would remain the same.&lt;/p&gt;
+&lt;p&gt;The researchers are exploring applications for their new lens, not just as compact fisheye cameras, but also as panoramic projectors, as well as depth sensors built directly into smartphones, laptops, and wearable devices.&lt;/p&gt;
+&lt;p&gt;“Currently, all 3D sensors have a limited field of view, which is why when you put your face away from your smartphone, it won’t recognize you,” Gu says. “What we have here is a new 3D sensor that enables panoramic depth profiling, which could be useful for consumer electronic devices.”&lt;/p&gt;
+&lt;p&gt;This research was funded in part by DARPA under the EXTREME Program.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;we-need-young-programmers-we-need-old-programmers-by-mark-seemannhttpsblogploehdk20200914we-need-young-programmers-we-need-old-programmers&#34;&gt;&lt;a href=&#34;https://blog.ploeh.dk/2020/09/14/we-need-young-programmers-we-need-old-programmers/&#34;&gt;We need young programmers; we need old programmers by Mark Seemann&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;The software industry loves young people, but old-timers serve an important purpose, too.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Our culture idolises youth. There&amp;rsquo;s several reasons for this, I believe. Youth seems synonymous with vigour, strength, beauty, and many other desirable qualities. The cynical perspective is that young people, while rebellious, also tend to be easy to manipulate, if you know which buttons to push. A middle-aged man like me isn&amp;rsquo;t susceptible to the argument that I should buy a particular pair of Nike shoes because they&amp;rsquo;re named after Michael Jordan, but for a while, one pair wasn&amp;rsquo;t enough for my teenage daughter.&lt;/p&gt;
+&lt;p&gt;In intellectual pursuits (like software development), youth is often extolled as the source of innovation. You&amp;rsquo;re often confronted with examples like that of &lt;a href=&#34;https://en.wikipedia.org/wiki/%C3%89variste_Galois&#34;&gt;Évariste Galois&lt;/a&gt;, who made all his discoveries before turning 21. &lt;a href=&#34;https://en.wikipedia.org/wiki/Ada_Lovelace&#34;&gt;Ada Lovelace&lt;/a&gt; was around 28 years when she produced what is considered the &amp;lsquo;first computer program&amp;rsquo;. &lt;a href=&#34;https://en.wikipedia.org/wiki/Alan_Turing&#34;&gt;Alan Turing&lt;/a&gt; was 24 when he wrote &lt;a href=&#34;https://en.wikipedia.org/wiki/Turing&#39;s_proof&#34;&gt;On Computable Numbers, with an Application to the Entscheidungsproblem&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Clearly, young age is no detriment to making ground-breaking contributions. It has even become folklore that everyone past the age of 35 is a has-been whose only chance at academic influence is to write a textbook.&lt;/p&gt;
+&lt;h3 id=&#34;the-story-of-the-five-monkeys&#34;&gt;The story of the five monkeys&lt;/h3&gt;
+&lt;p&gt;You may have seen a story called &lt;em&gt;the five monkeys experiment&lt;/em&gt;. It&amp;rsquo;s most likely a fabrication, but it goes like this:&lt;/p&gt;
+&lt;p&gt;A group of scientists placed five monkeys in a cage, and in the middle, a ladder with bananas on the top. Every time a monkey went up the ladder, the scientists soaked the rest of the monkeys with cold water. After a while, every time a monkey went up the ladder, the others would beat it up.&lt;/p&gt;
+&lt;p&gt;After some time, none of the monkeys dared go up the ladder regardless of the temptation. The scientists then substituted one of the monkeys with a new one, who&amp;rsquo;d immediately go for the bananas, only to be beaten up by the others. After several beatings, the new member learned not to climb the ladder even though it never knew why.&lt;/p&gt;
+&lt;p&gt;A second monkey was substituted and the same occurred. The first monkey participated in beating the second. A third monkey was exchanged and the story repeated. The fourth was substituted and the beating was repeated. Finally the fifth monkey was replaced.&lt;/p&gt;
+&lt;p&gt;Left was a group of five monkeys who, even though they never received a cold shower, continued to beat up any monkey who attempted to climb the ladder. If it was possible to ask the monkeys why they would beat up all who attempted to go up the ladder, the answer would probably be:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;That&amp;rsquo;s how we do things here.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;While the story is probably just that: a story, it tells us something about the drag induced by age and experience. If you&amp;rsquo;ve been in the business for decades, you&amp;rsquo;ve seen numerous failed attempts at something you yourself tried when you were young. You know that it can&amp;rsquo;t be done.&lt;/p&gt;
+&lt;p&gt;Young people don&amp;rsquo;t know that a thing can&amp;rsquo;t be done. If they can avoid the monkey-beating, they&amp;rsquo;ll attempt the impossible.&lt;/p&gt;
+&lt;h3 id=&#34;changing-circumstances&#34;&gt;Changing circumstances&lt;/h3&gt;
+&lt;p&gt;Is attempting the impossible a good idea?&lt;/p&gt;
+&lt;p&gt;In general, no, because it&amp;rsquo;s&amp;hellip; impossible. There&amp;rsquo;s a reason older people tell young people that a thing can&amp;rsquo;t be done. It&amp;rsquo;s not just because they&amp;rsquo;re stodgy conservatives who abhor change. It&amp;rsquo;s because they see the effort as wasteful. Perhaps they&amp;rsquo;re even trying to be kind, guiding young people off a path where only toil and disappointment is to be found.&lt;/p&gt;
+&lt;p&gt;What old people don&amp;rsquo;t realise is that sometimes, circumstances change.&lt;/p&gt;
+&lt;p&gt;What was impossible twenty years ago may not be impossible today. We see this happening in many fields. Producing a commercially viable electric car was impossible for decades, until, with the advances made in battery technology, it became possible.&lt;/p&gt;
+&lt;p&gt;Technology changes rapidly in software development. People trying something previously impossible may find that it&amp;rsquo;s possible today. Once, if you had lots of data, you had to store it in fully normalised form, because storage was expensive. For a decade, relational databases were the only game in town. Then circumstances changed. Storage became cheaper, and a new movement of NoSQL storage emerged. What was before impossible became possible.&lt;/p&gt;
+&lt;p&gt;Older people often don&amp;rsquo;t see the new opportunities, because they &amp;lsquo;know&amp;rsquo; that some things are impossible. Young people push the envelope driven by a combination of zest and ignorance. Most fail, but a few succeed.&lt;/p&gt;
+&lt;h3 id=&#34;lottery-of-the-impossible&#34;&gt;Lottery of the impossible&lt;/h3&gt;
+&lt;p&gt;I think of this process as a lottery. Imagine that every impossible thing is a red ball in an urn. Every young person who tries the impossible draws a random ball from the urn.&lt;/p&gt;
+&lt;p&gt;The urn contains millions of red balls, but every now and then, one of them turns green. You don&amp;rsquo;t know which one, but if you draw it, it represents something that was previously impossible which has now become possible.&lt;/p&gt;
+&lt;p&gt;This process produces growth, because once discovered, the new and better way of doing things can improve society in general. Occasionally, the young discoverer may even gain some fame and fortune.&lt;/p&gt;
+&lt;p&gt;It seems wasteful, though. Most people who attempt the impossible will reach the predictable conclusion. What was deemed impossible was, indeed, impossible.&lt;/p&gt;
+&lt;p&gt;When I&amp;rsquo;m in a cynical mood, I don&amp;rsquo;t think that it&amp;rsquo;s youth in itself that is the source of progress. It&amp;rsquo;s just the &lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_large_numbers&#34;&gt;law of large numbers&lt;/a&gt; applied. If there&amp;rsquo;s a one in million chance that something will succeed, but ten million people attempt it, it&amp;rsquo;s only a matter of time before one succeeds.&lt;/p&gt;
+&lt;p&gt;Society at large can benefit from the success of the few, but ten million people still wasted their efforts.&lt;/p&gt;
+&lt;h3 id=&#34;we-need-the-old-too&#34;&gt;We need the old, too&lt;/h3&gt;
+&lt;p&gt;If you accept the argument that young people are more likely to try the impossible, we need the young people. Do we need the old people?&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m turning fifty in 2020. You may consider that old, but I expect to work for many more years. I don&amp;rsquo;t know if the software industry needs fifty-year-olds, but that&amp;rsquo;s not the kind of old I have in mind. I&amp;rsquo;m thinking of people who have retired, or are close to retirement.&lt;/p&gt;
+&lt;p&gt;In our youth-glorifying culture, we tend to dismiss the opinion and experiences of old people. &lt;em&gt;Oh, well, it&amp;rsquo;s just a codgy old man&lt;/em&gt; (or woman), we&amp;rsquo;ll say.&lt;/p&gt;
+&lt;p&gt;We ignore the experience of the old, because we believe that they haven&amp;rsquo;t been keeping up with times. Their experiences don&amp;rsquo;t apply to us, because we live under new circumstance. Well, see above.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m not advocating that we turn into a gerontocracy that venerates our elders solely because of their age. Again, according to the law of large numbers, some people live to old age. There need not be any correlation between survivors and wisdom.&lt;/p&gt;
+&lt;p&gt;We need the old to tell us the truth, because they have little to lose.&lt;/p&gt;
+&lt;h3 id=&#34;nothing-to-lose&#34;&gt;Nothing to lose&lt;/h3&gt;
+&lt;p&gt;In the last couple of years, I&amp;rsquo;ve noticed a trend. A book comes out, exposing the sad state of affairs in some organisation. This has happened regularly in Denmark, where I live. One book may expose the deplorable conditions of the Danish tax authorities, one may describe the situation in the ministry of defence, one criticises the groupthink associated with the climate crisis, and so on.&lt;/p&gt;
+&lt;p&gt;Invariably, it turns out that the book is written by a professor emeritus or a retired department head.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t think that these people, all of a sudden, had an epiphany after they retired. They knew all about the rot in the system they were part of, while they were part of it, but they&amp;rsquo;ve had too much to lose. You could argue that they should have said something before they retired, but that requires a moral backbone we can&amp;rsquo;t expect most people to have.&lt;/p&gt;
+&lt;p&gt;When people retire, the threat of getting fired disappears. Old people can speak freely to a degree most other people can&amp;rsquo;t.&lt;/p&gt;
+&lt;p&gt;Granted, many may simply use that freedom to spew bile or shout &lt;em&gt;Get off my lawn!&lt;/em&gt;, but many are in the unique position to reveal truths no-one else dare speak. Many are, perhaps, just bitter, but some may possess knowledge that they are in a unique position to reveal.&lt;/p&gt;
+&lt;p&gt;When that grumpy old guy on Twitter writes something that makes you uncomfortable, consider this: he may still be right.&lt;/p&gt;
+&lt;h3 id=&#34;being-unreasonable&#34;&gt;Being unreasonable&lt;/h3&gt;
+&lt;p&gt;In a way, you could say that we need young and old people for the same fundamental reason. Not all of them, but enough of them, are in a position to be unreasonable.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The reasonable man adapts himself to the world: the unreasonable one persists in trying to adapt the world to himself. Therefore all progress depends on the unreasonable man.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;George Bernard Shaw&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Young people and old people are unreasonable in each their own way, and we need both.&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;We need young people in the software development industry. Because of their vigour and inexperience, they&amp;rsquo;ll push the envelope. Most will fail to do the impossible, but a few succeed.&lt;/p&gt;
+&lt;p&gt;This may seem like a cynical view, but we&amp;rsquo;ve all been young, and most of us have been through such a phase. It&amp;rsquo;s like a rite of passage, and even if you fail to make your mark on the world, you&amp;rsquo;re still likely to have learned a lot.&lt;/p&gt;
+&lt;p&gt;We need old people because they&amp;rsquo;re in a position to speak truth to the world. Notice that I didn&amp;rsquo;t make my argument about the &lt;em&gt;experience&lt;/em&gt; of old-timers. Actually, I find that valuable as well, but that&amp;rsquo;s the ordinary argument: &lt;em&gt;Listen to old people, because they have experience and wisdom.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Some of them do, at least.&lt;/p&gt;
+&lt;p&gt;I didn&amp;rsquo;t make much out of that argument, because you already know it. There&amp;rsquo;d be no reason to write this essay if that was all I had to say. Old people have less on the line, so they can speak more freely. If someone you used to admire retires and all of a sudden starts saying or writing unpleasant and surprising things, there might be a good explanation, and it might be a good idea to pay attention.&lt;/p&gt;
+&lt;p&gt;Or maybe he or she is just bitter or going senile&amp;hellip;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;the-corn-of-the-future-is-hundreds-of-years-old-and-makes-its-own-mucushttpswwwsmithsonianmagcomscience-naturecorn-future-hundreds-years-old-and-makes-its-own-mucus-180969972&#34;&gt;&lt;a href=&#34;https://www.smithsonianmag.com/science-nature/corn-future-hundreds-years-old-and-makes-its-own-mucus-180969972/&#34;&gt;The Corn of the Future Is Hundreds of Years Old and Makes Its Own Mucus&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;The Corn of the Future Is Hundreds of Years Old and Makes Its Own Mucus&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thumbs-prod.si-cdn.com/0ALvq3fjbri1XxBSnVa6ILAkICA=/800x600/filters:no_upscale()/https://public-media.si-cdn.com/filer/aa/66/aa6653b4-9237-48c1-9772-e8221b36928b/aerial_roots_small.jpg&#34; alt=&#34;Corn&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;In the 1980s, Howard-Yana Shapiro, now chief agricultural officer at Mars, Incorporated, was looking for new kinds of corn. He was in the Mixes District of Oaxaca in southern Mexico, the area where the precursors to maize (aka corn) first evolved, when he located some of the strangest corn ever seen. Not only was it 16 to 20 feet tall, dwarfing the 12-foot stuff in American fields, it took six to eight months to mature, far longer than the 3 months needed for conventional corn. Yet it grew to those impressive heights in what can charitably be called poor soil, without the use of fertilizer.. But the strangest part of the corn was its aerial roots&amp;ndash;green and rose-colored, finger-like protrusions sticking out of the corn’s stalk, dripping with a clear, syrupy gel.&lt;/p&gt;
+&lt;p&gt;Shapiro suspected that those mucousy fingers might be the Holy Grail of agriculture. He believed that the roots allowed this unique variety of corn, dubbed Sierra Mixe and locally bred over hundreds or even thousands of years, to produce its own nitrogen, an essential nutrient for crops that is usually applied as fertilizer in epic amounts.&lt;/p&gt;
+&lt;p&gt;The idea seemed promising, but without DNA tools to look into the specifics of how the corn was making nitrogen, the discovery was shelved. Nearly two decades later, in 2005, Alan B. Bennett of the University of California, Davis—along with Shapiro and other researchers—began using cutting-edge technology to look into the nitrogen-fixing properties of the phlegmy corn, finding that indeed, bacteria living in the mucus were pulling nitrogen from the air, transmuting it into a form the corn could absorb.&lt;/p&gt;
+&lt;p&gt;Now, after over a decade of field research and genetic analysis, the team has published their work in the journal &lt;a href=&#34;http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2006352&#34;&gt;PLOS Biology&lt;/a&gt;. If the nitrogen-fixing trait could be bred into conventional corn, allowing it to produce even a portion of its own nitrogen, it could reduce the cost of farming, reduce greenhouse gas emissions and halt one of the major pollutants in lakes, rivers and the ocean. In other words, it could lead to a second nitrogen revolution.&lt;/p&gt;
+&lt;p&gt;The synthetic production of nitrogen may be the greatest achievement of the 20th century. The discovery of the Haber-Bosch process and its refinements, in which nitrogen is stripped out of the air under high heat and pressure in the presence of a catalyst, has led to three separate Nobel prizes. And they are well deserved. It’s estimated that &lt;a href=&#34;https://www.nature.com/articles/ngeo325.epdf?referrer_access_token=ko1XWqjTo3ENOxPCWf18pNRgN0jAjWel9jnR3ZoTv0P5F__o3JL8yxyjnP27gxYtULIvI8-Zuvo9Y-yPtBtLdPtYqcXgNC4yC996GHXdFy9Wb97cwAT5SZhRCJsZQNlBGtbCwgcK0qLbQFgusWj6_KnuVVKGFzXtRH_bvIUifY9BiarKDtyRuTg8sfpGq5moz3R9kFNsjF7jJ95G8dOST7LHuuyewf0nEWCyjHMMGL-9NDWHZVB_SaoVm1sDSZg2uPalLtpzDbqApvMZCucGztN6PMuNt9jZqWirPGtF6NHlDubsGggKn7Xj1OyGuAATCZbx5E1lQDGcn81Ta5zwvSzHhPRvrd6zsoFW0K-OYao%3D&amp;amp;tracking_referrer=www.slate.com&#34;&gt;crop yields more than doubled between 1908 and 2008&lt;/a&gt;, with synthetic nitrogen fertilizer responsible for up to half that growth. Some researchers have tied the massive growth in human population in the last seventy years to the increased use of nitrogen fertilizer. Without it, we’d have to farm almost four times as much land or have billions of fewer people in the world.&lt;/p&gt;
+&lt;p&gt;But producing all that nitrogen has consequences. It’s estimated that making fertilizer via the Haber-Bosch process uses between 1 and 2 percent of the world’s energy, emitting lots of greenhouse gases. And synthetic nitrogen routinely washes off fields into waterways, leading to massive algae blooms that suck up all the oxygen, killing fish and other organisms. So much nitrogen goes into rivers and streams that large dead zones have developed at the mouths of the world’s rivers, including one in the Gulf of Mexico that last year &lt;a href=&#34;https://www.smithsonianmag.com/smart-news/gulf-mexico-dead-zone-may-be-size-new-jersey-year-180963799/&#34;&gt;was the size of New Jersey&lt;/a&gt;. &lt;a href=&#34;http://ce3c.ciencias.ulisboa.pt/outreach/press&amp;amp;events/ver.php?id=798&#34;&gt;Mark Sutton of the UK Centre for Ecology and Hydrology&lt;/a&gt; calls nitrogen “the Godfather of pollution”—its effects are everywhere, but you never really see the culprit.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thumbs-prod.si-cdn.com/WPKEnY-pc-0p2l-J5sOO1WtYIZE=/1024x596/https://public-media.si-cdn.com/filer/53/21/53216d55-7db4-4422-82f0-a6dc669ce9ad/aerial_roots_2.jpg&#34; alt=&#34;roots&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;But we can’t just quit nitrogen without seeing major reductions in agriculture. While better management and farming practices can help keep it out of waterways, those strategies aren’t enough to fix nitrogen’s ecological problems. That’s why researchers have for decades wondered if there was a way to help cereal crops like corn and wheat produce their own nitrogen.&lt;/p&gt;
+&lt;p&gt;The idea is not as farfetched as it sounds. Lots of plants, in particular legumes like soybeans, peanuts and clover, have a symbiotic relationship with Rhizobium bacteria, which produce nitrogen for them. The plants grow root nodules where the bacteria take up residence and sip on plant sugars while converting nitrogen in the air into a form the plants can use. If a similar symbiotic relationship could be found that works in cereal crops like corn and wheat, researchers believe we could reduce our use of the pollutant.&lt;/p&gt;
+&lt;p&gt;That’s why the mucus corn is so important, and why Bennett and his team spent eight years studying and re-studying the bacteria and gel to convince themselves that the corn was indeed able to produce its own nitrogen. Using DNA sequencing, they were able to show the microbes in the slime carried genes for fixing nitrogen and demonstrated the gel the corn excretes, which is high sugar and low oxygen, is perfectly designed to encourage nitrogen fixation. Using five different tests they showed that the nitrogen produced by the microbes then made its way into the corn, providing 30 to 80 percent of the plant’s needs. They then produced a synthetic version of the slime and seeded it with the microbes, finding that they produced nitrogen in that environment as well. They even grew Sierra Mixe in Davis, California, and Madison, Wisconsin, showing that it could perform its special trick outside its home turf in Mexico.&lt;/p&gt;
+&lt;p&gt;“This mechanism is totally different from what legumes use,” Bennett says, adding it may exist in other crops as well. “It’s certainly conceivable that similar types of systems exist in many cereals. Sorghum, for example, has aerial roots and mucilage. Maybe others have more subtle mechanisms that occur underground that could exist more widely. Now that we’re aware, we can look for them.”&lt;/p&gt;
+&lt;p&gt;Co-author Jean Michel-Ane from the University of Wisconsin, Madison, agrees that this discovery opens up all types of new possibilities. “Engineering corn to fix nitrogen and form root nodules like legumes has been a dream and struggle of scientists for decades. It turns out that this corn developed a totally different way to solve this nitrogen fixation problem. The scientific community probably underestimated nitrogen fixation in other crops because of its obsession with root nodules,” he says in &lt;a href=&#34;https://news.wisc.edu/corn-that-acquires-its-own-nitrogen-identified-reducing-need-for-fertilizer/&#34;&gt;a statement&lt;/a&gt;. “This corn showed us that nature can find solutions to some problems far beyond what scientists could ever imagine.”&lt;/p&gt;
+&lt;p&gt;It turns out that nature has even more nitrogen-producing tricks up her sleeve that researchers are just getting a handle on. There are several other ongoing projects aimed at getting cereal and vegetable crops to do the Haber-Bosching for us. One of the most promising is the use of endophytes, or microorganisms like bacteria and fungi that live in the intercellular spaces of plants. University of Washington researcher Sharon Doty got interested in the organisms a couple decades ago. She was studying willow and poplar trees, which are among the first trees to grow on disturbed land after events like a volcanic eruption, floods or rockfall. These trees were growing out of river gravel, with hardly any access to nitrogen in the soil. Inside their stems, however, Doty found endophytes that fixed the nitrogen for the trees, no root nodules necessary. Since then, she’s teased out dozens of various endophyte strains, many of which help plants in surprising ways. Some produce nitrogen or phosphorus, another important nutrient, while others improve root growth and some allow plants to survive in drought or high-salt conditions.&lt;/p&gt;
+&lt;p&gt;“There [are] a whole slew of different microbes that can fix nitrogen and a broad range of plant species impacted by them,” she says. Her tests have shown that the microbes can double the productivity of pepper and tomato plants, improve growth in rice, and impart drought tolerance to trees like Douglas firs. Some even allow trees and plants to suck up and break down industrial contaminants and are now being used to clean up Superfund sites. “The advantage of using endophytes is that it’s a really large group. We’ve found strains that work with rice, maize, tomatoes, peppers and other agriculturally important crop plants.”&lt;/p&gt;
+&lt;p&gt;In fact, endophytes might make it into farmers’ hands sooner rather than later. The Los Altos, California-based IntrinsyxBio is commercializing some of Doty’s endophytes. Chief Science Officer John L. Freeman says in an interview the company is on track to have a product ready for market in 2019. The goal is to deliver several strains of endophytes into plants, most likely by coating the seeds. After those bacteria take up residence inside the plant, they should pump out about 25 percent of the nitrogen it needs.&lt;/p&gt;
+&lt;p&gt;Another biotech company, called Pivot Bio, recently announced it is beta testing a similar solution, using nitrogen-fixing microbes that grow in the root systems of corn.&lt;/p&gt;
+&lt;p&gt;The newly emerging field of synthetic biology is also taking a crack at the nitrogen problem. Boston-based Joyn Bio, formed last September, is a co-project between Bayer and Ginkgo Bioworks, a biotech company with experience creating custom yeasts and bacteria for the food and flavoring industry, among other “designer microbe” projects. Joyn is currently combing through Bayer’s library of over 100,000 microbes to find a host that can successfully colonize plants, similar to Doty’s endophytes. Then they hope to tweak that “host chassis” with genes that will allow it to fix nitrogen. “Rather than rely on nature and find a magic microbe, which we don’t think exists, we want to find our host microbe and fine tune it to do what we need it to do for corn or wheat,” says Joyn CEO Michael Miille.&lt;/p&gt;
+&lt;p&gt;The Gates Foundation is also in on the game, supporting projects attempting to impart the nitrogen-fixing abilities of legumes into cereals. Still other teams are hoping that the advent of supercharged quantum computing will open up new realms of chemistry and identify new catalysts that will make the Haber-Bosch process much more efficient.&lt;/p&gt;
+&lt;p&gt;While it’s unlikely that one solution alone will be able to replace 100 percent of the synthetic fertilizer humans use, perhaps together these projects could make a serious dent in nitrogen pollution. Bennett hopes that Sierra Mixe and what his team has learned from it will be part of the nitrogen revolution, though he admits it’s a very long leap before his slimy corn fingers start producing nitrogen in conventional crops. He now wants to identify the genes that produce the aerial roots and pin down which of the thousands of microbes discovered in the mucilage are actually fixing the nitrogen.&lt;/p&gt;
+&lt;p&gt;“I think what we’re doing could be complementary to those [endoyphte and synthetic biology] approaches,” he says. “I think we’ll see many divergent strategies, and in 5 to 10 years something will emerge that impacts how corn gets nitrogen.&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Editor&amp;rsquo;s note 8/15/18: An earlier draft of this article misspelled John L. Freeman&amp;rsquo;s name and misidentified his current company.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;By &lt;a href=&#34;https://www.smithsonianmag.com/author/jason-daley/&#34;&gt;Jason Daley&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SMITHSONIANMAG.COM
+AUGUST 10, 2018&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;harley-davidson-livewire-the-all-electric-muscle-bike-for-the-next-generationhttpswwwwallpapercomtransportharley-davidson-livewire-electric-motorbikeutm_sourceetutm_mediumemailutm_campaignutm_contentutm_term_&#34;&gt;&lt;a href=&#34;https://www.wallpaper.com/transport/harley-davidson-livewire-electric-motorbike?utm_source=ET&amp;amp;utm_medium=email&amp;amp;utm_campaign=&amp;amp;utm_content=&amp;amp;utm_term=_&#34;&gt;Harley Davidson LiveWire: the all-electric muscle bike for the next generation&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;George Chapman rides the new Harley Davidson &lt;em&gt;LiveWire(摩托的名字,不知道该翻译成什么意思)&lt;/em&gt; – the brand’s first all-electric motorcycle&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/wp_extra_large/s3/18_livewire_09_0.jpg&#34; alt=&#34;motorcycle&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The all-new Harley Davidson LiveWire is the world’s first series production electric bike from a &lt;em&gt;mainstream manufacturer(主流制造商)&lt;/em&gt;; quite an achievement for Harley Davidson, &lt;em&gt;a brand renowned(闻名) for following a very traditional recipe when designing and manufacturing motorcycles(一个以在非常传统的方法来设计和制造摩托车而闻名的品牌)&lt;/em&gt;. Available now, priced from £28,995 in the UK, it’s positioned amongst the brand’s &lt;em&gt;range-topping models(顶端车型)&lt;/em&gt; but faces the difficult task of attracting a younger, more &lt;em&gt;tech-savvy(精通技术)&lt;/em&gt; audience to the iconic all-American brand. But is it a real Harley Davidson?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;From afar(远观)&lt;/em&gt; the all-new machine possesses more than a passing &lt;em&gt;resemblance(相似之处)&lt;/em&gt; to its large &lt;em&gt;V-twin engined(V型双缸)&lt;/em&gt; &lt;em&gt;brethren(兄弟)&lt;/em&gt;. The styling of the &lt;em&gt;squared-off headlight(方形大灯)&lt;/em&gt; cowl and (fake) &lt;em&gt;petrol tank(油箱)&lt;/em&gt; are clear Harley design cues. &lt;em&gt;On closer inspection(近观)&lt;/em&gt; however it is obvious that all is not quite as it seems. At the very core of the bike sits its sizable battery, something Harley Davidson calls a ’&lt;em&gt;Renewable Energy Storage System(可再生能源储存系统)&lt;/em&gt;’. In technical terms, it’s a 5.5kWh high-voltage &lt;em&gt;lithium ion battery pack(锂离子电池组)&lt;/em&gt; with a built-in &lt;em&gt;power generation system(发电系统)&lt;/em&gt;. Contained in a &lt;em&gt;cast aluminium case(铸铝外壳)&lt;/em&gt; with &lt;em&gt;cooling fins(冷却片)&lt;/em&gt; it acts as a &lt;em&gt;stressed chassis member(压力机箱成员)&lt;/em&gt; with &lt;em&gt;the frame bolted(框架螺栓)&lt;/em&gt; around it. The unit can be charged to 80% in under 40 minutes at a public fast charger but takes much, much longer (around 10 hours or more) if plugged into a &lt;em&gt;domestic three-pin socket(国内三针插座)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/livewire-action4_embed.jpg?itok=Bx0yMeTV&#34; alt=&#34;livewire-action&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The official maximum ‘city range’ for the LiveWire is given as 146 miles, but on test, this proved wholly optimistic. &lt;em&gt;More accurate(更准确的说)&lt;/em&gt; is the 95 miles of ‘&lt;em&gt;combined stop-and-go and highway(结合停车和高速公路)&lt;/em&gt;’ range. Make no mistake, this is not a bike designed for touring and careful route planning is essential.&lt;/p&gt;
+&lt;p&gt;Located directly beneath the battery is the LiveWire’s ‘&lt;em&gt;Revelation(启示)&lt;/em&gt;’ water-cooled electric motor, which Harley Davidson says is good for 0-60mph in 3.0 seconds. Should the need for &lt;em&gt;virtually(实际上)&lt;/em&gt; &lt;em&gt;instant(立即的)&lt;/em&gt; &lt;em&gt;overtaking(超车)&lt;/em&gt; &lt;em&gt;manoeuvres(演习,动作)&lt;/em&gt; &lt;em&gt;arise(出现)&lt;/em&gt;, it can also shoot from 60-80mph in a hugely impressive 1.9 seconds.&lt;/p&gt;
+&lt;p&gt;In fact, riding the LiveWire is where the package really begins to ask questions of traditional petrol-powered bikes. Electric or not, this is a fun and &lt;em&gt;engaging(迷人的)&lt;/em&gt; motorcycle to ride. The riding position feels &lt;em&gt;macho(大男子主义)&lt;/em&gt; and strangely aggressive for a factory-made Harley and reminds you of a streetfighter or muscle bike from the 1990s. Once you’ve selected one of seven riding modes (three of which are &lt;em&gt;customisable(可定制的)&lt;/em&gt;) to electronically control the performance characteristics of the bike and the level of electronic intervention, the LiveWire’s power unit gently ‘&lt;em&gt;throbs(心脏/脉搏等跳动)&lt;/em&gt;’ when stationary. This not only lets you know the &lt;em&gt;throttle(油门)&lt;/em&gt; is active but also serves to remind you that you are &lt;em&gt;astride(跨在)&lt;/em&gt; a bike developed to &lt;em&gt;reveal(揭示)&lt;/em&gt; a &lt;em&gt;definite(明确的)&lt;/em&gt; &lt;em&gt;personality(个性)&lt;/em&gt; and some might say, soul. It sounds like a &lt;em&gt;bizarre(奇异的)&lt;/em&gt; &lt;em&gt;concept(想法)&lt;/em&gt;, but in practice it’s strangely effective.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/50067_115th_bc2_181485_embed.jpg?itok=1EsIFvpn&#34; alt=&#34;motorcycle&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Once underway you can’t fail to notice the smoothness of the motor, the &lt;em&gt;jet turbine-style sound(喷气涡轮式声音)&lt;/em&gt; it makes and the distinct &lt;em&gt;lack of gears(无档)&lt;/em&gt;, which has your left hand and foot often reaching into thin air for an absent &lt;em&gt;clutch(离合器)&lt;/em&gt; or &lt;em&gt;gear lever(变速杆)&lt;/em&gt;. You also quickly warm to the &lt;em&gt;abundant(充足的)&lt;/em&gt; power and &lt;em&gt;torque(扭矩)&lt;/em&gt;, all 104bhp and 86 lb ft of it. Delivered in a wonderfully controllable and linear manner, the system is super simple to operate, you simply &lt;em&gt;twist(拧/扭)&lt;/em&gt; and go. This means that you’re soon throwing the bike into corners with all the confidence of an all-season &lt;em&gt;dispatch(急件)&lt;/em&gt; rider. Capable of 114mph flat out, keen riders will be pleased to hear that the LiveWire is a bike more focused on how easily it goes fast, rather than simply how fast it goes.&lt;/p&gt;
+&lt;p&gt;On the handling front, &lt;em&gt;there’s even more to celebrate(还有很多值得庆幸的东西)&lt;/em&gt;. Unlike almost all other Harley Davidsons, and despite its 250kg &lt;em&gt;bulk(体积/大块)&lt;/em&gt;, this bike is truly at home on &lt;em&gt;twisty challenging roads(充满挑战的曲折道路)&lt;/em&gt;. The ride provided by the &lt;em&gt;big-piston(大活塞)&lt;/em&gt; Showa forks and a similarly branded rear shock do a &lt;em&gt;tremendous(极大地)&lt;/em&gt; job and deliver very little drama until very heavily pushed. &lt;em&gt;Traction control(牵引力控制)&lt;/em&gt; and ABS are standard, as are a set of &lt;em&gt;monoblock(单块/整体式)&lt;/em&gt; Brembo &lt;em&gt;calipers(卡钳)&lt;/em&gt; &lt;em&gt;gripping(adj.扣人心弦的,v.夹紧/紧握)&lt;/em&gt; &lt;em&gt;dual(双的,双数)&lt;/em&gt; 300mm discs, which do a fine job of &lt;em&gt;hauling(牵引)&lt;/em&gt; the LiveWire down from speed.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/elw_dom_amp_orange_denim.0003_embed.jpg?itok=vGtirRjJ&#34; alt=&#34;motorcycle&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As is &lt;em&gt;befitting(合适的,此处可以翻译为迎合)&lt;/em&gt; of many &lt;em&gt;premium(adj.优质的)&lt;/em&gt; new motorcycles in 2020, a 4.3-inch colour TFT touchscreen offers the rider a wide range of information on a display that’s bright and easy to read. Bluetooth connectivity also comes as standard, so should you wish, you can easily accept calls and hear navigation instructions via your smartphone. The Harley Davidson Connect app also provides you with &lt;em&gt;handy(方便的)&lt;/em&gt; directions, ride planning information, &lt;em&gt;dealer(经销商)&lt;/em&gt; and event locations and the &lt;em&gt;reassurance(消除恐惧或疑虑)&lt;/em&gt; of being able to &lt;em&gt;remotely monitor(远程监控)&lt;/em&gt; your motorcycle’s security, using &lt;em&gt;tamper alerts(篡改警告)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;From a design &lt;em&gt;perspective(角度)&lt;/em&gt;, and &lt;em&gt;in terms of pushing the boundaries of technology(就突破技术界限而言)&lt;/em&gt;, the LiveWire is a massive hit on many accounts. Few other electric bikes available today are as desirable, as effective or as much fun to ride. The fact that there’s a Harley Davidson badge on the tank is perhaps more surprising however, and only a brave salesman will attempt to convince an existing customer that the spirit of the brand is alive and well in this impressively high-tech and future-ready machine. So yes, the LiveWire is an excellent Harley, but certainly not as you know it.&lt;/p&gt;
+&lt;p&gt;INFORMATION&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.harley-davidson.com/gb/en/index.html&#34;&gt;harley-davidson.com&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;your-ultimate-guide-to-different-types-of-coffeehttpswwwtasteofhomecomarticletypes-of-coffee&#34;&gt;&lt;a href=&#34;https://www.tasteofhome.com/article/types-of-coffee/&#34;&gt;Your Ultimate Guide to Different Types of Coffee&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;We cover all the different types of coffee from lattes to red eyes. All of your burning coffee questions are &lt;em&gt;finally&lt;/em&gt; answered.&lt;/p&gt;
+&lt;p&gt;Every editorial product is independently selected, though we may be compensated or receive an affiliate commission if you buy something through our links.&lt;/p&gt;
+&lt;p&gt;We’ve all been there, standing in line at a favorite coffeeshop, sweating because we’re not entirely sure of the &lt;a href=&#34;https://www.tasteofhome.com/article/whats-the-difference-between-iced-coffee-and-cold-brew-coffee/&#34;&gt;difference between a cold brew vs. a classic iced coffee&lt;/a&gt;. Oh gosh, I know I have. Good news: we’re covering everything from the difference of Arabica and Robusta coffee beans to &lt;em&gt;all&lt;/em&gt; the ways to brew your favorite &lt;a href=&#34;https://www.tasteofhome.com/article/the-real-reason-why-coffee-is-called-a-cup-of-joe/&#34;&gt;cup of joe&lt;/a&gt;. Hold on tight. We’re diving deep into your morning go-to drink.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/COFFEE-BEANS-01.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;different-types-of-coffee-beans&#34;&gt;Different Types of Coffee Beans&lt;/h2&gt;
+&lt;p&gt;In U.S. supermarkets, you’ll typically find two types of coffee beans for sale: Arabica and Robusta. You may be wondering, is there a &lt;a href=&#34;https://www.tasteofhome.com/article/arabica-vs-robusta-coffee/&#34;&gt;difference between Arabica and Robusta&lt;/a&gt;? Oh, there definitely is. Let’s get right to it.&lt;/p&gt;
+&lt;h4 id=&#34;arabica&#34;&gt;Arabica&lt;/h4&gt;
+&lt;p&gt;Arabica is the most popular type of coffee, hands down. Depending on who you ask, many coffee enthusiasts prefer using Arabica beans due to its taste. Typically used for black coffee, Arabica beans have a sweeter, more complex flavor that you can drink straight. Funny thing is, even though it’s the most popular, it doesn’t have as much caffeine as Robusta.&lt;/p&gt;
+&lt;h4 id=&#34;robusta&#34;&gt;Robusta&lt;/h4&gt;
+&lt;p&gt;While Arabica is the most popular, Robusta is cheaper and stronger. Because of its bitter flavor, you’ll typically see Robusta used for espresso drinks and in instant coffee mixes. If your Monday morning is lagging, reach for a cup of coffee that uses Robusta beans. Their high caffeine content will wake you right up!&lt;/p&gt;
+&lt;h2 id=&#34;types-of-coffee-drinks&#34;&gt;Types of Coffee Drinks&lt;/h2&gt;
+&lt;p&gt;Latte, americano, affogato…it’s crazy all that you can do with a few small beans. Whether you’re a coffee newbie or you consider yourself a coffee connoisseur, there are so many &lt;a href=&#34;https://www.tasteofhome.com/collection/homemade-coffee-shop-drinks/&#34;&gt;types of coffee drinks&lt;/a&gt; to discover. Here are some of the most popular types ordered by coffee lovers nationwide.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/Types-of-Coffee-Drinks_1200X1200.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;black&#34;&gt;Black&lt;/h4&gt;
+&lt;p&gt;Black coffee is as simple as it gets with ground coffee beans steeped in hot water, served warm. And if you want to sound fancy, you can call black coffee by its proper name: cafe noir.&lt;/p&gt;
+&lt;p&gt;**Black coffee 黑咖啡：**由熱水沖泡研磨咖啡豆的經典咖啡&lt;/p&gt;
+&lt;h4 id=&#34;latte&#34;&gt;Latte&lt;/h4&gt;
+&lt;p&gt;As the most popular coffee drink out there, the latte is comprised of a shot of espresso and steamed milk with just a touch of foam. It can be ordered plain or with a flavor shot of anything from vanilla to pumpkin spice. (Here’s how to make a copycat Starbucks &lt;a href=&#34;https://www.tasteofhome.com/article/copycat-pumpkin-spice-latte-recipe/&#34;&gt;pumpkin spice latte&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Latte 拿鐵：&lt;/strong&gt; 濃縮咖啡加比較多的熱牛奶。&lt;/p&gt;
+&lt;h4 id=&#34;cappuccino&#34;&gt;Cappuccino&lt;/h4&gt;
+&lt;p&gt;Cappuccino is a latte made with more foam than steamed milk, often with a sprinkle of cocoa powder or cinnamon on top. Sometimes you can find variations that use cream instead of milk or ones that throw in flavor shot, as well.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cappucino 卡布奇諾：&lt;/strong&gt; 濃縮咖啡加一些熱牛奶。&lt;/p&gt;
+&lt;h4 id=&#34;americano&#34;&gt;Americano&lt;/h4&gt;
+&lt;p&gt;With a similar flavor to black coffee, the americano consists of an espresso shot diluted in hot water. Pro tip: if you’re making your own, pour the espresso first, then add the hot water.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Americano 美式咖啡：&lt;/strong&gt; 濃縮咖啡加熱開水。本質上Long Black同Americano都是同一种，即Espresso加水，分別在先後次序；Americano係將水加進Espresso中，而Long Black則是將Espresso加進熱水之中，味道與外觀相若，但由於Long Black是把咖啡加入熱水之中，故會留有一層油在表面，而且味道亦更濃烈，至於Americano則剛好相反，因而口感較清爽&lt;/p&gt;
+&lt;h4 id=&#34;espresso&#34;&gt;Espresso&lt;/h4&gt;
+&lt;p&gt;An espresso shot can be served solo or used as the foundation of most coffee drinks, like lattes and macchiatos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Espresso 濃縮咖啡：&lt;/strong&gt; 在濃縮咖啡機中製成的一小杯咖啡。&lt;/p&gt;
+&lt;h4 id=&#34;doppio&#34;&gt;Doppio&lt;/h4&gt;
+&lt;p&gt;A double shot of espresso, the doppio is perfect for putting extra pep in your step.&lt;/p&gt;
+&lt;h4 id=&#34;cortado&#34;&gt;Cortado&lt;/h4&gt;
+&lt;p&gt;Like yin and yang, a cortado is the perfect balance of espresso and warm steamed milk. The milk is used to cut back on the espresso’s acidity.&lt;/p&gt;
+&lt;h4 id=&#34;red-eye&#34;&gt;Red Eye&lt;/h4&gt;
+&lt;p&gt;Named after those pesky midnight flights, a red eye can cure any tiresome morning. A full cup of hot coffee with an espresso shot mixed in, this will definitely get your heart racing.&lt;/p&gt;
+&lt;h4 id=&#34;galão&#34;&gt;Galão&lt;/h4&gt;
+&lt;p&gt;Originating in Portugal, this hot coffee drink is closely related to the latte and cappuccino. Only difference is it contains about twice as much foamed milk, making it a lighter drink compared to the other two.&lt;/p&gt;
+&lt;h4 id=&#34;lungo&#34;&gt;Lungo&lt;/h4&gt;
+&lt;p&gt;A lungo is a long-pull espresso. The longer the pull, the more caffeine there is and the more ounces you can enjoy.&lt;/p&gt;
+&lt;h4 id=&#34;macchiato&#34;&gt;Macchiato&lt;/h4&gt;
+&lt;p&gt;The macchiato is another espresso-based drink that has a small amount of foam on top. It’s the happy medium between a cappuccino and a doppio.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Macchiato 瑪奇朵：&lt;/strong&gt; 濃縮咖啡加一點點熱牛奶。&lt;/p&gt;
+&lt;h4 id=&#34;mocha&#34;&gt;Mocha&lt;/h4&gt;
+&lt;p&gt;For all you chocolate lovers out there, you’ll fall in love with a mocha (or maybe you already have). The mocha is a chocolate espresso drink with steamed milk and foam.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mocha 摩卡：&lt;/strong&gt; 拿鐵加巧克力糖漿。&lt;/p&gt;
+&lt;h4 id=&#34;ristretto&#34;&gt;Ristretto&lt;/h4&gt;
+&lt;p&gt;Ristretto is an espresso shot. It uses less hot water which creates a sweeter flavor compared to the bitter taste of a traditional shot of espresso or a doppio.&lt;/p&gt;
+&lt;h4 id=&#34;flat-white&#34;&gt;Flat White&lt;/h4&gt;
+&lt;p&gt;This Aussie-born drink is basically a cappuccino without the foam or chocolate sprinkle. It’s an espresso drink with steamed milk.&lt;/p&gt;
+&lt;h4 id=&#34;affogato&#34;&gt;Affogato&lt;/h4&gt;
+&lt;p&gt;The affogato is an excuse to enjoy a scoop of ice cream any time of day (and any time of year in my opinion). Served with a scoop of ice cream and a shot of espresso, or two. The affogato is extra delish &lt;a href=&#34;https://www.tasteofhome.com/recipes/brownie-affogato-sundaes/&#34;&gt;served over a brownie&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;café-au-lait&#34;&gt;Café au Lait&lt;/h4&gt;
+&lt;p&gt;Café au lait is perfect for the coffee minimalist who wants a bit more flavor. Just add a splash of warm milk to your coffee and you’re all set!&lt;/p&gt;
+&lt;h4 id=&#34;irish&#34;&gt;Irish&lt;/h4&gt;
+&lt;p&gt;Irish coffee consists of black coffee, whiskey and sugar, topped with whipped cream. Here’s an &lt;a href=&#34;https://www.tasteofhome.com/article/how-to-make-irish-coffee-recipe/&#34;&gt;Irish coffee recipe&lt;/a&gt; that will warm you right up.&lt;/p&gt;
+&lt;h2 id=&#34;types-of-iced-coffee&#34;&gt;Types of Iced Coffee&lt;/h2&gt;
+&lt;p&gt;What’s more refreshing than cool iced coffee in the summertime? Or maybe you enjoy these chilled drinks all year long. (We do!) Here are some of the best iced coffee drinks you can sip on.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/Types-of-iced-Coffee-2_1200X1200.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;iced-coffee&#34;&gt;Iced Coffee&lt;/h4&gt;
+&lt;p&gt;A coffee with ice, typically served with a dash of milk, cream or sweetener—iced coffee is really as simple as that.&lt;/p&gt;
+&lt;h4 id=&#34;iced-espresso&#34;&gt;Iced Espresso&lt;/h4&gt;
+&lt;p&gt;Like an iced coffee, iced espresso can be served straight or with a dash of milk, cream or sweetener. You can also ice speciality espresso-based drinks like americanos, mochas, macchiatos, lattes and flat whites.&lt;/p&gt;
+&lt;h4 id=&#34;cold-brew&#34;&gt;Cold Brew&lt;/h4&gt;
+&lt;p&gt;The trendiest of the iced coffee bunch, cold brew coffees are made by steeping coffee beans from anywhere between 6-36 hours, depending on how strong you would like your cold brew. Once the beans are done steeping, add cold milk or cream. Here are a few of our best &lt;a href=&#34;https://www.tasteofhome.com/article/how-to-make-cold-brew-coffee-as-tasty-as-a-coffeehouses/&#34;&gt;cold brew coffee tips&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;**Cold brew 冷萃咖啡：**類似黑咖啡，經由長時間冷水浸泡在研磨咖啡豆裡製成。&lt;/p&gt;
+&lt;h4 id=&#34;frappuccino&#34;&gt;Frappuccino&lt;/h4&gt;
+&lt;p&gt;Made famous by Starbucks, the Frappuccino is a blended iced coffee drink that’s topped with whipped cream and syrup. But not all Frapps are made the same: watch out for coffee-free versions. Unless you’re into that sorta thing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Frappé 希臘冰咖啡：&lt;/strong&gt; 濃縮咖啡加冰塊，和打泡的牛奶混合。&lt;/p&gt;
+&lt;h4 id=&#34;nitro&#34;&gt;Nitro&lt;/h4&gt;
+&lt;p&gt;A cold brew + nitrogen bubbles = a cold brew coffee with a frothy, Guinness-like consistency. (It’s poured via a nitro tap, too.)&lt;/p&gt;
+&lt;h4 id=&#34;mazagran&#34;&gt;Mazagran&lt;/h4&gt;
+&lt;p&gt;Maza-who?! Mazagran coffee is a cross between iced coffee, tea and your favorite rum drink. It typically consists of espresso, lemon, sugar and (sometimes) rum.&lt;/p&gt;
+&lt;h2 id=&#34;types-of-coffee-makers&#34;&gt;Types of Coffee Makers&lt;/h2&gt;
+&lt;p&gt;Now that you’re a master on all the coffee types, let’s learn how to make ’em! From French presses to Mokas, there are plenty of ways to prepare your dream cup of java.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/Types-of-Coffee-Makers-1200x1200-.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;french-press&#34;&gt;French Press&lt;/h4&gt;
+&lt;p&gt;This manual coffee maker is extremely easy to use. Add ground coffee beans into your French press, pour piping hot water over the grounds, let the coffee steep for a few minutes and finally, press the plunger down and pour! Simple as that. French presses can be used for any bean, but many people prefer using them for darker, richer roasts. Also, how fancy does this &lt;a href=&#34;https://www.amazon.com/dp/B082FN5Y6Y/?ots=1&amp;amp;slotNum=0&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;French press&lt;/a&gt; look? Make your morning brew…in style!&lt;/p&gt;
+&lt;h4 id=&#34;percolator&#34;&gt;Percolator&lt;/h4&gt;
+&lt;p&gt;Try out a &lt;a href=&#34;https://www.amazon.com/dp/B002LVUIK8/?ots=1&amp;amp;slotNum=1&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;percolator&lt;/a&gt; to add a retro feel to your daily brew—like 1880s retro. To put it simply, percolators brew coffee by continuously pushing boiling hot water bubbles up into the “coffee chamber” to steep the coffee grains. This cycle is repeated until the coffee is ready to serve. They’re typically used for medium roasts and prepared over the stovetop, but percolators can work over any heated surface, even a campfire (hint, hint!).&lt;/p&gt;
+&lt;h4 id=&#34;single-serve&#34;&gt;Single Serve&lt;/h4&gt;
+&lt;p&gt;Single serve coffee maker sales have really peaked in the past few years. Measure out your desired coffee amount, pour into the reusable filter, pour water in and voila! A cup of coffee just for you will be ready soon. Single serve coffee makers are perfect for single-person households (or those where just one person drinks coffee). Try out this &lt;a href=&#34;https://www.amazon.com/dp/B07457Z312/?ots=1&amp;amp;slotNum=2&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;budget-friendly single serve coffee maker&lt;/a&gt; which includes a fun travel mug!&lt;/p&gt;
+&lt;h4 id=&#34;aeropress&#34;&gt;AeroPress&lt;/h4&gt;
+&lt;p&gt;We’ve got another manual coffee maker for you. The &lt;a href=&#34;https://www.amazon.com/dp/B0047BIWSK/?ots=1&amp;amp;slotNum=3&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;AeroPress&lt;/a&gt; is very similar to the French press. To use an AeroPress, we recommend checking out &lt;a href=&#34;https://aeropress.com/use-it-now/getting-started/&#34;&gt;this beautiful get-started guide&lt;/a&gt;. You can make espresso, lattes, cold brews or just a classic cup of coffee in this nifty little machine.&lt;/p&gt;
+&lt;h4 id=&#34;drip&#34;&gt;Drip&lt;/h4&gt;
+&lt;p&gt;Aah, yes. The classic electric coffee maker you know and love. To get your brew going in a &lt;a href=&#34;https://www.amazon.com/dp/B00MVWGQX0/?ots=1&amp;amp;slotNum=4&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;drip coffee maker&lt;/a&gt;, all you have to do is scoop your coffee, pour it into the filter, pour some water in and press start to let the drip coffee maker do it’s coffee magic. Soon, you’ll hear the sweet sounds of your coffee dripping right into your coffee pot. Mornings, conquered.&lt;/p&gt;
+&lt;p&gt;Some drip coffee makers also come with a &lt;a href=&#34;https://www.amazon.com/dp/B000TQEDE4/?ots=1&amp;amp;slotNum=5&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;thermal carafe&lt;/a&gt;. Typically with a double layered, stainless steel wall, thermal carafes keep your coffee tasting fresh and hot for hours longer than most glass carafes do. Some drip coffee makers use a thermal carafe, but traditionally, they use a glass carafe instead.&lt;/p&gt;
+&lt;h4 id=&#34;pour-over&#34;&gt;Pour Over&lt;/h4&gt;
+&lt;p&gt;A pour-over coffee maker is exactly what it sounds like: you manually pour hot water over the beans. With a solid 5-star rating on Amazon, pour-over coffee makers like &lt;a href=&#34;https://www.amazon.com/Chemex-Classic-Pour-over-Glass-Coffeemaker/dp/B017M9TJA8/?ots=1&amp;amp;slotNum=6&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;Chemex&lt;/a&gt; are a solid choice. Fans love the fact that you get to control the strength of the coffee, plus the pots are super easy to clean. You do need a special kind of filter, though, which is pricier than the typical drip coffee filter. However, some are reusable.&lt;/p&gt;
+&lt;h4 id=&#34;cold-brew-1&#34;&gt;Cold Brew&lt;/h4&gt;
+&lt;p&gt;Diehard cold brew fans may want to invest in a &lt;a href=&#34;https://www.amazon.com/dp/B00FFLY64U/?ots=1&amp;amp;slotNum=7&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;cold brew coffee maker&lt;/a&gt;. To use a cold brew maker, throw in your coffee grounds, brew and serve. You can store the coffee for up to 36 hours. If you’re looking for a multi-functional coffee maker, you can prepare cold brew coffees in other makers, like the AeroPress.&lt;/p&gt;
+&lt;h4 id=&#34;moka&#34;&gt;Moka&lt;/h4&gt;
+&lt;p&gt;Moka pots share a lot of similarities with the percolator and there’s often confusion between the two. Both need a heated surface, like a stovetop or even a campfire. However, the &lt;a href=&#34;https://www.amazon.com/dp/B000CNY6UK/?ots=1&amp;amp;slotNum=8&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;Moka pot&lt;/a&gt; produces an espresso-like drink and its brewing process is a bit different than the percolator. You need to keep more of an eye on it because when the Moka pot’s water is spent, you should remove the pot from the heat surface to avoid burnt-tasting coffee. Whereas with the percolator’s simple brewing process, the longer you leave it running, the stronger the coffee will be.&lt;/p&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;p&gt;**Pour over 手沖咖啡 ：**類似黑咖啡，由熱水倒在研磨咖啡豆上，並且從濾杯滴下製成。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decaf 低咖啡因：&lt;/strong&gt; 低咖啡因咖啡或是無咖啡因。&lt;/p&gt;
+&lt;p&gt;**Steamer 牛奶：**有泡沫的熱牛奶加上甜甜的口味。&lt;/p&gt;
+&lt;p&gt;**Lemonade 檸檬水：**一種由檸檬汁、糖和水製成的冰的飲料。&lt;/p&gt;
+&lt;h3 id=&#34;還有&#34;&gt;還有…&lt;/h3&gt;
+&lt;p&gt;在很多咖啡店裡，你可以加一些不同的口味到你的飲品裡。&lt;/p&gt;
+&lt;p&gt;這些通常會需要加$0.50，請看以下一些受歡迎的選項：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Vanilla 香草&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hazelnut 榛果&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Caramel 焦糖&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Toffee 太妃糖&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;特殊飲料&#34;&gt;特殊飲料&lt;/h3&gt;
+&lt;p&gt;你有沒有聽過 “blended drink 特調飲料”? 或者是 “Rooibos espresso 南非紅萃”? 這些可能聽起來有點怪，但我們想要你在看到他們之前先準備好！&lt;/p&gt;
+&lt;p&gt;很多咖啡店有他們自己的特調，但這裡有一些&lt;a href=&#34;https://www.thrillist.com/drink/nation/new-coffee-drinks-creative-espresso-menus&#34;&gt;新的有創意的咖啡店飲料&lt;/a&gt;，請看以下介紹：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Blended drinks 特調飲料：&lt;/strong&gt; 一種冷飲、黏稠的飲料，由濃縮咖啡、冰塊和牛奶混合而成。特調飲料通常是甜的口味（像是巧克力、焦糖、薄荷和南瓜），還有很多咖啡店會提供季節性口味。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Matcha latte 抹茶拿鐵：&lt;/strong&gt; 一種抹茶製成的飲料。雖然之前在菜單上都很難找到這個選項，但現在大部分的咖啡店都有提供幾種不同抹茶類型的飲品。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rooibos espresso 南非紅萃：&lt;/strong&gt; 雖然是說“espresso,” 但是這個飲料沒有任何咖啡在裡面。南非紅萃是由南非國寶茶製成的，但它被叫做“espresso”是因為它和濃縮咖啡有類似的口感和外表。&lt;/p&gt;
+&lt;p&gt;這是一種新的飲品，最近因為南非國寶茶的健康益處而變得非常流行。&lt;/p&gt;
+&lt;p&gt;**Golden latte 黃金拿鐵：**這種飲品沒有咖啡因， 沒有咖啡也沒有茶。另一種因為健康益處而流行的新飲品，這種拿鐵是用牛奶、薑黃、薑、肉桂和其他香料製成的。&lt;/p&gt;
+&lt;p&gt;INFORMATION&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.coffeereview.com/coffee-glossary/&#34;&gt;COFFEE GLOSSARY&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;ingredients&#34;&gt;Ingredients&lt;/h1&gt;
+&lt;h2 id=&#34;meat&#34;&gt;Meat&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/v2-5fd7917287c26049d496f6f9b16955a2_r.jpg&#34; alt=&#34;Meat&#34;&gt;&lt;/p&gt;
+&lt;p&gt;lamb 羔羊肉 [læm]&lt;/p&gt;
+&lt;p&gt;butcher 肉店老板 [ˈbʊtʃər]&lt;/p&gt;
+&lt;p&gt;meat hook 吊肉钩 [miːt hʊk]&lt;/p&gt;
+&lt;p&gt;knife sharpener 磨刀器&lt;/p&gt;
+&lt;p&gt;scales 秤 [skeɪlz]&lt;/p&gt;
+&lt;p&gt;bacon 熏肉 [ˈbeɪkən]&lt;/p&gt;
+&lt;p&gt;sausages 香肠 [ˈsɔsɪdʒɪz]&lt;/p&gt;
+&lt;p&gt;liver 肝脏 [ˈlɪvər]&lt;/p&gt;
+&lt;p&gt;pork 猪肉 [pɔːrk]&lt;/p&gt;
+&lt;p&gt;offal 下水 [ˈɔːfl]&lt;/p&gt;
+&lt;p&gt;free range 放养的 [ˌfriː reɪndʒ]&lt;/p&gt;
+&lt;p&gt;cooked meat 熟肉 [kʊkt miːt]&lt;/p&gt;
+&lt;p&gt;beef 牛肉 [biːf]&lt;/p&gt;
+&lt;p&gt;rabbit 兔肉 [ˈræbɪt]&lt;/p&gt;
+&lt;p&gt;cured 腌制的 [kjʊrd]&lt;/p&gt;
+&lt;p&gt;organic 有机（饲养）的 [ɔːrˈɡænɪk]&lt;/p&gt;
+&lt;p&gt;white meat 白肉（指家禽肉、鱼肉等）&lt;/p&gt;
+&lt;p&gt;veal 小牛肉 [viːl]&lt;/p&gt;
+&lt;p&gt;tongue 牛舌 [tʌŋ]&lt;/p&gt;
+&lt;p&gt;smoked 熏制的 [smoʊkt]&lt;/p&gt;
+&lt;p&gt;lean meat 瘦肉 [liːn miːt]&lt;/p&gt;
+&lt;p&gt;red meat 红肉（指牛肉、猪肉和羊肉）&lt;/p&gt;
+&lt;h2 id=&#34;cuts&#34;&gt;Cuts&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/v2-8cd664994b62af4220f6be06ddc57077_r.jpg&#34; alt=&#34;cuts&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ham 火腿 [hæm]&lt;/p&gt;
+&lt;p&gt;rind 肉皮 [raɪnd]&lt;/p&gt;
+&lt;p&gt;slice 薄片 [slaɪs]&lt;/p&gt;
+&lt;p&gt;sirloin steak 牛上腰排 [ˈsɜːrlɔɪn steɪk]&lt;/p&gt;
+&lt;p&gt;rasher 火腿片 [ˈræʃər]&lt;/p&gt;
+&lt;p&gt;mince 肉馅 [mɪns]&lt;/p&gt;
+&lt;p&gt;fat 肥肉 [fæt]&lt;/p&gt;
+&lt;p&gt;rib 肋排 [rɪb]&lt;/p&gt;
+&lt;p&gt;chop 排骨 [tʃɑːp]&lt;/p&gt;
+&lt;p&gt;bone 骨头 [boʊn]&lt;/p&gt;
+&lt;p&gt;fillet 里脊肉 [fɪˈleɪ]&lt;/p&gt;
+&lt;p&gt;joint 后腿肉 [dʒɔɪnt]&lt;/p&gt;
+&lt;p&gt;kidney 肾 [ˈkɪdni]&lt;/p&gt;
+&lt;p&gt;rump steak 牛腿排 [rʌmp steɪk]&lt;/p&gt;
+&lt;p&gt;heart 心 [hɑːrt]&lt;/p&gt;
+&lt;h2 id=&#34;poultry&#34;&gt;Poultry&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/v2-609fbff8bdd72b7474c7ea368d922f1f_r.jpg&#34; alt=&#34;poultry&#34;&gt;&lt;/p&gt;
+&lt;p&gt;skin 皮 [skɪn]&lt;/p&gt;
+&lt;p&gt;turkey 火鸡 [ˈtɜːrki]&lt;/p&gt;
+&lt;p&gt;breast 胸 [brest]&lt;/p&gt;
+&lt;p&gt;thigh 大腿 [θaɪ]&lt;/p&gt;
+&lt;p&gt;dressed chicken 去毛开膛的鸡&lt;/p&gt;
+&lt;p&gt;chicken 鸡 [ˈtʃɪkɪn]&lt;/p&gt;
+&lt;p&gt;pheasant 野鸡 [ˈfeznt]&lt;/p&gt;
+&lt;p&gt;duck 鸭 [dʌk]&lt;/p&gt;
+&lt;p&gt;leg 腿 [leɡ]&lt;/p&gt;
+&lt;p&gt;quail 鹌鹑 [kweɪl]&lt;/p&gt;
+&lt;p&gt;goose 鹅 [ɡuːs]&lt;/p&gt;
+&lt;h2 id=&#34;fish&#34;&gt;Fish&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/v2-f0a3656178aa492097cadbe6f6adc641_r.jpg&#34; alt=&#34;fish&#34;&gt;&lt;/p&gt;
+&lt;p&gt;peeled prawns 去皮虾 [piːld prɔnz]&lt;/p&gt;
+&lt;p&gt;ice 冰 [aɪs]&lt;/p&gt;
+&lt;p&gt;red mullet 羊鱼 [red ˈmʌlɪt]&lt;/p&gt;
+&lt;p&gt;halibut fillets 大比目鱼片 [ˈhælɪbət fɪˈleɪs]&lt;/p&gt;
+&lt;p&gt;rainbow trout 虹鳟鱼 [ˌreɪnboʊ ˈtraʊt]&lt;/p&gt;
+&lt;p&gt;skate wings 鳐鱼翅 [skeɪt wɪŋz]&lt;/p&gt;
+&lt;p&gt;fishmongers 水产店&lt;/p&gt;
+&lt;p&gt;monkfish 鮟鱇鱼英 [ mʌŋkfɪʃ]&lt;/p&gt;
+&lt;p&gt;mackerel 鲭鱼 [ˈmækrəl]&lt;/p&gt;
+&lt;p&gt;swordfish 剑鱼 [ˈsɔːrdfɪʃ]&lt;/p&gt;
+&lt;p&gt;Dover sole 鳎鱼 [ˈdoʊvər soʊl]&lt;/p&gt;
+&lt;p&gt;lemon sole 黄盖鲽 [ˌlemən ˈsoʊl]&lt;/p&gt;
+&lt;p&gt;haddock 黑线鳕 [ˈhædək]&lt;/p&gt;
+&lt;p&gt;sardine 沙丁鱼 [ˌsɑːrˈdiːn]&lt;/p&gt;
+&lt;p&gt;skate 鳐鱼 [skeɪt]&lt;/p&gt;
+&lt;p&gt;whiting 牙鳕 [ˈwaɪtɪŋ]&lt;/p&gt;
+&lt;p&gt;sea bass 海鲈 [siː beɪs]&lt;/p&gt;
+&lt;p&gt;salmon 鲑鱼 [ˈsæmən]&lt;/p&gt;
+&lt;p&gt;cod 鳕鱼 [kɑːd]&lt;/p&gt;
+&lt;p&gt;sea bream 鲷鱼 [siː briːm]&lt;/p&gt;
+&lt;p&gt;tuna 金枪鱼 [ˈtuːnə]&lt;/p&gt;
+&lt;h2 id=&#34;seafood&#34;&gt;Seafood&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/v2-d619088b7be2ece96a803f1dabe99b30_r.jpg&#34; alt=&#34;seafood&#34;&gt;&lt;/p&gt;
+&lt;p&gt;scallop 扇贝 [ˈskæləp]&lt;/p&gt;
+&lt;p&gt;crab 螃蟹 [kræb]&lt;/p&gt;
+&lt;p&gt;lobster 龙虾 [ˈlɑːbstər]&lt;/p&gt;
+&lt;p&gt;king prawn 大对虾 [kɪŋ prɔːn]&lt;/p&gt;
+&lt;p&gt;mussel 贻贝 [ˈmʌsl]&lt;/p&gt;
+&lt;p&gt;crayfish 小龙虾 [ˈkreɪfɪʃ]&lt;/p&gt;
+&lt;p&gt;oyster 牡蛎 [ˈɔɪstər]&lt;/p&gt;
+&lt;p&gt;razor-shell 蛏子 [ˈreɪzər ʃel]&lt;/p&gt;
+&lt;p&gt;cockle 鸟蛤 [ˈkɑːkl]&lt;/p&gt;
+&lt;p&gt;octopus 章鱼乌贼 [ˈɑːktəpʊs]&lt;/p&gt;
+&lt;p&gt;cuttlefish 乌贼 [ˈkʌtlfɪʃ]&lt;/p&gt;
+&lt;p&gt;clam 蛤蜊 [klæm]&lt;/p&gt;
+&lt;p&gt;frozen 冷冻的 [ˈfroʊzn]&lt;/p&gt;
+&lt;p&gt;salted 盐渍的 [ˈsɔːltɪd]&lt;/p&gt;
+&lt;p&gt;smoked 熏制的 [smoʊkt]&lt;/p&gt;
+&lt;p&gt;descaled 去麟的  [di skeɪl]&lt;/p&gt;
+&lt;p&gt;fillet 去骨鱼片 [fɪˈleɪ]&lt;/p&gt;
+&lt;p&gt;loin 腰肉 [lɔɪn]&lt;/p&gt;
+&lt;p&gt;tail 尾部 [teɪl]&lt;/p&gt;
+&lt;p&gt;bone 骨头 [boʊn]&lt;/p&gt;
+&lt;p&gt;scale 鳞片 [skeɪl]&lt;/p&gt;
+&lt;p&gt;fresh 新鲜 [freʃ]&lt;/p&gt;
+&lt;p&gt;cleaned 处理干净的 [kliːnd]&lt;/p&gt;
+&lt;p&gt;skinned 去皮的 [skɪnd]&lt;/p&gt;
+&lt;p&gt;boned 去骨的 [boʊnd]&lt;/p&gt;
+&lt;p&gt;filleted 切片的 [fɪˈleɪɪd]&lt;/p&gt;
+&lt;p&gt;steak 鱼片 [steɪk]&lt;/p&gt;
+&lt;p&gt;Wil you clean it for me?&lt;/p&gt;
+&lt;h2 id=&#34;vegeatables&#34;&gt;Vegeatables&lt;/h2&gt;
+&lt;h3 id=&#34;a&#34;&gt;A&lt;/h3&gt;
+&lt;p&gt;Adzuki bean 红豆 [ə ʒuki]&lt;/p&gt;
+&lt;p&gt;Aloe 芦荟 [ ælo]&lt;/p&gt;
+&lt;p&gt;Aniseed 八角 [ ænəsid]&lt;/p&gt;
+&lt;p&gt;Aubergine 茄子 [ obɚʒin]&lt;/p&gt;
+&lt;p&gt;Asparagus 芦笋 [ə spærəgəs]&lt;/p&gt;
+&lt;h3 id=&#34;b&#34;&gt;B&lt;/h3&gt;
+&lt;p&gt;Bamboo Shoot 笋 [,bæm bu]&lt;/p&gt;
+&lt;p&gt;Broccoli 西兰花 [ brɔkəli]&lt;/p&gt;
+&lt;p&gt;Bean Sprout 绿豆芽 [spraʊt]&lt;/p&gt;
+&lt;p&gt;Beetroot 甜菜 [ bitrut]&lt;/p&gt;
+&lt;p&gt;Brussels sprout 球芽甘蓝&lt;/p&gt;
+&lt;p&gt;Bitter gourd 苦瓜 [ɡʊrd]&lt;/p&gt;
+&lt;p&gt;Bok-choy 小白菜 [ bɔk tʃɔɪ]&lt;/p&gt;
+&lt;h3 id=&#34;c&#34;&gt;C&lt;/h3&gt;
+&lt;p&gt;Carrot 胡萝卜 [ kærət]&lt;/p&gt;
+&lt;p&gt;Cabbage 卷心菜 [ˈkæbɪdʒ]&lt;/p&gt;
+&lt;p&gt;Celery 芹菜 [ sɛləri]&lt;/p&gt;
+&lt;p&gt;Cucumber 黄瓜 [ kjʊ,kʌmbɚ]&lt;/p&gt;
+&lt;p&gt;Cauliflower 花菜 [ kɔlɪ flaʊɚ]&lt;/p&gt;
+&lt;p&gt;Cloud ear/wood ear 木耳&lt;/p&gt;
+&lt;p&gt;Chive 细香葱 [tʃaɪv]&lt;/p&gt;
+&lt;p&gt;Corn 玉米 [kɔrn]&lt;/p&gt;
+&lt;p&gt;Chili 辣椒 [ tʃɪli]&lt;/p&gt;
+&lt;p&gt;Coriander 香菜 [,kɔrɪ ændɚ]&lt;/p&gt;
+&lt;p&gt;Cinnamon 肉桂 [ sɪnəmən]&lt;/p&gt;
+&lt;p&gt;Chinese Kale 芥蓝 [kel]&lt;/p&gt;
+&lt;p&gt;Chinese Radish/Daikon 白萝卜&lt;/p&gt;
+&lt;p&gt;Chinese Yam 山药 [jæm]&lt;/p&gt;
+&lt;p&gt;Chrysanthemum greens 茼蒿 [krɪ sænθəməm]&lt;/p&gt;
+&lt;h3 id=&#34;e&#34;&gt;E&lt;/h3&gt;
+&lt;p&gt;Eggplant 茄子 [ ɛɡplænt]&lt;/p&gt;
+&lt;p&gt;Eddoes 小芋头 [ edəʊ]&lt;/p&gt;
+&lt;p&gt;Enoki mushroom 金针菇 [e nɔki:]&lt;/p&gt;
+&lt;h3 id=&#34;f&#34;&gt;F&lt;/h3&gt;
+&lt;p&gt;French Bean 四季豆/刀豆&lt;/p&gt;
+&lt;p&gt;Fennel 茴香 [ fɛnl]&lt;/p&gt;
+&lt;h3 id=&#34;g&#34;&gt;G&lt;/h3&gt;
+&lt;p&gt;Ginger 姜 [ dʒɪndʒɚ]&lt;/p&gt;
+&lt;p&gt;Garlic 大蒜 [ ɡɑrlɪk]&lt;/p&gt;
+&lt;p&gt;Garlic sprout 蒜苗/苔&lt;/p&gt;
+&lt;p&gt;Green Pepper 青椒&lt;/p&gt;
+&lt;h3 id=&#34;k&#34;&gt;K&lt;/h3&gt;
+&lt;p&gt;Kohlrabi 甘蓝 [ kol rɑbi]&lt;/p&gt;
+&lt;p&gt;Kelp 海带 [kɛlp]&lt;/p&gt;
+&lt;p&gt;King oyster mushroom 杏鲍菇&lt;/p&gt;
+&lt;h3 id=&#34;l&#34;&gt;L&lt;/h3&gt;
+&lt;p&gt;Lettuce 莴苣/生菜 [ lɛtɪs]&lt;/p&gt;
+&lt;p&gt;Lotus seed 莲子&lt;/p&gt;
+&lt;p&gt;Loofah 丝瓜 [ lufə]&lt;/p&gt;
+&lt;p&gt;Laurel 月桂 [ lɔrəl]&lt;/p&gt;
+&lt;p&gt;Leek 韭葱 [lik]&lt;/p&gt;
+&lt;p&gt;Laver 紫菜 [ levɚ]&lt;/p&gt;
+&lt;p&gt;Licorice 甘草 [ lɪkərɪs; lɪkərɪʃ]&lt;/p&gt;
+&lt;p&gt;Lotus root 莲藕&lt;/p&gt;
+&lt;h3 id=&#34;m&#34;&gt;M&lt;/h3&gt;
+&lt;p&gt;Mushroom 蘑菇 [ mʌʃrʊm]&lt;/p&gt;
+&lt;p&gt;Mung bean 绿豆&lt;/p&gt;
+&lt;h3 id=&#34;o&#34;&gt;O&lt;/h3&gt;
+&lt;p&gt;Onion 洋葱 [ ʌnjən]&lt;/p&gt;
+&lt;h3 id=&#34;p&#34;&gt;P&lt;/h3&gt;
+&lt;p&gt;Pumpkin 南瓜 [ pʌmpkɪn]&lt;/p&gt;
+&lt;p&gt;Pepper 胡椒&lt;/p&gt;
+&lt;p&gt;Pickled cucumber 酸黄瓜&lt;/p&gt;
+&lt;h3 id=&#34;r&#34;&gt;R&lt;/h3&gt;
+&lt;p&gt;Radish 萝卜 [ rædɪʃ]&lt;/p&gt;
+&lt;p&gt;Romaine 生菜 [rə(ʊ) meɪn]&lt;/p&gt;
+&lt;p&gt;Red pepper 红椒&lt;/p&gt;
+&lt;p&gt;Red bean 泛指红色的豆&lt;/p&gt;
+&lt;h3 id=&#34;s&#34;&gt;S&lt;/h3&gt;
+&lt;p&gt;Spring onion/Scallion 青葱 [ skælɪən]&lt;/p&gt;
+&lt;p&gt;Silver ear fungus 白木耳&lt;/p&gt;
+&lt;p&gt;Soybean 大豆 [ sɔɪ,bin]&lt;/p&gt;
+&lt;p&gt;Soybean sprout 黄豆芽&lt;/p&gt;
+&lt;p&gt;Spinach 菠菜 [ spɪnɪtʃ]&lt;/p&gt;
+&lt;p&gt;Straw mushroom 草菇&lt;/p&gt;
+&lt;p&gt;Green bean 刀豆&lt;/p&gt;
+&lt;p&gt;Sweet Potato 红薯&lt;/p&gt;
+&lt;p&gt;Seaweed 海藻 [ si wid]&lt;/p&gt;
+&lt;p&gt;Snow Pea 荷兰豆&lt;/p&gt;
+&lt;h3 id=&#34;t&#34;&gt;T&lt;/h3&gt;
+&lt;p&gt;Taro 大芋头 [ tærəʊ]&lt;/p&gt;
+&lt;h3 id=&#34;w&#34;&gt;W&lt;/h3&gt;
+&lt;p&gt;Watercress 豆瓣菜 [ wɔtɚ krɛs]&lt;/p&gt;
+&lt;p&gt;Water spinach 空心菜&lt;/p&gt;
+&lt;p&gt;Water caltrop 菱角 [ kæltrəp]&lt;/p&gt;
+&lt;p&gt;White gourd 冬瓜 [ɡʊrd]&lt;/p&gt;
+&lt;p&gt;Water chestnut 荸荠 [ˈwɔtɚ ˈtʃɛsˌnʌt]&lt;/p&gt;
+&lt;p&gt;Wakame/sea mustard 裙带藻（味增汤海带）&lt;/p&gt;
+&lt;p&gt;Wild rice stem 茭白&lt;/p&gt;
+&lt;h3 id=&#34;y&#34;&gt;Y&lt;/h3&gt;
+&lt;p&gt;Yellow pepper 黄椒&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;boundary-breaking-chanel-watch-is-tweaked-for-a-new-generation&#34;&gt;Boundary-breaking Chanel watch is tweaked for a new generation&lt;/h1&gt;
+&lt;p&gt;The Boy.Friend Skeleton appeals to both men and women with its distinctive octagonal silhouette&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5CUsers%5Cknie%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210223111134383.png&#34; alt=&#34;image-20210223111134383&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.wallpaper.com/tags/chanel&#34;&gt;Chanel&lt;/a&gt;’s first venture into watchmaking more than three decades ago marked a timely new direction for the fashion house. Its ‘Boy.Friend Skeleton’ watch – first introduced in 2015 and recently rethought to appeal to both women and men of a new generation – builds on its illustrious history, intertwining the threads of couture and technical accomplishment, and imbuing the brand’s timeless archive with horological expertise.&lt;/p&gt;
+&lt;p&gt;Gabrielle &lt;a href=&#34;https://www.wallpaper.com/tags/chanel&#34;&gt;Chanel&lt;/a&gt; was fascinated with traditionally male embellishments and she often assimilated them into her clothing, breathing seductive new life into tweed and jersey. The ‘Boy.Friend Skeleton’ also plays with established design codes, translating a typically masculine case architecture into a chic watch for women.&lt;/p&gt;
+&lt;p&gt;Instead of the conventional softened silhouettes, a distinctive octagonal shape looks back to the brand’s first foray into watchmaking, redrawing the lines of its 1987 ‘Première’ watch, which itself was originally inspired by the angles of the &lt;a href=&#34;https://www.wallpaper.com/tags/chanel&#34;&gt;Chanel&lt;/a&gt; No. 5 perfume bottle stopper. Nodding to the original, it puts the hypnotic, vertically-aligned circles of the in-house black-coated mechanical movement at its heart, juxtaposing its curving form against a sharp edging of baguette-cut diamonds.&lt;/p&gt;
+- https://www.openheart.icu/speech/english/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>想吃肉</title>
+        <link>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</link>
+        <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ -&lt;p&gt;去年&lt;/p&gt;
+&lt;p&gt;这个时候&lt;/p&gt;
+&lt;p&gt;我们&lt;/p&gt;
+&lt;p&gt;在想&lt;/p&gt;
+&lt;p&gt;那个女人&lt;/p&gt;
+&lt;p&gt;下月结婚的话&lt;/p&gt;
+&lt;p&gt;书狗&lt;/p&gt;
+&lt;p&gt;去不去&lt;/p&gt;
+&lt;p&gt;今年&lt;/p&gt;
+&lt;p&gt;这个时候&lt;/p&gt;
+&lt;p&gt;我们&lt;/p&gt;
+&lt;p&gt;在想&lt;/p&gt;
+&lt;p&gt;那个女人&lt;/p&gt;
+&lt;p&gt;去年结婚的话&lt;/p&gt;
+&lt;p&gt;书狗&lt;/p&gt;
+&lt;p&gt;去不去&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我把&lt;/p&gt;
+&lt;p&gt;非自来的&lt;/p&gt;
+&lt;p&gt;农夫山泉水&lt;/p&gt;
+&lt;p&gt;烧开&lt;/p&gt;
+&lt;p&gt;期间&lt;/p&gt;
+&lt;p&gt;蒙眼喝掉&lt;/p&gt;
+&lt;p&gt;每100毫升&lt;/p&gt;
+&lt;p&gt;含180千焦能量的&lt;/p&gt;
+&lt;p&gt;两块五毛钱&lt;/p&gt;
+&lt;p&gt;发现&lt;/p&gt;
+&lt;p&gt;蒙眼&lt;/p&gt;
+&lt;p&gt;并不能防止&lt;/p&gt;
+&lt;p&gt;两块五毛钱&lt;/p&gt;
+&lt;p&gt;让我&lt;/p&gt;
+&lt;p&gt;疯狂&lt;/p&gt;
+&lt;p&gt;打嗝儿&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;往不值一提的&lt;/p&gt;
+&lt;p&gt;玻璃容器中&lt;/p&gt;
+&lt;p&gt;加随意毫升的&lt;/p&gt;
+&lt;p&gt;烫水&lt;/p&gt;
+&lt;p&gt;5粒红黑红黑红相间的&lt;/p&gt;
+&lt;p&gt;枸杞&lt;/p&gt;
+&lt;p&gt;4节长短长短不齐的&lt;/p&gt;
+&lt;p&gt;金银花&lt;/p&gt;
+&lt;p&gt;1粒没掉到过地上的&lt;/p&gt;
+&lt;p&gt;胎菊&lt;/p&gt;
+&lt;p&gt;如果&lt;/p&gt;
+&lt;p&gt;算上&lt;/p&gt;
+&lt;p&gt;掉到过地上的&lt;/p&gt;
+&lt;p&gt;那就是3粒&lt;/p&gt;
+&lt;p&gt;胎菊&lt;/p&gt;
+&lt;p&gt;不需要&lt;/p&gt;
+&lt;p&gt;用咖啡勺&lt;/p&gt;
+&lt;p&gt;从容&lt;/p&gt;
+&lt;p&gt;潇洒&lt;/p&gt;
+&lt;p&gt;肆意&lt;/p&gt;
+&lt;p&gt;老练&lt;/p&gt;
+&lt;p&gt;地搅动一周&lt;/p&gt;
+&lt;p&gt;又一周&lt;/p&gt;
+&lt;p&gt;直接加入2.5块冰糖&lt;/p&gt;
+&lt;p&gt;即可&lt;/p&gt;
+&lt;p&gt;完美&lt;/p&gt;
+&lt;p&gt;复刻&lt;/p&gt;
+&lt;p&gt;爷爷泡的茶&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;反复&lt;/p&gt;
+&lt;p&gt;轻捻&lt;/p&gt;
+&lt;p&gt;揉搓&lt;/p&gt;
+&lt;p&gt;爱抚&lt;/p&gt;
+&lt;p&gt;玻璃杯的&lt;/p&gt;
+&lt;p&gt;把手&lt;/p&gt;
+&lt;p&gt;等待&lt;/p&gt;
+&lt;p&gt;149秒后&lt;/p&gt;
+&lt;p&gt;凭心情&lt;/p&gt;
+&lt;p&gt;吹几下热茶&lt;/p&gt;
+&lt;p&gt;喝完&lt;/p&gt;
+&lt;p&gt;第一杯&lt;/p&gt;
+&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
+&lt;p&gt;拿出&lt;/p&gt;
+&lt;p&gt;富士康工厂&lt;/p&gt;
+&lt;p&gt;都是双眼皮员工的&lt;/p&gt;
+&lt;p&gt;高端车间里装配的&lt;/p&gt;
+&lt;p&gt;高级电脑&lt;/p&gt;
+&lt;p&gt;开机&lt;/p&gt;
+&lt;p&gt;打开神秘的编程软件&lt;/p&gt;
+&lt;p&gt;配着&lt;/p&gt;
+&lt;p&gt;窗外经十路上&lt;/p&gt;
+&lt;p&gt;无法逃避的&lt;/p&gt;
+&lt;p&gt;车流声&lt;/p&gt;
+&lt;p&gt;双手&lt;/p&gt;
+&lt;p&gt;在键盘上&lt;/p&gt;
+&lt;p&gt;从容&lt;/p&gt;
+&lt;p&gt;潇洒&lt;/p&gt;
+&lt;p&gt;肆意&lt;/p&gt;
+&lt;p&gt;老练&lt;/p&gt;
+&lt;p&gt;地敲打&lt;/p&gt;
+&lt;p&gt;表情&lt;/p&gt;
+&lt;p&gt;老成持重&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;经过&lt;/p&gt;
+&lt;p&gt;简单的&lt;/p&gt;
+&lt;p&gt;数学高阶计算&lt;/p&gt;
+&lt;p&gt;复杂的&lt;/p&gt;
+&lt;p&gt;量子力学分析&lt;/p&gt;
+&lt;p&gt;2899秒后&lt;/p&gt;
+&lt;p&gt;我改完&lt;/p&gt;
+&lt;p&gt;13行代码&lt;/p&gt;
+&lt;p&gt;如果&lt;/p&gt;
+&lt;p&gt;多一秒&lt;/p&gt;
+&lt;p&gt;或者&lt;/p&gt;
+&lt;p&gt;少一行&lt;/p&gt;
+&lt;p&gt;那就只能&lt;/p&gt;
+&lt;p&gt;全部删掉&lt;/p&gt;
+&lt;p&gt;然后背着&lt;/p&gt;
+&lt;p&gt;比我年轻3岁半&lt;/p&gt;
+&lt;p&gt;正如花似玉&lt;/p&gt;
+&lt;p&gt;含苞待放的&lt;/p&gt;
+&lt;p&gt;女同事&lt;/p&gt;
+&lt;p&gt;偷偷&lt;/p&gt;
+&lt;p&gt;换掉&lt;/p&gt;
+&lt;p&gt;报错的代码&lt;/p&gt;
+&lt;p&gt;我依旧是&lt;/p&gt;
+&lt;p&gt;那个没有BUG的&lt;/p&gt;
+&lt;p&gt;美男子&lt;/p&gt;
+&lt;p&gt;女同事&lt;/p&gt;
+&lt;p&gt;今晚&lt;/p&gt;
+&lt;p&gt;依旧会&lt;/p&gt;
+&lt;p&gt;做梦&lt;/p&gt;
+&lt;p&gt;梦到&lt;/p&gt;
+&lt;p&gt;我&lt;/p&gt;
+&lt;p&gt;的代码&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;继续&lt;/p&gt;
+&lt;p&gt;喝完&lt;/p&gt;
+&lt;p&gt;第二杯&lt;/p&gt;
+&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
+&lt;p&gt;我认为&lt;/p&gt;
+&lt;p&gt;Apple Music&lt;/p&gt;
+&lt;p&gt;下首要播放的&lt;/p&gt;
+&lt;p&gt;《突然想起你》&lt;/p&gt;
+&lt;p&gt;用的是不是&lt;/p&gt;
+&lt;p&gt;三峡大坝&lt;/p&gt;
+&lt;p&gt;发的电&lt;/p&gt;
+&lt;p&gt;对书狗&lt;/p&gt;
+&lt;p&gt;去不去&lt;/p&gt;
+&lt;p&gt;那个女人的&lt;/p&gt;
+&lt;p&gt;婚礼&lt;/p&gt;
+&lt;p&gt;没有&lt;/p&gt;
+&lt;p&gt;任何影响&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;今年&lt;/p&gt;
+&lt;p&gt;没人&lt;/p&gt;
+&lt;p&gt;送我&lt;/p&gt;
+&lt;p&gt;他们自酿的&lt;/p&gt;
+&lt;p&gt;散装红酒&lt;/p&gt;
+&lt;p&gt;我只有&lt;/p&gt;
+&lt;p&gt;75度的&lt;/p&gt;
+&lt;p&gt;医用酒精&lt;/p&gt;
+&lt;p&gt;但我&lt;/p&gt;
+&lt;p&gt;没有烧杯&lt;/p&gt;
+&lt;p&gt;不能&lt;/p&gt;
+&lt;p&gt;精确配比&lt;/p&gt;
+&lt;p&gt;勾兑出82年的&lt;/p&gt;
+&lt;p&gt;波尔多&lt;em&gt;Lafite&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;所以&lt;/p&gt;
+&lt;p&gt;只能&lt;/p&gt;
+&lt;p&gt;全部&lt;/p&gt;
+&lt;p&gt;倒掉&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我好想&lt;/p&gt;
+&lt;p&gt;十块钱一瓶的&lt;/p&gt;
+&lt;p&gt;一厂小优&lt;/p&gt;
+&lt;p&gt;八十一箱的&lt;/p&gt;
+&lt;p&gt;勇闯天涯&lt;/p&gt;
+&lt;p&gt;一直没喝惯的&lt;/p&gt;
+&lt;p&gt;泰山原浆&lt;/p&gt;
+&lt;p&gt;极大部分是辣椒的&lt;/p&gt;
+&lt;p&gt;辣炒花嘎&lt;/p&gt;
+&lt;p&gt;我好想&lt;/p&gt;
+&lt;p&gt;好想&lt;/p&gt;
+&lt;p&gt;好想&lt;/p&gt;
+&lt;p&gt;出去&lt;/p&gt;
+&lt;p&gt;吃肉&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;2020-02-14，泉城，小雨&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>亲密关系2020</title>
+        <link>https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/</link>
+        <pubDate>Thu, 06 Feb 2020 10:58:08 -0400</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/ -&lt;p&gt;新型肺炎像亲密关系一样，有种奇妙的不确定性，让人无所适从。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;追求安全感是人的本能，于是人们拼命地戴口罩拼命地喝双黄连口服液。只有沉浸在这种安全感中，才会做出让他人可以依靠、相信的言谈举止，为亲密关系中的另一方也带来安全感。&lt;/p&gt;
+&lt;p&gt;新型肺炎也在追求安全感，这安全感却是由人们提供的。它再怎么新型，也只是由一个保护性外壳包裹的一段DNA或者RNA。这些简单的有机体仅单纯的想利用宿主的细胞系统进行自我复制。像极了干面胡同的小半间屋子里，窝在两箱子方便面，一箱好丽友派，两打鸡蛋，两打避孕套，两打脐橙，一箱娃哈哈矿泉水，两箱燕京啤酒，一箱红星小二锅头中间的小床上，在接下来的两周里疯狂发生亲密关系的男人和女人。他俩觉得他俩足够安全。新型肺炎疯狂传染，无药可治，确实也足够安全。&lt;/p&gt;
+&lt;p&gt;不像亲密关系，心醉的女人被搂在怀里，会问男人什么时候起开始喜欢她。男人或不假思索或略微迟疑 &lt;em&gt;“第一次看见你的时候”&lt;/em&gt;。其实，他到底是什么时候第一次看见她的，根本就记不住了。而新型肺炎并非带着目的去传播感染、复制自身，也不会带着目的去杀死宿主。它们太简单了，我们太复杂了。复杂的免疫系统让我们发热不发光，40°的高烧，人和病毒必须死一个。亲密关系更加复杂，&lt;em&gt;“Two stangers fell in love.Only one knows it wasn’t by chance.”&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“In a boy-meets-girl story,the boy should always meet the girl.”&lt;/em&gt; 有些关系是必然发生的，有些关系是必然不发生的。正如新型肺炎杀死宿主，这是宏观的进化规律，是必然发生的。假设人们抓住了新型肺炎，把他关进像电影里一样审讯室，像电影里一样的手脚铐住，像电影里一样的强灯光照脸，像电影里一样的 &lt;em&gt;“Good Cop, Bad Cop”&lt;/em&gt;，像电影里一样的拳脚相加后递烟，问 &lt;em&gt;“你和被害人什么关系，为什么要杀他！”&lt;/em&gt;。新型肺炎肯定不会和我一样煞风景说 &lt;em&gt;“谢谢我不抽烟”&lt;/em&gt;，也想必不会像电影里一样咬舌自杀或者以头抢地尔或者用灵活的舌头触发牙齿里的机关吞服氰化物自杀，它会如实招来 &lt;em&gt;“他死了，我的故事就结束了，而我死了，他的故事还长的很”&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;在一段亲密关系中必定会有隐瞒，双方或多或少都费力地隐藏着某些东西。就像每个人都会有过去，就算是一个杀手，一样会有小学同学，杀手可能在犯罪现场留下一个个 &lt;em&gt;“Riddle”&lt;/em&gt;，但绝对不会写下自己小学同学张苇刘波的名字。所以，往新型肺炎祖上刨10的几十几百次方代，虽然肯定不是农民，但说不准是个天真无邪的 &lt;em&gt;“好玩意儿”&lt;/em&gt;。亲密关系中，足够了解一个人并不代表什么，人是会变的，今天她喜欢梅林，明天她可以喜欢别的。穷则求变，物竞天择，频繁的基因重排，新型肺炎把人畜无害的稚嫩藏得严严实实，它将来会成为一个没感情、真正的 &lt;em&gt;“Killing machine”&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;新型肺炎来势汹汹，在某天突然出现，或许会在某天突然消失，当然，越快越好。正如某年某月某日，你会得到你的初恋。你要意识到，她就好像是一家店，你不会知道能停留多久，当然，越久越好。&lt;/p&gt;
+&lt;p&gt;一段亲密关系结束之后，没等伤心完，又开始了一段类似的注定伤心的亲密关系。人类从历史中吸取的唯一教训就是人类永远不会从历史中吸取教训。正如蝙蝠身上的新型肝炎也会像亲密关系一样，有种奇妙的不确定性，让人无所适从……&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;有人觉得用新型肺炎和亲密关系作比较是荒唐又可笑的，他们不该怪我，毕竟亲密关系本身就是荒唐又可笑的。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2020-02-06，乐安，小雪，怕死&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>下一站</title>
+        <link>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</link>
+        <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</guid>
+        <description>42th openheart https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ -&lt;p&gt;不是茶山刘，是草山岭东。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;故事&#34;&gt;故事&lt;/h1&gt;
+&lt;p&gt;如果要我编个故事，我必然会这么写：&lt;/p&gt;
+&lt;p&gt;“我是刘波，百度上‘刘波’的搜索结果有一千二百八十万个，我可能不是你们认识的那个。我和其他刘波不同，我爸不是木匠，我不是山大毕业，我更不是主播也不配钥匙……我和其他刘波一样，我也喜欢一个张苇，也时常在熙攘的人群中当众孤独，我也不知道我到底想要什么……”这是人物；&lt;/p&gt;
+&lt;p&gt;“公交车顺着经十路往西，我被挤在公交车后门脸快贴到玻璃，路上拥挤的人群在整齐的标语和不整齐的广告中显得更加拥挤。我服了，于是我把自己放到了乐安县与油城的中间偏南，这里足够空旷。这里秋天的下午和别地儿一样慵懒，风挺大，云彩也不小；风吹云彩，太阳时隐时现，像极了梦里的张苇，所以我爱死了下午的太阳……”这是环境；&lt;/p&gt;
+&lt;p&gt;“我要如何体面地date张苇，她会如何体面地拒绝我，我该如何体面地认同她的拒绝，我一问三不知……”这是故事情节。&lt;/p&gt;
+&lt;p&gt;要是假期再充裕点，我可以是欧亨利，也可以是莫泊桑。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;国庆&#34;&gt;国庆&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在狼牙区 在飞虎路 那李杀神 王诛魔 还有刘斩仙 断罪小学 再度聚首 齐心协力 只因为 一个大魔头&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;大魔头是谁就不用问了吧，军人伟大，异地恋伟大，大魔头只配挨打，懂吧！&lt;/p&gt;
+&lt;p&gt;国庆加班开始前一晚上喜迎院士孙，我们几个在天没黑前走进饭店速战速决，然后各就各位。在开始电子竞技前，异口同声骂我朋张“被小孙洋的小香批迷住了双眼”（我除外，我不会骂人）。&lt;/p&gt;
+&lt;p&gt;国庆加班结束前一晚上喜迎农民许，我们几个在政法学院旁边，感受到康康他们租的宾馆里浓厚的学习氛围后，在他们宾馆楼下的豪华网咖开始电子竞技，按习俗我朋张必须挨骂，“他就是个豁批犯”（不是我说的，我不会骂人）。&lt;/p&gt;
+&lt;p&gt;其实，院士孙和农民许并不配骂我朋张，因为他俩来泉城完全是路过，他俩的目的地一个是一国两制的小香批一个是油城的小香批，真是五十步笑百步。&lt;/p&gt;
+&lt;p&gt;世界与我都不完美，万物都有美中不足之处（我除外，我只有不足）。国庆长假也不例外，除了长假不够长这一明显不足外还有两个。&lt;/p&gt;
+&lt;p&gt;一是由于各种原因没吃上公司旁边刚开业生意兴隆的蟹黄生煎。&lt;/p&gt;
+&lt;p&gt;二是没在6号晚上及时亲手接过院士孙给我代的大地，然后大声让他滚出我屋。&lt;/p&gt;
+&lt;p&gt;但总体上来说国庆长假还算圆满。这是我在泉城过得第一个国庆，康康说泉城比琴岛宜居，其实我也感觉到了，冬暖夏凉怕是琴岛唯一的优势了。&lt;/p&gt;
+&lt;p&gt;还有一个有关国庆的就是，这几天除了路灯挂上了五星红旗，路边还多了挺多标语……&lt;/p&gt;
+&lt;p&gt;“灭霸扫痞”与“除暴安良”不停地交配、繁殖，与“鼓励二胎”一起平分了原本属于“计划生育好”的天下。虽然比“年产一零七零万吨钢铁”要些许得靠谱，但还是难免让多愁善感的人叹一口气，“时过境迁，物是人非”（我爱国爱党，没有任何暗示，如果有，也与本人无关）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;活着&#34;&gt;活着&lt;/h1&gt;
+&lt;p&gt;其实，除了国庆也没啥可以说道的。&lt;/p&gt;
+&lt;p&gt;自打中秋节画了个月亮里的张苇，就没动过画笔，樱花牌的固体颜料都裂开了，像极了樱花。&lt;/p&gt;
+&lt;p&gt;这半年我也还是没做到不以物喜不以己悲。&lt;/p&gt;
+&lt;p&gt;拿到大地后特意发了个微博。我没做到不以物喜，我对不起范仲淹。&lt;/p&gt;
+&lt;p&gt;在一群贪财好色的人中，有的成了冯唐、王小波、王朔、渡边淳一、杜拉斯、萨德、劳伦斯、三岛由纪夫……有的成了空山基、金政基、席勒、莫迪里阿尼、前田俊夫、佐伯俊男……（还有很多我就不列举了，不然就成当众开车了）却只有我成了刘波。我没做到不以己悲，我对不起范仲淹。&lt;/p&gt;
+&lt;p&gt;我现在做的，能做的也就只有活着了，大地也不能让我在活着前面加个“好好”。&lt;/p&gt;
+&lt;p&gt;然后呢，这几个完成“豁小香批”成就的（此处并非特指男生，也包括个别女生）和我妈一样开始担心起我的感情生活了。他们从正面侧面反面对我的将来进行大胆预测，让我对未来根本不抱有任何期望。&lt;/p&gt;
+&lt;p&gt;他们与其问我什么时候能在我结婚典礼上听到我背唐诗宋词汉乐府，还不如问我在结婚典礼上会背长恨歌还是孔雀东南飞。懂吧，我起码能给他们个确切的答案。&lt;/p&gt;
+&lt;p&gt;说起往南飞，你说如果世上没有了南这个方向……&lt;/p&gt;
+&lt;p&gt;那我要撞张苇的南墙，是不是就要从佛王村出发，带足干粮或者带足银行卡一直往北，途径北极、南极，行程40万公里，才能一头撞死我自己或者撞瞎张苇？&lt;/p&gt;
+&lt;p&gt;虽然我极力地避免在多事之秋出门，但故事里一旦有张苇，那我内心与肉体必肿胀，这40万公里是逃不掉的。舔狗舔到最后一无所有，但没办法，大地毕竟不是聚斯金德笔下的格雷诺耶谋杀二十六个少女后制成的香水，并不能让我***永久占有（包括进行占有）***张苇。&lt;/p&gt;
+&lt;p&gt;我会继续努力的，努力方向可以是张苇，但没必要。&lt;/p&gt;
+&lt;p&gt;不以物喜不以己悲，不用互勉，我自己勉自己。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;2018年10月7日&lt;/em&gt;&lt;/p&gt;
+- https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -149,10 +1129,6 @@
 &lt;p&gt;&lt;em&gt;2017.12.01&lt;/em&gt;&lt;/p&gt;
 - https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
-    
-    
-    
-    
     
     
   </channel>

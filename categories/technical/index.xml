@@ -7,7 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 23 Jan 2021 12:14:19 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/categories/technical/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Aug 2021 15:15:57 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/categories/technical/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Working Effectively with Legacy Code</title>
+      <link>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</link>
+      <pubDate>Thu, 12 Aug 2021 15:15:57 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</guid>
+      <description>The Mechanics of Change Changing Software Four Reasons to Change Software  Adding a feature Fixing a bug Improving the design Optimizing resource usage  Changing Software Dependency-Breaking Techniques </description>
+    </item>
+    
+    <item>
+      <title>CS Conferences</title>
+      <link>https://www.openheart.icu/cs/cs-conferences/</link>
+      <pubDate>Mon, 09 Aug 2021 13:43:10 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/cs-conferences/</guid>
+      <description>List of computer science conferences </description>
+    </item>
+    
+    <item>
+      <title>Design Patterns</title>
+      <link>https://www.openheart.icu/cs/design-patterns/</link>
+      <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/design-patterns/</guid>
+      <description>Structural Design Patterns Creational Design Patterns Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.
+Implementing the pattern requires that you provide the following:</description>
+    </item>
+    
     <item>
       <title>CSharp Special Characters</title>
       <link>https://www.openheart.icu/cs/csharp-special-characters/</link>
@@ -19,6 +47,18 @@
 If condition evaluates to true, first_expression shall be returned, otherwise second_expression.
 Example
 Random rnd = new Random(); var randomNo = rnd.Next(); var status = randomNo % 2 == 0 ?</description>
+    </item>
+    
+    <item>
+      <title>Win Operation</title>
+      <link>https://www.openheart.icu/cs/windows/</link>
+      <pubDate>Tue, 12 Jan 2021 11:47:28 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/windows/</guid>
+      <description>Windows Terminal oh-my-posh Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease PSReadLine PowerShell/PSReadLine
+Install-Module PSReadLine -AllowPrerelease -Force notepad $profile
+Import-Module PSReadLine Set-PSReadLineOption -PredictionSource History # 下面是三条是文档里推荐的，根据自己的习惯决定是否添加 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward Set-PSReadLineKeyHandler -Key Tab -Function Complete # Hot-Key Set-PSReadLineKeyHandler -Key &amp;#34;Ctrl+g&amp;#34; -Function MenuComplete posh-git dahlbyk/posh-git
+Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force Import-Module posh-git Scoop iwr -useb get.scoop.sh | iex  Command net share # view your pc&amp;#39;s share folder </description>
     </item>
     
     <item>
@@ -34,6 +74,19 @@ Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in t
     </item>
     
     <item>
+      <title>Dot Net Runtime</title>
+      <link>https://www.openheart.icu/cs/dot-net-runtime/</link>
+      <pubDate>Sat, 26 Dec 2020 11:25:57 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/dot-net-runtime/</guid>
+      <description>Source Code Learning for 「Dot Net Runtime」.
+ Microsoft.Extensions.DependencyInjection Branch: release/5.0
+之前使用的都是.NET MVC DI，相对封装较为严重。公司的设计为Composition Root实现MVC中的ConfigureDependencies然后创建BuildServiceProvider。在对方法进行调用前通过IServiceProvider.GetService注入所需类构造函数中的依赖。
+ Dependency injection addresses these problems through:
+ The use of an interface or base class to abstract the dependency implementation. Registration of the dependency in a service container. .NET provides a built-in service container, IServiceProvider. Services are typically registered at the app&amp;rsquo;s start-up, and appended to an IServiceCollection. Once all services are added, you use BuildServiceProvider to create the service container.</description>
+    </item>
+    
+    <item>
       <title>Adaptive Code</title>
       <link>https://www.openheart.icu/cs/adaptive-code/</link>
       <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
@@ -46,6 +99,18 @@ Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in t
   Scrum scrum.org 2020-Scrum-Guide-US
  Scrum is:
  Lightweight Simple to understand Difficult to master   What  All work is prioritized on the product backlog and, at the start of each sprint, the development team commits to the work that they will complete during the new iteration by placing it on the sprint backlog.</description>
+    </item>
+    
+    <item>
+      <title>Unit Test Practice</title>
+      <link>https://www.openheart.icu/cs/unit-test-practice/</link>
+      <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/unit-test-practice/</guid>
+      <description>Unit Test Practice  纸上得来终觉浅，绝知此事要躬行。
+ Shifting Left 所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )
+ Shift Left is a practice intended to find and prevent defects early in the software delivery process. The idea is to improve quality by moving tasks to the left as early in the lifecycle as possible.
+In the traditional software development model, requirements are kept on the left side of the plan, and the delivery and testing requirements on the right.</description>
     </item>
     
     <item>
@@ -133,7 +198,7 @@ Note that run time is not included in this list by default. To change this behav
       <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/sqlserver/</guid>
-      <description>SQLserver Common Operation SQLCMD sqlcmd -S localhost -d CSI10 -q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -d CSI10 -Q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -U SA -Q &amp;#39;select @@VERSION&amp;#39; sqlcmd -S localhost  Optimize Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF SET IDENTITY_INSERT Table1 ON --Do INSERT  SET IDENTITY_INSERT Table1 OFF SQL-Server: The backup set holds a backup of a database other than the existing   Don&amp;rsquo;t create an empty database and restore the .</description>
+      <description>Common Operation SQLCMD sqlcmd -S localhost -d CSI10 -q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -d CSI10 -Q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -U SA -Q &amp;#39;select @@VERSION&amp;#39; sqlcmd -S localhost  Issues Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF SET IDENTITY_INSERT Table1 ON --Do INSERT  SET IDENTITY_INSERT Table1 OFF SQL-Server: The backup set holds a backup of a database other than the existing   Don&amp;rsquo;t create an empty database and restore the .</description>
     </item>
     
     <item>
@@ -162,7 +227,10 @@ Note that run time is not included in this list by default. To change this behav
       <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/csharp-in-depth/</guid>
-      <description>本文为「C# in Depth」(4th edition)学习记录。</description>
+      <description>本文为「C# in Depth」(4th edition)学习记录。
+Part 1 C# in context Survival of the sharpest 本章主要讲C#的由来与介绍（吹嘘）。
+开始前可以回顾一下C#的历史，现在是北京时间2021-05-29 14:06:54，the last C# version is C# 9.
+Reference  The history of C#  Part 2 C# in 2-5 C# 3: LINQ and everything that comes with it Extension methods  Extension methods allow existing classes to be extended without relying on inheritance or having to change the class&amp;rsquo;s source code. This means that if you want to add some methods into the existing String class you can do it quite easily.</description>
     </item>
     
     <item>
@@ -189,7 +257,7 @@ First version - not thread-safe // Bad code! Do not use! public sealed class Sin
       <description>简单了解分布式缓存的各种概念
 缓存雪崩 缓存雪崩我们可以简单的理解为：由于原有缓存失效，新缓存未到期间所有原本应该访问缓存的请求都去查询数据库了，而对数据库 CPU 和内存造成巨大压力，严重的会造成数据库宕机。从而形成一系列连锁反应，造成整个系统崩溃。
 关键词：缓存失效，针对这种情况一般有三种处理办法：
- 一般并发量不是特别多的时候，使用最多的解决方案是加锁排队。 给每一个缓存数据增加相应的缓存标记，记录缓存的是否失效，如果缓存标记失效，则更新数据缓存。 为 key 设置不同的缓存失效时间。  第二、第三中方法在面试中均被提到过，很遗憾我只想到了第一种解决办法（纯粹靠蒙），被连续问到两次后觉得分布式缓存需要整体都了解一下，于是去查资料整理了本文 😁
+ 一般并发量不是特别多的时候，使用最多的解决方案是加锁排队。 给每一个缓存数据增加相应的缓存标记，记录缓存的是否失效，如果缓存标记失效，则更新数据缓存。 为 key 设置不同的缓存失效时间。  第二、第三中方法在面试中均被提到过，很遗憾我只想到了第一种解决办法（纯粹靠蒙） 😁
 缓存穿透 缓存穿透是指用户查询数据，在数据库没有，自然在缓存中也不会有。这样就导致用户查询的时候，在 缓存中找不到，每次都要去数据库再查询一遍，然后返回空（相当于进行了两次无用的查询）。这样请求就绕过缓存直接查数据库，这也是经常提的缓存命中率问题。
 有很多种方法可以有效地解决缓存穿透问题，最常见的则是采用布隆过滤器，将所有可能存在的数据哈 希到一个足够大的 bitmap 中，一个一定不存在的数据会被这个 bitmap 拦截掉，从而避免了对底层存 储系统的查询压力。
 另外也有一个更为简单粗暴的方法，如果一个查询返回的数据为空（不管是数据不 存在，还是系统故障），我们仍然把这个空结果进行缓存，但它的过期时间会很短，最长不超过五分钟。 通过这个直接设置的默认值存放到缓存，这样第二次到缓冲中获取就有值了，而不会继续访问数据库。
@@ -385,7 +453,7 @@ cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/markdown/</guid>
-      <description>公式 公式标记 行内公式（inline） eg: $ E=mc^2 $，写法是：$E=mc^2$
+      <description>Expressions 公式标记 行内公式（inline） eg: $ E=mc^2 $，写法是：$E=mc^2$
 整行公式（displayed） 用一对紧挨的两个美元符号$$包裹
  $$ $$
  eg: $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$
@@ -427,18 +495,6 @@ server {listen 80;server_name site42.openheart.icu;location / {root /usr/project
       <guid>https://www.openheart.icu/cs/php/</guid>
       <description>Operation systemctl start php-fpm systemctl restart php-fpm service php-fpm start service php-fpm restart service php-fpm stop service php-fpm reload Problem 1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组
 user = nginx group = users </description>
-    </item>
-    
-    <item>
-      <title>Win Operation</title>
-      <link>https://www.openheart.icu/cs/windows/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/windows/</guid>
-      <description>Windows Terminal oh-my-posh Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease PSReadLine PowerShell/PSReadLine
-Install-Module PSReadLine -AllowPrerelease -Force notepad $profile
-Import-Module PSReadLine Set-PSReadLineOption -PredictionSource History # 下面是三条是文档里推荐的，根据自己的习惯决定是否添加 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward Set-PSReadLineKeyHandler -Key Tab -Function Complete # Hot-Key Set-PSReadLineKeyHandler -Key &amp;#34;Ctrl+g&amp;#34; -Function MenuComplete posh-git dahlbyk/posh-git
-Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force Import-Module posh-git Scoop iwr -useb get.scoop.sh | iex  Command net share # view your pc&amp;#39;s share folder </description>
     </item>
     
   </channel>
