@@ -976,113 +976,125 @@
 &lt;h2 id=&#34;reference-4&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/npgsql/efcore.pg/issues/1441&#34;&gt;Cannot register IRelationalTypeMappingSource #1441&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;c编程规范&#34;&gt;C#编程规范&lt;/h1&gt;
-&lt;h2 id=&#34;命名规范&#34;&gt;命名规范&lt;/h2&gt;
+&lt;h1 id=&#34;framework-design-guidelines&#34;&gt;Framework Design Guidelines&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】代码中的命名均不能以&lt;code&gt;下划线或美元符号&lt;/code&gt;开始，也不能以下划线或美元符号结束。&lt;/li&gt;
-&lt;li&gt;【强制】代码中的命名&lt;code&gt;严禁使用拼音与英文混合&lt;/code&gt;的方式，更不允许直接使用中文的方式。&lt;/li&gt;
-&lt;li&gt;【强制】&lt;code&gt;类名&lt;/code&gt;，&lt;code&gt;方法名&lt;/code&gt;，&lt;code&gt;属性&lt;/code&gt;，&lt;code&gt;枚举名&lt;/code&gt;，&lt;code&gt;接口名&lt;/code&gt;，&lt;code&gt;委托&lt;/code&gt;，&lt;code&gt;事件&lt;/code&gt;，&lt;code&gt;命名空间&lt;/code&gt;，使用&lt;code&gt;UpperCamelCase&lt;/code&gt;风格，必须遵从驼峰形式。通用缩写除外，如BO&lt;/li&gt;
-&lt;li&gt;【强制】&lt;code&gt;参数名&lt;/code&gt;、&lt;code&gt;成员变量&lt;/code&gt;、&lt;code&gt;局部变量&lt;/code&gt;都统一使用&lt;code&gt;lowerCamelCase&lt;/code&gt; 风格，必须遵从驼峰形式。如&lt;code&gt;localValue&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;【强制】常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。如&lt;code&gt;MAX_STOCK_COUNT&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;【强制】抽象类命名使用&lt;code&gt;Abstract&lt;/code&gt;或&lt;code&gt;Base&lt;/code&gt;开头；异常类命名使用&lt;code&gt;Exception&lt;/code&gt;结尾；测试类命名以它要测试的类的名称开始，以&lt;code&gt;Test&lt;/code&gt; 结尾。&lt;/li&gt;
-&lt;li&gt;【强制】杜绝完全不规范的缩写，避免望文不知义。&lt;code&gt;AbstractClass&lt;/code&gt;缩写命名成&lt;code&gt;AbsClass&lt;/code&gt;；&lt;code&gt;condition&lt;/code&gt;缩写命名成&lt;code&gt;condi&lt;/code&gt;，此类随意缩写严重降低了代码的可阅读性。&lt;/li&gt;
-&lt;li&gt;【推荐】如果使用到了设计模式，建议在类名中体现出具体模式。如&lt;code&gt;public class OrderFactory&lt;/code&gt;;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;格式规范&#34;&gt;格式规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】大括号的使用约定。如果是大括号内为空，则简洁地写成&lt;code&gt;{}&lt;/code&gt;即可，不需要换行；如果是非空代码块则两个半括号都另起一行和类首对齐。&lt;/li&gt;
-&lt;li&gt;【强制】左小括号和右边相邻字符之间不出现空格；同样，右小括号和左边相邻字符之间也不出现空格。&lt;/li&gt;
-&lt;li&gt;【强制】&lt;code&gt;if/for/while/switch/do&lt;/code&gt;等保留字与小括号之间都必须加空格。&lt;/li&gt;
-&lt;li&gt;【强制】任何运算符左右必须加一个空格。&lt;/li&gt;
-&lt;li&gt;【强制】缩进采用&lt;code&gt;4个空格&lt;/code&gt;，禁止使用tab字符。或者在设置里面把tab设置为四个空格&lt;/li&gt;
-&lt;li&gt;【强制】单行字符数限制不超过120个，超出需要换行，换行时遵循如下原则：
-1） 第二行相对第一行缩进4个空格，从第三行开始，不再继续缩进，参考示例。
-2） 运算符与下文一起换行。
-3） 方法调用的点符号与下文一起换行。
-4） 在多个参数超长，逗号后进行换行。
-5） 在括号前不要换行。&lt;/li&gt;
-&lt;li&gt;【强制】方法参数在定义和传入时，多个参数逗号后边必须加空格。&lt;/li&gt;
-&lt;li&gt;【强制】IDE 的&lt;code&gt;text file encoding&lt;/code&gt;设置为&lt;code&gt;UTF-8&lt;/code&gt;;IDE中文件的&lt;code&gt;换行符&lt;/code&gt;使用&lt;code&gt;Unix&lt;/code&gt;格式，不要使用windows格式。&lt;/li&gt;
-&lt;li&gt;【推荐】没有必要增加若干空格来使某一行的字符与上一行的相应字符对齐。&lt;/li&gt;
-&lt;li&gt;【推荐】方法体内的执行语句组、变量的定义语句组、不同的业务逻辑之间或者不同的语义之间插入一个&lt;code&gt;空行&lt;/code&gt;。相同业务逻辑和语义之间不需要插入空行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;oop-规范&#34;&gt;OOP 规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】避免通过一个类的对象引用访问此类的静态变量或静态方法，无谓增加编译器解析成本，直接用类名来访问即可。&lt;/li&gt;
-&lt;li&gt;【强制】所有的相同类型的包装类对象之间值的比较，全部使用&lt;code&gt;Equals&lt;/code&gt;方法比较。&lt;/li&gt;
-&lt;li&gt;【强制】构造方法里面禁止加入任何业务逻辑，如果有初始化逻辑，请放在&lt;code&gt;Init&lt;/code&gt;方法中。。&lt;/li&gt;
-&lt;li&gt;【推荐】使用索引访问用String的&lt;code&gt;Split&lt;/code&gt;方法得到的数组时，需做最后一个分隔符后有无内容的检查，否则会有抛IndexOutOfBoundsException的风险。&lt;/li&gt;
-&lt;li&gt;【推荐】当一个类有多个构造方法，或者多个同名方法，这些方法应该按顺序放置在一起，便于阅读。&lt;/li&gt;
-&lt;li&gt;【推荐】 类内方法定义顺序依次是：&lt;code&gt;公有方法或保护方法&lt;/code&gt; &amp;gt; &lt;code&gt;属性&lt;/code&gt; &amp;gt; &lt;code&gt;私有方法&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;【推荐】循环体内，字符串的连接方式，使用&lt;code&gt;StringBuilder的append&lt;/code&gt;方法进行扩展。&lt;/li&gt;
-&lt;li&gt;【推荐】类成员与方法&lt;code&gt;访问控制从严&lt;/code&gt;：
-1） 如果不允许外部直接通过new来创建对象，那么构造方法必须是private。
-2） 工具类不允许有public或default构造方法。
-3） 类非static成员变量并且与子类共享，必须是protected。
-4） 类非static成员变量并且仅在本类使用，必须是private。
-5） 类static成员变量如果仅在本类使用，必须是private。
-6） 若是static成员变量，必须考虑是否为final。
-7） 类成员方法只供类内部调用，必须是private。
-8） 类成员方法只对继承类公开，那么限制为protected。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;控制语句&#34;&gt;控制语句&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】在一个&lt;code&gt;switch块&lt;/code&gt;内，每个&lt;code&gt;case&lt;/code&gt;要么通过&lt;code&gt;break/return&lt;/code&gt;等来终止，要么注释说明程序将继续执行到哪一个case为止；在一个switch块内，都必须包含一个&lt;code&gt;default&lt;/code&gt;语句并且放在最后，即使它什么代码也没有。&lt;/li&gt;
-&lt;li&gt;在&lt;code&gt;if/else/for/while/do&lt;/code&gt;语句中必须使用大括号。即使只有一行代码，避免使用单行的形式&lt;/li&gt;
-&lt;li&gt;【推荐】表达异常的分支时，&lt;code&gt;少用if-else&lt;/code&gt;方式，这种方式可以改写成：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (condition) 
-{
-    ...
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; obj;
-}
-&lt;span style=&#34;color:#228b22&#34;&gt;// 接着写else的业务逻辑代码;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【推荐】除常用方法（如getXxx/isXxx）等外，不要在条件判断中执行其它复杂的语句，将复杂逻辑判断的结果赋值给一个有意义的布尔变量名，以提高可读性。&lt;/li&gt;
-&lt;li&gt;【推荐】&lt;code&gt;循环体&lt;/code&gt;中的语句要&lt;code&gt;考量性能&lt;/code&gt;，以下操作尽量移至循环体外处理，如&lt;code&gt;定义对象、变量、获取数据库连接&lt;/code&gt;，进行不必要的try-catch操作（这个try-catch是否可以移至循环体外）。&lt;/li&gt;
-&lt;li&gt;【参考】下列情形，需要进行&lt;code&gt;参数校验&lt;/code&gt;：
-1） 调用频次低的方法。
-2） 执行时间开销很大的方法。此情形中，参数校验时间几乎可以忽略不计，但如果因为参数错误导致中间执行回退，或者错误，那得不偿失。
-3） 需要极高稳定性和可用性的方法。
-4） 对外提供的开放接口，不管是RPC/API/HTTP接口。
-5） 敏感权限入口。&lt;/li&gt;
-&lt;li&gt;【参考】下列情形，不需要进行参数校验：
-1） 极有可能被循环调用的方法。但在方法说明里必须注明外部参数检查要求。
-2） 底层调用频度比较高的方法。
-3） 被声明成private只会被自己代码所调用的方法，如果能够确定调用方法的代码传入参数已经做过检查或者肯定不会有问题，此时可以不校验参数。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;注释规范&#34;&gt;注释规范&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;【强制】所有的类都必须添加创建者和创建日期。&lt;/li&gt;
-&lt;li&gt;【强制】方法内部单行注释，在被注释语句上方另起一行，使用&lt;code&gt;//&lt;/code&gt;注释。方法内部多行注释使用&lt;code&gt;/* */&lt;/code&gt;注释，注意与代码对齐。&lt;/li&gt;
-&lt;li&gt;【强制】所有的枚举类型字段必须要有&lt;code&gt;注释&lt;/code&gt;，说明每个数据项的用途。&lt;/li&gt;
-&lt;li&gt;【推荐】代码修改的同时，注释也要进行相应的修改，尤其是参数、返回值、异常、核心逻辑等的修改。&lt;/li&gt;
-&lt;li&gt;【参考】合理处理注释掉的代码。尽量在目标代码上方&lt;code&gt;详细说明&lt;/code&gt;，而不是简单的注释掉。如果无用，则&lt;code&gt;直接删除&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;【参考】对于注释的要求：
-第一、能够准确反应设计思想和代码逻辑；
-第二、能够描述业务含义，使别的程序员能够迅速了解到代码背后的信息。完全没有注释的大段代码对于阅读者形同天书，注释是给自己看的，即使隔很长时间，也能清晰理解当时的思路；注释也是给继任者看的，使其能够快速接替自己的工作。&lt;/li&gt;
-&lt;li&gt;【参考】好的命名、代码结构是自解释的，注释力求精简准确、表达到位。避免出现注释的一个极端：过多过滥的注释，代码的逻辑一旦修改，修改注释是相当大的负担。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines&#34;&gt;Naming Guidelines&lt;/a&gt;
+Provides guidelines for naming assemblies, namespaces, types, and members in class libraries.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/type&#34;&gt;Type Design Guidelines&lt;/a&gt;
+Provides guidelines for using static and abstract classes, interfaces, enumerations, structures, and other types.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/member&#34;&gt;Member Design Guidelines&lt;/a&gt;
+Provides guidelines for designing and using properties, methods, constructors, fields, events, operators, and parameters.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/designing-for-extensibility&#34;&gt;Designing for Extensibility&lt;/a&gt;
+Discusses extensibility mechanisms such as subclassing, using events, virtual members, and callbacks, and explains how to choose the mechanisms that best meet your framework&amp;rsquo;s requirements.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/exceptions&#34;&gt;Design Guidelines for Exceptions&lt;/a&gt;
+Describes design guidelines for designing, throwing, and catching exceptions.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/usage-guidelines&#34;&gt;Usage Guidelines&lt;/a&gt;
+Describes guidelines for using common types such as arrays, attributes, and collections, supporting serialization, and overloading equality operators.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/common-design-patterns&#34;&gt;Common Design Patterns&lt;/a&gt;
+Provides guidelines for choosing and implementing dependency properties.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;reference-5&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines&#34;&gt;Naming Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/&#34;&gt;Framework Design Guidelines&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;analyze-code-in-visual-studio&#34;&gt;Analyze code in Visual Studio&lt;/h1&gt;
+&lt;h2 id=&#34;source-code-analysis&#34;&gt;Source code analysis&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;.NET Compiler Platform (Roslyn) Analyzers inspect your C# or Visual Basic code for style, quality, maintainability, design, and other issues. This inspection or analysis is done during design time in all open files.&lt;/p&gt;
+&lt;p&gt;Analyzers can be divided into the following groups:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options?preserve-view=true&amp;amp;view=vs-2019#convention-categories&#34;&gt;Code style&lt;/a&gt; analyzers are built in to Visual Studio.&lt;/strong&gt; The diagnostic ID, or code, for these analyzers is of the format IDExxxx, for example, IDE0067. You can configure preferences in the &lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/ide/code-styles-and-code-cleanup?view=vs-2019&#34;&gt;text editor options page&lt;/a&gt; or in an &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options&#34;&gt;EditorConfig file&lt;/a&gt;. Starting in .NET 5.0, code style analyzers are included with the .NET SDK and can be strictly enforced as build warnings or errors. For more information, see &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/productivity/code-analysis#code-style-analysis&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/index&#34;&gt;Code quality&lt;/a&gt; analyzers are now included with the .NET 5 SDK and enabled by default. The diagnostic ID, or code, for these analyzers is of the format CAxxxx, for example, CA1822. For more information, see &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis&#34;&gt;Overview of .NET code quality analysis&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Third party analyzers can be installed as a NuGet package or a Visual Studio extension. Third party analyzers, such as &lt;a href=&#34;https://www.nuget.org/packages/StyleCop.Analyzers/&#34;&gt;StyleCop&lt;/a&gt;, &lt;a href=&#34;https://www.nuget.org/packages/Roslynator.Analyzers/&#34;&gt;Roslynator&lt;/a&gt;, &lt;a href=&#34;https://www.nuget.org/packages/xunit.analyzers/&#34;&gt;XUnit Analyzers&lt;/a&gt;, and &lt;a href=&#34;https://www.nuget.org/packages/SonarAnalyzer.CSharp/&#34;&gt;Sonar Analyzer&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;legacy-analysis-for-managed-code&#34;&gt;Legacy analysis for managed code&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;controversy&#34;&gt;Controversy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fields Naming between &lt;em&gt;_lowerCamelCase&lt;/em&gt; and &lt;em&gt;PascalCasing&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;_camelCase&lt;/code&gt; for fields is common from what I&amp;rsquo;ve seen (it&amp;rsquo;s what we use at our place and Microsoft &lt;a href=&#34;https://github.com/dotnet/runtime/blob/main/.editorconfig&#34;&gt;prefer for the .NET Runtime&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;My personal justification for using this standard is that is is easier to type &lt;code&gt;_&lt;/code&gt; to identify a private field than &lt;code&gt;this.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Foo(String a, String b)
+{
+    _a = a;
+    _b = b;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Versus&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Foo(String a, String b)
+{
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;this&lt;/span&gt;.a = a;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;this&lt;/span&gt;.b = b;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I find the first much easier to type and it prevents me from ever accidentally assigning to the parameter called &lt;code&gt;a&lt;/code&gt; instead of &lt;code&gt;this.a&lt;/code&gt;. This is reinforced by a &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/dd264939.aspx&#34;&gt;Code Analysis&lt;/a&gt; Maintainability Rule that states:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://msdn.microsoft.com/en-us/library/ms182216.aspx&#34;&gt;CA1500&lt;/a&gt; Variable names should not match field names.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My other reason, is that &lt;code&gt;this.&lt;/code&gt; is optional (Visual Studio / Code prompts you to remove them) if it doesn&amp;rsquo;t collide with a local variable or parameter name, making knowing which variable you are using harder. If you have an &lt;code&gt;_&lt;/code&gt; at the start of all private fields, then you always know which is a field and which is has local scope.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Tabs or Spaces&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4 spaces or tabs, it&amp;rsquo;s a question.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Abbreviation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is a convention, and it specifies initial uppercase, the rest lowercase, for all acronyms that are more than 2 characters long. Hence &lt;code&gt;HttpContext&lt;/code&gt; and &lt;code&gt;ClientID&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;&lt;a href=&#34;https://rads.stackoverflow.com/amzn/click/com/0321545613&#34;&gt;Framework Design Guidelines&lt;/a&gt;&amp;rdquo; 2nd edition by Krzysztof Cwalina and Brad Abrams pp.40-42&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.1.2 Capitalizing Acronyms&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DO&lt;/strong&gt; capitalize both characters on two-character acronyms, except the first word of a camel-cased identifier.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;System.IO
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; StartIO(Stream ioStream)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;DO&lt;/strong&gt; capitalize only the first character of acronyms with three or more characters, except the first word of a camel-cased identifier.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;System.Xml
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; ProcessHtmlTag(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; htmlTag)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;DO NOT&lt;/strong&gt; capitalize any of the characters of any acronyms, whatever their length, at the beginning of a camel-cased identifier.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;using-abbreviations-and-acronyms&#34;&gt;Using Abbreviations and Acronyms&lt;/h2&gt;
+&lt;p&gt;❌ DO NOT use abbreviations or contractions as part of identifier names.&lt;/p&gt;
+&lt;p&gt;For example, use &lt;code&gt;GetWindow&lt;/code&gt; rather than &lt;code&gt;GetWin&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;❌ DO NOT use any acronyms that are not widely accepted, and even if they are, only when necessary.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Guideline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;80 characters&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NameSpace&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Should the folders in a solution match the namespace?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CRUD Method Naming
+&lt;ul&gt;
+&lt;li&gt;CreateXXXX or InsertXXXX&lt;/li&gt;
+&lt;li&gt;ReadXXXX or GetXXXXX&lt;/li&gt;
+&lt;li&gt;UpdateXXXX&lt;/li&gt;
+&lt;li&gt;DeleteXXXX&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference-6&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/code-quality&#34;&gt;Analyze code in Visual Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview&#34;&gt;.NET source code analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/3186853/c-sharp-field-naming-guidelines&#34;&gt;C# Field Naming Guidelines?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/StyleCop/StyleCop&#34;&gt;StyleCop/StyleCop: Analyzes C# source code to enforce a set of style and consistency rules. &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions&#34;&gt;C# Coding Conventions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/capitalization-conventions#capitalizing-compound-words-and-common-terms&#34;&gt;Capitalizing Compound Words and Common Terms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/479596/what-makes-code-legacy&#34;&gt;What makes code legacy?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://softwareengineering.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width&#34;&gt;Why is 80 characters the &amp;lsquo;standard&amp;rsquo; limit for code width?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4664/should-the-folders-in-a-solution-match-the-namespace&#34;&gt;Should the folders in a solution match the namespace?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/360321/crud-vs-agud-vs-afud-whats-your-naming-convention-of-preference&#34;&gt;what&amp;rsquo;s your naming convention of preference&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;http-error-50019---internal-server-error&#34;&gt;HTTP Error 500.19 - Internal Server Error&lt;/h1&gt;
 &lt;p&gt;The requested page cannot be accessed because the related configuration data for the page is invalid.&lt;/p&gt;
@@ -1123,14 +1135,14 @@
 &lt;li&gt;&lt;strong&gt;Enable all items under this&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;try again, now it should work.&lt;/p&gt;
-&lt;h2 id=&#34;reference-6&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;reference-7&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/34199976/iis-config-error-this-configuration-section-cannot-be-used-at-this-path&#34;&gt;IIS Config Error - This configuration section cannot be used at this path&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/43976092/excel-break-long-lines-when-importing-csv-file&#34;&gt;Excel break long lines when importing csv file&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Each instance of Microsoft Excel 2007, Excel 2010, and Excel 2013 32-bit is limited to 2 gigabyte (GB) of memory (internal heap space). &lt;strong&gt;Each instance is also limited to 32,760 source cells&lt;/strong&gt; when you perform a smart fill operation. When you copy or fill large sections of a worksheet, one or both of these limitations may affect the result.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-7&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;reference-8&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/office/troubleshoot/excel/copy-formulas-over-large-area&#34;&gt;&amp;ldquo;Not enough memory&amp;rdquo; when you copy formulas over large area in Excel&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4019466/httplistener-access-denied&#34;&gt;HttpListener Access Denied&lt;/a&gt;&lt;/h1&gt;
@@ -1146,7 +1158,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-XML&#34; data-lang=&#34;XML&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;ItemGroup&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;InternalsVisibleToSuffix&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;Include=&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;.Tests&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;/&amp;gt;&lt;/span&gt; 
 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/ItemGroup&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference-8&#34;&gt;Reference&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference-9&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=net-5.0&#34;&gt;InternalsVisibleToAttribute Class&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1211707/how-to-access-classes-in-another-assembly-for-unit-testing-purposes&#34;&gt;How to access classes in another assembly for unit-testing purposes?&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -1160,7 +1172,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.microsoft.com/en-us/visualstudio/test/media/fakes-2.png?view=vs-2019&#34; alt=&#34;Fakes replace other components&#34;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-9&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;reference-10&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019&#34;&gt;Isolate code under test with Microsoft Fakes&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-nethttpsstackoverflowcomquestions4988286what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4988286/what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net&#34;&gt;What difference is there between WebClient and HTTPWebRequest classes in .NET?&lt;/a&gt;&lt;/h1&gt;
@@ -1184,7 +1196,7 @@
 &lt;p&gt;However there&amp;rsquo;s a &lt;em&gt;&amp;ldquo;Beta: Use Unicode UTF-8 for worldwide language support&amp;rdquo;&lt;/em&gt; checkbox since Windows 10 insider build 17035 for setting the locale code page to UTF-8&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://i.stack.imgur.com/heCud.png&#34; alt=&#34;Beta: Use Unicode UTF-8 for worldwide language support&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;reference-10&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;reference-11&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/5750203/how-to-write-unicode-characters-to-the-console&#34;&gt;How to write Unicode characters to the console?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://superuser.com/questions/1033088/is-it-possible-to-set-locale-of-a-windows-application-to-utf-8&#34;&gt;Is it possible to set “locale” of a Windows application to UTF-8?&lt;/a&gt;&lt;/li&gt;
@@ -1257,7 +1269,7 @@
 &lt;h2 id=&#34;just-use-common-sense&#34;&gt;Just use common sense&lt;/h2&gt;
 &lt;p&gt;For any situation where you might consider using a tuple: simply ask yourself the question: &amp;ldquo;will a tuple simplify the code here&amp;rdquo;. If the answer is &amp;ldquo;yes&amp;rdquo;, then use one. And that ultimately is the primary consideration over whether to use a tuple or a custom class.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-11&#34;&gt;Reference:&lt;/h2&gt;
+&lt;h2 id=&#34;reference-12&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/44650636/when-to-use-tuple-vs-class-in-c-sharp-7-0&#34;&gt;When to use: Tuple vs Class in C# 7.0&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -1308,7 +1320,7 @@ nameof(RelevantTableName.DocumentObjectReference);  &lt;span style=&#34;color:#2
 &lt;p&gt;&lt;em&gt;Portions © 2005, 2009 Microsoft Corporation. All rights reserved.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Reprinted by permission of Pearson Education, Inc. from &lt;a href=&#34;https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619&#34;&gt;Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition&lt;/a&gt; by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-12&#34;&gt;Reference:&lt;/h2&gt;
+&lt;h2 id=&#34;reference-13&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/enum&#34;&gt;Enum Design&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/21561684/get-value-of-enum-member-by-its-name&#34;&gt;Get value of enum member by its name?&lt;/a&gt;&lt;/li&gt;
@@ -1349,7 +1361,7 @@ mock.Setup(foo =&amp;gt; foo.Submit(It.IsAny&amp;lt;Bar&amp;gt;(),It.IsAny&amp;l
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;IPAddress ip;
 &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt; b = IPAddress.TryParse(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;1234.12.12.12&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;out&lt;/span&gt; ip);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-13&#34;&gt;Reference:&lt;/h2&gt;
+&lt;h2 id=&#34;reference-14&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-5.0&#34;&gt;Regex Class&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -1385,12 +1397,96 @@ mock.Setup(foo =&amp;gt; foo.Submit(It.IsAny&amp;lt;Bar&amp;gt;(),It.IsAny&amp;l
 &lt;p&gt;It also has the lovelily specific MSDN documentation &amp;ldquo;Encodes the path portion of a URL string for reliable HTTP transmission from the Web server to a client.&amp;rdquo; - without actually explaining what it does. You are less likely to shoot yourself in the foot with an Uzi&amp;hellip;&lt;/p&gt;
 &lt;p&gt;In short, stick to &lt;strong&gt;&lt;a href=&#34;http://msdn.microsoft.com/en-us/library/system.uri.escapedatastring.aspx&#34;&gt;Uri.EscapeDataString&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-14&#34;&gt;Reference:&lt;/h2&gt;
+&lt;h2 id=&#34;reference-15&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.web.httputility.urldecode?view=net-5.0&#34;&gt;HttpUtility.UrlDecode Method&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.net.webutility?view=net-5.0&#34;&gt;WebUtility Class&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4396598/whats-the-difference-between-escapeuristring-and-escapedatastring&#34;&gt;What&amp;rsquo;s the difference between EscapeUriString and EscapeDataString?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/602642/server-urlencode-vs-httputility-urlencode&#34;&gt;Server.UrlEncode vs. HttpUtility.UrlEncode&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;side-effect&#34;&gt;Side effect&lt;/h1&gt;
+&lt;h2 id=&#34;reference-16&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Side_effect_(computer_science)&#34;&gt;Side effect&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;how-do-you-unit-test-regular-expressionshttpsstackoverflowcomquestions488601how-do-you-unit-test-regular-expressions&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/488601/how-do-you-unit-test-regular-expressions&#34;&gt;How do you unit test regular expressions?&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You should always test your regexen, much like any other chunk of code. They&amp;rsquo;re at the most simple a function that takes a string and returns a bool, or returns an array of values.&lt;/p&gt;
+&lt;p&gt;Here are some suggestions on what to think about when it comes to designing unit tests for regexen. These are not not hard and fast prescriptions for unit test design, but some guidelines to shape your thinking. As always, weigh the needs of your testing versus cost of failure balanced with the time required to implement them all. (I find that &amp;lsquo;implementing&amp;rsquo; the test is the easy part! :-] )&lt;/p&gt;
+&lt;p&gt;Points to consider:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Think of every group (the parentheses) as a curly brace.&lt;/li&gt;
+&lt;li&gt;Think of every | as a condition. Make sure to test for each branch.&lt;/li&gt;
+&lt;li&gt;Think of every modifier (*, +, ? ) as a different path.&lt;/li&gt;
+&lt;li&gt;(side note to the above: remember the difference between *, +, ? and *?, +?, and ??.)&lt;/li&gt;
+&lt;li&gt;for \d, \s, \w, and their negations, give several in each range a try.&lt;/li&gt;
+&lt;li&gt;For * and +, you need to test for the &amp;lsquo;no value&amp;rsquo;, &amp;lsquo;one of&amp;rsquo;, and &amp;lsquo;one or more&amp;rsquo; for each.&lt;/li&gt;
+&lt;li&gt;For important &amp;lsquo;control&amp;rsquo; characters (eg, strings in the regex you look for) test to see what happens if they show up in the wrong places. This may surprise you.&lt;/li&gt;
+&lt;li&gt;If you have real world data, use as much of it as you can.&lt;/li&gt;
+&lt;li&gt;If you don&amp;rsquo;t, make sure to test both the simple and complex forms that should be valid.&lt;/li&gt;
+&lt;li&gt;Make sure to test what regex control characters do when inserted.&lt;/li&gt;
+&lt;li&gt;Make sure to verify that the empty string is properly accepted/rejected.&lt;/li&gt;
+&lt;li&gt;Make sure to verify that a string of each of the different kind of space characters are properly accepted or rejected.&lt;/li&gt;
+&lt;li&gt;Make sure that proper handling of case insensitivity is done (the i flag). This has bit me more times than almost anything else in text parsing (other than spaces).&lt;/li&gt;
+&lt;li&gt;If you have the x, m or s options, make sure you understand what they do and test for it (the behavior here can be different)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a regex that returns lists, also remember:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Verify that the data you expect is returned, in the right order, in the right fields.&lt;/li&gt;
+&lt;li&gt;Verify that slight modifications do not return good data.&lt;/li&gt;
+&lt;li&gt;Verify that mixed anonymous groups and named groups parse correctly (eg, &lt;code&gt;(?&amp;lt;name&amp;gt; thing1 ( thing2) )&lt;/code&gt;) - this behavior can be different based on the regex engine you&amp;rsquo;re using.&lt;/li&gt;
+&lt;li&gt;Once again, give lots of real world trials.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you use any advanced features, such as non-backtracking groups, make sure you understand completely how the feature works, and using the guidelines above, build example strings that should work for and against each of them.&lt;/p&gt;
+&lt;p&gt;Depending on your regex library implementation, the way groups are captured may be different as well. Perl 5 has a &amp;lsquo;open paren order&amp;rsquo; ordering, C# has that partially except for named groups and so on. Make sure to experiment with your flavor to know exactly what it does.&lt;/p&gt;
+&lt;p&gt;Then, integrate them right in with your other unit tests, either in their own module or alongside the module that contains the regex. For particularly nasty regexen, you may find you need lots and lots of tests to verify that the pattern and all the features you use are correct. If the regex makes up a large (or nearly all) of the work that the method is doing, I will use the advice above to fashion inputs to test that function and not the regex directly. That way, if later you decide that the regex is not the way to go, or you want to break it up, you can capture the behavior the regex provided without changing the interface - ie, the method that invokes the regex.&lt;/p&gt;
+&lt;p&gt;As long as you really know how a regex feature is supposed to work in your flavor of regex, you should be able to develop decent test cases for it. Just make sure you really, really, really do understand how the feature works!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In terms of ascii code, it&amp;rsquo;s 3 &amp;ndash; since they&amp;rsquo;re 10 and 13 respectively;-).&lt;/p&gt;
+&lt;p&gt;But seriously, there are many:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;in Unix and all Unix-like systems, &lt;code&gt;\n&lt;/code&gt; is the code for end-of-line, &lt;code&gt;\r&lt;/code&gt; means nothing special&lt;/li&gt;
+&lt;li&gt;as a consequence, in C and most languages that somehow copy it (even remotely), &lt;code&gt;\n&lt;/code&gt; is the standard escape sequence for end of line (translated to/from OS-specific sequences as needed)&lt;/li&gt;
+&lt;li&gt;in old Mac systems (pre-OS X), &lt;code&gt;\r&lt;/code&gt; was the code for end-of-line instead&lt;/li&gt;
+&lt;li&gt;in Windows (and many old OSs), the code for end of line is 2 characters, &lt;code&gt;\r\n&lt;/code&gt;, in this order&lt;/li&gt;
+&lt;li&gt;as a (surprising;-) consequence (harking back to OSs much older than Windows), &lt;code&gt;\r\n&lt;/code&gt; is the standard line-termination for text formats on the Internet&lt;/li&gt;
+&lt;li&gt;for electromechanical teletype-like &amp;ldquo;terminals&amp;rdquo;, &lt;code&gt;\r&lt;/code&gt; commands the carriage to go back leftwards until it hits the leftmost stop (a slow operation), &lt;code&gt;\n&lt;/code&gt; commands the roller to roll up one line (a much faster operation) &amp;ndash; that&amp;rsquo;s the reason you always have &lt;code&gt;\r&lt;/code&gt; &lt;strong&gt;before&lt;/strong&gt; &lt;code&gt;\n&lt;/code&gt;, so that the roller can move while the carriage is still going leftwards!-) Wikipedia has a &lt;a href=&#34;https://en.wikipedia.org/wiki/Newline#History&#34;&gt;more detailed explanation&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;for character-mode terminals (typically emulating even-older printing ones as above), in raw mode, &lt;code&gt;\r&lt;/code&gt; and &lt;code&gt;\n&lt;/code&gt; act similarly (except both in terms of the cursor, as there &lt;strong&gt;is&lt;/strong&gt; no carriage or roller;-)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In practice, in the modern context of writing to a text file, you should always use &lt;code&gt;\n&lt;/code&gt; (the underlying runtime will translate that if you&amp;rsquo;re on a weird OS, e.g., Windows;-). The only reason to use &lt;code&gt;\r&lt;/code&gt; is if you&amp;rsquo;re writing to a character terminal (or more likely a &amp;ldquo;console window&amp;rdquo; emulating it) and want the next line you write to overwrite the last one you just wrote (sometimes used for goofy &amp;ldquo;ascii animation&amp;rdquo; effects of e.g. progress bars) &amp;ndash; this is getting pretty obsolete in a world of GUIs, though;-).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;\r&lt;/code&gt;&lt;/strong&gt; = CR (Carriage Return) → Used as a new line character in Mac OS before X&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/strong&gt; = LF (Line Feed) → Used as a new line character in Unix/Mac OS X&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;\r\n&lt;/code&gt;&lt;/strong&gt; = CR + LF → Used as a new line character in Windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The problem is not with the splitting but rather with the &lt;code&gt;WriteLine&lt;/code&gt;. A &lt;code&gt;\n&lt;/code&gt; in a string printed with &lt;code&gt;WriteLine&lt;/code&gt; will produce an &amp;ldquo;extra&amp;rdquo; line.&lt;/p&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; text = 
+  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;somet interesting text\n&amp;#34;&lt;/span&gt; +
+  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;some text that should be in the same line\r\n&amp;#34;&lt;/span&gt; +
+  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;some text should be in another line&amp;#34;&lt;/span&gt;;
+
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;[] stringSeparators = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;[] { &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;\r\n&amp;#34;&lt;/span&gt; };
+&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;[] lines = text.Split(stringSeparators, StringSplitOptions.None);
+Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Nr. Of items in list: &amp;#34;&lt;/span&gt; + lines.Length); &lt;span style=&#34;color:#228b22&#34;&gt;// 2 lines
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; s &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; lines)
+{
+   Console.WriteLine(s); &lt;span style=&#34;color:#228b22&#34;&gt;//But will print 3 lines in total.
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To fix the problem remove &lt;code&gt;\n&lt;/code&gt; before you print the string.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;Console.WriteLine(s.Replace(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;\n&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;));
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;reference-17&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1761051/difference-between-n-and-r&#34;&gt;Difference between \n and \r?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/15433188/what-is-the-difference-between-r-n-r-and-n&#34;&gt;What is the difference between \r\n, \r, and \n?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/22185009/split-text-with-r-n&#34;&gt;Split text with &amp;lsquo;\r\n&amp;rsquo;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 - https://www.openheart.icu/cs/dot-net-issue/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>

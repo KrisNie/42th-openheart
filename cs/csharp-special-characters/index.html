@@ -393,6 +393,32 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#reference-1" onclick="onNavClick(`#reference-1-nav`)" id="reference-1-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
 						
 							<li>
 								<a href="#heading-2" onclick="onNavClick(`#heading-2-nav`)" id="heading-2-nav">
@@ -415,6 +441,72 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 							<li>
 								<a href="#heading-3" onclick="onNavClick(`#heading-3-nav`)" id="heading-3-nav">
 									!
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#reference-2" onclick="onNavClick(`#reference-2-nav`)" id="reference-2-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#_" onclick="onNavClick(`#_-nav`)" id="_-nav">
+									_
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#reference-3" onclick="onNavClick(`#reference-3-nav`)" id="reference-3-nav">
+									Reference
 								</a>
 							</li>
 						
@@ -689,6 +781,32 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#reference-1" onclick="onNavClick(`#reference-1-nav`)" id="reference-1-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
 						
 							<li>
 								<a href="#heading-2" onclick="onNavClick(`#heading-2-nav`)" id="heading-2-nav">
@@ -711,6 +829,72 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 							<li>
 								<a href="#heading-3" onclick="onNavClick(`#heading-3-nav`)" id="heading-3-nav">
 									!
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#reference-2" onclick="onNavClick(`#reference-2-nav`)" id="reference-2-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#_" onclick="onNavClick(`#_-nav`)" id="_-nav">
+									_
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#reference-3" onclick="onNavClick(`#reference-3-nav`)" id="reference-3-nav">
+									Reference
 								</a>
 							</li>
 						
@@ -810,9 +994,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            4 min
+                            5 min
                             
-                            32 s.
+                            39 s.
                         
                     </div>
                 </div>
@@ -879,6 +1063,13 @@ Console.WriteLine(isXNull); <span style="color:#228b22">// False
 <p><a href="https://quannt.github.io/programming/c%23/2017/01/07/question-marks-c-sharp.html">Four question marks you should know in C#</a></p>
 <hr>
 <h1 id="heading-1">$</h1>
+<blockquote>
+<p>Starting with C# 8.0, you can use the <code>$</code> and <code>@</code> tokens in any order: both <code>$@&quot;...&quot;</code> and <code>@$&quot;...&quot;</code> are valid interpolated verbatim strings. In earlier C# versions, the <code>$</code> token must appear before the <code>@</code> token.</p>
+</blockquote>
+<h2 id="reference-1">Reference</h2>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated">$ - string interpolation (C# reference)</a></li>
+</ol>
 <hr>
 <h1 id="heading-2">@</h1>
 <p>The <code>@</code> special character serves as a verbatim identifier. It can be used in the following ways:</p>
@@ -917,7 +1108,7 @@ Console.WriteLine(s2);
 </span><span style="color:#228b22">//     He said, &#34;This is the last \u0063hance\x0021&#34;
 </span></code></pre></div></li>
 <li>
-<p>To enable the compiler to distinguish between attributes in cases of a naming conflict. An attribute is a class that derives from <a href="https://docs.microsoft.com/en-us/dotnet/api/system.attribute">Attribute</a>. Its type name typically includes the suffix <strong>Attribute</strong>, although the compiler does not enforce this convention. The attribute can then be referenced in code either by its full type name (for example, <code>[InfoAttribute]</code> or its shortened name (for example, <code>[Info]</code>). However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the <strong>Attribute</strong>suffix but the other does not. For example, the following code fails to compile because the compiler cannot determine whether the <code>Info</code> or <code>InfoAttribute</code> attribute is applied to the <code>Example</code> class. See <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1614">CS1614</a> for more information.</p>
+<p>To enable the compiler to distinguish between attributes in cases of a naming conflict. An attribute is a class that derives from <a href="https://docs.microsoft.com/en-us/dotnet/api/system.attribute">Attribute</a>. Its type name typically includes the suffix <strong>Attribute</strong>, although the compiler does not enforce this convention. The attribute can then be referenced in code either by its full type name (for example, <code>[InfoAttribute]</code> or its shortened name (for example, <code>[Info]</code>). However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the <strong>Attribute</strong> suffix but the other does not. For example, the following code fails to compile because the compiler cannot determine whether the <code>Info</code> or <code>InfoAttribute</code> attribute is applied to the <code>Example</code> class. See <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1614">CS1614</a> for more information.</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#8b008b;font-weight:bold">using</span> <span style="color:#008b45;text-decoration:underline">System</span>;
 <span style="color:#658b00">   
 </span><span style="color:#658b00">[AttributeUsage(AttributeTargets.Class)]</span>
@@ -956,6 +1147,27 @@ Console.WriteLine(s2);
 </ol>
 <hr>
 <h1 id="heading-3">!</h1>
+<blockquote>
+<p>Available in C# 8.0 and later, the unary postfix <code>!</code> operator is the null-forgiving, or null-suppression, operator. In an enabled <a href="https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-annotation-context">nullable annotation context</a>, you use the null-forgiving operator to declare that expression <code>x</code> of a reference type isn&rsquo;t <code>null</code>: <code>x!</code>. The unary prefix <code>!</code> operator is the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#logical-negation-operator-">logical negation operator</a>.</p>
+</blockquote>
+<blockquote>
+<p>It tells the compiler &ldquo;this isn&rsquo;t null, trust me&rdquo;, so it does not issue a warning for a possible null reference.</p>
+</blockquote>
+<h2 id="reference-2">Reference</h2>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-forgiving">! (null-forgiving) operator (C# reference)</a></li>
+</ol>
+<hr>
+<h1 id="_">_</h1>
+<blockquote>
+<p>Starting with C# 7.0, C# supports discards, which are placeholder variables that are intentionally unused in application code. Discards are equivalent to unassigned variables; they don&rsquo;t have a value. A discard communicates intent to the compiler and others that read your code: You intended to ignore the result of an expression. You may want to ignore the result of an expression, one or more members of a tuple expression, an <code>out</code> parameter to a method, or the target of a pattern matching expression.</p>
+<p>&hellip;</p>
+<p>Beginning with C# 9.0, you can use discards to specify unused input parameters of a lambda expression. For more information, see the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions#input-parameters-of-a-lambda-expression">Input parameters of a lambda expression</a> section of the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions">Lambda expressions</a> article.</p>
+</blockquote>
+<h2 id="reference-3">Reference</h2>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/discards">Discards - C# Fundamentals</a></li>
+</ol>
 
                     
                     <HR width="100%" id="EOF">

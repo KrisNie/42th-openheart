@@ -387,8 +387,10 @@ IPv6地址(实验) ​ 2620:0:ccc::2
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/computer-network/</guid>
-      <description>网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
-四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。</description>
+      <description>Computer Network Issues 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
+四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。
+Private IP Address vs Public IP Address &amp;amp; Public IP Port  0-1023是公认端口号，即已经公认定义或为将要公认定义的软件保留的，而1024-65535是并没有公共定义的端口号，用户可以自己定义这些端口的作用。
+ Reference  常用端口号 为什么ipconfig和浏览器查询出的ip不一样？  </description>
     </item>
     
     <item>

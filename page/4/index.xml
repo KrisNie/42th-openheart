@@ -127,7 +127,9 @@ $$
         <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
         <guid>https://www.openheart.icu/cs/computer-network/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/computer-network/ -&lt;h1 id=&#34;网络的七层架构&#34;&gt;网络的七层架构&lt;/h1&gt;
+        <description>42th openheart https://www.openheart.icu/cs/computer-network/ -&lt;h1 id=&#34;computer-network&#34;&gt;Computer Network&lt;/h1&gt;
+&lt;h1 id=&#34;issues&#34;&gt;Issues&lt;/h1&gt;
+&lt;h2 id=&#34;网络的七层架构&#34;&gt;网络的七层架构&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;物理层&lt;/li&gt;
 &lt;li&gt;数据链路层&lt;/li&gt;
@@ -143,6 +145,15 @@ $$
 &lt;p&gt;TCP 在传输之前会进行三次沟通，一般称为“三次握手”。&lt;/p&gt;
 &lt;h3 id=&#34;四次挥手&#34;&gt;四次挥手&lt;/h3&gt;
 &lt;p&gt;TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。&lt;/p&gt;
+&lt;h2 id=&#34;private-ip-address-vs-public-ip-address--public-ip-port&#34;&gt;Private IP Address vs Public IP Address &amp;amp; Public IP Port&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0-1023是公认端口号，即已经公认定义或为将要公认定义的软件保留的，而1024-65535是并没有公共定义的端口号，用户可以自己定义这些端口的作用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/77322667&#34;&gt;常用端口号&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/304991342&#34;&gt;为什么ipconfig和浏览器查询出的ip不一样？&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 - https://www.openheart.icu/cs/computer-network/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -230,6 +241,9 @@ git mv -f .&lt;span style=&#34;color:#cd5555&#34;&gt;\a&lt;/span&gt;bc.js  .&lt;
 git clean -f -d -X &lt;span style=&#34;color:#228b22&#34;&gt;# remove ignored files, untracked files and directories&lt;/span&gt;
 
 git show --pretty=fuller commit_id &lt;span style=&#34;color:#228b22&#34;&gt;# View Author&amp;amp;Authordate&amp;amp;Commit&amp;amp;CommitDate &lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Server does not allow request for unadvertised object&lt;/span&gt;
+git submodule sync --recursive
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     

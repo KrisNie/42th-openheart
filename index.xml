@@ -328,6 +328,13 @@ Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// False
 &lt;p&gt;&lt;a href=&#34;https://quannt.github.io/programming/c%23/2017/01/07/question-marks-c-sharp.html&#34;&gt;Four question marks you should know in C#&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading-1&#34;&gt;$&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Starting with C# 8.0, you can use the &lt;code&gt;$&lt;/code&gt; and &lt;code&gt;@&lt;/code&gt; tokens in any order: both &lt;code&gt;$@&amp;quot;...&amp;quot;&lt;/code&gt; and &lt;code&gt;@$&amp;quot;...&amp;quot;&lt;/code&gt; are valid interpolated verbatim strings. In earlier C# versions, the &lt;code&gt;$&lt;/code&gt; token must appear before the &lt;code&gt;@&lt;/code&gt; token.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;reference-1&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated&#34;&gt;$ - string interpolation (C# reference)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading-2&#34;&gt;@&lt;/h1&gt;
 &lt;p&gt;The &lt;code&gt;@&lt;/code&gt; special character serves as a verbatim identifier. It can be used in the following ways:&lt;/p&gt;
@@ -366,7 +373,7 @@ Console.WriteLine(s2);
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     He said, &amp;#34;This is the last \u0063hance\x0021&amp;#34;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;To enable the compiler to distinguish between attributes in cases of a naming conflict. An attribute is a class that derives from &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.attribute&#34;&gt;Attribute&lt;/a&gt;. Its type name typically includes the suffix &lt;strong&gt;Attribute&lt;/strong&gt;, although the compiler does not enforce this convention. The attribute can then be referenced in code either by its full type name (for example, &lt;code&gt;[InfoAttribute]&lt;/code&gt; or its shortened name (for example, &lt;code&gt;[Info]&lt;/code&gt;). However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the &lt;strong&gt;Attribute&lt;/strong&gt;suffix but the other does not. For example, the following code fails to compile because the compiler cannot determine whether the &lt;code&gt;Info&lt;/code&gt; or &lt;code&gt;InfoAttribute&lt;/code&gt; attribute is applied to the &lt;code&gt;Example&lt;/code&gt; class. See &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1614&#34;&gt;CS1614&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;To enable the compiler to distinguish between attributes in cases of a naming conflict. An attribute is a class that derives from &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.attribute&#34;&gt;Attribute&lt;/a&gt;. Its type name typically includes the suffix &lt;strong&gt;Attribute&lt;/strong&gt;, although the compiler does not enforce this convention. The attribute can then be referenced in code either by its full type name (for example, &lt;code&gt;[InfoAttribute]&lt;/code&gt; or its shortened name (for example, &lt;code&gt;[Info]&lt;/code&gt;). However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the &lt;strong&gt;Attribute&lt;/strong&gt; suffix but the other does not. For example, the following code fails to compile because the compiler cannot determine whether the &lt;code&gt;Info&lt;/code&gt; or &lt;code&gt;InfoAttribute&lt;/code&gt; attribute is applied to the &lt;code&gt;Example&lt;/code&gt; class. See &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1614&#34;&gt;CS1614&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System&lt;/span&gt;;
 &lt;span style=&#34;color:#658b00&#34;&gt;   
 &lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[AttributeUsage(AttributeTargets.Class)]&lt;/span&gt;
@@ -405,6 +412,27 @@ Console.WriteLine(s2);
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading-3&#34;&gt;!&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Available in C# 8.0 and later, the unary postfix &lt;code&gt;!&lt;/code&gt; operator is the null-forgiving, or null-suppression, operator. In an enabled &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-annotation-context&#34;&gt;nullable annotation context&lt;/a&gt;, you use the null-forgiving operator to declare that expression &lt;code&gt;x&lt;/code&gt; of a reference type isn&amp;rsquo;t &lt;code&gt;null&lt;/code&gt;: &lt;code&gt;x!&lt;/code&gt;. The unary prefix &lt;code&gt;!&lt;/code&gt; operator is the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#logical-negation-operator-&#34;&gt;logical negation operator&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It tells the compiler &amp;ldquo;this isn&amp;rsquo;t null, trust me&amp;rdquo;, so it does not issue a warning for a possible null reference.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;reference-2&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-forgiving&#34;&gt;! (null-forgiving) operator (C# reference)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;_&#34;&gt;_&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Starting with C# 7.0, C# supports discards, which are placeholder variables that are intentionally unused in application code. Discards are equivalent to unassigned variables; they don&amp;rsquo;t have a value. A discard communicates intent to the compiler and others that read your code: You intended to ignore the result of an expression. You may want to ignore the result of an expression, one or more members of a tuple expression, an &lt;code&gt;out&lt;/code&gt; parameter to a method, or the target of a pattern matching expression.&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Beginning with C# 9.0, you can use discards to specify unused input parameters of a lambda expression. For more information, see the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions#input-parameters-of-a-lambda-expression&#34;&gt;Input parameters of a lambda expression&lt;/a&gt; section of the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions&#34;&gt;Lambda expressions&lt;/a&gt; article.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;reference-3&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/discards&#34;&gt;Discards - C# Fundamentals&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 - https://www.openheart.icu/cs/csharp-special-characters/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
@@ -901,7 +929,9 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;As though he were moving a checker to another square.&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;I hate that word hulking, &#39; objected Tom crossly, &amp;lsquo;even in kidding. &#39;&lt;/p&gt;
 &lt;p&gt;Why the agression? Is this your time of the month?&lt;/p&gt;
-&lt;p&gt;framing her in narcotic related crimes.&lt;/p&gt;
+&lt;p&gt;Framing her in narcotic related crimes.&lt;/p&gt;
+&lt;p&gt;be out of the ordinary&lt;/p&gt;
+&lt;p&gt;shed some tears&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;phrase&#34;&gt;Phrase&lt;/h2&gt;
 &lt;p&gt;Carbon Copy 副本、抄送，outlook中的&lt;em&gt;cc&lt;/em&gt;&lt;/p&gt;
@@ -1019,6 +1049,7 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;POC, &lt;a href=&#34;https://en.wikipedia.org/wiki/Proof_of_concept&#34;&gt;Proof of concept&lt;/a&gt; 概念证明&lt;/p&gt;
 &lt;p&gt;E12, Early Offer Year 12 education&lt;/p&gt;
 &lt;p&gt;ACM, Association for Computing Machinery 计算机协会&lt;/p&gt;
+&lt;p&gt;FQA, Frequently asked questions&lt;/p&gt;
 &lt;h3 id=&#34;title-and-department-name&#34;&gt;Title and department name&lt;/h3&gt;
 &lt;p&gt;CDO, chief data officer&lt;/p&gt;
 &lt;p&gt;CEO, chief executive officer&lt;/p&gt;
@@ -1108,6 +1139,15 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;BST (London, GMT+0100)&lt;/p&gt;
 &lt;p&gt;EDT (New York, GMT-05:00)&lt;/p&gt;
 &lt;p&gt;PDT (San Francisco, GMT-08:00)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;pronounce&#34;&gt;Pronounce&lt;/h1&gt;
+&lt;h2 id=&#34;live&#34;&gt;Live&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;[liv]&lt;/em&gt;
+vi.活,生存；居住; 住；继续存在,留存
+vt.&amp;amp; vi.以某种方式生活
+&lt;em&gt;[laiv]&lt;/em&gt;
+adj.活的,有生命的；真正的；燃烧着的；带电的；未爆炸的; 随时可用的；当前重要的；现场直播的,实况转播的
+adv.实地,现场地,以直播方式&lt;/p&gt;
 - https://www.openheart.icu/speech/i-am-a-freshman/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
