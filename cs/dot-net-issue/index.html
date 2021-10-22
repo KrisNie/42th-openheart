@@ -759,6 +759,24 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
+								<a href="#attention" onclick="onNavClick(`#attention-nav`)" id="attention-nav">
+									Attention
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
 								<a href="#controversy" onclick="onNavClick(`#controversy-nav`)" id="controversy-nav">
 									Controversy
 								</a>
@@ -2255,6 +2273,24 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 						
 						
 							<li>
+								<a href="#attention" onclick="onNavClick(`#attention-nav`)" id="attention-nav">
+									Attention
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
 								<a href="#controversy" onclick="onNavClick(`#controversy-nav`)" id="controversy-nav">
 									Controversy
 								</a>
@@ -3210,9 +3246,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            29 min
+                            30 min
                             
-                            33 s.
+                            55 s.
                         
                     </div>
                 </div>
@@ -3408,6 +3444,16 @@ Provides guidelines for choosing and implementing dependency properties.</p>
 <h2 id="legacy-analysis-for-managed-code">Legacy analysis for managed code</h2>
 <blockquote>
 </blockquote>
+<h2 id="attention">Attention</h2>
+<blockquote>
+<p>✔️ DO name collection properties with a plural phrase describing the items in the collection instead of using a singular phrase followed by &ldquo;List&rdquo; or &ldquo;Collection&rdquo;.</p>
+<p>✔️ DO name Boolean properties with an affirmative phrase (<code>CanSeek</code> instead of <code>CantSeek</code>). Optionally, you can also prefix Boolean properties with &ldquo;Is&rdquo;, &ldquo;Can&rdquo;, or &ldquo;Has&rdquo;, but only where it adds value.</p>
+<p>✔️ CONSIDER defining a struct instead of a class if instances of the type are small and commonly short-lived or are commonly embedded in other objects.</p>
+<p>❌ DO NOT add members to an interface that has previously shipped.</p>
+<p>Doing so would break implementations of the interface. You should create a new interface in order to avoid versioning problems.</p>
+<p>Except for the situations described in these guidelines, you should, in general, choose classes rather than interfaces in designing managed code reusable libraries.</p>
+<p>✔️ DO ensure that a state where all instance data is set to zero, false, or null (as appropriate) is valid.（Struct Design）</p>
+</blockquote>
 <h2 id="controversy">Controversy</h2>
 <ul>
 <li>Fields Naming between <em>_lowerCamelCase</em> and <em>PascalCasing</em></li>
@@ -3443,6 +3489,7 @@ Provides guidelines for choosing and implementing dependency properties.</p>
 <blockquote>
 <p>There is a convention, and it specifies initial uppercase, the rest lowercase, for all acronyms that are more than 2 characters long. Hence <code>HttpContext</code> and <code>ClientID</code>.</p>
 </blockquote>
+<p><a href="https://twitter.com/brendaneich/status/1316377408027594753">Chris Wilson</a> （<a href="https://www.linkedin.com/in/cwilso/">LinkedIn</a>）前微软员工如是说。</p>
 <blockquote>
 <p>&ldquo;<a href="https://rads.stackoverflow.com/amzn/click/com/0321545613">Framework Design Guidelines</a>&rdquo; 2nd edition by Krzysztof Cwalina and Brad Abrams pp.40-42</p>
 <p><strong>3.1.2 Capitalizing Acronyms</strong></p>
@@ -3460,8 +3507,16 @@ Provides guidelines for choosing and implementing dependency properties.</p>
 <p>For example, use <code>GetWindow</code> rather than <code>GetWin</code>.</p>
 <p>❌ DO NOT use any acronyms that are not widely accepted, and even if they are, only when necessary.</p>
 </blockquote>
+<blockquote>
+<p>The PascalCasing convention, used for all identifiers except parameter names, capitalizes the first character of each word (including acronyms over two letters in length), as shown in the following examples:</p>
+<pre><code>PropertyDescriptor` `HtmlTag
+</code></pre><p>A special case is made for two-letter acronyms in which both letters are capitalized, as shown in the following identifier:</p>
+<pre><code>IOStream
+</code></pre><p>The camelCasing convention, used only for parameter names, capitalizes the first character of each word except the first word, as shown in the following examples. As the example also shows, two-letter acronyms that begin a camel-cased identifier are both lowercase.</p>
+<pre><code>propertyDescriptor` `ioStream` `htmlTag
+</code></pre></blockquote>
 <ul>
-<li>Guideline</li>
+<li>Guideline limit</li>
 </ul>
 <p>80 characters</p>
 <ul>

@@ -7,7 +7,54 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 15:15:57 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 11:35:34 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CI/CD</title>
+      <link>https://www.openheart.icu/cs/cicd/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/cicd/</guid>
+      <description>What is CI/CD?  In software engineering, CI/CD or CICD is the combined practices of continuous integration (CI) and either continuous delivery or continuous deployment (CD).
+CI/CD bridges the gaps between development and operation activities and teams by enforcing automation in building, testing and deployment of applications. The process contrasts with traditional methods where all updates were integrated into one large batch before rolling out the newer version. Modern day DevOps practices involve continuous development, continuous testing, continuous integration, continuous deployment and continuous monitoring of software applications throughout its development life cycle.</description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>https://www.openheart.icu/cs/database/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/database/</guid>
+      <description>ISSUES  ORMs  ACID Atomicity 原子性 Transactions are often composed of multiple statements. Atomicity guarantees that each transaction is treated as a single &amp;ldquo;unit&amp;rdquo;, which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. A guarantee of atomicity prevents updates to the database occurring only partially, which can cause greater problems than rejecting the whole series outright.</description>
+    </item>
+    
+    <item>
+      <title>MongoDB </title>
+      <link>https://www.openheart.icu/cs/mongodb/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://www.openheart.icu/cs/postgresql/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/postgresql/</guid>
+      <description>Windows上安装其实蛮简单的，会有自带的pgAdmin工具。</description>
+    </item>
+    
+    <item>
+      <title>Redis</title>
+      <link>https://www.openheart.icu/cs/redis/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/redis/</guid>
+      <description>MongoDB vs Redis
+MongoDB is a document-oriented, disk-based database optimized for operational simplicity, schema-free design and very large data volumes. Redis is an in-memory, persistent data structure store that enables developers to perform common operations with minimal complexity and maximum performance. MongoDB and Redis are both NoSQL languages, but because they’re built for different purposes, Redis’ enhanced capabilities significantly augment MongoDB’s capabilities.</description>
+    </item>
+    
     <item>
       <title>Working Effectively with Legacy Code</title>
       <link>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</link>
@@ -58,7 +105,9 @@ Random rnd = new Random(); var randomNo = rnd.Next(); var status = randomNo % 2 
       <description>Windows Terminal oh-my-posh Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease PSReadLine PowerShell/PSReadLine
 Install-Module PSReadLine -AllowPrerelease -Force notepad $profile
 Import-Module PSReadLine Set-PSReadLineOption -PredictionSource History # 下面是三条是文档里推荐的，根据自己的习惯决定是否添加 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward Set-PSReadLineKeyHandler -Key Tab -Function Complete # Hot-Key Set-PSReadLineKeyHandler -Key &amp;#34;Ctrl+g&amp;#34; -Function MenuComplete posh-git dahlbyk/posh-git
-Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force Import-Module posh-git Scoop iwr -useb get.scoop.sh | iex  Command net share # view your pc&amp;#39;s share folder </description>
+Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force Import-Module posh-git Scoop iwr -useb get.scoop.sh | iex  Command 重置Onedrive ​ %localappdata%\Microsoft\OneDrive\onedrive.exe /reset
+​ %localappdata%\Microsoft\OneDrive\onedrive.exe
+资源管理器打开卡顿可以通过索引选项给所有系统文件创建索引 证书管理中心 ​ 用win+R输入“certmgr.</description>
     </item>
     
     <item>
@@ -390,7 +439,7 @@ IPv6地址(实验) ​ 2620:0:ccc::2
       <description>Computer Network Issues 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
 四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。
 Private IP Address vs Public IP Address &amp;amp; Public IP Port  0-1023是公认端口号，即已经公认定义或为将要公认定义的软件保留的，而1024-65535是并没有公共定义的端口号，用户可以自己定义这些端口的作用。
- Reference  常用端口号 为什么ipconfig和浏览器查询出的ip不一样？  </description>
+ Reference  常用端口号 为什么ipconfig和浏览器查询出的ip不一样？  How does the internet work? What is HTTP? DNS and how it works? What is Domain Name? What is hosting? </description>
     </item>
     
     <item>
@@ -417,7 +466,7 @@ Private IP Address vs Public IP Address &amp;amp; Public IP Port  0-1023是公�
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/linux/</guid>
-      <description>Operation $ chown -R nginx:users ./* # 查看当前文件夹下权限 $ ls -l $ netstat -npa | grep 9000 # 查看当前路径 $ pwd # 安装git $ yum -y install git vim # 退出编辑模式，输入以下命令： Esc # 保存后退出vi，若为 :wq! 则为强制储存后退出（常用） :wq # 保存但不退出（常用） :w # 若文件属性为『只读』时，强制写入该档案 :w! # 离开 vi （常用） :q # 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。 :q! # 将档案还原到最原始的状态！ :e! tail # 现有itbilu.log日志文件，查看其后5行： $ tail -n -5 itbilu.log # 或 $ tail -n 5 itbilu.</description>
+      <description>Papers The UNIX Time-Sharing System Operation $ chown -R nginx:users ./* # 查看当前文件夹下权限 $ ls -l $ netstat -npa | grep 9000 # 查看当前路径 $ pwd # 安装git $ yum -y install git vim # 退出编辑模式，输入以下命令： Esc # 保存后退出vi，若为 :wq! 则为强制储存后退出（常用） :wq # 保存但不退出（常用） :w # 若文件属性为『只读』时，强制写入该档案 :w! # 离开 vi （常用） :q # 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。 :q! # 将档案还原到最原始的状态！ :e! tail # 现有itbilu.log日志文件，查看其后5行： $ tail -n -5 itbilu.log # 或 $ tail -n 5 itbilu.</description>
     </item>
     
     <item>
@@ -437,7 +486,7 @@ cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/markdown/</guid>
-      <description>Expressions 公式标记 行内公式（inline） eg: $ E=mc^2 $，写法是：$E=mc^2$
+      <description>support.typora.io  Expressions 公式标记 行内公式（inline） eg: $ E=mc^2 $，写法是：$E=mc^2$
 整行公式（displayed） 用一对紧挨的两个美元符号$$包裹
  $$ $$
  eg: $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$
@@ -469,6 +518,15 @@ server_name设置为二级域名地址
 root指向项目地址
 server {listen 80;server_name site42.openheart.icu;location / {root /usr/project/openheart;}}强制浏览器使用本地缓存 cache-control/expires
 # nginx.conf 中配置location ~ .</description>
+    </item>
+    
+    <item>
+      <title>Operating System</title>
+      <link>https://www.openheart.icu/cs/operating-system/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/operating-system/</guid>
+      <description></description>
     </item>
     
     <item>

@@ -6,9 +6,123 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 15:15:57 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Oct 2021 11:35:34 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>CI/CD</title>
+        <link>https://www.openheart.icu/cs/cicd/</link>
+        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/cicd/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/cicd/ -&lt;h1 id=&#34;what-is-cicd&#34;&gt;What is CI/CD?&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In &lt;a href=&#34;https://en.wikipedia.org/wiki/Software_engineering&#34;&gt;software engineering&lt;/a&gt;, &lt;strong&gt;CI/CD&lt;/strong&gt; or &lt;strong&gt;CICD&lt;/strong&gt; is the combined practices of &lt;a href=&#34;https://en.wikipedia.org/wiki/Continuous_integration&#34;&gt;continuous integration&lt;/a&gt; (CI) and either &lt;a href=&#34;https://en.wikipedia.org/wiki/Continuous_delivery&#34;&gt;continuous delivery&lt;/a&gt; or &lt;a href=&#34;https://en.wikipedia.org/wiki/Continuous_deployment&#34;&gt;continuous deployment&lt;/a&gt; (CD).&lt;/p&gt;
+&lt;p&gt;CI/CD bridges the gaps between development and operation activities and teams by enforcing automation in building, testing and deployment of applications. The process contrasts with traditional methods where all updates were integrated into one large batch before rolling out the newer version. Modern day &lt;a href=&#34;https://en.wikipedia.org/wiki/DevOps&#34;&gt;DevOps&lt;/a&gt; practices involve continuous development, continuous testing, continuous integration, continuous deployment and continuous monitoring of software applications throughout its development life cycle. The CI/CD practice, or &lt;em&gt;CI/CD pipeline&lt;/em&gt;, forms the backbone of modern day DevOps operations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous integration&lt;/h2&gt;
+&lt;p&gt;这个阶段应该是在VCS下，codebase要对每个MR进行自动化的build，甚至自动化的run unit testing。目的是为了保证merge的代码是OK的。&lt;/p&gt;
+&lt;h2 id=&#34;continuous-delivery&#34;&gt;Continuous delivery&lt;/h2&gt;
+&lt;p&gt;已经完成CI的代码表示可以交付给用户，此时的代码应该是随时都可以部署到生产环境中。&lt;/p&gt;
+&lt;h2 id=&#34;continuous-deployment&#34;&gt;Continuous deployment&lt;/h2&gt;
+&lt;p&gt;这个应该是重点，要自动部署可能基于cloud更为方便。CD过程可以更好的与蓝绿部署/滚动发布/灰度发布相结合，对用户&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/CI/CD&#34;&gt;https://en.wikipedia.org/wiki/CI/CD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.redhat.com/en/topics/devops/what-is-ci-cd&#34;&gt;https://www.redhat.com/en/topics/devops/what-is-ci-cd&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+- https://www.openheart.icu/cs/cicd/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Database</title>
+        <link>https://www.openheart.icu/cs/database/</link>
+        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/database/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/database/ -&lt;h1 id=&#34;issues&#34;&gt;ISSUES&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;orms&#34;&gt;ORMs&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;acidhttpsenwikipediaorgwikiacid&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/ACID&#34;&gt;ACID&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Atomicity 原子性
+Transactions are often composed of multiple statements. Atomicity guarantees that each transaction is treated as a single &amp;ldquo;unit&amp;rdquo;, which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. A guarantee of atomicity prevents updates to the database occurring only partially, which can cause greater problems than rejecting the whole series outright. As a consequence, the transaction cannot be observed to be in progress by another database client. At one moment in time, it has not yet happened, and at the next it has already occurred in whole (or nothing happened if the transaction was cancelled in progress).&lt;/p&gt;
+&lt;p&gt;An example of an atomic transaction is a monetary transfer from bank account A to account B. It consists of two operations, withdrawing the money from account A and saving it to account B. Performing these operations in an atomic transaction ensures that the database remains in a consistent state, that is, money is neither debited nor credited if either of those two operations fail.&lt;/p&gt;
+&lt;p&gt;Consistency (Correctness) 一致性
+&lt;strong&gt;Consistency ensures that a transaction can only bring the database from one valid state to another&lt;/strong&gt;, maintaining database invariants: any data written to the database must be valid according to all defined rules, including constraints, cascades, triggers, and any combination thereof. This prevents database corruption by an illegal transaction, but does not guarantee that a transaction is correct. Referential integrity guarantees the primary key – foreign key relationship.&lt;/p&gt;
+&lt;p&gt;Isolation 隔离性
+Transactions are often executed concurrently (e.g., multiple transactions reading and writing to a table at the same time). Isolation ensures that concurrent execution of transactions leaves the database in the same state that would have been obtained if the transactions were executed sequentially. Isolation is the main goal of concurrency control; depending on the method used, the effects of an incomplete transaction might not even be visible to other transactions.&lt;/p&gt;
+&lt;p&gt;Durability 永久性
+Durability guarantees that once a transaction has been committed, it will remain committed even in the case of a system failure (e.g., power outage or crash). This usually means that completed transactions (or their effects) are recorded in non-volatile memory.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;transactions&#34;&gt;Transactions&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;n1-problem&#34;&gt;N+1 Problem&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping&#34;&gt;What is the &amp;ldquo;N+1 selects problem&amp;rdquo; in ORM (Object-Relational Mapping)?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N+1是指，在两个表关联查询中，容易出现先查询主表，然后根据主表多次查询从表的情况。数据库执行语句此时为1+N。&lt;/p&gt;
+&lt;p&gt;ORM可以使用相关method实现join。比如，在EF中可以使用&lt;code&gt;Include&lt;/code&gt;方法查询related数据。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;database-normalization&#34;&gt;Database Normalization&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;indexes-and-how-they-work&#34;&gt;Indexes and how they work&lt;/h2&gt;
+&lt;p&gt;You can find relevant content in dotnet interview page.&lt;/p&gt;
+- https://www.openheart.icu/cs/database/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>MongoDB </title>
+        <link>https://www.openheart.icu/cs/mongodb/</link>
+        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/mongodb/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/mongodb/ -- https://www.openheart.icu/cs/mongodb/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>PostgreSQL</title>
+        <link>https://www.openheart.icu/cs/postgresql/</link>
+        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/postgresql/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/postgresql/ -&lt;p&gt;Windows上安装其实蛮简单的，会有自带的pgAdmin工具。&lt;/p&gt;
+- https://www.openheart.icu/cs/postgresql/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Redis</title>
+        <link>https://www.openheart.icu/cs/redis/</link>
+        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/redis/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/redis/ -&lt;p&gt;MongoDB vs Redis&lt;/p&gt;
+&lt;p&gt;MongoDB is a document-oriented, disk-based database optimized for operational simplicity, schema-free design and very large data volumes. &lt;em&gt;Redis is an in-memory, persistent data structure store that enables developers to perform common operations with minimal complexity and maximum performance.&lt;/em&gt; MongoDB and Redis are both NoSQL languages, but because they’re built for different purposes, Redis’ enhanced capabilities significantly augment MongoDB’s capabilities.&lt;/p&gt;
+- https://www.openheart.icu/cs/redis/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Backtracking</title>
+        <link>https://www.openheart.icu/arithmetic/backtracking/</link>
+        <pubDate>Sun, 19 Sep 2021 17:15:26 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/arithmetic/backtracking/</guid>
+        <description>42th openheart https://www.openheart.icu/arithmetic/backtracking/ -&lt;h1 id=&#34;backtrackinghttpsenwikipediaorgwikibacktracking&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Backtracking&#34;&gt;Backtracking&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/&#34;&gt;17. Letter Combinations of a Phone Number&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/sudoku-solver/&#34;&gt;37. Sudoku Solver&lt;/a&gt;&lt;/p&gt;
+- https://www.openheart.icu/arithmetic/backtracking/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -134,1021 +248,6 @@
 &lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/26976012&#34;&gt;商学、经济学、金融学与管理学有哪些相似与不同之处，如何具体区分？&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 - https://www.openheart.icu/finance/economicsfinancemanagement/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>To My Children</title>
-        <link>https://www.openheart.icu/boom/%E7%BB%99%E6%88%91%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%AD%A9%E5%AD%90/</link>
-        <pubDate>Wed, 17 Feb 2021 00:54:02 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E7%BB%99%E6%88%91%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%AD%A9%E5%AD%90/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E7%BB%99%E6%88%91%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%AD%A9%E5%AD%90/ -&lt;blockquote&gt;
-&lt;p&gt;孩子，&lt;/p&gt;
-&lt;p&gt;我希望你自始至终都是一个理想主义者。&lt;/p&gt;
-&lt;p&gt;你可以是农民，&lt;/p&gt;
-&lt;p&gt;可以是工程师，&lt;/p&gt;
-&lt;p&gt;可以是演员，&lt;/p&gt;
-&lt;p&gt;可以是流浪汉，&lt;/p&gt;
-&lt;p&gt;但你必须是个理想主义者。&lt;/p&gt;
-&lt;p&gt;童年，&lt;/p&gt;
-&lt;p&gt;我们讲英雄故事给你听，&lt;/p&gt;
-&lt;p&gt;并不是一定要你成为英雄，&lt;/p&gt;
-&lt;p&gt;而是希望你具有纯正的品格。&lt;/p&gt;
-&lt;p&gt;少年，&lt;/p&gt;
-&lt;p&gt;我们让你接触诗歌、绘画、音乐，&lt;/p&gt;
-&lt;p&gt;是为了让你的心灵填满高尚的情趣，&lt;/p&gt;
-&lt;p&gt;这些高尚的情趣会支撑你的一生，&lt;/p&gt;
-&lt;p&gt;使你在最严酷的冬天也不会忘记玫瑰的芳香，&lt;/p&gt;
-&lt;p&gt;理想会使人出众。&lt;/p&gt;
-&lt;p&gt;孩子，不要为自己的外形担忧。&lt;/p&gt;
-&lt;p&gt;理想纯洁你的气质，&lt;/p&gt;
-&lt;p&gt;而最美貌的女人也会因为庸俗而令人生厌。&lt;/p&gt;
-&lt;p&gt;通向理想的途径往往不尽如人意，&lt;/p&gt;
-&lt;p&gt;而你亦会为此受尽磨难。&lt;/p&gt;
-&lt;p&gt;但是，孩子，&lt;/p&gt;
-&lt;p&gt;你尽管去争取，&lt;/p&gt;
-&lt;p&gt;理想主义者的结局悲壮而绝不可怜。&lt;/p&gt;
-&lt;p&gt;在貌似坎坷的人生里，&lt;/p&gt;
-&lt;p&gt;你会结识许多智者和君子，&lt;/p&gt;
-&lt;p&gt;你会见到许多旁人无法遇到的风景和奇迹。&lt;/p&gt;
-&lt;p&gt;选择平庸虽然稳妥，但绝无色彩。&lt;/p&gt;
-&lt;p&gt;不要为蝇头小利放弃自己的理想，&lt;/p&gt;
-&lt;p&gt;不要为某种潮流而改换自己的信念。&lt;/p&gt;
-&lt;p&gt;物质世界的外表太过复杂，&lt;/p&gt;
-&lt;p&gt;你要懂得如何去拒绝虚荣的诱惑。&lt;/p&gt;
-&lt;p&gt;理想不是实惠的东西，&lt;/p&gt;
-&lt;p&gt;它往往不能带给你尘世的享受。&lt;/p&gt;
-&lt;p&gt;因此你必须习惯无人欣赏，&lt;/p&gt;
-&lt;p&gt;学会精神享受，学会与他人不同。&lt;/p&gt;
-&lt;p&gt;其次，孩子，&lt;/p&gt;
-&lt;p&gt;我希望你是个踏实的人。&lt;/p&gt;
-&lt;p&gt;人生太过短促，&lt;/p&gt;
-&lt;p&gt;而虚的东西又太多，&lt;/p&gt;
-&lt;p&gt;你很容易眼花缭乱，最终一事无成。&lt;/p&gt;
-&lt;p&gt;如果你是个美貌的女孩，&lt;/p&gt;
-&lt;p&gt;年轻的时候会有许多男性宠你，&lt;/p&gt;
-&lt;p&gt;你得到的东西太过容易，&lt;/p&gt;
-&lt;p&gt;这会使你流于浅薄和虚浮；&lt;/p&gt;
-&lt;p&gt;如果你是个极聪明的男孩，&lt;/p&gt;
-&lt;p&gt;又会以为自己能够成就许多大事而流于轻佻。&lt;/p&gt;
-&lt;p&gt;记住，每个人的能力有限，&lt;/p&gt;
-&lt;p&gt;我们活在世上能做好一件事足矣。&lt;/p&gt;
-&lt;p&gt;写好一本书，做好一个主妇。&lt;/p&gt;
-&lt;p&gt;不要轻视平凡的人，不要投机取巧，&lt;/p&gt;
-&lt;p&gt;不要攻击自己做不到的事。&lt;/p&gt;
-&lt;p&gt;你长大后会知道，做好一件事太难，&lt;/p&gt;
-&lt;p&gt;但绝不要放弃。&lt;/p&gt;
-&lt;p&gt;你要懂得和珍惜感情。&lt;/p&gt;
-&lt;p&gt;不管男人女人，&lt;/p&gt;
-&lt;p&gt;不管墙内墙外，相交一场实在不易。&lt;/p&gt;
-&lt;p&gt;交友的过程会有误会和摩擦，&lt;/p&gt;
-&lt;p&gt;但想一想，&lt;/p&gt;
-&lt;p&gt;诺大世界，有缘结伴而行的能有几人？&lt;/p&gt;
-&lt;p&gt;你要明白朋友终会离去，&lt;/p&gt;
-&lt;p&gt;生活中能有人伴在身边，&lt;/p&gt;
-&lt;p&gt;听你倾谈，倾谈给你听，就应该感激。&lt;/p&gt;
-&lt;p&gt;要爱自己和爱他人，&lt;/p&gt;
-&lt;p&gt;要懂自己和懂他人。&lt;/p&gt;
-&lt;p&gt;你的心要如溪水般柔软，&lt;/p&gt;
-&lt;p&gt;你的眼波要像春天般明媚。&lt;/p&gt;
-&lt;p&gt;你要会流泪，&lt;/p&gt;
-&lt;p&gt;会孤身一人坐在黑暗中听伤感的音乐。&lt;/p&gt;
-&lt;p&gt;你要懂得欣赏悲剧，&lt;/p&gt;
-&lt;p&gt;悲剧能丰富你的心灵。&lt;/p&gt;
-&lt;p&gt;希望你不要媚俗。&lt;/p&gt;
-&lt;p&gt;你是个独立的人，&lt;/p&gt;
-&lt;p&gt;无人能抹杀你的独立性，&lt;/p&gt;
-&lt;p&gt;除非你向世俗妥协。&lt;/p&gt;
-&lt;p&gt;要学会欣赏真，&lt;/p&gt;
-&lt;p&gt;要在重重面具下看到真。&lt;/p&gt;
-&lt;p&gt;世上圆滑标准的人很多，&lt;/p&gt;
-&lt;p&gt;但出类拔萃的人极少。&lt;/p&gt;
-&lt;p&gt;而往往出类拔萃又隐藏在卑琐狂荡之下。&lt;/p&gt;
-&lt;p&gt;在形式上我们无法与既定的世俗争斗，&lt;/p&gt;
-&lt;p&gt;而在内心我们都是自己的国王。&lt;/p&gt;
-&lt;p&gt;如果你的脸上出现谄媚的笑容，&lt;/p&gt;
-&lt;p&gt;我将会羞愧地掩面而去。&lt;/p&gt;
-&lt;p&gt;世俗的许多东西虽耀眼却无价值，&lt;/p&gt;
-&lt;p&gt;不要把自己置于大众的天平上，&lt;/p&gt;
-&lt;p&gt;不然你会因此无所适从，人云亦云。&lt;/p&gt;
-&lt;p&gt;在具体的做人上，&lt;/p&gt;
-&lt;p&gt;我希望你不要打断别人的谈话，&lt;/p&gt;
-&lt;p&gt;不要娇气十足。&lt;/p&gt;
-&lt;p&gt;你每天至少要拿出两小时来读书，&lt;/p&gt;
-&lt;p&gt;要回信写信给你的朋友。&lt;/p&gt;
-&lt;p&gt;不要老是想着别人应该为你做些什么，&lt;/p&gt;
-&lt;p&gt;而要想着怎么去帮助他人。&lt;/p&gt;
-&lt;p&gt;借他人的东西要还，&lt;/p&gt;
-&lt;p&gt;不要随便接受别人的恩惠。&lt;/p&gt;
-&lt;p&gt;要记住，别人的东西，再好也是别人的；&lt;/p&gt;
-&lt;p&gt;自己的东西，再差也是自己的。&lt;/p&gt;
-&lt;p&gt;孩子，还有一件事，&lt;/p&gt;
-&lt;p&gt;虽然做起来很难，但相当重要，&lt;/p&gt;
-&lt;p&gt;这就是要有勇气正视自己的缺点。&lt;/p&gt;
-&lt;p&gt;你会一年年地长大，&lt;/p&gt;
-&lt;p&gt;会渐渐遇到比你强、比你优秀的人，&lt;/p&gt;
-&lt;p&gt;会发现自己身上有许多你所厌恶的缺点。&lt;/p&gt;
-&lt;p&gt;这会使你沮丧和自卑。&lt;/p&gt;
-&lt;p&gt;但你一定要正视它，&lt;/p&gt;
-&lt;p&gt;不要躲避，要一点点地加以改正。&lt;/p&gt;
-&lt;p&gt;战胜自己比征服他人还要艰巨和有意义。&lt;/p&gt;
-&lt;p&gt;不管世界潮流如何变化，&lt;/p&gt;
-&lt;p&gt;但人的优秀品质却是永恒的：&lt;/p&gt;
-&lt;p&gt;正直、勇敢、独立。&lt;/p&gt;
-&lt;p&gt;我希望你是一个优秀的人。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这首散文诗选自张梅老师的《&lt;a href=&#34;https://book.douban.com/subject/26687021/&#34;&gt;木屐声声&lt;/a&gt;》 ，我读了好几遍，想从头当个孩子。&lt;/p&gt;
-- https://www.openheart.icu/boom/%E7%BB%99%E6%88%91%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%AD%A9%E5%AD%90/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>CSharp Special Characters</title>
-        <link>https://www.openheart.icu/cs/csharp-special-characters/</link>
-        <pubDate>Sat, 23 Jan 2021 12:14:19 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/csharp-special-characters/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/csharp-special-characters/ -&lt;h1 id=&#34;heading&#34;&gt;?&lt;/h1&gt;
-&lt;p&gt;There are 4 question marks &lt;code&gt;?&lt;/code&gt; used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.&lt;/p&gt;
-&lt;h2 id=&#34;1-the--operator-since-visual-studio-2003&#34;&gt;1) The ?: Operator (since Visual Studio 2003)&lt;/h2&gt;
-&lt;p&gt;The format : &lt;code&gt;condition ? first_expression : second_expression;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If &lt;code&gt;condition&lt;/code&gt; evaluates to &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;first_expression&lt;/code&gt; shall be returned, otherwise &lt;code&gt;second_expression&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Example&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;Random rnd = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Random();
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; randomNo = rnd.Next();
-
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; status = randomNo % &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt; == &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt; ? &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Generated number is an even number.&amp;#34;&lt;/span&gt; : &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Generated number is an odd number.&amp;#34;&lt;/span&gt;;
-Console.WriteLine(randomNo);
-Console.WriteLine(status);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-the-nullable-types-since-visual-studio-2005&#34;&gt;2) The Nullable Types (since Visual Studio 2005)&lt;/h2&gt;
-&lt;p&gt;Definition on msdn&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Nullable types can represent all the values of an underlying type, and an additional null value.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;How do you use a nullable, let say nullable integer. Simple&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt; x = &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// x can hold any integer values plus the null value
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;x = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; isXNull = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;false&lt;/span&gt;;
-Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-x = &lt;span style=&#34;color:#b452cd&#34;&gt;15&lt;/span&gt;;
-isXNull = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;false&lt;/span&gt;;
-Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// False
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-the-null-conditional-operators-since-visual-studio-2015&#34;&gt;3) The Null-conditional Operators (since Visual Studio 2015)&lt;/h2&gt;
-&lt;p&gt;Example of a pretty common mistake&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main() {
- &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student1 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Quan&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;);
- Console.WriteLine(student1.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// Quan
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null because no student name is given to the fiction method CreateStudent
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt; Console.WriteLine(student2.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// System.NullReferenceException: Object reference not set to an instance of an object.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The method &lt;code&gt;CreateStudent&lt;/code&gt; returns a &lt;code&gt;null&lt;/code&gt; value instead of creating a new student if the student name is not given. Trying to access its &lt;code&gt;Name&lt;/code&gt; property after that will throw a &lt;code&gt;NullReferenceException&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;What you can do (without the Null-conditional Operators)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (student2 != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;){
- Console.WriteLine(student2.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// No more System.NullReferenceException
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What you can do (with the Null-conditional Operators)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(student2?.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// No more System.NullReferenceException
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What happended? Thanks to the question mark after &lt;code&gt;student2&lt;/code&gt;, you are telling C# that &lt;code&gt;student2&lt;/code&gt; may be null. If &lt;code&gt;student2&lt;/code&gt; is indeed &lt;code&gt;null&lt;/code&gt;, C# will not try to access &lt;code&gt;Name&lt;/code&gt; anymore, it returns &lt;code&gt;null&lt;/code&gt; instead and &lt;code&gt;Console.WriteLine&lt;/code&gt;will happily ignore the &lt;code&gt;null&lt;/code&gt; value and only add a new line.&lt;/p&gt;
-&lt;h2 id=&#34;4-the---null-coalescing-operator-operator-since-visual-studio-2005&#34;&gt;4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)&lt;/h2&gt;
-&lt;p&gt;This is a special case of the ?: Operator in section 1&lt;/p&gt;
-&lt;p&gt;The format : &lt;code&gt;asking_value ?? just_in_case;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;if &lt;code&gt;asking_value&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt;, &lt;code&gt;just_in_case&lt;/code&gt; is returned, otherwise &lt;code&gt;asking_value&lt;/code&gt;is returned.&lt;/p&gt;
-&lt;p&gt;Example&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt; x = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// x is nullable so it can be null
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; y = x ?? &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// if x is null, set y to 0, otherwise set y = x;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// which is essentially the same as
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; y = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt; : x;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://quannt.github.io/programming/c%23/2017/01/07/question-marks-c-sharp.html&#34;&gt;Four question marks you should know in C#&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;heading-1&#34;&gt;$&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Starting with C# 8.0, you can use the &lt;code&gt;$&lt;/code&gt; and &lt;code&gt;@&lt;/code&gt; tokens in any order: both &lt;code&gt;$@&amp;quot;...&amp;quot;&lt;/code&gt; and &lt;code&gt;@$&amp;quot;...&amp;quot;&lt;/code&gt; are valid interpolated verbatim strings. In earlier C# versions, the &lt;code&gt;$&lt;/code&gt; token must appear before the &lt;code&gt;@&lt;/code&gt; token.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-1&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated&#34;&gt;$ - string interpolation (C# reference)&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;heading-2&#34;&gt;@&lt;/h1&gt;
-&lt;p&gt;The &lt;code&gt;@&lt;/code&gt; special character serves as a verbatim identifier. It can be used in the following ways:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;To enable C# keywords to be used as identifiers. The &lt;code&gt;@&lt;/code&gt; character prefixes a code element that the compiler is to interpret as an identifier rather than a C# keyword. The following example uses the &lt;code&gt;@&lt;/code&gt; character to define an identifier named &lt;code&gt;for&lt;/code&gt; that it uses in a &lt;code&gt;for&lt;/code&gt;loop.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;[] @for = { &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;John&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;James&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Joan&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Jamie&amp;#34;&lt;/span&gt; };
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; ctr = &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; ctr &amp;lt; @for.Length; ctr++)
-{
-   Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;Here is your gift, {@for[ctr]}!&amp;#34;&lt;/span&gt;);
-}
-&lt;span style=&#34;color:#228b22&#34;&gt;// The example displays the following output:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, John!
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, James!
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, Joan!
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, Jamie!
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;To indicate that a string literal is to be interpreted verbatim. The &lt;code&gt;@&lt;/code&gt; character in this instance defines a &lt;em&gt;verbatim string literal&lt;/em&gt;. Simple escape sequences (such as &lt;code&gt;&amp;quot;\\&amp;quot;&lt;/code&gt; for a backslash), hexadecimal escape sequences (such as &lt;code&gt;&amp;quot;\x0041&amp;quot;&lt;/code&gt; for an uppercase A), and Unicode escape sequences (such as &lt;code&gt;&amp;quot;\u0041&amp;quot;&lt;/code&gt; for an uppercase A) are interpreted literally. Only a quote escape sequence (&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;) is not interpreted literally; it produces one double quotation mark. Additionally, in case of a verbatim &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated&#34;&gt;interpolated string&lt;/a&gt; brace escape sequences (&lt;code&gt;{{&lt;/code&gt; and &lt;code&gt;}}&lt;/code&gt;) are not interpreted literally; they produce single brace characters. The following example defines two identical file paths, one by using a regular string literal and the other by using a verbatim string literal. This is one of the more common uses of verbatim string literals.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; filename1 = &lt;span style=&#34;color:#cd5555&#34;&gt;@&amp;#34;c:\documents\files\u0066.txt&amp;#34;&lt;/span&gt;;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; filename2 = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;c:\\documents\\files\\u0066.txt&amp;#34;&lt;/span&gt;;
-   
-Console.WriteLine(filename1);
-Console.WriteLine(filename2);
-&lt;span style=&#34;color:#228b22&#34;&gt;// The example displays the following output:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     c:\documents\files\u0066.txt
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     c:\documents\files\u0066.txt
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following example illustrates the effect of defining a regular string literal and a verbatim string literal that contain identical character sequences.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; s1 = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;He said, \&amp;#34;This is the last \u0063hance\x0021\&amp;#34;&amp;#34;&lt;/span&gt;;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; s2 = &lt;span style=&#34;color:#cd5555&#34;&gt;@&amp;#34;He said, &amp;#34;&amp;#34;This is the last \u0063hance\x0021&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;;
-   
-Console.WriteLine(s1);
-Console.WriteLine(s2);
-&lt;span style=&#34;color:#228b22&#34;&gt;// The example displays the following output:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     He said, &amp;#34;This is the last chance!&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     He said, &amp;#34;This is the last \u0063hance\x0021&amp;#34;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;To enable the compiler to distinguish between attributes in cases of a naming conflict. An attribute is a class that derives from &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.attribute&#34;&gt;Attribute&lt;/a&gt;. Its type name typically includes the suffix &lt;strong&gt;Attribute&lt;/strong&gt;, although the compiler does not enforce this convention. The attribute can then be referenced in code either by its full type name (for example, &lt;code&gt;[InfoAttribute]&lt;/code&gt; or its shortened name (for example, &lt;code&gt;[Info]&lt;/code&gt;). However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the &lt;strong&gt;Attribute&lt;/strong&gt; suffix but the other does not. For example, the following code fails to compile because the compiler cannot determine whether the &lt;code&gt;Info&lt;/code&gt; or &lt;code&gt;InfoAttribute&lt;/code&gt; attribute is applied to the &lt;code&gt;Example&lt;/code&gt; class. See &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1614&#34;&gt;CS1614&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System&lt;/span&gt;;
-&lt;span style=&#34;color:#658b00&#34;&gt;   
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[AttributeUsage(AttributeTargets.Class)]&lt;/span&gt;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Info&lt;/span&gt; : Attribute
-{
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; information;
-   
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Info(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; info)
-   {
-      information = info;
-   }
-}
-&lt;span style=&#34;color:#658b00&#34;&gt;   
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[AttributeUsage(AttributeTargets.Method)]&lt;/span&gt;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;InfoAttribute&lt;/span&gt; : Attribute
-{
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; information;
-   
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; InfoAttribute(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; info)
-   {
-      information = info;
-   }
-}
-&lt;span style=&#34;color:#658b00&#34;&gt;   
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[Info(&amp;#34;A simple executable.&amp;#34;)]&lt;/span&gt; 
-&lt;span style=&#34;color:#228b22&#34;&gt;// Generates compiler error CS1614. Ambiguous Info and InfoAttribute.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Prepend &amp;#39;@&amp;#39; to select &amp;#39;Info&amp;#39;. Specify the full name &amp;#39;InfoAttribute&amp;#39; to select it.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Example&lt;/span&gt;
-{
-&lt;span style=&#34;color:#658b00&#34;&gt;   [InfoAttribute(&amp;#34;The entry point.&amp;#34;)]&lt;/span&gt;
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main()
-   {
-   }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;heading-3&#34;&gt;!&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Available in C# 8.0 and later, the unary postfix &lt;code&gt;!&lt;/code&gt; operator is the null-forgiving, or null-suppression, operator. In an enabled &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-annotation-context&#34;&gt;nullable annotation context&lt;/a&gt;, you use the null-forgiving operator to declare that expression &lt;code&gt;x&lt;/code&gt; of a reference type isn&amp;rsquo;t &lt;code&gt;null&lt;/code&gt;: &lt;code&gt;x!&lt;/code&gt;. The unary prefix &lt;code&gt;!&lt;/code&gt; operator is the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#logical-negation-operator-&#34;&gt;logical negation operator&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;It tells the compiler &amp;ldquo;this isn&amp;rsquo;t null, trust me&amp;rdquo;, so it does not issue a warning for a possible null reference.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-2&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-forgiving&#34;&gt;! (null-forgiving) operator (C# reference)&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;_&#34;&gt;_&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Starting with C# 7.0, C# supports discards, which are placeholder variables that are intentionally unused in application code. Discards are equivalent to unassigned variables; they don&amp;rsquo;t have a value. A discard communicates intent to the compiler and others that read your code: You intended to ignore the result of an expression. You may want to ignore the result of an expression, one or more members of a tuple expression, an &lt;code&gt;out&lt;/code&gt; parameter to a method, or the target of a pattern matching expression.&lt;/p&gt;
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Beginning with C# 9.0, you can use discards to specify unused input parameters of a lambda expression. For more information, see the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions#input-parameters-of-a-lambda-expression&#34;&gt;Input parameters of a lambda expression&lt;/a&gt; section of the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions&#34;&gt;Lambda expressions&lt;/a&gt; article.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-3&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/discards&#34;&gt;Discards - C# Fundamentals&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-- https://www.openheart.icu/cs/csharp-special-characters/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Win Operation</title>
-        <link>https://www.openheart.icu/cs/windows/</link>
-        <pubDate>Tue, 12 Jan 2021 11:47:28 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/windows/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/windows/ -&lt;h1 id=&#34;windows-terminal&#34;&gt;Windows Terminal&lt;/h1&gt;
-&lt;h2 id=&#34;oh-my-posh&#34;&gt;oh-my-posh&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; oh-my-posh -Scope CurrentUser -AllowPrerelease
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;psreadline&#34;&gt;PSReadLine&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/PowerShell/PSReadLine&#34;&gt;PowerShell/PSReadLine&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; PSReadLine -AllowPrerelease -Force
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;notepad $profile&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Import-Module&lt;/span&gt; PSReadLine
-&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineOption&lt;/span&gt; -PredictionSource &lt;span style=&#34;color:#658b00&#34;&gt;History
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 下面是三条是文档里推荐的，根据自己的习惯决定是否添加&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key UpArrow -Function HistorySearchBackward
-&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key DownArrow -Function HistorySearchForward
-&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key Tab -Function Complete
-&lt;span style=&#34;color:#228b22&#34;&gt;# Hot-Key&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Ctrl+g&amp;#34;&lt;/span&gt; -Function MenuComplete
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;posh-git&#34;&gt;posh-git&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/dahlbyk/posh-git&#34;&gt;dahlbyk/posh-git&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; posh-git -Scope CurrentUser -AllowPrerelease -Force
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Import-Module&lt;/span&gt; posh-git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;scoop&#34;&gt;Scoop&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;iwr -useb get.scoop.sh | iex
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;command&#34;&gt;Command&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;net share &lt;span style=&#34;color:#228b22&#34;&gt;# view your pc&amp;#39;s share folder&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/windows/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Effective CSharp</title>
-        <link>https://www.openheart.icu/cs/effective-csharp6.0/</link>
-        <pubDate>Sat, 09 Jan 2021 16:22:42 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/effective-csharp6.0/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/effective-csharp6.0/ -&lt;h1 id=&#34;effective-c&#34;&gt;Effective C#&lt;/h1&gt;
-&lt;p&gt;Effective C# does not take you on a historical journey through the changes in the language. Rather, I provide advice on how to use the current C# language.&lt;/p&gt;
-&lt;h2 id=&#34;c--language-idioms&#34;&gt;C # Language Idioms&lt;/h2&gt;
-&lt;p&gt;You change tools or languages because you can be more productive.&lt;/p&gt;
-&lt;h3 id=&#34;item-1-prefer-implicitly-typed-local-variableshttpsdocsmicrosoftcomen-usdotnetcsharpprogramming-guideclasses-and-structsimplicitly-typed-local-variables&#34;&gt;Item 1: &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables&#34;&gt;Prefer Implicitly Typed Local Variables&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;var&lt;/code&gt; keyword may be used in the following contexts:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;On local variables (variables declared at method scope).&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// i is compiled as an int
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; i = &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;;
-  
-&lt;span style=&#34;color:#228b22&#34;&gt;// s is compiled as a string
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; s = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;;
-  
-&lt;span style=&#34;color:#228b22&#34;&gt;// a is compiled as int[]
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; a = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[] { &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt; };
-  
-&lt;span style=&#34;color:#228b22&#34;&gt;// expr is compiled as IEnumerable&amp;lt;Customer&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// or perhaps IQueryable&amp;lt;Customer&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; expr =
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; c &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; customers
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; c.City == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;London&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; c;
-  
-&lt;span style=&#34;color:#228b22&#34;&gt;// anon is compiled as an anonymous type
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; anon = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; { Name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Terry&amp;#34;&lt;/span&gt;, Age = &lt;span style=&#34;color:#b452cd&#34;&gt;34&lt;/span&gt; };
-  
-&lt;span style=&#34;color:#228b22&#34;&gt;// list is compiled as List&amp;lt;int&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; list = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; List&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt;();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for&#34;&gt;for&lt;/a&gt; initialization statement.&lt;/p&gt;
-&lt;p&gt;C#Copy&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; x = &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;; x &amp;lt; &lt;span style=&#34;color:#b452cd&#34;&gt;10&lt;/span&gt;; x++)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in&#34;&gt;foreach&lt;/a&gt; initialization statement.&lt;/p&gt;
-&lt;p&gt;C#Copy&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; item &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; list) {...}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement&#34;&gt;using&lt;/a&gt; statement.&lt;/p&gt;
-&lt;p&gt;C#Copy&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; file = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; StreamReader(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;C:\\myfile.txt&amp;#34;&lt;/span&gt;)) {...}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression&#34;&gt;use implicitly typed local variables and arrays in a query expression.&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; QueryNames(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;char&lt;/span&gt; firstLetter)
-{
-    &lt;span style=&#34;color:#228b22&#34;&gt;// Create the query. Use of var is required because
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// the query produces a sequence of anonymous types:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.IEnumerable&amp;lt;????&amp;gt;.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; studentQuery =
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; student &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; students
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; student.FirstName[&lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;] == firstLetter
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; { student.FirstName, student.LastName };
-  
-    &lt;span style=&#34;color:#228b22&#34;&gt;// Execute the query and display the results.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; anonType &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; studentQuery)
-    {
-        Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;First = {0}, Last = {1}&amp;#34;&lt;/span&gt;, anonType.FirstName, anonType.LastName);
-    }
-      
-    &lt;span style=&#34;color:#228b22&#34;&gt;// Variable queryId could be declared by using
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.IEnumerable&amp;lt;string&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// instead of var.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; queryId =
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; student &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; students
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; student.Id &amp;gt; &lt;span style=&#34;color:#b452cd&#34;&gt;111&lt;/span&gt;
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; student.LastName;
-  
-    &lt;span style=&#34;color:#228b22&#34;&gt;// Variable str could be declared by using var instead of string.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; str &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; queryId)
-    {
-        Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Last name: {0}&amp;#34;&lt;/span&gt;, str);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Using var also improves a developer’s comprehension of the code. With var, you are not telling the compiler which type you’re creating; the compiler declares the type for you. The compiler examines the compile-time type and infers the type of the local variable based on those declarations.&lt;/p&gt;
-&lt;p&gt;At other times, however, overusing var only decreases the readability of your code.&lt;/p&gt;
-&lt;p&gt;I recommend explicitly declaring all numeric types (int, float, double, and others) rather than using a var declaration.&lt;/p&gt;
-&lt;h3 id=&#34;item-2-prefer-readonly-to-const&#34;&gt;Item 2: Prefer &lt;code&gt;readonly&lt;/code&gt; to &lt;code&gt;const&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly&#34;&gt;&lt;code&gt;readonly&lt;/code&gt;: runtime constants.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const&#34;&gt;&lt;code&gt;const&lt;/code&gt;: compile-time constants, slightly faster but far less flexible&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Note&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly&#34;&gt;readonly&lt;/a&gt; keyword differs from the &lt;code&gt;const&lt;/code&gt; keyword. A &lt;code&gt;const&lt;/code&gt; field can only be initialized at the declaration of the field. A &lt;code&gt;readonly&lt;/code&gt; field can be initialized either at the declaration or in a constructor. Therefore, &lt;code&gt;readonly&lt;/code&gt; fields can have different values depending on the constructor used. Also, although a &lt;code&gt;const&lt;/code&gt; field is a compile-time constant, the &lt;code&gt;readonly&lt;/code&gt; field can be used for run-time constants, as in this line:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;uint&lt;/span&gt; l1 = (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;uint&lt;/span&gt;)DateTime.Now.Ticks;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;const&lt;/code&gt; must be used when the value must be available at compile time: attribute parameters, &lt;code&gt;switch case&lt;/code&gt; labels, and &lt;code&gt;enum&lt;/code&gt; definitions, and those rare times when you mean to define a value that does not change from release to release. For everything else, prefer the increased flexibility of &lt;code&gt;readonly&lt;/code&gt; constants.&lt;/p&gt;
-&lt;h3 id=&#34;item-3-prefer-the-is-or-as-operators-to-casts&#34;&gt;Item 3: Prefer the &lt;code&gt;is&lt;/code&gt; or &lt;code&gt;as&lt;/code&gt; Operators to Casts&lt;/h3&gt;
-&lt;p&gt;You can use the following operators and expressions to perform type checking or type conversion:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#is-operator&#34;&gt;is operator&lt;/a&gt;: to check if the runtime type of an expression is compatible with a given type&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator&#34;&gt;as operator&lt;/a&gt;: to explicitly convert an expression to a given type if its runtime type is compatible with that type&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression&#34;&gt;cast expression&lt;/a&gt;: to perform an explicit conversion&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#typeof-operator&#34;&gt;typeof operator&lt;/a&gt;: to obtain the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.type&#34;&gt;System.Type&lt;/a&gt; instance for a type&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;ishttpsdocsmicrosoftcomen-usdotnetcsharplanguage-referencekeywordsis&#34;&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/is&#34;&gt;&lt;code&gt;is&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;The following example demonstrates that the &lt;code&gt;is&lt;/code&gt; operator returns &lt;code&gt;true&lt;/code&gt; if the runtime type of an expression result derives from a given type, that is, there exists a reference conversion between types:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Base&lt;/span&gt; { }
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Derived&lt;/span&gt; : Base { }
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;IsOperatorExample&lt;/span&gt;
-{
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main()
-    {
-        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; b = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Base();
-        Console.WriteLine(b &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Base);  
-      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        Console.WriteLine(b &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Derived);  
-      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: False
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; d = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Derived();
-        Console.WriteLine(d &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Base);  
-      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        Console.WriteLine(d &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Derived); 
-      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The next example shows that the &lt;code&gt;is&lt;/code&gt; operator takes into account boxing and unboxing conversions but doesn&amp;rsquo;t consider &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions&#34;&gt;numeric conversions&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; i = &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;;
-Console.WriteLine(i &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; System.IFormattable);  
-&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; iBoxed = i;
-Console.WriteLine(iBoxed &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;);  
-&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(iBoxed &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;long&lt;/span&gt;);  
-&lt;span style=&#34;color:#228b22&#34;&gt;// output: False
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following example demonstrates the usage of the &lt;code&gt;is&lt;/code&gt; operator with the type pattern(Beginning with &lt;strong&gt;C# 7.0&lt;/strong&gt;, the &lt;code&gt;is&lt;/code&gt; operator also tests an expression result against a pattern. Or Called: Type testing with &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching&#34;&gt;pattern matching&lt;/a&gt;):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; i = &lt;span style=&#34;color:#b452cd&#34;&gt;23&lt;/span&gt;;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; iBoxed = i;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt; jNullable = &lt;span style=&#34;color:#b452cd&#34;&gt;7&lt;/span&gt;;
-&lt;span style=&#34;color:#228b22&#34;&gt;//e.g. If the result of iBoxed is non-null and can be converted to int by a reference, boxing(or unboxing conversion), the iBoxed is int a expression returns true and the converted value of the result of iBoxed is assigned to variable a.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (iBoxed &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; a &amp;amp;&amp;amp; jNullable &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; b)
-{
-    Console.WriteLine(a + b);
-  	&lt;span style=&#34;color:#228b22&#34;&gt;// output 30
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;as&#34;&gt;&lt;code&gt;as&lt;/code&gt;&lt;/h4&gt;
-&lt;p&gt;Notice that the cast version must check &lt;code&gt;null&lt;/code&gt; in addition to catching exceptions. &lt;code&gt;null&lt;/code&gt; can be converted to any reference type using a cast, but the as operator returns &lt;code&gt;null&lt;/code&gt; when used on a &lt;code&gt;null&lt;/code&gt; reference. The &lt;code&gt;as&lt;/code&gt; operator explicitly converts the result of an expression to a given reference or nullable value type. If the conversion is not possible, the &lt;code&gt;as&lt;/code&gt; operator returns &lt;code&gt;null&lt;/code&gt;. Unlike a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression&#34;&gt;cast expression&lt;/a&gt;, the &lt;code&gt;as&lt;/code&gt; operator never throws an exception.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;IEnumerable&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; numbers = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[] { &lt;span style=&#34;color:#b452cd&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;20&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;30&lt;/span&gt; };
-IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; indexable = numbers &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;as&lt;/span&gt; IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt;;
-&lt;span style=&#34;color:#228b22&#34;&gt;// numbers is IList&amp;lt;int&amp;gt; ? (IList&amp;lt;int&amp;gt;)(numbers) : (IList&amp;lt;int&amp;gt;)null
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (indexable != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-{
-    Console.WriteLine(indexable[&lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;] + indexable[indexable.Count - &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;]);  
-  	&lt;span style=&#34;color:#228b22&#34;&gt;// output: 40
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following program fragment won’t compile:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; o = Factory.GetValue(); 
-&lt;span style=&#34;color:#228b22&#34;&gt;// int i = o as int; 
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Does not compile.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; i = o &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt;;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (i != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) 
-  Console.WriteLine(i.Value);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;cast-expression&#34;&gt;Cast expression&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;double&lt;/span&gt; x = &lt;span style=&#34;color:#b452cd&#34;&gt;1234.7&lt;/span&gt;;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; a = (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;)x;
-Console.WriteLine(a);   
-&lt;span style=&#34;color:#228b22&#34;&gt;// output: 1234
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-IEnumerable&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; numbers = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;[] { &lt;span style=&#34;color:#b452cd&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;20&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;30&lt;/span&gt; };
-IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt; list = (IList&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt;)numbers;
-Console.WriteLine(list.Count);  
-&lt;span style=&#34;color:#228b22&#34;&gt;// output: 3
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(list[&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;]);  
-&lt;span style=&#34;color:#228b22&#34;&gt;// output: 20
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;typeof-operator&#34;&gt;Typeof operator&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; PrintType&amp;lt;T&amp;gt;() =&amp;gt; Console.WriteLine(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(T));
-
-Console.WriteLine(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(List&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;&amp;gt;));
-PrintType&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;&amp;gt;();
-PrintType&amp;lt;System.Int32&amp;gt;();
-PrintType&amp;lt;Dictionary&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;, &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;char&lt;/span&gt;&amp;gt;&amp;gt;();
-&lt;span style=&#34;color:#228b22&#34;&gt;// Output:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.List`1[System.String]
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Int32
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Int32
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.Dictionary`2[System.Int32,System.Char]
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-Console.WriteLine(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(Dictionary&amp;lt;,&amp;gt;));
-&lt;span style=&#34;color:#228b22&#34;&gt;// Output:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// System.Collections.Generic.Dictionary`2[TKey,TValue]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Type testing with the &lt;code&gt;typeof&lt;/code&gt; operator:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Animal&lt;/span&gt; { }
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Giraffe&lt;/span&gt; : Animal { }
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;TypeOfExample&lt;/span&gt;
-{
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main()
-    {
-        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt; b = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Giraffe();
-        Console.WriteLine(b &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Animal);  
-      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        Console.WriteLine(b.GetType() == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(Animal));  
-      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: False
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-        Console.WriteLine(b &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; Giraffe);  
-      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        Console.WriteLine(b.GetType() == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(Giraffe));  
-      	&lt;span style=&#34;color:#228b22&#34;&gt;// output: True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;item-4-replace-stringformat-with-interpolated-strings&#34;&gt;Item 4: Replace &lt;code&gt;string.Format()&lt;/code&gt; with Interpolated Strings&lt;/h3&gt;
-&lt;p&gt;Using &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated&#34;&gt;string interpolation&lt;/a&gt; greatly improves readability. It’s easy to read the replacement expressions in place in the format strings. The result is easy verification. The expressions are inline in the format string instead of in a separate array, you can’t have the wrong number of arguments in the replacement array. You can’t easily put the wrong expression in the wrong spot in the string.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Mark&amp;#34;&lt;/span&gt;;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; date = DateTime.Now;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;// Composite formatting:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Fred&amp;#34;&lt;/span&gt;;
-String.Format(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Name = {0}, hours = {1:hh}&amp;#34;&lt;/span&gt;, name, DateTime.Now);
-Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello, {0}! Today is {1}, it&amp;#39;s {2:HH:mm} now.&amp;#34;&lt;/span&gt;, name, date.DayOfWeek, date);
-&lt;span style=&#34;color:#228b22&#34;&gt;// String interpolation:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;Hello, {name}! Today is {date.DayOfWeek}, it&amp;#39;s {date:HH:mm} now.&amp;#34;&lt;/span&gt;);
-&lt;span style=&#34;color:#228b22&#34;&gt;// Both calls produce the same output that is similar to:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Hello, Mark! Today is Wednesday, it&amp;#39;s 19:40 now.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value of pi is {Math.PI}&amp;#34;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Note&lt;/p&gt;
-&lt;p&gt;Starting with C# 8.0, you can use the &lt;code&gt;$&lt;/code&gt; and &lt;code&gt;@&lt;/code&gt; tokens in any order: both &lt;code&gt;$@&amp;quot;...&amp;quot;&lt;/code&gt; and &lt;code&gt;@$&amp;quot;...&amp;quot;&lt;/code&gt; are valid interpolated verbatim strings. In earlier C# versions, the &lt;code&gt;$&lt;/code&gt; token must appear before the &lt;code&gt;@&lt;/code&gt; token.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This feature is even being incorporated into the Razor View engine for ASP.NET MVC. This can make it much easier to generate HTML output in a Web application:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;asp-controller&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Manage&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;asp-action&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Index&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;title&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Manage&amp;#34;&lt;/span&gt;&amp;gt;Hello@User.GetUserName()!&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;a&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And Other :&lt;/p&gt;
-&lt;p&gt;ASPX/JSP&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://aui.github.io/art-template/&#34;&gt;art-template&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://baidufe.github.io/BaiduTemplate/&#34;&gt;BaiduTemplate&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;item-5-prefer-formattablestring-for-culture-specific-strings&#34;&gt;Item 5: Prefer &lt;code&gt;FormattableString&lt;/code&gt; for Culture-Specific Strings&lt;/h3&gt;
-&lt;h3 id=&#34;item-6-avoid-string-ly-typed-apis&#34;&gt;Item 6: Avoid String-ly Typed APIs&lt;/h3&gt;
-&lt;h3 id=&#34;item-7-express-callbacks-with-delegates&#34;&gt;Item 7: Express Callbacks with Delegates&lt;/h3&gt;
-&lt;h3 id=&#34;item-8-use-the-null-conditional-operator-for-event-invocations&#34;&gt;Item 8: Use the Null Conditional Operator for Event Invocations&lt;/h3&gt;
-&lt;h3 id=&#34;item-10-use-the-new-modifier-only-to-react-to-base-class-updates&#34;&gt;Item 10: Use the new Modifier Only to React to Base Class Updates&lt;/h3&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;working-with-linq&#34;&gt;Working with LINQ&lt;/h2&gt;
-&lt;h3 id=&#34;item-42-distinguish-between-ienumerable-and-iqueryable-data-sourceshttpsdocsmicrosoftcomen-usdotnetframeworkdataadoneteflanguage-referencequery-executionredirectedfrommsdnanchor_0&#34;&gt;Item 42: &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/query-execution?redirectedfrom=MSDN#Anchor_0&#34;&gt;Distinguish between IEnumerable and IQueryable Data Sources&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/2876616/returning-ienumerablet-vs-iqueryablet&#34;&gt;Returning IEnumerable vs. IQueryable&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The difference is that &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb351562.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt; is the interface that allows LINQ-to-SQL (LINQ.-to-anything really) to work. So if you further refine your query on an &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb351562.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt;, that query will be executed in the database, if possible.&lt;/p&gt;
-&lt;p&gt;For the &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/9eekhta0.aspx&#34;&gt;&lt;code&gt;IEnumerable&lt;/code&gt;&lt;/a&gt; case, it will be LINQ-to-object, meaning that all objects matching the original query will have to be loaded into memory from the database.&lt;/p&gt;
-&lt;p&gt;In code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;IQueryable&amp;lt;Customer&amp;gt; custs = ...;
-&lt;span style=&#34;color:#228b22&#34;&gt;// Later on...
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; goldCustomers = custs.Where(c =&amp;gt; c.IsGold);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;That code will execute SQL to only select gold customers. The following code, on the other hand, will execute the original query in the database, then filtering out the non-gold customers in the memory:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;IEnumerable&amp;lt;Customer&amp;gt; custs = ...;
-&lt;span style=&#34;color:#228b22&#34;&gt;// Later on...
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; goldCustomers = custs.Where(c =&amp;gt; c.IsGold);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is quite an important difference, and working on &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb351562.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt; can in many cases save you from returning too many rows from the database. Another prime example is doing paging: If you use &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb300906.aspx&#34;&gt;&lt;code&gt;Take&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/bb357513.aspx&#34;&gt;&lt;code&gt;Skip&lt;/code&gt;&lt;/a&gt; on &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/system.linq.iqueryable.aspx&#34;&gt;&lt;code&gt;IQueryable&lt;/code&gt;&lt;/a&gt;, you will only get the number of rows requested; doing that on an &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/9eekhta0.aspx&#34;&gt;&lt;code&gt;IEnumerable&lt;/code&gt;&lt;/a&gt; will cause all of your rows to be loaded in memory.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Expression tree: a data structure that holds all the logic that makes up the actions in the query.&lt;/p&gt;
-- https://www.openheart.icu/cs/effective-csharp6.0/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Dot Net Runtime</title>
-        <link>https://www.openheart.icu/cs/dot-net-runtime/</link>
-        <pubDate>Sat, 26 Dec 2020 11:25:57 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/dot-net-runtime/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/dot-net-runtime/ -&lt;hr&gt;
-&lt;p&gt;Source Code Learning for 「&lt;a href=&#34;https://github.com/dotnet/runtime&#34;&gt;&lt;em&gt;Dot Net Runtime&lt;/em&gt;&lt;/a&gt;」.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;microsoftextensionsdependencyinjection&#34;&gt;Microsoft.Extensions.DependencyInjection&lt;/h1&gt;
-&lt;p&gt;Branch: &lt;a href=&#34;release/5.0&#34;&gt;release/5.0&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;之前使用的都是.NET MVC DI，相对封装较为严重。公司的设计为Composition Root实现MVC中的ConfigureDependencies然后创建BuildServiceProvider。在对方法进行调用前通过IServiceProvider.GetService注入所需类构造函数中的依赖。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Dependency injection addresses these problems through:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The use of an interface or base class to abstract the dependency implementation.&lt;/li&gt;
-&lt;li&gt;Registration of the dependency in a service container. .NET provides a built-in service container, &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iserviceprovider&#34;&gt;IServiceProvider&lt;/a&gt;. Services are typically registered at the app&amp;rsquo;s start-up, and appended to an &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection&#34;&gt;IServiceCollection&lt;/a&gt;. Once all services are added, you use &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.servicecollectioncontainerbuilderextensions.buildserviceprovider&#34;&gt;BuildServiceProvider&lt;/a&gt; to create the service container.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Injection&lt;/em&gt; of the service into the constructor of the class where it&amp;rsquo;s used. The framework takes on the responsibility of creating an instance of the dependency and disposing of it when it&amp;rsquo;s no longer needed.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Microsoft.Extensions.DependencyInjection 命名空间下还有Microsoft.Extensions.DependencyInjection.Abstractions，是Service相关的interface与Extensions。&lt;/p&gt;
-&lt;h2 id=&#34;servicedescriptor&#34;&gt;ServiceDescriptor&lt;/h2&gt;
-&lt;p&gt;ServiceDescriptor 的包含的属性如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; ServiceLifetime Lifetime { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Type ServiceType { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-&lt;span style=&#34;color:#658b00&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)]&lt;/span&gt;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Type? ImplementationType { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object?&lt;/span&gt; ImplementationInstance { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Func&amp;lt;IServiceProvider, &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt;&amp;gt;? ImplementationFactory { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一般，在register services的时候，使用ServiceType和ImplementationType来构造一个ServiceDescriptor ，&lt;/p&gt;
-&lt;h2 id=&#34;servicecollection&#34;&gt;ServiceCollection&lt;/h2&gt;
-&lt;p&gt;IServiceCollection是ServiceDescriptor的Ilist接口。&lt;/p&gt;
-&lt;p&gt;很显然，ServiceDescriptor就是register的每一个service，ServiceCollection必然是对Ilist接口的常规方法实现。register services的方法（AddTransient/AddScoped/AddSingletonAdd）都由ServiceCollectionServiceExtensions实现，而其他部分方法（Add/TryAdd/TryAddTransient/TryAddScoped/TryAddSingleton/TryAddEnumerable/Replace/RemoveAll）由ServiceCollectionDescriptorExtensions（为ServiceCollection的Extension）实现。&lt;/p&gt;
-&lt;h2 id=&#34;buildserviceprovider&#34;&gt;BuildServiceProvider&lt;/h2&gt;
-&lt;p&gt;BuildServiceProvider方法也是IServiceCollection的扩展，其有三个重载，最终是要创建ServiceProvider的实例。&lt;/p&gt;
-&lt;p&gt;BuildServiceProvider的三个重载分别参数为空、一个布尔类型的validateScopes、一个ServiceProviderOptions；其实如果参数为空，实际是创建一个Default的ServiceProviderOptions（ValidateScopes与ValidateOnBuild均为false）；传递布尔类型的validateScopes后，会根据此值创建对应的ServiceProviderOptions（ValidateOnBuild为false）。&lt;/p&gt;
-&lt;p&gt;BuildServiceProvider最终是构造一个ServiceProvider，出去上面提到的ServiceProviderOptions与ServiceCollection本身之外，ServiceProvider的构造函数还需要IServiceProviderEngine。&lt;/p&gt;
-&lt;h2 id=&#34;serviceprovider&#34;&gt;ServiceProvider&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;namespace&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;Microsoft.Extensions.DependencyInjection&lt;/span&gt;
-{
-    &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;summary&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;/// The default IServiceProvider.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;/// &amp;lt;/summary&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;sealed&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;ServiceProvider&lt;/span&gt; : IServiceProvider, IDisposable, IServiceProviderEngineCallback, IAsyncDisposable
-    {
-    	&lt;span style=&#34;color:#228b22&#34;&gt;//...
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ServiceProvider实现了IServiceProvider（System.ComponentModel）、IDisposable、IServiceProviderEngineCallback（Microsoft.Extensions.DependencyInjection.ServiceLookup）和IAsyncDisposable。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;microsoftextensionsdependencyinjectionservicelookup&#34;&gt;Microsoft.Extensions.DependencyInjection.ServiceLookup&lt;/h1&gt;
-&lt;h2 id=&#34;iserviceproviderengine&#34;&gt;IServiceProviderEngine&lt;/h2&gt;
-&lt;p&gt;DynamicServiceProviderEngine/RuntimeServiceProviderEngine/ExpressionsServiceProviderEngine/ILEmitServiceProviderEngine都去继承了ServiceProviderEngine（抽象类），并重写了RealizeService方法。&lt;/p&gt;
-&lt;h2 id=&#34;callsitevalidator&#34;&gt;CallSiteValidator&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;systemdiagnostics&#34;&gt;System.Diagnostics&lt;/h1&gt;
-&lt;h2 id=&#34;debuggerdisplayattribute&#34;&gt;DebuggerDisplayAttribute&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;systemdiagnosticscodeanalysis&#34;&gt;System.Diagnostics.CodeAnalysis&lt;/h1&gt;
-&lt;h2 id=&#34;dynamicallyaccessedmembersattribute&#34;&gt;DynamicallyAccessedMembersAttribute&lt;/h2&gt;
-&lt;h2 id=&#34;dynamicallyaccessedmembertypes&#34;&gt;DynamicallyAccessedMemberTypes&lt;/h2&gt;
-- https://www.openheart.icu/cs/dot-net-runtime/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>I am a freshman</title>
-        <link>https://www.openheart.icu/speech/i-am-a-freshman/</link>
-        <pubDate>Tue, 01 Dec 2020 16:39:46 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/speech/i-am-a-freshman/</guid>
-        <description>42th openheart https://www.openheart.icu/speech/i-am-a-freshman/ -&lt;h1 id=&#34;step-out-of-my-comfort-zone&#34;&gt;Step out of my comfort zone&lt;/h1&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;sentence&#34;&gt;Sentence&lt;/h2&gt;
-&lt;p&gt;We have a new team member onboard from 1st Dec 2020.&lt;/p&gt;
-&lt;p&gt;Please join me in welcoming Kris to Infor and give them your great support in every way possible!&lt;/p&gt;
-&lt;p&gt;Welcome to the team!&lt;/p&gt;
-&lt;p&gt;Thank you. It is my honor to be able to join our team.&lt;/p&gt;
-&lt;p&gt;Don&amp;rsquo;t spin your wheels! 这里的spin your wheels&lt;a href=&#34;https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD/spin-your-wheels&#34;&gt;(cambridge.org)&lt;/a&gt; 可以理解为&amp;quot;to waste time doing things that achieve nothing&amp;quot;&lt;/p&gt;
-&lt;p&gt;You&amp;rsquo;re in good company. 你是一个好合作伙伴。此处的company为朋友、同伴&lt;/p&gt;
-&lt;p&gt;I really enjoy your company. 我很喜欢你的陪伴。此处的company为陪伴&lt;/p&gt;
-&lt;p&gt;She&amp;rsquo;s not coming – she&amp;rsquo;s got company. 她来不了了，她家里有客人。此处的company为客人&lt;/p&gt;
-&lt;p&gt;Please be aware that the security team run &lt;em&gt;phishing simulations(网络钓鱼模拟)&lt;/em&gt; that are designed to help you practice recognizing the common &lt;em&gt;tactics scammers(欺诈者)&lt;/em&gt; use to get you to reveal sensitive information or install &lt;em&gt;malware(恶意软件)&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;And give our warm welcome to Mr. Kris Nie 聂志勇 joins Infor China effective 1st December 2020, as Software Engineer, reporting to Jeking Pan, Manager, Software Development.&lt;/p&gt;
-&lt;p&gt;What do you make of this. 你觉得这个怎么样。&lt;/p&gt;
-&lt;p&gt;Last I checked/Last time I checked. 如假包换/据我所知&lt;/p&gt;
-&lt;p&gt;This is the way.&lt;/p&gt;
-&lt;p&gt;You have my word.&lt;/p&gt;
-&lt;p&gt;I have spoken.&lt;/p&gt;
-&lt;p&gt;That is the most beautiful moonrise I&amp;rsquo;ve seen in my entire life. 那是我这辈子见过的最美的月出时分。&lt;/p&gt;
-&lt;p&gt;This page intentionally  left blank.&lt;/p&gt;
-&lt;p&gt;This is a performance review for the first month of your probation period.&lt;/p&gt;
-&lt;p&gt;It is a good time to show myself/prove I am a five.&lt;/p&gt;
-&lt;p&gt;Any questions please just let me know.&lt;/p&gt;
-&lt;p&gt;This is a final session for the Probation Review meeting.&lt;/p&gt;
-&lt;p&gt;You can list all the things that you have completed or you have concerned with in the week and your plan for the next week.&lt;/p&gt;
-&lt;p&gt;Any other topics are welcome to be listed in your update too.&lt;/p&gt;
-&lt;p&gt;The things that I have completed and my simple plan as shown in the table below. Attached please find the excel file. I will be very grateful if you can help me improve my study planning.&lt;/p&gt;
-&lt;p&gt;Enter up to 20 characters. 最多输入20个字符&lt;/p&gt;
-&lt;p&gt;If you have already done it, please ignore the email. Otherwise, please follow below steps to update your MFS settings.&lt;/p&gt;
-&lt;p&gt;Mr. Qian’s Forum 培训分享&lt;/p&gt;
-&lt;p&gt;Hope this helps!&lt;/p&gt;
-&lt;p&gt;All I know is that……/As far as I can tell/As far as I know&lt;/p&gt;
-&lt;p&gt;Any thoughts for this discussion?/Any suggestion is welcome!&lt;/p&gt;
-&lt;p&gt;FYI Team, please be well noticed, important for you to get aware of.&lt;/p&gt;
-&lt;p&gt;If any questions or confusions, please feel free to ask around,&lt;/p&gt;
-&lt;p&gt;Estimating is used to create quotes for customers.&lt;/p&gt;
-&lt;p&gt;When improperly managed, &amp;hellip; 管理不当时&lt;/p&gt;
-&lt;p&gt;How to express you are quite familiar/a little bit familiar/totally new to a word? I would suggest &lt;em&gt;very familiar&lt;/em&gt;, &lt;em&gt;somewhat familiar&lt;/em&gt;, and &lt;em&gt;unfamiliar&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Here, the consumer sees all threes as a unit.&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;Up to you&amp;rdquo; means that someone is giving another person full responsibility to make their own decisions.&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;Depend on you&amp;rdquo; means that you&amp;rsquo;re putting your faith into that person, that you rely on him or her.&lt;/p&gt;
-&lt;p&gt;I have a good impression of/feeling about her&lt;/p&gt;
-&lt;p&gt;Good day! We have received your ticket regarding JIRA Account Setup Request for Kris Nie.&lt;/p&gt;
-&lt;p&gt;Microsoft Outlook and its &lt;!-- raw HTML omitted --&gt;crippled sibling&lt;!-- raw HTML omitted --&gt; Outlook Express.&lt;/p&gt;
-&lt;p&gt;Let’s recap. 让我们回顾一下&lt;/p&gt;
-&lt;p&gt;Today is officially a holiday, but it’s business as usual around here.&lt;/p&gt;
-&lt;p&gt;Thanks for your time, ……&lt;/p&gt;
-&lt;p&gt;Per my understanding, ……&lt;/p&gt;
-&lt;p&gt;Sorry for the inconvenience.&lt;/p&gt;
-&lt;p&gt;&amp;ndash;I&amp;rsquo;m going to the bar. Anyone else coming?/I&amp;rsquo;m going hunting, are you coming with me?  &amp;ndash; Count me in!&lt;/p&gt;
-&lt;p&gt;Will you please write me a letter sometime when you get the time?&lt;/p&gt;
-&lt;p&gt;Congrats.&lt;/p&gt;
-&lt;p&gt;There are many people to whom I owe thanks for their contributions to this book.&lt;/p&gt;
-&lt;p&gt;My pleasure./It&amp;rsquo;s my pleasure.乐意效劳，这是我的荣幸 Sure/Sure thing.应该的 Of course!没事，这是当然的 You bet!当然的，不客气，不用谢 Anytime 别客气，随时愿为您效劳 Happy to help!很开心能帮到你 No worries.没问题 No sweat. 小意思 That&amp;rsquo;s all right.不用谢，不客气，没关系&lt;/p&gt;
-&lt;p&gt;After my investigation, ……&lt;/p&gt;
-&lt;p&gt;Very witty.&lt;/p&gt;
-&lt;p&gt;What&amp;rsquo;s it you want? You want the moon? Just say the word, and I&amp;rsquo;ll throw a lasso around it and pull it down.&lt;/p&gt;
-&lt;p&gt;Youth is wasted on the wrong people.&lt;/p&gt;
-&lt;p&gt;Shame on you.&lt;/p&gt;
-&lt;p&gt;What gives.&lt;/p&gt;
-&lt;p&gt;Some joke.&lt;/p&gt;
-&lt;p&gt;I am making violent love to u.&lt;/p&gt;
-&lt;p&gt;Do I paint a correct picture, or do I exaggerate?&lt;/p&gt;
-&lt;p&gt;We mated.&lt;/p&gt;
-&lt;p&gt;Attached is the SQLCMD doc introducing SQLCMD Model In MSSMS Query Editor. I am glad to share SQLCMD with you. It shows me an easy way of changing SQL Server connection in MSSMS. And more commands of SQLCMD is collected. Hope it helps in your work.&lt;/p&gt;
-&lt;p&gt;Suit yourself/it&amp;rsquo;s up to u/I don&amp;rsquo;t care/as u wish/whatever. 随便。&lt;/p&gt;
-&lt;p&gt;Whatever u think is fine with me.&lt;/p&gt;
-&lt;p&gt;Okay, if you have been paying attention unlike a couple people, you&amp;rsquo;re going to be very concerned about the size of these page tables.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s a kind of jaw-dropping.&lt;/p&gt;
-&lt;p&gt;The unstoppable marching of time that is slowly guiding us all towards an inevitable death, it scares me the most.&lt;/p&gt;
-&lt;p&gt;Time to FAP!&lt;/p&gt;
-&lt;p&gt;No one ever got laid by going Dutch.&lt;/p&gt;
-&lt;p&gt;I am very trainable.&lt;/p&gt;
-&lt;p&gt;I am all fucked up!&lt;/p&gt;
-&lt;p&gt;I take my work very seriously.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s time for you to go.&lt;/p&gt;
-&lt;p&gt;Having a sensitive emotions is turning out to be a pain.&lt;/p&gt;
-&lt;p&gt;We did it, we achieved social justice.&lt;/p&gt;
-&lt;p&gt;Details as the attached mail.&lt;/p&gt;
-&lt;p&gt;Hot hatch. 钢炮！！！！&lt;/p&gt;
-&lt;p&gt;They get really big one like it&amp;rsquo;s not a time in the month.&lt;/p&gt;
-&lt;p&gt;How do you walk to me.&lt;/p&gt;
-&lt;p&gt;Like lambs to the slaughter.&lt;/p&gt;
-&lt;p&gt;What a saint you are.&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;e.g.&amp;rdquo; means &amp;ldquo;for example&amp;rdquo;, &amp;ldquo;i.e.&amp;rdquo; means &amp;ldquo;in other words&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s the memory embedded in me.&lt;/p&gt;
-&lt;p&gt;How about now?&lt;/p&gt;
-&lt;p&gt;Today is my day, whatever I want do.&lt;/p&gt;
-&lt;p&gt;Keep going.&lt;/p&gt;
-&lt;p&gt;I can&amp;rsquo;t wait to be inside you.&lt;/p&gt;
-&lt;p&gt;Call me dirty. Maybe Daddy.&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s a good clue.&lt;/p&gt;
-&lt;p&gt;If I&amp;rsquo;m reading this right&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Not sure where we&amp;rsquo;ll land on this one.&lt;/p&gt;
-&lt;p&gt;There is nothing more expensive than something free.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll correct my CMD command and prevent it from happening again.&lt;/p&gt;
-&lt;p&gt;Thanks for your kind reminder.&lt;/p&gt;
-&lt;p&gt;Thanks for your reminding me of the meeting.&lt;/p&gt;
-&lt;p&gt;The process is fluid and changes are expected before it is rolled out to customers.&lt;/p&gt;
-&lt;p&gt;Feedback is expected and encouraged.&lt;/p&gt;
-&lt;p&gt;It can be reopened if found to still be an issue.&lt;/p&gt;
-&lt;p&gt;I hope this letter finds you well.&lt;/p&gt;
-&lt;p&gt;Every second you&amp;rsquo;re not running, I&amp;rsquo;m only getting closer.&lt;/p&gt;
-&lt;p&gt;I have no sight into her heart.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve heard it said that Daisy&amp;rsquo;s murmur was only to make people lean toward her.&lt;/p&gt;
-&lt;p&gt;A sort of apology arose to my lips.&lt;/p&gt;
-&lt;p&gt;I enjoyed looking at her.&lt;/p&gt;
-&lt;p&gt;It occurred to me now that I had seen her, or a picture of her, somewhere before.&lt;/p&gt;
-&lt;p&gt;As though he were moving a checker to another square.&lt;/p&gt;
-&lt;p&gt;&amp;lsquo;I hate that word hulking, &#39; objected Tom crossly, &amp;lsquo;even in kidding. &#39;&lt;/p&gt;
-&lt;p&gt;Why the agression? Is this your time of the month?&lt;/p&gt;
-&lt;p&gt;Framing her in narcotic related crimes.&lt;/p&gt;
-&lt;p&gt;be out of the ordinary&lt;/p&gt;
-&lt;p&gt;shed some tears&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;phrase&#34;&gt;Phrase&lt;/h2&gt;
-&lt;p&gt;Carbon Copy 副本、抄送，outlook中的&lt;em&gt;cc&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;lead time 交付周期，订货至交货的时间&lt;/p&gt;
-&lt;p&gt;Intranet 内联网&lt;/p&gt;
-&lt;p&gt;General Ledger 总账&lt;/p&gt;
-&lt;p&gt;Work in process 在制品，在产品&lt;/p&gt;
-&lt;p&gt;Mfg. Order/Manufacturing Order 制造订单&lt;/p&gt;
-&lt;p&gt;Job Orders 工单&lt;/p&gt;
-&lt;p&gt;Floor plan 平面图&lt;/p&gt;
-&lt;p&gt;Break rules 犯规，破例&lt;/p&gt;
-&lt;p&gt;Referral fee 推荐费&lt;/p&gt;
-&lt;p&gt;Per Lot Quantity 每手数量&lt;/p&gt;
-&lt;p&gt;Scope of work&lt;/p&gt;
-&lt;p&gt;Firm a planned order 确定计划订单&lt;/p&gt;
-&lt;p&gt;the effects can ripple down 效率下降&lt;/p&gt;
-&lt;p&gt;over-conservative plan 过度保守的计划&lt;/p&gt;
-&lt;p&gt;purchase order(PO) 订购单&lt;/p&gt;
-&lt;p&gt;maintain a comprehensive audit trail of changes 保持全面的变更审计跟踪&lt;/p&gt;
-&lt;p&gt;engineering change notice (ECN) 工程变更通知&lt;/p&gt;
-&lt;p&gt;mass material substitution&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations&#34;&gt;Prov/St Code 省/州缩写(abbreviations)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Three tier architecture 三层架构&lt;/p&gt;
-&lt;p&gt;Earned value management&lt;/p&gt;
-&lt;p&gt;Misc. miscellaneous 杂项&lt;/p&gt;
-&lt;p&gt;Work Breakdown Structure, WBS 工作分解结构&lt;/p&gt;
-&lt;p&gt;Cost Variance 成本偏差&lt;/p&gt;
-&lt;p&gt;Shrinkage rates 收缩率&lt;/p&gt;
-&lt;p&gt;Circuit Board 电路板&lt;/p&gt;
-&lt;p&gt;Value-added management 增值管理&lt;/p&gt;
-&lt;p&gt;the logistics of distribution 分销&lt;/p&gt;
-&lt;p&gt;semifinished good 半成品&lt;/p&gt;
-&lt;p&gt;Business as usual (BAU)&lt;/p&gt;
-&lt;p&gt;Cute as a button&lt;/p&gt;
-&lt;p&gt;I have the final say&lt;/p&gt;
-&lt;p&gt;Vicious circle 恶性循环&lt;/p&gt;
-&lt;p&gt;Fireside chat&lt;/p&gt;
-&lt;p&gt;Tough （肉）太老，咬不动&lt;/p&gt;
-&lt;p&gt;Tender 软嫩，Q弹&lt;/p&gt;
-&lt;p&gt;Rare 一分熟， Medium rare 三分熟，Medium well 七分熟，Well done 全熟&lt;/p&gt;
-&lt;p&gt;Cook 厨师，Chef 主厨，Absolutely delicious! 好吃&lt;/p&gt;
-&lt;p&gt;nippy and zippy.&lt;/p&gt;
-&lt;p&gt;last mile: （死刑犯从牢房走到刑场的）最后路程&lt;/p&gt;
-&lt;p&gt;Shop floor&lt;/p&gt;
-&lt;p&gt;Receive the package 收快递，fragile 易碎品，发快递用send&lt;/p&gt;
-&lt;p&gt;Collect the package 取快递，locker 快递柜，快递 express delivery&lt;/p&gt;
-&lt;p&gt;Common Sense Series 常识&lt;/p&gt;
-&lt;p&gt;Code of Conduct 行为准则&lt;/p&gt;
-&lt;p&gt;Making Tax Digital, MTD 数字化税收&lt;/p&gt;
-&lt;p&gt;Value-added tax, VAT 增值税&lt;/p&gt;
-&lt;p&gt;Venture capital fund, 风险投资基金; VC, 风投&lt;/p&gt;
-&lt;p&gt;take note of&lt;/p&gt;
-&lt;p&gt;may I have a look at/on&lt;/p&gt;
-&lt;p&gt;Drastic measures 强硬措施&lt;/p&gt;
-&lt;p&gt;Plastic surgery 整形外科&lt;/p&gt;
-&lt;p&gt;Haute couture 高级定制&lt;/p&gt;
-&lt;p&gt;Mass market 大众市场&lt;/p&gt;
-&lt;p&gt;Menswear 男装&lt;/p&gt;
-&lt;p&gt;Womenswear 女装&lt;/p&gt;
-&lt;p&gt;Spring/summer 春夏&lt;/p&gt;
-&lt;p&gt;Autumn/winter 秋冬&lt;/p&gt;
-&lt;p&gt;Fall/winter 秋冬&lt;/p&gt;
-&lt;p&gt;Ready-to-wear （RTW）高级成衣&lt;/p&gt;
-&lt;p&gt;Resort 早春度假&lt;/p&gt;
-&lt;p&gt;Pre-Fall 早秋&lt;/p&gt;
-&lt;p&gt;Spring-couture 春季高定&lt;/p&gt;
-&lt;p&gt;Fall-couture 秋季高定&lt;/p&gt;
-&lt;p&gt;Bridal 婚礼系列&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;abbreviation&#34;&gt;Abbreviation&lt;/h2&gt;
-&lt;h3 id=&#34;phrase-1&#34;&gt;Phrase&lt;/h3&gt;
-&lt;p&gt;ASAP, as soon as possible 尽快&lt;/p&gt;
-&lt;p&gt;BID, break it down 细分明细&lt;/p&gt;
-&lt;p&gt;BTW, by the way 顺带一提&lt;/p&gt;
-&lt;p&gt;COB, close of business 下班时&lt;/p&gt;
-&lt;p&gt;EOB, end of business 下班时&lt;/p&gt;
-&lt;p&gt;EOD, end of day 今天以內&lt;/p&gt;
-&lt;p&gt;DOE, depending on experience 视工作经验而定&lt;/p&gt;
-&lt;p&gt;ETA, estimated time of arrival 预计达到时间&lt;/p&gt;
-&lt;p&gt;FAQ, frequently asked questions 常见问题&lt;/p&gt;
-&lt;p&gt;FTE, full-time employee 全体职工&lt;/p&gt;
-&lt;p&gt;FWIW, for what it’s worth 不管有沒有用&lt;/p&gt;
-&lt;p&gt;FYI, for your information 供你参考&lt;/p&gt;
-&lt;p&gt;FYR, for your reference 供你参考&lt;/p&gt;
-&lt;p&gt;FYU, for your use 供你使用&lt;/p&gt;
-&lt;p&gt;IAM, in a meeting 会议中&lt;/p&gt;
-&lt;p&gt;IMO, in my opinion 在我看来&lt;/p&gt;
-&lt;p&gt;LET, leaving early today 今天提早走&lt;/p&gt;
-&lt;p&gt;LMK, let me know 通知我&lt;/p&gt;
-&lt;p&gt;MoM, month over month 月度比较&lt;/p&gt;
-&lt;p&gt;MTD, month to date 月初到现在&lt;/p&gt;
-&lt;p&gt;OOO, out of office 不在办公室&lt;/p&gt;
-&lt;p&gt;OT, over time 加班&lt;/p&gt;
-&lt;p&gt;OTP, on the phone 通话中&lt;/p&gt;
-&lt;p&gt;PA, performance appraisal 绩效考核&lt;/p&gt;
-&lt;p&gt;POC, point of contact 联系人&lt;/p&gt;
-&lt;p&gt;PTE, part-time employee 兼职雇员&lt;/p&gt;
-&lt;p&gt;PTO, paid time off 带薪休假&lt;/p&gt;
-&lt;p&gt;NDA, Non-disclosure agreement 保密协议&lt;/p&gt;
-&lt;p&gt;NRN, no reply necessary 不需回复&lt;/p&gt;
-&lt;p&gt;NSFW, not safe for work&lt;/p&gt;
-&lt;p&gt;RFD, request for discussion 请求讨论&lt;/p&gt;
-&lt;p&gt;RSVP, Répondez s’il vous plait 法文的请回复&lt;/p&gt;
-&lt;p&gt;TBA, to be announced&lt;/p&gt;
-&lt;p&gt;TBD, to be determined&lt;/p&gt;
-&lt;p&gt;TCC, teleconference call 电话会议&lt;/p&gt;
-&lt;p&gt;TED, Tell me, explain to me, describe to me&lt;/p&gt;
-&lt;p&gt;TL;DR, Too long didn’t read 太长，没读&lt;/p&gt;
-&lt;p&gt;TOS, terms of service 服务条款&lt;/p&gt;
-&lt;p&gt;TYT, take your time 别着急，慢慢来&lt;/p&gt;
-&lt;p&gt;WFH, work from home&lt;/p&gt;
-&lt;p&gt;WIIFM, what’s in it for me 这对我有什么好处&lt;/p&gt;
-&lt;p&gt;WOM, word of mouth 口碑传播&lt;/p&gt;
-&lt;p&gt;YTD, year to date 年底、今年之內&lt;/p&gt;
-&lt;p&gt;POC, &lt;a href=&#34;https://en.wikipedia.org/wiki/Proof_of_concept&#34;&gt;Proof of concept&lt;/a&gt; 概念证明&lt;/p&gt;
-&lt;p&gt;E12, Early Offer Year 12 education&lt;/p&gt;
-&lt;p&gt;ACM, Association for Computing Machinery 计算机协会&lt;/p&gt;
-&lt;p&gt;FQA, Frequently asked questions&lt;/p&gt;
-&lt;h3 id=&#34;title-and-department-name&#34;&gt;Title and department name&lt;/h3&gt;
-&lt;p&gt;CDO, chief data officer&lt;/p&gt;
-&lt;p&gt;CEO, chief executive officer&lt;/p&gt;
-&lt;p&gt;CFO, chief financial officer&lt;/p&gt;
-&lt;p&gt;CIO, chief information officer&lt;/p&gt;
-&lt;p&gt;CMO, chief marketing officer&lt;/p&gt;
-&lt;p&gt;COO, chief operating officer&lt;/p&gt;
-&lt;p&gt;CPA, certified public accountant 注册会计师&lt;/p&gt;
-&lt;p&gt;CSO, chief security officer&lt;/p&gt;
-&lt;p&gt;CSR, corporate social responsibility 企业社会责任&lt;/p&gt;
-&lt;p&gt;CTO, chief technology officer&lt;/p&gt;
-&lt;p&gt;CFP, certified financial planner 注册金融理财师&lt;/p&gt;
-&lt;p&gt;GC, general counsel 首席法律顾问&lt;/p&gt;
-&lt;p&gt;HR, human resources 人力资源&lt;/p&gt;
-&lt;p&gt;PM, project manager 项目经理&lt;/p&gt;
-&lt;p&gt;PR, public relations 公共关系&lt;/p&gt;
-&lt;p&gt;R&amp;amp;D, research and development 研发&lt;/p&gt;
-&lt;p&gt;SVP, Senior Vice President 高级副总裁&lt;/p&gt;
-&lt;p&gt;President of Products 产品总裁&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;mark&#34;&gt;Mark&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;!&lt;/code&gt; 叹号 exclamation mark/bang&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;?&lt;/code&gt; 问号 question mark&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;,&lt;/code&gt; 逗号 comma&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;.&lt;/code&gt; 点号 dot/period/point&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:&lt;/code&gt; 冒号 colon&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;;&lt;/code&gt; 分号 semicolon&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;”&lt;/code&gt; 双引号 quotation marks/double quote&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;‘&lt;/code&gt; 单引号/撇号 apostrophe/single quote&lt;/p&gt;
-&lt;p&gt;`  重音号 backquote/grave accent&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;+&lt;/code&gt; 加号 plus sign&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-&lt;/code&gt; 减号/横线 hyphen/dash/minus sign/&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;=&lt;/code&gt; 等号 equal sign&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;/&lt;/code&gt; 斜线 slash&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\ &lt;/code&gt;反斜线 backslash/escape&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;|&lt;/code&gt;竖线 bar/pipe/vertical bar&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;_&lt;/code&gt;下划线 underline/underscore&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$&lt;/code&gt; 美元符号 dollar sign&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;@&lt;/code&gt; at at sign&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;#&lt;/code&gt; 井号 crosshatch/sharp/hash&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;%&lt;/code&gt; 百分号 percent sign/mod&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;amp;&lt;/code&gt; and/和/兼 and/ampersand&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;^&lt;/code&gt; 折音号 circumflex/caret&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;~&lt;/code&gt; 波浪号 tilde&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;{}&lt;/code&gt; （左右）花括号/大括号 (left/right|open/close) braces&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;[]&lt;/code&gt; （左右）方括号/中括号 (left/right|open/close) brackets&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;()&lt;/code&gt; （左右）圆括号/小括号 (left/right|open/close) parentheses&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; 尖括号 angle brackets&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;&lt;/code&gt; 大于号 less than&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;gt;&lt;/code&gt; 小于号 greater than&lt;/p&gt;
-&lt;p&gt;葡语中的变音符号（diacritic mark）在英文中的读法：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;^&lt;/code&gt; circumflex/care&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;~&lt;/code&gt; tilde/squiggle&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;´&lt;/code&gt; acute&lt;/p&gt;
-&lt;p&gt;` grave&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ç&lt;/code&gt; cedilla&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;...&lt;/code&gt; ellipsis&lt;/p&gt;
-&lt;h3 id=&#34;希腊字母表&#34;&gt;希腊字母表&lt;/h3&gt;
-&lt;p&gt;α　Α　alpha /alpha/ h表示送气音，在古希腊语中尚没有音位/f/，所以/pha/的发音类似普通话的“趴”。&lt;/p&gt;
-&lt;p&gt;β　Β　beta /be:ta/ /e:/表示长元音，/e/的发音不是英语D.J.音标里的[e]，而类似K.K.音标里的/e/或者法语的/e/。/t/不送气，所以/ta/类似普通话“搭”而不是“他”。&lt;/p&gt;
-&lt;p&gt;γ　Γ　gamma /gam:a/　/m:/表示长辅音，即在发辅音时，其持阻阶段应该适当延长，然后再做除阻动作。&lt;/p&gt;
-&lt;p&gt;δ　Δ　delta /de:lta/&lt;/p&gt;
-&lt;p&gt;ε　Ε　epsilon /epsilo:n/ /o/的发音要比英国英语字母组合au的发音更闭一些。&lt;/p&gt;
-&lt;p&gt;ζ　Ζ　zeta /ze:ta, dze:ta/ /z, dz/浊的塞音或塞擦音。&lt;/p&gt;
-&lt;p&gt;η　Η　eta /e:ta/ 第一个音节为长音。&lt;/p&gt;
-&lt;p&gt;θ　Θ　theta /the:ta/ /th/表示送气音，t为齿化的(dentalised)塞音，而不是英语里的/t/，类似汉语里的t，但要更紧一些。&lt;/p&gt;
-&lt;p&gt;ι　Ι　iota /jo:ta，io:ta/&lt;/p&gt;
-&lt;p&gt;κ　Κ　kappa /kap:a/ /p:/表示长辅音，其描述类似/m:/，前一个p类似于英语里“失去爆破”或者汉语粤方言中的塞音韵尾/-p/，/k/不送气。&lt;/p&gt;
-&lt;p&gt;λ　Λ　lambda /lambda/&lt;/p&gt;
-&lt;p&gt;μ　Μ　my /my:/ /y:/是长元音，类似汉语的“淤”以及法语字母u单独存在时的发音。&lt;/p&gt;
-&lt;p&gt;ν　Ν　ny /ny:/&lt;/p&gt;
-&lt;p&gt;ξ　Ξ　xi /ksi:/&lt;/p&gt;
-&lt;p&gt;ο　Ο　omicron /omikro:n/ micron表示“小”，所以是“短o”的意思。&lt;/p&gt;
-&lt;p&gt;π　Π　pi /pi:/ /p/不送气，所以应该类似“逼”而不是“批”。&lt;/p&gt;
-&lt;p&gt;ρ　Ρ　rho /rho:/ /rh/实际上表示清化的擦颤音，这里打不出来，姑且用这个组合吧。据说捷克语里有，这就是为什么Dvorak被翻译为“德沃夏克”而不是“德沃拉克”的原因。据说古希腊语有两个颤音，一个是词头的擦颤音，一个是词尾的成音节的真正浊颤音，所以希腊字母标里有两个rho，一个只用在词头，一个只用在词尾。&lt;/p&gt;
-&lt;p&gt;σ　Σ　sigma /sigma/ /s/为齿化的，类似汉语的s-，而不是英语的[s]。与rho类似希腊字母表里也有两个sigma，一个在词头，一个在词尾，据说在词尾的也能成音节，会不会读得象汉语的“丝”一样就不得而知了。&lt;/p&gt;
-&lt;p&gt;τ　Τ　tau /tau,tay?/ 后面一部分得读音不得而知，/u/还是/y/？/t/不送气，所以应该类似“搭屋”/“搭淤”，而非“套”。&lt;/p&gt;
-&lt;p&gt;υ　Υ　ypsilon /y:psilo:n/ /y/类似汉语的“淤”而非“乌”，拉丁语里没有这个音，所以字母命名为 igraeca，即“希腊的i”的意思。与/i/部位相同，但是圆唇元音。&lt;/p&gt;
-&lt;p&gt;φ　Φ　phi /phi:/ /ph/表示送气音，所以应该类似“批”。&lt;/p&gt;
-&lt;p&gt;χ　Χ　chi /khi:/ c在古代拉丁语里的读音总是为/k/，/kh/为送气音。&lt;/p&gt;
-&lt;p&gt;ψ　Ψ　psi /psi:/&lt;/p&gt;
-&lt;p&gt;ω　Ω　omega /o:me:ga/ /o:/是长音，因为mega表示大的意思，即“大的o”&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;time-zone&#34;&gt;Time Zone&lt;/h2&gt;
-&lt;p&gt;SGT (Singapore, GMT+08:00)&lt;/p&gt;
-&lt;p&gt;IST (Mumbai, GMT+05:30)&lt;/p&gt;
-&lt;p&gt;BST (London, GMT+0100)&lt;/p&gt;
-&lt;p&gt;EDT (New York, GMT-05:00)&lt;/p&gt;
-&lt;p&gt;PDT (San Francisco, GMT-08:00)&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;pronounce&#34;&gt;Pronounce&lt;/h1&gt;
-&lt;h2 id=&#34;live&#34;&gt;Live&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;[liv]&lt;/em&gt;
-vi.活,生存；居住; 住；继续存在,留存
-vt.&amp;amp; vi.以某种方式生活
-&lt;em&gt;[laiv]&lt;/em&gt;
-adj.活的,有生命的；真正的；燃烧着的；带电的；未爆炸的; 随时可用的；当前重要的；现场直播的,实况转播的
-adv.实地,现场地,以直播方式&lt;/p&gt;
-- https://www.openheart.icu/speech/i-am-a-freshman/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

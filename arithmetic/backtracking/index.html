@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html><head>
-	<meta name="generator" content="Hugo 0.79.1" />
-<title>42th openheart</title>
+<title>Backtracking</title>
 
 
-
-  
 
 
 <meta charset="utf-8">
@@ -13,25 +10,26 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="My HomePage Description">
+<meta name="description" content="回溯算法">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content="42th openheart" />
-<meta property="og:description" content="My HomePage Description" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.openheart.icu/" />
-<meta property="og:updated_time" content="2021-12-26T11:25:57+00:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:title" content="Backtracking" />
+<meta property="og:description" content="回溯算法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/arithmetic/backtracking/" />
+<meta property="article:published_time" content="2021-09-19T17:15:26+00:00" />
+<meta property="article:modified_time" content="2021-09-19T17:15:26+00:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="42th openheart"/>
-<meta name="twitter:description" content="My HomePage Description"/>
+<meta name="twitter:title" content="Backtracking"/>
+<meta name="twitter:description" content="回溯算法"/>
 
 
 
@@ -71,7 +69,30 @@
 
 
 
+  
+    <script src="https://www.openheart.icu//js/toc-collapse.js"></script>
 
+  
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'Hyominn',
+  admin: ['Hyominn'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
 
 
 
@@ -83,7 +104,7 @@
 </head><body>
     	<div id="app"><div ref="sideContainer" class="side-container">
     
-    <a class="a-block nav-head active" href="https://www.openheart.icu/">
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
     
         <div class="nav-title">
             42th openheart
@@ -121,9 +142,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/arithmetic">
+            
+            <a class="a-block nav-link-item active" href="/arithmetic">
                 Arithmetic
             </a>
             
@@ -216,6 +239,42 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#backtrackinghttpsenwikipediaorgwikibacktracking" onclick="onNavClick(`#backtrackinghttpsenwikipediaorgwikibacktracking-nav`)" id="backtrackinghttpsenwikipediaorgwikibacktracking-nav">
+									Backtracking
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -231,30 +290,6 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 brightness_7
             </i>
         </a>
-        
-        
-        
-            <div class="pagination-indicator">
-                <span style="text-align: center">
-                    4<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>6
-                </span>
-            </div>
-            
-            
-            <a class="pagination-action" href="/page/3/">
-                <i class="material-icons pagination-action-icon">
-                    chevron_left
-                </i>
-            </a>
-            
-
-            
-            <a class="pagination-action" href="/page/5/">
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
-            
         
         
     </div>
@@ -288,9 +323,11 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                
+                <a class="a-block drawer-menu-item active" href="/arithmetic">
                     Arithmetic
                 </a>
                 
@@ -346,6 +383,42 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                 
             
             
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#backtrackinghttpsenwikipediaorgwikibacktracking" onclick="onNavClick(`#backtrackinghttpsenwikipediaorgwikibacktracking-nav`)" id="backtrackinghttpsenwikipediaorgwikibacktracking-nav">
+									Backtracking
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
         </div>
     </div>
 </div>
@@ -388,431 +461,111 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
     </a>
 </div>
             <div id="content">
-
 <div ref="streamContainer" class="stream-container">
-    <div class="post-list-container post-list-container-no-background">
-        
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
             
-            <a href="https://www.openheart.icu/cs/oracle/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Oracle
-                            </div>
-                            <div class="post-item-summary">
-                                Oracle
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-21
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
+            
+            
 
-    
-    
-
-    
-    7 min
-    
-    58 s
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Backtracking
+                    
+                    <div class="post-subtitle">
+                        回溯算法
+                    </div>
+                    
+                    <div class="post-meta">
                         
+                        <time itemprop="datePublished">
+                            2021-09-19 17:15
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/arithmetic">Arithmetic</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            3 s.
                         
                     </div>
                 </div>
+            </div>
             
-        
-            
-            <a href="https://www.openheart.icu/speech/speech/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Speech
-                            </div>
-                            <div class="post-item-summary">
-                                言论
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-21
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="backtrackinghttpsenwikipediaorgwikibacktracking"><a href="https://en.wikipedia.org/wiki/Backtracking">Backtracking</a></h1>
+<p><a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/">17. Letter Combinations of a Phone Number</a></p>
+<p><a href="https://leetcode-cn.com/problems/sudoku-solver/">37. Sudoku Solver</a></p>
 
-    
-    
-
-    
-    52 min
-    
-    52 s
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">
+                        Last modified on 2021-09-19 17:15
+                        &nbsp;
+                        <span id="busuanzi_container_page_pv" style="color:#777;">
+                            This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
+                        </span>
+                    </p>
+                    
                 </div>
+
+            </div>
             
-        
             
-            <a href="https://www.openheart.icu/cs/dns/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                DNS
-                            </div>
-                            <div class="post-item-summary">
-                                常用DNS
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-19
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
+            <nav class="post-pagination">
 
-    
-    
+                
+                <a class="newer-posts" href="https://www.openheart.icu/cs/redis/">
+			Next<br>Redis
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/cs/working-effectively-with-legacy-code/">
+			Previous<br>Working Effectively with Legacy Code
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
 
-    
-    1 min
-    
-    19 s
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                 当面调试
-                            </div>
-                            <div class="post-item-summary">
-                                Qualified Social Fear
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-18
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
+<div id="gitalk-container"></div>
 
-    
-    
 
-    
-    4 s
-    
-    
-    &emsp;
-    
-    <span class="draft-label">DRAFT</span>
-    
-</div>
 
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://www.openheart.icu/cs/dot-net-interview/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                .NET INTERVIEW
-                            </div>
-                            <div class="post-item-summary">
-                                当面调试Kris Nie
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-17
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
 
-    
-    
 
-    
-    137 min
-    
-    14 s
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://www.openheart.icu/about/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                About
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-17
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    27 s
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://www.openheart.icu/cs/computer-network/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Computer network
-                            </div>
-                            <div class="post-item-summary">
-                                计算机网络
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    1 min
-    
-    7 s
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://www.openheart.icu/cs/git/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Git
-                            </div>
-                            <div class="post-item-summary">
-                                git
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    2 min
-    
-    4 s
-    
-    
-    &emsp;
-    
-    <span class="draft-label">DRAFT</span>
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://www.openheart.icu/cs/hugo/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Hugo
-                            </div>
-                            <div class="post-item-summary">
-                                HugoBlog
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    5 min
-    
-    52 s
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://www.openheart.icu/cs/linux/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Linux
-                            </div>
-                            <div class="post-item-summary">
-                                克里斯私房菜菜谱
-                            </div>
-                            <div class="post-item-meta">
-    2020-07-15
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
-
-    
-    
-
-    
-    7 min
-    
-    54 s
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-        </a>
+            </div>
+        </div>
     </div>
 </div>
 
-            </div>
-
-<div class="pagination">
-    
-    <a class="pagination-action" href="/page/3/" style="opacity:1">
-    
-        <i class="material-icons pagination-action-icon">
-            chevron_left
-        </i>
-    </a>
-
-        <div class="pagination-indicator">
-            <span>4/6</span>
-        </div>
-
-        
-        <a class="pagination-action" href="/page/5/"
-           style="opacity:1">
-        
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
-</div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 	
 	<i class="fa fa-weixin" aria-hidden="true"></i>
 	Case42

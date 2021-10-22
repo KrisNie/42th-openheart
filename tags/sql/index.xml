@@ -7,7 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sat, 15 Aug 2020 16:27:30 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 11:35:34 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database</title>
+      <link>https://www.openheart.icu/cs/database/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/database/</guid>
+      <description>ISSUES  ORMs  ACID Atomicity 原子性 Transactions are often composed of multiple statements. Atomicity guarantees that each transaction is treated as a single &amp;ldquo;unit&amp;rdquo;, which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. A guarantee of atomicity prevents updates to the database occurring only partially, which can cause greater problems than rejecting the whole series outright.</description>
+    </item>
+    
+    <item>
+      <title>MongoDB </title>
+      <link>https://www.openheart.icu/cs/mongodb/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://www.openheart.icu/cs/postgresql/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/postgresql/</guid>
+      <description>Windows上安装其实蛮简单的，会有自带的pgAdmin工具。</description>
+    </item>
+    
+    <item>
+      <title>Redis</title>
+      <link>https://www.openheart.icu/cs/redis/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/redis/</guid>
+      <description>MongoDB vs Redis
+MongoDB is a document-oriented, disk-based database optimized for operational simplicity, schema-free design and very large data volumes. Redis is an in-memory, persistent data structure store that enables developers to perform common operations with minimal complexity and maximum performance. MongoDB and Redis are both NoSQL languages, but because they’re built for different purposes, Redis’ enhanced capabilities significantly augment MongoDB’s capabilities.</description>
+    </item>
+    
     <item>
       <title>SQLserver</title>
       <link>https://www.openheart.icu/cs/sqlserver/</link>

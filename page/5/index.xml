@@ -6,9 +6,507 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 15:15:57 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Oct 2021 11:35:34 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Mac Operation</title>
+        <link>https://www.openheart.icu/cs/mac/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/mac/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/mac/ -&lt;h1 id=&#34;brew使用国内镜像源不好使&#34;&gt;brew使用国内镜像源（不好使）&lt;/h1&gt;
+&lt;p&gt;中科大：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤一&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#步骤三&lt;/span&gt;
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;复原：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/brew.git
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/homebrew-core
+
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;配置item2代理&#34;&gt;配置item2代理&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 打开配置文件&lt;/span&gt;
+vim ~/.bash_profile 
+&lt;span style=&#34;color:#228b22&#34;&gt;# 如果用了`oh-my-zsh` 那么修改`~/.zshrc`&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 在后面新增配置&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;http_proxy&lt;/span&gt;=http://127.0.0.1:1087 
+&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;https_proxy&lt;/span&gt;=socks5://127.0.0.1:1080
+&lt;span style=&#34;color:#228b22&#34;&gt;# 同理，可能执行 source ~/.zshrc&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;iterm2--oh-my-zsh&#34;&gt;iTerm2 + Oh My Zsh&lt;/h1&gt;
+&lt;h2 id=&#34;安装oh-my-zsh&#34;&gt;安装Oh my zsh&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# curl 安装方式&lt;/span&gt;
+sh -c &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装powerline&#34;&gt;安装PowerLine&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 安装 pip&lt;/span&gt;
+sudo easy_install pip
+
+pip install powerline-status --user
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装powerfonts&#34;&gt;安装PowerFonts&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# git clone&lt;/span&gt;
+git clone https://github.com/powerline/fonts.git --depth=&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# cd to folder&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; fonts
+&lt;span style=&#34;color:#228b22&#34;&gt;# run install shell&lt;/span&gt;
+./install.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Text 设置item2字体为Meslo LG&lt;/p&gt;
+&lt;h2 id=&#34;安装主题&#34;&gt;安装主题&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/Desktop/OpenSource
+git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; oh-my-zsh-agnoster-fcamblor/
+./install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行上面的命令会将主题拷贝到oh my zsh的themes中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vi ~/.zshrc
+&lt;span style=&#34;color:#228b22&#34;&gt;# 将ZSH_THEME后面的字段改为agnoster&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装高亮插件&#34;&gt;安装高亮插件&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-autosuggestions
+vi ~/.zshrc
+&lt;span style=&#34;color:#228b22&#34;&gt;# 修改zshrc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;plugins信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;operation&#34;&gt;Operation&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 检查应用签名&lt;/span&gt;
+pkgutil --check-signature /Applications/Flume.app
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 清空DNS缓存&lt;/span&gt;
+dscacheutil -flushcache
+sudo dscacheutil -flushcache
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mac/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Markdown</title>
+        <link>https://www.openheart.icu/cs/markdown/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/markdown/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/markdown/ -&lt;h1 id=&#34;supporttyporaiohttpssupporttyporaio&#34;&gt;&lt;a href=&#34;https://support.typora.io/&#34;&gt;support.typora.io&lt;/a&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;expressions&#34;&gt;Expressions&lt;/h1&gt;
+&lt;h2 id=&#34;公式标记&#34;&gt;公式标记&lt;/h2&gt;
+&lt;h3 id=&#34;行内公式inline&#34;&gt;行内公式（inline）&lt;/h3&gt;
+&lt;p&gt;eg: $ E=mc^2 $，写法是：&lt;code&gt;$E=mc^2$&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;整行公式displayed&#34;&gt;整行公式（displayed）&lt;/h3&gt;
+&lt;p&gt;用一对紧挨的两个美元符号&lt;code&gt;$$&lt;/code&gt;包裹&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$$ $$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;eg:
+$$
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;希腊字母&#34;&gt;希腊字母&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;名称&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;大写&lt;/th&gt;
+&lt;th&gt;Tex&lt;/th&gt;
+&lt;th&gt;小写&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Tex&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;alpha&lt;/td&gt;
+&lt;td&gt;$A$&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;α&lt;/td&gt;
+&lt;td&gt;\alpha&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;beta&lt;/td&gt;
+&lt;td&gt;$B$&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;β&lt;/td&gt;
+&lt;td&gt;\beat&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gamma&lt;/td&gt;
+&lt;td&gt;$Γ$&lt;/td&gt;
+&lt;td&gt;\Gamma&lt;/td&gt;
+&lt;td&gt;γ&lt;/td&gt;
+&lt;td&gt;\gamma&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;delta&lt;/td&gt;
+&lt;td&gt;$Δ$&lt;/td&gt;
+&lt;td&gt;\Delta&lt;/td&gt;
+&lt;td&gt;δ&lt;/td&gt;
+&lt;td&gt;\delta&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;epsilon&lt;/td&gt;
+&lt;td&gt;$E$&lt;/td&gt;
+&lt;td&gt;E&lt;/td&gt;
+&lt;td&gt;ϵ&lt;/td&gt;
+&lt;td&gt;\epsilon&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zeta&lt;/td&gt;
+&lt;td&gt;Z&lt;/td&gt;
+&lt;td&gt;Z&lt;/td&gt;
+&lt;td&gt;ζ&lt;/td&gt;
+&lt;td&gt;\zeta&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eta&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;η&lt;/td&gt;
+&lt;td&gt;\eta&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;theta&lt;/td&gt;
+&lt;td&gt;$Θ$&lt;/td&gt;
+&lt;td&gt;\Theta&lt;/td&gt;
+&lt;td&gt;θ&lt;/td&gt;
+&lt;td&gt;\theta&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iota&lt;/td&gt;
+&lt;td&gt;I&lt;/td&gt;
+&lt;td&gt;I&lt;/td&gt;
+&lt;td&gt;ι&lt;/td&gt;
+&lt;td&gt;\iota&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;kappa&lt;/td&gt;
+&lt;td&gt;K&lt;/td&gt;
+&lt;td&gt;K&lt;/td&gt;
+&lt;td&gt;κ&lt;/td&gt;
+&lt;td&gt;\kappa&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;lambda&lt;/td&gt;
+&lt;td&gt;Λ&lt;/td&gt;
+&lt;td&gt;\Lambda&lt;/td&gt;
+&lt;td&gt;λ&lt;/td&gt;
+&lt;td&gt;\lambda&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mu&lt;/td&gt;
+&lt;td&gt;M&lt;/td&gt;
+&lt;td&gt;M&lt;/td&gt;
+&lt;td&gt;μ&lt;/td&gt;
+&lt;td&gt;\mu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nu&lt;/td&gt;
+&lt;td&gt;N&lt;/td&gt;
+&lt;td&gt;N&lt;/td&gt;
+&lt;td&gt;ν&lt;/td&gt;
+&lt;td&gt;\nu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;xi&lt;/td&gt;
+&lt;td&gt;$Ξ$&lt;/td&gt;
+&lt;td&gt;\Xi&lt;/td&gt;
+&lt;td&gt;ξ&lt;/td&gt;
+&lt;td&gt;\xi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;omicron&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;ο&lt;/td&gt;
+&lt;td&gt;\omicron&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pi&lt;/td&gt;
+&lt;td&gt;Π&lt;/td&gt;
+&lt;td&gt;\Pi&lt;/td&gt;
+&lt;td&gt;π&lt;/td&gt;
+&lt;td&gt;\pi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rho&lt;/td&gt;
+&lt;td&gt;P&lt;/td&gt;
+&lt;td&gt;P&lt;/td&gt;
+&lt;td&gt;ρ&lt;/td&gt;
+&lt;td&gt;\rho&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sigma&lt;/td&gt;
+&lt;td&gt;Σ&lt;/td&gt;
+&lt;td&gt;\Sigma&lt;/td&gt;
+&lt;td&gt;σ&lt;/td&gt;
+&lt;td&gt;\sigma&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tau&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;τ&lt;/td&gt;
+&lt;td&gt;\tau&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;upsilon&lt;/td&gt;
+&lt;td&gt;Υ&lt;/td&gt;
+&lt;td&gt;\Upsilon&lt;/td&gt;
+&lt;td&gt;υ&lt;/td&gt;
+&lt;td&gt;\upsilon&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;phi&lt;/td&gt;
+&lt;td&gt;Φ&lt;/td&gt;
+&lt;td&gt;\Phi&lt;/td&gt;
+&lt;td&gt;ϕ&lt;/td&gt;
+&lt;td&gt;\phi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chi&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;χ&lt;/td&gt;
+&lt;td&gt;\chi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;psi&lt;/td&gt;
+&lt;td&gt;$Ψ$&lt;/td&gt;
+&lt;td&gt;\Psi&lt;/td&gt;
+&lt;td&gt;$ψ$&lt;/td&gt;
+&lt;td&gt;\psi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;omega&lt;/td&gt;
+&lt;td&gt;Ω&lt;/td&gt;
+&lt;td&gt;\Omega&lt;/td&gt;
+&lt;td&gt;ω&lt;/td&gt;
+&lt;td&gt;\omega&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;角标&#34;&gt;角标&lt;/h2&gt;
+&lt;p&gt;Markdown Language is a superset of HTML, so you can use html tag &lt;strong&gt;sub,sup&lt;/strong&gt; to achieve this&lt;/p&gt;
+&lt;p&gt;上标和下标分别使用&lt;code&gt;^&lt;/code&gt;和&lt;code&gt;_&lt;/code&gt;来表示，下标也可以用&lt;code&gt;~&lt;/code&gt;表示&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;H&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sub&amp;gt;&lt;/span&gt;2&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sub&amp;gt;&lt;/span&gt;O
+CO&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sub&amp;gt;&lt;/span&gt;2&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sub&amp;gt;&lt;/span&gt;
+NIKE&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sup&amp;gt;&lt;/span&gt;®&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sup&amp;gt;&lt;/span&gt;
+H~2~O~2~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;H&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;O
+CO&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;
+NIKE&lt;!-- raw HTML omitted --&gt;®&lt;!-- raw HTML omitted --&gt;
+H~2~0~2~&lt;/p&gt;
+&lt;p&gt;如果要在左右两边都有上下标，可以用&lt;code&gt;\sideset&lt;/code&gt;来表示：&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\sideset{^1_2}{^3_4}\bigotimes&lt;/code&gt;：$\sideset{^1_2}{^3_4}\bigotimes$。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;括号&#34;&gt;括号&lt;/h2&gt;
+&lt;h3 id=&#34;小括号与方括号&#34;&gt;小括号与方括号&lt;/h3&gt;
+&lt;p&gt;使用原始的&lt;code&gt;()&lt;/code&gt;和&lt;code&gt;[]&lt;/code&gt;即可。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;(2+3)[4+4]&lt;/code&gt;：$(2+3)[4+4]$。&lt;/p&gt;
+&lt;h3 id=&#34;大括号&#34;&gt;大括号&lt;/h3&gt;
+&lt;p&gt;由于大括号&lt;code&gt;{}&lt;/code&gt;被用来分组，因此需要使用&lt;code&gt;\{&lt;/code&gt;和&lt;code&gt;\}&lt;/code&gt;表示大括号，也可以使用&lt;code&gt;\lbrace&lt;/code&gt;和&lt;code&gt;\rbrace&lt;/code&gt;来表示。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\{a*b\}&lt;/code&gt;或者&lt;code&gt;\lbrace a*b \rbrace&lt;/code&gt;，都会显示为${a*b}$。&lt;/p&gt;
+&lt;h3 id=&#34;尖括号&#34;&gt;尖括号&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;\langle&lt;/code&gt;和&lt;code&gt;\rangle&lt;/code&gt;分别表示左尖括号和右尖括号。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\langle x \rangle&lt;/code&gt;：$\langle x \rangle$&lt;/p&gt;
+&lt;h3 id=&#34;上取整&#34;&gt;上取整&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;\lceil&lt;/code&gt;和&lt;code&gt;\rceil&lt;/code&gt;表示。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\lceil x \rceil&lt;/code&gt;：$\lceil x \rceil$&lt;/p&gt;
+&lt;h3 id=&#34;下取整&#34;&gt;下取整&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;\lfloor&lt;/code&gt;和&lt;code&gt;\rfloor&lt;/code&gt;表示。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\lfloor x \rfloor&lt;/code&gt;：$\lfloor x \rfloor$&lt;/p&gt;
+&lt;p&gt;需要注意的是，原始括号并不会随着公式大小缩放。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;(\frac12)&lt;/code&gt;：$(\frac12)$。可以使用\left( &amp;hellip;\right)来自适应的调整括号: &lt;code&gt;\left( \frac12 \right)&lt;/code&gt;：$\left( \frac12 \right)$。&lt;/p&gt;
+&lt;p&gt;可以明显看出，后一组公式中的括号是经过缩放的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;求和与积分&#34;&gt;求和与积分&lt;/h2&gt;
+&lt;h3 id=&#34;求和&#34;&gt;求和&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;\sum&lt;/code&gt;用来表示求和符号，其下标表示求和下限，上标表示上线。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\sum_1^n&lt;/code&gt;：
+$$
+\sum_1^n
+$$&lt;/p&gt;
+&lt;h3 id=&#34;积分&#34;&gt;积分&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;\int&lt;/code&gt;用来表示积分符号，同样地，其上下标表示积分的上下限。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\int_1^\infty&lt;/code&gt;：
+$$
+\int_1^\infty
+$$
+与此类似的符号还有：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\prod&lt;/code&gt;：$\prod$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\bigcup&lt;/code&gt;：$\bigcup$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\bigcap&lt;/code&gt;：$\bigcap$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\iint&lt;/code&gt;：$\iint$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;分式与根式&#34;&gt;分式与根式&lt;/h2&gt;
+&lt;h3 id=&#34;分式&#34;&gt;分式&lt;/h3&gt;
+&lt;p&gt;分式有两种表示方法。&lt;/p&gt;
+&lt;p&gt;第一种，使用&lt;code&gt;\frac&lt;/code&gt;，如果分子或分母不是单个字符，需要使用{}来分组。&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\frac ab&lt;/code&gt;: $\frac ab$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\frac {a-1}{b+1}&lt;/code&gt;:$\frac {a-1}{b+1}$&lt;/p&gt;
+&lt;p&gt;第二种，使用&lt;code&gt;\over&lt;/code&gt;来分隔一个组的前后两部分&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{a+1\over b+1}&lt;/code&gt;：${a+1\over b+1}$&lt;/p&gt;
+&lt;h3 id=&#34;根式&#34;&gt;根式&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;\sqrt[a]b&lt;/code&gt;来表示。其中，方括号内的值用来表示开几次方，省略方括号则表示开方。&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\sqrt[4]{\frac xy}&lt;/code&gt;：$\sqrt[4]{\frac xy}$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\sqrt{x^3}&lt;/code&gt;：$\sqrt{x^3}$&lt;/p&gt;
+&lt;h3 id=&#34;乘号&#34;&gt;乘号&lt;/h3&gt;
+&lt;p&gt;叉乘\times&lt;/p&gt;
+&lt;p&gt;eg: $\times$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;font&#34;&gt;Font&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;\it&lt;/code&gt;显示意大利体（公式默认字体）：&lt;/p&gt;
+&lt;p&gt;$\it ACDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;\mathbb&lt;/code&gt;或&lt;code&gt;\Bbb&lt;/code&gt;显示黑板粗体（黑板黑体）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\mathbb{CHNQRZ}&lt;/code&gt;：$\mathbb{CHNQRZ}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;\mathbf&lt;/code&gt;或&lt;code&gt;\bf&lt;/code&gt;示黑体&lt;/p&gt;
+&lt;p&gt;$\mathbf ABCDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用\mathtt或\tt显示打印机字体：&lt;/p&gt;
+&lt;p&gt;$\tt ABCDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;image&#34;&gt;Image&lt;/h1&gt;
+&lt;p&gt;Credit line：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-XML&#34; data-lang=&#34;XML&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;center&amp;gt;&lt;/span&gt;Apple Marina Bay Sands is the first Apple store to sit directly on the water.&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;diff&#34;&gt;Diff&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;color:#a00&#34;&gt;-if(v &amp;gt; 100)
+&lt;/span&gt;&lt;span style=&#34;color:#a00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#0a0&#34;&gt;+if(v &amp;gt; 120)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;代码块的语法类型为&lt;code&gt;diff&lt;/code&gt;，在删除行加上 &lt;code&gt;-&lt;/code&gt;，在新增行加上 &lt;code&gt;+&lt;/code&gt;。&lt;/p&gt;
+- https://www.openheart.icu/cs/markdown/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Music</title>
+        <link>https://www.openheart.icu/speech/music/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/speech/music/</guid>
+        <description>42th openheart https://www.openheart.icu/speech/music/ -&lt;h1 id=&#34;music&#34;&gt;Music&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;La Mia Vita - &lt;a href=&#34;https://www.youtube.com/watch?v=q3LE8cl0IwE&#34;&gt;Ferrari Roma - Official Video&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+- https://www.openheart.icu/speech/music/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>MySQL</title>
+        <link>https://www.openheart.icu/cs/mysql/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/mysql/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/mysql/ -&lt;h1 id=&#34;install-mysql&#34;&gt;Install MySQL&lt;/h1&gt;
+&lt;h2 id=&#34;准备操作&#34;&gt;准备操作&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;lsb_release -a						&lt;span style=&#34;color:#228b22&#34;&gt;# 查看操作系统版本&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# LSB Version:	:core-4.1-amd64:core-4.1-noarch&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# Distributor ID:	CentOS&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# Description:	CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# Release:	7.8.2003&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# Codename:	Core&lt;/span&gt;
+
+cat /etc/redhat-release		&lt;span style=&#34;color:#228b22&#34;&gt;# 查看Linux内核版本&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
+
+getconf LONG_BIT					&lt;span style=&#34;color:#228b22&#34;&gt;# 查看系统位数&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 64&lt;/span&gt;
+
+yum -y update							&lt;span style=&#34;color:#228b22&#34;&gt;# 更新 yum&lt;/span&gt;
+rpm -qa | grep mysql			&lt;span style=&#34;color:#228b22&#34;&gt;# 查看是否安装过MySQL&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装mysql&#34;&gt;安装MySQL&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 此处版本为在CentOS7下安装MySQL8.0&lt;/span&gt;
+wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 安装&lt;/span&gt;
+sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#mysql80-community-release-el7-3.noarch&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 禁用 mysql8.0:&lt;/span&gt;
+sudo yum-config-manager --disable mysql80-community
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 启用 mysql8.0&lt;/span&gt;
+sudo yum-config-manager --enable mysql80-community
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 校验当前启用(enable)的 mysql 版本是否为 5.7:&lt;/span&gt;
+yum repolist enabled | grep mysql
+&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-connectors-community/x86_64 MySQL Connectors Community                 165&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-tools-community/x86_64      MySQL Tools Community                      115&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# mysql80-community/x86_64          MySQL 8.0 Community Server                 193&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 安装MySQL&lt;/span&gt;
+sudo yum install -y mysql-community-server
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 启动 mysql 服务&lt;/span&gt;
+sudo service mysqld start
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看 mysql 服务状态&lt;/span&gt;
+sudo service mysqld status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;mysql初始化设置&#34;&gt;MySQL初始化设置&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 查看初始密码&lt;/span&gt;
+sudo grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;temporary password&amp;#39;&lt;/span&gt; /var/log/mysqld.log
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 使用初始密码进行登录&lt;/span&gt;
+mysql -u root -p
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 登录成功之后设置新密码&lt;/span&gt;
+ALTER USER &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建用户&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 允许本地 IP（localhost, 127.0.0.1）访问：&lt;/span&gt;
+create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 允许任何 IP 访问：&lt;/span&gt;
+create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 刷新权限&lt;/span&gt;
+FLUSH PRIVILEGES;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 8.0版本后&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建账户&lt;/span&gt;
+create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; identified by  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人&lt;/span&gt;
+grant all privileges on *.* to &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; with grant option;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 改密码&amp;amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里&lt;/span&gt;
+flush privileges;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 修改host 将kris用作登录账户名&lt;/span&gt;
+update mysql.user &lt;span style=&#34;color:#658b00&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; where &lt;span style=&#34;color:#00688b&#34;&gt;User&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mysql/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -60,6 +558,17 @@ nginx -c /etc/nginx/nginx.conf
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires 1h;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/nginx/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Operating System</title>
+        <link>https://www.openheart.icu/cs/operating-system/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/operating-system/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/operating-system/ -- https://www.openheart.icu/cs/operating-system/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -937,197 +1446,6 @@ AUGUST 10, 2018&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;有人觉得用新型肺炎和亲密关系作比较是荒唐又可笑的，他们不该怪我，毕竟亲密关系本身就是荒唐又可笑的。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;2020-02-06，乐安，小雪，怕死&lt;/em&gt;&lt;/p&gt;
 - https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>下一站</title>
-        <link>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</link>
-        <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ -&lt;p&gt;不是茶山刘，是草山岭东。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;故事&#34;&gt;故事&lt;/h1&gt;
-&lt;p&gt;如果要我编个故事，我必然会这么写：&lt;/p&gt;
-&lt;p&gt;“我是刘波，百度上‘刘波’的搜索结果有一千二百八十万个，我可能不是你们认识的那个。我和其他刘波不同，我爸不是木匠，我不是山大毕业，我更不是主播也不配钥匙……我和其他刘波一样，我也喜欢一个张苇，也时常在熙攘的人群中当众孤独，我也不知道我到底想要什么……”这是人物；&lt;/p&gt;
-&lt;p&gt;“公交车顺着经十路往西，我被挤在公交车后门脸快贴到玻璃，路上拥挤的人群在整齐的标语和不整齐的广告中显得更加拥挤。我服了，于是我把自己放到了乐安县与油城的中间偏南，这里足够空旷。这里秋天的下午和别地儿一样慵懒，风挺大，云彩也不小；风吹云彩，太阳时隐时现，像极了梦里的张苇，所以我爱死了下午的太阳……”这是环境；&lt;/p&gt;
-&lt;p&gt;“我要如何体面地date张苇，她会如何体面地拒绝我，我该如何体面地认同她的拒绝，我一问三不知……”这是故事情节。&lt;/p&gt;
-&lt;p&gt;要是假期再充裕点，我可以是欧亨利，也可以是莫泊桑。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;国庆&#34;&gt;国庆&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在狼牙区 在飞虎路 那李杀神 王诛魔 还有刘斩仙 断罪小学 再度聚首 齐心协力 只因为 一个大魔头&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;大魔头是谁就不用问了吧，军人伟大，异地恋伟大，大魔头只配挨打，懂吧！&lt;/p&gt;
-&lt;p&gt;国庆加班开始前一晚上喜迎院士孙，我们几个在天没黑前走进饭店速战速决，然后各就各位。在开始电子竞技前，异口同声骂我朋张“被小孙洋的小香批迷住了双眼”（我除外，我不会骂人）。&lt;/p&gt;
-&lt;p&gt;国庆加班结束前一晚上喜迎农民许，我们几个在政法学院旁边，感受到康康他们租的宾馆里浓厚的学习氛围后，在他们宾馆楼下的豪华网咖开始电子竞技，按习俗我朋张必须挨骂，“他就是个豁批犯”（不是我说的，我不会骂人）。&lt;/p&gt;
-&lt;p&gt;其实，院士孙和农民许并不配骂我朋张，因为他俩来泉城完全是路过，他俩的目的地一个是一国两制的小香批一个是油城的小香批，真是五十步笑百步。&lt;/p&gt;
-&lt;p&gt;世界与我都不完美，万物都有美中不足之处（我除外，我只有不足）。国庆长假也不例外，除了长假不够长这一明显不足外还有两个。&lt;/p&gt;
-&lt;p&gt;一是由于各种原因没吃上公司旁边刚开业生意兴隆的蟹黄生煎。&lt;/p&gt;
-&lt;p&gt;二是没在6号晚上及时亲手接过院士孙给我代的大地，然后大声让他滚出我屋。&lt;/p&gt;
-&lt;p&gt;但总体上来说国庆长假还算圆满。这是我在泉城过得第一个国庆，康康说泉城比琴岛宜居，其实我也感觉到了，冬暖夏凉怕是琴岛唯一的优势了。&lt;/p&gt;
-&lt;p&gt;还有一个有关国庆的就是，这几天除了路灯挂上了五星红旗，路边还多了挺多标语……&lt;/p&gt;
-&lt;p&gt;“灭霸扫痞”与“除暴安良”不停地交配、繁殖，与“鼓励二胎”一起平分了原本属于“计划生育好”的天下。虽然比“年产一零七零万吨钢铁”要些许得靠谱，但还是难免让多愁善感的人叹一口气，“时过境迁，物是人非”（我爱国爱党，没有任何暗示，如果有，也与本人无关）。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;活着&#34;&gt;活着&lt;/h1&gt;
-&lt;p&gt;其实，除了国庆也没啥可以说道的。&lt;/p&gt;
-&lt;p&gt;自打中秋节画了个月亮里的张苇，就没动过画笔，樱花牌的固体颜料都裂开了，像极了樱花。&lt;/p&gt;
-&lt;p&gt;这半年我也还是没做到不以物喜不以己悲。&lt;/p&gt;
-&lt;p&gt;拿到大地后特意发了个微博。我没做到不以物喜，我对不起范仲淹。&lt;/p&gt;
-&lt;p&gt;在一群贪财好色的人中，有的成了冯唐、王小波、王朔、渡边淳一、杜拉斯、萨德、劳伦斯、三岛由纪夫……有的成了空山基、金政基、席勒、莫迪里阿尼、前田俊夫、佐伯俊男……（还有很多我就不列举了，不然就成当众开车了）却只有我成了刘波。我没做到不以己悲，我对不起范仲淹。&lt;/p&gt;
-&lt;p&gt;我现在做的，能做的也就只有活着了，大地也不能让我在活着前面加个“好好”。&lt;/p&gt;
-&lt;p&gt;然后呢，这几个完成“豁小香批”成就的（此处并非特指男生，也包括个别女生）和我妈一样开始担心起我的感情生活了。他们从正面侧面反面对我的将来进行大胆预测，让我对未来根本不抱有任何期望。&lt;/p&gt;
-&lt;p&gt;他们与其问我什么时候能在我结婚典礼上听到我背唐诗宋词汉乐府，还不如问我在结婚典礼上会背长恨歌还是孔雀东南飞。懂吧，我起码能给他们个确切的答案。&lt;/p&gt;
-&lt;p&gt;说起往南飞，你说如果世上没有了南这个方向……&lt;/p&gt;
-&lt;p&gt;那我要撞张苇的南墙，是不是就要从佛王村出发，带足干粮或者带足银行卡一直往北，途径北极、南极，行程40万公里，才能一头撞死我自己或者撞瞎张苇？&lt;/p&gt;
-&lt;p&gt;虽然我极力地避免在多事之秋出门，但故事里一旦有张苇，那我内心与肉体必肿胀，这40万公里是逃不掉的。舔狗舔到最后一无所有，但没办法，大地毕竟不是聚斯金德笔下的格雷诺耶谋杀二十六个少女后制成的香水，并不能让我***永久占有（包括进行占有）***张苇。&lt;/p&gt;
-&lt;p&gt;我会继续努力的，努力方向可以是张苇，但没必要。&lt;/p&gt;
-&lt;p&gt;不以物喜不以己悲，不用互勉，我自己勉自己。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2018年10月7日&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Abstinence</title>
-        <link>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</link>
-        <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E6%88%92%E9%85%92/ -&lt;h1 id=&#34;戒酒&#34;&gt;戒酒&lt;/h1&gt;
-&lt;p&gt;我把眼泪酿成酒&lt;/p&gt;
-&lt;p&gt;一股脑喝进了肚子&lt;/p&gt;
-&lt;p&gt;肾老是大呼着将进酒&lt;/p&gt;
-&lt;p&gt;他总爱把酒糟蹋成尿&lt;/p&gt;
-&lt;p&gt;我的泪就这样进入了下水道&lt;/p&gt;
-&lt;p&gt;与他人的泪混在一起&lt;/p&gt;
-&lt;p&gt;悲伤与悲伤互相交融&lt;/p&gt;
-&lt;p&gt;寂寞与寂寞互相倾诉&lt;/p&gt;
-&lt;p&gt;后来&lt;/p&gt;
-&lt;p&gt;不知又过了多久&lt;/p&gt;
-&lt;p&gt;烈日炎炎将其蒸发&lt;/p&gt;
-&lt;p&gt;化作一场秋雨&lt;/p&gt;
-&lt;p&gt;淋在我的脸上&lt;/p&gt;
-&lt;p&gt;我伸出舌尖&lt;/p&gt;
-&lt;p&gt;尝出了那是我的眼泪&lt;/p&gt;
-&lt;p&gt;味道太差&lt;/p&gt;
-&lt;p&gt;所以我不再哭&lt;/p&gt;
-&lt;p&gt;顺便戒了酒&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2017.10.10&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E6%88%92%E9%85%92/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Children</title>
-        <link>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</link>
-        <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ -&lt;blockquote&gt;
-&lt;p&gt;你的儿女，其实并不是你的儿女&lt;/p&gt;
-&lt;p&gt;他们的诞生源自于你的情欲以及自身对于生命的渴望&lt;/p&gt;
-&lt;p&gt;他们借助你来到这个世界，却非为了你而来&lt;/p&gt;
-&lt;p&gt;他们在你身旁，然而并不是你的私人物品&lt;/p&gt;
-&lt;p&gt;你可以给予他们的是你的爱，不是你的想法&lt;/p&gt;
-&lt;p&gt;你可以庇护的是他们的身体，不是他们的灵魂&lt;/p&gt;
-&lt;p&gt;因为他们的灵魂属于明天&lt;/p&gt;
-&lt;p&gt;属于你做梦也无法到达的明天&lt;/p&gt;
-&lt;p&gt;你可以拼尽全力，变得像他们一样&lt;/p&gt;
-&lt;p&gt;你不能绞尽脑汁，让他们变得和你一样&lt;/p&gt;
-&lt;p&gt;因为生命不会后退，时间也不在过去停留&lt;/p&gt;
-&lt;p&gt;你是弓，儿女是箭&lt;/p&gt;
-&lt;p&gt;弓箭手望着未来之路上的箭靶&lt;/p&gt;
-&lt;p&gt;他用尽力气将你拉开，使他的箭射得又快又远&lt;/p&gt;
-&lt;p&gt;所以怀着快乐的心情，在弓箭手的手中弯曲吧&lt;/p&gt;
-&lt;p&gt;因为他爱一路飞翔的箭，也爱无比稳定的弓&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这首诗是纪伯伦的《On Children》，我把这诗读给了我爸妈，于是我来到了你身边。&lt;/p&gt;
-- https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>智者不弱</title>
-        <link>https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/</link>
-        <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/ -&lt;p&gt;智者们也有七宗罪&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;傲慢、嫉妒、暴怒、懒惰、贪婪、色欲、暴食&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;但他们凭借控制力把罪过埋在心里&lt;/p&gt;
-&lt;p&gt;一生只吃无花果&lt;/p&gt;
-&lt;p&gt;于是变得很强&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;青龙山下青龙湖&lt;/p&gt;
-&lt;p&gt;无花树上无花果&lt;/p&gt;
-&lt;p&gt;弱智眼里出弱智&lt;/p&gt;
-&lt;p&gt;正常人中无正常&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;现在的人隐藏的都太好了&lt;/p&gt;
-&lt;p&gt;根本分不清谁与谁一样&lt;/p&gt;
-&lt;p&gt;我又少了很多&lt;/p&gt;
-&lt;p&gt;所谓知己&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;正常人都有个梦想&lt;/p&gt;
-&lt;p&gt;无关贫富&lt;/p&gt;
-&lt;p&gt;想要一座房子&lt;/p&gt;
-&lt;p&gt;面朝哪儿无所谓&lt;/p&gt;
-&lt;p&gt;春花何花无所谓&lt;/p&gt;
-&lt;p&gt;弱智也有一个梦想&lt;/p&gt;
-&lt;p&gt;无关美丑&lt;/p&gt;
-&lt;p&gt;想要一个姑娘&lt;/p&gt;
-&lt;p&gt;面朝是青龙湖&lt;/p&gt;
-&lt;p&gt;身旁结无花果&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;《谁》&lt;/p&gt;
-&lt;p&gt;在青龙山下走&lt;/p&gt;
-&lt;p&gt;饮青龙湖中水&lt;/p&gt;
-&lt;p&gt;闻着无花果香&lt;/p&gt;
-&lt;p&gt;梦里梦见自己&lt;/p&gt;
-&lt;p&gt;没有墨子庄周&lt;/p&gt;
-&lt;p&gt;怀抱一个姑娘&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;最重要的问题往往没有答案&lt;/p&gt;
-&lt;p&gt;最聪明的弱智往往没有姑娘&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;世上娇娘皆虚妄&lt;/p&gt;
-&lt;p&gt;残花败柳排成行&lt;/p&gt;
-&lt;p&gt;难得一对好鸳鸯&lt;/p&gt;
-&lt;p&gt;扮成野鸡配豺狼&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;青龙山下，湖水泡茶，诵金刚经，念念有词：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“凡所有相，皆是虚妄”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;正常人在想是真亦假是假亦真&lt;/p&gt;
-&lt;p&gt;弱智们在想如来偷吃过无花果&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;弱智不会写字，笔落惊风雨&lt;/p&gt;
-&lt;p&gt;弱智不会说话，诗成泣鬼神&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;正常人关心生老病死，恋爱婚嫁，编着微博段子，成为知乎精英&lt;/p&gt;
-&lt;p&gt;弱智只等无花果开花，弱智只看青龙山日落&lt;/p&gt;
-&lt;p&gt;无花果的花，只有一朵&lt;/p&gt;
-&lt;p&gt;青龙山的日落，弱智数不过来，于是对谁都说是四十三次&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;正常人用说话证明自己多出色&lt;/p&gt;
-&lt;p&gt;可怜的弱智，却不会说话&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;会有个姑娘，于我乃一山，山下有湖，湖畔花开，秋后结果&lt;/p&gt;
-&lt;p&gt;我想我，是有了一山无花果，还是有了一个姑娘&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2017.12.01&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
