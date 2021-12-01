@@ -6,9 +6,129 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sun, 17 Oct 2021 11:35:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Nov 2021 23:28:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Remote Procedure Call</title>
+        <link>https://www.openheart.icu/cs/remote-procedure-call/</link>
+        <pubDate>Mon, 15 Nov 2021 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/remote-procedure-call/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/remote-procedure-call/ -&lt;h1 id=&#34;inter-process-communication&#34;&gt;Inter-Process Communication&lt;/h1&gt;
+&lt;h2 id=&#34;pipe&#34;&gt;Pipe&lt;/h2&gt;
+&lt;h2 id=&#34;signal&#34;&gt;Signal&lt;/h2&gt;
+&lt;h2 id=&#34;semaphore&#34;&gt;Semaphore&lt;/h2&gt;
+&lt;h2 id=&#34;message-queue&#34;&gt;Message Queue&lt;/h2&gt;
+&lt;h2 id=&#34;shared-memory&#34;&gt;Shared Memory&lt;/h2&gt;
+&lt;h2 id=&#34;socket&#34;&gt;Socket&lt;/h2&gt;
+&lt;h1 id=&#34;8-fallacies-of-distributed-computinghttpsenwikipediaorgwikifallacies_of_distributed_computing&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing&#34;&gt;8 Fallacies of Distributed Computing&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;1994 - 1997, ACM 和 Sun 院士&lt;a href=&#34;https://en.wikipedia.org/wiki/L._Peter_Deutsch&#34;&gt;Peter Deutsch&lt;/a&gt;、套接字接口发明者&lt;a href=&#34;https://en.wikipedia.org/wiki/Bill_Joy&#34;&gt;Bill Joy&lt;/a&gt;、Java 之父&lt;a href=&#34;https://en.wikipedia.org/wiki/James_Gosling&#34;&gt;James Gosling&lt;/a&gt;等一众在 Sun Microsystems 工作的大佬们共同总结了&lt;a href=&#34;https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing&#34;&gt;通过网络进行分布式运算的八宗罪&lt;/a&gt;（8 Fallacies of Distributed Computing）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;The network is reliable —— 网络是可靠的。&lt;/li&gt;
+&lt;li&gt;Latency is zero —— 延迟是不存在的。&lt;/li&gt;
+&lt;li&gt;Bandwidth is infinite —— 带宽是无限的。&lt;/li&gt;
+&lt;li&gt;The network is secure —— 网络是安全的。&lt;/li&gt;
+&lt;li&gt;Topology doesn&amp;rsquo;t change —— 拓扑结构是一成不变的。&lt;/li&gt;
+&lt;li&gt;There is one administrator —— 总会有一个管理员。&lt;/li&gt;
+&lt;li&gt;Transport cost is zero —— 不必考虑传输成本。&lt;/li&gt;
+&lt;li&gt;The network is homogeneous —— 网络是同质化（Homogeneous networks are networks where all the nodes have the same function in the network.）的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Homogeneous_vs._Heterogeneous_Networks.png&#34; alt=&#34;Homogeneous vs. Heterogeneous Networks&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/PARC_(company)&#34;&gt;施乐 Palo Alto 研究中心&lt;/a&gt;首次提出远程服务调用的定义&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Remote procedure call is the synchronous language-level transfer of control between programs in disjoint address spaces whose primary communication medium is a narrow channel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;远程服务调用是指位于互不重合的内存地址空间中的两个程序，在语言层面上，以同步的方式使用带宽有限的信道来传输程序控制信息。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://icyfenix.cn/assets/img/rpc.38c28315.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;3-basic-questions&#34;&gt;3 Basic Questions&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;20 世纪 80 年代中后期，惠普和 Apollo 提出了&lt;a href=&#34;https://en.wikipedia.org/wiki/Network_Computing_System&#34;&gt;网络运算架构&lt;/a&gt;（Network Computing Architecture，NCA）的设想，并随后在&lt;a href=&#34;https://en.wikipedia.org/wiki/Distributed_Computing_Environment&#34;&gt;DCE 项目&lt;/a&gt;中将其发展成在 UNIX 系统下的远程服务调用框架&lt;a href=&#34;https://zh.wikipedia.org/wiki/DCE/RPC&#34;&gt;DCE/RPC&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;微软 COM/DCOM 的前身&lt;a href=&#34;https://en.wikipedia.org/wiki/Microsoft_RPC&#34;&gt;MS RPC&lt;/a&gt;算是 DCE 的一种变体版本。&lt;/p&gt;
+&lt;p&gt;在 1988 年，Sun Microsystems 起草并向&lt;a href=&#34;https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force&#34;&gt;互联网工程任务组&lt;/a&gt;（Internet Engineering Task Force，IETF）提交了&lt;a href=&#34;https://tools.ietf.org/html/rfc1050&#34;&gt;RFC 1050&lt;/a&gt;规范，此规范中设计了一套面向于广域网或混合网络环境的、基于 TCP/IP 的、支持 C 语言的 RPC 协议，后被称为&lt;a href=&#34;https://en.wikipedia.org/wiki/Open_Network_Computing_Remote_Procedure_Call&#34;&gt;ONC RPC&lt;/a&gt;（Open Network Computing RPC，也被称为 Sun RPC）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;如何表示数据&#34;&gt;如何表示数据&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;数据包括了传递给方法的参数，以及方法执行后的返回值。无论是将参数传递给另外一个进程，还是从另外一个进程中取回执行结果，都涉及到它们应该如何表示。进程内的方法调用，使用程序语言预置的和程序员自定义的数据类型，就很容易解决数据表示问题，远程方法调用则完全可能面临交互双方各自使用不同程序语言的情况；即使只支持一种程序语言的 RPC 协议，在不同硬件指令集、不同操作系统下，同样的数据类型也完全可能有不一样表现细节，譬如数据宽度、字节序的差异等等。有效的做法是将交互双方所涉及的数据转换为某种事先约定好的中立数据流格式来进行传输，将数据流转换回不同语言中对应的数据类型来进行使用，这个过程说起来拗口，但相信大家一定很熟悉，就是序列化与反序列化。每种 RPC 协议都应该要有对应的序列化协议，譬如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ONC RPC 的&lt;a href=&#34;https://en.wikipedia.org/wiki/External_Data_Representation&#34;&gt;External Data Representation&lt;/a&gt; （XDR）&lt;/li&gt;
+&lt;li&gt;CORBA 的&lt;a href=&#34;https://en.wikipedia.org/wiki/Common_Data_Representation&#34;&gt;Common Data Representation&lt;/a&gt;（CDR）&lt;/li&gt;
+&lt;li&gt;Java RMI 的&lt;a href=&#34;https://docs.oracle.com/javase/8/docs/platform/serialization/spec/protocol.html#a10258&#34;&gt;Java Object Serialization Stream Protocol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;gRPC 的&lt;a href=&#34;https://developers.google.com/protocol-buffers&#34;&gt;Protocol Buffers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Web Service 的&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/serialization/xml-serialization-with-xml-web-services&#34;&gt;XML Serialization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;众多轻量级 RPC 支持的&lt;a href=&#34;https://tools.ietf.org/html/rfc7159&#34;&gt;JSON Serialization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;如何传递数据&#34;&gt;如何传递数据&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如何通过网络，在两个服务的 Endpoint 之间相互操作、交换数据。这里“交换数据”通常指的是应用层协议，实际传输一般是基于标准的 TCP、UDP 等标准的传输层协议来完成的。两个服务交互不是只扔个序列化数据流来表示参数和结果就行的，许多在此之外信息，譬如异常、超时、安全、认证、授权、事务，等等，都可能产生双方需要交换信息的需求。在计算机科学中，专门有一个名称“&lt;a href=&#34;https://en.wikipedia.org/wiki/Wire_protocol&#34;&gt;Wire Protocol&lt;/a&gt;”来用于表示这种两个 Endpoint 之间交换这类数据的行为，常见的 Wire Protocol 有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java RMI 的&lt;a href=&#34;https://docs.oracle.com/javase/8/docs/platform/rmi/spec/rmi-protocol3.html&#34;&gt;Java Remote Message Protocol&lt;/a&gt;（JRMP，也支持&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=RMI-IIOP&amp;amp;action=edit&amp;amp;redlink=1&#34;&gt;RMI-IIOP&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;CORBA 的&lt;a href=&#34;https://en.wikipedia.org/wiki/General_Inter-ORB_Protocol&#34;&gt;Internet Inter ORB Protocol&lt;/a&gt;（IIOP，是 GIOP 协议在 IP 协议上的实现版本）&lt;/li&gt;
+&lt;li&gt;DDS 的&lt;a href=&#34;https://en.wikipedia.org/wiki/Data_Distribution_Service&#34;&gt;Real Time Publish Subscribe Protocol&lt;/a&gt;（RTPS）&lt;/li&gt;
+&lt;li&gt;Web Service 的&lt;a href=&#34;https://en.wikipedia.org/wiki/SOAP&#34;&gt;Simple Object Access Protocol&lt;/a&gt;（SOAP）&lt;/li&gt;
+&lt;li&gt;如果要求足够简单，双方都是 HTTP Endpoint，直接使用 HTTP 协议也是可以的（如 JSON-RPC）&lt;/li&gt;
+&lt;li&gt;……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;如何确定方法&#34;&gt;如何确定方法&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这在本地方法调用中并不是太大的问题，编译器或者解释器会根据语言规范，将调用的方法签名转换为进程空间中子过程入口位置的指针。不过一旦要考虑不同语言，事情又立刻麻烦起来，每门语言的方法签名都可能有所差别，所以“如何表示同一个方法”，“如何找到对应的方法”还是得弄个跨语言的统一的标准才行。这个标准做起来可以非常简单，譬如直接给程序的每个方法都规定一个唯一的、在任何机器上都绝不重复的编号，调用时压根不管它什么方法签名是如何定义的，直接传这个编号就能找到对应的方法。这种听起既粗鲁又寒碜的办法，还真的就是 DCE/RPC 当初准备的解决方案。虽然最终 DCE 还是弄出了一套语言无关的&lt;a href=&#34;https://en.wikipedia.org/wiki/Interface_description_language&#34;&gt;接口描述语言&lt;/a&gt;（Interface Description Language，IDL），成为此后许多 RPC 参考或依赖的基础（如 CORBA 的 OMG IDL），但那个唯一的绝不重复的编码方案&lt;a href=&#34;https://en.wikipedia.org/wiki/Universally_unique_identifier&#34;&gt;UUID&lt;/a&gt;（Universally Unique Identifier）却也被保留且广为流传开来，今天已广泛应用于程序开发的方方面面。类似地，用于表示方法的协议还有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Android 的&lt;a href=&#34;https://developer.android.com/guide/components/aidl&#34;&gt;Android Interface Definition Language&lt;/a&gt;（AIDL）&lt;/li&gt;
+&lt;li&gt;CORBA 的&lt;a href=&#34;https://www.omg.org/spec/IDL&#34;&gt;OMG Interface Definition Language&lt;/a&gt;（OMG IDL）&lt;/li&gt;
+&lt;li&gt;Web Service 的&lt;a href=&#34;https://zh.wikipedia.org/wiki/WSDL&#34;&gt;Web Service Description Language&lt;/a&gt;（WSDL）&lt;/li&gt;
+&lt;li&gt;JSON-RPC 的&lt;a href=&#34;https://en.wikipedia.org/wiki/JSON-WSP&#34;&gt;JSON Web Service Protocol&lt;/a&gt;（JSON-WSP）&lt;/li&gt;
+&lt;li&gt;……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那些面向透明的、简单的 RPC 协议，如 DCE/RPC、DCOM、Java RMI，要么依赖于操作系统，要么依赖于特定语言，总有一些先天约束；那些面向通用的、普适的 RPC 协议；如 CORBA，就无法逃过使用复杂性的困扰，CORBA 烦琐的 OMG IDL、ORB 都是很好的佐证；而那些意图通过技术手段来屏蔽复杂性的 RPC 协议，如 Web Service，又不免受到性能问题的束缚。简单、普适、高性能这三点，似乎真的难以同时满足。&lt;/p&gt;
+&lt;p&gt;由于一直没有一个同时满足以上三点的“完美 RPC 协议”出现，所以远程服务器调用这个小小的领域里，已经相继出现过 RMI（Sun/Oracle）、Thrift（Facebook/Apache）、Dubbo（阿里巴巴/Apache）、gRPC（Google）、Motan1/2（新浪）、Finagle（Twitter）、brpc（百度/Apache）、.NET Remoting（微软）、Arvo（Hadoop）、JSON-RPC 2.0（公开规范，JSON-RPC 工作组）……等等难以穷举的协议和框架。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;朝着&lt;strong&gt;面向对象&lt;/strong&gt;发展，不满足于 RPC 将面向过程的编码方式带到分布式，希望在分布式系统中也能够进行跨进程的面向对象编程，代表为 RMI、&lt;a href=&#34;https://zh.wikipedia.org/wiki/.NET_Remoting&#34;&gt;.NET Remoting&lt;/a&gt;(已集成到&lt;a href=&#34;https://en.wikipedia.org/wiki/Windows_Communication_Foundation&#34;&gt;WCF&lt;/a&gt;中)，之前的 CORBA 和 DCOM 也可以归入这类，这条线有一个别名叫做&lt;a href=&#34;https://en.wikipedia.org/wiki/Distributed_object&#34;&gt;分布式对象&lt;/a&gt;（Distributed Object）。&lt;/li&gt;
+&lt;li&gt;朝着&lt;strong&gt;性能&lt;/strong&gt;发展，代表为 gRPC 和 Thrift。决定 RPC 性能的主要就两个因素：序列化效率和信息密度。序列化效率很好理解，序列化输出结果的容量越小，速度越快，效率自然越高；信息密度则取决于协议中有效荷载（Payload）所占总传输数据的比例大小，使用传输协议的层次越高，信息密度就越低，SOAP 使用 XML 拙劣的性能表现就是前车之鉴。gRPC 和 Thrift 都有自己优秀的专有序列化器，而传输协议方面，gRPC 是基于 HTTP/2 的，支持多路复用和 Header 压缩，Thrift 则直接基于传输层的 TCP 协议来实现，省去了额外应用层协议的开销。&lt;/li&gt;
+&lt;li&gt;朝着&lt;strong&gt;简化&lt;/strong&gt;发展，代表为 JSON-RPC，说要选功能最强、速度最快的 RPC 可能会很有争议，但选功能弱的、速度慢的，JSON-RPC 肯定会候选人中之一。牺牲了功能和效率，换来的是协议的简单轻便，接口与格式都更为通用，尤其适合用于 Web 浏览器这类一般不会有额外协议支持、额外客户端支持的应用场合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Andrew Tanenbaum, 1987, &lt;a href=&#34;https://www.cs.vu.nl/~ast/Publications/Papers/euteco-1988.pdf&#34;&gt;A Critique of The Remote Procedure Call Paradigm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bruce Jay Nelson，&lt;a href=&#34;http://www.bitsavers.org/pdf/xerox/parc/techReports/CSL-81-9_Remote_Procedure_Call.pdf&#34;&gt;Remote Procedure Call&lt;/a&gt;，Xerox PARC，1981&lt;/li&gt;
+&lt;li&gt;惠普 Apollo, &lt;a href=&#34;https://en.wikipedia.org/wiki/Network_Computing_System&#34;&gt;网络运算架构&lt;/a&gt;（Network Computing Architecture，NCA）&lt;/li&gt;
+&lt;li&gt;Michi Henning, &lt;a href=&#34;https://dl.acm.org/doi/pdf/10.1145/1142031.1142044&#34;&gt;The Rise and Fall of CORBA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-netod/bfd49902-36d7-4479-bf75-a2431bd99039&#34;&gt;MS-NETOD: .NET Remoting | Microsoft Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/framework/wcf/migrating-from-net-remoting-to-wcf&#34;&gt;Migrating from .NET Remoting to WCF - WCF | Microsoft Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guides.co/g/the-network-effects-bible/121732&#34;&gt;Homogeneous vs. Heterogeneous Networks | The Network Effects Bible | Guides&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+- https://www.openheart.icu/cs/remote-procedure-call/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>AWS</title>
+        <link>https://www.openheart.icu/cs/aws/</link>
+        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/aws/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/aws/ -&lt;h1 id=&#34;s3&#34;&gt;S3&lt;/h1&gt;
+&lt;h2 id=&#34;access-to-s3-object&#34;&gt;Access to S3 Object&lt;/h2&gt;
+&lt;h3 id=&#34;notes&#34;&gt;Notes:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Add permission &lt;code&gt;AmazonS3ReadOnlyAccess&lt;/code&gt; for IMA User.&lt;/li&gt;
+&lt;li&gt;If you use postman, set Authorization to AWS Signature type. Fill the field &lt;code&gt;AccessKey&lt;/code&gt; &amp;amp; &lt;code&gt;SecretKey&lt;/code&gt; &amp;amp; &lt;code&gt;AWS Region&lt;/code&gt; &amp;amp; &lt;code&gt;Service Name&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If you use Infor File Server, add Additional properties for AWS S3 servers. It contains &lt;code&gt;aws_region&lt;/code&gt;, and you need set the full path to the External Bucket Name.&lt;/li&gt;
+&lt;li&gt;Unlike standard Windows file systems, the &lt;strong&gt;Amazon S3 storage is case-sensitive&lt;/strong&gt;. Unfortunately, Infor File Server always uses lowercase path!&lt;/li&gt;
+&lt;/ol&gt;
+- https://www.openheart.icu/cs/aws/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -40,15 +160,425 @@
     
     
         <item>
+        <title>CSAPP</title>
+        <link>https://www.openheart.icu/cs/csapp/</link>
+        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/csapp/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/csapp/ -&lt;h1 id=&#34;issues&#34;&gt;ISSUES&lt;/h1&gt;
+&lt;h2 id=&#34;application-binary-interface&#34;&gt;Application binary interface&lt;/h2&gt;
+&lt;h2 id=&#34;区分高可靠性与高可用性&#34;&gt;区分高可靠性与高可用性&lt;/h2&gt;
+&lt;p&gt;Reliability和Availability分别对应可靠性和可用性, 这两个概念既有区别也有联系:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reliability定义为一个服务连续无故障运行的时间，无故障运行的时间越长，可靠性就越高。&lt;/li&gt;
+&lt;li&gt;Availiability定义为在足够长的时间里，比如一年的时间里，一个服务可用的时间，服务可用时间越长越好。一般用可服务时间除于总时间算出一个百分比，用百分比作为度量。比如一个服务如果有5个9的可用性，指的就是一年里99.999%时间里服务都是可用的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;有两个极端的例子可以很好的说明这两个概念的区别:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;假想一个服务，可靠性很高，平均来说可以稳定运行10年，但是一旦服务中断，要用一年的时间来恢复，那么它的可用性只有90%。&lt;/li&gt;
+&lt;li&gt;假想另一个服务，可靠性很差，运行10秒就会宕机，但是恢复服务只需要1ms, 那么它的可用性是99.99%&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;从这两个极端的例子可以看出，提高可用性有两条路:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一是提高可靠性，当然影响可靠性的原因有很多，包括硬件，软件，网络，运维等。但是有人做过统计，软件的bug是影响可靠性的最主要的因素。并且提高软件质量相较于使用更可靠的硬件也算成本较低的方式了，&lt;/li&gt;
+&lt;li&gt;二是减少恢复时间，一旦出现宕机，如果能在秒级恢复，那对业务影响是很小的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;高可靠性的实现&#34;&gt;高可靠性的实现&lt;/h3&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;高可用性的实现&#34;&gt;高可用性的实现&lt;/h3&gt;
+&lt;p&gt;高可用HA（High Availability）是分布式系统架构设计中必须考虑的因素之一，它通常是指，通过设计减少系统不能提供服务的时间。&lt;/p&gt;
+&lt;h4 id=&#34;在设计高可用性策略时应该首先考虑下述因素&#34;&gt;在设计高可用性策略时应该首先考虑下述因素&lt;/h4&gt;
+&lt;p&gt;​    • RTO（Recovery Time Objective）-也就是恢复时间目标，意味着允许多少宕机时间，通常用几个9表示，比如说99.999%的可用性意味着每年的宕机时间不超过5分钟、99.99%的可用性意味着每年的宕机时间不超过52.5分钟、99.9%的可用性意味着每年的宕机时间不超过8.75小时。值得注意的是，RTO的计算方法要考虑系统是24*365，还是仅仅是上午6点到下午9点等。您还需要注意是否维护窗口的时间在算在宕机时间之内，如果允许在维护窗口时间进行数据库维护和打补丁，则更容易实现更高的可用性。&lt;/p&gt;
+&lt;p&gt;​    • RPO（Recovery Point Objective）-也就是恢复点目标，意味着允许多少数据损失。通常只要做好备份，可以比较容易的实现零数据损失。但当灾难发生时，取决于数据库损坏的程度，从备份恢复数据所需要的时间会导致数据库不可用，这会影响RTO的实现。一个早期比较著名的例子是某欧美的银行系统，只考虑的RPO，系统里只存在了完整备份和日志备份，每3个月一次完整备份，每15分钟一次日志备份，当灾难发生时，只能够通过完整备份和日志备份来恢复数据，因此虽然没有数据丢失，但由于恢复数据花了整整两天时间，造成银行系统2天时间不可用，因此流失了大量客户。另外一个相反的例子是国内某在线视频网站，使用SQL Server作为后端关系数据库，前端使用了No-SQL，定期将No-SQL的数据导入关系数据库作为备份，当灾难发生时最多允许丢失一天的数据，但是要保证高可用性。&lt;/p&gt;
+&lt;h4 id=&#34;高可用的实现&#34;&gt;高可用的实现&lt;/h4&gt;
+&lt;p&gt;整个互联网分层系统架构的高可用，又是通过每一层的&lt;strong&gt;冗余+自动故障转移&lt;/strong&gt;来综合实现的，具体的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;【客户端层】到【反向代理层】的高可用，是通过反向代理层的冗余实现的，常见实践是keepalived + virtual IP自动故障转移&lt;/li&gt;
+&lt;li&gt;【反向代理层】到【站点层】的高可用，是通过站点层的冗余实现的，常见实践是nginx与web-server之间的存活性探测与自动故障转移&lt;/li&gt;
+&lt;li&gt;【站点层】到【服务层】的高可用，是通过服务层的冗余实现的，常见实践是通过service-connection-pool来保证自动故障转移&lt;/li&gt;
+&lt;li&gt;【服务层】到【缓存层】的高可用，是通过缓存数据的冗余实现的，常见实践是缓存客户端双读双写，或者利用缓存集群的主从数据同步与sentinel保活与自动故障转移；更多的业务场景，对缓存没有高可用要求，可以使用缓存服务化来对调用方屏蔽底层复杂性&lt;/li&gt;
+&lt;li&gt;【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移&lt;/li&gt;
+&lt;li&gt;【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;sqlserver所支持的高可用特性&#34;&gt;SQlServer所支持的高可用特性&lt;/h4&gt;
+&lt;p&gt;SQL Server中所支持的高可用性功能与版本息息相关，企业版支持所有的高可用性功能，这些功能包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;故障转移集群&lt;/li&gt;
+&lt;li&gt;数据库镜像（在SQL Server 2012中被标记为“过时”）&lt;/li&gt;
+&lt;li&gt;事务日志传送&lt;/li&gt;
+&lt;li&gt;数据库快照&lt;/li&gt;
+&lt;li&gt;AlwaysOn可用性组&lt;/li&gt;
+&lt;li&gt;热加载内存&lt;/li&gt;
+&lt;li&gt;在线索引操作&lt;/li&gt;
+&lt;li&gt;数据库部分在线（只还原了主文件组或主文件组和额外的NDF文件）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;故障转移集群&#34;&gt;故障转移集群&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;故障转移集群为整个SQL Server实例提供高可用性支持，这意味着在集群上某个节点的SQL Server实例发生了硬件错误、操作系统错误等会故障转移到该集群上的其它节点。通过多个服务器（节点）共享一个或多个磁盘来实现高可用性，故障转移集群在网络中出现的方式就像单台计算机一样，但是具有高可用特性。值得注意的是，由于故障转移集群是基于共享磁盘，因此会存在磁盘单点故障，因此需要在磁盘层面部署SAN复制等额外的保护措施。常见的故障转移集群是双节点的故障转移集群，包括主主节点和主从节点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;事务日志传送&#34;&gt;事务日志传送&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;事务日志传送提供了数据库级别的高可用性保护。日志传送可用来维护相应生产数据库（称为“主数据库”）的一个或多个备用数据库（称为“辅助数据库”）。发生故障转移之前，必须通过手动应用全部未还原的日志备份来完全更新辅助数据库。日志传送具有支持多个备用数据库的灵活性。如果需要多个备用数据库，可以单独使用日志传送或将其作为数据库镜像的补充。当这些解决方案一起使用时，当前数据库镜像配置的主体数据库同时也是当前日志传送配置的主数据库。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事务日志传送可用于做冷备份和暖备份的方式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;数据库镜像&#34;&gt;数据库镜像&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数据库镜像实际上是个软件解决方案，同样提供了数据库级别的保护，可提供几乎是瞬时的故障转移，以提高数据库的可用性。数据库镜像可以用来维护相应生产数据库（称为“主体数据库”）的单个备用数据库（或“镜像数据库”）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;因为镜像数据库一直处于还原状态，但并不会恢复数据库，因此无法直接访问镜像数据库。但是，为了用于报表等只读的负载，可创建镜像数据库的数据库快照来间接地使用镜像数据库。数据库快照为客户端提供了快照创建时对数据库中数据的只读访问。每个数据库镜像配置都涉及包含主体数据库的“主体服务器”，并且还涉及包含镜像数据库的镜像服务器。镜像服务器不断地使镜像数据库随主体数据库一起更新。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库镜像在高安全性模式下以同步操作运行，或在高性能模式下以异步操作运行。在高性能模式下，事务不需要等待镜像服务器将日志写入磁盘便可提交，这样可较大程度地提高性能。在高安全性模式下，已提交的事务将由伙伴双方提交，但会延长事务滞后时间。数据库镜像的最简单配置仅涉及主体服务器和镜像服务器。在该配置中，如果主体服务器丢失，则该镜像服务器可以用作备用服务器，但可能会造成数据丢失。高安全性模式支持具有自动故障转移功能的备用配置高安全性模式。这种配置涉及到称为“见证服务器”的第三方服务器实例，它能够使镜像服务器用作热备份服务器。从主体数据库至镜像数据库的故障转移通常要用几秒钟的时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库镜像可用于做暖备份和热备份。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;复制&#34;&gt;复制&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;复制严格来说并不算是一个为高可用性设计的功能，但的确可以被应用于高可用性。复制提供了数据库对象级别的保护。复制使用的是发布-订阅模式，即由主服务器（称为发布服务器）向一个或多个辅助服务器或订阅服务器发布数据。复制可在这些服务器间提供实时的可用性和可伸缩性。它支持筛选，以便为订阅服务器提供数据子集，同时还支持分区更新。订阅服务器处于联机状态，并且可用于报表或其他功能，而无需进行查询恢复。SQL Server 提供四种复制类型：快照复制、事务复制、对等复制以及合并复制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;alwayson可用性组&#34;&gt;AlwaysOn可用性组&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;AlwaysOn可用性组是SQL Server 2012推出的新功能。同样提供了数据库级别的保护。它取数据库镜像和故障转移集群之长，使得业务上有关联的数据库作为一个可用性组共同故障转移，该功能还拓展了数据库镜像只能1对1的限制，使得1个主副本可以对应最多4个辅助副本（在SQL Server 2014中，该限制被拓展到8个），其中2个辅助副本可以被作为热备份和主副本实时同步，而另外两个异步辅助副本可以作为暖备份。此外，辅助副本还可以被配置为只读，并可用于承担备份的负载。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;处理器中的流水线&#34;&gt;处理器中的流水线&lt;/h2&gt;
+&lt;p&gt;在现代处理器中，流水线是一个最基本的概念。在了解cpu的时候，很多时候会提及拥有多少级流水线。虽然这个概念并不是在计算机技术中诞生的，但是这个技术却在处理器世界中大放异彩。&lt;/p&gt;
+&lt;p&gt;流水线(Pipeline)技术是指程序在执行时候多条指令重叠进行操作的一种准并行处理实现技术。通俗的讲将一个时序过程，分解成若干个子过程，每个过程都能有效的与其他子过程同时执行。这种思想最初是在RISC的架构中出现的，旨在提高处理器处理效率，争取在一个时钟周期中完成一条指令。&lt;/p&gt;
+&lt;p&gt;最经典的当属MIPS(无内部互锁的流水线处理器)的五级流水线技术。MIPS体系结构本身就是为了流水线而设计的，cpu在高速缓存中运行，每条指令的执行过程都分成五级。每一级成为一个流水线阶段，每个阶段占用固定的时间，通常是一个时钟周期。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E4%BA%94%E7%BA%A7%E6%B5%81%E6%B0%B4%E7%BA%BF1365345053_3598.jpg&#34; alt=&#34;五级流水线&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上图是MIPS的五级流水线&lt;/p&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;IF(instruction fetch)&lt;/code&gt;：从指令高速缓存中获取下一条指令。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RD(Read register)&lt;/code&gt;：从指定的源寄存器域中指定的cpu寄存器中读取数据。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ALU(arithmetic/logic  unit)&lt;/code&gt;：算术和逻辑运算操作。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;MEM(memory R/W)&lt;/code&gt;：读写数据高速缓存中的内存变量。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WB(Write back)&lt;/code&gt;：将结果写入寄存器堆中。&lt;/p&gt;
+&lt;p&gt;很明显，如果只执行一条指令的话，流水线是不会提高效率的。但是如果要完成多条指令，利用流水线的并行原理，其实是可以提高几倍的处理速度。&lt;/p&gt;
+&lt;p&gt;由于流水线技术的高效性，后来所有的处理器都引进了该实现，当然包括x86的处理器，当年奔四号称20级的流水线结构。但是，是不是流水线级数越多越好呢？流水线级数越多，在处理多指令的时候确实也会越高效，但必然以高成本为代价，同时也会出现很多相关的一些副作用。&lt;/p&gt;
+&lt;p&gt;流水线的更多详细说明可以参阅更多书籍或者wiki。对于基础书籍推荐一下《&lt;em&gt;大话处理器&lt;/em&gt;》的部分章节。&lt;/p&gt;
+&lt;h2 id=&#34;处理器中的冒险&#34;&gt;处理器中的冒险&lt;/h2&gt;
+&lt;p&gt;流水线给处理器带来了效率，当然也有问题。称之为流水线冒险(HaZard)。&lt;/p&gt;
+&lt;h3 id=&#34;结构冒险&#34;&gt;结构冒险&lt;/h3&gt;
+&lt;p&gt;由于处理器资源冲突，而无法实现某些指令或者阶段的组合实现，就称之为处理器有结构冒险。&lt;/p&gt;
+&lt;p&gt;比如，早期的处理器中，程序和数据是存储在一起的，那么容易出现下图的情况：在第四个cycle中，IF和MEM同时访问存储器导致有一个操作要等待，此时hazard就出现了。现在的处理器已经解决了该问题：指令存储在L1P cache中，数据存储L1D cache中，单独访问，不会影响相互操作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E7%BB%93%E6%9E%84%E5%86%92%E9%99%A91365345110_7686.jpg&#34; alt=&#34;结构冒险&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;数据冒险&#34;&gt;数据冒险&lt;/h3&gt;
+&lt;p&gt;如果流水线中原来有先后顺序的指令同一时刻处理时，可能会导致出现访问了错误的数据的情况。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A91365345212_2478.jpg&#34; alt=&#34;数据冒险&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在汇编语句中，add R1,R2,R3 将寄存器R2和R3的和赋予R1，改变R1的值；而紧接着下面的语句：add R4,R1,R5则会使用R1的值，可是R1必须在第一条语句中的第5个cycle才能更新到寄存器中，语句二是在第4个cycle就要访问R1，也就是说第二,条指令此时在使用错误的R1的值。这是数据hazard出现了。&lt;/p&gt;
+&lt;p&gt;很容易就能想到一种方式解决：在两条指令中添加一条空指令：nop。但是会影响处理器的指令的执行效率。在现代处理器技术中，已经用forwarding的方式解决了。如下图，如果处理器在检测到当前指令的源操作数正好在流水线的EX或者MEM阶段，接直接将ex和mem寄存器的值传递给ALU的输入，而不是再从寄存器堆中获取数据了。因为此时寄存器堆中的数据可能是没有被及时更新的。&lt;/p&gt;
+&lt;p&gt;当然不仅在EX阶段有这种问题出现，在mem阶段也容易出现。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A91365345292_2683.jpg&#34; alt=&#34;解决数据冒险&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;控制冒险&#34;&gt;控制冒险&lt;/h3&gt;
+&lt;p&gt;在流水线中的的执行指令时，由于并行处理的关系，后面很多指令其实都在流水线中开始处理了，包括预取值和译码。那么，如果此时程序中出现一条跳转语句怎么办呢？因为程序已经跑到其他地址处执行，流水线中之前已经做好的预取值和译码动作都不能使用了。这些会被处理器的专有部件flush掉，重新开始新的流水线。此时我们可以称之为出现了控制hazard。这种情况对于程序和效率来说是存在很大损失的。&lt;/p&gt;
+&lt;p&gt;当然，我们也有解决方案，也就是在jump指令后面(不会被真正使用，但是会进入流水线)添加nop。在MIPS程序中，经常在jump指令后面添加nop语句。&lt;/p&gt;
+&lt;p&gt;在X86架构中，是通过硬件来实现flush，将无效的流水线排空，以保证正确运行流水线。这里会涉及到分支预测技术的使用。&lt;/p&gt;
+&lt;p&gt;在其他一些处理器中，用软件的方式来处理，添加nop。同时在编译器中通过乱序的思想用有效指令代替nop。这样也可以避免转跳带来的性能损失。&lt;/p&gt;
+- https://www.openheart.icu/cs/csapp/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
         <title>Database</title>
         <link>https://www.openheart.icu/cs/database/</link>
         <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
         
         <guid>https://www.openheart.icu/cs/database/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/database/ -&lt;h1 id=&#34;issues&#34;&gt;ISSUES&lt;/h1&gt;
+        <description>42th openheart https://www.openheart.icu/cs/database/ -&lt;h1 id=&#34;mysql&#34;&gt;MySQL&lt;/h1&gt;
+&lt;h2 id=&#34;install-mysql&#34;&gt;Install MySQL&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;lsb_release -a						&lt;span style=&#34;color:#228b22&#34;&gt;# 查看操作系统版本&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# LSB Version:	:core-4.1-amd64:core-4.1-noarch&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# Distributor ID:	CentOS&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# Description:	CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# Release:	7.8.2003&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# Codename:	Core&lt;/span&gt;
+
+cat /etc/redhat-release		&lt;span style=&#34;color:#228b22&#34;&gt;# 查看Linux内核版本&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
+
+getconf LONG_BIT					&lt;span style=&#34;color:#228b22&#34;&gt;# 查看系统位数&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 64&lt;/span&gt;
+
+yum -y update							&lt;span style=&#34;color:#228b22&#34;&gt;# 更新 yum&lt;/span&gt;
+rpm -qa | grep mysql			&lt;span style=&#34;color:#228b22&#34;&gt;# 查看是否安装过MySQL&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 此处版本为在CentOS7下安装MySQL8.0&lt;/span&gt;
+wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 安装&lt;/span&gt;
+sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#mysql80-community-release-el7-3.noarch&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 禁用 mysql8.0:&lt;/span&gt;
+sudo yum-config-manager --disable mysql80-community
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 启用 mysql8.0&lt;/span&gt;
+sudo yum-config-manager --enable mysql80-community
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 校验当前启用(enable)的 mysql 版本是否为 5.7:&lt;/span&gt;
+yum repolist enabled | grep mysql
+&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-connectors-community/x86_64 MySQL Connectors Community                 165&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-tools-community/x86_64      MySQL Tools Community                      115&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# mysql80-community/x86_64          MySQL 8.0 Community Server                 193&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 安装MySQL&lt;/span&gt;
+sudo yum install -y mysql-community-server
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 启动 mysql 服务&lt;/span&gt;
+sudo service mysqld start
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看 mysql 服务状态&lt;/span&gt;
+sudo service mysqld status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 查看初始密码&lt;/span&gt;
+sudo grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;temporary password&amp;#39;&lt;/span&gt; /var/log/mysqld.log
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 使用初始密码进行登录&lt;/span&gt;
+mysql -u root -p
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 登录成功之后设置新密码&lt;/span&gt;
+ALTER USER &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建用户&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 允许本地 IP（localhost, 127.0.0.1）访问：&lt;/span&gt;
+create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 允许任何 IP 访问：&lt;/span&gt;
+create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 刷新权限&lt;/span&gt;
+FLUSH PRIVILEGES;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 8.0版本后&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建账户&lt;/span&gt;
+create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; identified by  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人&lt;/span&gt;
+grant all privileges on *.* to &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; with grant option;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 改密码&amp;amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里&lt;/span&gt;
+flush privileges;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 修改host 将kris用作登录账户名&lt;/span&gt;
+update mysql.user &lt;span style=&#34;color:#658b00&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; where &lt;span style=&#34;color:#00688b&#34;&gt;User&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;postgresql&#34;&gt;PostgreSQL&lt;/h1&gt;
+&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
+&lt;h2 id=&#34;issue&#34;&gt;Issue&lt;/h2&gt;
+&lt;h3 id=&#34;postgres-full-text-search-a-search-engine-in-a-databasehttpsblogcrunchydatacomblogpostgres-full-text-search-a-search-engine-in-a-database&#34;&gt;&lt;a href=&#34;https://blog.crunchydata.com/blog/postgres-full-text-search-a-search-engine-in-a-database&#34;&gt;Postgres Full-Text Search: A Search Engine in a Database&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.postgresql.org/docs/&#34;&gt;https://www.postgresql.org/docs/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;hr&gt;
+&lt;h1 id=&#34;oracle&#34;&gt;Oracle&lt;/h1&gt;
+&lt;h2 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h2&gt;
+&lt;h3 id=&#34;删除操作前一定要先执行一遍查询&#34;&gt;删除操作前一定要先执行一遍查询&lt;/h3&gt;
+&lt;p&gt;如题， 带的一个新员工做补丁把项目历史数据干掉了 My bad.&lt;/p&gt;
+&lt;p&gt;2020-8-7&lt;/p&gt;
+&lt;h2 id=&#34;optimize&#34;&gt;Optimize&lt;/h2&gt;
+&lt;h3 id=&#34;索引失效&#34;&gt;索引失效&lt;/h3&gt;
+&lt;p&gt;SQL在&lt;code&gt;WHERE&lt;/code&gt;条件里面使用了&lt;code&gt;IN&lt;/code&gt;导致有一个关联表的索引失效，Oracle版本为11g&lt;/p&gt;
+&lt;p&gt;条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引&lt;/p&gt;
+&lt;p&gt;like查询是以%开头&lt;/p&gt;
+&lt;p&gt;如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引&lt;/p&gt;
+&lt;h3 id=&#34;分库-分表-分区&#34;&gt;分库 分表 分区&lt;/h3&gt;
+&lt;h3 id=&#34;视图优化&#34;&gt;视图优化&lt;/h3&gt;
+&lt;h4 id=&#34;基表增加索引&#34;&gt;基表增加索引&lt;/h4&gt;
+&lt;p&gt;对基表中，视图查询SQL的&lt;code&gt;WHERE&lt;/code&gt;条件中用到的字段增加索引&lt;/p&gt;
+&lt;h4 id=&#34;重新进行表分析&#34;&gt;重新进行表分析&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;-- 视图查询慢
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;delete&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; compute &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;-- 在当前用户下执行
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;analyze table &amp;#39;&lt;/span&gt;||&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt;||&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39; compute statistics;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; user_tables &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;IN&lt;/span&gt; (&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;tablename&amp;#39;&lt;/span&gt;);   
+
+&lt;span style=&#34;color:#228b22&#34;&gt;-- 得到如下语句，将这些语句整体执行一遍
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;analyze&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; PRODUCT_REF_LIST_NESTEDTAB compute &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;statistics&lt;/span&gt;;
+    &lt;span style=&#34;color:#228b22&#34;&gt;-- ....
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;-- 查看统计信息
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table_name&lt;/span&gt;,num_rows &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; user_tables;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;分析的结果被Oracle用于基于成本的优化生成更好的查询计划。&lt;/p&gt;
+&lt;p&gt;遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。&lt;/li&gt;
+&lt;li&gt;如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;error&#34;&gt;ERROR&lt;/h2&gt;
+&lt;h3 id=&#34;ora-01779-无法修改与非键值保存表对应的列&#34;&gt;ORA-01779: 无法修改与非键值保存表对应的列&lt;/h3&gt;
+&lt;p&gt;这里要搞清楚三个概念：视图、联接视图、可更新的联接视图&lt;/p&gt;
+&lt;h4 id=&#34;视图&#34;&gt;视图&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;视图&lt;/strong&gt;可以分为视图对象和内嵌视图两种。&lt;/p&gt;
+&lt;p&gt;视图对象（View Object）&lt;/p&gt;
+&lt;p&gt;数据库里的&lt;strong&gt;视图对象&lt;/strong&gt;跟一张表或索引等一样，是数据库对象中的一种，它其实是将基于表中原始数据的查询给虚拟了一层之后，提供给外部查询的一种对象。
+其本质是并不保存查询的实际结果，而只是将查询语句保存在数据库中，当用户查询某张视图的时候，就会找到并执行这个视图的语句。
+而&lt;strong&gt;联接视图&lt;/strong&gt;其实就是在一个视图中将两个表建立关联就是了。&lt;/p&gt;
+&lt;p&gt;内嵌视图（Inline View）&lt;/p&gt;
+&lt;p&gt;在SQL语句中，很多地方都可以写嵌套的语句，比如说，FROM后面可以套括号嵌套其他的语句，WHERE、SELECT、UPDATE、INSERT、DELETE后面都是可以写的。只是写的位置不同，执行的方式还有处理时的一些限制不同，这些SQL中嵌套的SQL被称为&lt;strong&gt;子查询（Subquery）&lt;/strong&gt; 。子查询可以分为如下几类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内嵌视图：位置位于FROM语句中，也相当于一个预处理结果集的概念&lt;/li&gt;
+&lt;li&gt;标量子查询（Scalar Subquery）：只返还一个结果值的子查询。位于SELECT语句的子查询只能返还一个值，所以必然是标量子查询，WHERE语句里也会出现这样的子查询&lt;/li&gt;
+&lt;li&gt;关联子查询：将查询的结果传递给子查询作为参数的使用的形式&lt;/li&gt;
+&lt;li&gt;一般子查询：除了那些特殊形式的子查询以外的一般用法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可更新联接视图（Updatable Join View ）&lt;/p&gt;
+&lt;p&gt;将一个联接视图（包括视图对象和内嵌视图）放到UPADTE语句中这样的语法形式。&lt;/p&gt;
+&lt;p&gt;同样的道理，如果只是用一个表来作为视图的基表，则可以对该视图直接进行&lt;code&gt;DELETE&lt;/code&gt;和&lt;code&gt;UPDATE&lt;/code&gt;，但无法直接执行&lt;code&gt;INSERT&lt;/code&gt;，因为该视图没有默认值的非空列(&lt;code&gt;brand_id&lt;/code&gt;)。该视图称为&lt;strong&gt;可更新视图&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;报错原理&#34;&gt;报错原理&lt;/h4&gt;
+&lt;p&gt;Oracle的键值保存表&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-SQL&#34; data-lang=&#34;SQL&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FROM&lt;/span&gt; DBA_UPDATABLE_COLUMNS
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;SCOTT&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;EMP_DEPT_V&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;COLUMN_NAME&lt;/span&gt; | UPDATABLE | INSERTABLE | DELETABLE
+SCOTT   EMP_DEPT_V     EMPNO            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+SCOTT   EMP_DEPT_V     ENAME            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+SCOTT   EMP_DEPT_V     SAL              &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+SCOTT   EMP_DEPT_V     DEPTNO           &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+SCOTT   EMP_DEPT_V     DNAME            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;视图&lt;code&gt;EMP_DEPT_V&lt;/code&gt;里的字段都无法变更。&lt;/p&gt;
+&lt;p&gt;如果能保证DEPT_T表里的数据是唯一的就能够更新。也就是说在DEPT_T表上加&lt;code&gt;主键约束&lt;/code&gt;或&lt;code&gt;唯一约束&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; DEPT_T
+     &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ADD&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CONSTRAINT&lt;/span&gt; PK_DEPT_T &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;KEY&lt;/span&gt; (DEPTNO);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再看一下之前的视图：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FROM&lt;/span&gt; DBA_UPDATABLE_COLUMNS
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;SCOTT&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;EMP_DEPT_V&amp;#39;&lt;/span&gt;;
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OWNER&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;TABLE_NAME&lt;/span&gt; | &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;COLUMN_NAME&lt;/span&gt; | UPDATABLE | INSERTABLE | DELETABLE
+SCOTT   EMP_DEPT_V     EMPNO            YES         YES         YES
+SCOTT   EMP_DEPT_V     ENAME            YES         YES         YES
+SCOTT   EMP_DEPT_V     SAL              YES         YES         YES
+SCOTT   EMP_DEPT_V     DEPTNO           YES         YES         YES
+SCOTT   EMP_DEPT_V     DNAME             &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;          &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NO&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个时候就可以看到，视图中&lt;code&gt;EMP_DEPT_V&lt;/code&gt;表中原来的字段都是可以更新的了。&lt;/p&gt;
+&lt;p&gt;在对联接视图进行变更的时候，必须保证修改后的值是唯一的，并且这个事实要让数据库知道，而告知数据库的方法是建立主键约束或唯一约束。&lt;/p&gt;
+&lt;p&gt;并不是所有的表都可以随意建这些约束，有什么方法能够不添加约束也能变更？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加&lt;code&gt;/*+ BYPASS_UJVC */&lt;/code&gt; 提示，让ORACLE跳过检查（11g R2之后无效，不建议使用）&lt;/li&gt;
+&lt;li&gt;改写&lt;code&gt;UPDATE&lt;/code&gt;语句，通过其他方式判断后处理&lt;/li&gt;
+&lt;li&gt;将&lt;code&gt;UPDATE&lt;/code&gt;改成&lt;code&gt;MERGE&lt;/code&gt;语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;reference-1&#34;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Oracle：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The concept of a &lt;strong&gt;key-preserved table&lt;/strong&gt; is fundamental to understanding the restrictions on &lt;strong&gt;modifying join views&lt;/strong&gt;. A table is key-preserved if every key of the table can also be a key of the result of the join. So, a key-preserved table has its keys preserved through a join.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An &lt;strong&gt;updatable join view&lt;/strong&gt; (also referred to as a &lt;strong&gt;modifiable join view&lt;/strong&gt;) is a view that contains multiple tables in the top-level FROM clause of the SELECT statement, and is not restricted by the WITH READ ONLY clause.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/60a56760b19f&#34;&gt;https://www.jianshu.com/p/60a56760b19f&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.yiibai.com/oracle/oracle-updatable-view.html&#34;&gt;https://www.yiibai.com/oracle/oracle-updatable-view.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;sqlserver&#34;&gt;SQLServer&lt;/h1&gt;
+&lt;h2 id=&#34;common-operation-1&#34;&gt;Common Operation&lt;/h2&gt;
+&lt;h3 id=&#34;sqlcmd&#34;&gt;SQLCMD&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sqlcmd -S localhost -d CSI10 -q &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;SELECT * FROM SITE&amp;#34;&lt;/span&gt;
+sqlcmd -S localhost -d CSI10 -Q &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;SELECT * FROM SITE&amp;#34;&lt;/span&gt;
+sqlcmd -S localhost -U SA -Q &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;select @@VERSION&amp;#39;&lt;/span&gt;
+sqlcmd -S localhost
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;issues&#34;&gt;Issues&lt;/h2&gt;
+&lt;h3 id=&#34;cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1334012/cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity&#34;&gt;Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SET&lt;/span&gt; IDENTITY_INSERT Table1 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ON&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;--Do INSERT
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SET&lt;/span&gt; IDENTITY_INSERT Table1 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OFF&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/10204480/sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing&#34;&gt;SQL-Server: The backup set holds a backup of a database other than the existing&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t create an empty database and restore the &lt;code&gt;.bak&lt;/code&gt; file on to it.&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;&amp;lsquo;Restore Database&amp;rsquo;&lt;/strong&gt; option accessible by right clicking the &amp;ldquo;Databases&amp;rdquo; branch of the SQL Server Management Studio and provide the database name while providing the source to restore.&lt;/li&gt;
+&lt;li&gt;Also change the file names at &amp;ldquo;Files&amp;rdquo; if the other database still exists. Otherwise you get &amp;ldquo;The file &amp;lsquo;&amp;hellip;&amp;rsquo; cannot be overwritten. It is being used by database &amp;lsquo;yourFirstDb&amp;rsquo;&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/125457/what-is-the-t-sql-syntax-to-connect-to-another-sql-server&#34;&gt;What is the T-SQL syntax to connect to another SQL Server?&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor?view=sql-server-ver15&#34;&gt;Edit SQLCMD Scripts with Query Editor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In SQL Server Management Studio, turn on SQLCMD mode from the Query menu. Then at the top of your script, type in the command below&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;:&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;connect&lt;/span&gt; USDB -U sa -P mypassword
+USE [&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;database&lt;/span&gt;]
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; site;
+
+:&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CONNECT&lt;/span&gt; CNDB
+USE [&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;database&lt;/span&gt;]
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; site;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: IntelliSense is turned off in the Database Engine Query Editor when the SQLCMD mode is set on.&lt;/p&gt;
+&lt;h3 id=&#34;enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/5131491/enable-xp-cmdshell-sql-server&#34;&gt;Enable &amp;lsquo;xp_cmdshell&amp;rsquo; SQL Server&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/xp-cmdshell-server-configuration-option?redirectedfrom=MSDN&amp;amp;view=sql-server-ver15&#34;&gt;If you need to enable &lt;strong&gt;xp_cmdshell&lt;/strong&gt;, you can use Policy-Based Managementhttps://docs.microsoft.com/en-us/sql/relational-databases/policy-based-management/administer-servers-by-using-policy-based-management?view=sql-server-ver15 or run the &lt;strong&gt;sp_configure&lt;/strong&gt; system stored procedure as shown in the following code example:&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;-- To allow advanced options to be changed.  
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;EXECUTE&lt;/span&gt; sp_configure &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;show advanced options&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;;  
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;  
+&lt;span style=&#34;color:#228b22&#34;&gt;-- To update the currently configured value for advanced options.  
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;RECONFIGURE;  
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;  
+&lt;span style=&#34;color:#228b22&#34;&gt;-- To enable the feature.  
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;EXECUTE&lt;/span&gt; sp_configure &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;xp_cmdshell&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;;  
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;  
+&lt;span style=&#34;color:#228b22&#34;&gt;-- To update the currently configured value for this feature.  
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;RECONFIGURE;  
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;GO&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;use-xp_cmdshell-to-print-variables-into-a-file&#34;&gt;Use &amp;lsquo;xp_cmdshell&amp;rsquo; to print variables into a file&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;-- print variables 
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;DECLARE&lt;/span&gt; @cmdtxt &lt;span style=&#34;color:#658b00&#34;&gt;VARCHAR&lt;/span&gt;(&lt;span style=&#34;color:#b452cd&#34;&gt;4000&lt;/span&gt;);
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; @cmdtxt = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;echo &amp;#39;&lt;/span&gt; +&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;@TtPmtpckCurrCode&amp;#39;&lt;/span&gt;+ &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CAST&lt;/span&gt;(@TtPmtpckCurrCode &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;VARCHAR&lt;/span&gt;(&lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;))  + &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;@CurrparmsCurrCode&amp;#39;&lt;/span&gt;+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CAST&lt;/span&gt;(@CurrparmsCurrCode &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;VARCHAR&lt;/span&gt;(&lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;)) +&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39; &amp;gt;&amp;gt; C:\Development\SubFolder\outPut.txt&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;exec&lt;/span&gt; master..xp_cmdshell @cmdtxt
+
+&lt;span style=&#34;color:#228b22&#34;&gt;-- use FOR XML to print table-valued variable
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;declare&lt;/span&gt; @rates &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;table&lt;/span&gt; (
+  curr_code CurrCodeType
+, site_ref SiteType
+, exch_rate ExchRateType
+, rate_is_divisor ListYesNoType
+, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;primary&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;key&lt;/span&gt; (curr_code, site_ref)
+)
+
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;into&lt;/span&gt; @rates (curr_code, site_ref)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;distinct&lt;/span&gt; curr_code, site
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;from&lt;/span&gt; tt_pmtpck
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; tt_pmtpck.ProcessId = @PProcessId
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;and&lt;/span&gt; (tt_pmtpck.exch_rate &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;or&lt;/span&gt; tt_pmtpck.dom_amt_applied &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;or&lt;/span&gt; tt_pmtpck.dom_disc_amt &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
+  
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;DECLARE&lt;/span&gt; @xmltmp xml = (&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; rat.curr_code,rat.site_ref,rat.exch_rate,rat.rate_is_divisor &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FROM&lt;/span&gt; @rates &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AS&lt;/span&gt; rat &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FOR&lt;/span&gt; XML AUTO,ELEMENTS XSINIL);
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; @cmdtxt = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;echo &amp;#39;&lt;/span&gt; +&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;@rates &amp;#34;&amp;#39;&lt;/span&gt;+ &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;CONVERT&lt;/span&gt;(&lt;span style=&#34;color:#658b00&#34;&gt;VARCHAR&lt;/span&gt;(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;max&lt;/span&gt;),@xmltmp) + &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;&amp;#34; &amp;gt;&amp;gt; C:\Development\SubFolder\outPut.txt&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;exec&lt;/span&gt; master..xp_cmdshell @cmdtxt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;offset-fetch--top&#34;&gt;Offset-Fetch &amp;amp; TOP&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;offset&lt;/code&gt;并不是万能的，在偏移量越来越大的情况性能表现会越来越差。解决方案为固定偏移量，分页之后用上次标签的行当做起点，使用类似&lt;code&gt;TOP&lt;/code&gt;方式再进行查询。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FROM&lt;/span&gt; demo_table &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;WHERE&lt;/span&gt; demo_column1=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;1&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AND&lt;/span&gt; ((&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ISNULL&lt;/span&gt;(demo_column2, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;) &amp;gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OR&lt;/span&gt; (&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ISNULL&lt;/span&gt;(demo_column2, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;) = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ISNULL&lt;/span&gt;(demo_column3, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;) &amp;gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;75&amp;#39;&lt;/span&gt;)) &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;BY&lt;/span&gt; demo_column1,demo_column2 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;OFFSET&lt;/span&gt; &lt;span style=&#34;color:#b452cd&#34;&gt;49999&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ROWS&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;FETCH&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;NEXT&lt;/span&gt; &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ROWS&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;ONLY&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;reference-2&#34;&gt;Reference:&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoftpressstore.com/articles/article.aspx?p=2314819&#34;&gt;T-SQL Querying: TOP and OFFSET-FETCH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dba.stackexchange.com/questions/220326/reduce-query-time-for-higher-offset-in-sql-server&#34;&gt;Reduce query time for higher offset in sql server&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;cannot-login-with-sa&#34;&gt;Cannot login with sa.&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安装mss过程中如果没有设置sa和sa的密码，那可能&lt;code&gt;server authorization&lt;/code&gt;会被default成&lt;code&gt;Windows Authorization mode&lt;/code&gt;，sa 登录需要&lt;code&gt;SQL Server and Windows Authorization mode&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;sa 需要enable login&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;redis&#34;&gt;Redis&lt;/h1&gt;
+&lt;p&gt;MongoDB vs Redis&lt;/p&gt;
+&lt;p&gt;MongoDB is a document-oriented, disk-based database optimized for operational simplicity, schema-free design and very large data volumes. &lt;em&gt;Redis is an in-memory, persistent data structure store that enables developers to perform common operations with minimal complexity and maximum performance.&lt;/em&gt; MongoDB and Redis are both NoSQL languages, but because they’re built for different purposes, Redis’ enhanced capabilities significantly augment MongoDB’s capabilities.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;issues-1&#34;&gt;ISSUES&lt;/h1&gt;
 &lt;h2 id=&#34;orms&#34;&gt;ORMs&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;acidhttpsenwikipediaorgwikiacid&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/ACID&#34;&gt;ACID&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Atomicity 原子性
 Transactions are often composed of multiple statements. Atomicity guarantees that each transaction is treated as a single &amp;ldquo;unit&amp;rdquo;, which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. A guarantee of atomicity prevents updates to the database occurring only partially, which can cause greater problems than rejecting the whole series outright. As a consequence, the transaction cannot be observed to be in progress by another database client. At one moment in time, it has not yet happened, and at the next it has already occurred in whole (or nothing happened if the transaction was cancelled in progress).&lt;/p&gt;
@@ -59,55 +589,22 @@ Transactions are often composed of multiple statements. Atomicity guarantees tha
 Transactions are often executed concurrently (e.g., multiple transactions reading and writing to a table at the same time). Isolation ensures that concurrent execution of transactions leaves the database in the same state that would have been obtained if the transactions were executed sequentially. Isolation is the main goal of concurrency control; depending on the method used, the effects of an incomplete transaction might not even be visible to other transactions.&lt;/p&gt;
 &lt;p&gt;Durability 永久性
 Durability guarantees that once a transaction has been committed, it will remain committed even in the case of a system failure (e.g., power outage or crash). This usually means that completed transactions (or their effects) are recorded in non-volatile memory.&lt;/p&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;transactions&#34;&gt;Transactions&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;n1-problem&#34;&gt;N+1 Problem&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping&#34;&gt;What is the &amp;ldquo;N+1 selects problem&amp;rdquo; in ORM (Object-Relational Mapping)?&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;N+1是指，在两个表关联查询中，容易出现先查询主表，然后根据主表多次查询从表的情况。数据库执行语句此时为1+N。&lt;/p&gt;
 &lt;p&gt;ORM可以使用相关method实现join。比如，在EF中可以使用&lt;code&gt;Include&lt;/code&gt;方法查询related数据。&lt;/p&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;database-normalization&#34;&gt;Database Normalization&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;indexes-and-how-they-work&#34;&gt;Indexes and how they work&lt;/h2&gt;
 &lt;p&gt;You can find relevant content in dotnet interview page.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-the-difference-between-varchar-and-nvarcharhttpsstackoverflowcomquestions144283what-is-the-difference-between-varchar-and-nvarchar&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/144283/what-is-the-difference-between-varchar-and-nvarchar&#34;&gt;What is the difference between varchar and nvarchar?&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An &lt;code&gt;nvarchar&lt;/code&gt; column can store any Unicode data. A &lt;code&gt;varchar&lt;/code&gt; column is restricted to an 8-bit codepage. Some people think that &lt;code&gt;varchar&lt;/code&gt; should be used because it takes up less space. I believe this is not the correct answer. Codepage incompatabilities are a pain, and Unicode is the cure for codepage problems. With cheap disk and memory nowadays, there is really no reason to waste time mucking around with code pages anymore.&lt;/p&gt;
+&lt;p&gt;All modern operating systems and development platforms use Unicode internally. By using &lt;code&gt;nvarchar&lt;/code&gt; rather than &lt;code&gt;varchar&lt;/code&gt;, you can avoid doing encoding conversions every time you read from or write to the database. Conversions take time, and are prone to errors. And recovery from conversion errors is a non-trivial problem.&lt;/p&gt;
+&lt;p&gt;If you are interfacing with an application that uses only ASCII, I would still recommend using Unicode in the database. The OS and database collation algorithms will work better with Unicode. Unicode avoids conversion problems when interfacing with &lt;em&gt;other&lt;/em&gt; systems. And you will be preparing for the future. And you can always validate that your data is restricted to 7-bit ASCII for whatever legacy system you&amp;rsquo;re having to maintain, even while enjoying some of the benefits of full Unicode storage.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
 - https://www.openheart.icu/cs/database/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>MongoDB </title>
-        <link>https://www.openheart.icu/cs/mongodb/</link>
-        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/mongodb/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/mongodb/ -- https://www.openheart.icu/cs/mongodb/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>PostgreSQL</title>
-        <link>https://www.openheart.icu/cs/postgresql/</link>
-        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/postgresql/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/postgresql/ -&lt;p&gt;Windows上安装其实蛮简单的，会有自带的pgAdmin工具。&lt;/p&gt;
-- https://www.openheart.icu/cs/postgresql/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Redis</title>
-        <link>https://www.openheart.icu/cs/redis/</link>
-        <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/redis/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/redis/ -&lt;p&gt;MongoDB vs Redis&lt;/p&gt;
-&lt;p&gt;MongoDB is a document-oriented, disk-based database optimized for operational simplicity, schema-free design and very large data volumes. &lt;em&gt;Redis is an in-memory, persistent data structure store that enables developers to perform common operations with minimal complexity and maximum performance.&lt;/em&gt; MongoDB and Redis are both NoSQL languages, but because they’re built for different purposes, Redis’ enhanced capabilities significantly augment MongoDB’s capabilities.&lt;/p&gt;
-- https://www.openheart.icu/cs/redis/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -120,8 +617,21 @@ Durability guarantees that once a transaction has been committed, it will remain
         <guid>https://www.openheart.icu/arithmetic/backtracking/</guid>
         <description>42th openheart https://www.openheart.icu/arithmetic/backtracking/ -&lt;h1 id=&#34;backtrackinghttpsenwikipediaorgwikibacktracking&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Backtracking&#34;&gt;Backtracking&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/&#34;&gt;17. Letter Combinations of a Phone Number&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;depth-first-searchdfshttpsenwikipediaorgwikidepth-first_search&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Depth-first_search&#34;&gt;Depth-First-Search，DFS&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/sudoku-solver/&#34;&gt;37. Sudoku Solver&lt;/a&gt;&lt;/p&gt;
 - https://www.openheart.icu/arithmetic/backtracking/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Binary Search</title>
+        <link>https://www.openheart.icu/arithmetic/binary-search/</link>
+        <pubDate>Sun, 19 Sep 2021 17:15:26 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/arithmetic/binary-search/</guid>
+        <description>42th openheart https://www.openheart.icu/arithmetic/binary-search/ -&lt;h1 id=&#34;binary-search-algorithmhttpsenwikipediaorgwikibinary_search_algorithm&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Binary_search_algorithm&#34;&gt;Binary Search Algorithm&lt;/a&gt;&lt;/h1&gt;
+- https://www.openheart.icu/arithmetic/binary-search/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -149,18 +659,6 @@ Durability guarantees that once a transaction has been committed, it will remain
     
     
         <item>
-        <title>CS Conferences</title>
-        <link>https://www.openheart.icu/cs/cs-conferences/</link>
-        <pubDate>Mon, 09 Aug 2021 13:43:10 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/cs-conferences/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/cs-conferences/ -&lt;h1 id=&#34;list-of-computer-science-conferenceshttpsenwikipediaorgwikilist_of_computer_science_conferences&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_computer_science_conferences&#34;&gt;List of computer science conferences&lt;/a&gt;&lt;/h1&gt;
-- https://www.openheart.icu/cs/cs-conferences/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
         <title>Design Patterns</title>
         <link>https://www.openheart.icu/cs/design-patterns/</link>
         <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
@@ -168,6 +666,12 @@ Durability guarantees that once a transaction has been committed, it will remain
         <guid>https://www.openheart.icu/cs/design-patterns/</guid>
         <description>42th openheart https://www.openheart.icu/cs/design-patterns/ -&lt;h1 id=&#34;structural-design-patterns&#34;&gt;Structural Design Patterns&lt;/h1&gt;
 &lt;h1 id=&#34;creational-design-patterns&#34;&gt;Creational Design Patterns&lt;/h1&gt;
+&lt;h2 id=&#34;singleton&#34;&gt;Singleton&lt;/h2&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://csharpindepth.com/articles/Singleton&#34;&gt;https://csharpindepth.com/articles/Singleton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/leolion/p/10241822.html&#34;&gt;https://www.cnblogs.com/leolion/p/10241822.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h1 id=&#34;behavioral-design-patterns&#34;&gt;Behavioral Design Patterns&lt;/h1&gt;
 &lt;h2 id=&#34;observer&#34;&gt;Observer&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/e/e2/Observer-pattern-class-diagram.png&#34; alt=&#34;File:Observer-pattern-class-diagram.png&#34;&gt;&lt;/p&gt;
@@ -204,7 +708,7 @@ Durability guarantees that once a transaction has been committed, it will remain
 &lt;li&gt;An object that contains the data that the provider sends to its observers. The type of this object corresponds to the generic type parameter of the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; and &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; interfaces. Although this object can be the same as the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; implementation, most commonly it is a separate type.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;reference&#34;&gt;Reference:&lt;/h3&gt;
+&lt;h3 id=&#34;reference-1&#34;&gt;Reference:&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.runoob.com/design-pattern/observer-pattern.html&#34;&gt;观察者模式&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://refactoring.guru/design-patterns/observer&#34;&gt;Observer - guru&lt;/a&gt;&lt;/li&gt;
@@ -218,36 +722,12 @@ Durability guarantees that once a transaction has been committed, it will remain
     
     
         <item>
-        <title>Economics &amp; Finance &amp; Management</title>
-        <link>https://www.openheart.icu/finance/economicsfinancemanagement/</link>
-        <pubDate>Tue, 25 May 2021 23:29:58 +0000</pubDate>
+        <title>Behavior-driven development</title>
+        <link>https://www.openheart.icu/cs/behavior-driven-development/</link>
+        <pubDate>Sat, 24 Jul 2021 00:00:50 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/finance/economicsfinancemanagement/</guid>
-        <description>42th openheart https://www.openheart.icu/finance/economicsfinancemanagement/ -&lt;h1 id=&#34;如何区分并界定经济学金融学与管理学&#34;&gt;如何区分并界定经济学、金融学与管理学？&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这24份期刊涵盖了6大领域：会计(Accounting)、金融(Finance)、IS(Information System)、营销(Marketing)、运营(Operation)和管理(Management)，除了Management Science是一份集合刊物，其他各份刊物都能对号入座&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/v2-c15b2a92974141515f1198c23e784b04_r.jpg?source=1940ef5c&#34; alt=&#34;preview&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;economics&#34;&gt;Economics&lt;/h2&gt;
-&lt;p&gt;经济学是针对人类经济活动、经济关系以及经济规律的社会科学，所谓经济活动，是指将有限或者稀缺资源进行合理配置的行为。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;微观经济&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;宏观经济&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;finance&#34;&gt;Finance&lt;/h2&gt;
-&lt;p&gt;金融学是将“货币资金”视作这个“有限或者稀缺资源”来进行深入研究，是经济学在货币领域的深化和细化。通俗讲，是研究怎么赚钱，通过什么方式赚钱的学科，研究个人、组织和公司等在一段时间内如何有效地筹集，分配和利用资金，是研究资金融通的学科。金融的具体内容有货币、证券、银行、保险、资本市场、衍生证券、投资理财等等。&lt;/p&gt;
-&lt;h2 id=&#34;management&#34;&gt;Management&lt;/h2&gt;
-&lt;p&gt;财务会计属于管理学。&lt;/p&gt;
-&lt;p&gt;The Logics of Management 管理逻辑学&lt;/p&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/26976012&#34;&gt;商学、经济学、金融学与管理学有哪些相似与不同之处，如何具体区分？&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-- https://www.openheart.icu/finance/economicsfinancemanagement/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        <guid>https://www.openheart.icu/cs/behavior-driven-development/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/behavior-driven-development/ -- https://www.openheart.icu/cs/behavior-driven-development/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

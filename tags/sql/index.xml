@@ -14,71 +14,7 @@
       <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/database/</guid>
-      <description>ISSUES  ORMs  ACID Atomicity 原子性 Transactions are often composed of multiple statements. Atomicity guarantees that each transaction is treated as a single &amp;ldquo;unit&amp;rdquo;, which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. A guarantee of atomicity prevents updates to the database occurring only partially, which can cause greater problems than rejecting the whole series outright.</description>
-    </item>
-    
-    <item>
-      <title>MongoDB </title>
-      <link>https://www.openheart.icu/cs/mongodb/</link>
-      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/mongodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PostgreSQL</title>
-      <link>https://www.openheart.icu/cs/postgresql/</link>
-      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/postgresql/</guid>
-      <description>Windows上安装其实蛮简单的，会有自带的pgAdmin工具。</description>
-    </item>
-    
-    <item>
-      <title>Redis</title>
-      <link>https://www.openheart.icu/cs/redis/</link>
-      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/redis/</guid>
-      <description>MongoDB vs Redis
-MongoDB is a document-oriented, disk-based database optimized for operational simplicity, schema-free design and very large data volumes. Redis is an in-memory, persistent data structure store that enables developers to perform common operations with minimal complexity and maximum performance. MongoDB and Redis are both NoSQL languages, but because they’re built for different purposes, Redis’ enhanced capabilities significantly augment MongoDB’s capabilities.</description>
-    </item>
-    
-    <item>
-      <title>SQLserver</title>
-      <link>https://www.openheart.icu/cs/sqlserver/</link>
-      <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/sqlserver/</guid>
-      <description>Common Operation SQLCMD sqlcmd -S localhost -d CSI10 -q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -d CSI10 -Q &amp;#34;SELECT * FROM SITE&amp;#34; sqlcmd -S localhost -U SA -Q &amp;#39;select @@VERSION&amp;#39; sqlcmd -S localhost  Issues Cannot insert explicit value for identity column in table &amp;lsquo;table&amp;rsquo; when IDENTITY_INSERT is set to OFF SET IDENTITY_INSERT Table1 ON --Do INSERT  SET IDENTITY_INSERT Table1 OFF SQL-Server: The backup set holds a backup of a database other than the existing   Don&amp;rsquo;t create an empty database and restore the .</description>
-    </item>
-    
-    <item>
-      <title>Oracle</title>
-      <link>https://www.openheart.icu/cs/oracle/</link>
-      <pubDate>Tue, 21 Jul 2020 20:28:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/oracle/</guid>
-      <description>Common Operation 删除操作前一定要先执行一遍查询 如题， 带的一个新员工做补丁把项目历史数据干掉了 My bad.
-2020-8-7
-Optimize 索引失效 SQL在WHERE条件里面使用了IN导致有一个关联表的索引失效，Oracle版本为11g
-条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引
-like查询是以%开头
-如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引
-分库 分表 分区 视图优化 基表增加索引 对基表中，视图查询SQL的WHERE条件中用到的字段增加索引
-重新进行表分析 -- 视图查询慢  analyze table table_name delete statistics; analyze table table_name compute statistics; -- 在当前用户下执行  select &amp;#39;analyze table &amp;#39;||table_name||&amp;#39; compute statistics;&amp;#39; from user_tables where table_name IN (&amp;#39;tablename&amp;#39;); -- 得到如下语句，将这些语句整体执行一遍  analyze table PRODUCT_REF_LIST_NESTEDTAB compute statistics; -- ....  -- 查看统计信息  select table_name,num_rows from user_tables; 分析的结果被Oracle用于基于成本的优化生成更好的查询计划。
-遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。
- 如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。 如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。  ERROR ORA-01779: 无法修改与非键值保存表对应的列 这里要搞清楚三个概念：视图、联接视图、可更新的联接视图</description>
-    </item>
-    
-    <item>
-      <title>MySQL</title>
-      <link>https://www.openheart.icu/cs/mysql/</link>
-      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/mysql/</guid>
-      <description>Install MySQL 准备操作 lsb_release -a	# 查看操作系统版本 # LSB Version:	:core-4.1-amd64:core-4.1-noarch # Distributor ID:	CentOS # Description:	CentOS Linux release 7.8.2003 (Core) # Release:	7.8.2003 # Codename:	Core cat /etc/redhat-release	# 查看Linux内核版本 # CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	# 查看系统位数 # 64 yum -y update	# 更新 yum rpm -qa | grep mysql	# 查看是否安装过MySQL 安装MySQL # 此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm # 安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm # 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.</description>
+      <description>MySQL Install MySQL lsb_release -a	# 查看操作系统版本 # LSB Version:	:core-4.1-amd64:core-4.1-noarch # Distributor ID:	CentOS # Description:	CentOS Linux release 7.8.2003 (Core) # Release:	7.8.2003 # Codename:	Core cat /etc/redhat-release	# 查看Linux内核版本 # CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	# 查看系统位数 # 64 yum -y update	# 更新 yum rpm -qa | grep mysql	# 查看是否安装过MySQL # 此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm # 安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm # 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.</description>
     </item>
     
   </channel>

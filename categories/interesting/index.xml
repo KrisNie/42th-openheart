@@ -10,19 +10,18 @@
     <lastBuildDate>Wed, 22 Jul 2020 19:45:28 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Interesting</title>
-      <link>https://www.openheart.icu/cs/interesting/</link>
+      <link>https://www.openheart.icu/speech/interesting/</link>
       <pubDate>Wed, 22 Jul 2020 19:45:28 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/interesting/</guid>
-      <description>Textures.js 一个 JS 纹理库，基于 D3.js
+      <guid>https://www.openheart.icu/speech/interesting/</guid>
+      <description>List of computer science conferences CS Conferences
+Textures.js 一个 JS 纹理库，基于 D3.js
 elevator.js Finally, a &amp;ldquo;back to top&amp;rdquo; button that behaves like a real elevator, by adding elevator music to quietly soothe the awkwardness that can ensue when being smoothly scrolled to the top of the screen.
 This is very serious stuff, here&amp;rsquo;s a demo!
 一个使得“回到顶部”的网页滚动，具有电梯效果的 JS 库。
 Mowned 一个手机数据库
 JavaScript 生成艺术图形教程 介绍 如何使用JavaScript 生成8种艺术图形。
-使用 Raspberry Pi 学习操作系统开发 这是一个免费英文教程，教大家怎么用树莓派，一步步开发一个简单的操作系统内核，每一步都有实例代码
-Vim 的由来 Vim 有30多年历史，目前依然是最流行的编辑器之一。本文简要地回顾了历史，它的一些主要的设计决定，到底是怎么来的
-Makefile 的静态网站实现 现在有各种各样的静态网站工具，比如 Jekyll 和 Hugo 等。作者提出，Makefile 也可以用来实现静态网站，这样就不需要任何外部工具了，只维护一个 Makefile 配置文件即可</description>
+使用 Raspberry Pi 学习操作系统开发 这是一个免费英文教程，教大家怎么用树莓派，一步步开发一个简单的操作系统内核，每一步都有实例代码</description>
     </item>
     
     <item>
@@ -61,7 +60,10 @@ Makefile 的静态网站实现 现在有各种各样的静态网站工具，比�
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/speech/music/</guid>
-      <description>Music  La Mia Vita - Ferrari Roma - Official Video  </description>
+      <description>Music   La Mia Vita - Ferrari Roma - Official Video
+  Archive.org Serendipity
+“互联网档案馆”收集了很多早期的黑胶唱片音乐作品，都已经过了版权保护期。这个网站可以收听这些音乐，按一下按钮，就会随机播放一段音乐。
+  </description>
     </item>
     
   </channel>

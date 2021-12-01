@@ -14,29 +14,15 @@
       <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/design-patterns/</guid>
-      <description>Structural Design Patterns Creational Design Patterns Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.
-Implementing the pattern requires that you provide the following:</description>
-    </item>
-    
-    <item>
-      <title>CSharp Special Characters</title>
-      <link>https://www.openheart.icu/cs/csharp-special-characters/</link>
-      <pubDate>Sat, 23 Jan 2021 12:14:19 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/csharp-special-characters/</guid>
-      <description>? There are 4 question marks ? used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.
-1) The ?: Operator (since Visual Studio 2003) The format : condition ? first_expression : second_expression;
-If condition evaluates to true, first_expression shall be returned, otherwise second_expression.
-Example
-Random rnd = new Random(); var randomNo = rnd.Next(); var status = randomNo % 2 == 0 ?</description>
+      <description>Structural Design Patterns Creational Design Patterns Singleton Reference  https://csharpindepth.com/articles/Singleton https://www.cnblogs.com/leolion/p/10241822.html  Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.</description>
     </item>
     
     <item>
       <title>Effective CSharp</title>
-      <link>https://www.openheart.icu/cs/effective-csharp6.0/</link>
+      <link>https://www.openheart.icu/dotnet/effective-csharp6.0/</link>
       <pubDate>Sat, 09 Jan 2021 16:22:42 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/effective-csharp6.0/</guid>
+      <guid>https://www.openheart.icu/dotnet/effective-csharp6.0/</guid>
       <description>Effective C# Effective C# does not take you on a historical journey through the changes in the language. Rather, I provide advice on how to use the current C# language.
 C # Language Idioms You change tools or languages because you can be more productive.
 Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in the following contexts:
@@ -45,10 +31,10 @@ Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in t
     
     <item>
       <title>Dot Net Runtime</title>
-      <link>https://www.openheart.icu/cs/dot-net-runtime/</link>
+      <link>https://www.openheart.icu/dotnet/dot-net-runtime/</link>
       <pubDate>Sat, 26 Dec 2020 11:25:57 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/dot-net-runtime/</guid>
+      <guid>https://www.openheart.icu/dotnet/dot-net-runtime/</guid>
       <description>Source Code Learning for 「Dot Net Runtime」.
  Microsoft.Extensions.DependencyInjection Branch: release/5.0
 之前使用的都是.NET MVC DI，相对封装较为严重。公司的设计为Composition Root实现MVC中的ConfigureDependencies然后创建BuildServiceProvider。在对方法进行调用前通过IServiceProvider.GetService注入所需类构造函数中的依赖。
@@ -57,11 +43,11 @@ Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in t
     </item>
     
     <item>
-      <title>Unit Test Practice</title>
-      <link>https://www.openheart.icu/cs/unit-test-practice/</link>
+      <title>Test-driven development</title>
+      <link>https://www.openheart.icu/cs/test-driven-development/</link>
       <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/unit-test-practice/</guid>
+      <guid>https://www.openheart.icu/cs/test-driven-development/</guid>
       <description>Unit Test Practice  纸上得来终觉浅，绝知此事要躬行。
  Shifting Left 所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )
  Shift Left is a practice intended to find and prevent defects early in the software delivery process. The idea is to improve quality by moving tasks to the left as early in the lifecycle as possible.
@@ -93,10 +79,10 @@ DI IOC与DI的区别  控制反转是一种在软件工程中解耦合的思想�
     
     <item>
       <title>Dot Net Issue</title>
-      <link>https://www.openheart.icu/cs/dot-net-issue/</link>
+      <link>https://www.openheart.icu/dotnet/dot-net-issue/</link>
       <pubDate>Thu, 10 Sep 2020 11:00:35 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/dot-net-issue/</guid>
+      <guid>https://www.openheart.icu/dotnet/dot-net-issue/</guid>
       <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
  Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
  使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
@@ -106,10 +92,10 @@ Note that run time is not included in this list by default. To change this behav
     
     <item>
       <title>C# in Depth</title>
-      <link>https://www.openheart.icu/cs/csharp-in-depth/</link>
+      <link>https://www.openheart.icu/dotnet/csharp-in-depth/</link>
       <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/csharp-in-depth/</guid>
+      <guid>https://www.openheart.icu/dotnet/csharp-in-depth/</guid>
       <description>本文为「C# in Depth」(4th edition)学习记录。
 Part 1 C# in context Survival of the sharpest 本章主要讲C#的由来与介绍（吹嘘）。
 开始前可以回顾一下C#的历史，现在是北京时间2021-05-29 14:06:54，the last C# version is C# 9.
@@ -117,26 +103,11 @@ Reference  The history of C#  Part 2 C# in 2-5 C# 3: LINQ and everything that co
     </item>
     
     <item>
-      <title>Implementing the Singleton Pattern in C#</title>
-      <link>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</link>
-      <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</guid>
-      <description>Implementing the Singleton Pattern in C# 在C＃中实现单例模式。该模式是非常常见的设计模式之一，某个对象全局只需要一个实例时，就可以使用单例模式。它的优点也显而易见：
- 它能够避免对象重复创建，节约空间并提升效率 避免由于操作不同实例导致的逻辑错误  以下是原文作者Jon Skeet 对C#单例模式的介绍。
-Introduction 单例模式是软件工程中最著名的模式之一。本质上，单例是仅允许创建其自身的单个实例的类，并且通常提供对该实例的简单访问。最常见的是，单例在创建实例时不允许指定任何参数，否则对实例的第二次请求但参数不同可能会出现问题！ （如果应该为具有相同参数的所有请求访问相同的实例，则使用工厂模式更为合适。）本文仅涉及不需要参数的情况。通常，单例的要求是它们是懒惰地创建的，即：直到首次需要实例时才创建实例。
-在C＃中有多种不同的方式来实现单例模式。我将在这里以从简到难顺序（in reverse order of elegance）介绍它们，从最常见的线程安全性开始，逐步发展为完全延迟加载，线程安全，简单且高性能的版本。
-所有这些实现都有四个共同的特征，但是：
- 单个构造函数，私有且无参数。这样可以防止其他类实例化它（这将违反模式）。请注意，它还防止了子类化（subclassing）如果一个单例可以被子类化一次，则可以被子类化两次，并且如果每个子类都可以创建一个实例，则将违反（violated）该模式。如果您需要基本类型的单个实例，则可以使用工厂模式，但是直到运行时才知道确切的类型。 该类是密封的。严格来说，由于上述几点，这是不必要的，但可以帮助JIT进行更多优化。 一个静态变量，其中包含对创建的单个实例的引用（如果有）。 公共静态方法是获取对创建的单个实例的引用，并在必要时创建一个实例。  请注意，所有这些实现还使用公共静态属性Instance作为访问实例的方式。在所有情况下，都可以轻松地将属性转换为方法，而不会影响线程安全性或性能。
-First version - not thread-safe // Bad code! Do not use! public sealed class Singleton { private static Singleton instance = null; private Singleton() { } public static Singleton Instance { get { if (instance == null) { instance = new Singleton(); } return instance; } } } 如前所述，以上内容不是线程安全的。</description>
-    </item>
-    
-    <item>
       <title>.NET INTERVIEW</title>
-      <link>https://www.openheart.icu/cs/dot-net-interview/</link>
+      <link>https://www.openheart.icu/dotnet/dot-net-interview/</link>
       <pubDate>Fri, 17 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/dot-net-interview/</guid>
+      <guid>https://www.openheart.icu/dotnet/dot-net-interview/</guid>
       <description>.NET INTERVIEW from Jeffrey Zhao&amp;rsquo;s blog 我在面试.NET/C#程序员时会提出的问题
  什么是.NET？什么是CLI？什么是CLR？IL是什么？JIT是什么，它是如何工作的？GC是什么，简述一下GC的工作方式？ 什么是.net .NET是个平台，你就把它看成C#
 一个.NET应用是一个运行于.NET Framework之上的应用程序。（更精确的说，一个.NET应用是一个使用.NET Framework类库来编写，并运行于公共语言运行时 Common Language Runtime之上的应用程序。）如果一个应用程序跟.NET Framework无关，它就不能叫做.NET程序。比如，仅仅使用了XML并不就是.NET应用，仅仅使用SOAP SDK调用一个Web Service也不是.NET应用

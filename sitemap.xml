@@ -13,43 +13,18 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/cicd/</loc>
-    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
+    <loc>https://www.openheart.icu/tags/cs/</loc>
+    <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.openheart.icu/cs/</loc>
-    <lastmod>2021-12-26T11:25:57+00:00</lastmod>
+    <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/database/</loc>
-    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/mongodb/</loc>
-    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/tags/operation/</loc>
-    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/postgresql/</loc>
-    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/redis/</loc>
-    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/tags/sql/</loc>
-    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
+    <loc>https://www.openheart.icu/cs/remote-procedure-call/</loc>
+    <lastmod>2021-11-15T23:28:00+00:00</lastmod>
   </url>
   
   <url>
@@ -60,6 +35,36 @@
   <url>
     <loc>https://www.openheart.icu/categories/technical/</loc>
     <lastmod>2021-12-26T11:25:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/aws/</loc>
+    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/cicd/</loc>
+    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/csapp/</loc>
+    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/database/</loc>
+    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/tags/operation/</loc>
+    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/tags/sql/</loc>
+    <lastmod>2021-10-17T11:35:34+00:00</lastmod>
   </url>
   
   <url>
@@ -78,18 +83,13 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/tags/cs/</loc>
-    <lastmod>2021-08-13T15:15:59+00:00</lastmod>
+    <loc>https://www.openheart.icu/arithmetic/binary-search/</loc>
+    <lastmod>2021-09-19T17:15:26+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</loc>
     <lastmod>2021-08-13T15:15:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/cs-conferences/</loc>
-    <lastmod>2021-08-10T13:43:18+00:00</lastmod>
   </url>
   
   <url>
@@ -100,6 +100,11 @@
   <url>
     <loc>https://www.openheart.icu/cs/design-patterns/</loc>
     <lastmod>2021-08-02T15:57:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/behavior-driven-development/</loc>
+    <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
@@ -123,42 +128,17 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/categories/boom/</loc>
-    <lastmod>2021-02-17T00:54:02+00:00</lastmod>
+    <loc>https://www.openheart.icu/dotnet/</loc>
+    <lastmod>2021-12-26T11:25:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/boom/</loc>
-    <lastmod>2021-02-17T00:54:02+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/tags/character/</loc>
-    <lastmod>2021-02-17T00:54:02+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/boom/%E7%BB%99%E6%88%91%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%AD%A9%E5%AD%90/</loc>
-    <lastmod>2021-02-17T00:54:02+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/csharp-special-characters/</loc>
-    <lastmod>2021-01-23T12:14:26+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/windows/</loc>
-    <lastmod>2021-01-12T11:47:38+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/effective-csharp6.0/</loc>
+    <loc>https://www.openheart.icu/dotnet/effective-csharp6.0/</loc>
     <lastmod>2021-01-09T16:22:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/dot-net-runtime/</loc>
+    <loc>https://www.openheart.icu/dotnet/dot-net-runtime/</loc>
     <lastmod>2020-12-26T11:25:57+00:00</lastmod>
   </url>
   
@@ -188,13 +168,13 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/unit-test-practice/</loc>
+    <loc>https://www.openheart.icu/cs/domain-driven-design/</loc>
     <lastmod>2020-12-27T17:15:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2020-11-14T16:55:11+00:00</lastmod>
+    <loc>https://www.openheart.icu/cs/test-driven-development/</loc>
+    <lastmod>2020-12-27T17:15:23+00:00</lastmod>
   </url>
   
   <url>
@@ -208,12 +188,12 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/dot-net-issue/</loc>
+    <loc>https://www.openheart.icu/dotnet/dot-net-issue/</loc>
     <lastmod>2021-12-26T11:25:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/sqlserver/</loc>
+    <loc>https://www.openheart.icu/cs/serverless/</loc>
     <lastmod>2021-03-02T22:57:39+00:00</lastmod>
   </url>
   
@@ -233,43 +213,33 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/%E5%8A%A8%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%8E%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8/</loc>
+    <loc>https://www.openheart.icu/arithmetic/static-search-table-dynamic-search-table/</loc>
     <lastmod>2020-07-25T20:25:28+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/csharp-in-depth/</loc>
+    <loc>https://www.openheart.icu/dotnet/csharp-in-depth/</loc>
     <lastmod>2020-07-25T00:14:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/implementing-the-singleton-pattern-in-csharp/</loc>
-    <lastmod>2020-07-25T00:14:11+00:00</lastmod>
+    <loc>https://www.openheart.icu/cs/architecture/</loc>
+    <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/tags/translation/</loc>
-    <lastmod>2020-07-25T00:14:11+00:00</lastmod>
+    <loc>https://www.openheart.icu/cs/binary-relation/</loc>
+    <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/</loc>
-    <lastmod>2020-07-24T00:00:50+00:00</lastmod>
+    <loc>https://www.openheart.icu/cs/distributed/</loc>
+    <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E5%92%8C%E9%AB%98%E5%8F%AF%E9%9D%A0%E6%80%A7/</loc>
-    <lastmod>2020-07-24T00:00:50+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/url/</loc>
-    <lastmod>2020-07-25T00:37:22+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/tags/web/</loc>
-    <lastmod>2020-07-25T00:37:22+00:00</lastmod>
+    <loc>https://www.openheart.icu/cs/microservice/</loc>
+    <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
@@ -283,13 +253,8 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/interesting/</loc>
+    <loc>https://www.openheart.icu/speech/interesting/</loc>
     <lastmod>2020-07-22T19:45:28+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/oracle/</loc>
-    <lastmod>2020-07-24T22:02:44+00:00</lastmod>
   </url>
   
   <url>
@@ -303,17 +268,7 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/dns/</loc>
-    <lastmod>2020-07-19T12:50:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/boom/%E5%BD%93%E9%9D%A2%E8%B0%83%E8%AF%95/</loc>
-    <lastmod>2020-07-18T10:28:50+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/dot-net-interview/</loc>
+    <loc>https://www.openheart.icu/dotnet/dot-net-interview/</loc>
     <lastmod>2020-11-12T17:34:23+00:00</lastmod>
   </url>
   
@@ -338,16 +293,6 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/linux/</loc>
-    <lastmod>2020-07-15T23:28:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/mac/</loc>
-    <lastmod>2020-07-21T22:52:15+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.openheart.icu/cs/markdown/</loc>
     <lastmod>2020-07-21T21:15:51+00:00</lastmod>
   </url>
@@ -363,11 +308,6 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/mysql/</loc>
-    <lastmod>2020-07-15T23:28:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.openheart.icu/cs/nginx/</loc>
     <lastmod>2020-07-21T22:52:15+00:00</lastmod>
   </url>
@@ -378,43 +318,23 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/php/</loc>
+    <loc>https://www.openheart.icu/tags/work/</loc>
+    <lastmod>2020-07-15T23:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/categories/work/</loc>
+    <lastmod>2020-07-15T23:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/speech/work-review/</loc>
     <lastmod>2020-07-15T23:28:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.openheart.icu/speech/english/</loc>
     <lastmod>2020-06-15T23:28:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</loc>
-    <lastmod>2020-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/</loc>
-    <lastmod>2020-02-06T10:58:08-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</loc>
-    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</loc>
-    <lastmod>2018-05-21T10:58:08-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</loc>
-    <lastmod>2018-05-21T10:58:08-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/</loc>
-    <lastmod>2017-12-01T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

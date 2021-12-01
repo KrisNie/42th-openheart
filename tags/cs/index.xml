@@ -7,7 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 15:15:57 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Nov 2021 23:28:00 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remote Procedure Call</title>
+      <link>https://www.openheart.icu/cs/remote-procedure-call/</link>
+      <pubDate>Mon, 15 Nov 2021 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/remote-procedure-call/</guid>
+      <description>Inter-Process Communication Pipe Signal Semaphore Message Queue Shared Memory Socket 8 Fallacies of Distributed Computing 1994 - 1997, ACM 和 Sun 院士Peter Deutsch、套接字接口发明者Bill Joy、Java 之父James Gosling等一众在 Sun Microsystems 工作的大佬们共同总结了通过网络进行分布式运算的八宗罪（8 Fallacies of Distributed Computing）
+  The network is reliable —— 网络是可靠的。 Latency is zero —— 延迟是不存在的。 Bandwidth is infinite —— 带宽是无限的。 The network is secure —— 网络是安全的。 Topology doesn&amp;rsquo;t change —— 拓扑结构是一成不变的。 There is one administrator —— 总会有一个管理员。 Transport cost is zero —— 不必考虑传输成本。 The network is homogeneous —— 网络是同质化（Homogeneous networks are networks where all the nodes have the same function in the network.</description>
+    </item>
+    
+    <item>
+      <title>CSAPP</title>
+      <link>https://www.openheart.icu/cs/csapp/</link>
+      <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/csapp/</guid>
+      <description>ISSUES Application binary interface 区分高可靠性与高可用性 Reliability和Availability分别对应可靠性和可用性, 这两个概念既有区别也有联系:
+ Reliability定义为一个服务连续无故障运行的时间，无故障运行的时间越长，可靠性就越高。 Availiability定义为在足够长的时间里，比如一年的时间里，一个服务可用的时间，服务可用时间越长越好。一般用可服务时间除于总时间算出一个百分比，用百分比作为度量。比如一个服务如果有5个9的可用性，指的就是一年里99.999%时间里服务都是可用的。  有两个极端的例子可以很好的说明这两个概念的区别:
+ 假想一个服务，可靠性很高，平均来说可以稳定运行10年，但是一旦服务中断，要用一年的时间来恢复，那么它的可用性只有90%。 假想另一个服务，可靠性很差，运行10秒就会宕机，但是恢复服务只需要1ms, 那么它的可用性是99.99%  从这两个极端的例子可以看出，提高可用性有两条路:
+ 一是提高可靠性，当然影响可靠性的原因有很多，包括硬件，软件，网络，运维等。但是有人做过统计，软件的bug是影响可靠性的最主要的因素。并且提高软件质量相较于使用更可靠的硬件也算成本较低的方式了， 二是减少恢复时间，一旦出现宕机，如果能在秒级恢复，那对业务影响是很小的。   高可靠性的实现 &amp;hellip;
+ 高可用性的实现 高可用HA（High Availability）是分布式系统架构设计中必须考虑的因素之一，它通常是指，通过设计减少系统不能提供服务的时间。
+在设计高可用性策略时应该首先考虑下述因素 ​ • RTO（Recovery Time Objective）-也就是恢复时间目标，意味着允许多少宕机时间，通常用几个9表示，比如说99.999%的可用性意味着每年的宕机时间不超过5分钟、99.99%的可用性意味着每年的宕机时间不超过52.5分钟、99.9%的可用性意味着每年的宕机时间不超过8.75小时。值得注意的是，RTO的计算方法要考虑系统是24*365，还是仅仅是上午6点到下午9点等。您还需要注意是否维护窗口的时间在算在宕机时间之内，如果允许在维护窗口时间进行数据库维护和打补丁，则更容易实现更高的可用性。
+​ • RPO（Recovery Point Objective）-也就是恢复点目标，意味着允许多少数据损失。通常只要做好备份，可以比较容易的实现零数据损失。但当灾难发生时，取决于数据库损坏的程度，从备份恢复数据所需要的时间会导致数据库不可用，这会影响RTO的实现。一个早期比较著名的例子是某欧美的银行系统，只考虑的RPO，系统里只存在了完整备份和日志备份，每3个月一次完整备份，每15分钟一次日志备份，当灾难发生时，只能够通过完整备份和日志备份来恢复数据，因此虽然没有数据丢失，但由于恢复数据花了整整两天时间，造成银行系统2天时间不可用，因此流失了大量客户。另外一个相反的例子是国内某在线视频网站，使用SQL Server作为后端关系数据库，前端使用了No-SQL，定期将No-SQL的数据导入关系数据库作为备份，当灾难发生时最多允许丢失一天的数据，但是要保证高可用性。
+高可用的实现 整个互联网分层系统架构的高可用，又是通过每一层的冗余+自动故障转移来综合实现的，具体的：
+ 【客户端层】到【反向代理层】的高可用，是通过反向代理层的冗余实现的，常见实践是keepalived + virtual IP自动故障转移 【反向代理层】到【站点层】的高可用，是通过站点层的冗余实现的，常见实践是nginx与web-server之间的存活性探测与自动故障转移 【站点层】到【服务层】的高可用，是通过服务层的冗余实现的，常见实践是通过service-connection-pool来保证自动故障转移 【服务层】到【缓存层】的高可用，是通过缓存数据的冗余实现的，常见实践是缓存客户端双读双写，或者利用缓存集群的主从数据同步与sentinel保活与自动故障转移；更多的业务场景，对缓存没有高可用要求，可以使用缓存服务化来对调用方屏蔽底层复杂性 【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移 【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移  SQlServer所支持的高可用特性 SQL Server中所支持的高可用性功能与版本息息相关，企业版支持所有的高可用性功能，这些功能包括：
+ 故障转移集群 数据库镜像（在SQL Server 2012中被标记为“过时”） 事务日志传送 数据库快照 AlwaysOn可用性组 热加载内存 在线索引操作 数据库部分在线（只还原了主文件组或主文件组和额外的NDF文件）  故障转移集群  故障转移集群为整个SQL Server实例提供高可用性支持，这意味着在集群上某个节点的SQL Server实例发生了硬件错误、操作系统错误等会故障转移到该集群上的其它节点。通过多个服务器（节点）共享一个或多个磁盘来实现高可用性，故障转移集群在网络中出现的方式就像单台计算机一样，但是具有高可用特性。值得注意的是，由于故障转移集群是基于共享磁盘，因此会存在磁盘单点故障，因此需要在磁盘层面部署SAN复制等额外的保护措施。常见的故障转移集群是双节点的故障转移集群，包括主主节点和主从节点。  事务日志传送   事务日志传送提供了数据库级别的高可用性保护。日志传送可用来维护相应生产数据库（称为“主数据库”）的一个或多个备用数据库（称为“辅助数据库”）。发生故障转移之前，必须通过手动应用全部未还原的日志备份来完全更新辅助数据库。日志传送具有支持多个备用数据库的灵活性。如果需要多个备用数据库，可以单独使用日志传送或将其作为数据库镜像的补充。当这些解决方案一起使用时，当前数据库镜像配置的主体数据库同时也是当前日志传送配置的主数据库。</description>
+    </item>
+    
     <item>
       <title>Working Effectively with Legacy Code</title>
       <link>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</link>
@@ -18,22 +46,21 @@
     </item>
     
     <item>
-      <title>CS Conferences</title>
-      <link>https://www.openheart.icu/cs/cs-conferences/</link>
-      <pubDate>Mon, 09 Aug 2021 13:43:10 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/cs-conferences/</guid>
-      <description>List of computer science conferences </description>
-    </item>
-    
-    <item>
       <title>Design Patterns</title>
       <link>https://www.openheart.icu/cs/design-patterns/</link>
       <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/design-patterns/</guid>
-      <description>Structural Design Patterns Creational Design Patterns Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.
-Implementing the pattern requires that you provide the following:</description>
+      <description>Structural Design Patterns Creational Design Patterns Singleton Reference  https://csharpindepth.com/articles/Singleton https://www.cnblogs.com/leolion/p/10241822.html  Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.</description>
+    </item>
+    
+    <item>
+      <title>Behavior-driven development</title>
+      <link>https://www.openheart.icu/cs/behavior-driven-development/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:50 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/behavior-driven-development/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -52,11 +79,20 @@ Implementing the pattern requires that you provide the following:</description>
     </item>
     
     <item>
-      <title>Unit Test Practice</title>
-      <link>https://www.openheart.icu/cs/unit-test-practice/</link>
+      <title>Domain-driven design</title>
+      <link>https://www.openheart.icu/cs/domain-driven-design/</link>
       <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/unit-test-practice/</guid>
+      <guid>https://www.openheart.icu/cs/domain-driven-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test-driven development</title>
+      <link>https://www.openheart.icu/cs/test-driven-development/</link>
+      <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/test-driven-development/</guid>
       <description>Unit Test Practice  纸上得来终觉浅，绝知此事要躬行。
  Shifting Left 所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )
  Shift Left is a practice intended to find and prevent defects early in the software delivery process. The idea is to improve quality by moving tasks to the left as early in the lifecycle as possible.
@@ -87,11 +123,20 @@ DI IOC与DI的区别  控制反转是一种在软件工程中解耦合的思想�
     </item>
     
     <item>
+      <title>Serverless </title>
+      <link>https://www.openheart.icu/cs/serverless/</link>
+      <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/serverless/</guid>
+      <description>Implement AWS Lambda </description>
+    </item>
+    
+    <item>
       <title>Static Search Table &amp; Dynamic Search Table</title>
-      <link>https://www.openheart.icu/cs/%E5%8A%A8%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%8E%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8/</link>
+      <link>https://www.openheart.icu/arithmetic/static-search-table-dynamic-search-table/</link>
       <pubDate>Sat, 25 Jul 2020 18:32:23 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/%E5%8A%A8%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%8E%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8/</guid>
+      <guid>https://www.openheart.icu/arithmetic/static-search-table-dynamic-search-table/</guid>
       <description>今天在看BST时，指导书上讲二叉排序树时与二分查找进行对比，引出几个模棱两可的概念（静态查找表、动态查找表），经查找后整理得本文
 概述 首先要了解几个基础概念
 查找(Searching) 是根据给定的某个值，在查找表中确定一个其关键字等于给定值的数据元素。
@@ -107,6 +152,54 @@ DI IOC与DI的区别  控制反转是一种在软件工程中解耦合的思想�
     </item>
     
     <item>
+      <title>Architecture</title>
+      <link>https://www.openheart.icu/cs/architecture/</link>
+      <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/architecture/</guid>
+      <description>Evolvement Monolithic “单体”只是表明系统中主要的过程调用都是进程内调用，不会发生进程间通信，仅此而已。
+Monolithic Application  Monolith means composed all in one piece. The Monolithic application describes a single-tiered software application in which different components combined into a single program from a single platform.
+单体意味着自包含。单体应用描述了一种由同一技术平台的不同组件构成的单层软件。
+ Layered Architecture 分层架构
+ 从横向扩展（Scale Horizontally）的角度来衡量，可在负载均衡器之后同时部署若干个相同的单体系统副本，以达到分摊流量压力的效果。
+  Service-Oriented Architecture 面向服务的架构（SOA）是一次具体地、系统性地成功解决分布式服务主要问题的架构模式。
+Information Silo Architecture  信息烟囱又名信息孤岛（Information Island），使用这种架构的系统也被称为孤岛式信息系统或者烟囱式信息系统。它指的是一种完全不与其他相关信息系统进行互操作或者协调工作的设计模式。这样的系统其实并没有什么“架构设计”可言。接着上一节中企业与部门的例子来说，如果两个部门真的完全不会发生任何交互，就并没有什么理由强迫它们必须在一栋楼里办公；两个不发生交互的信息系统，让它们使用独立的数据库和服务器即可实现拆分，而唯一的问题，也是致命的问题是，企业中真的存在完全不发生交互的部门吗？对于两个信息系统来说，哪怕真的毫无业务往来关系，但系统的人员、组织、权限等主数据，会是完全独立、没有任何重叠的吗？这样“独立拆分”“老死不相往来”的系统，显然不可能是企业所希望见到的。
+ Microkernel Architecture  微内核架构也被称为插件式架构（Plug-in Architecture）。既然在烟囱式架构中，没有业务往来关系的系统也可能需要共享人员、组织、权限等一些的公共的主数据，那不妨就将这些主数据，连同其他可能被各子系统使用到的公共服务、数据、资源集中到一块，成为一个被所有业务系统共同依赖的核心（Kernel，也称为 Core System），具体的业务系统以插件模块（Plug-in Modules）的形式存在，这样也可提供可扩展的、灵活的、天然隔离的功能特性，即微内核架构。
+ Event-Driven Architecture  为了能让子系统互相通信，一种可行的方案是在子系统之间建立一套事件队列管道（Event Queues），来自系统外部的消息将以事件的形式发送至管道中，各个子系统从管道里获取自己感兴趣、能够处理的事件消息，也可以为事件新增或者修改其中的附加信息，甚至可以自己发布一些新的事件到管道队列中去，如此，每一个消息的处理者都是独立的，高度解耦的，但又能与其他处理者（如果存在该消息处理者的话）通过事件管道进行互动。
+  Microservices 微服务是一种通过多个小型服务组合来构建单个应用的架构风格，这些服务围绕业务能力而非特定的技术标准来构建。各个服务可以采用不同的编程语言，不同的数据存储技术，运行在不同的进程之中。服务采取轻量级的通信机制和自动化的部署机制实现通信与运维。</description>
+    </item>
+    
+    <item>
+      <title>Binary relation</title>
+      <link>https://www.openheart.icu/cs/binary-relation/</link>
+      <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/binary-relation/</guid>
+      <description>Binary relation Total order Partially ordered set </description>
+    </item>
+    
+    <item>
+      <title>Distributed</title>
+      <link>https://www.openheart.icu/cs/distributed/</link>
+      <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/distributed/</guid>
+      <description>CAP Consistency Every read receives the most recent write or an error.
+Availability Every request receives a (non-error) response, without the guarantee that it contains the most recent write.
+Partition tolerance The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes.
+Solution  Cloud Spanner  Reference  CAP theorem An Illustrated Proof of the CAP Theorem 分布式系统的CAP理论  Distributed cache 缓存雪崩 缓存雪崩我们可以简单的理解为：由于原有缓存失效，新缓存未到期间所有原本应该访问缓存的请求都去查询数据库了，而对数据库 CPU 和内存造成巨大压力，严重的会造成数据库宕机。从而形成一系列连锁反应，造成整个系统崩溃。</description>
+    </item>
+    
+    <item>
+      <title>Microservice</title>
+      <link>https://www.openheart.icu/cs/microservice/</link>
+      <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/microservice/</guid>
+      <description>API Gateways  The reference microservice application eShopOnContainers is currently using features provided by Envoy to implement the API Gateway instead of the earlier referenced Ocelot. We made this design choice because of Envoy&amp;rsquo;s built-in support for the WebSocket protocol, required by the new gRPC inter-service communications implemented in eShopOnContainers. However, we&amp;rsquo;ve retained this section in the guide so you can consider Ocelot as a simple, capable, and lightweight API Gateway suitable for production-grade scenarios.</description>
+    </item>
+    
+    <item>
       <title>Computer network</title>
       <link>https://www.openheart.icu/cs/computer-network/</link>
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
@@ -115,7 +208,11 @@ DI IOC与DI的区别  控制反转是一种在软件工程中解耦合的思想�
       <description>Computer Network Issues 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
 四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。
 Private IP Address vs Public IP Address &amp;amp; Public IP Port  0-1023是公认端口号，即已经公认定义或为将要公认定义的软件保留的，而1024-65535是并没有公共定义的端口号，用户可以自己定义这些端口的作用。
- Reference  常用端口号 为什么ipconfig和浏览器查询出的ip不一样？  How does the internet work? What is HTTP? DNS and how it works? What is Domain Name? What is hosting? </description>
+ Reference  常用端口号 为什么ipconfig和浏览器查询出的ip不一样？  How does the internet work? What is HTTP? DNS and how it works? DNS Server recommend DNSPod DNS+ ​ 首选：119.29.29.29
+​ 备选：182.254.116.116
+114DNS ​ 首选：114.114.114.114
+​ 备选：114.114.114.115
+阿里 AliDNS ​ 首选：223.</description>
     </item>
     
     <item>
@@ -124,7 +221,9 @@ Private IP Address vs Public IP Address &amp;amp; Public IP Port  0-1023是公�
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/operating-system/</guid>
-      <description></description>
+      <description>Basic Operation Mac brew使用国内镜像源（不好使） 中科大：
+# 步骤一 cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git* # 步骤二 cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git* #步骤三 brew update 复原：
+cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core brew update 配置item2代理 # 打开配置文件 vim ~/.bash_profile # 如果用了`oh-my-zsh` 那么修改`~/.zshrc` # 在后面新增配置 export http_proxy=http://127.0.0.1:1087 export https_proxy=socks5://127.0.0.1:1080 # 同理，可能执行 source ~/.zshrc source ~/.bash_profile iTerm2 + Oh My Zsh 安装Oh my zsh # curl 安装方式 sh -c &amp;#34;$(curl -fsSL https://raw.</description>
     </item>
     
   </channel>

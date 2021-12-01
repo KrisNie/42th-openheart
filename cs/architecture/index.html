@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html><head>
+<title>Architecture</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="架构">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="Architecture" />
+<meta property="og:description" content="架构" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/cs/architecture/" />
+<meta property="article:published_time" content="2020-07-24T00:00:50+00:00" />
+<meta property="article:modified_time" content="2021-11-22T11:11:37+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Architecture"/>
+<meta name="twitter:description" content="架构"/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<script src="/vendor/js/vue.min.js" ></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="https://www.openheart.icu//js/loadCSS.js"></script>
+
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://www.openheart.icu//js/toc-collapse.js"></script>
+
+  
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'Hyominn',
+  admin: ['Hyominn'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+Case42
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2021 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#evolvement" onclick="onNavClick(`#evolvement-nav`)" id="evolvement-nav">
+									Evolvement
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#monolithic" onclick="onNavClick(`#monolithic-nav`)" id="monolithic-nav">
+									Monolithic
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#monolithic-applicationhttpsenwikipediaorgwikimonolithic_application" onclick="onNavClick(`#monolithic-applicationhttpsenwikipediaorgwikimonolithic_application-nav`)" id="monolithic-applicationhttpsenwikipediaorgwikimonolithic_application-nav">
+									Monolithic Application
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#layered-architecture" onclick="onNavClick(`#layered-architecture-nav`)" id="layered-architecture-nav">
+									Layered Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#service-oriented-architecture" onclick="onNavClick(`#service-oriented-architecture-nav`)" id="service-oriented-architecture-nav">
+									Service-Oriented Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#information-silo-architecturehttpsenwikipediaorgwikiinformation_silo" onclick="onNavClick(`#information-silo-architecturehttpsenwikipediaorgwikiinformation_silo-nav`)" id="information-silo-architecturehttpsenwikipediaorgwikiinformation_silo-nav">
+									Information Silo Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#microkernel-architecturehttpsenwikipediaorgwikimicrokernel" onclick="onNavClick(`#microkernel-architecturehttpsenwikipediaorgwikimicrokernel-nav`)" id="microkernel-architecturehttpsenwikipediaorgwikimicrokernel-nav">
+									Microkernel Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#event-driven-architecturehttpsenwikipediaorgwikievent-driven_architecture" onclick="onNavClick(`#event-driven-architecturehttpsenwikipediaorgwikievent-driven_architecture-nav`)" id="event-driven-architecturehttpsenwikipediaorgwikievent-driven_architecture-nav">
+									Event-Driven Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#microservices" onclick="onNavClick(`#microservices-nav`)" id="microservices-nav">
+									Microservices
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#microservices--soa" onclick="onNavClick(`#microservices--soa-nav`)" id="microservices--soa-nav">
+									Microservices &amp; SOA
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#organized-around-business-capability" onclick="onNavClick(`#organized-around-business-capability-nav`)" id="organized-around-business-capability-nav">
+									Organized around Business Capability
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#decentralized-governance" onclick="onNavClick(`#decentralized-governance-nav`)" id="decentralized-governance-nav">
+									Decentralized Governance
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#componentization-via-services" onclick="onNavClick(`#componentization-via-services-nav`)" id="componentization-via-services-nav">
+									Componentization via Services
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#products-not-projects" onclick="onNavClick(`#products-not-projects-nav`)" id="products-not-projects-nav">
+									Products not Projects
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#decentralized-data-management" onclick="onNavClick(`#decentralized-data-management-nav`)" id="decentralized-data-management-nav">
+									Decentralized Data Management
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#smart-endpoint-and-dumb-pipe" onclick="onNavClick(`#smart-endpoint-and-dumb-pipe-nav`)" id="smart-endpoint-and-dumb-pipe-nav">
+									Smart Endpoint and Dumb Pipe
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#design-for-failure" onclick="onNavClick(`#design-for-failure-nav`)" id="design-for-failure-nav">
+									Design for Failure
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#evolutionary-design" onclick="onNavClick(`#evolutionary-design-nav`)" id="evolutionary-design-nav">
+									Evolutionary Design
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#infrastructure-automation" onclick="onNavClick(`#infrastructure-automation-nav`)" id="infrastructure-automation-nav">
+									Infrastructure Automation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#cloud-native" onclick="onNavClick(`#cloud-native-nav`)" id="cloud-native-nav">
+									Cloud Native
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#virtualizationhttpsenwikipediaorgwikivirtualization--os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization" onclick="onNavClick(`#virtualizationhttpsenwikipediaorgwikivirtualization--os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization-nav`)" id="virtualizationhttpsenwikipediaorgwikivirtualization--os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization-nav">
+									Virtualization &amp; OS-level_virtualization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#service-meshhttpsenwikipediaorgwikiservice_mesh" onclick="onNavClick(`#service-meshhttpsenwikipediaorgwikiservice_mesh-nav`)" id="service-meshhttpsenwikipediaorgwikiservice_mesh-nav">
+									Service Mesh
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#sidecar-proxy" onclick="onNavClick(`#sidecar-proxy-nav`)" id="sidecar-proxy-nav">
+									Sidecar Proxy
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#serverless" onclick="onNavClick(`#serverless-nav`)" id="serverless-nav">
+									Serverless
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#backend" onclick="onNavClick(`#backend-nav`)" id="backend-nav">
+									Backend
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#function" onclick="onNavClick(`#function-nav`)" id="function-nav">
+									Function
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#evolvement" onclick="onNavClick(`#evolvement-nav`)" id="evolvement-nav">
+									Evolvement
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#monolithic" onclick="onNavClick(`#monolithic-nav`)" id="monolithic-nav">
+									Monolithic
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#monolithic-applicationhttpsenwikipediaorgwikimonolithic_application" onclick="onNavClick(`#monolithic-applicationhttpsenwikipediaorgwikimonolithic_application-nav`)" id="monolithic-applicationhttpsenwikipediaorgwikimonolithic_application-nav">
+									Monolithic Application
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#layered-architecture" onclick="onNavClick(`#layered-architecture-nav`)" id="layered-architecture-nav">
+									Layered Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#service-oriented-architecture" onclick="onNavClick(`#service-oriented-architecture-nav`)" id="service-oriented-architecture-nav">
+									Service-Oriented Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#information-silo-architecturehttpsenwikipediaorgwikiinformation_silo" onclick="onNavClick(`#information-silo-architecturehttpsenwikipediaorgwikiinformation_silo-nav`)" id="information-silo-architecturehttpsenwikipediaorgwikiinformation_silo-nav">
+									Information Silo Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#microkernel-architecturehttpsenwikipediaorgwikimicrokernel" onclick="onNavClick(`#microkernel-architecturehttpsenwikipediaorgwikimicrokernel-nav`)" id="microkernel-architecturehttpsenwikipediaorgwikimicrokernel-nav">
+									Microkernel Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#event-driven-architecturehttpsenwikipediaorgwikievent-driven_architecture" onclick="onNavClick(`#event-driven-architecturehttpsenwikipediaorgwikievent-driven_architecture-nav`)" id="event-driven-architecturehttpsenwikipediaorgwikievent-driven_architecture-nav">
+									Event-Driven Architecture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#microservices" onclick="onNavClick(`#microservices-nav`)" id="microservices-nav">
+									Microservices
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#microservices--soa" onclick="onNavClick(`#microservices--soa-nav`)" id="microservices--soa-nav">
+									Microservices &amp; SOA
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#organized-around-business-capability" onclick="onNavClick(`#organized-around-business-capability-nav`)" id="organized-around-business-capability-nav">
+									Organized around Business Capability
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#decentralized-governance" onclick="onNavClick(`#decentralized-governance-nav`)" id="decentralized-governance-nav">
+									Decentralized Governance
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#componentization-via-services" onclick="onNavClick(`#componentization-via-services-nav`)" id="componentization-via-services-nav">
+									Componentization via Services
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#products-not-projects" onclick="onNavClick(`#products-not-projects-nav`)" id="products-not-projects-nav">
+									Products not Projects
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#decentralized-data-management" onclick="onNavClick(`#decentralized-data-management-nav`)" id="decentralized-data-management-nav">
+									Decentralized Data Management
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#smart-endpoint-and-dumb-pipe" onclick="onNavClick(`#smart-endpoint-and-dumb-pipe-nav`)" id="smart-endpoint-and-dumb-pipe-nav">
+									Smart Endpoint and Dumb Pipe
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#design-for-failure" onclick="onNavClick(`#design-for-failure-nav`)" id="design-for-failure-nav">
+									Design for Failure
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#evolutionary-design" onclick="onNavClick(`#evolutionary-design-nav`)" id="evolutionary-design-nav">
+									Evolutionary Design
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#infrastructure-automation" onclick="onNavClick(`#infrastructure-automation-nav`)" id="infrastructure-automation-nav">
+									Infrastructure Automation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#cloud-native" onclick="onNavClick(`#cloud-native-nav`)" id="cloud-native-nav">
+									Cloud Native
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#virtualizationhttpsenwikipediaorgwikivirtualization--os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization" onclick="onNavClick(`#virtualizationhttpsenwikipediaorgwikivirtualization--os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization-nav`)" id="virtualizationhttpsenwikipediaorgwikivirtualization--os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization-nav">
+									Virtualization &amp; OS-level_virtualization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#service-meshhttpsenwikipediaorgwikiservice_mesh" onclick="onNavClick(`#service-meshhttpsenwikipediaorgwikiservice_mesh-nav`)" id="service-meshhttpsenwikipediaorgwikiservice_mesh-nav">
+									Service Mesh
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#sidecar-proxy" onclick="onNavClick(`#sidecar-proxy-nav`)" id="sidecar-proxy-nav">
+									Sidecar Proxy
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#serverless" onclick="onNavClick(`#serverless-nav`)" id="serverless-nav">
+									Serverless
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#backend" onclick="onNavClick(`#backend-nav`)" id="backend-nav">
+									Backend
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#function" onclick="onNavClick(`#function-nav`)" id="function-nav">
+									Function
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Architecture
+                    
+                    <div class="post-subtitle">
+                        架构
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-07-24 00:00
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/cs">CS</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            15 min
+                            
+                            4 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="evolvement">Evolvement</h1>
+<h2 id="monolithic">Monolithic</h2>
+<p>“单体”只是表明系统中主要的过程调用都是进程内调用，不会发生进程间通信，仅此而已。</p>
+<h3 id="monolithic-applicationhttpsenwikipediaorgwikimonolithic_application"><a href="https://en.wikipedia.org/wiki/Monolithic_application">Monolithic Application</a></h3>
+<blockquote>
+<p>Monolith means composed all in one piece. The Monolithic application describes a single-tiered software application in which different components combined into a single program from a single platform.</p>
+<p>单体意味着自包含。单体应用描述了一种由同一技术平台的不同组件构成的单层软件。</p>
+</blockquote>
+<h3 id="layered-architecture">Layered Architecture</h3>
+<p>分层架构</p>
+<p><img src="http://icyfenix.cn/assets/img/layed-arch.8e054a47.png" alt="img"></p>
+<blockquote>
+<p>从横向扩展（Scale Horizontally）的角度来衡量，可在负载均衡器之后同时部署若干个相同的单体系统副本，以达到分摊流量压力的效果。</p>
+</blockquote>
+<hr>
+<h2 id="service-oriented-architecture">Service-Oriented Architecture</h2>
+<p>面向服务的架构（SOA）是一次具体地、系统性地成功解决分布式服务主要问题的架构模式。</p>
+<h3 id="information-silo-architecturehttpsenwikipediaorgwikiinformation_silo"><a href="https://en.wikipedia.org/wiki/Information_silo">Information Silo Architecture</a></h3>
+<blockquote>
+<p>信息烟囱又名信息孤岛（Information Island），使用这种架构的系统也被称为孤岛式信息系统或者烟囱式信息系统。它指的是一种完全不与其他相关信息系统进行互操作或者协调工作的设计模式。这样的系统其实并没有什么“架构设计”可言。接着上一节中企业与部门的例子来说，如果两个部门真的完全不会发生任何交互，就并没有什么理由强迫它们必须在一栋楼里办公；两个不发生交互的信息系统，让它们使用独立的数据库和服务器即可实现拆分，而唯一的问题，也是致命的问题是，企业中真的存在完全不发生交互的部门吗？对于两个信息系统来说，哪怕真的毫无业务往来关系，但系统的人员、组织、权限等主数据，会是完全独立、没有任何重叠的吗？这样“独立拆分”“老死不相往来”的系统，显然不可能是企业所希望见到的。</p>
+</blockquote>
+<h3 id="microkernel-architecturehttpsenwikipediaorgwikimicrokernel"><a href="https://en.wikipedia.org/wiki/Microkernel">Microkernel Architecture</a></h3>
+<blockquote>
+<p>微内核架构也被称为插件式架构（Plug-in Architecture）。既然在烟囱式架构中，没有业务往来关系的系统也可能需要共享人员、组织、权限等一些的公共的主数据，那不妨就将这些主数据，连同其他可能被各子系统使用到的公共服务、数据、资源集中到一块，成为一个被所有业务系统共同依赖的核心（Kernel，也称为 Core System），具体的业务系统以插件模块（Plug-in Modules）的形式存在，这样也可提供可扩展的、灵活的、天然隔离的功能特性，即微内核架构。</p>
+</blockquote>
+<p><img src="http://icyfenix.cn/assets/img/coresystem.f46f7c00.png" alt="img"></p>
+<h3 id="event-driven-architecturehttpsenwikipediaorgwikievent-driven_architecture"><a href="https://en.wikipedia.org/wiki/Event-driven_architecture">Event-Driven Architecture</a></h3>
+<blockquote>
+<p>为了能让子系统互相通信，一种可行的方案是在子系统之间建立一套事件队列管道（Event Queues），来自系统外部的消息将以事件的形式发送至管道中，各个子系统从管道里获取自己感兴趣、能够处理的事件消息，也可以为事件新增或者修改其中的附加信息，甚至可以自己发布一些新的事件到管道队列中去，如此，每一个消息的处理者都是独立的，高度解耦的，但又能与其他处理者（如果存在该消息处理者的话）通过事件管道进行互动。</p>
+</blockquote>
+<p><img src="http://icyfenix.cn/assets/img/eventbus.a0c12890.png" alt="img"></p>
+<hr>
+<h2 id="microservices">Microservices</h2>
+<p>微服务是一种通过多个小型服务组合来构建单个应用的架构风格，这些服务围绕业务能力而非特定的技术标准来构建。各个服务可以采用不同的编程语言，不同的数据存储技术，运行在不同的进程之中。服务采取轻量级的通信机制和自动化的部署机制实现通信与运维。</p>
+<h4 id="microservices--soa">Microservices &amp; SOA</h4>
+<blockquote>
+<p>Microservices is a software development technique — a variant of the service-oriented architecture （SOA） structural style.</p>
+<p>微服务是一种软件开发技术，是一种 SOA 的变体形式。</p>
+</blockquote>
+<blockquote>
+<p>This common manifestation of SOA has led some microservice advocates to reject the SOA label entirely, although others consider microservices to be one form of SOA , perhaps service orientation done right. Either way, the fact that SOA means such different things means it&rsquo;s valuable to have a term that more crisply defines this architectural style</p>
+<p>由于与 SOA 具有一致的表现形式，这让微服务的支持者更加迫切地拒绝再被打上 SOA 的标签，尽管有一些人坚持认为微服务就是 SOA 的一种变体形式，也许从面向服务方面这个方面来说是对的，但无论如何，SOA 与微服务都是两种不同的东西，正因如此，使用一个别的名称来简明地定义这种架构风格就显得更有必要。</p>
+</blockquote>
+<p>—— Martin Fowler / James Lewis，<a href="https://martinfowler.com/articles/microservices.html">Microservices</a></p>
+<blockquote>
+<p>从微服务的定义和特征中，你应该可以明显地感觉到微服务追求的是更加自由的架构风格，摒弃了几乎所有 SOA 里可以抛弃的约束和规定，提倡以“实践标准”代替“规范标准”。可是，如果没有了统一的规范和约束，以前 SOA 所解决的那些分布式服务的问题，不也就一下子都重新出现了吗？的确如此，服务的注册发现、跟踪治理、负载均衡、故障隔离、认证授权、伸缩扩展、传输通信、事务处理，等等，这些问题，在微服务中不再会有统一的解决方案，即使只讨论 Java 范围内会使用到的微服务，光一个服务间远程调用问题，可以列入解决方案的候选清单的就有：RMI（Sun/Oracle）、Thrift（Facebook）、Dubbo（阿里巴巴）、gRPC（Google）、Motan2（新浪）、Finagle（Twitter）、brpc（百度）、Arvo（Hadoop）、JSON-RPC、REST，等等；光一个服务发现问题，可以选择的就有：Eureka（Netflix）、Consul（HashiCorp）、Nacos（阿里巴巴）、ZooKeeper（Apache）、Etcd（CoreOS）、CoreDNS（CNCF），等等。其他领域的情况也是与此类似。</p>
+</blockquote>
+<h3 id="organized-around-business-capability">Organized around Business Capability</h3>
+<p>围绕业务能力构建</p>
+<h3 id="decentralized-governance">Decentralized Governance</h3>
+<p>分散治理</p>
+<h3 id="componentization-via-services">Componentization via Services</h3>
+<p>通过服务来实现独立自治的组件</p>
+<h3 id="products-not-projects">Products not Projects</h3>
+<p>产品化思维</p>
+<h3 id="decentralized-data-management">Decentralized Data Management</h3>
+<p>数据去中心化：需要分布式，但需要考虑一致性的问题。</p>
+<blockquote>
+<p>微服务明确地提倡数据应该按领域分散管理、更新、维护、存储，在单体服务中，一个系统的各个功能模块通常会使用同一个数据库，诚然中心化的存储天生就更容易避免一致性问题，但是，同一个数据实体在不同服务的视角里，它的抽象形态往往也是不同的。</p>
+</blockquote>
+<h3 id="smart-endpoint-and-dumb-pipe">Smart Endpoint and Dumb Pipe</h3>
+<p>强终端弱管道：弱管道（Dumb Pipe）几乎算是直接指名道姓地反对 SOAP 、BPM 、ESB 的那一堆复杂的通信机制。</p>
+<h3 id="design-for-failure">Design for Failure</h3>
+<p>容错性设计</p>
+<h3 id="evolutionary-design">Evolutionary Design</h3>
+<p>演进式设计</p>
+<h3 id="infrastructure-automation">Infrastructure Automation</h3>
+<p>基础设施自动化：如 CI/CD。</p>
+<hr>
+<h2 id="cloud-native">Cloud Native</h2>
+<p>从软件层面独力应对微服务架构问题，发展到软、硬一体，合力应对架构问题的时代，此即为“后微服务时代”。</p>
+<h3 id="virtualizationhttpsenwikipediaorgwikivirtualization--os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization"><a href="https://en.wikipedia.org/wiki/Virtualization">Virtualization</a> &amp; <a href="https://en.wikipedia.org/wiki/OS-level_virtualization">OS-level_virtualization</a></h3>
+<h3 id="service-meshhttpsenwikipediaorgwikiservice_mesh"><a href="https://en.wikipedia.org/wiki/Service_mesh">Service Mesh</a></h3>
+<h4 id="sidecar-proxy">Sidecar Proxy</h4>
+<blockquote>
+<p>举个例子，微服务 A 调用了微服务 B 的两个服务，称为 B1和 B2，假设 B1表现正常但 B2出现了持续的 500 错，那在达到一定阈值之后就应该对 B2进行熔断，以避免产生<a href="https://en.wikipedia.org/wiki/Snowball_effect">雪崩效应</a>。如果仅在基础设施层面来处理，这会遇到一个两难问题，切断 A 到 B 的网络通路则会影响到 B1的正常调用，不切断的话则持续受 B2的错误影响。</p>
+<p>以上问题在通过 Spring Cloud 这类应用代码实现的微服务中并不难处理，既然是使用程序代码来解决问题，只要合乎逻辑，想要实现什么功能，只受限于开发人员的想象力与技术能力，但基础设施是针对整个容器来管理的，粒度相对粗旷，只能到容器层面，对单个远程服务就很难有效管控……</p>
+<p>……所谓的“边车”是一种带垮斗的三轮摩托，我小时候还算常见，现在基本就只在影视剧中才会看到了。这个场景里指的具体含义是由系统自动在服务容器（通常是指 Kubernetes 的 Pod）中注入一个<strong>通信代理服务器</strong>，相当于那个挎斗，以类似网络安全里中间人攻击的方式进行流量劫持，在应用毫无感知的情况下，悄然接管应用所有对外通信。这个代理除了实现正常的服务间通信外（称为数据平面通信），还接收来自控制器的指令（称为控制平面通信），根据控制平面中的配置，对数据平面通信的内容进行分析处理，以实现熔断、认证、度量、监控、负载均衡等各种附加功能。这样便实现了既不需要在应用层面加入额外的处理代码，也提供了几乎不亚于程序代码的精细管理能力。</p>
+</blockquote>
+<hr>
+<h2 id="serverless">Serverless</h2>
+<p>如果说微服务架构是分布式系统这条路的极致，那无服务架构，也许就是“不分布式”的云端系统这条路的起点。</p>
+<blockquote>
+<p>We predict that serverless computing will grow to dominate the future of cloud computing</p>
+<p>我们预测无服务将会发展成为未来云计算的主要形式</p>
+<p>—— <a href="https://arxiv.org/abs/1902.03383">Cloud Programming Simplified: A Berkeley View on Serverless Computing</a>, 2019</p>
+</blockquote>
+<h3 id="backend">Backend</h3>
+<p>后端设施：指数据库、消息队列、日志、存储，等等这一类用于支撑业务逻辑运行，但本身无业务含义的技术组件，这些后端设施都运行在云中，无服务中称其为“后端即服务”（Backend as a Service，BaaS）</p>
+<h3 id="function">Function</h3>
+<p>函数：指业务逻辑代码，这里函数的概念与粒度，都已经很接近于程序编码角度的函数了，其区别是无服务中的函数运行在云端，不必考虑算力问题，不必考虑容量规划（从技术角度可以不考虑，从计费的角度你的钱包够不够用还是要掂量一下的），无服务中称其为“函数即服务”（Function as a Service，FaaS）</p>
+<blockquote>
+<p>We can only see a short distance ahead, but we can see plenty there that needs to be done.</p>
+<p>尽管目光所及之处，只是不远的前方，即使如此，依然可以看到那里有许多值得去完成的工作在等待我们。</p>
+<p>—— <a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a>，<a href="https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence">Computing Machinery and Intelligence</a>，1950</p>
+</blockquote>
+<h1 id="reference">Reference</h1>
+<ol>
+<li><a href="http://icyfenix.cn/architecture/architect-history/">http://icyfenix.cn/architecture/architect-history/</a></li>
+<li><a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf">Above the Clouds: A Berkeley View of Cloud Computing</a></li>
+<li><a href="https://arxiv.org/abs/1902.03383">Cloud Programming Simplified: A Berkeley View on Serverless Computing</a></li>
+<li><a href="https://aws.amazon.com/lambda/">AWS Lambda</a></li>
+<li>O&rsquo;Reilly, 《<a href="https://www.oreilly.com/content/software-architecture-patterns/">Software Architecture Patterns</a>》</li>
+<li>Martin Fowler / James Lewis，<a href="https://martinfowler.com/articles/microservices.html">Microservices</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence">Computing Machinery and Intelligence</a></li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">
+                        Last modified on 2021-11-22 11:11
+                        &nbsp;
+                        <span id="busuanzi_container_page_pv" style="color:#777;">
+                            This.pv: <span id="busuanzi_value_page_pv" style="color:#777;"></span>
+                        </span>
+                    </p>
+                    
+                </div>
+
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/dotnet/csharp-in-depth/">
+			Next<br>C# in Depth
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/cs/binary-relation/">
+			Previous<br>Binary relation
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	Case42
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2021 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://www.openheart.icu//js/journal.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DotNets on 42th openheart</title>
+    <link>https://www.openheart.icu/dotnet/</link>
+    <description>Recent content in DotNets on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Sat, 09 Jan 2021 16:22:42 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/dotnet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Effective CSharp</title>
+      <link>https://www.openheart.icu/dotnet/effective-csharp6.0/</link>
+      <pubDate>Sat, 09 Jan 2021 16:22:42 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/dotnet/effective-csharp6.0/</guid>
+      <description>Effective C# Effective C# does not take you on a historical journey through the changes in the language. Rather, I provide advice on how to use the current C# language.
+C # Language Idioms You change tools or languages because you can be more productive.
+Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in the following contexts:
+  On local variables (variables declared at method scope).</description>
+    </item>
+    
+    <item>
+      <title>Dot Net Runtime</title>
+      <link>https://www.openheart.icu/dotnet/dot-net-runtime/</link>
+      <pubDate>Sat, 26 Dec 2020 11:25:57 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/dotnet/dot-net-runtime/</guid>
+      <description>Source Code Learning for 「Dot Net Runtime」.
+ Microsoft.Extensions.DependencyInjection Branch: release/5.0
+之前使用的都是.NET MVC DI，相对封装较为严重。公司的设计为Composition Root实现MVC中的ConfigureDependencies然后创建BuildServiceProvider。在对方法进行调用前通过IServiceProvider.GetService注入所需类构造函数中的依赖。
+ Dependency injection addresses these problems through:
+ The use of an interface or base class to abstract the dependency implementation. Registration of the dependency in a service container. .NET provides a built-in service container, IServiceProvider. Services are typically registered at the app&amp;rsquo;s start-up, and appended to an IServiceCollection. Once all services are added, you use BuildServiceProvider to create the service container.</description>
+    </item>
+    
+    <item>
+      <title>Dot Net Issue</title>
+      <link>https://www.openheart.icu/dotnet/dot-net-issue/</link>
+      <pubDate>Thu, 10 Sep 2020 11:00:35 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/dotnet/dot-net-issue/</guid>
+      <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
+ Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
+ 使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
+Note that run time is not included in this list by default. To change this behaviour:
+ Add the Nuget package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation. Change your Startup.ConfigureServices code to include runtime compilation:  public void ConfigureServices(IServiceCollection services) { services .</description>
+    </item>
+    
+    <item>
+      <title>C# in Depth</title>
+      <link>https://www.openheart.icu/dotnet/csharp-in-depth/</link>
+      <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/dotnet/csharp-in-depth/</guid>
+      <description>本文为「C# in Depth」(4th edition)学习记录。
+Part 1 C# in context Survival of the sharpest 本章主要讲C#的由来与介绍（吹嘘）。
+开始前可以回顾一下C#的历史，现在是北京时间2021-05-29 14:06:54，the last C# version is C# 9.
+Reference  The history of C#  Part 2 C# in 2-5 C# 3: LINQ and everything that comes with it Extension methods  Extension methods allow existing classes to be extended without relying on inheritance or having to change the class&amp;rsquo;s source code. This means that if you want to add some methods into the existing String class you can do it quite easily.</description>
+    </item>
+    
+    <item>
+      <title>.NET INTERVIEW</title>
+      <link>https://www.openheart.icu/dotnet/dot-net-interview/</link>
+      <pubDate>Fri, 17 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/dotnet/dot-net-interview/</guid>
+      <description>.NET INTERVIEW from Jeffrey Zhao&amp;rsquo;s blog 我在面试.NET/C#程序员时会提出的问题
+ 什么是.NET？什么是CLI？什么是CLR？IL是什么？JIT是什么，它是如何工作的？GC是什么，简述一下GC的工作方式？ 什么是.net .NET是个平台，你就把它看成C#
+一个.NET应用是一个运行于.NET Framework之上的应用程序。（更精确的说，一个.NET应用是一个使用.NET Framework类库来编写，并运行于公共语言运行时 Common Language Runtime之上的应用程序。）如果一个应用程序跟.NET Framework无关，它就不能叫做.NET程序。比如，仅仅使用了XML并不就是.NET应用，仅仅使用SOAP SDK调用一个Web Service也不是.NET应用
+开发平台（Dot Net Framework）：包含通用语言运行时（CLR）和Dot Net框架类库（FCL）两个部分。他们提供了一致的编程模型，简化的编程方式，可靠的版本机制（用全局程序集缓存GAC来避免DLL Hell），轻便的部署管理（程序集自带的元数据可以避免ini文件和注册表） ，广泛的平台支持（只要这台机器兼容标准下的CLR和FCL就可以部署，当然运行的时候IL会变成本机代码），无缝的语言集成，自动化的内存管理（垃圾收集），类型安全（CLR会阻止利用缓冲区溢出错误进行的攻击），CLR支持跨语言调试，统一的错误报告，全新的安全策略（CAS），兼容以往的COM组件
+什么是CLR CLR(公用语言运行时)和Java虚拟机一样也是一个运行时环境，它负责资源管理（内存分配和垃圾收集），并保证应用和底层操作系统之间必要的分离。.NET Framework 提供了一个称为公共语言运行时的运行时环境**（Commen Language Runtime）**，它运行代码并提供使开发过程更轻松的服务。公共语言运行时的功能通过编译器和工具公开，你可以编写利用此托管执行环境的代码。 使用基于公共语言运行时的语言编译器开发的代码称为托管代码；托管代码具有许多优点，例如：跨语言集成、跨语言异常处理、增强的安全性、版本控制和部署支持、简化的组件交互模型、调试和分析服务等。
+什么是CLI 通用语言基础结构（Common Language Infrastructure，CLI）是CLR的一个子集，也就是.NET中最终对编译成MSIL代码的应用程序的运行环境进行管理的那一部分。在 CLR结构图中CLI位于下半部分，主要包括类加载器(Class Loader)、实时编译器(IL To Native Compilers)和一个运行时环境的垃圾收集器(Garbage Collector)。CLI是.Net和CLR的灵魂，CLI为IL代码提供运行的环境，你可以将使用任何语言编写的代码通过其特定的编译器转换为 MSIL代码之后运行其上，甚至还可以自己写MSIL代码在CLI上面运行。
+什么是IL IL是微软.NET平台上衍生出来的一门中间语言，.NET平台上的各种高级语言（如C#，VB，F#）的编译器会将各自的文字表述方式转化为 IL。各种不同的文字形式最终被统一到了IL的表述方式，其中包含了.NET平台上的各种元素，如“范型”，“类”、、“接口”、“模块”、“属性”等 等。值得注意的是，各种高级语言本身可能根本没有这些“概念”在里头，如IronScheme是一个在.NET平台上的Scheme语言实现，其中根本没有前面提到的这些IL——亦或说是.NET平台上的名词。IL本身并不知道自己是由哪种高级语言转化而来的，哪种语言中有哪些特性，IL也根本不会关心。
+什么是JIT JIT（Just In Time, JIT）是.Net边运行边编译的一种机制。
+开发人员需要通过IL与CLR进行交流，虽然IL本身支持一些面向对象的概念，但是对于开发人员来讲还是过于复杂低效，于是C#应运而生，程序员只需编写C#代码，csc编译器会将其翻译成IL；虽然CLR理解IL，但是CPU只认识二进制指令，所以CLR需要JIT的帮助，将IL翻译成CPU指令. JIT按需工作，当一个.NET方法即将被执行时，JIT会介入，把该方法（IL指令）编译成CPU指令，并保存以供重用。
+什么是GC，以及它的工作方式 GC:.NET Framework 的垃圾回收器管理应用程序的内存分配和释放
+分配内存 初始化新进程时，运行时会为进程保留一个连续的地址空间区域。 这个保留的地址空间被称为托管堆。 托管堆维护着一个指针，用它指向将在堆中分配的下一个对象的地址。 最初，该指针设置为指向托管堆的基址。 托管堆上包含了所有引用类型。 应用程序创建第一个引用类型时，将为托管堆的基址中的类型分配内存。 应用程序创建下一个对象时，垃圾回收器在紧接第一个对象后面的地址空间内为它分配内存。 只要地址空间可用，垃圾回收器就会继续以这种方式为新对象分配空间。
+从托管堆中分配内存要比非托管内存分配速度快。 由于运行时通过为指针添加值来为对象分配内存，所以这几乎和从堆栈中分配内存一样快。 另外，由于连续分配的新对象在托管堆中是连续存储，所以应用程序可以快速访问这些对象。</description>
+    </item>
+    
+  </channel>
+</rss>

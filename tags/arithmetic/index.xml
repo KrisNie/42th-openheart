@@ -15,15 +15,24 @@
       
       <guid>https://www.openheart.icu/arithmetic/backtracking/</guid>
       <description>Backtracking 17. Letter Combinations of a Phone Number
-37. Sudoku Solver</description>
+Depth-First-Search，DFS 37. Sudoku Solver</description>
+    </item>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://www.openheart.icu/arithmetic/binary-search/</link>
+      <pubDate>Sun, 19 Sep 2021 17:15:26 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/arithmetic/binary-search/</guid>
+      <description>Binary Search Algorithm </description>
     </item>
     
     <item>
       <title>Static Search Table &amp; Dynamic Search Table</title>
-      <link>https://www.openheart.icu/cs/%E5%8A%A8%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%8E%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8/</link>
+      <link>https://www.openheart.icu/arithmetic/static-search-table-dynamic-search-table/</link>
       <pubDate>Sat, 25 Jul 2020 18:32:23 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/%E5%8A%A8%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%8E%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8/</guid>
+      <guid>https://www.openheart.icu/arithmetic/static-search-table-dynamic-search-table/</guid>
       <description>今天在看BST时，指导书上讲二叉排序树时与二分查找进行对比，引出几个模棱两可的概念（静态查找表、动态查找表），经查找后整理得本文
 概述 首先要了解几个基础概念
 查找(Searching) 是根据给定的某个值，在查找表中确定一个其关键字等于给定值的数据元素。
