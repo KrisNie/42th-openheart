@@ -14,17 +14,17 @@
   
   <url>
     <loc>https://www.openheart.icu/tags/cs/</loc>
-    <lastmod>2021-11-22T11:11:37+00:00</lastmod>
+    <lastmod>2021-12-01T14:28:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.openheart.icu/cs/</loc>
-    <lastmod>2021-11-22T11:11:37+00:00</lastmod>
+    <lastmod>2021-12-01T14:28:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/remote-procedure-call/</loc>
-    <lastmod>2021-11-15T23:28:00+00:00</lastmod>
+    <loc>https://www.openheart.icu/cs/representational-state-transfer/</loc>
+    <lastmod>2021-12-01T14:28:00+00:00</lastmod>
   </url>
   
   <url>
@@ -35,6 +35,21 @@
   <url>
     <loc>https://www.openheart.icu/categories/technical/</loc>
     <lastmod>2021-12-26T11:25:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/transactions/</loc>
+    <lastmod>2021-12-01T14:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/transparent-multilevel-diversion-system/</loc>
+    <lastmod>2021-12-01T14:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/remote-procedure-call/</loc>
+    <lastmod>2021-11-15T23:28:00+00:00</lastmod>
   </url>
   
   <url>
@@ -243,6 +258,16 @@
   </url>
   
   <url>
+    <loc>https://www.openheart.icu/tags/gardener/</loc>
+    <lastmod>2020-07-22T19:45:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/speech/gardener/</loc>
+    <lastmod>2020-07-22T19:45:28+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.openheart.icu/tags/interesting/</loc>
     <lastmod>2020-07-22T19:45:28+00:00</lastmod>
   </url>
@@ -290,6 +315,11 @@
   <url>
     <loc>https://www.openheart.icu/cs/hugo/</loc>
     <lastmod>2020-07-19T13:18:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/cs/mac/</loc>
+    <lastmod>2020-07-21T22:52:15+00:00</lastmod>
   </url>
   
   <url>

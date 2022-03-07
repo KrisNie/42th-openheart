@@ -53,7 +53,7 @@ CI/CD bridges the gaps between development and operation activities and teams by
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/git/</guid>
-      <description>Where is Git  Mac: which git Windows: where git powershell用 where.exe git.exe   Common Operation # 遇到pull不下来 git reset --hard FETCH_HEAD git clone https://www.github.com/XXXX/XXX.git # 修改邮箱 git config --global user.name &amp;#34;Kris Nie&amp;#34; git config --global user.email krisnie@qq.com # Commit undo git reset HEAD~ #只undo最后一次 git reflog #显示所有操作 git reset d0988e7a0d # delete commit git reset --soft HEAD~1 # 保留修改 git reset --hard HEAD~1 # 不保留修改 git push origin mybranch --force # 强制推送到远端 # delete branch git branch -d mybranch git branch -D mybranch # delete force git remote prune origin # automatically get rid of remote branches that no longer exist on the remote git push origin --delete mybranch # delete remote branch git push origin :mybranch # delete remote branch # update commit after git push git commit --amend # 进入vim修改 修改完成后:wq 保存 git push --force-with-lease origin mybranch #强制修改 git fetch origin # 如果有人已经pull了未修改前的 git reset --hard origin/branch # 本地端的修改會不見 # Stash changes git stash pop git stash list # Operate Commit git rebase -i Head~3 # it will open a vim for u, i to insert, wq to save # Change repositories URL git remote -v # show yoru remote URL git remote set-url origin ssh://git@XXX.</description>
+      <description>Common Operation # 遇到pull不下来 git reset --hard FETCH_HEAD git clone https://www.github.com/XXXX/XXX.git # 修改邮箱 git config --global user.name &amp;#34;Kris Nie&amp;#34; git config --global user.email krisnie@qq.com # Commit undo git reset HEAD~ #只undo最后一次 git reflog #显示所有操作 git reset d0988e7a0d # delete commit git reset --soft HEAD~1 # 保留修改 git reset --hard HEAD~1 # 不保留修改 git push origin mybranch --force # 强制推送到远端 # delete branch git branch -d mybranch git branch -D mybranch # delete force git remote prune origin # automatically get rid of remote branches that no longer exist on the remote git push origin --delete mybranch # delete remote branch git push origin :mybranch # delete remote branch # update commit after git push git commit --amend # 进入vim修改 修改完成后:wq 保存 git push --force-with-lease origin mybranch #强制修改 git fetch origin # 如果有人已经pull了未修改前的 git reset --hard origin/branch # 本地端的修改會不見 # Stash changes git stash pop git stash list # Operate Commit git rebase -i Head~3 # it will open a vim for u, i to insert, wq to save # Change repositories URL git remote -v # show yoru remote URL git remote set-url origin ssh://git@XXX.</description>
     </item>
     
     <item>
@@ -63,6 +63,17 @@ CI/CD bridges the gaps between development and operation activities and teams by
       
       <guid>https://www.openheart.icu/cs/hugo/</guid>
       <description>Install tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz cp ./hugo /usr/local/bin/ hugo new site site42 cd site42 hugo version rm -r public hugo server -b &amp;#34;https://openheart.icu:1313/&amp;#34; -p 1313 --bind &amp;#34;0.0.0.0&amp;#34; #mac 安装 brew install hugo # show the location of the hugo executable which hugo # show the installed version ls -l $( which hugo ) #lrwxr-xr-x 1 hyomin admin 30 7 17 22:46 /usr/local/bin/hugo -&amp;gt; ../Cellar/hugo/0.74.1/bin/hugo # verify that hugo runs correctly hugo version Hugo Static Site Generator v0.</description>
+    </item>
+    
+    <item>
+      <title>Mac Operation</title>
+      <link>https://www.openheart.icu/cs/mac/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/mac/</guid>
+      <description>brew使用国内镜像源（不好使） 中科大：
+# 步骤一 cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git* # 步骤二 cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git* #步骤三 brew update 复原：
+cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core brew update  配置item2代理 # 打开配置文件 vim ~/.bash_profile # 如果用了`oh-my-zsh` 那么修改`~/.zshrc` # 在后面新增配置 export http_proxy=http://127.0.0.1:1087 export https_proxy=socks5://127.0.0.1:1080 # 同理，可能执行 source ~/.zshrc source ~/.bash_profile  iTerm2 + Oh My Zsh 安装Oh my zsh # curl 安装方式 sh -c &amp;#34;$(curl -fsSL https://raw.</description>
     </item>
     
     <item>

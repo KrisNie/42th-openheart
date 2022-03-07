@@ -6,406 +6,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sun, 17 Oct 2021 11:35:34 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Dec 2021 14:28:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-        <item>
-        <title>Mac Operation</title>
-        <link>https://www.openheart.icu/cs/mac/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/mac/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/mac/ -&lt;h1 id=&#34;brew使用国内镜像源不好使&#34;&gt;brew使用国内镜像源（不好使）&lt;/h1&gt;
-&lt;p&gt;中科大：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤一&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
-git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git*
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
-git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git*
-
-&lt;span style=&#34;color:#228b22&#34;&gt;#步骤三&lt;/span&gt;
-brew update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;复原：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
-git remote set-url origin https://github.com/Homebrew/brew.git
-
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
-git remote set-url origin https://github.com/Homebrew/homebrew-core
-
-brew update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;配置item2代理&#34;&gt;配置item2代理&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 打开配置文件&lt;/span&gt;
-vim ~/.bash_profile 
-&lt;span style=&#34;color:#228b22&#34;&gt;# 如果用了`oh-my-zsh` 那么修改`~/.zshrc`&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 在后面新增配置&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;http_proxy&lt;/span&gt;=http://127.0.0.1:1087 
-&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;https_proxy&lt;/span&gt;=socks5://127.0.0.1:1080
-&lt;span style=&#34;color:#228b22&#34;&gt;# 同理，可能执行 source ~/.zshrc&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;source&lt;/span&gt; ~/.bash_profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;iterm2--oh-my-zsh&#34;&gt;iTerm2 + Oh My Zsh&lt;/h1&gt;
-&lt;h2 id=&#34;安装oh-my-zsh&#34;&gt;安装Oh my zsh&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# curl 安装方式&lt;/span&gt;
-sh -c &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装powerline&#34;&gt;安装PowerLine&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 安装 pip&lt;/span&gt;
-sudo easy_install pip
-
-pip install powerline-status --user
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装powerfonts&#34;&gt;安装PowerFonts&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# git clone&lt;/span&gt;
-git clone https://github.com/powerline/fonts.git --depth=&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# cd to folder&lt;/span&gt;
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; fonts
-&lt;span style=&#34;color:#228b22&#34;&gt;# run install shell&lt;/span&gt;
-./install.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Text 设置item2字体为Meslo LG&lt;/p&gt;
-&lt;h2 id=&#34;安装主题&#34;&gt;安装主题&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/Desktop/OpenSource
-git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; oh-my-zsh-agnoster-fcamblor/
-./install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行上面的命令会将主题拷贝到oh my zsh的themes中&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vi ~/.zshrc
-&lt;span style=&#34;color:#228b22&#34;&gt;# 将ZSH_THEME后面的字段改为agnoster&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装高亮插件&#34;&gt;安装高亮插件&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins/
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-git clone https://github.com/zsh-users/zsh-autosuggestions
-vi ~/.zshrc
-&lt;span style=&#34;color:#228b22&#34;&gt;# 修改zshrc&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;plugins信息：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;plugins=(
-	git
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;operation&#34;&gt;Operation&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 检查应用签名&lt;/span&gt;
-pkgutil --check-signature /Applications/Flume.app
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 清空DNS缓存&lt;/span&gt;
-dscacheutil -flushcache
-sudo dscacheutil -flushcache
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mac/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Markdown</title>
-        <link>https://www.openheart.icu/cs/markdown/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/markdown/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/markdown/ -&lt;h1 id=&#34;supporttyporaiohttpssupporttyporaio&#34;&gt;&lt;a href=&#34;https://support.typora.io/&#34;&gt;support.typora.io&lt;/a&gt;&lt;/h1&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;expressions&#34;&gt;Expressions&lt;/h1&gt;
-&lt;h2 id=&#34;公式标记&#34;&gt;公式标记&lt;/h2&gt;
-&lt;h3 id=&#34;行内公式inline&#34;&gt;行内公式（inline）&lt;/h3&gt;
-&lt;p&gt;eg: $ E=mc^2 $，写法是：&lt;code&gt;$E=mc^2$&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;整行公式displayed&#34;&gt;整行公式（displayed）&lt;/h3&gt;
-&lt;p&gt;用一对紧挨的两个美元符号&lt;code&gt;$$&lt;/code&gt;包裹&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;$$ $$&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;eg:
-$$
-\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
-$$&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;希腊字母&#34;&gt;希腊字母&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;名称&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;大写&lt;/th&gt;
-&lt;th&gt;Tex&lt;/th&gt;
-&lt;th&gt;小写&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Tex&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;alpha&lt;/td&gt;
-&lt;td&gt;$A$&lt;/td&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;td&gt;α&lt;/td&gt;
-&lt;td&gt;\alpha&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;beta&lt;/td&gt;
-&lt;td&gt;$B$&lt;/td&gt;
-&lt;td&gt;B&lt;/td&gt;
-&lt;td&gt;β&lt;/td&gt;
-&lt;td&gt;\beat&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;gamma&lt;/td&gt;
-&lt;td&gt;$Γ$&lt;/td&gt;
-&lt;td&gt;\Gamma&lt;/td&gt;
-&lt;td&gt;γ&lt;/td&gt;
-&lt;td&gt;\gamma&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;delta&lt;/td&gt;
-&lt;td&gt;$Δ$&lt;/td&gt;
-&lt;td&gt;\Delta&lt;/td&gt;
-&lt;td&gt;δ&lt;/td&gt;
-&lt;td&gt;\delta&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;epsilon&lt;/td&gt;
-&lt;td&gt;$E$&lt;/td&gt;
-&lt;td&gt;E&lt;/td&gt;
-&lt;td&gt;ϵ&lt;/td&gt;
-&lt;td&gt;\epsilon&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;zeta&lt;/td&gt;
-&lt;td&gt;Z&lt;/td&gt;
-&lt;td&gt;Z&lt;/td&gt;
-&lt;td&gt;ζ&lt;/td&gt;
-&lt;td&gt;\zeta&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;eta&lt;/td&gt;
-&lt;td&gt;H&lt;/td&gt;
-&lt;td&gt;H&lt;/td&gt;
-&lt;td&gt;η&lt;/td&gt;
-&lt;td&gt;\eta&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;theta&lt;/td&gt;
-&lt;td&gt;$Θ$&lt;/td&gt;
-&lt;td&gt;\Theta&lt;/td&gt;
-&lt;td&gt;θ&lt;/td&gt;
-&lt;td&gt;\theta&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;iota&lt;/td&gt;
-&lt;td&gt;I&lt;/td&gt;
-&lt;td&gt;I&lt;/td&gt;
-&lt;td&gt;ι&lt;/td&gt;
-&lt;td&gt;\iota&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;kappa&lt;/td&gt;
-&lt;td&gt;K&lt;/td&gt;
-&lt;td&gt;K&lt;/td&gt;
-&lt;td&gt;κ&lt;/td&gt;
-&lt;td&gt;\kappa&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;lambda&lt;/td&gt;
-&lt;td&gt;Λ&lt;/td&gt;
-&lt;td&gt;\Lambda&lt;/td&gt;
-&lt;td&gt;λ&lt;/td&gt;
-&lt;td&gt;\lambda&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;mu&lt;/td&gt;
-&lt;td&gt;M&lt;/td&gt;
-&lt;td&gt;M&lt;/td&gt;
-&lt;td&gt;μ&lt;/td&gt;
-&lt;td&gt;\mu&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;nu&lt;/td&gt;
-&lt;td&gt;N&lt;/td&gt;
-&lt;td&gt;N&lt;/td&gt;
-&lt;td&gt;ν&lt;/td&gt;
-&lt;td&gt;\nu&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;xi&lt;/td&gt;
-&lt;td&gt;$Ξ$&lt;/td&gt;
-&lt;td&gt;\Xi&lt;/td&gt;
-&lt;td&gt;ξ&lt;/td&gt;
-&lt;td&gt;\xi&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;omicron&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;ο&lt;/td&gt;
-&lt;td&gt;\omicron&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;pi&lt;/td&gt;
-&lt;td&gt;Π&lt;/td&gt;
-&lt;td&gt;\Pi&lt;/td&gt;
-&lt;td&gt;π&lt;/td&gt;
-&lt;td&gt;\pi&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;rho&lt;/td&gt;
-&lt;td&gt;P&lt;/td&gt;
-&lt;td&gt;P&lt;/td&gt;
-&lt;td&gt;ρ&lt;/td&gt;
-&lt;td&gt;\rho&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;sigma&lt;/td&gt;
-&lt;td&gt;Σ&lt;/td&gt;
-&lt;td&gt;\Sigma&lt;/td&gt;
-&lt;td&gt;σ&lt;/td&gt;
-&lt;td&gt;\sigma&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;tau&lt;/td&gt;
-&lt;td&gt;T&lt;/td&gt;
-&lt;td&gt;T&lt;/td&gt;
-&lt;td&gt;τ&lt;/td&gt;
-&lt;td&gt;\tau&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;upsilon&lt;/td&gt;
-&lt;td&gt;Υ&lt;/td&gt;
-&lt;td&gt;\Upsilon&lt;/td&gt;
-&lt;td&gt;υ&lt;/td&gt;
-&lt;td&gt;\upsilon&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;phi&lt;/td&gt;
-&lt;td&gt;Φ&lt;/td&gt;
-&lt;td&gt;\Phi&lt;/td&gt;
-&lt;td&gt;ϕ&lt;/td&gt;
-&lt;td&gt;\phi&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;chi&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;χ&lt;/td&gt;
-&lt;td&gt;\chi&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;psi&lt;/td&gt;
-&lt;td&gt;$Ψ$&lt;/td&gt;
-&lt;td&gt;\Psi&lt;/td&gt;
-&lt;td&gt;$ψ$&lt;/td&gt;
-&lt;td&gt;\psi&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;omega&lt;/td&gt;
-&lt;td&gt;Ω&lt;/td&gt;
-&lt;td&gt;\Omega&lt;/td&gt;
-&lt;td&gt;ω&lt;/td&gt;
-&lt;td&gt;\omega&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;角标&#34;&gt;角标&lt;/h2&gt;
-&lt;p&gt;Markdown Language is a superset of HTML, so you can use html tag &lt;strong&gt;sub,sup&lt;/strong&gt; to achieve this&lt;/p&gt;
-&lt;p&gt;上标和下标分别使用&lt;code&gt;^&lt;/code&gt;和&lt;code&gt;_&lt;/code&gt;来表示，下标也可以用&lt;code&gt;~&lt;/code&gt;表示&lt;/p&gt;
-&lt;p&gt;eg:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;H&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sub&amp;gt;&lt;/span&gt;2&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sub&amp;gt;&lt;/span&gt;O
-CO&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sub&amp;gt;&lt;/span&gt;2&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sub&amp;gt;&lt;/span&gt;
-NIKE&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sup&amp;gt;&lt;/span&gt;®&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sup&amp;gt;&lt;/span&gt;
-H~2~O~2~
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;H&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;O
-CO&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;
-NIKE&lt;!-- raw HTML omitted --&gt;®&lt;!-- raw HTML omitted --&gt;
-H~2~0~2~&lt;/p&gt;
-&lt;p&gt;如果要在左右两边都有上下标，可以用&lt;code&gt;\sideset&lt;/code&gt;来表示：&lt;/p&gt;
-&lt;p&gt;eg: &lt;code&gt;\sideset{^1_2}{^3_4}\bigotimes&lt;/code&gt;：$\sideset{^1_2}{^3_4}\bigotimes$。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;括号&#34;&gt;括号&lt;/h2&gt;
-&lt;h3 id=&#34;小括号与方括号&#34;&gt;小括号与方括号&lt;/h3&gt;
-&lt;p&gt;使用原始的&lt;code&gt;()&lt;/code&gt;和&lt;code&gt;[]&lt;/code&gt;即可。&lt;/p&gt;
-&lt;p&gt;eg: &lt;code&gt;(2+3)[4+4]&lt;/code&gt;：$(2+3)[4+4]$。&lt;/p&gt;
-&lt;h3 id=&#34;大括号&#34;&gt;大括号&lt;/h3&gt;
-&lt;p&gt;由于大括号&lt;code&gt;{}&lt;/code&gt;被用来分组，因此需要使用&lt;code&gt;\{&lt;/code&gt;和&lt;code&gt;\}&lt;/code&gt;表示大括号，也可以使用&lt;code&gt;\lbrace&lt;/code&gt;和&lt;code&gt;\rbrace&lt;/code&gt;来表示。&lt;/p&gt;
-&lt;p&gt;eg: &lt;code&gt;\{a*b\}&lt;/code&gt;或者&lt;code&gt;\lbrace a*b \rbrace&lt;/code&gt;，都会显示为${a*b}$。&lt;/p&gt;
-&lt;h3 id=&#34;尖括号&#34;&gt;尖括号&lt;/h3&gt;
-&lt;p&gt;使用&lt;code&gt;\langle&lt;/code&gt;和&lt;code&gt;\rangle&lt;/code&gt;分别表示左尖括号和右尖括号。&lt;/p&gt;
-&lt;p&gt;eg: &lt;code&gt;\langle x \rangle&lt;/code&gt;：$\langle x \rangle$&lt;/p&gt;
-&lt;h3 id=&#34;上取整&#34;&gt;上取整&lt;/h3&gt;
-&lt;p&gt;使用&lt;code&gt;\lceil&lt;/code&gt;和&lt;code&gt;\rceil&lt;/code&gt;表示。&lt;/p&gt;
-&lt;p&gt;eg: &lt;code&gt;\lceil x \rceil&lt;/code&gt;：$\lceil x \rceil$&lt;/p&gt;
-&lt;h3 id=&#34;下取整&#34;&gt;下取整&lt;/h3&gt;
-&lt;p&gt;使用&lt;code&gt;\lfloor&lt;/code&gt;和&lt;code&gt;\rfloor&lt;/code&gt;表示。&lt;/p&gt;
-&lt;p&gt;eg: &lt;code&gt;\lfloor x \rfloor&lt;/code&gt;：$\lfloor x \rfloor$&lt;/p&gt;
-&lt;p&gt;需要注意的是，原始括号并不会随着公式大小缩放。&lt;/p&gt;
-&lt;p&gt;eg: &lt;code&gt;(\frac12)&lt;/code&gt;：$(\frac12)$。可以使用\left( &amp;hellip;\right)来自适应的调整括号: &lt;code&gt;\left( \frac12 \right)&lt;/code&gt;：$\left( \frac12 \right)$。&lt;/p&gt;
-&lt;p&gt;可以明显看出，后一组公式中的括号是经过缩放的。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;求和与积分&#34;&gt;求和与积分&lt;/h2&gt;
-&lt;h3 id=&#34;求和&#34;&gt;求和&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;\sum&lt;/code&gt;用来表示求和符号，其下标表示求和下限，上标表示上线。&lt;/p&gt;
-&lt;p&gt;eg: &lt;code&gt;\sum_1^n&lt;/code&gt;：
-$$
-\sum_1^n
-$$&lt;/p&gt;
-&lt;h3 id=&#34;积分&#34;&gt;积分&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;\int&lt;/code&gt;用来表示积分符号，同样地，其上下标表示积分的上下限。&lt;/p&gt;
-&lt;p&gt;eg: &lt;code&gt;\int_1^\infty&lt;/code&gt;：
-$$
-\int_1^\infty
-$$
-与此类似的符号还有：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\prod&lt;/code&gt;：$\prod$&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\bigcup&lt;/code&gt;：$\bigcup$&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\bigcap&lt;/code&gt;：$\bigcap$&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\iint&lt;/code&gt;：$\iint$&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;分式与根式&#34;&gt;分式与根式&lt;/h2&gt;
-&lt;h3 id=&#34;分式&#34;&gt;分式&lt;/h3&gt;
-&lt;p&gt;分式有两种表示方法。&lt;/p&gt;
-&lt;p&gt;第一种，使用&lt;code&gt;\frac&lt;/code&gt;，如果分子或分母不是单个字符，需要使用{}来分组。&lt;/p&gt;
-&lt;p&gt;eg:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\frac ab&lt;/code&gt;: $\frac ab$&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\frac {a-1}{b+1}&lt;/code&gt;:$\frac {a-1}{b+1}$&lt;/p&gt;
-&lt;p&gt;第二种，使用&lt;code&gt;\over&lt;/code&gt;来分隔一个组的前后两部分&lt;/p&gt;
-&lt;p&gt;eg:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;{a+1\over b+1}&lt;/code&gt;：${a+1\over b+1}$&lt;/p&gt;
-&lt;h3 id=&#34;根式&#34;&gt;根式&lt;/h3&gt;
-&lt;p&gt;使用&lt;code&gt;\sqrt[a]b&lt;/code&gt;来表示。其中，方括号内的值用来表示开几次方，省略方括号则表示开方。&lt;/p&gt;
-&lt;p&gt;eg:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\sqrt[4]{\frac xy}&lt;/code&gt;：$\sqrt[4]{\frac xy}$&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\sqrt{x^3}&lt;/code&gt;：$\sqrt{x^3}$&lt;/p&gt;
-&lt;h3 id=&#34;乘号&#34;&gt;乘号&lt;/h3&gt;
-&lt;p&gt;叉乘\times&lt;/p&gt;
-&lt;p&gt;eg: $\times$&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;font&#34;&gt;Font&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;使用&lt;code&gt;\it&lt;/code&gt;显示意大利体（公式默认字体）：&lt;/p&gt;
-&lt;p&gt;$\it ACDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用&lt;code&gt;\mathbb&lt;/code&gt;或&lt;code&gt;\Bbb&lt;/code&gt;显示黑板粗体（黑板黑体）&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\mathbb{CHNQRZ}&lt;/code&gt;：$\mathbb{CHNQRZ}$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用&lt;code&gt;\mathbf&lt;/code&gt;或&lt;code&gt;\bf&lt;/code&gt;示黑体&lt;/p&gt;
-&lt;p&gt;$\mathbf ABCDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用\mathtt或\tt显示打印机字体：&lt;/p&gt;
-&lt;p&gt;$\tt ABCDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;image&#34;&gt;Image&lt;/h1&gt;
-&lt;p&gt;Credit line：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-XML&#34; data-lang=&#34;XML&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;center&amp;gt;&lt;/span&gt;Apple Marina Bay Sands is the first Apple store to sit directly on the water.&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;diff&#34;&gt;Diff&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;color:#a00&#34;&gt;-if(v &amp;gt; 100)
-&lt;/span&gt;&lt;span style=&#34;color:#a00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#0a0&#34;&gt;+if(v &amp;gt; 120)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;代码块的语法类型为&lt;code&gt;diff&lt;/code&gt;，在删除行加上 &lt;code&gt;-&lt;/code&gt;，在新增行加上 &lt;code&gt;+&lt;/code&gt;。&lt;/p&gt;
-- https://www.openheart.icu/cs/markdown/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
     
     
     
@@ -419,93 +22,33 @@ $$
 &lt;ol&gt;
 &lt;li&gt;La Mia Vita - &lt;a href=&#34;https://www.youtube.com/watch?v=q3LE8cl0IwE&#34;&gt;Ferrari Roma - Official Video&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h1 id=&#34;archiveorg-serendipityhttpswwwlocserendipitycompushplayhtml&#34;&gt;&lt;a href=&#34;https://www.locserendipity.com/PushPlay.html&#34;&gt;Archive.org Serendipity&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;“互联网档案馆”收集了很多早期的黑胶唱片音乐作品，都已经过了版权保护期。这个网站可以收听这些音乐，按一下按钮，就会随机播放一段音乐。&lt;/p&gt;
+&lt;h1 id=&#34;20-cds-curated-by-steve-jobs--the-ipod-teamhttpnobicomentry-1239html&#34;&gt;&lt;a href=&#34;http://nobi.com/entry-1239.html&#34;&gt;20 CDs curated by Steve Jobs &amp;amp; the iPod team&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Below you will find the list of those 20 CDs which was carefully selected by Steve Jobs and the original iPod team (lead by Stan Ng). Enjoy!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/classic-yo-yo/id155722108?at=10lwWY&amp;amp;app=itunes&#34;&gt;Classic Yo-Yo by Yo-Yo Ma&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/mozart-symphonies-nos.-35-41/id968876434?at=10lwWY&amp;amp;app=itunes&#34;&gt;Mozart:Symphonies Nos.35-41 by Karl Böhm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/bach-goldberg-variations-bwv/id594521223?at=10lwWY&amp;amp;app=itunes&#34;&gt;Goldberg Variations by Glenn Gould&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/bridge-over-troubled-water/id324127933?at=10lwWY&amp;amp;app=itunes&#34;&gt;Bridge Over Troubled Water by Simon &amp;amp; Garfunkel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/bookends/id203303421?at=10lwWY&amp;amp;app=itunes&#34;&gt;Bookends by Simon &amp;amp; Garfunkel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/bootleg-series-vol.-4-live/id157433155?at=10lwWY&amp;amp;app=itunes&#34;&gt;The Bootleg Series, Vol. 4: Live 1966 - The &amp;ldquo;Royal Albert Hall&amp;rdquo; Concert by Bob Dylan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/a-hard-days-night/id401132835?at=10lwWY&amp;amp;app=itunes&#34;&gt;A Hard Day&amp;rsquo;s Night by The Beatles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/abbey-road/id401186200?at=10lwWY&amp;amp;app=itunes&#34;&gt;Abbey Road by The Beatles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/live-in-cook-county-jail/id1036336053?at=10lwWY&amp;amp;app=itunes&#34;&gt;Live In Cook County Jail by B.B. King&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Cole-Porter-Songbook-Vol/dp/B0000046UG/ref=sr_1_1?ie=UTF8&amp;amp;qid=1458535394&amp;amp;sr=8-1&amp;amp;keywords=Ella+Fitzgerald+-+The+Cole+Porter+Songbook%2C+Vol+1&#34;&gt;The Cole Porter Songbook, Vol 1 by Ella Fitzgerald&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/kind-of-blue/id268443092?at=10lwWY&amp;amp;app=itunes&#34;&gt;Kind of Blue by Miles Davis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/time-out/id193085545?at=10lwWY&amp;amp;app=itunes&#34;&gt;Time Out by The Dave Brubeck Quartet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/jagged-little-pill-2015-remastered/id1050392837?at=10lwWY&amp;amp;app=itunes&#34;&gt;Jagged Little Pill by Alanis Morissette&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/surfacing/id388153718?at=10lwWY&amp;amp;app=itunes&#34;&gt;Surfacing by Sarah McLachlan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/nevermind/id485495703?at=10lwWY&amp;amp;app=itunes&#34;&gt;Never mind by Nirvana&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/legend-deluxe-edition/id19851211?at=10lwWY&amp;amp;app=itunes&#34;&gt;Bob Marley &amp;amp; The Wailers by Legend&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/breathe/id321981503?at=10lwWY&amp;amp;app=itunes&#34;&gt;Breathe by Faith Hill&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/crash/id388136111?at=10lwWY&amp;amp;app=itunes&#34;&gt;Crash by Dave Matthews Band&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/play-play-b-sides/id281242279?at=10lwWY&amp;amp;app=itunes&#34;&gt;Play &amp;amp; Play: B Sides by Moby&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/o-brother-where-art-thou-music/id524827132?at=10lwWY&amp;amp;app=itunes&#34;&gt;O Brother, Where Art Thou? (Music from the Motion Picture)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 - https://www.openheart.icu/speech/music/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>MySQL</title>
-        <link>https://www.openheart.icu/cs/mysql/</link>
-        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/mysql/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/mysql/ -&lt;h1 id=&#34;install-mysql&#34;&gt;Install MySQL&lt;/h1&gt;
-&lt;h2 id=&#34;准备操作&#34;&gt;准备操作&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;lsb_release -a						&lt;span style=&#34;color:#228b22&#34;&gt;# 查看操作系统版本&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# LSB Version:	:core-4.1-amd64:core-4.1-noarch&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Distributor ID:	CentOS&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Description:	CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Release:	7.8.2003&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# Codename:	Core&lt;/span&gt;
-
-cat /etc/redhat-release		&lt;span style=&#34;color:#228b22&#34;&gt;# 查看Linux内核版本&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# CentOS Linux release 7.8.2003 (Core)&lt;/span&gt;
-
-getconf LONG_BIT					&lt;span style=&#34;color:#228b22&#34;&gt;# 查看系统位数&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 64&lt;/span&gt;
-
-yum -y update							&lt;span style=&#34;color:#228b22&#34;&gt;# 更新 yum&lt;/span&gt;
-rpm -qa | grep mysql			&lt;span style=&#34;color:#228b22&#34;&gt;# 查看是否安装过MySQL&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装mysql&#34;&gt;安装MySQL&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 此处版本为在CentOS7下安装MySQL8.0&lt;/span&gt;
-wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 安装&lt;/span&gt;
-sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;#mysql80-community-release-el7-3.noarch&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 禁用 mysql8.0:&lt;/span&gt;
-sudo yum-config-manager --disable mysql80-community
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 启用 mysql8.0&lt;/span&gt;
-sudo yum-config-manager --enable mysql80-community
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 校验当前启用(enable)的 mysql 版本是否为 5.7:&lt;/span&gt;
-yum repolist enabled | grep mysql
-&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-connectors-community/x86_64 MySQL Connectors Community                 165&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# mysql-tools-community/x86_64      MySQL Tools Community                      115&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# mysql80-community/x86_64          MySQL 8.0 Community Server                 193&lt;/span&gt;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 安装MySQL&lt;/span&gt;
-sudo yum install -y mysql-community-server
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 启动 mysql 服务&lt;/span&gt;
-sudo service mysqld start
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 查看 mysql 服务状态&lt;/span&gt;
-sudo service mysqld status
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;mysql初始化设置&#34;&gt;MySQL初始化设置&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 查看初始密码&lt;/span&gt;
-sudo grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;temporary password&amp;#39;&lt;/span&gt; /var/log/mysqld.log
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 使用初始密码进行登录&lt;/span&gt;
-mysql -u root -p
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 登录成功之后设置新密码&lt;/span&gt;
-ALTER USER &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 创建用户&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 允许本地 IP（localhost, 127.0.0.1）访问：&lt;/span&gt;
-create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 允许任何 IP 访问：&lt;/span&gt;
-create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; identified by &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 刷新权限&lt;/span&gt;
-FLUSH PRIVILEGES;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 8.0版本后&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 创建账户&lt;/span&gt;
-create user &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; identified by  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人&lt;/span&gt;
-grant all privileges on *.* to &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;172.16.10.203&amp;#39;&lt;/span&gt; with grant option;
-&lt;span style=&#34;color:#228b22&#34;&gt;# 改密码&amp;amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里&lt;/span&gt;
-flush privileges;
-
-&lt;span style=&#34;color:#228b22&#34;&gt;# 修改host 将kris用作登录账户名&lt;/span&gt;
-update mysql.user &lt;span style=&#34;color:#658b00&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; where &lt;span style=&#34;color:#00688b&#34;&gt;User&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/mysql/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -568,30 +111,663 @@ nginx -c /etc/nginx/nginx.conf
         <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
         <guid>https://www.openheart.icu/cs/operating-system/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/operating-system/ -- https://www.openheart.icu/cs/operating-system/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        <description>42th openheart https://www.openheart.icu/cs/operating-system/ -&lt;h1 id=&#34;basic&#34;&gt;Basic&lt;/h1&gt;
+&lt;h1 id=&#34;operation&#34;&gt;Operation&lt;/h1&gt;
+&lt;h2 id=&#34;mac&#34;&gt;Mac&lt;/h2&gt;
+&lt;h3 id=&#34;brew使用国内镜像源不好使&#34;&gt;brew使用国内镜像源（不好使）&lt;/h3&gt;
+&lt;p&gt;中科大：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤一&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#步骤三&lt;/span&gt;
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;复原：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/brew.git
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/homebrew-core
+
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;配置item2代理&#34;&gt;配置item2代理&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 打开配置文件&lt;/span&gt;
+vim ~/.bash_profile 
+&lt;span style=&#34;color:#228b22&#34;&gt;# 如果用了`oh-my-zsh` 那么修改`~/.zshrc`&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 在后面新增配置&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;http_proxy&lt;/span&gt;=http://127.0.0.1:1087 
+&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;https_proxy&lt;/span&gt;=socks5://127.0.0.1:1080
+&lt;span style=&#34;color:#228b22&#34;&gt;# 同理，可能执行 source ~/.zshrc&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;iterm2--oh-my-zsh&#34;&gt;iTerm2 + Oh My Zsh&lt;/h3&gt;
+&lt;h4 id=&#34;安装oh-my-zsh&#34;&gt;安装Oh my zsh&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# curl 安装方式&lt;/span&gt;
+sh -c &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;安装powerline&#34;&gt;安装PowerLine&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 安装 pip&lt;/span&gt;
+sudo easy_install pip
+
+pip install powerline-status --user
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;安装powerfonts&#34;&gt;安装PowerFonts&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# git clone&lt;/span&gt;
+git clone https://github.com/powerline/fonts.git --depth=&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# cd to folder&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; fonts
+&lt;span style=&#34;color:#228b22&#34;&gt;# run install shell&lt;/span&gt;
+./install.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Text 设置item2字体为Meslo LG&lt;/p&gt;
+&lt;h4 id=&#34;安装主题&#34;&gt;安装主题&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/Desktop/OpenSource
+git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; oh-my-zsh-agnoster-fcamblor/
+./install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行上面的命令会将主题拷贝到oh my zsh的themes中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vi ~/.zshrc
+&lt;span style=&#34;color:#228b22&#34;&gt;# 将ZSH_THEME后面的字段改为agnoster&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;安装高亮插件&#34;&gt;安装高亮插件&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-autosuggestions
+vi ~/.zshrc
+&lt;span style=&#34;color:#228b22&#34;&gt;# 修改zshrc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;plugins信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;operation-1&#34;&gt;Operation&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 检查应用签名&lt;/span&gt;
+pkgutil --check-signature /Applications/Flume.app
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 清空DNS缓存&lt;/span&gt;
+dscacheutil -flushcache
+sudo dscacheutil -flushcache
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;windows&#34;&gt;Windows&lt;/h2&gt;
+&lt;h3 id=&#34;windows-terminal&#34;&gt;Windows Terminal&lt;/h3&gt;
+&lt;h4 id=&#34;oh-my-posh&#34;&gt;oh-my-posh&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; oh-my-posh -Scope CurrentUser -AllowPrerelease
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;psreadline&#34;&gt;PSReadLine&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/PowerShell/PSReadLine&#34;&gt;PowerShell/PSReadLine&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; PSReadLine -AllowPrerelease -Force
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;notepad $profile&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Import-Module&lt;/span&gt; PSReadLine
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineOption&lt;/span&gt; -PredictionSource &lt;span style=&#34;color:#658b00&#34;&gt;History
+&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 下面是三条是文档里推荐的，根据自己的习惯决定是否添加&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key UpArrow -Function HistorySearchBackward
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key DownArrow -Function HistorySearchForward
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key Tab -Function Complete
+&lt;span style=&#34;color:#228b22&#34;&gt;# Hot-Key&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Ctrl+g&amp;#34;&lt;/span&gt; -Function MenuComplete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;posh-git&#34;&gt;posh-git&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/dahlbyk/posh-git&#34;&gt;dahlbyk/posh-git&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; posh-git -Scope CurrentUser -AllowPrerelease -Force
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Import-Module&lt;/span&gt; posh-git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;scoop&#34;&gt;Scoop&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;iwr -useb get.scoop.sh | iex
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;command&#34;&gt;Command&lt;/h3&gt;
+&lt;h4 id=&#34;重置onedrive&#34;&gt;重置Onedrive&lt;/h4&gt;
+&lt;p&gt;​      %localappdata%\Microsoft\OneDrive\onedrive.exe /reset&lt;/p&gt;
+&lt;p&gt;​      %localappdata%\Microsoft\OneDrive\onedrive.exe&lt;/p&gt;
+&lt;h4 id=&#34;资源管理器打开卡顿可以通过索引选项给所有系统文件创建索引&#34;&gt;资源管理器打开卡顿可以通过索引选项给所有系统文件创建索引&lt;/h4&gt;
+&lt;h4 id=&#34;证书管理中心&#34;&gt;证书管理中心&lt;/h4&gt;
+&lt;p&gt;​     用win+R输入“certmgr.msc”，进入, China Internet Network Information Center EV Certificates Root 和CNNIC Root证书导出，不信任导入，右键&amp;ndash;&amp;gt;属性，在常规选项卡中，找到“证书目的”，选择“禁用此证书的所有目的”&lt;/p&gt;
+&lt;h4 id=&#34;图标不正常&#34;&gt;图标不正常：&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; /d %userprofile%&lt;span style=&#34;color:#cd5555&#34;&gt;\A&lt;/span&gt;ppData&lt;span style=&#34;color:#cd5555&#34;&gt;\L&lt;/span&gt;ocal
+del IconCache.db /a
+&lt;span style=&#34;color:#658b00&#34;&gt;exit&lt;/span&gt;
+explorer.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;netstat--ano&#34;&gt;netstat -ano&lt;/h4&gt;
+&lt;p&gt;占用进程&lt;/p&gt;
+&lt;h4 id=&#34;netsh-winsock-reset&#34;&gt;netsh winsock reset&lt;/h4&gt;
+&lt;p&gt;重新初始化网络环境,以解决由于软件冲突、病毒原因造成的参数错误问题&lt;/p&gt;
+&lt;h4 id=&#34;ipconfig-flushdns&#34;&gt;ipconfig /flushdns&lt;/h4&gt;
+&lt;p&gt;刷新dns缓存&lt;/p&gt;
+&lt;h4 id=&#34;程序如果一直停止&#34;&gt;程序如果一直停止&lt;/h4&gt;
+&lt;p&gt;删除C:\Users\你的电脑username\AppData\Local\出现问题的程序文件夹&lt;/p&gt;
+&lt;h4 id=&#34;net&#34;&gt;net&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;net share &lt;span style=&#34;color:#228b22&#34;&gt;# view your pc&amp;#39;s share folder&lt;/span&gt;
+net view &lt;span style=&#34;color:#cd5555&#34;&gt;\I&lt;/span&gt;P &lt;span style=&#34;color:#228b22&#34;&gt;#查看远程主机的所以共享资源&lt;/span&gt;
+
+net use &lt;span style=&#34;color:#cd5555&#34;&gt;\I&lt;/span&gt;P&lt;span style=&#34;color:#cd5555&#34;&gt;\I&lt;/span&gt;PC password /user:name &lt;span style=&#34;color:#228b22&#34;&gt;#建立IPC连接 远程主机的某个共享资源影射为本地盘符&lt;/span&gt;
+copy nc.exe &lt;span style=&#34;color:#cd5555&#34;&gt;\1&lt;/span&gt;92.168.0.7&lt;span style=&#34;color:#cd5555&#34;&gt;\a&lt;/span&gt;dmin &lt;span style=&#34;color:#228b22&#34;&gt;#upload 把本地目录下的nc.exe传到远程主机&lt;/span&gt;
+
+net start servername &lt;span style=&#34;color:#228b22&#34;&gt;#启动远程主机上的服务&lt;/span&gt;
+net stop servername &lt;span style=&#34;color:#228b22&#34;&gt;#停止远程主机上的服务&lt;/span&gt;
+
+net user abcd &lt;span style=&#34;color:#b452cd&#34;&gt;1234&lt;/span&gt; /add &lt;span style=&#34;color:#228b22&#34;&gt;#新建一个用户名为abcd，密码为1234的帐户，默认为user组成员。&lt;/span&gt;
+net user abcd /del &lt;span style=&#34;color:#228b22&#34;&gt;#将用户名为abcd的用户删除。&lt;/span&gt;
+net user abcd /active:no &lt;span style=&#34;color:#228b22&#34;&gt;#将用户名为abcd的用户禁用。&lt;/span&gt;
+net user abcd /active:yes &lt;span style=&#34;color:#228b22&#34;&gt;#激活用户名为abcd的用户。&lt;/span&gt;
+net user abcd &lt;span style=&#34;color:#228b22&#34;&gt;#查看用户名为abcd的用户的情况&lt;/span&gt;
+
+net localgroup groupname username /add &lt;span style=&#34;color:#228b22&#34;&gt;#查看所有和用户组有关的信息和进行相关操作&lt;/span&gt;
+
+net &lt;span style=&#34;color:#658b00&#34;&gt;time&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;\I&lt;/span&gt;P &lt;span style=&#34;color:#228b22&#34;&gt;#可以查看远程主机当前的时间&lt;/span&gt;
+
+
+tracert IP
+
+at &lt;span style=&#34;color:#658b00&#34;&gt;time&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;command&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;\c&lt;/span&gt;omputer &lt;span style=&#34;color:#228b22&#34;&gt;#表示在6点55分时，让名称为a-01的计算机开启telnet服务（这里net start telnet即为开启telnet服务的命令）&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;ftp&#34;&gt;ftp&lt;/h4&gt;
+&lt;p&gt;​     网络上开放的ftp的主机很多，其中很大一部分是匿名的，也就是说任何人都可以登陆上去。现在如果你扫到了一台开放 ftp服务的主机（一般都是开了21端口的机器），如果你还不会使用ftp的命令怎么办？下面就给出基本的ftp命令使用方法。&lt;/p&gt;
+&lt;p&gt;​      首先在命令行键入ftp回车，出现ftp的提示符，这时候可以键入&amp;quot;help&amp;quot;来查看帮助（任何DOS命令都可以使用此方法查看其帮助)。&lt;/p&gt;
+&lt;p&gt;​      大家可能看到了，这么多命令该怎么用？其实也用不到那么多，掌握几个基本的就够了。&lt;/p&gt;
+&lt;p&gt;​      首先是登陆过程，这就要用到open了，直接在ftp的提示符下输入&amp;quot;open 主机IP ftp端口&amp;quot;回车即可，一般端口默认都是21，可以不写。接着就是输入合法的用户名和密码进行登陆了，这里以匿名ftp为例介绍。&lt;/p&gt;
+&lt;p&gt;​      用户名和密码都是ftp，密码是不显示的。当提示 logged in时，就说明登陆成功。这里因为是匿名登陆，所以用户显示为Anonymous。&lt;/p&gt;
+&lt;p&gt;​      接下来就要介绍具体命令的使用方法了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;dir &lt;span style=&#34;color:#228b22&#34;&gt;#跟DOS命令一样，用于查看服务器的文件，直接敲上dir回车，就可以看到此ftp服务器上的文件。&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#228b22&#34;&gt;#进入某个文件夹。&lt;/span&gt;
+get &lt;span style=&#34;color:#228b22&#34;&gt;#下载文件到本地机器。&lt;/span&gt;
+put &lt;span style=&#34;color:#228b22&#34;&gt;#上传文件到远程服务器。这就要看远程ftp服务器是否给了你可写的权限了，如果可以，呵呵，该怎么 利用就不多说了，大家就自由发挥去吧。&lt;/span&gt;
+delete &lt;span style=&#34;color:#228b22&#34;&gt;#删除远程ftp服务器上的文件。这也必须保证你有可写的权限。&lt;/span&gt;
+bye &lt;span style=&#34;color:#228b22&#34;&gt;#退出当前连接。&lt;/span&gt;
+quit &lt;span style=&#34;color:#228b22&#34;&gt;#同上&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;telnet&#34;&gt;telnet&lt;/h4&gt;
+&lt;p&gt;​      功能强大的远程登陆命令，几乎所有的入侵者都喜欢用它，屡试不爽。为什么？它操作简单，如同使用自己的机器一样，只要你熟悉DOS命令，在成功以 administrator身份连接了远程机器后，就可以用它来干你想干的一切了。下面介绍一下使用方法，首先键入telnet回车，再键入help查看其帮助信息。&lt;/p&gt;
+&lt;p&gt;​	当输入用户名和密码都正确后就成功建立了telnet连接，这时候你就在远程主机上具有了和此用户一样的权限，利用DOS命令就可以实现你想干的事情了。这里我使用的超级管理员权限登陆的。&lt;/p&gt;
+&lt;p&gt;​     任何人要想进入系统，必须得有一个合法的用户名和密码（输入法漏洞差不多绝迹了吧），哪怕你拿到帐户的只有一个很小的权限，你也可以利用它来达到最后的目的。所以坚决消灭空口令，给自己的帐户加上一个强壮的密码，是最好的防御弱口令入侵的方法。&lt;/p&gt;
+&lt;h4 id=&#34;常用命令&#34;&gt;常用命令&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;winver &lt;span style=&#34;color:#228b22&#34;&gt;#检查Windows版本 &lt;/span&gt;
+wmimgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#打开windows管理体系结构(WMI) &lt;/span&gt;
+wupdmgr &lt;span style=&#34;color:#228b22&#34;&gt;#windows更新程序 &lt;/span&gt;
+wscript &lt;span style=&#34;color:#228b22&#34;&gt;#windows脚本宿主设置 &lt;/span&gt;
+write &lt;span style=&#34;color:#228b22&#34;&gt;#写字板 &lt;/span&gt;
+winmsd &lt;span style=&#34;color:#228b22&#34;&gt;#系统信息 &lt;/span&gt;
+wiaacmgr &lt;span style=&#34;color:#228b22&#34;&gt;#扫描仪和照相机向导 &lt;/span&gt;
+winchat &lt;span style=&#34;color:#228b22&#34;&gt;#XP自带局域网聊天&lt;/span&gt;
+mem.exe &lt;span style=&#34;color:#228b22&#34;&gt;#显示内存使用情况 &lt;/span&gt;
+Msconfig.exe &lt;span style=&#34;color:#228b22&#34;&gt;#系统配置实用程序 &lt;/span&gt;
+mplayer2 &lt;span style=&#34;color:#228b22&#34;&gt;#简易widnows media player &lt;/span&gt;
+mspaint &lt;span style=&#34;color:#228b22&#34;&gt;#画图板 &lt;/span&gt;
+mstsc &lt;span style=&#34;color:#228b22&#34;&gt;#远程桌面连接 &lt;/span&gt;
+mplayer2 &lt;span style=&#34;color:#228b22&#34;&gt;#媒体播放机 &lt;/span&gt;
+magnify &lt;span style=&#34;color:#228b22&#34;&gt;#放大镜实用程序 &lt;/span&gt;
+mmc &lt;span style=&#34;color:#228b22&#34;&gt;#打开控制台 &lt;/span&gt;
+mobsync &lt;span style=&#34;color:#228b22&#34;&gt;#同步命令&lt;/span&gt;
+dxdiag &lt;span style=&#34;color:#228b22&#34;&gt;#检查directx&lt;/span&gt;
+drwtsn32 &lt;span style=&#34;color:#228b22&#34;&gt;#系统医生 &lt;/span&gt;
+devmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#设备管理器 &lt;/span&gt;
+dfrg.msc &lt;span style=&#34;color:#228b22&#34;&gt;#-磁盘碎片整理&lt;/span&gt;
+diskmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#磁盘管理实用程序 &lt;/span&gt;
+dcomcnfg &lt;span style=&#34;color:#228b22&#34;&gt;#打开系统组件服务 &lt;/span&gt;
+ddeshare &lt;span style=&#34;color:#228b22&#34;&gt;#打开DDE共享设置 &lt;/span&gt;
+dvdplay &lt;span style=&#34;color:#228b22&#34;&gt;#dvd播放器&lt;/span&gt;
+net stop messenger &lt;span style=&#34;color:#228b22&#34;&gt;#停止信使服务 &lt;/span&gt;
+net start messenger &lt;span style=&#34;color:#228b22&#34;&gt;#开始信使服务 &lt;/span&gt;
+notepad &lt;span style=&#34;color:#228b22&#34;&gt;#打开记事本 &lt;/span&gt;
+nslookup &lt;span style=&#34;color:#228b22&#34;&gt;#网络管理的工具向导 &lt;/span&gt;
+ntbackup &lt;span style=&#34;color:#228b22&#34;&gt;#系统备份和还原 &lt;/span&gt;
+narrator &lt;span style=&#34;color:#228b22&#34;&gt;#屏幕&amp;amp;quot;讲述人&amp;amp;quot; &lt;/span&gt;
+ntmsmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#移动存储管理器 &lt;/span&gt;
+ntmsoprq.msc &lt;span style=&#34;color:#228b22&#34;&gt;#移动存储管理员操作请求 &lt;/span&gt;
+netstat -an &lt;span style=&#34;color:#228b22&#34;&gt;#(TC)命令检查接口&lt;/span&gt;
+syncapp &lt;span style=&#34;color:#228b22&#34;&gt;#创建一个公文包 &lt;/span&gt;
+sysedit &lt;span style=&#34;color:#228b22&#34;&gt;#系统配置编辑器 &lt;/span&gt;
+sigverif &lt;span style=&#34;color:#228b22&#34;&gt;#文件签名验证程序 &lt;/span&gt;
+sndrec32 &lt;span style=&#34;color:#228b22&#34;&gt;#录音机 &lt;/span&gt;
+shrpubw &lt;span style=&#34;color:#228b22&#34;&gt;#创建共享文件夹 &lt;/span&gt;
+secpol.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本地安全策略 &lt;/span&gt;
+syskey &lt;span style=&#34;color:#228b22&#34;&gt;#系统加密，一旦加密就不能解开，保护windows xp系统的双重密码 &lt;/span&gt;
+services.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本地服务设置 &lt;/span&gt;
+Sndvol32 &lt;span style=&#34;color:#228b22&#34;&gt;#音量控制程序 &lt;/span&gt;
+sfc.exe &lt;span style=&#34;color:#228b22&#34;&gt;#系统文件检查器 &lt;/span&gt;
+sfc /scannow &lt;span style=&#34;color:#228b22&#34;&gt;#windows文件保护&lt;/span&gt;
+tsshutdn &lt;span style=&#34;color:#228b22&#34;&gt;#60秒倒计时关机命令 &lt;/span&gt;
+tourstart &lt;span style=&#34;color:#228b22&#34;&gt;#xp简介（安装完成后出现的漫游xp程序） &lt;/span&gt;
+taskmgr &lt;span style=&#34;color:#228b22&#34;&gt;#任务管理器&lt;/span&gt;
+eventvwr &lt;span style=&#34;color:#228b22&#34;&gt;#事件查看器 &lt;/span&gt;
+eudcedit &lt;span style=&#34;color:#228b22&#34;&gt;#造字程序 &lt;/span&gt;
+explorer &lt;span style=&#34;color:#228b22&#34;&gt;#打开资源管理器&lt;/span&gt;
+packager &lt;span style=&#34;color:#228b22&#34;&gt;#对象包装程序 &lt;/span&gt;
+perfmon.msc &lt;span style=&#34;color:#228b22&#34;&gt;#计算机性能监测程序 &lt;/span&gt;
+progman &lt;span style=&#34;color:#228b22&#34;&gt;#程序管理器&lt;/span&gt;
+regedit.exe &lt;span style=&#34;color:#228b22&#34;&gt;#注册表 &lt;/span&gt;
+rsop.msc &lt;span style=&#34;color:#228b22&#34;&gt;#组策略结果集 &lt;/span&gt;
+regedt32 &lt;span style=&#34;color:#228b22&#34;&gt;#注册表编辑器 &lt;/span&gt;
+rononce -p &lt;span style=&#34;color:#228b22&#34;&gt;#15秒关机 &lt;/span&gt;
+regsvr32 /u *.dll &lt;span style=&#34;color:#228b22&#34;&gt;#停止dll文件运行 &lt;/span&gt;
+regsvr32 /u zipfldr.dll &lt;span style=&#34;color:#228b22&#34;&gt;#取消ZIP支持&lt;/span&gt;
+cmd.exe &lt;span style=&#34;color:#228b22&#34;&gt;#CMD命令提示符 &lt;/span&gt;
+chkdsk.exe &lt;span style=&#34;color:#228b22&#34;&gt;#Chkdsk磁盘检查 &lt;/span&gt;
+certmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#证书管理实用程序 &lt;/span&gt;
+calc &lt;span style=&#34;color:#228b22&#34;&gt;#启动计算器&lt;/span&gt;
+charmap &lt;span style=&#34;color:#228b22&#34;&gt;#启动字符映射表 &lt;/span&gt;
+cliconfg &lt;span style=&#34;color:#228b22&#34;&gt;#sql server 客户端网络实用程序 &lt;/span&gt;
+Clipbrd &lt;span style=&#34;color:#228b22&#34;&gt;#剪贴板查看器 &lt;/span&gt;
+conf &lt;span style=&#34;color:#228b22&#34;&gt;#启动netmeeting &lt;/span&gt;
+compmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#计算机管理 &lt;/span&gt;
+cleanmgr &lt;span style=&#34;color:#228b22&#34;&gt;#垃圾整理 &lt;/span&gt;
+ciadv.msc &lt;span style=&#34;color:#228b22&#34;&gt;#索引服务程序&lt;/span&gt;
+osk &lt;span style=&#34;color:#228b22&#34;&gt;#打开屏幕键盘 &lt;/span&gt;
+odbcad32 &lt;span style=&#34;color:#228b22&#34;&gt;#ODBC数据源管理器 &lt;/span&gt;
+oobe/msoobe /a &lt;span style=&#34;color:#228b22&#34;&gt;#检查XP是否激活 &lt;/span&gt;
+lusrmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本机用户和组 &lt;/span&gt;
+iexpress &lt;span style=&#34;color:#228b22&#34;&gt;#木马捆绑工具，系统自带&lt;/span&gt;
+Nslookup &lt;span style=&#34;color:#228b22&#34;&gt;#IP地址侦测器&lt;/span&gt;
+fsmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#共享文件夹管理器&lt;/span&gt;
+utilman &lt;span style=&#34;color:#228b22&#34;&gt;#辅助工具管理器&lt;/span&gt;
+gpedit.msc &lt;span style=&#34;color:#228b22&#34;&gt;#组策略&lt;/span&gt;
+ntmsoprq.msc &lt;span style=&#34;color:#228b22&#34;&gt;#移动存储管理员操作请求&lt;/span&gt;
+netstat -an &lt;span style=&#34;color:#228b22&#34;&gt;#(TC)命令检查接口&lt;/span&gt;
+Nslookup &lt;span style=&#34;color:#228b22&#34;&gt;#IP地址侦测器&lt;/span&gt;
+oobe/msoobe /a &lt;span style=&#34;color:#228b22&#34;&gt;#检查windows是否激活&lt;/span&gt;
+odbcad32 &lt;span style=&#34;color:#228b22&#34;&gt;#ODBC数据源管理器&lt;/span&gt;
+progman &lt;span style=&#34;color:#228b22&#34;&gt;#程序管理器&lt;/span&gt;
+perfmon.msc &lt;span style=&#34;color:#228b22&#34;&gt;#计算机性能监测程序&lt;/span&gt;
+packager &lt;span style=&#34;color:#228b22&#34;&gt;#对象包装程序&lt;/span&gt;
+rononce -p  &lt;span style=&#34;color:#228b22&#34;&gt;#15秒关机&lt;/span&gt;
+regsvr32 /u *.dll &lt;span style=&#34;color:#228b22&#34;&gt;#停止dll文件运行(把*号换成要停止的dll文件名)&lt;/span&gt;
+regedt32 &lt;span style=&#34;color:#228b22&#34;&gt;#注册表编辑器&lt;/span&gt;
+rsop.msc &lt;span style=&#34;color:#228b22&#34;&gt;#组策略结果集&lt;/span&gt;
+regedit.exe–注册表
+regsvr32 /u zipfldr.dll &lt;span style=&#34;color:#228b22&#34;&gt;#取消ZIP支持&lt;/span&gt;
+sndrec32 &lt;span style=&#34;color:#228b22&#34;&gt;#录音机&lt;/span&gt;
+services.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本地服务设置&lt;/span&gt;
+syncapp &lt;span style=&#34;color:#228b22&#34;&gt;#创建一个公文包&lt;/span&gt;
+sysedit &lt;span style=&#34;color:#228b22&#34;&gt;#系统配置编辑器&lt;/span&gt;
+sigverif &lt;span style=&#34;color:#228b22&#34;&gt;#文件签名验证程序&lt;/span&gt;
+shrpubw &lt;span style=&#34;color:#228b22&#34;&gt;#创建共享文件夹&lt;/span&gt;
+secpol.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本地安全策略&lt;/span&gt;
+syskey &lt;span style=&#34;color:#228b22&#34;&gt;#系统加密&lt;/span&gt;
+Sndvol32 &lt;span style=&#34;color:#228b22&#34;&gt;#音量控制程序&lt;/span&gt;
+sfc.exe &lt;span style=&#34;color:#228b22&#34;&gt;#系统文件检查器&lt;/span&gt;
+sfc /scannow &lt;span style=&#34;color:#228b22&#34;&gt;#windows文件保护(扫描错误并复原)&lt;/span&gt;
+tsshutdn &lt;span style=&#34;color:#228b22&#34;&gt;#60秒倒计时关机命令&lt;/span&gt;
+taskmgr &lt;span style=&#34;color:#228b22&#34;&gt;#任务管理器&lt;/span&gt;
+utilman &lt;span style=&#34;color:#228b22&#34;&gt;#辅助工具管理器&lt;/span&gt;
+winmsd &lt;span style=&#34;color:#228b22&#34;&gt;#系统信息&lt;/span&gt;
+winver &lt;span style=&#34;color:#228b22&#34;&gt;#检查Windows版本&lt;/span&gt;
+wmimgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#打开windows管理体系结构(WMI)&lt;/span&gt;
+wupdmgr &lt;span style=&#34;color:#228b22&#34;&gt;#windows更新程序 (不是正版系统不要打开)&lt;/span&gt;
+Wscript.exe &lt;span style=&#34;color:#228b22&#34;&gt;#windows脚本宿主设置&lt;/span&gt;
+wiaacmgr &lt;span style=&#34;color:#228b22&#34;&gt;#扫描仪和照相机向导&lt;/span&gt;
+cleanmgr &lt;span style=&#34;color:#228b22&#34;&gt;#打开磁盘清理工具&lt;/span&gt;
+compmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#计算机管理&lt;/span&gt;
+conf &lt;span style=&#34;color:#228b22&#34;&gt;#启动 netmeeting&lt;/span&gt;
+chkdsk.exe &lt;span style=&#34;color:#228b22&#34;&gt;#Chkdsk磁盘检查&lt;/span&gt;
+cmd.exe &lt;span style=&#34;color:#228b22&#34;&gt;#CMD命令提示符&lt;/span&gt;
+certmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#证书管理实用程序&lt;/span&gt;
+cliconfg &lt;span style=&#34;color:#228b22&#34;&gt;#SQL SERVER 客户端网络实用程序&lt;/span&gt;
+Clipbrd &lt;span style=&#34;color:#228b22&#34;&gt;#剪贴板查看器&lt;/span&gt;
+ciadv.msc &lt;span style=&#34;color:#228b22&#34;&gt;#索引服务程序&lt;/span&gt;
+dvdplay &lt;span style=&#34;color:#228b22&#34;&gt;#DVD播放器&lt;/span&gt;
+diskmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#磁盘管理实用程序&lt;/span&gt;
+dfrg.msc &lt;span style=&#34;color:#228b22&#34;&gt;#磁盘碎片整理程序&lt;/span&gt;
+devmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#设备管理器&lt;/span&gt;
+drwtsn32 &lt;span style=&#34;color:#228b22&#34;&gt;#系统医生&lt;/span&gt;
+dxdiag &lt;span style=&#34;color:#228b22&#34;&gt;#检查DirectX信息&lt;/span&gt;
+dcomcnfg &lt;span style=&#34;color:#228b22&#34;&gt;#打开系统组件服务&lt;/span&gt;
+ddeshare &lt;span style=&#34;color:#228b22&#34;&gt;#打开DDE共享设置&lt;/span&gt;
+explorer &lt;span style=&#34;color:#228b22&#34;&gt;#打开资源管理器&lt;/span&gt;
+eventvwr &lt;span style=&#34;color:#228b22&#34;&gt;#事件查看器&lt;/span&gt;
+eudcedit &lt;span style=&#34;color:#228b22&#34;&gt;#造字程序&lt;/span&gt;
+fsmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#共享文件夹管理器&lt;/span&gt;
+gpedit.msc &lt;span style=&#34;color:#228b22&#34;&gt;#组策略&lt;/span&gt;
+iexpress &lt;span style=&#34;color:#228b22&#34;&gt;#工具，系统自带&lt;/span&gt;
+logoff &lt;span style=&#34;color:#228b22&#34;&gt;#注销命令&lt;/span&gt;
+lusrmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本机用户和组&lt;/span&gt;
+mstsc &lt;span style=&#34;color:#228b22&#34;&gt;#远程桌面连接&lt;/span&gt;
+Msconfig.exe &lt;span style=&#34;color:#228b22&#34;&gt;#系统配置实用程序&lt;/span&gt;
+mem.exe &lt;span style=&#34;color:#228b22&#34;&gt;#显示内存使用情况(如果直接运行无效，可以先运行cmd，在命令提示符里输入mem.exe&amp;gt;d:a.txt 即可打开d盘查看a.txt，里面的就是内存使用情况了。当然什么盘什么文件名可自己决定。)&lt;/span&gt;
+mplayer2 &lt;span style=&#34;color:#228b22&#34;&gt;#简易widnows media player&lt;/span&gt;
+mspaint &lt;span style=&#34;color:#228b22&#34;&gt;#画图板&lt;/span&gt;
+mplayer2 &lt;span style=&#34;color:#228b22&#34;&gt;#媒体播放机&lt;/span&gt;
+magnify &lt;span style=&#34;color:#228b22&#34;&gt;#放大镜实用程序&lt;/span&gt;
+mmc &lt;span style=&#34;color:#228b22&#34;&gt;#打开控制台&lt;/span&gt;
+mobsync &lt;span style=&#34;color:#228b22&#34;&gt;#同步命令&lt;/span&gt;
+notepad &lt;span style=&#34;color:#228b22&#34;&gt;#打开记事本&lt;/span&gt;
+net start messenger &lt;span style=&#34;color:#228b22&#34;&gt;#开始信使服务&lt;/span&gt;
+net stop messenger &lt;span style=&#34;color:#228b22&#34;&gt;#停止信使服务&lt;/span&gt;
+notepad &lt;span style=&#34;color:#228b22&#34;&gt;#打开记事本&lt;/span&gt;
+nslookup &lt;span style=&#34;color:#228b22&#34;&gt;#网络管理的工具向导&lt;/span&gt;
+ntbackup &lt;span style=&#34;color:#228b22&#34;&gt;#系统备份和还原&lt;/span&gt;
+narrator &lt;span style=&#34;color:#228b22&#34;&gt;#屏幕“讲述人”&lt;/span&gt;
+ntmsmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#移动存储管理器&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
+&lt;h3 id=&#34;papers&#34;&gt;Papers&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://chsasank.com/classic_papers/unix-time-sharing-system.html&#34;&gt;The UNIX Time-Sharing System&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;operation-2&#34;&gt;Operation&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ chown -R nginx:users ./*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看当前文件夹下权限&lt;/span&gt;
+$ ls -l
+
+$ netstat -npa | grep &lt;span style=&#34;color:#b452cd&#34;&gt;9000&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看当前路径&lt;/span&gt;
+$ &lt;span style=&#34;color:#658b00&#34;&gt;pwd&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 安装git&lt;/span&gt;
+$ yum -y install git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;vim&#34;&gt;vim&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 退出编辑模式，输入以下命令：&lt;/span&gt;
+Esc 
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 保存后退出vi，若为 :wq! 则为强制储存后退出（常用）&lt;/span&gt;
+:wq
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 保存但不退出（常用）&lt;/span&gt;
+:w
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 若文件属性为『只读』时，强制写入该档案&lt;/span&gt;
+:w!
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 离开 vi （常用）&lt;/span&gt;
+:q    
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。&lt;/span&gt;
+:q!   
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 将档案还原到最原始的状态！&lt;/span&gt;
+:e!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;tail&#34;&gt;tail&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 现有itbilu.log日志文件，查看其后5行：&lt;/span&gt;
+$ tail -n -5 itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
+$ tail -n &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt; itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
+$ tail -5 itbilu.log
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看第100行至文件末尾：&lt;/span&gt;
+$ tail -n +100 itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
+$ tail +100 itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 配合head命令，实现查看文件的第10到20行：&lt;/span&gt;
+$ head -20 itbilu.log | tail -10
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 实时查看日志&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 通过-f参数，我们可以实时查看文件的新增内容：&lt;/span&gt;
+$ tail -f itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 注意：使用-f参数时不会中断文件监视，需要通过ctrl+c手动结束。&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 实时日志查看与grep过滤关键字&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 通过-f参数，并配合grep命令，可以实现对文件内容的过滤。如：查看前几行、后几行、或前后几行，这时可以通过以下几个参数实现：&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# -A &amp;lt;显示行数&amp;gt;            除了显示符合匹配内容的那一行之外，并显示该行之后的内容&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# -B &amp;lt;显示行数&amp;gt;            在显示符合匹配内容的那一行之外，并显示该行之前的内容&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# -C &amp;lt;显示行数&amp;gt;或-&amp;lt;显示行数&amp;gt; 除了显示符合匹配内容的那一列之外，并显示该列之前后的内容&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 监控itbilu.log日志件，并查看含有&amp;#39;foo&amp;#39;关键字的前后5行：&lt;/span&gt;
+$ tail -f itbilu.log|grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt; -C &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
+$ tail -f itbilu.log|grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt; -5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;issues&#34;&gt;Issues&lt;/h3&gt;
+&lt;h4 id=&#34;how-is-it-possible-for-fork-to-return-two-valueshttpsstackoverflowcomquestions4207656how-is-it-possible-for-fork-to-return-two-values&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4207656/how-is-it-possible-for-fork-to-return-two-values&#34;&gt;How is it possible for fork() to return two values?&lt;/a&gt;&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;fork&lt;/code&gt; does not return two values. Right after a &lt;code&gt;fork&lt;/code&gt; system call you simply have two independent processes executing the same code, and the returned pid from &lt;code&gt;fork&lt;/code&gt; is the only way to distinguish which process are you in - the parent or the child.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;iptables--nftables&#34;&gt;iptables &amp;amp; nftables&lt;/h4&gt;
+&lt;h4 id=&#34;linux-command-full-english-name&#34;&gt;Linux command full English name&lt;/h4&gt;
+&lt;p&gt;/bin = BINaries&lt;/p&gt;
+&lt;p&gt;/dev = DEVices&lt;/p&gt;
+&lt;p&gt;/etc = ETCetera&lt;/p&gt;
+&lt;p&gt;/lib = LIBrary&lt;/p&gt;
+&lt;p&gt;/proc = PROCesses&lt;/p&gt;
+&lt;p&gt;/sbin = Superuser BINaries&lt;/p&gt;
+&lt;p&gt;/tmp = TeMPorary&lt;/p&gt;
+&lt;p&gt;/usr = Unix Shared Resources&lt;/p&gt;
+&lt;p&gt;/var = VARiable ?&lt;/p&gt;
+&lt;p&gt;FIFO = First In, First Out&lt;/p&gt;
+&lt;p&gt;GRUB = GRand Unified Bootloader&lt;/p&gt;
+&lt;p&gt;IFS = Internal Field Seperators&lt;/p&gt;
+&lt;p&gt;LILO = LInux LOader&lt;/p&gt;
+&lt;p&gt;MySQL = My is the name of the original author&amp;rsquo;s daughter, SQL = Structured Query Language&lt;/p&gt;
+&lt;p&gt;PHP = Personal Home Page Tools = PHP Hypertext Preprocessor&lt;/p&gt;
+&lt;p&gt;PS = Prompt String&lt;/p&gt;
+&lt;p&gt;Perl = &amp;ldquo;Pratical Extraction and Report Language&amp;rdquo; = &amp;ldquo;Pathologically Eclectic Rubbish Lister&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Python gets its name from the TV series Monty Python&amp;rsquo;s Flying Circus&lt;/p&gt;
+&lt;p&gt;Tcl = Tool Command Language&lt;/p&gt;
+&lt;p&gt;Tk = ToolKit&lt;/p&gt;
+&lt;p&gt;VT = Video Terminal&lt;/p&gt;
+&lt;p&gt;YaST = Yet Another Setup Tool&lt;/p&gt;
+&lt;p&gt;apache = &amp;ldquo;a patchy&amp;rdquo; server&lt;/p&gt;
+&lt;p&gt;apt = Advanced Packaging Tool&lt;/p&gt;
+&lt;p&gt;ar = archiver&lt;/p&gt;
+&lt;p&gt;as = assembler&lt;/p&gt;
+&lt;p&gt;awk = &amp;ldquo;Aho Weiberger and Kernighan&amp;rdquo; The first letter of the last name of the three author&lt;/p&gt;
+&lt;p&gt;bash = Bourne Again SHell&lt;/p&gt;
+&lt;p&gt;bc = Basic (Better) Calculator&lt;/p&gt;
+&lt;p&gt;bg = BackGround&lt;/p&gt;
+&lt;p&gt;biff = A dog raised by Uid Berkely by author Heidi Stettner.&lt;/p&gt;
+&lt;p&gt;cal = CALendar&lt;/p&gt;
+&lt;p&gt;cat = CATenate&lt;/p&gt;
+&lt;p&gt;cd = Change Directory&lt;/p&gt;
+&lt;p&gt;chgrp = CHange GRouP&lt;/p&gt;
+&lt;p&gt;chmod = CHange MODe&lt;/p&gt;
+&lt;p&gt;chown = CHange OWNer&lt;/p&gt;
+&lt;p&gt;chsh = CHange SHell&lt;/p&gt;
+&lt;p&gt;cmp = compare&lt;/p&gt;
+&lt;p&gt;cobra = Common Object Request Broker Architecture&lt;/p&gt;
+&lt;p&gt;comm = common&lt;/p&gt;
+&lt;p&gt;cp = CoPy&lt;/p&gt;
+&lt;p&gt;cpio = CoPy In and Out&lt;/p&gt;
+&lt;p&gt;cpp = C Pre Processor&lt;/p&gt;
+&lt;p&gt;cron = Chronos Greek time&lt;/p&gt;
+&lt;p&gt;cups = Common Unix Printing System&lt;/p&gt;
+&lt;p&gt;cvs = Current Version System&lt;/p&gt;
+&lt;p&gt;daemon = Disk And Execution MONitor&lt;/p&gt;
+&lt;p&gt;dc = Desk Calculator&lt;/p&gt;
+&lt;p&gt;dd = Disk Dump&lt;/p&gt;
+&lt;p&gt;df = Disk Free&lt;/p&gt;
+&lt;p&gt;diff = DIFFerence&lt;/p&gt;
+&lt;p&gt;dmesg = diagnostic message&lt;/p&gt;
+&lt;p&gt;du = Disk Usage&lt;/p&gt;
+&lt;p&gt;ed = editor&lt;/p&gt;
+&lt;p&gt;egrep = Extended GREP&lt;/p&gt;
+&lt;p&gt;elf = Extensible Linking Format&lt;/p&gt;
+&lt;p&gt;elm = ELectronic Mail&lt;/p&gt;
+&lt;p&gt;emacs = Editor MACroS&lt;/p&gt;
+&lt;p&gt;eval = EVALuate&lt;/p&gt;
+&lt;p&gt;ex = EXtended&lt;/p&gt;
+&lt;p&gt;exec = EXECute&lt;/p&gt;
+&lt;p&gt;fd = file descriptors&lt;/p&gt;
+&lt;p&gt;fg = ForeGround&lt;/p&gt;
+&lt;p&gt;fgrep = Fixed GREP&lt;/p&gt;
+&lt;p&gt;fmt = format&lt;/p&gt;
+&lt;p&gt;fsck = File System ChecK&lt;/p&gt;
+&lt;p&gt;fstab = FileSystem TABle&lt;/p&gt;
+&lt;p&gt;fvwm = F*** Virtual Window Manager&lt;/p&gt;
+&lt;p&gt;gawk = GNU AWK&lt;/p&gt;
+&lt;p&gt;gpg = GNU Privacy Guard&lt;/p&gt;
+&lt;p&gt;groff = GNU troff&lt;/p&gt;
+&lt;p&gt;hal = Hardware Abstraction Layer&lt;/p&gt;
+&lt;p&gt;joe = Joe&amp;rsquo;s Own Editor&lt;/p&gt;
+&lt;p&gt;ksh = Korn SHell&lt;/p&gt;
+&lt;p&gt;lame = Lame Ain&amp;rsquo;t an MP3 Encoder&lt;/p&gt;
+&lt;p&gt;lex = LEXical analyser&lt;/p&gt;
+&lt;p&gt;lisp = LISt Processing = Lots of Irritating Superfluous Parentheses&lt;/p&gt;
+&lt;p&gt;ln = LiNk&lt;/p&gt;
+&lt;p&gt;lpr = Line PRint&lt;/p&gt;
+&lt;p&gt;ls = list&lt;/p&gt;
+&lt;p&gt;lsof = LiSt Open Files&lt;/p&gt;
+&lt;p&gt;m4 = Macro processor Version 4&lt;/p&gt;
+&lt;p&gt;man = MANual pages&lt;/p&gt;
+&lt;p&gt;mawk = Mike Brennan&amp;rsquo;s AWK&lt;/p&gt;
+&lt;p&gt;mc = Midnight Commander&lt;/p&gt;
+&lt;p&gt;mkfs = MaKe FileSystem&lt;/p&gt;
+&lt;p&gt;mknod = MaKe NODe&lt;/p&gt;
+&lt;p&gt;motd = Message of The Day&lt;/p&gt;
+&lt;p&gt;mozilla = MOsaic GodZILLa&lt;/p&gt;
+&lt;p&gt;mtab = Mount TABle&lt;/p&gt;
+&lt;p&gt;mv = MoVe&lt;/p&gt;
+&lt;p&gt;nano = Nano&amp;rsquo;s ANOther editor&lt;/p&gt;
+&lt;p&gt;nawk = New AWK&lt;/p&gt;
+&lt;p&gt;nl = Number of Lines&lt;/p&gt;
+&lt;p&gt;nm = names&lt;/p&gt;
+&lt;p&gt;nohup = No HangUP&lt;/p&gt;
+&lt;p&gt;nroff = New ROFF&lt;/p&gt;
+&lt;p&gt;od = Octal Dump&lt;/p&gt;
+&lt;p&gt;passwd = PASSWorD&lt;/p&gt;
+&lt;p&gt;pg = pager&lt;/p&gt;
+&lt;p&gt;pico = PIne&amp;rsquo;s message COmposition editor&lt;/p&gt;
+&lt;p&gt;pine = &amp;ldquo;Program for Internet News &amp;amp; Email&amp;rdquo; = &amp;ldquo;Pine is not Elm&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;ping = Onomatopoeia = Packet InterNet Grouper&lt;/p&gt;
+&lt;p&gt;pirntcap = PRINTer CAPability&lt;/p&gt;
+&lt;p&gt;popd = POP Directory&lt;/p&gt;
+&lt;p&gt;pr = pre&lt;/p&gt;
+&lt;p&gt;printf = PRINT Formatted&lt;/p&gt;
+&lt;p&gt;ps = Processes Status&lt;/p&gt;
+&lt;p&gt;pty = pseudo tty&lt;/p&gt;
+&lt;p&gt;pushd = PUSH Directory&lt;/p&gt;
+&lt;p&gt;pwd = Print Working Directory&lt;/p&gt;
+&lt;p&gt;rc = runcom = run command, rc is still the shell of plan9&lt;/p&gt;
+&lt;p&gt;rev = REVerse&lt;/p&gt;
+&lt;p&gt;rm = ReMove&lt;/p&gt;
+&lt;p&gt;rn = Read News&lt;/p&gt;
+&lt;p&gt;roff = RunOFF&lt;/p&gt;
+&lt;p&gt;rpm = RPM Package Manager = RedHat Package Manager&lt;/p&gt;
+&lt;p&gt;rsh, rlogin, r = Remote in rvim&lt;/p&gt;
+&lt;p&gt;rxvt = ouR XVT&lt;/p&gt;
+&lt;p&gt;seamoneky = me&lt;/p&gt;
+&lt;p&gt;sed = Stream EDitor&lt;/p&gt;
+&lt;p&gt;seq = SEQuence&lt;/p&gt;
+&lt;p&gt;shar = SHell ARchive&lt;/p&gt;
+&lt;p&gt;slrn = S-Lang rn&lt;/p&gt;
+&lt;p&gt;ssh = Secure SHell&lt;/p&gt;
+&lt;p&gt;ssl = Secure Sockets Layer&lt;/p&gt;
+&lt;p&gt;stty = Set TTY&lt;/p&gt;
+&lt;p&gt;su = Susuper user&amp;quot;&lt;/p&gt;
+&lt;p&gt;svn = SubVersioN&lt;/p&gt;
+&lt;p&gt;tar = Tape ARchive&lt;/p&gt;
+&lt;p&gt;tcsh = TENEX C shell&lt;/p&gt;
+&lt;p&gt;tee = T (T-shaped water pipe connection)&lt;/p&gt;
+&lt;p&gt;telnet = TEminaL over Network&lt;/p&gt;
+&lt;p&gt;termcap = terminal capability&lt;/p&gt;
+&lt;p&gt;terminfo = terminal information&lt;/p&gt;
+&lt;p&gt;tex = abbreviation of τ? χνη, Greek art&lt;/p&gt;
+&lt;p&gt;tr = traslate&lt;/p&gt;
+&lt;p&gt;troff = Typesetter new ROFF&lt;/p&gt;
+&lt;p&gt;tsort = Topological SORT&lt;/p&gt;
+&lt;p&gt;tty = TeleTypewriter&lt;/p&gt;
+&lt;p&gt;twm = Tom&amp;rsquo;s Window Manager&lt;/p&gt;
+&lt;p&gt;tz = TimeZone&lt;/p&gt;
+&lt;p&gt;udev = Userspace DEV&lt;/p&gt;
+&lt;p&gt;ulimit = User&amp;rsquo;s LIMIT&lt;/p&gt;
+&lt;p&gt;umask = User&amp;rsquo;s MASK&lt;/p&gt;
+&lt;p&gt;uniq = UNIQue&lt;/p&gt;
+&lt;p&gt;vi = VIsual = Very Inconvenient&lt;/p&gt;
+&lt;p&gt;vim = Vi IMproved&lt;/p&gt;
+&lt;p&gt;wall = write all&lt;/p&gt;
+&lt;p&gt;wc = Word Count&lt;/p&gt;
+&lt;p&gt;wine = WINE Is Not an Emulator&lt;/p&gt;
+&lt;p&gt;xargs = eXtended ARGuments&lt;/p&gt;
+&lt;p&gt;xdm = X Display Manager&lt;/p&gt;
+&lt;p&gt;xlfd = X Logical Font Description&lt;/p&gt;
+&lt;p&gt;xmms = X Multimedia System&lt;/p&gt;
+&lt;p&gt;xrdb = X Resources DataBase&lt;/p&gt;
+&lt;p&gt;xwd = X Window Dump&lt;/p&gt;
+&lt;p&gt;yacc = yet another compiler compiler&lt;/p&gt;
+&lt;h5 id=&#34;filedirectory-basics&#34;&gt;File/Directory Basics&lt;/h5&gt;
+&lt;p&gt;ls List files&lt;/p&gt;
+&lt;p&gt;cp Copy files&lt;/p&gt;
+&lt;p&gt;mv Rename files&lt;/p&gt;
+&lt;p&gt;rm Delete files&lt;/p&gt;
+&lt;p&gt;ln Link files&lt;/p&gt;
+&lt;p&gt;cd Change directory&lt;/p&gt;
+&lt;p&gt;pwd Print current directory&lt;/p&gt;
+&lt;p&gt;name&lt;/p&gt;
+&lt;p&gt;mkdir Create directory&lt;/p&gt;
+&lt;p&gt;rmdir Delete directory&lt;/p&gt;
+&lt;h5 id=&#34;file-viewing&#34;&gt;File Viewing&lt;/h5&gt;
+&lt;p&gt;cat View files&lt;/p&gt;
+&lt;p&gt;less Page through files&lt;/p&gt;
+&lt;p&gt;head View file beginning&lt;/p&gt;
+&lt;p&gt;tail View file ending&lt;/p&gt;
+&lt;p&gt;nl Number lines&lt;/p&gt;
+&lt;p&gt;od View binary data&lt;/p&gt;
+&lt;p&gt;xxd View binary data&lt;/p&gt;
+&lt;p&gt;gv View Postscript/PDF files&lt;/p&gt;
+&lt;p&gt;xdvi View TeX DVI files&lt;/p&gt;
+&lt;p&gt;File Creation and Editing&lt;/p&gt;
+&lt;p&gt;emacs Text editor&lt;/p&gt;
+&lt;p&gt;vim Text editor&lt;/p&gt;
+&lt;p&gt;umask Set default file&lt;/p&gt;
+&lt;p&gt;protections&lt;/p&gt;
+&lt;p&gt;soffice Edit Word/Excel/&lt;/p&gt;
+&lt;p&gt;PowerPoint docs&lt;/p&gt;
+&lt;p&gt;abiword  Edit Word documents&lt;/p&gt;
+&lt;p&gt;gnumeric  Edit Excel documents&lt;/p&gt;
+&lt;h5 id=&#34;file-properties&#34;&gt;File Properties&lt;/h5&gt;
+&lt;p&gt;stat Display file attributes&lt;/p&gt;
+&lt;p&gt;wc Count bytes/words/lines&lt;/p&gt;
+&lt;p&gt;du Measure disk usage&lt;/p&gt;
+&lt;p&gt;file Identify file types&lt;/p&gt;
+&lt;p&gt;touch Change file timestamps&lt;/p&gt;
+&lt;p&gt;chown Change file owner&lt;/p&gt;
+&lt;p&gt;chgrp Change file group&lt;/p&gt;
+&lt;p&gt;chmod Change file protections&lt;/p&gt;
+&lt;p&gt;chattr Change advanced file&lt;/p&gt;
+&lt;p&gt;attributes&lt;/p&gt;
+&lt;p&gt;lsattr List advanced file&lt;/p&gt;
+&lt;p&gt;attributes&lt;/p&gt;
+&lt;p&gt;File Location&lt;/p&gt;
+&lt;p&gt;find Locate files&lt;/p&gt;
+&lt;p&gt;slocate Locate files via index&lt;/p&gt;
+&lt;p&gt;which Locate commands&lt;/p&gt;
+&lt;p&gt;whereis Locate standard files&lt;/p&gt;
+&lt;p&gt;File Text Manipulation&lt;/p&gt;
+&lt;p&gt;grep Search text for matching&lt;/p&gt;
+&lt;p&gt;lines&lt;/p&gt;
+&lt;p&gt;cut Extract columns&lt;/p&gt;
+&lt;p&gt;paste Append columns&lt;/p&gt;
+&lt;p&gt;tr Translate characters&lt;/p&gt;
+&lt;p&gt;sort Sort lines&lt;/p&gt;
+&lt;p&gt;uniq Locate identical lines&lt;/p&gt;
+&lt;p&gt;tee Copy stdin to a file and&lt;/p&gt;
+&lt;p&gt;to stdout simultaneously&lt;/p&gt;
+&lt;p&gt;File Compression&lt;/p&gt;
+&lt;p&gt;gzip Compress files&lt;/p&gt;
+&lt;p&gt;(GNU Zip)&lt;/p&gt;
+&lt;p&gt;compress Compress files (Unix)&lt;/p&gt;
+&lt;p&gt;bzip2 Compress files (BZip2)&lt;/p&gt;
+&lt;p&gt;zip Compress files&lt;/p&gt;
+&lt;p&gt;(Windows Zip)&lt;/p&gt;
+&lt;p&gt;File Comparison&lt;/p&gt;
+&lt;p&gt;diff Compare files line by line&lt;/p&gt;
+&lt;p&gt;comm Compare sorted files&lt;/p&gt;
+&lt;p&gt;cmp Compare files byte&lt;/p&gt;
+&lt;p&gt;by byte&lt;/p&gt;
+&lt;p&gt;md5sum Compute checksums&lt;/p&gt;
+&lt;h5 id=&#34;disks-and-filesystems&#34;&gt;Disks and Filesystems&lt;/h5&gt;
+&lt;p&gt;df  Show free disk space&lt;/p&gt;
+&lt;p&gt;mount Make a disk accessible&lt;/p&gt;
+&lt;p&gt;fsck Check a disk for errors&lt;/p&gt;
+&lt;p&gt;sync Flush disk caches&lt;/p&gt;
+&lt;p&gt;Backups and Remote Storage&lt;/p&gt;
+&lt;p&gt;mt Control a tape drive&lt;/p&gt;
+&lt;p&gt;dump Back up a disk&lt;/p&gt;
+&lt;p&gt;restore Restore a dump&lt;/p&gt;
+&lt;p&gt;tar Read/write tape archives&lt;/p&gt;
+&lt;p&gt;cdrecord Burn a CD&lt;/p&gt;
+&lt;p&gt;rsync Mirror a set of files&lt;/p&gt;
+- https://www.openheart.icu/cs/operating-system/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
     
         <item>
-        <title>PHP</title>
-        <link>https://www.openheart.icu/cs/php/</link>
+        <title>Work Review</title>
+        <link>https://www.openheart.icu/speech/work-review/</link>
         <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/cs/php/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/php/ -&lt;h2 id=&#34;operation&#34;&gt;Operation&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl start php-fpm
-systemctl restart php-fpm
-
-service php-fpm start
-service php-fpm restart
-service php-fpm stop
-service php-fpm reload
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;1.如果是使用nginx，需要去修改一下www.conf中的用户与用户组&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt; = nginx
-&lt;span style=&#34;color:#00688b&#34;&gt;group&lt;/span&gt; = users
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/cs/php/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        <guid>https://www.openheart.icu/speech/work-review/</guid>
+        <description>42th openheart https://www.openheart.icu/speech/work-review/ -&lt;h1 id=&#34;measures&#34;&gt;Measures&lt;/h1&gt;
+&lt;h2 id=&#34;kpi&#34;&gt;KPI&lt;/h2&gt;
+&lt;p&gt;key performance indicator&lt;/p&gt;
+&lt;h2 id=&#34;okr&#34;&gt;OKR&lt;/h2&gt;
+&lt;p&gt;Objectives and key results&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.okr.com/&#34;&gt;OKR.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rre&#34;&gt;RRE&lt;/h2&gt;
+&lt;h1 id=&#34;how-to-increase-efficiency&#34;&gt;How to increase efficiency&lt;/h1&gt;
+&lt;h2 id=&#34;pomodoro-techniquehttpsenwikipediaorgwikipomodoro_technique&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Pomodoro_Technique&#34;&gt;Pomodoro Technique&lt;/a&gt;&lt;/h2&gt;
+- https://www.openheart.icu/speech/work-review/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
@@ -855,36 +1031,6 @@ service php-fpm reload
 &lt;p&gt;I didn&amp;rsquo;t make much out of that argument, because you already know it. There&amp;rsquo;d be no reason to write this essay if that was all I had to say. Old people have less on the line, so they can speak more freely. If someone you used to admire retires and all of a sudden starts saying or writing unpleasant and surprising things, there might be a good explanation, and it might be a good idea to pay attention.&lt;/p&gt;
 &lt;p&gt;Or maybe he or she is just bitter or going senile&amp;hellip;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;the-corn-of-the-future-is-hundreds-of-years-old-and-makes-its-own-mucushttpswwwsmithsonianmagcomscience-naturecorn-future-hundreds-years-old-and-makes-its-own-mucus-180969972&#34;&gt;&lt;a href=&#34;https://www.smithsonianmag.com/science-nature/corn-future-hundreds-years-old-and-makes-its-own-mucus-180969972/&#34;&gt;The Corn of the Future Is Hundreds of Years Old and Makes Its Own Mucus&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;The Corn of the Future Is Hundreds of Years Old and Makes Its Own Mucus&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://thumbs-prod.si-cdn.com/0ALvq3fjbri1XxBSnVa6ILAkICA=/800x600/filters:no_upscale()/https://public-media.si-cdn.com/filer/aa/66/aa6653b4-9237-48c1-9772-e8221b36928b/aerial_roots_small.jpg&#34; alt=&#34;Corn&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;In the 1980s, Howard-Yana Shapiro, now chief agricultural officer at Mars, Incorporated, was looking for new kinds of corn. He was in the Mixes District of Oaxaca in southern Mexico, the area where the precursors to maize (aka corn) first evolved, when he located some of the strangest corn ever seen. Not only was it 16 to 20 feet tall, dwarfing the 12-foot stuff in American fields, it took six to eight months to mature, far longer than the 3 months needed for conventional corn. Yet it grew to those impressive heights in what can charitably be called poor soil, without the use of fertilizer.. But the strangest part of the corn was its aerial roots&amp;ndash;green and rose-colored, finger-like protrusions sticking out of the corn’s stalk, dripping with a clear, syrupy gel.&lt;/p&gt;
-&lt;p&gt;Shapiro suspected that those mucousy fingers might be the Holy Grail of agriculture. He believed that the roots allowed this unique variety of corn, dubbed Sierra Mixe and locally bred over hundreds or even thousands of years, to produce its own nitrogen, an essential nutrient for crops that is usually applied as fertilizer in epic amounts.&lt;/p&gt;
-&lt;p&gt;The idea seemed promising, but without DNA tools to look into the specifics of how the corn was making nitrogen, the discovery was shelved. Nearly two decades later, in 2005, Alan B. Bennett of the University of California, Davis—along with Shapiro and other researchers—began using cutting-edge technology to look into the nitrogen-fixing properties of the phlegmy corn, finding that indeed, bacteria living in the mucus were pulling nitrogen from the air, transmuting it into a form the corn could absorb.&lt;/p&gt;
-&lt;p&gt;Now, after over a decade of field research and genetic analysis, the team has published their work in the journal &lt;a href=&#34;http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2006352&#34;&gt;PLOS Biology&lt;/a&gt;. If the nitrogen-fixing trait could be bred into conventional corn, allowing it to produce even a portion of its own nitrogen, it could reduce the cost of farming, reduce greenhouse gas emissions and halt one of the major pollutants in lakes, rivers and the ocean. In other words, it could lead to a second nitrogen revolution.&lt;/p&gt;
-&lt;p&gt;The synthetic production of nitrogen may be the greatest achievement of the 20th century. The discovery of the Haber-Bosch process and its refinements, in which nitrogen is stripped out of the air under high heat and pressure in the presence of a catalyst, has led to three separate Nobel prizes. And they are well deserved. It’s estimated that &lt;a href=&#34;https://www.nature.com/articles/ngeo325.epdf?referrer_access_token=ko1XWqjTo3ENOxPCWf18pNRgN0jAjWel9jnR3ZoTv0P5F__o3JL8yxyjnP27gxYtULIvI8-Zuvo9Y-yPtBtLdPtYqcXgNC4yC996GHXdFy9Wb97cwAT5SZhRCJsZQNlBGtbCwgcK0qLbQFgusWj6_KnuVVKGFzXtRH_bvIUifY9BiarKDtyRuTg8sfpGq5moz3R9kFNsjF7jJ95G8dOST7LHuuyewf0nEWCyjHMMGL-9NDWHZVB_SaoVm1sDSZg2uPalLtpzDbqApvMZCucGztN6PMuNt9jZqWirPGtF6NHlDubsGggKn7Xj1OyGuAATCZbx5E1lQDGcn81Ta5zwvSzHhPRvrd6zsoFW0K-OYao%3D&amp;amp;tracking_referrer=www.slate.com&#34;&gt;crop yields more than doubled between 1908 and 2008&lt;/a&gt;, with synthetic nitrogen fertilizer responsible for up to half that growth. Some researchers have tied the massive growth in human population in the last seventy years to the increased use of nitrogen fertilizer. Without it, we’d have to farm almost four times as much land or have billions of fewer people in the world.&lt;/p&gt;
-&lt;p&gt;But producing all that nitrogen has consequences. It’s estimated that making fertilizer via the Haber-Bosch process uses between 1 and 2 percent of the world’s energy, emitting lots of greenhouse gases. And synthetic nitrogen routinely washes off fields into waterways, leading to massive algae blooms that suck up all the oxygen, killing fish and other organisms. So much nitrogen goes into rivers and streams that large dead zones have developed at the mouths of the world’s rivers, including one in the Gulf of Mexico that last year &lt;a href=&#34;https://www.smithsonianmag.com/smart-news/gulf-mexico-dead-zone-may-be-size-new-jersey-year-180963799/&#34;&gt;was the size of New Jersey&lt;/a&gt;. &lt;a href=&#34;http://ce3c.ciencias.ulisboa.pt/outreach/press&amp;amp;events/ver.php?id=798&#34;&gt;Mark Sutton of the UK Centre for Ecology and Hydrology&lt;/a&gt; calls nitrogen “the Godfather of pollution”—its effects are everywhere, but you never really see the culprit.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://thumbs-prod.si-cdn.com/WPKEnY-pc-0p2l-J5sOO1WtYIZE=/1024x596/https://public-media.si-cdn.com/filer/53/21/53216d55-7db4-4422-82f0-a6dc669ce9ad/aerial_roots_2.jpg&#34; alt=&#34;roots&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;But we can’t just quit nitrogen without seeing major reductions in agriculture. While better management and farming practices can help keep it out of waterways, those strategies aren’t enough to fix nitrogen’s ecological problems. That’s why researchers have for decades wondered if there was a way to help cereal crops like corn and wheat produce their own nitrogen.&lt;/p&gt;
-&lt;p&gt;The idea is not as farfetched as it sounds. Lots of plants, in particular legumes like soybeans, peanuts and clover, have a symbiotic relationship with Rhizobium bacteria, which produce nitrogen for them. The plants grow root nodules where the bacteria take up residence and sip on plant sugars while converting nitrogen in the air into a form the plants can use. If a similar symbiotic relationship could be found that works in cereal crops like corn and wheat, researchers believe we could reduce our use of the pollutant.&lt;/p&gt;
-&lt;p&gt;That’s why the mucus corn is so important, and why Bennett and his team spent eight years studying and re-studying the bacteria and gel to convince themselves that the corn was indeed able to produce its own nitrogen. Using DNA sequencing, they were able to show the microbes in the slime carried genes for fixing nitrogen and demonstrated the gel the corn excretes, which is high sugar and low oxygen, is perfectly designed to encourage nitrogen fixation. Using five different tests they showed that the nitrogen produced by the microbes then made its way into the corn, providing 30 to 80 percent of the plant’s needs. They then produced a synthetic version of the slime and seeded it with the microbes, finding that they produced nitrogen in that environment as well. They even grew Sierra Mixe in Davis, California, and Madison, Wisconsin, showing that it could perform its special trick outside its home turf in Mexico.&lt;/p&gt;
-&lt;p&gt;“This mechanism is totally different from what legumes use,” Bennett says, adding it may exist in other crops as well. “It’s certainly conceivable that similar types of systems exist in many cereals. Sorghum, for example, has aerial roots and mucilage. Maybe others have more subtle mechanisms that occur underground that could exist more widely. Now that we’re aware, we can look for them.”&lt;/p&gt;
-&lt;p&gt;Co-author Jean Michel-Ane from the University of Wisconsin, Madison, agrees that this discovery opens up all types of new possibilities. “Engineering corn to fix nitrogen and form root nodules like legumes has been a dream and struggle of scientists for decades. It turns out that this corn developed a totally different way to solve this nitrogen fixation problem. The scientific community probably underestimated nitrogen fixation in other crops because of its obsession with root nodules,” he says in &lt;a href=&#34;https://news.wisc.edu/corn-that-acquires-its-own-nitrogen-identified-reducing-need-for-fertilizer/&#34;&gt;a statement&lt;/a&gt;. “This corn showed us that nature can find solutions to some problems far beyond what scientists could ever imagine.”&lt;/p&gt;
-&lt;p&gt;It turns out that nature has even more nitrogen-producing tricks up her sleeve that researchers are just getting a handle on. There are several other ongoing projects aimed at getting cereal and vegetable crops to do the Haber-Bosching for us. One of the most promising is the use of endophytes, or microorganisms like bacteria and fungi that live in the intercellular spaces of plants. University of Washington researcher Sharon Doty got interested in the organisms a couple decades ago. She was studying willow and poplar trees, which are among the first trees to grow on disturbed land after events like a volcanic eruption, floods or rockfall. These trees were growing out of river gravel, with hardly any access to nitrogen in the soil. Inside their stems, however, Doty found endophytes that fixed the nitrogen for the trees, no root nodules necessary. Since then, she’s teased out dozens of various endophyte strains, many of which help plants in surprising ways. Some produce nitrogen or phosphorus, another important nutrient, while others improve root growth and some allow plants to survive in drought or high-salt conditions.&lt;/p&gt;
-&lt;p&gt;“There [are] a whole slew of different microbes that can fix nitrogen and a broad range of plant species impacted by them,” she says. Her tests have shown that the microbes can double the productivity of pepper and tomato plants, improve growth in rice, and impart drought tolerance to trees like Douglas firs. Some even allow trees and plants to suck up and break down industrial contaminants and are now being used to clean up Superfund sites. “The advantage of using endophytes is that it’s a really large group. We’ve found strains that work with rice, maize, tomatoes, peppers and other agriculturally important crop plants.”&lt;/p&gt;
-&lt;p&gt;In fact, endophytes might make it into farmers’ hands sooner rather than later. The Los Altos, California-based IntrinsyxBio is commercializing some of Doty’s endophytes. Chief Science Officer John L. Freeman says in an interview the company is on track to have a product ready for market in 2019. The goal is to deliver several strains of endophytes into plants, most likely by coating the seeds. After those bacteria take up residence inside the plant, they should pump out about 25 percent of the nitrogen it needs.&lt;/p&gt;
-&lt;p&gt;Another biotech company, called Pivot Bio, recently announced it is beta testing a similar solution, using nitrogen-fixing microbes that grow in the root systems of corn.&lt;/p&gt;
-&lt;p&gt;The newly emerging field of synthetic biology is also taking a crack at the nitrogen problem. Boston-based Joyn Bio, formed last September, is a co-project between Bayer and Ginkgo Bioworks, a biotech company with experience creating custom yeasts and bacteria for the food and flavoring industry, among other “designer microbe” projects. Joyn is currently combing through Bayer’s library of over 100,000 microbes to find a host that can successfully colonize plants, similar to Doty’s endophytes. Then they hope to tweak that “host chassis” with genes that will allow it to fix nitrogen. “Rather than rely on nature and find a magic microbe, which we don’t think exists, we want to find our host microbe and fine tune it to do what we need it to do for corn or wheat,” says Joyn CEO Michael Miille.&lt;/p&gt;
-&lt;p&gt;The Gates Foundation is also in on the game, supporting projects attempting to impart the nitrogen-fixing abilities of legumes into cereals. Still other teams are hoping that the advent of supercharged quantum computing will open up new realms of chemistry and identify new catalysts that will make the Haber-Bosch process much more efficient.&lt;/p&gt;
-&lt;p&gt;While it’s unlikely that one solution alone will be able to replace 100 percent of the synthetic fertilizer humans use, perhaps together these projects could make a serious dent in nitrogen pollution. Bennett hopes that Sierra Mixe and what his team has learned from it will be part of the nitrogen revolution, though he admits it’s a very long leap before his slimy corn fingers start producing nitrogen in conventional crops. He now wants to identify the genes that produce the aerial roots and pin down which of the thousands of microbes discovered in the mucilage are actually fixing the nitrogen.&lt;/p&gt;
-&lt;p&gt;“I think what we’re doing could be complementary to those [endoyphte and synthetic biology] approaches,” he says. “I think we’ll see many divergent strategies, and in 5 to 10 years something will emerge that impacts how corn gets nitrogen.&amp;quot;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Editor&amp;rsquo;s note 8/15/18: An earlier draft of this article misspelled John L. Freeman&amp;rsquo;s name and misidentified his current company.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;By &lt;a href=&#34;https://www.smithsonianmag.com/author/jason-daley/&#34;&gt;Jason Daley&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;SMITHSONIANMAG.COM
-AUGUST 10, 2018&lt;/p&gt;
-&lt;hr&gt;
 &lt;h1 id=&#34;harley-davidson-livewire-the-all-electric-muscle-bike-for-the-next-generationhttpswwwwallpapercomtransportharley-davidson-livewire-electric-motorbikeutm_sourceetutm_mediumemailutm_campaignutm_contentutm_term_&#34;&gt;&lt;a href=&#34;https://www.wallpaper.com/transport/harley-davidson-livewire-electric-motorbike?utm_source=ET&amp;amp;utm_medium=email&amp;amp;utm_campaign=&amp;amp;utm_content=&amp;amp;utm_term=_&#34;&gt;Harley Davidson LiveWire: the all-electric muscle bike for the next generation&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;George Chapman rides the new Harley Davidson &lt;em&gt;LiveWire(摩托的名字,不知道该翻译成什么意思)&lt;/em&gt; – the brand’s first all-electric motorcycle&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.wallpaper.com/main/styles/wp_extra_large/s3/18_livewire_09_0.jpg&#34; alt=&#34;motorcycle&#34;&gt;&lt;/p&gt;
@@ -904,323 +1050,6 @@ AUGUST 10, 2018&lt;/p&gt;
 &lt;p&gt;INFORMATION&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.harley-davidson.com/gb/en/index.html&#34;&gt;harley-davidson.com&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;your-ultimate-guide-to-different-types-of-coffeehttpswwwtasteofhomecomarticletypes-of-coffee&#34;&gt;&lt;a href=&#34;https://www.tasteofhome.com/article/types-of-coffee/&#34;&gt;Your Ultimate Guide to Different Types of Coffee&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;We cover all the different types of coffee from lattes to red eyes. All of your burning coffee questions are &lt;em&gt;finally&lt;/em&gt; answered.&lt;/p&gt;
-&lt;p&gt;Every editorial product is independently selected, though we may be compensated or receive an affiliate commission if you buy something through our links.&lt;/p&gt;
-&lt;p&gt;We’ve all been there, standing in line at a favorite coffeeshop, sweating because we’re not entirely sure of the &lt;a href=&#34;https://www.tasteofhome.com/article/whats-the-difference-between-iced-coffee-and-cold-brew-coffee/&#34;&gt;difference between a cold brew vs. a classic iced coffee&lt;/a&gt;. Oh gosh, I know I have. Good news: we’re covering everything from the difference of Arabica and Robusta coffee beans to &lt;em&gt;all&lt;/em&gt; the ways to brew your favorite &lt;a href=&#34;https://www.tasteofhome.com/article/the-real-reason-why-coffee-is-called-a-cup-of-joe/&#34;&gt;cup of joe&lt;/a&gt;. Hold on tight. We’re diving deep into your morning go-to drink.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/COFFEE-BEANS-01.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;different-types-of-coffee-beans&#34;&gt;Different Types of Coffee Beans&lt;/h2&gt;
-&lt;p&gt;In U.S. supermarkets, you’ll typically find two types of coffee beans for sale: Arabica and Robusta. You may be wondering, is there a &lt;a href=&#34;https://www.tasteofhome.com/article/arabica-vs-robusta-coffee/&#34;&gt;difference between Arabica and Robusta&lt;/a&gt;? Oh, there definitely is. Let’s get right to it.&lt;/p&gt;
-&lt;h4 id=&#34;arabica&#34;&gt;Arabica&lt;/h4&gt;
-&lt;p&gt;Arabica is the most popular type of coffee, hands down. Depending on who you ask, many coffee enthusiasts prefer using Arabica beans due to its taste. Typically used for black coffee, Arabica beans have a sweeter, more complex flavor that you can drink straight. Funny thing is, even though it’s the most popular, it doesn’t have as much caffeine as Robusta.&lt;/p&gt;
-&lt;h4 id=&#34;robusta&#34;&gt;Robusta&lt;/h4&gt;
-&lt;p&gt;While Arabica is the most popular, Robusta is cheaper and stronger. Because of its bitter flavor, you’ll typically see Robusta used for espresso drinks and in instant coffee mixes. If your Monday morning is lagging, reach for a cup of coffee that uses Robusta beans. Their high caffeine content will wake you right up!&lt;/p&gt;
-&lt;h2 id=&#34;types-of-coffee-drinks&#34;&gt;Types of Coffee Drinks&lt;/h2&gt;
-&lt;p&gt;Latte, americano, affogato…it’s crazy all that you can do with a few small beans. Whether you’re a coffee newbie or you consider yourself a coffee connoisseur, there are so many &lt;a href=&#34;https://www.tasteofhome.com/collection/homemade-coffee-shop-drinks/&#34;&gt;types of coffee drinks&lt;/a&gt; to discover. Here are some of the most popular types ordered by coffee lovers nationwide.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/Types-of-Coffee-Drinks_1200X1200.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;black&#34;&gt;Black&lt;/h4&gt;
-&lt;p&gt;Black coffee is as simple as it gets with ground coffee beans steeped in hot water, served warm. And if you want to sound fancy, you can call black coffee by its proper name: cafe noir.&lt;/p&gt;
-&lt;p&gt;**Black coffee 黑咖啡：**由熱水沖泡研磨咖啡豆的經典咖啡&lt;/p&gt;
-&lt;h4 id=&#34;latte&#34;&gt;Latte&lt;/h4&gt;
-&lt;p&gt;As the most popular coffee drink out there, the latte is comprised of a shot of espresso and steamed milk with just a touch of foam. It can be ordered plain or with a flavor shot of anything from vanilla to pumpkin spice. (Here’s how to make a copycat Starbucks &lt;a href=&#34;https://www.tasteofhome.com/article/copycat-pumpkin-spice-latte-recipe/&#34;&gt;pumpkin spice latte&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Latte 拿鐵：&lt;/strong&gt; 濃縮咖啡加比較多的熱牛奶。&lt;/p&gt;
-&lt;h4 id=&#34;cappuccino&#34;&gt;Cappuccino&lt;/h4&gt;
-&lt;p&gt;Cappuccino is a latte made with more foam than steamed milk, often with a sprinkle of cocoa powder or cinnamon on top. Sometimes you can find variations that use cream instead of milk or ones that throw in flavor shot, as well.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cappucino 卡布奇諾：&lt;/strong&gt; 濃縮咖啡加一些熱牛奶。&lt;/p&gt;
-&lt;h4 id=&#34;americano&#34;&gt;Americano&lt;/h4&gt;
-&lt;p&gt;With a similar flavor to black coffee, the americano consists of an espresso shot diluted in hot water. Pro tip: if you’re making your own, pour the espresso first, then add the hot water.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Americano 美式咖啡：&lt;/strong&gt; 濃縮咖啡加熱開水。本質上Long Black同Americano都是同一种，即Espresso加水，分別在先後次序；Americano係將水加進Espresso中，而Long Black則是將Espresso加進熱水之中，味道與外觀相若，但由於Long Black是把咖啡加入熱水之中，故會留有一層油在表面，而且味道亦更濃烈，至於Americano則剛好相反，因而口感較清爽&lt;/p&gt;
-&lt;h4 id=&#34;espresso&#34;&gt;Espresso&lt;/h4&gt;
-&lt;p&gt;An espresso shot can be served solo or used as the foundation of most coffee drinks, like lattes and macchiatos.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Espresso 濃縮咖啡：&lt;/strong&gt; 在濃縮咖啡機中製成的一小杯咖啡。&lt;/p&gt;
-&lt;h4 id=&#34;doppio&#34;&gt;Doppio&lt;/h4&gt;
-&lt;p&gt;A double shot of espresso, the doppio is perfect for putting extra pep in your step.&lt;/p&gt;
-&lt;h4 id=&#34;cortado&#34;&gt;Cortado&lt;/h4&gt;
-&lt;p&gt;Like yin and yang, a cortado is the perfect balance of espresso and warm steamed milk. The milk is used to cut back on the espresso’s acidity.&lt;/p&gt;
-&lt;h4 id=&#34;red-eye&#34;&gt;Red Eye&lt;/h4&gt;
-&lt;p&gt;Named after those pesky midnight flights, a red eye can cure any tiresome morning. A full cup of hot coffee with an espresso shot mixed in, this will definitely get your heart racing.&lt;/p&gt;
-&lt;h4 id=&#34;galão&#34;&gt;Galão&lt;/h4&gt;
-&lt;p&gt;Originating in Portugal, this hot coffee drink is closely related to the latte and cappuccino. Only difference is it contains about twice as much foamed milk, making it a lighter drink compared to the other two.&lt;/p&gt;
-&lt;h4 id=&#34;lungo&#34;&gt;Lungo&lt;/h4&gt;
-&lt;p&gt;A lungo is a long-pull espresso. The longer the pull, the more caffeine there is and the more ounces you can enjoy.&lt;/p&gt;
-&lt;h4 id=&#34;macchiato&#34;&gt;Macchiato&lt;/h4&gt;
-&lt;p&gt;The macchiato is another espresso-based drink that has a small amount of foam on top. It’s the happy medium between a cappuccino and a doppio.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Macchiato 瑪奇朵：&lt;/strong&gt; 濃縮咖啡加一點點熱牛奶。&lt;/p&gt;
-&lt;h4 id=&#34;mocha&#34;&gt;Mocha&lt;/h4&gt;
-&lt;p&gt;For all you chocolate lovers out there, you’ll fall in love with a mocha (or maybe you already have). The mocha is a chocolate espresso drink with steamed milk and foam.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Mocha 摩卡：&lt;/strong&gt; 拿鐵加巧克力糖漿。&lt;/p&gt;
-&lt;h4 id=&#34;ristretto&#34;&gt;Ristretto&lt;/h4&gt;
-&lt;p&gt;Ristretto is an espresso shot. It uses less hot water which creates a sweeter flavor compared to the bitter taste of a traditional shot of espresso or a doppio.&lt;/p&gt;
-&lt;h4 id=&#34;flat-white&#34;&gt;Flat White&lt;/h4&gt;
-&lt;p&gt;This Aussie-born drink is basically a cappuccino without the foam or chocolate sprinkle. It’s an espresso drink with steamed milk.&lt;/p&gt;
-&lt;h4 id=&#34;affogato&#34;&gt;Affogato&lt;/h4&gt;
-&lt;p&gt;The affogato is an excuse to enjoy a scoop of ice cream any time of day (and any time of year in my opinion). Served with a scoop of ice cream and a shot of espresso, or two. The affogato is extra delish &lt;a href=&#34;https://www.tasteofhome.com/recipes/brownie-affogato-sundaes/&#34;&gt;served over a brownie&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;café-au-lait&#34;&gt;Café au Lait&lt;/h4&gt;
-&lt;p&gt;Café au lait is perfect for the coffee minimalist who wants a bit more flavor. Just add a splash of warm milk to your coffee and you’re all set!&lt;/p&gt;
-&lt;h4 id=&#34;irish&#34;&gt;Irish&lt;/h4&gt;
-&lt;p&gt;Irish coffee consists of black coffee, whiskey and sugar, topped with whipped cream. Here’s an &lt;a href=&#34;https://www.tasteofhome.com/article/how-to-make-irish-coffee-recipe/&#34;&gt;Irish coffee recipe&lt;/a&gt; that will warm you right up.&lt;/p&gt;
-&lt;h2 id=&#34;types-of-iced-coffee&#34;&gt;Types of Iced Coffee&lt;/h2&gt;
-&lt;p&gt;What’s more refreshing than cool iced coffee in the summertime? Or maybe you enjoy these chilled drinks all year long. (We do!) Here are some of the best iced coffee drinks you can sip on.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/Types-of-iced-Coffee-2_1200X1200.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;iced-coffee&#34;&gt;Iced Coffee&lt;/h4&gt;
-&lt;p&gt;A coffee with ice, typically served with a dash of milk, cream or sweetener—iced coffee is really as simple as that.&lt;/p&gt;
-&lt;h4 id=&#34;iced-espresso&#34;&gt;Iced Espresso&lt;/h4&gt;
-&lt;p&gt;Like an iced coffee, iced espresso can be served straight or with a dash of milk, cream or sweetener. You can also ice speciality espresso-based drinks like americanos, mochas, macchiatos, lattes and flat whites.&lt;/p&gt;
-&lt;h4 id=&#34;cold-brew&#34;&gt;Cold Brew&lt;/h4&gt;
-&lt;p&gt;The trendiest of the iced coffee bunch, cold brew coffees are made by steeping coffee beans from anywhere between 6-36 hours, depending on how strong you would like your cold brew. Once the beans are done steeping, add cold milk or cream. Here are a few of our best &lt;a href=&#34;https://www.tasteofhome.com/article/how-to-make-cold-brew-coffee-as-tasty-as-a-coffeehouses/&#34;&gt;cold brew coffee tips&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;**Cold brew 冷萃咖啡：**類似黑咖啡，經由長時間冷水浸泡在研磨咖啡豆裡製成。&lt;/p&gt;
-&lt;h4 id=&#34;frappuccino&#34;&gt;Frappuccino&lt;/h4&gt;
-&lt;p&gt;Made famous by Starbucks, the Frappuccino is a blended iced coffee drink that’s topped with whipped cream and syrup. But not all Frapps are made the same: watch out for coffee-free versions. Unless you’re into that sorta thing.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Frappé 希臘冰咖啡：&lt;/strong&gt; 濃縮咖啡加冰塊，和打泡的牛奶混合。&lt;/p&gt;
-&lt;h4 id=&#34;nitro&#34;&gt;Nitro&lt;/h4&gt;
-&lt;p&gt;A cold brew + nitrogen bubbles = a cold brew coffee with a frothy, Guinness-like consistency. (It’s poured via a nitro tap, too.)&lt;/p&gt;
-&lt;h4 id=&#34;mazagran&#34;&gt;Mazagran&lt;/h4&gt;
-&lt;p&gt;Maza-who?! Mazagran coffee is a cross between iced coffee, tea and your favorite rum drink. It typically consists of espresso, lemon, sugar and (sometimes) rum.&lt;/p&gt;
-&lt;h2 id=&#34;types-of-coffee-makers&#34;&gt;Types of Coffee Makers&lt;/h2&gt;
-&lt;p&gt;Now that you’re a master on all the coffee types, let’s learn how to make ’em! From French presses to Mokas, there are plenty of ways to prepare your dream cup of java.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/Types-of-Coffee-Makers-1200x1200-.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;french-press&#34;&gt;French Press&lt;/h4&gt;
-&lt;p&gt;This manual coffee maker is extremely easy to use. Add ground coffee beans into your French press, pour piping hot water over the grounds, let the coffee steep for a few minutes and finally, press the plunger down and pour! Simple as that. French presses can be used for any bean, but many people prefer using them for darker, richer roasts. Also, how fancy does this &lt;a href=&#34;https://www.amazon.com/dp/B082FN5Y6Y/?ots=1&amp;amp;slotNum=0&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;French press&lt;/a&gt; look? Make your morning brew…in style!&lt;/p&gt;
-&lt;h4 id=&#34;percolator&#34;&gt;Percolator&lt;/h4&gt;
-&lt;p&gt;Try out a &lt;a href=&#34;https://www.amazon.com/dp/B002LVUIK8/?ots=1&amp;amp;slotNum=1&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;percolator&lt;/a&gt; to add a retro feel to your daily brew—like 1880s retro. To put it simply, percolators brew coffee by continuously pushing boiling hot water bubbles up into the “coffee chamber” to steep the coffee grains. This cycle is repeated until the coffee is ready to serve. They’re typically used for medium roasts and prepared over the stovetop, but percolators can work over any heated surface, even a campfire (hint, hint!).&lt;/p&gt;
-&lt;h4 id=&#34;single-serve&#34;&gt;Single Serve&lt;/h4&gt;
-&lt;p&gt;Single serve coffee maker sales have really peaked in the past few years. Measure out your desired coffee amount, pour into the reusable filter, pour water in and voila! A cup of coffee just for you will be ready soon. Single serve coffee makers are perfect for single-person households (or those where just one person drinks coffee). Try out this &lt;a href=&#34;https://www.amazon.com/dp/B07457Z312/?ots=1&amp;amp;slotNum=2&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;budget-friendly single serve coffee maker&lt;/a&gt; which includes a fun travel mug!&lt;/p&gt;
-&lt;h4 id=&#34;aeropress&#34;&gt;AeroPress&lt;/h4&gt;
-&lt;p&gt;We’ve got another manual coffee maker for you. The &lt;a href=&#34;https://www.amazon.com/dp/B0047BIWSK/?ots=1&amp;amp;slotNum=3&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;AeroPress&lt;/a&gt; is very similar to the French press. To use an AeroPress, we recommend checking out &lt;a href=&#34;https://aeropress.com/use-it-now/getting-started/&#34;&gt;this beautiful get-started guide&lt;/a&gt;. You can make espresso, lattes, cold brews or just a classic cup of coffee in this nifty little machine.&lt;/p&gt;
-&lt;h4 id=&#34;drip&#34;&gt;Drip&lt;/h4&gt;
-&lt;p&gt;Aah, yes. The classic electric coffee maker you know and love. To get your brew going in a &lt;a href=&#34;https://www.amazon.com/dp/B00MVWGQX0/?ots=1&amp;amp;slotNum=4&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;drip coffee maker&lt;/a&gt;, all you have to do is scoop your coffee, pour it into the filter, pour some water in and press start to let the drip coffee maker do it’s coffee magic. Soon, you’ll hear the sweet sounds of your coffee dripping right into your coffee pot. Mornings, conquered.&lt;/p&gt;
-&lt;p&gt;Some drip coffee makers also come with a &lt;a href=&#34;https://www.amazon.com/dp/B000TQEDE4/?ots=1&amp;amp;slotNum=5&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;thermal carafe&lt;/a&gt;. Typically with a double layered, stainless steel wall, thermal carafes keep your coffee tasting fresh and hot for hours longer than most glass carafes do. Some drip coffee makers use a thermal carafe, but traditionally, they use a glass carafe instead.&lt;/p&gt;
-&lt;h4 id=&#34;pour-over&#34;&gt;Pour Over&lt;/h4&gt;
-&lt;p&gt;A pour-over coffee maker is exactly what it sounds like: you manually pour hot water over the beans. With a solid 5-star rating on Amazon, pour-over coffee makers like &lt;a href=&#34;https://www.amazon.com/Chemex-Classic-Pour-over-Glass-Coffeemaker/dp/B017M9TJA8/?ots=1&amp;amp;slotNum=6&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;Chemex&lt;/a&gt; are a solid choice. Fans love the fact that you get to control the strength of the coffee, plus the pots are super easy to clean. You do need a special kind of filter, though, which is pricier than the typical drip coffee filter. However, some are reusable.&lt;/p&gt;
-&lt;h4 id=&#34;cold-brew-1&#34;&gt;Cold Brew&lt;/h4&gt;
-&lt;p&gt;Diehard cold brew fans may want to invest in a &lt;a href=&#34;https://www.amazon.com/dp/B00FFLY64U/?ots=1&amp;amp;slotNum=7&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;cold brew coffee maker&lt;/a&gt;. To use a cold brew maker, throw in your coffee grounds, brew and serve. You can store the coffee for up to 36 hours. If you’re looking for a multi-functional coffee maker, you can prepare cold brew coffees in other makers, like the AeroPress.&lt;/p&gt;
-&lt;h4 id=&#34;moka&#34;&gt;Moka&lt;/h4&gt;
-&lt;p&gt;Moka pots share a lot of similarities with the percolator and there’s often confusion between the two. Both need a heated surface, like a stovetop or even a campfire. However, the &lt;a href=&#34;https://www.amazon.com/dp/B000CNY6UK/?ots=1&amp;amp;slotNum=8&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;Moka pot&lt;/a&gt; produces an espresso-like drink and its brewing process is a bit different than the percolator. You need to keep more of an eye on it because when the Moka pot’s water is spent, you should remove the pot from the heat surface to avoid burnt-tasting coffee. Whereas with the percolator’s simple brewing process, the longer you leave it running, the stronger the coffee will be.&lt;/p&gt;
-&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
-&lt;p&gt;**Pour over 手沖咖啡 ：**類似黑咖啡，由熱水倒在研磨咖啡豆上，並且從濾杯滴下製成。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Decaf 低咖啡因：&lt;/strong&gt; 低咖啡因咖啡或是無咖啡因。&lt;/p&gt;
-&lt;p&gt;**Steamer 牛奶：**有泡沫的熱牛奶加上甜甜的口味。&lt;/p&gt;
-&lt;p&gt;**Lemonade 檸檬水：**一種由檸檬汁、糖和水製成的冰的飲料。&lt;/p&gt;
-&lt;h3 id=&#34;還有&#34;&gt;還有…&lt;/h3&gt;
-&lt;p&gt;在很多咖啡店裡，你可以加一些不同的口味到你的飲品裡。&lt;/p&gt;
-&lt;p&gt;這些通常會需要加$0.50，請看以下一些受歡迎的選項：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Vanilla 香草&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Hazelnut 榛果&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Caramel 焦糖&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Toffee 太妃糖&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;特殊飲料&#34;&gt;特殊飲料&lt;/h3&gt;
-&lt;p&gt;你有沒有聽過 “blended drink 特調飲料”? 或者是 “Rooibos espresso 南非紅萃”? 這些可能聽起來有點怪，但我們想要你在看到他們之前先準備好！&lt;/p&gt;
-&lt;p&gt;很多咖啡店有他們自己的特調，但這裡有一些&lt;a href=&#34;https://www.thrillist.com/drink/nation/new-coffee-drinks-creative-espresso-menus&#34;&gt;新的有創意的咖啡店飲料&lt;/a&gt;，請看以下介紹：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Blended drinks 特調飲料：&lt;/strong&gt; 一種冷飲、黏稠的飲料，由濃縮咖啡、冰塊和牛奶混合而成。特調飲料通常是甜的口味（像是巧克力、焦糖、薄荷和南瓜），還有很多咖啡店會提供季節性口味。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Matcha latte 抹茶拿鐵：&lt;/strong&gt; 一種抹茶製成的飲料。雖然之前在菜單上都很難找到這個選項，但現在大部分的咖啡店都有提供幾種不同抹茶類型的飲品。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Rooibos espresso 南非紅萃：&lt;/strong&gt; 雖然是說“espresso,” 但是這個飲料沒有任何咖啡在裡面。南非紅萃是由南非國寶茶製成的，但它被叫做“espresso”是因為它和濃縮咖啡有類似的口感和外表。&lt;/p&gt;
-&lt;p&gt;這是一種新的飲品，最近因為南非國寶茶的健康益處而變得非常流行。&lt;/p&gt;
-&lt;p&gt;**Golden latte 黃金拿鐵：**這種飲品沒有咖啡因， 沒有咖啡也沒有茶。另一種因為健康益處而流行的新飲品，這種拿鐵是用牛奶、薑黃、薑、肉桂和其他香料製成的。&lt;/p&gt;
-&lt;p&gt;INFORMATION&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.coffeereview.com/coffee-glossary/&#34;&gt;COFFEE GLOSSARY&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;ingredients&#34;&gt;Ingredients&lt;/h1&gt;
-&lt;h2 id=&#34;meat&#34;&gt;Meat&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/v2-5fd7917287c26049d496f6f9b16955a2_r.jpg&#34; alt=&#34;Meat&#34;&gt;&lt;/p&gt;
-&lt;p&gt;lamb 羔羊肉 [læm]&lt;/p&gt;
-&lt;p&gt;butcher 肉店老板 [ˈbʊtʃər]&lt;/p&gt;
-&lt;p&gt;meat hook 吊肉钩 [miːt hʊk]&lt;/p&gt;
-&lt;p&gt;knife sharpener 磨刀器&lt;/p&gt;
-&lt;p&gt;scales 秤 [skeɪlz]&lt;/p&gt;
-&lt;p&gt;bacon 熏肉 [ˈbeɪkən]&lt;/p&gt;
-&lt;p&gt;sausages 香肠 [ˈsɔsɪdʒɪz]&lt;/p&gt;
-&lt;p&gt;liver 肝脏 [ˈlɪvər]&lt;/p&gt;
-&lt;p&gt;pork 猪肉 [pɔːrk]&lt;/p&gt;
-&lt;p&gt;offal 下水 [ˈɔːfl]&lt;/p&gt;
-&lt;p&gt;free range 放养的 [ˌfriː reɪndʒ]&lt;/p&gt;
-&lt;p&gt;cooked meat 熟肉 [kʊkt miːt]&lt;/p&gt;
-&lt;p&gt;beef 牛肉 [biːf]&lt;/p&gt;
-&lt;p&gt;rabbit 兔肉 [ˈræbɪt]&lt;/p&gt;
-&lt;p&gt;cured 腌制的 [kjʊrd]&lt;/p&gt;
-&lt;p&gt;organic 有机（饲养）的 [ɔːrˈɡænɪk]&lt;/p&gt;
-&lt;p&gt;white meat 白肉（指家禽肉、鱼肉等）&lt;/p&gt;
-&lt;p&gt;veal 小牛肉 [viːl]&lt;/p&gt;
-&lt;p&gt;tongue 牛舌 [tʌŋ]&lt;/p&gt;
-&lt;p&gt;smoked 熏制的 [smoʊkt]&lt;/p&gt;
-&lt;p&gt;lean meat 瘦肉 [liːn miːt]&lt;/p&gt;
-&lt;p&gt;red meat 红肉（指牛肉、猪肉和羊肉）&lt;/p&gt;
-&lt;h2 id=&#34;cuts&#34;&gt;Cuts&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/v2-8cd664994b62af4220f6be06ddc57077_r.jpg&#34; alt=&#34;cuts&#34;&gt;&lt;/p&gt;
-&lt;p&gt;ham 火腿 [hæm]&lt;/p&gt;
-&lt;p&gt;rind 肉皮 [raɪnd]&lt;/p&gt;
-&lt;p&gt;slice 薄片 [slaɪs]&lt;/p&gt;
-&lt;p&gt;sirloin steak 牛上腰排 [ˈsɜːrlɔɪn steɪk]&lt;/p&gt;
-&lt;p&gt;rasher 火腿片 [ˈræʃər]&lt;/p&gt;
-&lt;p&gt;mince 肉馅 [mɪns]&lt;/p&gt;
-&lt;p&gt;fat 肥肉 [fæt]&lt;/p&gt;
-&lt;p&gt;rib 肋排 [rɪb]&lt;/p&gt;
-&lt;p&gt;chop 排骨 [tʃɑːp]&lt;/p&gt;
-&lt;p&gt;bone 骨头 [boʊn]&lt;/p&gt;
-&lt;p&gt;fillet 里脊肉 [fɪˈleɪ]&lt;/p&gt;
-&lt;p&gt;joint 后腿肉 [dʒɔɪnt]&lt;/p&gt;
-&lt;p&gt;kidney 肾 [ˈkɪdni]&lt;/p&gt;
-&lt;p&gt;rump steak 牛腿排 [rʌmp steɪk]&lt;/p&gt;
-&lt;p&gt;heart 心 [hɑːrt]&lt;/p&gt;
-&lt;h2 id=&#34;poultry&#34;&gt;Poultry&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/v2-609fbff8bdd72b7474c7ea368d922f1f_r.jpg&#34; alt=&#34;poultry&#34;&gt;&lt;/p&gt;
-&lt;p&gt;skin 皮 [skɪn]&lt;/p&gt;
-&lt;p&gt;turkey 火鸡 [ˈtɜːrki]&lt;/p&gt;
-&lt;p&gt;breast 胸 [brest]&lt;/p&gt;
-&lt;p&gt;thigh 大腿 [θaɪ]&lt;/p&gt;
-&lt;p&gt;dressed chicken 去毛开膛的鸡&lt;/p&gt;
-&lt;p&gt;chicken 鸡 [ˈtʃɪkɪn]&lt;/p&gt;
-&lt;p&gt;pheasant 野鸡 [ˈfeznt]&lt;/p&gt;
-&lt;p&gt;duck 鸭 [dʌk]&lt;/p&gt;
-&lt;p&gt;leg 腿 [leɡ]&lt;/p&gt;
-&lt;p&gt;quail 鹌鹑 [kweɪl]&lt;/p&gt;
-&lt;p&gt;goose 鹅 [ɡuːs]&lt;/p&gt;
-&lt;h2 id=&#34;fish&#34;&gt;Fish&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/v2-f0a3656178aa492097cadbe6f6adc641_r.jpg&#34; alt=&#34;fish&#34;&gt;&lt;/p&gt;
-&lt;p&gt;peeled prawns 去皮虾 [piːld prɔnz]&lt;/p&gt;
-&lt;p&gt;ice 冰 [aɪs]&lt;/p&gt;
-&lt;p&gt;red mullet 羊鱼 [red ˈmʌlɪt]&lt;/p&gt;
-&lt;p&gt;halibut fillets 大比目鱼片 [ˈhælɪbət fɪˈleɪs]&lt;/p&gt;
-&lt;p&gt;rainbow trout 虹鳟鱼 [ˌreɪnboʊ ˈtraʊt]&lt;/p&gt;
-&lt;p&gt;skate wings 鳐鱼翅 [skeɪt wɪŋz]&lt;/p&gt;
-&lt;p&gt;fishmongers 水产店&lt;/p&gt;
-&lt;p&gt;monkfish 鮟鱇鱼英 [ mʌŋkfɪʃ]&lt;/p&gt;
-&lt;p&gt;mackerel 鲭鱼 [ˈmækrəl]&lt;/p&gt;
-&lt;p&gt;swordfish 剑鱼 [ˈsɔːrdfɪʃ]&lt;/p&gt;
-&lt;p&gt;Dover sole 鳎鱼 [ˈdoʊvər soʊl]&lt;/p&gt;
-&lt;p&gt;lemon sole 黄盖鲽 [ˌlemən ˈsoʊl]&lt;/p&gt;
-&lt;p&gt;haddock 黑线鳕 [ˈhædək]&lt;/p&gt;
-&lt;p&gt;sardine 沙丁鱼 [ˌsɑːrˈdiːn]&lt;/p&gt;
-&lt;p&gt;skate 鳐鱼 [skeɪt]&lt;/p&gt;
-&lt;p&gt;whiting 牙鳕 [ˈwaɪtɪŋ]&lt;/p&gt;
-&lt;p&gt;sea bass 海鲈 [siː beɪs]&lt;/p&gt;
-&lt;p&gt;salmon 鲑鱼 [ˈsæmən]&lt;/p&gt;
-&lt;p&gt;cod 鳕鱼 [kɑːd]&lt;/p&gt;
-&lt;p&gt;sea bream 鲷鱼 [siː briːm]&lt;/p&gt;
-&lt;p&gt;tuna 金枪鱼 [ˈtuːnə]&lt;/p&gt;
-&lt;h2 id=&#34;seafood&#34;&gt;Seafood&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/v2-d619088b7be2ece96a803f1dabe99b30_r.jpg&#34; alt=&#34;seafood&#34;&gt;&lt;/p&gt;
-&lt;p&gt;scallop 扇贝 [ˈskæləp]&lt;/p&gt;
-&lt;p&gt;crab 螃蟹 [kræb]&lt;/p&gt;
-&lt;p&gt;lobster 龙虾 [ˈlɑːbstər]&lt;/p&gt;
-&lt;p&gt;king prawn 大对虾 [kɪŋ prɔːn]&lt;/p&gt;
-&lt;p&gt;mussel 贻贝 [ˈmʌsl]&lt;/p&gt;
-&lt;p&gt;crayfish 小龙虾 [ˈkreɪfɪʃ]&lt;/p&gt;
-&lt;p&gt;oyster 牡蛎 [ˈɔɪstər]&lt;/p&gt;
-&lt;p&gt;razor-shell 蛏子 [ˈreɪzər ʃel]&lt;/p&gt;
-&lt;p&gt;cockle 鸟蛤 [ˈkɑːkl]&lt;/p&gt;
-&lt;p&gt;octopus 章鱼乌贼 [ˈɑːktəpʊs]&lt;/p&gt;
-&lt;p&gt;cuttlefish 乌贼 [ˈkʌtlfɪʃ]&lt;/p&gt;
-&lt;p&gt;clam 蛤蜊 [klæm]&lt;/p&gt;
-&lt;p&gt;frozen 冷冻的 [ˈfroʊzn]&lt;/p&gt;
-&lt;p&gt;salted 盐渍的 [ˈsɔːltɪd]&lt;/p&gt;
-&lt;p&gt;smoked 熏制的 [smoʊkt]&lt;/p&gt;
-&lt;p&gt;descaled 去麟的  [di skeɪl]&lt;/p&gt;
-&lt;p&gt;fillet 去骨鱼片 [fɪˈleɪ]&lt;/p&gt;
-&lt;p&gt;loin 腰肉 [lɔɪn]&lt;/p&gt;
-&lt;p&gt;tail 尾部 [teɪl]&lt;/p&gt;
-&lt;p&gt;bone 骨头 [boʊn]&lt;/p&gt;
-&lt;p&gt;scale 鳞片 [skeɪl]&lt;/p&gt;
-&lt;p&gt;fresh 新鲜 [freʃ]&lt;/p&gt;
-&lt;p&gt;cleaned 处理干净的 [kliːnd]&lt;/p&gt;
-&lt;p&gt;skinned 去皮的 [skɪnd]&lt;/p&gt;
-&lt;p&gt;boned 去骨的 [boʊnd]&lt;/p&gt;
-&lt;p&gt;filleted 切片的 [fɪˈleɪɪd]&lt;/p&gt;
-&lt;p&gt;steak 鱼片 [steɪk]&lt;/p&gt;
-&lt;p&gt;Wil you clean it for me?&lt;/p&gt;
-&lt;h2 id=&#34;vegeatables&#34;&gt;Vegeatables&lt;/h2&gt;
-&lt;h3 id=&#34;a&#34;&gt;A&lt;/h3&gt;
-&lt;p&gt;Adzuki bean 红豆 [ə ʒuki]&lt;/p&gt;
-&lt;p&gt;Aloe 芦荟 [ ælo]&lt;/p&gt;
-&lt;p&gt;Aniseed 八角 [ ænəsid]&lt;/p&gt;
-&lt;p&gt;Aubergine 茄子 [ obɚʒin]&lt;/p&gt;
-&lt;p&gt;Asparagus 芦笋 [ə spærəgəs]&lt;/p&gt;
-&lt;h3 id=&#34;b&#34;&gt;B&lt;/h3&gt;
-&lt;p&gt;Bamboo Shoot 笋 [,bæm bu]&lt;/p&gt;
-&lt;p&gt;Broccoli 西兰花 [ brɔkəli]&lt;/p&gt;
-&lt;p&gt;Bean Sprout 绿豆芽 [spraʊt]&lt;/p&gt;
-&lt;p&gt;Beetroot 甜菜 [ bitrut]&lt;/p&gt;
-&lt;p&gt;Brussels sprout 球芽甘蓝&lt;/p&gt;
-&lt;p&gt;Bitter gourd 苦瓜 [ɡʊrd]&lt;/p&gt;
-&lt;p&gt;Bok-choy 小白菜 [ bɔk tʃɔɪ]&lt;/p&gt;
-&lt;h3 id=&#34;c&#34;&gt;C&lt;/h3&gt;
-&lt;p&gt;Carrot 胡萝卜 [ kærət]&lt;/p&gt;
-&lt;p&gt;Cabbage 卷心菜 [ˈkæbɪdʒ]&lt;/p&gt;
-&lt;p&gt;Celery 芹菜 [ sɛləri]&lt;/p&gt;
-&lt;p&gt;Cucumber 黄瓜 [ kjʊ,kʌmbɚ]&lt;/p&gt;
-&lt;p&gt;Cauliflower 花菜 [ kɔlɪ flaʊɚ]&lt;/p&gt;
-&lt;p&gt;Cloud ear/wood ear 木耳&lt;/p&gt;
-&lt;p&gt;Chive 细香葱 [tʃaɪv]&lt;/p&gt;
-&lt;p&gt;Corn 玉米 [kɔrn]&lt;/p&gt;
-&lt;p&gt;Chili 辣椒 [ tʃɪli]&lt;/p&gt;
-&lt;p&gt;Coriander 香菜 [,kɔrɪ ændɚ]&lt;/p&gt;
-&lt;p&gt;Cinnamon 肉桂 [ sɪnəmən]&lt;/p&gt;
-&lt;p&gt;Chinese Kale 芥蓝 [kel]&lt;/p&gt;
-&lt;p&gt;Chinese Radish/Daikon 白萝卜&lt;/p&gt;
-&lt;p&gt;Chinese Yam 山药 [jæm]&lt;/p&gt;
-&lt;p&gt;Chrysanthemum greens 茼蒿 [krɪ sænθəməm]&lt;/p&gt;
-&lt;h3 id=&#34;e&#34;&gt;E&lt;/h3&gt;
-&lt;p&gt;Eggplant 茄子 [ ɛɡplænt]&lt;/p&gt;
-&lt;p&gt;Eddoes 小芋头 [ edəʊ]&lt;/p&gt;
-&lt;p&gt;Enoki mushroom 金针菇 [e nɔki:]&lt;/p&gt;
-&lt;h3 id=&#34;f&#34;&gt;F&lt;/h3&gt;
-&lt;p&gt;French Bean 四季豆/刀豆&lt;/p&gt;
-&lt;p&gt;Fennel 茴香 [ fɛnl]&lt;/p&gt;
-&lt;h3 id=&#34;g&#34;&gt;G&lt;/h3&gt;
-&lt;p&gt;Ginger 姜 [ dʒɪndʒɚ]&lt;/p&gt;
-&lt;p&gt;Garlic 大蒜 [ ɡɑrlɪk]&lt;/p&gt;
-&lt;p&gt;Garlic sprout 蒜苗/苔&lt;/p&gt;
-&lt;p&gt;Green Pepper 青椒&lt;/p&gt;
-&lt;h3 id=&#34;k&#34;&gt;K&lt;/h3&gt;
-&lt;p&gt;Kohlrabi 甘蓝 [ kol rɑbi]&lt;/p&gt;
-&lt;p&gt;Kelp 海带 [kɛlp]&lt;/p&gt;
-&lt;p&gt;King oyster mushroom 杏鲍菇&lt;/p&gt;
-&lt;h3 id=&#34;l&#34;&gt;L&lt;/h3&gt;
-&lt;p&gt;Lettuce 莴苣/生菜 [ lɛtɪs]&lt;/p&gt;
-&lt;p&gt;Lotus seed 莲子&lt;/p&gt;
-&lt;p&gt;Loofah 丝瓜 [ lufə]&lt;/p&gt;
-&lt;p&gt;Laurel 月桂 [ lɔrəl]&lt;/p&gt;
-&lt;p&gt;Leek 韭葱 [lik]&lt;/p&gt;
-&lt;p&gt;Laver 紫菜 [ levɚ]&lt;/p&gt;
-&lt;p&gt;Licorice 甘草 [ lɪkərɪs; lɪkərɪʃ]&lt;/p&gt;
-&lt;p&gt;Lotus root 莲藕&lt;/p&gt;
-&lt;h3 id=&#34;m&#34;&gt;M&lt;/h3&gt;
-&lt;p&gt;Mushroom 蘑菇 [ mʌʃrʊm]&lt;/p&gt;
-&lt;p&gt;Mung bean 绿豆&lt;/p&gt;
-&lt;h3 id=&#34;o&#34;&gt;O&lt;/h3&gt;
-&lt;p&gt;Onion 洋葱 [ ʌnjən]&lt;/p&gt;
-&lt;h3 id=&#34;p&#34;&gt;P&lt;/h3&gt;
-&lt;p&gt;Pumpkin 南瓜 [ pʌmpkɪn]&lt;/p&gt;
-&lt;p&gt;Pepper 胡椒&lt;/p&gt;
-&lt;p&gt;Pickled cucumber 酸黄瓜&lt;/p&gt;
-&lt;h3 id=&#34;r&#34;&gt;R&lt;/h3&gt;
-&lt;p&gt;Radish 萝卜 [ rædɪʃ]&lt;/p&gt;
-&lt;p&gt;Romaine 生菜 [rə(ʊ) meɪn]&lt;/p&gt;
-&lt;p&gt;Red pepper 红椒&lt;/p&gt;
-&lt;p&gt;Red bean 泛指红色的豆&lt;/p&gt;
-&lt;h3 id=&#34;s&#34;&gt;S&lt;/h3&gt;
-&lt;p&gt;Spring onion/Scallion 青葱 [ skælɪən]&lt;/p&gt;
-&lt;p&gt;Silver ear fungus 白木耳&lt;/p&gt;
-&lt;p&gt;Soybean 大豆 [ sɔɪ,bin]&lt;/p&gt;
-&lt;p&gt;Soybean sprout 黄豆芽&lt;/p&gt;
-&lt;p&gt;Spinach 菠菜 [ spɪnɪtʃ]&lt;/p&gt;
-&lt;p&gt;Straw mushroom 草菇&lt;/p&gt;
-&lt;p&gt;Green bean 刀豆&lt;/p&gt;
-&lt;p&gt;Sweet Potato 红薯&lt;/p&gt;
-&lt;p&gt;Seaweed 海藻 [ si wid]&lt;/p&gt;
-&lt;p&gt;Snow Pea 荷兰豆&lt;/p&gt;
-&lt;h3 id=&#34;t&#34;&gt;T&lt;/h3&gt;
-&lt;p&gt;Taro 大芋头 [ tærəʊ]&lt;/p&gt;
-&lt;h3 id=&#34;w&#34;&gt;W&lt;/h3&gt;
-&lt;p&gt;Watercress 豆瓣菜 [ wɔtɚ krɛs]&lt;/p&gt;
-&lt;p&gt;Water spinach 空心菜&lt;/p&gt;
-&lt;p&gt;Water caltrop 菱角 [ kæltrəp]&lt;/p&gt;
-&lt;p&gt;White gourd 冬瓜 [ɡʊrd]&lt;/p&gt;
-&lt;p&gt;Water chestnut 荸荠 [ˈwɔtɚ ˈtʃɛsˌnʌt]&lt;/p&gt;
-&lt;p&gt;Wakame/sea mustard 裙带藻（味增汤海带）&lt;/p&gt;
-&lt;p&gt;Wild rice stem 茭白&lt;/p&gt;
-&lt;h3 id=&#34;y&#34;&gt;Y&lt;/h3&gt;
-&lt;p&gt;Yellow pepper 黄椒&lt;/p&gt;
-&lt;hr&gt;
 &lt;h1 id=&#34;boundary-breaking-chanel-watch-is-tweaked-for-a-new-generation&#34;&gt;Boundary-breaking Chanel watch is tweaked for a new generation&lt;/h1&gt;
 &lt;p&gt;The Boy.Friend Skeleton appeals to both men and women with its distinctive octagonal silhouette&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;C:%5CUsers%5Cknie%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210223111134383.png&#34; alt=&#34;image-20210223111134383&#34;&gt;&lt;/p&gt;
@@ -1229,223 +1058,6 @@ AUGUST 10, 2018&lt;/p&gt;
 &lt;p&gt;Gabrielle &lt;a href=&#34;https://www.wallpaper.com/tags/chanel&#34;&gt;Chanel&lt;/a&gt; was fascinated with traditionally male embellishments and she often assimilated them into her clothing, breathing seductive new life into tweed and jersey. The ‘Boy.Friend Skeleton’ also plays with established design codes, translating a typically masculine case architecture into a chic watch for women.&lt;/p&gt;
 &lt;p&gt;Instead of the conventional softened silhouettes, a distinctive octagonal shape looks back to the brand’s first foray into watchmaking, redrawing the lines of its 1987 ‘Première’ watch, which itself was originally inspired by the angles of the &lt;a href=&#34;https://www.wallpaper.com/tags/chanel&#34;&gt;Chanel&lt;/a&gt; No. 5 perfume bottle stopper. Nodding to the original, it puts the hypnotic, vertically-aligned circles of the in-house black-coated mechanical movement at its heart, juxtaposing its curving form against a sharp edging of baguette-cut diamonds.&lt;/p&gt;
 - https://www.openheart.icu/speech/english/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>想吃肉</title>
-        <link>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</link>
-        <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ -&lt;p&gt;去年&lt;/p&gt;
-&lt;p&gt;这个时候&lt;/p&gt;
-&lt;p&gt;我们&lt;/p&gt;
-&lt;p&gt;在想&lt;/p&gt;
-&lt;p&gt;那个女人&lt;/p&gt;
-&lt;p&gt;下月结婚的话&lt;/p&gt;
-&lt;p&gt;书狗&lt;/p&gt;
-&lt;p&gt;去不去&lt;/p&gt;
-&lt;p&gt;今年&lt;/p&gt;
-&lt;p&gt;这个时候&lt;/p&gt;
-&lt;p&gt;我们&lt;/p&gt;
-&lt;p&gt;在想&lt;/p&gt;
-&lt;p&gt;那个女人&lt;/p&gt;
-&lt;p&gt;去年结婚的话&lt;/p&gt;
-&lt;p&gt;书狗&lt;/p&gt;
-&lt;p&gt;去不去&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;我把&lt;/p&gt;
-&lt;p&gt;非自来的&lt;/p&gt;
-&lt;p&gt;农夫山泉水&lt;/p&gt;
-&lt;p&gt;烧开&lt;/p&gt;
-&lt;p&gt;期间&lt;/p&gt;
-&lt;p&gt;蒙眼喝掉&lt;/p&gt;
-&lt;p&gt;每100毫升&lt;/p&gt;
-&lt;p&gt;含180千焦能量的&lt;/p&gt;
-&lt;p&gt;两块五毛钱&lt;/p&gt;
-&lt;p&gt;发现&lt;/p&gt;
-&lt;p&gt;蒙眼&lt;/p&gt;
-&lt;p&gt;并不能防止&lt;/p&gt;
-&lt;p&gt;两块五毛钱&lt;/p&gt;
-&lt;p&gt;让我&lt;/p&gt;
-&lt;p&gt;疯狂&lt;/p&gt;
-&lt;p&gt;打嗝儿&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;往不值一提的&lt;/p&gt;
-&lt;p&gt;玻璃容器中&lt;/p&gt;
-&lt;p&gt;加随意毫升的&lt;/p&gt;
-&lt;p&gt;烫水&lt;/p&gt;
-&lt;p&gt;5粒红黑红黑红相间的&lt;/p&gt;
-&lt;p&gt;枸杞&lt;/p&gt;
-&lt;p&gt;4节长短长短不齐的&lt;/p&gt;
-&lt;p&gt;金银花&lt;/p&gt;
-&lt;p&gt;1粒没掉到过地上的&lt;/p&gt;
-&lt;p&gt;胎菊&lt;/p&gt;
-&lt;p&gt;如果&lt;/p&gt;
-&lt;p&gt;算上&lt;/p&gt;
-&lt;p&gt;掉到过地上的&lt;/p&gt;
-&lt;p&gt;那就是3粒&lt;/p&gt;
-&lt;p&gt;胎菊&lt;/p&gt;
-&lt;p&gt;不需要&lt;/p&gt;
-&lt;p&gt;用咖啡勺&lt;/p&gt;
-&lt;p&gt;从容&lt;/p&gt;
-&lt;p&gt;潇洒&lt;/p&gt;
-&lt;p&gt;肆意&lt;/p&gt;
-&lt;p&gt;老练&lt;/p&gt;
-&lt;p&gt;地搅动一周&lt;/p&gt;
-&lt;p&gt;又一周&lt;/p&gt;
-&lt;p&gt;直接加入2.5块冰糖&lt;/p&gt;
-&lt;p&gt;即可&lt;/p&gt;
-&lt;p&gt;完美&lt;/p&gt;
-&lt;p&gt;复刻&lt;/p&gt;
-&lt;p&gt;爷爷泡的茶&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;反复&lt;/p&gt;
-&lt;p&gt;轻捻&lt;/p&gt;
-&lt;p&gt;揉搓&lt;/p&gt;
-&lt;p&gt;爱抚&lt;/p&gt;
-&lt;p&gt;玻璃杯的&lt;/p&gt;
-&lt;p&gt;把手&lt;/p&gt;
-&lt;p&gt;等待&lt;/p&gt;
-&lt;p&gt;149秒后&lt;/p&gt;
-&lt;p&gt;凭心情&lt;/p&gt;
-&lt;p&gt;吹几下热茶&lt;/p&gt;
-&lt;p&gt;喝完&lt;/p&gt;
-&lt;p&gt;第一杯&lt;/p&gt;
-&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
-&lt;p&gt;拿出&lt;/p&gt;
-&lt;p&gt;富士康工厂&lt;/p&gt;
-&lt;p&gt;都是双眼皮员工的&lt;/p&gt;
-&lt;p&gt;高端车间里装配的&lt;/p&gt;
-&lt;p&gt;高级电脑&lt;/p&gt;
-&lt;p&gt;开机&lt;/p&gt;
-&lt;p&gt;打开神秘的编程软件&lt;/p&gt;
-&lt;p&gt;配着&lt;/p&gt;
-&lt;p&gt;窗外经十路上&lt;/p&gt;
-&lt;p&gt;无法逃避的&lt;/p&gt;
-&lt;p&gt;车流声&lt;/p&gt;
-&lt;p&gt;双手&lt;/p&gt;
-&lt;p&gt;在键盘上&lt;/p&gt;
-&lt;p&gt;从容&lt;/p&gt;
-&lt;p&gt;潇洒&lt;/p&gt;
-&lt;p&gt;肆意&lt;/p&gt;
-&lt;p&gt;老练&lt;/p&gt;
-&lt;p&gt;地敲打&lt;/p&gt;
-&lt;p&gt;表情&lt;/p&gt;
-&lt;p&gt;老成持重&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;经过&lt;/p&gt;
-&lt;p&gt;简单的&lt;/p&gt;
-&lt;p&gt;数学高阶计算&lt;/p&gt;
-&lt;p&gt;复杂的&lt;/p&gt;
-&lt;p&gt;量子力学分析&lt;/p&gt;
-&lt;p&gt;2899秒后&lt;/p&gt;
-&lt;p&gt;我改完&lt;/p&gt;
-&lt;p&gt;13行代码&lt;/p&gt;
-&lt;p&gt;如果&lt;/p&gt;
-&lt;p&gt;多一秒&lt;/p&gt;
-&lt;p&gt;或者&lt;/p&gt;
-&lt;p&gt;少一行&lt;/p&gt;
-&lt;p&gt;那就只能&lt;/p&gt;
-&lt;p&gt;全部删掉&lt;/p&gt;
-&lt;p&gt;然后背着&lt;/p&gt;
-&lt;p&gt;比我年轻3岁半&lt;/p&gt;
-&lt;p&gt;正如花似玉&lt;/p&gt;
-&lt;p&gt;含苞待放的&lt;/p&gt;
-&lt;p&gt;女同事&lt;/p&gt;
-&lt;p&gt;偷偷&lt;/p&gt;
-&lt;p&gt;换掉&lt;/p&gt;
-&lt;p&gt;报错的代码&lt;/p&gt;
-&lt;p&gt;我依旧是&lt;/p&gt;
-&lt;p&gt;那个没有BUG的&lt;/p&gt;
-&lt;p&gt;美男子&lt;/p&gt;
-&lt;p&gt;女同事&lt;/p&gt;
-&lt;p&gt;今晚&lt;/p&gt;
-&lt;p&gt;依旧会&lt;/p&gt;
-&lt;p&gt;做梦&lt;/p&gt;
-&lt;p&gt;梦到&lt;/p&gt;
-&lt;p&gt;我&lt;/p&gt;
-&lt;p&gt;的代码&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;继续&lt;/p&gt;
-&lt;p&gt;喝完&lt;/p&gt;
-&lt;p&gt;第二杯&lt;/p&gt;
-&lt;p&gt;爷爷泡的茶后&lt;/p&gt;
-&lt;p&gt;我认为&lt;/p&gt;
-&lt;p&gt;Apple Music&lt;/p&gt;
-&lt;p&gt;下首要播放的&lt;/p&gt;
-&lt;p&gt;《突然想起你》&lt;/p&gt;
-&lt;p&gt;用的是不是&lt;/p&gt;
-&lt;p&gt;三峡大坝&lt;/p&gt;
-&lt;p&gt;发的电&lt;/p&gt;
-&lt;p&gt;对书狗&lt;/p&gt;
-&lt;p&gt;去不去&lt;/p&gt;
-&lt;p&gt;那个女人的&lt;/p&gt;
-&lt;p&gt;婚礼&lt;/p&gt;
-&lt;p&gt;没有&lt;/p&gt;
-&lt;p&gt;任何影响&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;今年&lt;/p&gt;
-&lt;p&gt;没人&lt;/p&gt;
-&lt;p&gt;送我&lt;/p&gt;
-&lt;p&gt;他们自酿的&lt;/p&gt;
-&lt;p&gt;散装红酒&lt;/p&gt;
-&lt;p&gt;我只有&lt;/p&gt;
-&lt;p&gt;75度的&lt;/p&gt;
-&lt;p&gt;医用酒精&lt;/p&gt;
-&lt;p&gt;但我&lt;/p&gt;
-&lt;p&gt;没有烧杯&lt;/p&gt;
-&lt;p&gt;不能&lt;/p&gt;
-&lt;p&gt;精确配比&lt;/p&gt;
-&lt;p&gt;勾兑出82年的&lt;/p&gt;
-&lt;p&gt;波尔多&lt;em&gt;Lafite&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;所以&lt;/p&gt;
-&lt;p&gt;只能&lt;/p&gt;
-&lt;p&gt;全部&lt;/p&gt;
-&lt;p&gt;倒掉&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;我好想&lt;/p&gt;
-&lt;p&gt;十块钱一瓶的&lt;/p&gt;
-&lt;p&gt;一厂小优&lt;/p&gt;
-&lt;p&gt;八十一箱的&lt;/p&gt;
-&lt;p&gt;勇闯天涯&lt;/p&gt;
-&lt;p&gt;一直没喝惯的&lt;/p&gt;
-&lt;p&gt;泰山原浆&lt;/p&gt;
-&lt;p&gt;极大部分是辣椒的&lt;/p&gt;
-&lt;p&gt;辣炒花嘎&lt;/p&gt;
-&lt;p&gt;我好想&lt;/p&gt;
-&lt;p&gt;好想&lt;/p&gt;
-&lt;p&gt;好想&lt;/p&gt;
-&lt;p&gt;出去&lt;/p&gt;
-&lt;p&gt;吃肉&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2020-02-14，泉城，小雨&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E6%83%B3%E5%90%83%E8%82%89/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>亲密关系2020</title>
-        <link>https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/</link>
-        <pubDate>Thu, 06 Feb 2020 10:58:08 -0400</pubDate>
-        
-        <guid>https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/ -&lt;p&gt;新型肺炎像亲密关系一样，有种奇妙的不确定性，让人无所适从。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;追求安全感是人的本能，于是人们拼命地戴口罩拼命地喝双黄连口服液。只有沉浸在这种安全感中，才会做出让他人可以依靠、相信的言谈举止，为亲密关系中的另一方也带来安全感。&lt;/p&gt;
-&lt;p&gt;新型肺炎也在追求安全感，这安全感却是由人们提供的。它再怎么新型，也只是由一个保护性外壳包裹的一段DNA或者RNA。这些简单的有机体仅单纯的想利用宿主的细胞系统进行自我复制。像极了干面胡同的小半间屋子里，窝在两箱子方便面，一箱好丽友派，两打鸡蛋，两打避孕套，两打脐橙，一箱娃哈哈矿泉水，两箱燕京啤酒，一箱红星小二锅头中间的小床上，在接下来的两周里疯狂发生亲密关系的男人和女人。他俩觉得他俩足够安全。新型肺炎疯狂传染，无药可治，确实也足够安全。&lt;/p&gt;
-&lt;p&gt;不像亲密关系，心醉的女人被搂在怀里，会问男人什么时候起开始喜欢她。男人或不假思索或略微迟疑 &lt;em&gt;“第一次看见你的时候”&lt;/em&gt;。其实，他到底是什么时候第一次看见她的，根本就记不住了。而新型肺炎并非带着目的去传播感染、复制自身，也不会带着目的去杀死宿主。它们太简单了，我们太复杂了。复杂的免疫系统让我们发热不发光，40°的高烧，人和病毒必须死一个。亲密关系更加复杂，&lt;em&gt;“Two stangers fell in love.Only one knows it wasn’t by chance.”&lt;/em&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;“In a boy-meets-girl story,the boy should always meet the girl.”&lt;/em&gt; 有些关系是必然发生的，有些关系是必然不发生的。正如新型肺炎杀死宿主，这是宏观的进化规律，是必然发生的。假设人们抓住了新型肺炎，把他关进像电影里一样审讯室，像电影里一样的手脚铐住，像电影里一样的强灯光照脸，像电影里一样的 &lt;em&gt;“Good Cop, Bad Cop”&lt;/em&gt;，像电影里一样的拳脚相加后递烟，问 &lt;em&gt;“你和被害人什么关系，为什么要杀他！”&lt;/em&gt;。新型肺炎肯定不会和我一样煞风景说 &lt;em&gt;“谢谢我不抽烟”&lt;/em&gt;，也想必不会像电影里一样咬舌自杀或者以头抢地尔或者用灵活的舌头触发牙齿里的机关吞服氰化物自杀，它会如实招来 &lt;em&gt;“他死了，我的故事就结束了，而我死了，他的故事还长的很”&lt;/em&gt;。&lt;/p&gt;
-&lt;p&gt;在一段亲密关系中必定会有隐瞒，双方或多或少都费力地隐藏着某些东西。就像每个人都会有过去，就算是一个杀手，一样会有小学同学，杀手可能在犯罪现场留下一个个 &lt;em&gt;“Riddle”&lt;/em&gt;，但绝对不会写下自己小学同学张苇刘波的名字。所以，往新型肺炎祖上刨10的几十几百次方代，虽然肯定不是农民，但说不准是个天真无邪的 &lt;em&gt;“好玩意儿”&lt;/em&gt;。亲密关系中，足够了解一个人并不代表什么，人是会变的，今天她喜欢梅林，明天她可以喜欢别的。穷则求变，物竞天择，频繁的基因重排，新型肺炎把人畜无害的稚嫩藏得严严实实，它将来会成为一个没感情、真正的 &lt;em&gt;“Killing machine”&lt;/em&gt;。&lt;/p&gt;
-&lt;p&gt;新型肺炎来势汹汹，在某天突然出现，或许会在某天突然消失，当然，越快越好。正如某年某月某日，你会得到你的初恋。你要意识到，她就好像是一家店，你不会知道能停留多久，当然，越久越好。&lt;/p&gt;
-&lt;p&gt;一段亲密关系结束之后，没等伤心完，又开始了一段类似的注定伤心的亲密关系。人类从历史中吸取的唯一教训就是人类永远不会从历史中吸取教训。正如蝙蝠身上的新型肝炎也会像亲密关系一样，有种奇妙的不确定性，让人无所适从……&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;有人觉得用新型肺炎和亲密关系作比较是荒唐又可笑的，他们不该怪我，毕竟亲密关系本身就是荒唐又可笑的。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;2020-02-06，乐安，小雪，怕死&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB2020/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

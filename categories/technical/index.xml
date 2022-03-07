@@ -7,7 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Mon, 15 Nov 2021 23:28:00 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/categories/technical/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 14:28:00 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/categories/technical/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Representational State Transfer</title>
+      <link>https://www.openheart.icu/cs/representational-state-transfer/</link>
+      <pubDate>Wed, 01 Dec 2021 14:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/representational-state-transfer/</guid>
+      <description>What&amp;rsquo;s REST? Representational State Transfer, 表征状态转移
+ 比较容易理解 REST 思想的途径是先理解什么是 HTTP，再配合一些实际例子来进行类比，你会发现“REST”（Representational State Transfer）实际上是“HTT”（Hypertext Transfer）的进一步抽象，两者就如同接口与实现类的关系一般。
+ Hypertext:
+ By now the word &amp;ldquo;hypertext&amp;rdquo; has become generally accepted for branching and responding text, but the corresponding word &amp;ldquo;hypermedia&amp;rdquo;, meaning complexes of branching and responding graphics, movies and sound – as well as text – is much less used.
+现在，&amp;ldquo;超文本 &amp;ldquo;一词已被普遍接受，它指的是能够进行分支判断和差异响应的文本，相应地， &amp;ldquo;超媒体 &amp;ldquo;一词指的是能够进行分支判断和差异响应的图形、电影和声音（也包括文本）的复合体。
+—— Theodor Holm Nelson Literary Machines, 1992
+ Resource  资源：譬如你现在正在阅读一篇有关REST的文章，这篇文章的内容本身（你可以将其理解为其蕴含的信息、数据）我们称之为“资源”。无论你是购买的书籍、是在浏览器看的网页、是打印出来看的文稿、是在电脑屏幕上阅读抑或是手机上浏览，尽管呈现的样子各不相同，但其中的信息是不变的，你所阅读的仍是同一份“资源”。</description>
+    </item>
+    
+    <item>
+      <title>Transactions</title>
+      <link>https://www.openheart.icu/cs/transactions/</link>
+      <pubDate>Wed, 01 Dec 2021 14:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/transactions/</guid>
+      <description>ACID  事务处理几乎在每一个信息系统中都会涉及，它存在的意义是为了保证系统中所有的数据都是符合期望的，且相互关联的数据之间不会产生矛盾，即数据状态的一致性（Consistency）。
+按照数据库的经典理论，要达成这个目标，需要三方面共同努力来保障。
+ 原子性（Atomic）：在同一项业务处理过程中，事务保证了对多个数据的修改，要么同时成功，要么同时被撤销。 隔离性（Isolation）：在不同的业务处理过程中，事务保证了各自业务正在读、写的数据互相独立，不会彼此影响。 持久性（Durability）：事务应当保证所有成功被提交的数据修改都能够正确地被持久化，不丢失数据。    场景事例
+Fenix&amp;rsquo;s Bookstore 是一个在线书店。每当一本书被成功售出时，需要确保以下三件事情被正确地处理：
+ 用户的账号扣减相应的商品款项。 商品仓库中扣减库存，将商品标识为待配送状态。 商家的账号增加相应的商品款项。   Local Transaction Atomicity &amp;amp; Durability Commit Logging Crash Recovery 通常采用Commit Logging（提交日志）方式，只有在日志记录全部都安全落盘，数据库在日志中看到代表事务成功提交的“提交记录”（Commit Record）后，才会根据日志上的信息对真正的数据进行修改，修改完成后，再在日志中加入一条“结束记录”（End Record）表示事务已完成持久化。
+ In any database context, a &amp;ldquo;commit&amp;rdquo; is the application of a single transaction to the DB. A commit log is a record of transactions. It&amp;rsquo;s used to keep track of what&amp;rsquo;s happening, and help with e.</description>
+    </item>
+    
+    <item>
+      <title>Transparent Multilevel Diversion</title>
+      <link>https://www.openheart.icu/cs/transparent-multilevel-diversion-system/</link>
+      <pubDate>Wed, 01 Dec 2021 14:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/transparent-multilevel-diversion-system/</guid>
+      <description>在用户使用信息系统的过程中，请求从浏览器出发，在域名服务器的指引下找到系统的入口，经过网关、负载均衡器、缓存、服务集群等一系列设施，最后触及到末端存储于数据库服务器中的信息，然后逐级返回到用户的浏览器之中。这其中要经过很多技术部件：
+ 有一些部件位于客户端或网络的边缘，能够迅速响应用户的请求，避免给后方的 I/O 与 CPU 带来压力，典型如本地缓存、内容分发网络、反向代理等。 有一些部件的处理能力能够线性拓展，易于伸缩，可以使用较小的代价堆叠机器来获得与用户数量相匹配的并发性能，应尽量作为业务逻辑的主要载体，典型如集群中能够自动扩缩的服务节点。 有一些部件稳定服务对系统运行有全局性的影响，要时刻保持着容错备份，维护着高可用性，典型如服务注册中心、配置中心。 有一些设施是天生的单点部件，只能依靠升级机器本身的网络、存储和运算性能来提升处理能力，如位于系统入口的路由、网关或者负载均衡器（它们都可以做集群，但一次网络请求中无可避免至少有一个是单点的部件）、位于请求调用链末端的传统关系数据库等，都是典型的容易形成单点部件。  对系统进行流量规划时，我们应该充分理解这些部件的价值差异，有两条简单、普适的原则能指导我们进行设计：
+ 第一条原则是尽可能减少单点部件，如果某些单点是无可避免的，则应尽最大限度减少到达单点部件的流量。在系统中往往会有多个部件能够处理、响应用户请求，譬如要获取一张存储在数据库的用户头像图片，浏览器缓存、内容分发网络、反向代理、Web 服务器、文件服务器、数据库都可能提供这张图片。恰如其分地引导请求分流至最合适的组件中，避免绝大多数流量汇集到单点部件（如数据库），同时依然能够在绝大多数时候保证处理结果的准确性，使单点系统在出现故障时自动而迅速地实施补救措施，这便是系统架构中多级分流的意义。 另一条更关键的原则是奥卡姆剃刀原则。作为一名架构设计者，你应对多级分流的手段有全面的理解与充分的准备，同时清晰地意识到这些设施并不是越多越好。在实际构建系统时，你应当在有明确需求、真正必要的时候再去考虑部署它们。不是每一个系统都要追求高并发、高可用的，根据系统的用户量、峰值流量和团队本身的技术与运维能力来考虑如何部署这些设施才是合理的做法，在能满足需求的前提下，最简单的系统就是最好的系统。  Client Cache 强制缓存 假设在某个时点到来以前，譬如收到响应后的 10 分钟内，资源的内容和状态一定不会被改变，因此客户端可以无须经过任何请求，在该时点前一直持有和使用该资源的本地缓存副本。
+根据约定，强制缓存在浏览器的地址输入、页面链接跳转、新开窗口、前进和后退中均可生效，但在用户主动刷新页面时应当自动失效。
+ Expires  受限于客户端的本地时间。 无法处理涉及到用户身份的私有资源，譬如，某些资源被登录用户缓存在自己的浏览器上是合理的，但如果被代理服务器或者内容分发网络缓存起来，则可能被其他未认证的用户所获取。 无法描述“不缓存”的语义。譬如，浏览器为了提高性能，往往会自动在当次会话中缓存某些 MIME 类型的资源，在 HTTP/1.0 的服务器中就缺乏手段强制浏览器不允许缓存某个资源。以前为了实现这类功能，通常不得不使用脚本，或者手工在资源后面增加时间戳（譬如如“xx.js?t=1586359920”、“xx.jpg?t=1586359350”）来保证每次资源都会重新获取。 关于“不缓存”的语义，在 HTTP/1.0 中其实预留了“Pragma: no-cache”来表达，但 Pragma 参数在 HTTP/1.0 中并没有确切描述其具体行为，随后就被 HTTP/1.1 中出现过的 Cache-Control 所替代，现在，尽管主流浏览器通常都会支持 Pragma，但行为仍然是不确定的，实际并没有什么使用价值。   Cache-Control  协商缓存 强制缓存是基于时效性的，但无论是人还是服务器，其实多数情况下都并没有什么把握去承诺某项资源多久不会发生变化。
+根据约定，协商缓存不仅在浏览器的地址输入、页面链接跳转、新开窗口、前进、后退中生效，而且在用户主动刷新页面（F5）时也同样是生效的，只有用户强制刷新（Ctrl+F5）或者明确禁用缓存（譬如在 DevTools 中设定）时才会失效，此时客户端向服务端发出的请求会自动带有“Cache-Control: no-cache”。
+ Last-Modified &amp;amp; If-Modified-Since ETag &amp;amp; If-None-Match  Etag 是 HTTP 中一致性最强的缓存机制，譬如，Last-Modified 标注的最后修改只能精确到秒级，如果某些文件在 1 秒钟以内，被修改多次的话，它将不能准确标注文件的修改时间；又或者如果某些文件会被定期生成，可能内容并没有任何变化，但 Last-Modified 却改变了，导致文件无法有效使用缓存，这些情况 Last-Modified 都有可能产生资源一致性问题，只能使用 Etag 解决。</description>
+    </item>
+    
     <item>
       <title>Remote Procedure Call</title>
       <link>https://www.openheart.icu/cs/remote-procedure-call/</link>
@@ -98,7 +142,8 @@ Depth-First-Search，DFS 37. Sudoku Solver</description>
       <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/design-patterns/</guid>
-      <description>Structural Design Patterns Creational Design Patterns Singleton Reference  https://csharpindepth.com/articles/Singleton https://www.cnblogs.com/leolion/p/10241822.html  Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.</description>
+      <description>Overengineering keep it simple, stupid
+Structural Design Patterns Creational Design Patterns Singleton Reference  https://csharpindepth.com/articles/Singleton https://www.cnblogs.com/leolion/p/10241822.html  Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.</description>
     </item>
     
     <item>
@@ -333,14 +378,11 @@ Solution  Cloud Spanner  Reference  CAP theorem An Illustrated Proof of the CAP 
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/computer-network/</guid>
-      <description>Computer Network Issues 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
+      <description>Computer Network Base on &amp;ldquo;Computer Networking - A Top Down Approach, 7th&amp;rdquo;.
+Issues 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
 四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。
 Private IP Address vs Public IP Address &amp;amp; Public IP Port  0-1023是公认端口号，即已经公认定义或为将要公认定义的软件保留的，而1024-65535是并没有公共定义的端口号，用户可以自己定义这些端口的作用。
- Reference  常用端口号 为什么ipconfig和浏览器查询出的ip不一样？  How does the internet work? What is HTTP? DNS and how it works? DNS Server recommend DNSPod DNS+ ​ 首选：119.29.29.29
-​ 备选：182.254.116.116
-114DNS ​ 首选：114.114.114.114
-​ 备选：114.114.114.115
-阿里 AliDNS ​ 首选：223.</description>
+ Reference  常用端口号 为什么ipconfig和浏览器查询出的ip不一样？  How does the internet work? What is HTTP? DNS and how it works? 4 DNS servers  DNS recursor - The recursor can be thought of as a librarian who is asked to go find a particular book somewhere in a library.</description>
     </item>
     
     <item>
@@ -349,7 +391,7 @@ Private IP Address vs Public IP Address &amp;amp; Public IP Port  0-1023是公�
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
       <guid>https://www.openheart.icu/cs/git/</guid>
-      <description>Where is Git  Mac: which git Windows: where git powershell用 where.exe git.exe   Common Operation # 遇到pull不下来 git reset --hard FETCH_HEAD git clone https://www.github.com/XXXX/XXX.git # 修改邮箱 git config --global user.name &amp;#34;Kris Nie&amp;#34; git config --global user.email krisnie@qq.com # Commit undo git reset HEAD~ #只undo最后一次 git reflog #显示所有操作 git reset d0988e7a0d # delete commit git reset --soft HEAD~1 # 保留修改 git reset --hard HEAD~1 # 不保留修改 git push origin mybranch --force # 强制推送到远端 # delete branch git branch -d mybranch git branch -D mybranch # delete force git remote prune origin # automatically get rid of remote branches that no longer exist on the remote git push origin --delete mybranch # delete remote branch git push origin :mybranch # delete remote branch # update commit after git push git commit --amend # 进入vim修改 修改完成后:wq 保存 git push --force-with-lease origin mybranch #强制修改 git fetch origin # 如果有人已经pull了未修改前的 git reset --hard origin/branch # 本地端的修改會不見 # Stash changes git stash pop git stash list # Operate Commit git rebase -i Head~3 # it will open a vim for u, i to insert, wq to save # Change repositories URL git remote -v # show yoru remote URL git remote set-url origin ssh://git@XXX.</description>
+      <description>Common Operation # 遇到pull不下来 git reset --hard FETCH_HEAD git clone https://www.github.com/XXXX/XXX.git # 修改邮箱 git config --global user.name &amp;#34;Kris Nie&amp;#34; git config --global user.email krisnie@qq.com # Commit undo git reset HEAD~ #只undo最后一次 git reflog #显示所有操作 git reset d0988e7a0d # delete commit git reset --soft HEAD~1 # 保留修改 git reset --hard HEAD~1 # 不保留修改 git push origin mybranch --force # 强制推送到远端 # delete branch git branch -d mybranch git branch -D mybranch # delete force git remote prune origin # automatically get rid of remote branches that no longer exist on the remote git push origin --delete mybranch # delete remote branch git push origin :mybranch # delete remote branch # update commit after git push git commit --amend # 进入vim修改 修改完成后:wq 保存 git push --force-with-lease origin mybranch #强制修改 git fetch origin # 如果有人已经pull了未修改前的 git reset --hard origin/branch # 本地端的修改會不見 # Stash changes git stash pop git stash list # Operate Commit git rebase -i Head~3 # it will open a vim for u, i to insert, wq to save # Change repositories URL git remote -v # show yoru remote URL git remote set-url origin ssh://git@XXX.</description>
     </item>
     
     <item>
@@ -359,6 +401,17 @@ Private IP Address vs Public IP Address &amp;amp; Public IP Port  0-1023是公�
       
       <guid>https://www.openheart.icu/cs/hugo/</guid>
       <description>Install tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz cp ./hugo /usr/local/bin/ hugo new site site42 cd site42 hugo version rm -r public hugo server -b &amp;#34;https://openheart.icu:1313/&amp;#34; -p 1313 --bind &amp;#34;0.0.0.0&amp;#34; #mac 安装 brew install hugo # show the location of the hugo executable which hugo # show the installed version ls -l $( which hugo ) #lrwxr-xr-x 1 hyomin admin 30 7 17 22:46 /usr/local/bin/hugo -&amp;gt; ../Cellar/hugo/0.74.1/bin/hugo # verify that hugo runs correctly hugo version Hugo Static Site Generator v0.</description>
+    </item>
+    
+    <item>
+      <title>Mac Operation</title>
+      <link>https://www.openheart.icu/cs/mac/</link>
+      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/cs/mac/</guid>
+      <description>brew使用国内镜像源（不好使） 中科大：
+# 步骤一 cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git* # 步骤二 cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git* #步骤三 brew update 复原：
+cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core brew update  配置item2代理 # 打开配置文件 vim ~/.bash_profile # 如果用了`oh-my-zsh` 那么修改`~/.zshrc` # 在后面新增配置 export http_proxy=http://127.0.0.1:1087 export https_proxy=socks5://127.0.0.1:1080 # 同理，可能执行 source ~/.zshrc source ~/.bash_profile  iTerm2 + Oh My Zsh 安装Oh my zsh # curl 安装方式 sh -c &amp;#34;$(curl -fsSL https://raw.</description>
     </item>
     
     <item>

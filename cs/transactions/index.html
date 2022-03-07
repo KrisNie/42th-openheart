@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html><head>
+<title>Transactions</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="事务处理">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Transactions" />
+<meta property="og:description" content="事务处理" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/cs/transactions/" />
+<meta property="article:published_time" content="2021-12-01T14:28:00+00:00" />
+<meta property="article:modified_time" content="2021-12-01T14:28:00+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Transactions"/>
+<meta name="twitter:description" content="事务处理"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2021 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#acid" onclick="onNavClick(`#acid-nav`)" id="acid-nav">
+									ACID
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#local-transaction" onclick="onNavClick(`#local-transaction-nav`)" id="local-transaction-nav">
+									Local Transaction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#atomicity--durability" onclick="onNavClick(`#atomicity--durability-nav`)" id="atomicity--durability-nav">
+									Atomicity &amp; Durability
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#commit-logging" onclick="onNavClick(`#commit-logging-nav`)" id="commit-logging-nav">
+									Commit Logging
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#shadow-paging" onclick="onNavClick(`#shadow-paging-nav`)" id="shadow-paging-nav">
+									Shadow Paging
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#write-ahead-logging" onclick="onNavClick(`#write-ahead-logging-nav`)" id="write-ahead-logging-nav">
+									Write-Ahead Logging
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#isolation" onclick="onNavClick(`#isolation-nav`)" id="isolation-nav">
+									Isolation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#lock-synchronizationpessimistic-locking" onclick="onNavClick(`#lock-synchronizationpessimistic-locking-nav`)" id="lock-synchronizationpessimistic-locking-nav">
+									Lock synchronization(Pessimistic Locking)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#optimistic-concurrency-control" onclick="onNavClick(`#optimistic-concurrency-control-nav`)" id="optimistic-concurrency-control-nav">
+									Optimistic Concurrency Control
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#isolation-level" onclick="onNavClick(`#isolation-level-nav`)" id="isolation-level-nav">
+									Isolation Level
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#multi-version-concurrency-control" onclick="onNavClick(`#multi-version-concurrency-control-nav`)" id="multi-version-concurrency-control-nav">
+									Multi-Version Concurrency Control
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#global-transaction" onclick="onNavClick(`#global-transaction-nav`)" id="global-transaction-nav">
+									Global Transaction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#2-phase-commit" onclick="onNavClick(`#2-phase-commit-nav`)" id="2-phase-commit-nav">
+									2 Phase Commit
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#3-phase-commit" onclick="onNavClick(`#3-phase-commit-nav`)" id="3-phase-commit-nav">
+									3 Phase Commit
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#share-transaction" onclick="onNavClick(`#share-transaction-nav`)" id="share-transaction-nav">
+									Share Transaction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#distributed-transaction" onclick="onNavClick(`#distributed-transaction-nav`)" id="distributed-transaction-nav">
+									Distributed Transaction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#cap-%e4%b8%8e-acid" onclick="onNavClick(`#cap-与-acid-nav`)" id="cap-与-acid-nav">
+									CAP 与 ACID
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#base" onclick="onNavClick(`#base-nav`)" id="base-nav">
+									BASE
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tcc" onclick="onNavClick(`#tcc-nav`)" id="tcc-nav">
+									TCC
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#saga" onclick="onNavClick(`#saga-nav`)" id="saga-nav">
+									SAGA
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#acid" onclick="onNavClick(`#acid-nav`)" id="acid-nav">
+									ACID
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#local-transaction" onclick="onNavClick(`#local-transaction-nav`)" id="local-transaction-nav">
+									Local Transaction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#atomicity--durability" onclick="onNavClick(`#atomicity--durability-nav`)" id="atomicity--durability-nav">
+									Atomicity &amp; Durability
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#commit-logging" onclick="onNavClick(`#commit-logging-nav`)" id="commit-logging-nav">
+									Commit Logging
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#shadow-paging" onclick="onNavClick(`#shadow-paging-nav`)" id="shadow-paging-nav">
+									Shadow Paging
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#write-ahead-logging" onclick="onNavClick(`#write-ahead-logging-nav`)" id="write-ahead-logging-nav">
+									Write-Ahead Logging
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#isolation" onclick="onNavClick(`#isolation-nav`)" id="isolation-nav">
+									Isolation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#lock-synchronizationpessimistic-locking" onclick="onNavClick(`#lock-synchronizationpessimistic-locking-nav`)" id="lock-synchronizationpessimistic-locking-nav">
+									Lock synchronization(Pessimistic Locking)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#optimistic-concurrency-control" onclick="onNavClick(`#optimistic-concurrency-control-nav`)" id="optimistic-concurrency-control-nav">
+									Optimistic Concurrency Control
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#isolation-level" onclick="onNavClick(`#isolation-level-nav`)" id="isolation-level-nav">
+									Isolation Level
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#multi-version-concurrency-control" onclick="onNavClick(`#multi-version-concurrency-control-nav`)" id="multi-version-concurrency-control-nav">
+									Multi-Version Concurrency Control
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#global-transaction" onclick="onNavClick(`#global-transaction-nav`)" id="global-transaction-nav">
+									Global Transaction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#2-phase-commit" onclick="onNavClick(`#2-phase-commit-nav`)" id="2-phase-commit-nav">
+									2 Phase Commit
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#3-phase-commit" onclick="onNavClick(`#3-phase-commit-nav`)" id="3-phase-commit-nav">
+									3 Phase Commit
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#share-transaction" onclick="onNavClick(`#share-transaction-nav`)" id="share-transaction-nav">
+									Share Transaction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#distributed-transaction" onclick="onNavClick(`#distributed-transaction-nav`)" id="distributed-transaction-nav">
+									Distributed Transaction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#cap-%e4%b8%8e-acid" onclick="onNavClick(`#cap-与-acid-nav`)" id="cap-与-acid-nav">
+									CAP 与 ACID
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#base" onclick="onNavClick(`#base-nav`)" id="base-nav">
+									BASE
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tcc" onclick="onNavClick(`#tcc-nav`)" id="tcc-nav">
+									TCC
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#saga" onclick="onNavClick(`#saga-nav`)" id="saga-nav">
+									SAGA
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Transactions
+                    
+                    <div class="post-subtitle">
+                        事务处理
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-12-01 14:28
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/cs">CS</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            50 min
+                            
+                            50 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="acid">ACID</h1>
+<blockquote>
+<p>事务处理几乎在每一个信息系统中都会涉及，它存在的意义是为了保证系统中所有的数据都是符合期望的，且相互关联的数据之间不会产生矛盾，即数据状态的<strong>一致性</strong>（<strong>C</strong>onsistency）。</p>
+<p>按照数据库的经典理论，要达成这个目标，需要三方面共同努力来保障。</p>
+<ul>
+<li><strong>原子性</strong>（<strong>A</strong>tomic）：在同一项业务处理过程中，事务保证了对多个数据的修改，要么同时成功，要么同时被撤销。</li>
+<li><strong>隔离性</strong>（<strong>I</strong>solation）：在不同的业务处理过程中，事务保证了各自业务正在读、写的数据互相独立，不会彼此影响。</li>
+<li><strong>持久性</strong>（<strong>D</strong>urability）：事务应当保证所有成功被提交的数据修改都能够正确地被持久化，不丢失数据。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>场景事例</p>
+<p>Fenix&rsquo;s Bookstore 是一个在线书店。每当一本书被成功售出时，需要确保以下三件事情被正确地处理：</p>
+<ul>
+<li>用户的账号扣减相应的商品款项。</li>
+<li>商品仓库中扣减库存，将商品标识为待配送状态。</li>
+<li>商家的账号增加相应的商品款项。</li>
+</ul>
+</blockquote>
+<h1 id="local-transaction">Local Transaction</h1>
+<h2 id="atomicity--durability">Atomicity &amp; Durability</h2>
+<h3 id="commit-logging">Commit Logging</h3>
+<p>Crash Recovery 通常采用Commit Logging（提交日志）方式，只有在日志记录全部都安全落盘，数据库在日志中看到代表事务成功提交的“提交记录”（Commit Record）后，才会根据日志上的信息对真正的数据进行修改，修改完成后，再在日志中加入一条“结束记录”（End Record）表示事务已完成持久化。</p>
+<blockquote>
+<p>In any database context, a &ldquo;commit&rdquo; is the application of a single transaction to the DB. A commit log is a record of transactions. It&rsquo;s used to keep track of what&rsquo;s happening, and help with e.g. disaster recovery - generally, all commits are written to the log before being applied, so transactions that were in flight when the server went down can be recovered and re-applied by checking the log.</p>
+</blockquote>
+<blockquote>
+<p>Commit Logging 保障数据持久性、原子性的原理并不难理解：首先，日志一旦成功写入 Commit Record，那整个事务就是成功的，即使真正修改数据时崩溃了，重启后根据已经写入磁盘的日志信息恢复现场、继续修改数据即可，这保证了持久性；其次，如果日志没有成功写入 Commit Record 就发生崩溃，那整个事务就是失败的，系统重启后会看到一部分没有 Commit Record 的日志，那将这部分日志标记为回滚状态即可，整个事务就像完全没好有发生过一样，这保证了原子性。</p>
+</blockquote>
+<p>有一些数据库就是直接采用 Commit Logging 机制来实现事务的，譬如较具代表性的是阿里的<a href="https://zh.wikipedia.org/wiki/OceanBase">OceanBase</a>。</p>
+<h3 id="shadow-paging">Shadow Paging</h3>
+<p>通过日志实现事务的原子性和持久性是当今的主流方案，但并不是唯一的选择。除日志外，还有另外一种称为“<a href="https://en.wikipedia.org/wiki/Shadow_paging">Shadow Paging</a>”（有译为“影子分页”）的事务实现机制，常用的轻量级数据库 SQLite Version 3 采用的事务机制就是 Shadow Paging。</p>
+<blockquote>
+<p>Shadow Paging 的大体思路是对数据的变动会写到硬盘的数据中，但并不是直接就地修改原先的数据，而是先将数据复制一份副本，保留原数据，修改副本数据。在事务过程中，被修改的数据会同时存在两份，一份是修改前的数据，一份是修改后的数据，这也是“影子”（Shadow）这个名字的由来。当事务成功提交，所有数据的修改都成功持久化之后，最后一步是去修改数据的引用指针，将引用从原数据改为新复制出来修改后的副本，最后的“修改指针”这个操作将被认为是原子操作，现代磁盘的写操作可以认为在硬件上保证了不会出现“改了半个值”的现象。所以 Shadow Paging 也可以保证原子性和持久性。Shadow Paging 实现事务要比 Commit Logging 更加<strong>简单</strong>，但涉及隔离性与并发锁时，Shadow Paging 实现的事务<strong>并发能力就相对有限</strong>，因此在高性能的数据库中应用不多。</p>
+</blockquote>
+<h3 id="write-ahead-logging">Write-Ahead Logging</h3>
+<p>但是，Commit Logging 存在一个巨大的先天缺陷：所有对数据的真实修改都必须发生在事务提交以后，即日志写入了 Commit Record 之后。</p>
+<blockquote>
+<blockquote>
+<p>在此之前，即使磁盘 I/O 有足够空闲、即使某个事务修改的数据量非常庞大，占用了大量的内存缓冲区，无论有何种理由，都决不允许在事务提交之前就修改磁盘上的数据，这一点是 Commit Logging 成立的前提，却对提升数据库的性能十分不利。所以，ARIES 提出了“Write-Ahead Logging”的日志改进方案，所谓“提前写入”（Write-Ahead），就是允许在事务提交之前，提前写入变动数据的意思。</p>
+</blockquote>
+<p>Write-Ahead Logging 先将何时写入变动数据，按照事务提交时点为界，划分为 FORCE 和 STEAL 两类情况。</p>
+<ul>
+<li><strong>FORCE</strong>：当事务提交后，要求变动数据必须同时完成写入则称为 FORCE，如果不强制变动数据必须同时完成写入则称为 NO-FORCE。现实中绝大多数数据库采用的都是 NO-FORCE 策略，因为只要有了日志，变动数据随时可以持久化，从优化磁盘 I/O 性能考虑，没有必要强制数据写入立即进行。</li>
+<li><strong>STEAL</strong>：在事务提交前，允许变动数据提前写入则称为 STEAL，不允许则称为 NO-STEAL。从优化磁盘 I/O 性能考虑，允许数据提前写入，有利于利用空闲 I/O 资源，也有利于节省数据库缓存区的内存。</li>
+</ul>
+<blockquote>
+<p>Commit Logging 允许 NO-FORCE，但不允许 STEAL。因为假如事务提交前就有部分变动数据写入磁盘，那一旦事务要回滚，或者发生了崩溃，这些提前写入的变动数据就都成了错误。</p>
+<p>Write-Ahead Logging 允许 NO-FORCE，也允许 STEAL，它给出的解决办法是增加了另一种被称为 Undo Log 的日志类型，当变动数据写入磁盘前，必须先记录 Undo Log，注明修改了哪个位置的数据、从什么值改成什么值，等等。以便在事务回滚或者崩溃恢复时根据 Undo Log 对提前写入的数据变动进行擦除。Undo Log 现在一般被翻译为“回滚日志”，此前记录的用于崩溃恢复时重演数据变动的日志就相应被命名为 Redo Log，一般翻译为“重做日志”。由于 Undo Log 的加入，Write-Ahead Logging 在崩溃恢复时会执行以下三个阶段的操作。</p>
+<ul>
+<li><strong>分析阶段</strong>（Analysis）：该阶段从最后一次检查点（Checkpoint，可理解为在这个点之前所有应该持久化的变动都已安全落盘）开始扫描日志，找出所有没有 End Record 的事务，组成待恢复的事务集合，这个集合至少会包括 Transaction Table 和 Dirty Page Table 两个组成部分。</li>
+<li><strong>重做阶段</strong>（Redo）：该阶段依据分析阶段中产生的待恢复的事务集合来重演历史（Repeat History），具体操作为：找出所有包含 Commit Record 的日志，将这些日志修改的数据写入磁盘，写入完成后在日志中增加一条 End Record，然后移除出待恢复事务集合。</li>
+<li><strong>回滚阶段</strong>（Undo）：该阶段处理经过分析、重做阶段后剩余的恢复事务集合，此时剩下的都是需要回滚的事务，它们被称为 Loser，根据 Undo Log 中的信息，将已经提前写入磁盘的信息重新改写回去，以达到回滚这些 Loser 事务的目的。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p>重做阶段和回滚阶段的操作都应该设计为幂等的。FORCE 和 STEAL 的四种组合关系：</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnYAAAD3CAMAAACn+emfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDNkVCQjZENkRDQjExMUVBQjJFNUFDQzNEQ0I4MEI1RiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDNkVCQjZEN0RDQjExMUVBQjJFNUFDQzNEQ0I4MEI1RiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM2RUJCNkQ0RENCMTExRUFCMkU1QUNDM0RDQjgwQjVGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM2RUJCNkQ1RENCMTExRUFCMkU1QUNDM0RDQjgwQjVGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+k8yiTAAAADNQTFRFkpKSS0tL3t7e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" alt="force-steal"></p>
+<h2 id="isolation">Isolation</h2>
+<h3 id="lock-synchronizationpessimistic-locking">Lock synchronization(Pessimistic Locking)</h3>
+<p>此处的三种加锁都属于悲观加锁策略，即认为如果不先做加锁再访问数据，就肯定会出现问题。</p>
+<ul>
+<li>
+<p><strong>Write Lock</strong>（写锁，也叫作排他锁，eXclusive Lock，简写为 X-Lock）：如果数据有加写锁，就只有持有写锁的事务才能对数据进行写入操作，数据加持着写锁时，其他事务不能写入数据，也不能施加读锁。</p>
+</li>
+<li>
+<p><strong>Read Lock</strong>（读锁，也叫作共享锁，Shared Lock，简写为 S-Lock）：多个事务可以对同一个数据添加多个读锁，数据被加上读锁后就不能再被加上写锁，所以其他事务不能对该数据进行写入，但仍然可以读取。对于持有读锁的事务，如果该数据只有它自己一个事务加了读锁，允许直接将其升级为写锁，然后写入数据。</p>
+</li>
+<li>
+<p><strong>Range Lock</strong>（范围锁）：对于某个范围直接加排他锁，在这个范围内的数据不能被写入。加了范围锁后，不仅无法修改该范围内已有的数据，也不能在该范围内新增或删除任何数据，后者是一组排他锁的集合无法做到的。如下语句是典型的加范围锁的例子：</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">SELECT</span> * <span style="color:#8b008b;font-weight:bold">FROM</span> books <span style="color:#8b008b;font-weight:bold">WHERE</span> price &lt; <span style="color:#b452cd">100</span> <span style="color:#8b008b;font-weight:bold">FOR</span> <span style="color:#8b008b;font-weight:bold">UPDATE</span>;
+</code></pre></div></li>
+</ul>
+<h3 id="optimistic-concurrency-control">Optimistic Concurrency Control</h3>
+<p>乐观并发控制（OCC）的乐观加锁策略认为事务之间数据存在竞争是偶然情况，没有竞争才是普遍情况，这样就不应该在一开始就加锁，而是应当在出现竞争时再找补救措施。</p>
+<h3 id="isolation-level">Isolation Level</h3>
+<ul>
+<li>
+<p><strong>Serializable</strong>（可串行化）：<code>可串行</code>化完全符合普通程序员对数据竞争加锁的理解，如果不考虑性能优化的话，对事务所有读、写的数据全都加上读锁、写锁和范围锁即可做到<code>可串行化</code>（“即可”是简化理解，实际还是很复杂的，要分成 Expanding 和 Shrinking 两阶段去处理读锁、写锁与数据间的关系，称为<a href="https://en.wikipedia.org/wiki/Two-phase_locking">Two-Phase Lock</a>，2PL）。但是，<a href="https://en.wikipedia.org/wiki/Concurrency_control">并发控制理论</a>（Concurrency Control）决定了隔离程度与并发能力是相互抵触的，隔离程度越高，并发访问时的吞吐量就越低。</p>
+<blockquote>
+<p>Specifies the following:</p>
+<ul>
+<li>Statements cannot read data that has been modified but not yet committed by other transactions.</li>
+<li>No other transactions can modify data that has been read by the current transaction until the current transaction completes.</li>
+<li>Other transactions cannot insert new rows with key values that would fall in the range of keys read by any statements in the current transaction until the current transaction completes.</li>
+</ul>
+</blockquote>
+<p>SQL Server 在可重复读与可串行化中间还有一个Level叫做<a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server">SNAPSHOT</a>：</p>
+<blockquote>
+<p>Specifies that data read by any statement in a transaction will be the transactionally consistent version of the data that existed at the start of the transaction. The transaction can only recognize data modifications that were committed before the start of the transaction. Data modifications made by other transactions after the start of the current transaction are not visible to statements executing in the current transaction. The effect is as if the statements in a transaction get a snapshot of the committed data as it existed at the start of the transaction.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Repeatable Read</strong>（可重复读）： <code>可重复读</code>对事务所涉及的数据加读锁和写锁，且一直持有至事务结束，但不再加范围锁。<code>可重复读</code>比<code>可串行化</code>弱化的地方在于<a href="https://en.wikipedia.org/wiki/Isolation_(database_systems)#Phantom_reads">幻读问题</a>（Phantom Reads），它是指在事务执行过程中，两个完全相同的范围查询得到了不同的结果集。</p>
+<blockquote>
+<p>Specifies that statements cannot read data that has been modified but not yet committed by other transactions and that no other transactions can modify data that has been read by the current transaction until the current transaction completes.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Read Committed</strong>（读已提交）：<code>读已提交</code>对事务涉及的数据加的写锁会一直持续到事务结束，但加的读锁在查询操作完成后就马上会释放。<code>读已提交</code>比<code>可重复读</code>弱化的地方在于<a href="https://en.wikipedia.org/wiki/Isolation_(database_systems)#Non-repeatable_reads">不可重复读问题</a>（Non-Repeatable Reads），它是指在事务执行过程中，对同一行数据的两次查询得到了不同的结果。</p>
+<blockquote>
+<p>READ COMMITTED in SQL Server: Specifies that statements cannot read data that has been modified but not committed by other transactions. This prevents dirty reads. Data can be changed by other transactions between individual statements within the current transaction, resulting in nonrepeatable reads or phantom data. This option is the SQL Server default.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Read Uncommitted</strong>（读未提交）：<code>读未提交</code>对事务涉及的数据只加写锁，会一直持续到事务结束，但完全不加读锁。<code>读未提交</code>比<code>读已提交</code>弱化的地方在于<a href="https://en.wikipedia.org/wiki/Isolation_(database_systems)#Dirty_reads">脏读问题</a>（Dirty Reads），它是指在事务执行过程中，一个事务读取到了另一个事务未提交的数据。</p>
+<blockquote>
+<p>READ UNCOMMITTED in SQL Server: Specifies that statements can read rows that have been modified by other transactions but not yet committed.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="multi-version-concurrency-control">Multi-Version Concurrency Control</h3>
+<blockquote>
+<p>除了都以锁来实现外，以上四种隔离级别还有另一个共同特点，就是幻读、不可重复读、脏读等问题都是由于一个事务在读数据过程中，受另外一个写数据的事务影响而破坏了隔离性，针对这种“一个事务读+另一个事务写”的隔离问题，近年来有一种名为“<a href="https://en.wikipedia.org/wiki/Multiversion_concurrency_control">多版本并发控制</a>”（Multi-Version Concurrency Control，MVCC）的无锁优化方案被主流的商业数据库广泛采用。MVCC 是一种读取优化策略，它的“无锁”是特指读取时不需要加锁。MVCC 的基本思路是对数据库的任何修改都不会直接覆盖之前的数据，而是产生一个新版副本与老版本共存，以此达到读取时可以完全不加锁的目的。在这句话中，“版本”是个关键词，你不妨将版本理解为数据库中每一行记录都存在两个看不见的字段：CREATE_VERSION 和 DELETE_VERSION，这两个字段记录的值都是事务 ID，事务 ID 是一个全局严格递增的数值，然后根据以下规则写入数据。</p>
+<ul>
+<li>插入数据时：CREATE_VERSION 记录插入数据的事务 ID，DELETE_VERSION 为空。</li>
+<li>删除数据时：DELETE_VERSION 记录删除数据的事务 ID，CREATE_VERSION 为空。</li>
+<li>修改数据时：将修改数据视为“删除旧数据，插入新数据”的组合，即先将原有数据复制一份，原有数据的 DELETE_VERSION 记录修改数据的事务 ID，CREATE_VERSION 为空。复制出来的新数据的 CREATE_VERSION 记录修改数据的事务 ID，DELETE_VERSION 为空。</li>
+</ul>
+<p>此时，如有另外一个事务要读取这些发生了变化的数据，将根据隔离级别来决定到底应该读取哪个版本的数据。</p>
+<ul>
+<li>隔离级别是<code>可重复读</code>：总是读取 CREATE_VERSION 小于或等于当前事务 ID 的记录，在这个前提下，如果数据仍有多个版本，则取最新（事务 ID 最大）的。</li>
+<li>隔离级别是<code>读已提交</code>：总是取最新的版本即可，即最近被 Commit 的那个版本的数据记录。</li>
+</ul>
+<p>另外两个隔离级别都没有必要用到 MVCC，因为<code>读未提交</code>直接修改原始数据即可，其他事务查看数据的时候立刻可以看到，根本无须版本字段。<code>可串行化</code>本来的语义就是要阻塞其他事务的读取操作，而 MVCC 是做读取时无锁优化的，自然就不会放到一起用。</p>
+<p>MVCC 是只针对“读+写”场景的优化，如果是两个事务同时修改数据，即“写+写”的情况，那就没有多少优化的空间了，此时加锁几乎是唯一可行的解决方案。</p>
+</blockquote>
+<h1 id="global-transaction">Global Transaction</h1>
+<p>此处的全局事务被限定为一种适用于单个服务使用多个数据源场景的事务解决方案。</p>
+<h2 id="2-phase-commit">2 Phase Commit</h2>
+<ul>
+<li><strong>准备阶段</strong>：又叫作投票阶段，在这一阶段，协调者询问事务的所有参与者是否准备好提交，参与者如果已经准备好提交则回复 Prepared，否则回复 Non-Prepared。这里所说的准备操作跟人类语言中通常理解的准备并不相同，对于数据库来说，准备操作是在重做日志中记录全部事务提交操作所要做的内容，它与本地事务中真正提交的区别只是暂不写入最后一条 Commit Record 而已，这意味着在做完数据持久化后并不立即释放隔离性，即仍继续持有锁，维持数据对其他非事务内观察者的隔离状态。</li>
+<li><strong>提交阶段</strong>：又叫作执行阶段，协调者如果在上一阶段收到所有事务参与者回复的 Prepared 消息，则先自己在本地持久化事务状态为 Commit，在此操作完成后向所有参与者发送 Commit 指令，所有参与者立即执行提交操作；否则，任意一个参与者回复了 Non-Prepared 消息，或任意一个参与者超时未回复，协调者将自己的事务状态持久化为 Abort 之后，向所有参与者发送 Abort 指令，参与者立即执行回滚操作。对于数据库来说，这个阶段的提交操作应是很轻量的，仅仅是持久化一条 Commit Record 而已，通常能够快速完成，只有收到 Abort 指令时，才需要根据回滚日志清理已提交的数据，这可能是相对重负载的操作。</li>
+</ul>
+<p><a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%8F%90%E4%BA%A4">两段式提交</a>（2 Phase Commit，2PC）协议，能够成功保证一致性还需要一些其他前提条件：</p>
+<ul>
+<li>必须假设网络在提交阶段的短时间内是可靠的，即提交阶段不会丢失消息。同时也假设网络通信在全过程都不会出现误差，即可以丢失消息，但不会传递错误的消息，目标并不是解决诸如<a href="https://en.wikipedia.org/wiki/Byzantine_fault">拜占庭将军</a>一类的问题。两段式提交中投票阶段失败了可以补救（回滚），而提交阶段失败了无法补救（不再改变提交或回滚的结果，只能等崩溃的节点重新恢复），因而此阶段耗时应尽可能短，这也是为了尽量控制网络风险的考虑。</li>
+<li>必须假设因为网络分区、机器崩溃或者其他原因而导致失联的节点最终能够恢复，不会永久性地处于失联状态。由于在准备阶段已经写入了完整的重做日志，所以当失联机器一旦恢复，就能够从日志中找出已准备妥当但并未提交的事务数据，并向协调者查询该事务的状态，确定下一步应该进行提交还是回滚操作。</li>
+</ul>
+<p>两段式提交的交互时序图：</p>
+<p><img src="https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/image-20220104175102306.png" alt="image-20220104175102306"></p>
+<p>两段式提交原理简单，并不难实现，但有几个非常显著的缺点：</p>
+<blockquote>
+<ul>
+<li><strong>单点问题</strong>：协调者在两段提交中具有举足轻重的作用，协调者等待参与者回复时可以有超时机制，允许参与者宕机，但参与者等待协调者指令时无法做超时处理。一旦宕机的不是其中某个参与者，而是协调者的话，所有参与者都会受到影响。如果协调者一直没有恢复，没有正常发送 Commit 或者 Rollback 的指令，那所有参与者都必须一直等待。</li>
+<li><strong>性能问题</strong>：两段提交过程中，所有参与者相当于被绑定成为一个统一调度的整体，期间要经过两次远程服务调用，三次数据持久化（准备阶段写重做日志，协调者做状态持久化，提交阶段在日志写入 Commit Record），整个过程将持续到参与者集群中最慢的那一个处理操作结束为止，这决定了两段式提交的性能通常都较差。</li>
+<li><strong>一致性风险</strong>：前面已经提到，两段式提交的成立是有前提条件的，当网络稳定性和宕机恢复能力的假设不成立时，仍可能出现一致性问题。宕机恢复能力这一点不必多谈，1985 年 Fischer、Lynch、Paterson 提出了“<a href="https://en.wikipedia.org/wiki/Consensus_(computer_science)#Solvability_results_for_some_agreement_problems">FLP 不可能原理</a>”，证明了如果宕机最后不能恢复，那就不存在任何一种分布式协议可以正确地达成一致性结果。该原理在分布式中是与“CAP 不可兼得原理“齐名的理论。而网络稳定性带来的一致性风险是指：尽管提交阶段时间很短，但这仍是一段明确存在的危险期，如果协调者在发出准备指令后，根据收到各个参与者发回的信息确定事务状态是可以提交的，协调者会先持久化事务状态，并提交自己的事务，如果这时候网络忽然被断开，无法再通过网络向所有参与者发出 Commit 指令的话，就会导致部分数据（协调者的）已提交，但部分数据（参与者的）既未提交，也没有办法回滚，产生了数据不一致的问题。</li>
+</ul>
+</blockquote>
+<h2 id="3-phase-commit">3 Phase Commit</h2>
+<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E9%98%B6%E6%AE%B5%E6%8F%90%E4%BA%A4">三段式提交</a>（3 Phase Commit，3PC）把原本的两段式提交的准备阶段再细分为两个阶段，分别称为 CanCommit、PreCommit，把提交阶段改称为 DoCommit 阶段。</p>
+<blockquote>
+<p>其中，新增的 CanCommit 是一个询问阶段，协调者让每个参与的数据库根据自身状态，评估该事务是否有可能顺利完成。将准备阶段一分为二的理由是这个阶段是重负载的操作，一旦协调者发出开始准备的消息，每个参与者都将马上开始写重做日志，它们所涉及的数据资源即被锁住，如果此时某一个参与者宣告无法完成提交，相当于大家都白做了一轮无用功。所以，增加一轮询问阶段，如果都得到了正面的响应，那事务能够成功提交的把握就比较大了，这也意味着因某个参与者提交时发生崩溃而导致大家全部回滚的风险相对变小。因此，在事务需要回滚的场景中，三段式的性能通常是要比两段式好很多的，但在事务能够正常提交的场景中，两者的性能都依然很差，甚至三段式因为多了一次询问，还要稍微更差一些。</p>
+<p>同样也是由于事务失败回滚概率变小的原因，在三段式提交中，如果在 PreCommit 阶段之后发生了协调者宕机，即参与者没有能等到 DoCommit 的消息的话，默认的操作策略将是提交事务而不是回滚事务或者持续等待，这就相当于避免了协调者单点问题的风险。</p>
+</blockquote>
+<p>三段式提交的操作时序图：</p>
+<p><img src="https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/image-20220104175333821.png" alt="image-20220104175333821"></p>
+<blockquote>
+<p>从以上过程可以看出，三段式提交对单点问题和回滚时的性能问题有所改善，但是它对一致性风险问题并未有任何改进，在这方面它面临的风险甚至反而是略有增加了的。譬如，进入 PreCommit 阶段之后，协调者发出的指令不是 Ack 而是 Abort，而此时因网络问题，有部分参与者直至超时都未能收到协调者的 Abort 指令的话，这些参与者将会错误地提交事务，这就产生了不同参与者之间数据不一致的问题。</p>
+</blockquote>
+<h1 id="share-transaction">Share Transaction</h1>
+<p>共享事务（Share Transaction）与全局事务相反，是指多个服务共用同一个<a href="https://en.wikipedia.org/wiki/Datasource">数据源</a>。</p>
+<blockquote>
+<p>直接让各个服务共享数据库连接，在同一个应用进程中的不同持久化工具（JDBC、ORM、JMS 等）间共享数据库连接并不困难，某些中间件服务器，譬如 WebSphere 会内置有“<a href="https://www.ibm.com/support/knowledgecenter/zh/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/cdat_conshrnon.html">可共享连接</a>”功能来专门给予这方面的支持。但这种共享的前提是数据源的使用者都在同一个进程内，由于数据库连接的基础是网络连接，它是与 IP 地址和端口号绑定的，字面意义上的“不同服务节点共享数据库连接”很难做到，所以为了实现共享事务，就必须新增一个“交易服务器”的中间角色，无论是用户服务、商家服务还是仓库服务，它们都通过同一台交易服务器来与数据库打交道。</p>
+<p>使用同一个数据库处理多个交易服务：</p>
+<p><img src="https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/image-20220113164037986.png" alt="image-20220113164037986"></p>
+<p>使用消息队列服务器来代替交易服务器。用户、商家、仓库的服务操作业务时，通过消息将所有对数据库的改动传送到消息队列服务器，通过消息的消费者来统一处理，实现由本地事务保障的持久化操作。这被称作“<a href="https://www.infoworld.com/article/2077963/distributed-transactions-in-spring--with-and-without-xa.html">单个数据库的消息驱动更新</a>”（Message-Driven Update of a Single Database）。</p>
+<p>“共享事务”的提法和这里所列的两种处理方式在实际应用中并不值得提倡，鲜有采用这种方式的成功案例，能够查询到的资料几乎都发源于十余年前 Spring 的核心开发者<a href="https://spring.io/team/dsyer">Dave Syer</a>撰写的文章《<a href="https://www.infoworld.com/article/2077963/distributed-transactions-in-spring--with-and-without-xa.html">Distributed Transactions in Spring, with and without XA</a>》。</p>
+</blockquote>
+<h1 id="distributed-transaction">Distributed Transaction</h1>
+<h2 id="cap-与-acid">CAP 与 ACID</h2>
+<blockquote>
+<p><strong>如果放弃分区容忍性</strong>（CA without P），意味着我们将假设节点之间通信永远是可靠的。永远可靠的通信在分布式系统中必定不成立的，这不是你想不想的问题，而是只要用到网络来共享数据，分区现象就会始终存在。在现实中，最容易找到放弃分区容忍性的例子便是传统的关系数据库集群，这样的集群虽然依然采用由网络连接的多个节点来协同工作，但数据却不是通过网络来实现共享的。以 Oracle 的 RAC 集群为例，它的每一个节点均有自己独立的 SGA、重做日志、回滚日志等部件，但各个节点是通过共享存储中的同一份数据文件和控制文件来获取数据的，通过共享磁盘的方式来避免出现网络分区。因而 Oracle RAC 虽然也是由多个实例组成的数据库，但它并不能称作是分布式数据库。</p>
+<p><strong>如果放弃可用性</strong>（CP without A），意味着我们将假设一旦网络发生分区，节点之间的信息同步时间可以无限制地延长，此时，问题相当于退化到前面“全局事务”中讨论的一个系统使用多个数据源的场景之中，我们可以通过 2PC/3PC 等手段，同时获得分区容忍性和一致性。在现实中，选择放弃可用性的 CP 系统情况一般用于对数据质量要求很高的场合中，除了 DTP 模型的分布式数据库事务外，著名的 HBase 也是属于 CP 系统，以 HBase 集群为例，假如某个 RegionServer 宕机了，这个 RegionServer 持有的所有键值范围都将离线，直到数据恢复过程完成为止，这个过程要消耗的时间是无法预先估计的。</p>
+<p><strong>如果放弃一致性</strong>（AP without C），意味着我们将假设一旦发生分区，节点之间所提供的数据可能不一致。选择放弃一致性的 AP 系统目前是设计分布式系统的主流选择，因为 P 是分布式网络的天然属性，你再不想要也无法丢弃；而 A 通常是建设分布式的目的，如果可用性随着节点数量增加反而降低的话，很多分布式系统可能就失去了存在的价值，除非银行、证券这些涉及金钱交易的服务，宁可中断也不能出错，否则多数系统是不能容忍节点越多可用性反而越低的。目前大多数 NoSQL 库和支持分布式的缓存框架都是 AP 系统，以 Redis 集群为例，如果某个 Redis 节点出现网络分区，那仍不妨碍各个节点以自己本地存储的数据对外提供缓存服务，但这时有可能出现请求分配到不同节点时返回给客户端的是不一致的数据。</p>
+</blockquote>
+<h2 id="base">BASE</h2>
+<p>BASE 分别是基本可用性（<strong>B</strong>asically <strong>A</strong>vailable）、柔性事务（<strong>S</strong>oft State）和最终一致性（<strong>E</strong>ventually Consistent）</p>
+<p>交易过程中正确修改账号、仓库和商家服务中的数据的过程时序图：</p>
+<p><img src="https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/image-20220113164636482.png" alt="image-20220113164636482"></p>
+<blockquote>
+<p>以上这种靠着持续重试来保证可靠性的解决方案谈不上是 Dan Pritchett 的首创或者独创，它在计算机的其他领域中已被频繁使用，也有了专门的名字叫作“<a href="https://en.wikipedia.org/wiki/Best-effort_delivery">最大努力交付</a>”（Best-Effort Delivery），譬如 TCP 协议中未收到 ACK 应答自动重新发包的可靠性保障就属于最大努力交付。而可靠事件队列还有一种更普通的形式，被称为“最大努力一次提交”（Best-Effort 1PC），指的就是将最有可能出错的业务以本地事务的方式完成后，采用不断重试的方式（不限于消息系统）来促使同一个分布式事务中的其他关联业务全部完成。</p>
+</blockquote>
+<h2 id="tcc">TCC</h2>
+<p>TCC 是另一种常见的分布式事务机制，它是“Try-Confirm-Cancel”三个单词的缩写。</p>
+<p>三个阶段为：</p>
+<ul>
+<li><strong>Try</strong>：尝试执行阶段，完成所有业务可执行性的检查（保障一致性），并且预留好全部需用到的业务资源（保障隔离性）。</li>
+<li><strong>Confirm</strong>：确认执行阶段，不进行任何业务检查，直接使用 Try 阶段准备的资源来完成业务处理。Confirm 阶段可能会重复执行，因此本阶段所执行的操作需要具备幂等性。</li>
+<li><strong>Cancel</strong>：取消执行阶段，释放 Try 阶段预留的业务资源。Cancel 阶段可能会重复执行，也需要满足幂等性。</li>
+</ul>
+<p>TCC 修改交易数据的执行过程</p>
+<p><img src="https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/image-20220113165023071.png" alt="image-20220113165023071"></p>
+<blockquote>
+<p>由上述操作过程可见，TCC 其实有点类似 2PC 的准备阶段和提交阶段，但 TCC 是位于用户代码层面，而不是在基础设施层面，这为它的实现带来了较高的灵活性，可以根据需要设计资源锁定的粒度。TCC 在业务执行时只操作预留资源，几乎不会涉及锁和资源的争用，具有很高的性能潜力。但是 TCC 并非纯粹只有好处，它也带来了更高的开发成本和业务侵入性，意味着有更高的开发成本和更换事务实现方案的替换成本，所以，通常我们并不会完全靠裸编码来实现 TCC，而是基于某些分布式事务中间件（譬如阿里开源的<a href="https://seata.io/zh-cn/">Seata</a>）去完成，尽量减轻一些编码工作量。</p>
+</blockquote>
+<h2 id="saga">SAGA</h2>
+<p>SAGA 在英文中是“长篇故事、长篇记叙、一长串事件”的意思。“长时间事务”（Long Lived Transaction）运作效率的方法，大致思路是把一个大事务分解为可以交错运行的一系列子事务集合。原本 SAGA 的目的是避免大事务长时间锁定数据库的资源，后来才发展成将一个分布式环境中的大事务分解为一系列本地事务的设计模式。SAGA 由两部分操作组成：</p>
+<ul>
+<li>
+<p>大事务拆分若干个小事务，将整个分布式事务 T 分解为 n 个子事务，命名为 $T_1$，$T_2$，…，$T_i$，…，$T_n$。每个子事务都应该是或者能被视为是原子行为。如果分布式事务能够正常提交，其对数据的影响（最终一致性）应与连续按顺序成功提交 Ti等价。</p>
+</li>
+<li>
+<p>为每一个子事务设计对应的补偿动作，命名为 $C_1$，$C_2$，…，$C_i$，…，$C_n$。$T_i$与 $C_i$</p>
+<p>必须满足以下条件：</p>
+<ul>
+<li>$T_i$与$C_i$都具备幂等性。</li>
+<li>$T_i$与 $C_i$满足交换律（Commutative），即先执行 $T_i$还是先执行 $C_i$，其效果都是一样的。</li>
+<li>$C_i$必须能成功提交，即不考虑 $C_i$本身提交失败被回滚的情形，如出现就必须持续重试直至成功，或者要人工介入。</li>
+</ul>
+</li>
+</ul>
+<p>两种恢复策略：</p>
+<ul>
+<li><strong>正向恢复</strong>（Forward Recovery）：如果 $T_i$事务提交失败，则一直对$T_i$进行重试，直至成功为止（最大努力交付）。这种恢复方式不需要补偿，适用于事务最终都要成功的场景，譬如在别人的银行账号中扣了款，就一定要给别人发货。正向恢复的执行模式为：$T_1$，$T_2$，…，$T_i$（失败），T_i（重试）…，$T_{i+1}$，…，$T_n$。</li>
+<li><strong>反向恢复</strong>（Backward Recovery）：如果 $T_i$事务提交失败，则一直执行 $C_i$对 $T_i$进行补偿，直至成功为止（最大努力交付）。这里要求 $C_i$必须（在持续重试后）执行成功。反向恢复的执行模式为：$T_1$，$T_2$，…，$T_i$（失败），$C_i$（补偿），…，$C_2$，$C_1$。</li>
+</ul>
+<blockquote>
+<p>从整体上看是 <a href="https://seata.io/zh-cn/docs/overview/what-is-seata.html">AT 事务</a>是参照了 XA 两段提交协议实现的，但针对 XA 2PC 的缺陷，即在准备阶段必须等待所有数据源都返回成功后，协调者才能统一发出 Commit 命令而导致的<a href="https://en.wikipedia.org/wiki/Liebig's_law_of_the_minimum">木桶效应</a>（所有涉及的锁和资源都需要等待到最慢的事务完成后才能统一释放），设计了针对性的解决方案。大致的做法是在业务数据提交时自动拦截所有 SQL，将 SQL 对数据修改前、修改后的结果分别保存快照，生成行锁，通过本地事务一起提交到操作的数据源中，相当于自动记录了重做和回滚日志。如果分布式事务成功提交，那后续清理每个数据源中对应的日志数据即可；如果分布式事务需要回滚，就根据日志数据自动产生用于补偿的“逆向 SQL”。基于这种补偿方式，分布式事务中所涉及的每一个数据源都可以单独提交，然后立刻释放锁和资源。这种异步提交的模式，相比起 2PC 极大地提升了系统的吞吐量水平。而代价就是大幅度地牺牲了隔离性，甚至直接影响到了原子性。因为在缺乏隔离性的前提下，以补偿代替回滚并不一定是总能成功的。譬如，当本地事务提交之后、分布式事务完成之前，该数据被补偿之前又被其他操作修改过，即出现了脏写（Dirty Write），这时候一旦出现分布式事务需要回滚，就不可能再通过自动的逆向 SQL 来实现补偿，只能由人工介入处理了。</p>
+<p>通常来说，脏写是一定要避免的，所有传统关系数据库在最低的隔离级别上都仍然要加锁以避免脏写，因为脏写情况一旦发生，人工其实也很难进行有效处理。所以 GTS 增加了一个“全局锁”（Global Lock）的机制来实现写隔离，要求本地事务提交之前，一定要先拿到针对修改记录的全局锁后才允许提交，没有获得全局锁之前就必须一直等待，这种设计以牺牲一定性能为代价，避免了有两个分布式事务中包含的本地事务修改了同一个数据，从而避免脏写。在读隔离方面，AT 事务默认的隔离级别是读未提交（Read Uncommitted），这意味着可能产生脏读（Dirty Read）。也可以采用全局锁的方案解决读隔离问题，但直接阻塞读取的话，代价就非常大了，一般不会这样做。由此可见，分布式事务中没有一揽子包治百病的解决办法，因地制宜地选用合适的事务处理方案才是唯一有效的做法。</p>
+</blockquote>
+<h1 id="reference">Reference</h1>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Algorithms_for_Recovery_and_Isolation_Exploiting_Semantics">Algorithms for Recovery and Isolation Exploiting Semantics，ARIES</a></li>
+<li><a href="http://www.research.ibm.com/labs/almaden/">IBM Almaden</a>, <a href="https://cs.stanford.edu/people/chrismre/cs345/rl/aries.pdf">ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging</a></li>
+<li><a href="http://vldb.org/conf/1990/P392.PDF">ARIES/KVL: A Key-Value Locking Method for Concurrency Control of Multiaction Transactions Operating on B-Tree Indexes</a></li>
+<li><a href="https://stackoverflow.com/questions/2582889/what-is-a-commit-log">what is a commit log?</a></li>
+<li>Dan Pritchett, 2008, ACM, <a href="https://queue.acm.org/detail.cfm?id=1394128">Base: An Acid Alternative</a></li>
+<li>Pat Helland, 2007, <a href="https://www-db.cs.wisc.edu/cidr/cidr2007/papers/cidr07p15.pdf">Life beyond Distributed Transactions: An Apostate’s Opinion</a></li>
+<li>Hector Garcia-Molina &amp; Kenneth Salem, 1987, ACM, <a href="https://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf">SAGAS</a></li>
+<li>Seata, <a href="https://seata.io/zh-cn/docs/overview/what-is-seata.html">AT 事务模式</a></li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-12-01</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/cs/representational-state-transfer/">
+			Next<br>Representational State Transfer
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/cs/transparent-multilevel-diversion-system/">
+			Previous<br>Transparent Multilevel Diversion
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2021 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

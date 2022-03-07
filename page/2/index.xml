@@ -6,9 +6,107 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Mon, 15 Nov 2021 23:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Dec 2021 14:28:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Working Effectively with Legacy Code</title>
+        <link>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</link>
+        <pubDate>Thu, 12 Aug 2021 15:15:57 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/working-effectively-with-legacy-code/ -&lt;h1 id=&#34;the-mechanics-of-change&#34;&gt;The Mechanics of Change&lt;/h1&gt;
+&lt;h2 id=&#34;changing-software&#34;&gt;Changing Software&lt;/h2&gt;
+&lt;h3 id=&#34;four-reasons-to-change-software&#34;&gt;Four Reasons to Change Software&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Adding a feature&lt;/li&gt;
+&lt;li&gt;Fixing a bug&lt;/li&gt;
+&lt;li&gt;Improving the design&lt;/li&gt;
+&lt;li&gt;Optimizing resource usage&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;changing-software-1&#34;&gt;Changing Software&lt;/h1&gt;
+&lt;h1 id=&#34;dependency-breaking-techniques&#34;&gt;Dependency-Breaking Techniques&lt;/h1&gt;
+- https://www.openheart.icu/cs/working-effectively-with-legacy-code/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Design Patterns</title>
+        <link>https://www.openheart.icu/cs/design-patterns/</link>
+        <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/design-patterns/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/design-patterns/ -&lt;h1 id=&#34;overengineeringhttpsenwikipediaorgwikioverengineering&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Overengineering&#34;&gt;Overengineering&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/KISS_principle&#34;&gt;keep it simple, stupid&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;structural-design-patterns&#34;&gt;Structural Design Patterns&lt;/h1&gt;
+&lt;h1 id=&#34;creational-design-patterns&#34;&gt;Creational Design Patterns&lt;/h1&gt;
+&lt;h2 id=&#34;singleton&#34;&gt;Singleton&lt;/h2&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://csharpindepth.com/articles/Singleton&#34;&gt;https://csharpindepth.com/articles/Singleton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/leolion/p/10241822.html&#34;&gt;https://www.cnblogs.com/leolion/p/10241822.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;behavioral-design-patterns&#34;&gt;Behavioral Design Patterns&lt;/h1&gt;
+&lt;h2 id=&#34;observer&#34;&gt;Observer&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/e/e2/Observer-pattern-class-diagram.png&#34; alt=&#34;File:Observer-pattern-class-diagram.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.&lt;/p&gt;
+&lt;p&gt;Implementing the pattern requires that you provide the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A provider or subject, which is the object that sends notifications to observers. A provider is a class or structure that implements the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; interface. The provider must implement a single method, &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1.subscribe&#34;&gt;IObservable.Subscribe&lt;/a&gt;, which is called by observers that wish to receive notifications from the provider.&lt;/li&gt;
+&lt;li&gt;An observer, which is an object that receives notifications from a provider. An observer is a class or structure that implements the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; interface. The observer must implement three methods, all of which are called by the provider:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.onnext&#34;&gt;IObserver.OnNext&lt;/a&gt;, which supplies the observer with new or current information.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.onerror&#34;&gt;IObserver.OnError&lt;/a&gt;, which informs the observer that an error has occurred.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.oncompleted&#34;&gt;IObserver.OnCompleted&lt;/a&gt;, which indicates that the provider has finished sending notifications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A mechanism that allows the provider to keep track of observers. Typically, the provider uses a container object, such as a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1&#34;&gt;System.Collections.Generic.List&lt;/a&gt; object, to hold references to the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; implementations that have subscribed to notifications. Using a storage container for this purpose enables the provider to handle zero to an unlimited number of observers. The order in which observers receive notifications is not defined; the provider is free to use any method to determine the order.&lt;/li&gt;
+&lt;li&gt;An &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable&#34;&gt;IDisposable&lt;/a&gt; implementation that enables the provider to remove observers when notification is complete. Observers receive a reference to the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable&#34;&gt;IDisposable&lt;/a&gt; implementation from the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1.subscribe&#34;&gt;Subscribe&lt;/a&gt; method, so they can also call the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose&#34;&gt;IDisposable.Dispose&lt;/a&gt; method to unsubscribe before the provider has finished sending notifications.&lt;/li&gt;
+&lt;li&gt;An object that contains the data that the provider sends to its observers. The type of this object corresponds to the generic type parameter of the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; and &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; interfaces. Although this object can be the same as the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; implementation, most commonly it is a separate type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Implementing the pattern requires that you provide the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A provider or subject, which is the object that sends notifications to observers. A provider is a class or structure that implements the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; interface. The provider must implement a single method, &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1.subscribe&#34;&gt;IObservable.Subscribe&lt;/a&gt;, which is called by observers that wish to receive notifications from the provider.&lt;/li&gt;
+&lt;li&gt;An observer, which is an object that receives notifications from a provider. An observer is a class or structure that implements the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; interface. The observer must implement three methods, all of which are called by the provider:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.onnext&#34;&gt;IObserver.OnNext&lt;/a&gt;, which supplies the observer with new or current information.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.onerror&#34;&gt;IObserver.OnError&lt;/a&gt;, which informs the observer that an error has occurred.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1.oncompleted&#34;&gt;IObserver.OnCompleted&lt;/a&gt;, which indicates that the provider has finished sending notifications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A mechanism(&lt;em&gt;方法&lt;/em&gt;) that allows the provider to keep track of observers. Typically, the provider uses a container object, such as a &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1&#34;&gt;System.Collections.Generic.List&lt;/a&gt; object, to hold references to the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; implementations that have subscribed to notifications. Using a storage container for this purpose enables the provider to handle zero to an unlimited number of observers. The order in which observers receive notifications is not defined; the provider is free to use any method to determine the order.&lt;/li&gt;
+&lt;li&gt;An &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable&#34;&gt;IDisposable&lt;/a&gt; implementation that enables the provider to remove observers when notification is complete. Observers receive a reference to the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable&#34;&gt;IDisposable&lt;/a&gt; implementation from the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1.subscribe&#34;&gt;Subscribe&lt;/a&gt; method, so they can also call the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose&#34;&gt;IDisposable.Dispose&lt;/a&gt; method to unsubscribe before the provider has finished sending notifications.&lt;/li&gt;
+&lt;li&gt;An object that contains the data that the provider sends to its observers. The type of this object corresponds to the generic type parameter of the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; and &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobserver-1&#34;&gt;IObserver&lt;/a&gt; interfaces. Although this object can be the same as the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iobservable-1&#34;&gt;IObservable&lt;/a&gt; implementation, most commonly it is a separate type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;reference-1&#34;&gt;Reference:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.runoob.com/design-pattern/observer-pattern.html&#34;&gt;观察者模式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://refactoring.guru/design-patterns/observer&#34;&gt;Observer - guru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Observer_pattern&#34;&gt;Observer pattern - Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/events/observer-design-pattern&#34;&gt;Observer Design Pattern - MSDN&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+- https://www.openheart.icu/cs/design-patterns/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Behavior-driven development</title>
+        <link>https://www.openheart.icu/cs/behavior-driven-development/</link>
+        <pubDate>Sat, 24 Jul 2021 00:00:50 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/cs/behavior-driven-development/</guid>
+        <description>42th openheart https://www.openheart.icu/cs/behavior-driven-development/ -- https://www.openheart.icu/cs/behavior-driven-development/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
     
     
     
@@ -516,6 +614,8 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;You are unbelievably cute.&lt;/p&gt;
 &lt;p&gt;The best way to destigmatize something is to talk about it.&lt;/p&gt;
 &lt;p&gt;I find her very attractive(alluring).&lt;/p&gt;
+&lt;p&gt;nothing will ever compare.&lt;/p&gt;
+&lt;p&gt;You’ve had more than enough time to finish the job.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;phrase&#34;&gt;Phrase&lt;/h2&gt;
 &lt;p&gt;Carbon Copy 副本、抄送，outlook中的&lt;em&gt;cc&lt;/em&gt;&lt;/p&gt;
@@ -584,6 +684,8 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;Spring-couture 春季高定&lt;/p&gt;
 &lt;p&gt;Fall-couture 秋季高定&lt;/p&gt;
 &lt;p&gt;Bridal 婚礼系列&lt;/p&gt;
+&lt;p&gt;acknowledge 是确认事情的存在或者发生，但我们不一定能看出承认者的态度到底如何；&lt;/p&gt;
+&lt;p&gt;admit 往往带有“不情愿地承认”某件事情的存在或发生&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;abbreviation&#34;&gt;Abbreviation&lt;/h2&gt;
 &lt;h3 id=&#34;phrase-1&#34;&gt;Phrase&lt;/h3&gt;
@@ -639,6 +741,7 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;APAC, The Asia-Pacific&lt;/p&gt;
 &lt;p&gt;RDBMS, abbr. 关系型数据库管理系统（Relational Database Management System）&lt;/p&gt;
 &lt;p&gt;L3, means Line 3; Line 1 means On Site; Line 2 means Support; Line 3 means R&amp;amp;D&lt;/p&gt;
+&lt;p&gt;BFF, Best Friends Forever. intimate friend/bosom friend/bestie/ladybro/partner in crime/all-weather friend/female intimate/fair-weather friend/toxic friend&lt;/p&gt;
 &lt;h3 id=&#34;title-and-department-name&#34;&gt;Title and department name&lt;/h3&gt;
 &lt;p&gt;CDO, chief data officer&lt;/p&gt;
 &lt;p&gt;CEO, chief executive officer&lt;/p&gt;
@@ -728,6 +831,425 @@ Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;The value 
 &lt;p&gt;BST (London, GMT+0100)&lt;/p&gt;
 &lt;p&gt;EDT (New York, GMT-05:00)&lt;/p&gt;
 &lt;p&gt;PDT (San Francisco, GMT-08:00)&lt;/p&gt;
+&lt;h1 id=&#34;the-lantern-festival&#34;&gt;&lt;strong&gt;The Lantern Festival&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;灯笼 lantern&lt;/p&gt;
+&lt;p&gt;赏花灯 View lanterns&lt;/p&gt;
+&lt;p&gt;折叠灯笼/纸灯笼 Chinese lantern&lt;/p&gt;
+&lt;p&gt;天灯（孔明灯） sky lantern&lt;/p&gt;
+&lt;p&gt;灯会/灯展 lantern show&lt;/p&gt;
+&lt;p&gt;灯谜 lantern riddle/riddles written on lanterns&lt;/p&gt;
+&lt;p&gt;形容很多灯笼可以说：a sea of lanterns&lt;/p&gt;
+&lt;p&gt;舞龙狮 the lion or dragon dance&lt;/p&gt;
+&lt;p&gt;庙会 temple fair&lt;/p&gt;
+&lt;p&gt;踩高跷 stilt walking&lt;/p&gt;
+&lt;p&gt;扭秧歌 yangge dance （OED收了“秧歌”的威妥玛拼音yang-ko）&lt;/p&gt;
+&lt;p&gt;吃元宵 eating yuan xiao （OED词典收录了“元宵”的威妥玛拼音yuan hsiao）汤圆 还可以说：sweet dumplings /glutinous rice ball （字面”糯米团子”）/rice-flour dumpling（字面“米粉团子”）/glue pudding”（字面“黏在一起的布丁”）&lt;/p&gt;
+&lt;p&gt;看烟花 Watching fireworks&lt;/p&gt;
+&lt;p&gt;猜灯谜 Guessing lantern riddles 也可以说：solve riddles on the lanterns/riddle guessing games&lt;/p&gt;
+&lt;p&gt;Things will happen as you wish! 心想事成&lt;/p&gt;
+&lt;p&gt;Make a fortune! 发大财&lt;/p&gt;
+&lt;p&gt;Happy Lantern Festival! 元宵节快乐&lt;/p&gt;
+&lt;p&gt;I am tall when I am young and I am short when I am old. What am I? A candle&lt;/p&gt;
+&lt;p&gt;Which letter is an animal? B(bee)&lt;/p&gt;
+&lt;p&gt;Why is the letter E so important? Because it is the beginning of everything.&lt;/p&gt;
+&lt;h1 id=&#34;different-types-of-coffeehttpswwwtasteofhomecomarticletypes-of-coffee&#34;&gt;&lt;a href=&#34;https://www.tasteofhome.com/article/types-of-coffee/&#34;&gt;Different Types of Coffee&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;We cover all the different types of coffee from lattes to red eyes. All of your burning coffee questions are &lt;em&gt;finally&lt;/em&gt; answered.&lt;/p&gt;
+&lt;p&gt;Every editorial product is independently selected, though we may be compensated or receive an affiliate commission if you buy something through our links.&lt;/p&gt;
+&lt;p&gt;We’ve all been there, standing in line at a favorite coffeeshop, sweating because we’re not entirely sure of the &lt;a href=&#34;https://www.tasteofhome.com/article/whats-the-difference-between-iced-coffee-and-cold-brew-coffee/&#34;&gt;difference between a cold brew vs. a classic iced coffee&lt;/a&gt;. Oh gosh, I know I have. Good news: we’re covering everything from the difference of Arabica and Robusta coffee beans to &lt;em&gt;all&lt;/em&gt; the ways to brew your favorite &lt;a href=&#34;https://www.tasteofhome.com/article/the-real-reason-why-coffee-is-called-a-cup-of-joe/&#34;&gt;cup of joe&lt;/a&gt;. Hold on tight. We’re diving deep into your morning go-to drink.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/COFFEE-BEANS-01.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;different-types-of-coffee-beans&#34;&gt;Different Types of Coffee Beans&lt;/h2&gt;
+&lt;p&gt;In U.S. supermarkets, you’ll typically find two types of coffee beans for sale: Arabica and Robusta. You may be wondering, is there a &lt;a href=&#34;https://www.tasteofhome.com/article/arabica-vs-robusta-coffee/&#34;&gt;difference between Arabica and Robusta&lt;/a&gt;? Oh, there definitely is. Let’s get right to it.&lt;/p&gt;
+&lt;h4 id=&#34;arabica&#34;&gt;Arabica&lt;/h4&gt;
+&lt;p&gt;Arabica is the most popular type of coffee, hands down. Depending on who you ask, many coffee enthusiasts prefer using Arabica beans due to its taste. Typically used for black coffee, Arabica beans have a sweeter, more complex flavor that you can drink straight. Funny thing is, even though it’s the most popular, it doesn’t have as much caffeine as Robusta.&lt;/p&gt;
+&lt;h4 id=&#34;robusta&#34;&gt;Robusta&lt;/h4&gt;
+&lt;p&gt;While Arabica is the most popular, Robusta is cheaper and stronger. Because of its bitter flavor, you’ll typically see Robusta used for espresso drinks and in instant coffee mixes. If your Monday morning is lagging, reach for a cup of coffee that uses Robusta beans. Their high caffeine content will wake you right up!&lt;/p&gt;
+&lt;h2 id=&#34;types-of-coffee-drinks&#34;&gt;Types of Coffee Drinks&lt;/h2&gt;
+&lt;p&gt;Latte, americano, affogato…it’s crazy all that you can do with a few small beans. Whether you’re a coffee newbie or you consider yourself a coffee connoisseur, there are so many &lt;a href=&#34;https://www.tasteofhome.com/collection/homemade-coffee-shop-drinks/&#34;&gt;types of coffee drinks&lt;/a&gt; to discover. Here are some of the most popular types ordered by coffee lovers nationwide.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/Types-of-Coffee-Drinks_1200X1200.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;black&#34;&gt;Black&lt;/h4&gt;
+&lt;p&gt;Black coffee is as simple as it gets with ground coffee beans steeped in hot water, served warm. And if you want to sound fancy, you can call black coffee by its proper name: cafe noir.&lt;/p&gt;
+&lt;p&gt;**Black coffee 黑咖啡：**由热水冲泡研磨咖啡豆的经典咖啡&lt;/p&gt;
+&lt;h4 id=&#34;latte&#34;&gt;Latte&lt;/h4&gt;
+&lt;p&gt;As the most popular coffee drink out there, the latte is comprised of a shot of espresso and steamed milk with just a touch of foam. It can be ordered plain or with a flavor shot of anything from vanilla to pumpkin spice. (Here’s how to make a copycat Starbucks &lt;a href=&#34;https://www.tasteofhome.com/article/copycat-pumpkin-spice-latte-recipe/&#34;&gt;pumpkin spice latte&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Latte 拿铁：&lt;/strong&gt; 浓缩咖啡加比较多的热牛奶&lt;/p&gt;
+&lt;h4 id=&#34;cappuccino&#34;&gt;Cappuccino&lt;/h4&gt;
+&lt;p&gt;Cappuccino is a latte made with more foam than steamed milk, often with a sprinkle of cocoa powder or cinnamon on top. Sometimes you can find variations that use cream instead of milk or ones that throw in flavor shot, as well.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cappucino 卡布奇诺：&lt;/strong&gt; 浓缩咖啡加一些热牛奶，比拿铁多一些奶泡&lt;/p&gt;
+&lt;h4 id=&#34;americano&#34;&gt;Americano&lt;/h4&gt;
+&lt;p&gt;With a similar flavor to black coffee, the americano consists of an espresso shot diluted in hot water. Pro tip: if you’re making your own, pour the espresso first, then add the hot water.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Americano 美式咖啡：&lt;/strong&gt; 浓缩咖啡加热开水。本质上Long Black同Americano都是同一种，即Espresso加水，分別在先后次序；Americano是将水加进Espresso中，而Long Black则是将Espresso加进热水水之中，味道与外观相若，但由于Long Black是把咖啡加入热水之中，故会留有一层油在表面，而且味道亦更浓烈，至于Americano则刚好相反，因而口感较清爽&lt;/p&gt;
+&lt;h4 id=&#34;espresso&#34;&gt;Espresso&lt;/h4&gt;
+&lt;p&gt;An espresso shot can be served solo or used as the foundation of most coffee drinks, like lattes and macchiatos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Espresso 浓缩咖啡：&lt;/strong&gt; 在浓缩咖啡机中制成的一小杯咖啡。&lt;/p&gt;
+&lt;h4 id=&#34;doppio&#34;&gt;Doppio&lt;/h4&gt;
+&lt;p&gt;A double shot of espresso, the doppio is perfect for putting extra pep in your step.&lt;/p&gt;
+&lt;h4 id=&#34;cortado&#34;&gt;Cortado&lt;/h4&gt;
+&lt;p&gt;Like yin and yang, a cortado is the perfect balance of espresso and warm steamed milk. The milk is used to cut back on the espresso’s acidity.&lt;/p&gt;
+&lt;h4 id=&#34;red-eye&#34;&gt;Red Eye&lt;/h4&gt;
+&lt;p&gt;Named after those pesky midnight flights, a red eye can cure any tiresome morning. A full cup of hot coffee with an espresso shot mixed in, this will definitely get your heart racing.&lt;/p&gt;
+&lt;h4 id=&#34;galão&#34;&gt;Galão&lt;/h4&gt;
+&lt;p&gt;Originating in Portugal, this hot coffee drink is closely related to the latte and cappuccino. Only difference is it contains about twice as much foamed milk, making it a lighter drink compared to the other two.&lt;/p&gt;
+&lt;h4 id=&#34;lungo&#34;&gt;Lungo&lt;/h4&gt;
+&lt;p&gt;A lungo is a long-pull espresso. The longer the pull, the more caffeine there is and the more ounces you can enjoy.&lt;/p&gt;
+&lt;h4 id=&#34;macchiato&#34;&gt;Macchiato&lt;/h4&gt;
+&lt;p&gt;The macchiato is another espresso-based drink that has a small amount of foam on top. It’s the happy medium between a cappuccino and a doppio.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Macchiato 玛奇朵：&lt;/strong&gt; 浓缩咖啡加一點點热牛奶。&lt;/p&gt;
+&lt;h4 id=&#34;mocha&#34;&gt;Mocha&lt;/h4&gt;
+&lt;p&gt;For all you chocolate lovers out there, you’ll fall in love with a mocha (or maybe you already have). The mocha is a chocolate espresso drink with steamed milk and foam.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mocha 摩卡：&lt;/strong&gt; 拿铁加巧克力糖浆。&lt;/p&gt;
+&lt;h4 id=&#34;ristretto&#34;&gt;Ristretto&lt;/h4&gt;
+&lt;p&gt;Ristretto is an espresso shot. It uses less hot water which creates a sweeter flavor compared to the bitter taste of a traditional shot of espresso or a doppio.&lt;/p&gt;
+&lt;h4 id=&#34;flat-white&#34;&gt;Flat White&lt;/h4&gt;
+&lt;p&gt;This Aussie-born drink is basically a cappuccino without the foam or chocolate sprinkle. It’s an espresso drink with steamed milk.&lt;/p&gt;
+&lt;h4 id=&#34;affogato&#34;&gt;Affogato&lt;/h4&gt;
+&lt;p&gt;The affogato is an excuse to enjoy a scoop of ice cream any time of day (and any time of year in my opinion). Served with a scoop of ice cream and a shot of espresso, or two. The affogato is extra delish &lt;a href=&#34;https://www.tasteofhome.com/recipes/brownie-affogato-sundaes/&#34;&gt;served over a brownie&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;café-au-lait&#34;&gt;Café au Lait&lt;/h4&gt;
+&lt;p&gt;Café au lait is perfect for the coffee minimalist who wants a bit more flavor. Just add a splash of warm milk to your coffee and you’re all set!&lt;/p&gt;
+&lt;h4 id=&#34;irish&#34;&gt;Irish&lt;/h4&gt;
+&lt;p&gt;Irish coffee consists of black coffee, whiskey and sugar, topped with whipped cream. Here’s an &lt;a href=&#34;https://www.tasteofhome.com/article/how-to-make-irish-coffee-recipe/&#34;&gt;Irish coffee recipe&lt;/a&gt; that will warm you right up.&lt;/p&gt;
+&lt;h2 id=&#34;types-of-iced-coffee&#34;&gt;Types of Iced Coffee&lt;/h2&gt;
+&lt;p&gt;What’s more refreshing than cool iced coffee in the summertime? Or maybe you enjoy these chilled drinks all year long. (We do!) Here are some of the best iced coffee drinks you can sip on.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/Types-of-iced-Coffee-2_1200X1200.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;iced-coffee&#34;&gt;Iced Coffee&lt;/h4&gt;
+&lt;p&gt;A coffee with ice, typically served with a dash of milk, cream or sweetener—iced coffee is really as simple as that.&lt;/p&gt;
+&lt;h4 id=&#34;iced-espresso&#34;&gt;Iced Espresso&lt;/h4&gt;
+&lt;p&gt;Like an iced coffee, iced espresso can be served straight or with a dash of milk, cream or sweetener. You can also ice speciality espresso-based drinks like americanos, mochas, macchiatos, lattes and flat whites.&lt;/p&gt;
+&lt;h4 id=&#34;cold-brew&#34;&gt;Cold Brew&lt;/h4&gt;
+&lt;p&gt;The trendiest of the iced coffee bunch, cold brew coffees are made by steeping coffee beans from anywhere between 6-36 hours, depending on how strong you would like your cold brew. Once the beans are done steeping, add cold milk or cream. Here are a few of our best &lt;a href=&#34;https://www.tasteofhome.com/article/how-to-make-cold-brew-coffee-as-tasty-as-a-coffeehouses/&#34;&gt;cold brew coffee tips&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;**Cold brew 冷萃咖啡：**类似黑咖啡，经由长时间冷水浸泡在研磨咖啡豆里制成。&lt;/p&gt;
+&lt;h4 id=&#34;frappuccino&#34;&gt;Frappuccino&lt;/h4&gt;
+&lt;p&gt;Made famous by Starbucks, the Frappuccino is a blended iced coffee drink that’s topped with whipped cream and syrup. But not all Frapps are made the same: watch out for coffee-free versions. Unless you’re into that sorta thing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Frappé 希腊冰咖啡：&lt;/strong&gt; 浓缩咖啡加冰塊，和打泡的牛奶混合。&lt;/p&gt;
+&lt;h4 id=&#34;nitro&#34;&gt;Nitro&lt;/h4&gt;
+&lt;p&gt;A cold brew + nitrogen bubbles = a cold brew coffee with a frothy, Guinness-like consistency. (It’s poured via a nitro tap, too.)&lt;/p&gt;
+&lt;h4 id=&#34;mazagran&#34;&gt;Mazagran&lt;/h4&gt;
+&lt;p&gt;Maza-who?! Mazagran coffee is a cross between iced coffee, tea and your favorite rum drink. It typically consists of espresso, lemon, sugar and (sometimes) rum.&lt;/p&gt;
+&lt;h2 id=&#34;types-of-coffee-makers&#34;&gt;Types of Coffee Makers&lt;/h2&gt;
+&lt;p&gt;Now that you’re a master on all the coffee types, let’s learn how to make ’em! From French presses to Mokas, there are plenty of ways to prepare your dream cup of java.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tasteofhome.com/wp-content/uploads/2020/02/Types-of-Coffee-Makers-1200x1200-.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;french-press&#34;&gt;French Press&lt;/h4&gt;
+&lt;p&gt;This manual coffee maker is extremely easy to use. Add ground coffee beans into your French press, pour piping hot water over the grounds, let the coffee steep for a few minutes and finally, press the plunger down and pour! Simple as that. French presses can be used for any bean, but many people prefer using them for darker, richer roasts. Also, how fancy does this &lt;a href=&#34;https://www.amazon.com/dp/B082FN5Y6Y/?ots=1&amp;amp;slotNum=0&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;French press&lt;/a&gt; look? Make your morning brew…in style!&lt;/p&gt;
+&lt;h4 id=&#34;percolator&#34;&gt;Percolator&lt;/h4&gt;
+&lt;p&gt;Try out a &lt;a href=&#34;https://www.amazon.com/dp/B002LVUIK8/?ots=1&amp;amp;slotNum=1&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;percolator&lt;/a&gt; to add a retro feel to your daily brew—like 1880s retro. To put it simply, percolators brew coffee by continuously pushing boiling hot water bubbles up into the “coffee chamber” to steep the coffee grains. This cycle is repeated until the coffee is ready to serve. They’re typically used for medium roasts and prepared over the stovetop, but percolators can work over any heated surface, even a campfire (hint, hint!).&lt;/p&gt;
+&lt;h4 id=&#34;single-serve&#34;&gt;Single Serve&lt;/h4&gt;
+&lt;p&gt;Single serve coffee maker sales have really peaked in the past few years. Measure out your desired coffee amount, pour into the reusable filter, pour water in and voila! A cup of coffee just for you will be ready soon. Single serve coffee makers are perfect for single-person households (or those where just one person drinks coffee). Try out this &lt;a href=&#34;https://www.amazon.com/dp/B07457Z312/?ots=1&amp;amp;slotNum=2&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;budget-friendly single serve coffee maker&lt;/a&gt; which includes a fun travel mug!&lt;/p&gt;
+&lt;h4 id=&#34;aeropress&#34;&gt;AeroPress&lt;/h4&gt;
+&lt;p&gt;We’ve got another manual coffee maker for you. The &lt;a href=&#34;https://www.amazon.com/dp/B0047BIWSK/?ots=1&amp;amp;slotNum=3&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;AeroPress&lt;/a&gt; is very similar to the French press. To use an AeroPress, we recommend checking out &lt;a href=&#34;https://aeropress.com/use-it-now/getting-started/&#34;&gt;this beautiful get-started guide&lt;/a&gt;. You can make espresso, lattes, cold brews or just a classic cup of coffee in this nifty little machine.&lt;/p&gt;
+&lt;h4 id=&#34;drip&#34;&gt;Drip&lt;/h4&gt;
+&lt;p&gt;Aah, yes. The classic electric coffee maker you know and love. To get your brew going in a &lt;a href=&#34;https://www.amazon.com/dp/B00MVWGQX0/?ots=1&amp;amp;slotNum=4&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;drip coffee maker&lt;/a&gt;, all you have to do is scoop your coffee, pour it into the filter, pour some water in and press start to let the drip coffee maker do it’s coffee magic. Soon, you’ll hear the sweet sounds of your coffee dripping right into your coffee pot. Mornings, conquered.&lt;/p&gt;
+&lt;p&gt;Some drip coffee makers also come with a &lt;a href=&#34;https://www.amazon.com/dp/B000TQEDE4/?ots=1&amp;amp;slotNum=5&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;thermal carafe&lt;/a&gt;. Typically with a double layered, stainless steel wall, thermal carafes keep your coffee tasting fresh and hot for hours longer than most glass carafes do. Some drip coffee makers use a thermal carafe, but traditionally, they use a glass carafe instead.&lt;/p&gt;
+&lt;h4 id=&#34;pour-over&#34;&gt;Pour Over&lt;/h4&gt;
+&lt;p&gt;A pour-over coffee maker is exactly what it sounds like: you manually pour hot water over the beans. With a solid 5-star rating on Amazon, pour-over coffee makers like &lt;a href=&#34;https://www.amazon.com/Chemex-Classic-Pour-over-Glass-Coffeemaker/dp/B017M9TJA8/?ots=1&amp;amp;slotNum=6&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;Chemex&lt;/a&gt; are a solid choice. Fans love the fact that you get to control the strength of the coffee, plus the pots are super easy to clean. You do need a special kind of filter, though, which is pricier than the typical drip coffee filter. However, some are reusable.&lt;/p&gt;
+&lt;h4 id=&#34;cold-brew-1&#34;&gt;Cold Brew&lt;/h4&gt;
+&lt;p&gt;Diehard cold brew fans may want to invest in a &lt;a href=&#34;https://www.amazon.com/dp/B00FFLY64U/?ots=1&amp;amp;slotNum=7&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;cold brew coffee maker&lt;/a&gt;. To use a cold brew maker, throw in your coffee grounds, brew and serve. You can store the coffee for up to 36 hours. If you’re looking for a multi-functional coffee maker, you can prepare cold brew coffees in other makers, like the AeroPress.&lt;/p&gt;
+&lt;h4 id=&#34;moka&#34;&gt;Moka&lt;/h4&gt;
+&lt;p&gt;Moka pots share a lot of similarities with the percolator and there’s often confusion between the two. Both need a heated surface, like a stovetop or even a campfire. However, the &lt;a href=&#34;https://www.amazon.com/dp/B000CNY6UK/?ots=1&amp;amp;slotNum=8&amp;amp;imprToken=96ba92f3-91dc-0fed-0f5&amp;amp;tag=tohmke-20&#34;&gt;Moka pot&lt;/a&gt; produces an espresso-like drink and its brewing process is a bit different than the percolator. You need to keep more of an eye on it because when the Moka pot’s water is spent, you should remove the pot from the heat surface to avoid burnt-tasting coffee. Whereas with the percolator’s simple brewing process, the longer you leave it running, the stronger the coffee will be.&lt;/p&gt;
+&lt;h3 id=&#34;other&#34;&gt;Other&lt;/h3&gt;
+&lt;p&gt;**Pour over 手沖咖啡 ：**类似黑咖啡，由热水倒在研磨咖啡豆上，並且从滤杯滴下制成。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decaf 低咖啡因：&lt;/strong&gt; 低咖啡因咖啡或是无咖啡因。&lt;/p&gt;
+&lt;p&gt;**Steamer 牛奶：**有泡沫的热牛奶加上甜甜的口味。&lt;/p&gt;
+&lt;p&gt;**Lemonade 柠檬水：**一种由柠檬汁、糖和水制成的冰的饮料。&lt;/p&gt;
+&lt;h3 id=&#34;more&#34;&gt;More…&lt;/h3&gt;
+&lt;p&gt;在很多咖啡店里，你可以加一些不同的口味到你的饮品里。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Vanilla 香草&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hazelnut 榛果&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Caramel 焦糖&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Toffee 太妃糖&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;INFORMATION&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.coffeereview.com/coffee-glossary/&#34;&gt;COFFEE GLOSSARY&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;ingredients&#34;&gt;Ingredients&lt;/h1&gt;
+&lt;h2 id=&#34;meat&#34;&gt;Meat&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/v2-5fd7917287c26049d496f6f9b16955a2_r.jpg&#34; alt=&#34;Meat&#34;&gt;&lt;/p&gt;
+&lt;p&gt;lamb 羔羊肉 [læm]&lt;/p&gt;
+&lt;p&gt;butcher 肉店老板 [ˈbʊtʃər]&lt;/p&gt;
+&lt;p&gt;meat hook 吊肉钩 [miːt hʊk]&lt;/p&gt;
+&lt;p&gt;knife sharpener 磨刀器&lt;/p&gt;
+&lt;p&gt;scales 秤 [skeɪlz]&lt;/p&gt;
+&lt;p&gt;bacon 熏肉 [ˈbeɪkən]&lt;/p&gt;
+&lt;p&gt;sausages 香肠 [ˈsɔsɪdʒɪz]&lt;/p&gt;
+&lt;p&gt;liver 肝脏 [ˈlɪvər]&lt;/p&gt;
+&lt;p&gt;pork 猪肉 [pɔːrk]&lt;/p&gt;
+&lt;p&gt;offal 下水 [ˈɔːfl]&lt;/p&gt;
+&lt;p&gt;free range 放养的 [ˌfriː reɪndʒ]&lt;/p&gt;
+&lt;p&gt;cooked meat 熟肉 [kʊkt miːt]&lt;/p&gt;
+&lt;p&gt;beef 牛肉 [biːf]&lt;/p&gt;
+&lt;p&gt;rabbit 兔肉 [ˈræbɪt]&lt;/p&gt;
+&lt;p&gt;cured 腌制的 [kjʊrd]&lt;/p&gt;
+&lt;p&gt;organic 有机（饲养）的 [ɔːrˈɡænɪk]&lt;/p&gt;
+&lt;p&gt;white meat 白肉（指家禽肉、鱼肉等）&lt;/p&gt;
+&lt;p&gt;veal 小牛肉 [viːl]&lt;/p&gt;
+&lt;p&gt;tongue 牛舌 [tʌŋ]&lt;/p&gt;
+&lt;p&gt;smoked 熏制的 [smoʊkt]&lt;/p&gt;
+&lt;p&gt;lean meat 瘦肉 [liːn miːt]&lt;/p&gt;
+&lt;p&gt;red meat 红肉（指牛肉、猪肉和羊肉）&lt;/p&gt;
+&lt;h2 id=&#34;cuts&#34;&gt;Cuts&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/v2-8cd664994b62af4220f6be06ddc57077_r.jpg&#34; alt=&#34;cuts&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ham 火腿 [hæm]&lt;/p&gt;
+&lt;p&gt;rind 肉皮 [raɪnd]&lt;/p&gt;
+&lt;p&gt;slice 薄片 [slaɪs]&lt;/p&gt;
+&lt;p&gt;sirloin steak 牛上腰排 [ˈsɜːrlɔɪn steɪk]&lt;/p&gt;
+&lt;p&gt;rasher 火腿片 [ˈræʃər]&lt;/p&gt;
+&lt;p&gt;mince 肉馅 [mɪns]&lt;/p&gt;
+&lt;p&gt;fat 肥肉 [fæt]&lt;/p&gt;
+&lt;p&gt;rib 肋排 [rɪb]&lt;/p&gt;
+&lt;p&gt;chop 排骨 [tʃɑːp]&lt;/p&gt;
+&lt;p&gt;bone 骨头 [boʊn]&lt;/p&gt;
+&lt;p&gt;fillet 里脊肉 [fɪˈleɪ]&lt;/p&gt;
+&lt;p&gt;joint 后腿肉 [dʒɔɪnt]&lt;/p&gt;
+&lt;p&gt;kidney 肾 [ˈkɪdni]&lt;/p&gt;
+&lt;p&gt;rump steak 牛腿排 [rʌmp steɪk]&lt;/p&gt;
+&lt;p&gt;heart 心 [hɑːrt]&lt;/p&gt;
+&lt;h2 id=&#34;poultry&#34;&gt;Poultry&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/v2-609fbff8bdd72b7474c7ea368d922f1f_r.jpg&#34; alt=&#34;poultry&#34;&gt;&lt;/p&gt;
+&lt;p&gt;skin 皮 [skɪn]&lt;/p&gt;
+&lt;p&gt;turkey 火鸡 [ˈtɜːrki]&lt;/p&gt;
+&lt;p&gt;breast 胸 [brest]&lt;/p&gt;
+&lt;p&gt;thigh 大腿 [θaɪ]&lt;/p&gt;
+&lt;p&gt;dressed chicken 去毛开膛的鸡&lt;/p&gt;
+&lt;p&gt;chicken 鸡 [ˈtʃɪkɪn]&lt;/p&gt;
+&lt;p&gt;pheasant 野鸡 [ˈfeznt]&lt;/p&gt;
+&lt;p&gt;duck 鸭 [dʌk]&lt;/p&gt;
+&lt;p&gt;leg 腿 [leɡ]&lt;/p&gt;
+&lt;p&gt;quail 鹌鹑 [kweɪl]&lt;/p&gt;
+&lt;p&gt;goose 鹅 [ɡuːs]&lt;/p&gt;
+&lt;h2 id=&#34;fish&#34;&gt;Fish&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/v2-f0a3656178aa492097cadbe6f6adc641_r.jpg&#34; alt=&#34;fish&#34;&gt;&lt;/p&gt;
+&lt;p&gt;peeled prawns 去皮虾 [piːld prɔnz]&lt;/p&gt;
+&lt;p&gt;ice 冰 [aɪs]&lt;/p&gt;
+&lt;p&gt;red mullet 羊鱼 [red ˈmʌlɪt]&lt;/p&gt;
+&lt;p&gt;halibut fillets 大比目鱼片 [ˈhælɪbət fɪˈleɪs]&lt;/p&gt;
+&lt;p&gt;rainbow trout 虹鳟鱼 [ˌreɪnboʊ ˈtraʊt]&lt;/p&gt;
+&lt;p&gt;skate wings 鳐鱼翅 [skeɪt wɪŋz]&lt;/p&gt;
+&lt;p&gt;fishmongers 水产店&lt;/p&gt;
+&lt;p&gt;monkfish 鮟鱇鱼英 [ mʌŋkfɪʃ]&lt;/p&gt;
+&lt;p&gt;mackerel 鲭鱼 [ˈmækrəl]&lt;/p&gt;
+&lt;p&gt;swordfish 剑鱼 [ˈsɔːrdfɪʃ]&lt;/p&gt;
+&lt;p&gt;Dover sole 鳎鱼 [ˈdoʊvər soʊl]&lt;/p&gt;
+&lt;p&gt;lemon sole 黄盖鲽 [ˌlemən ˈsoʊl]&lt;/p&gt;
+&lt;p&gt;haddock 黑线鳕 [ˈhædək]&lt;/p&gt;
+&lt;p&gt;sardine 沙丁鱼 [ˌsɑːrˈdiːn]&lt;/p&gt;
+&lt;p&gt;skate 鳐鱼 [skeɪt]&lt;/p&gt;
+&lt;p&gt;whiting 牙鳕 [ˈwaɪtɪŋ]&lt;/p&gt;
+&lt;p&gt;sea bass 海鲈 [siː beɪs]&lt;/p&gt;
+&lt;p&gt;salmon 鲑鱼 [ˈsæmən]&lt;/p&gt;
+&lt;p&gt;cod 鳕鱼 [kɑːd]&lt;/p&gt;
+&lt;p&gt;sea bream 鲷鱼 [siː briːm]&lt;/p&gt;
+&lt;p&gt;tuna 金枪鱼 [ˈtuːnə]&lt;/p&gt;
+&lt;h2 id=&#34;seafood&#34;&gt;Seafood&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/v2-d619088b7be2ece96a803f1dabe99b30_r.jpg&#34; alt=&#34;seafood&#34;&gt;&lt;/p&gt;
+&lt;p&gt;scallop 扇贝 [ˈskæləp]&lt;/p&gt;
+&lt;p&gt;crab 螃蟹 [kræb]&lt;/p&gt;
+&lt;p&gt;lobster 龙虾 [ˈlɑːbstər]&lt;/p&gt;
+&lt;p&gt;king prawn 大对虾 [kɪŋ prɔːn]&lt;/p&gt;
+&lt;p&gt;mussel 贻贝 [ˈmʌsl]&lt;/p&gt;
+&lt;p&gt;crayfish 小龙虾 [ˈkreɪfɪʃ]&lt;/p&gt;
+&lt;p&gt;oyster 牡蛎 [ˈɔɪstər]&lt;/p&gt;
+&lt;p&gt;razor-shell 蛏子 [ˈreɪzər ʃel]&lt;/p&gt;
+&lt;p&gt;cockle 鸟蛤 [ˈkɑːkl]&lt;/p&gt;
+&lt;p&gt;octopus 章鱼乌贼 [ˈɑːktəpʊs]&lt;/p&gt;
+&lt;p&gt;cuttlefish 乌贼 [ˈkʌtlfɪʃ]&lt;/p&gt;
+&lt;p&gt;clam 蛤蜊 [klæm]&lt;/p&gt;
+&lt;p&gt;frozen 冷冻的 [ˈfroʊzn]&lt;/p&gt;
+&lt;p&gt;salted 盐渍的 [ˈsɔːltɪd]&lt;/p&gt;
+&lt;p&gt;smoked 熏制的 [smoʊkt]&lt;/p&gt;
+&lt;p&gt;descaled 去麟的  [di skeɪl]&lt;/p&gt;
+&lt;p&gt;fillet 去骨鱼片 [fɪˈleɪ]&lt;/p&gt;
+&lt;p&gt;loin 腰肉 [lɔɪn]&lt;/p&gt;
+&lt;p&gt;tail 尾部 [teɪl]&lt;/p&gt;
+&lt;p&gt;bone 骨头 [boʊn]&lt;/p&gt;
+&lt;p&gt;scale 鳞片 [skeɪl]&lt;/p&gt;
+&lt;p&gt;fresh 新鲜 [freʃ]&lt;/p&gt;
+&lt;p&gt;cleaned 处理干净的 [kliːnd]&lt;/p&gt;
+&lt;p&gt;skinned 去皮的 [skɪnd]&lt;/p&gt;
+&lt;p&gt;boned 去骨的 [boʊnd]&lt;/p&gt;
+&lt;p&gt;filleted 切片的 [fɪˈleɪɪd]&lt;/p&gt;
+&lt;p&gt;steak 鱼片 [steɪk]&lt;/p&gt;
+&lt;p&gt;Wil you clean it for me?&lt;/p&gt;
+&lt;h2 id=&#34;vegeatables&#34;&gt;Vegeatables&lt;/h2&gt;
+&lt;h3 id=&#34;a&#34;&gt;A&lt;/h3&gt;
+&lt;p&gt;Adzuki bean 红豆 [ə ʒuki]&lt;/p&gt;
+&lt;p&gt;Aloe 芦荟 [ ælo]&lt;/p&gt;
+&lt;p&gt;Aniseed 八角 [ ænəsid]&lt;/p&gt;
+&lt;p&gt;Aubergine 茄子 [ obɚʒin]&lt;/p&gt;
+&lt;p&gt;Asparagus 芦笋 [ə spærəgəs]&lt;/p&gt;
+&lt;h3 id=&#34;b&#34;&gt;B&lt;/h3&gt;
+&lt;p&gt;Bamboo Shoot 笋 [,bæm bu]&lt;/p&gt;
+&lt;p&gt;Broccoli 西兰花 [ brɔkəli]&lt;/p&gt;
+&lt;p&gt;Bean Sprout 绿豆芽 [spraʊt]&lt;/p&gt;
+&lt;p&gt;Beetroot 甜菜 [ bitrut]&lt;/p&gt;
+&lt;p&gt;Brussels sprout 球芽甘蓝&lt;/p&gt;
+&lt;p&gt;Bitter gourd 苦瓜 [ɡʊrd]&lt;/p&gt;
+&lt;p&gt;Bok-choy 小白菜 [ bɔk tʃɔɪ]&lt;/p&gt;
+&lt;h3 id=&#34;c&#34;&gt;C&lt;/h3&gt;
+&lt;p&gt;Carrot 胡萝卜 [ kærət]&lt;/p&gt;
+&lt;p&gt;Cabbage 卷心菜 [ˈkæbɪdʒ]&lt;/p&gt;
+&lt;p&gt;Celery 芹菜 [ sɛləri]&lt;/p&gt;
+&lt;p&gt;Cucumber 黄瓜 [ kjʊ,kʌmbɚ]&lt;/p&gt;
+&lt;p&gt;Cauliflower 花菜 [ kɔlɪ flaʊɚ]&lt;/p&gt;
+&lt;p&gt;Cloud ear/wood ear 木耳&lt;/p&gt;
+&lt;p&gt;Chive 细香葱 [tʃaɪv]&lt;/p&gt;
+&lt;p&gt;Corn 玉米 [kɔrn]&lt;/p&gt;
+&lt;p&gt;Chili 辣椒 [ tʃɪli]&lt;/p&gt;
+&lt;p&gt;Coriander 香菜 [,kɔrɪ ændɚ]&lt;/p&gt;
+&lt;p&gt;Cinnamon 肉桂 [ sɪnəmən]&lt;/p&gt;
+&lt;p&gt;Chinese Kale 芥蓝 [kel]&lt;/p&gt;
+&lt;p&gt;Chinese Radish/Daikon 白萝卜&lt;/p&gt;
+&lt;p&gt;Chinese Yam 山药 [jæm]&lt;/p&gt;
+&lt;p&gt;Chrysanthemum greens 茼蒿 [krɪ sænθəməm]&lt;/p&gt;
+&lt;h3 id=&#34;e&#34;&gt;E&lt;/h3&gt;
+&lt;p&gt;Eggplant 茄子 [ ɛɡplænt]&lt;/p&gt;
+&lt;p&gt;Eddoes 小芋头 [ edəʊ]&lt;/p&gt;
+&lt;p&gt;Enoki mushroom 金针菇 [e nɔki:]&lt;/p&gt;
+&lt;h3 id=&#34;f&#34;&gt;F&lt;/h3&gt;
+&lt;p&gt;French Bean 四季豆/刀豆&lt;/p&gt;
+&lt;p&gt;Fennel 茴香 [ fɛnl]&lt;/p&gt;
+&lt;h3 id=&#34;g&#34;&gt;G&lt;/h3&gt;
+&lt;p&gt;Ginger 姜 [ dʒɪndʒɚ]&lt;/p&gt;
+&lt;p&gt;Garlic 大蒜 [ ɡɑrlɪk]&lt;/p&gt;
+&lt;p&gt;Garlic sprout 蒜苗/苔&lt;/p&gt;
+&lt;p&gt;Green Pepper 青椒&lt;/p&gt;
+&lt;h3 id=&#34;k&#34;&gt;K&lt;/h3&gt;
+&lt;p&gt;Kohlrabi 甘蓝 [ kol rɑbi]&lt;/p&gt;
+&lt;p&gt;Kelp 海带 [kɛlp]&lt;/p&gt;
+&lt;p&gt;King oyster mushroom 杏鲍菇&lt;/p&gt;
+&lt;h3 id=&#34;l&#34;&gt;L&lt;/h3&gt;
+&lt;p&gt;Lettuce 莴苣/生菜 [ lɛtɪs]&lt;/p&gt;
+&lt;p&gt;Lotus seed 莲子&lt;/p&gt;
+&lt;p&gt;Loofah 丝瓜 [ lufə]&lt;/p&gt;
+&lt;p&gt;Laurel 月桂 [ lɔrəl]&lt;/p&gt;
+&lt;p&gt;Leek 韭葱 [lik]&lt;/p&gt;
+&lt;p&gt;Laver 紫菜 [ levɚ]&lt;/p&gt;
+&lt;p&gt;Licorice 甘草 [ lɪkərɪs; lɪkərɪʃ]&lt;/p&gt;
+&lt;p&gt;Lotus root 莲藕&lt;/p&gt;
+&lt;h3 id=&#34;m&#34;&gt;M&lt;/h3&gt;
+&lt;p&gt;Mushroom 蘑菇 [ mʌʃrʊm]&lt;/p&gt;
+&lt;p&gt;Mung bean 绿豆&lt;/p&gt;
+&lt;h3 id=&#34;o&#34;&gt;O&lt;/h3&gt;
+&lt;p&gt;Onion 洋葱 [ ʌnjən]&lt;/p&gt;
+&lt;h3 id=&#34;p&#34;&gt;P&lt;/h3&gt;
+&lt;p&gt;Pumpkin 南瓜 [ pʌmpkɪn]&lt;/p&gt;
+&lt;p&gt;Pepper 胡椒&lt;/p&gt;
+&lt;p&gt;Pickled cucumber 酸黄瓜&lt;/p&gt;
+&lt;h3 id=&#34;r&#34;&gt;R&lt;/h3&gt;
+&lt;p&gt;Radish 萝卜 [ rædɪʃ]&lt;/p&gt;
+&lt;p&gt;Romaine 生菜 [rə(ʊ) meɪn]&lt;/p&gt;
+&lt;p&gt;Red pepper 红椒&lt;/p&gt;
+&lt;p&gt;Red bean 泛指红色的豆&lt;/p&gt;
+&lt;h3 id=&#34;s&#34;&gt;S&lt;/h3&gt;
+&lt;p&gt;Spring onion/Scallion 青葱 [ skælɪən]&lt;/p&gt;
+&lt;p&gt;Silver ear fungus 白木耳&lt;/p&gt;
+&lt;p&gt;Soybean 大豆 [ sɔɪ,bin]&lt;/p&gt;
+&lt;p&gt;Soybean sprout 黄豆芽&lt;/p&gt;
+&lt;p&gt;Spinach 菠菜 [ spɪnɪtʃ]&lt;/p&gt;
+&lt;p&gt;Straw mushroom 草菇&lt;/p&gt;
+&lt;p&gt;Green bean 刀豆&lt;/p&gt;
+&lt;p&gt;Sweet Potato 红薯&lt;/p&gt;
+&lt;p&gt;Seaweed 海藻 [ si wid]&lt;/p&gt;
+&lt;p&gt;Snow Pea 荷兰豆&lt;/p&gt;
+&lt;h3 id=&#34;t&#34;&gt;T&lt;/h3&gt;
+&lt;p&gt;Taro 大芋头 [ tærəʊ]&lt;/p&gt;
+&lt;h3 id=&#34;w&#34;&gt;W&lt;/h3&gt;
+&lt;p&gt;Watercress 豆瓣菜 [ wɔtɚ krɛs]&lt;/p&gt;
+&lt;p&gt;Water spinach 空心菜&lt;/p&gt;
+&lt;p&gt;Water caltrop 菱角 [ kæltrəp]&lt;/p&gt;
+&lt;p&gt;White gourd 冬瓜 [ɡʊrd]&lt;/p&gt;
+&lt;p&gt;Water chestnut 荸荠 [ˈwɔtɚ ˈtʃɛsˌnʌt]&lt;/p&gt;
+&lt;p&gt;Wakame/sea mustard 裙带藻（味增汤海带）&lt;/p&gt;
+&lt;p&gt;Wild rice stem 茭白&lt;/p&gt;
+&lt;h3 id=&#34;y&#34;&gt;Y&lt;/h3&gt;
+&lt;p&gt;Yellow pepper 黄椒&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;hotel&#34;&gt;Hotel&lt;/h1&gt;
+&lt;h2 id=&#34;bed&#34;&gt;Bed&lt;/h2&gt;
+&lt;p&gt;single bed/twin bed: 39×74in&lt;/p&gt;
+&lt;p&gt;full-size bed: 54×74in&lt;/p&gt;
+&lt;p&gt;queen-size bed: 60×80in&lt;/p&gt;
+&lt;p&gt;king-size bed: 76×80in&lt;/p&gt;
+&lt;h2 id=&#34;room&#34;&gt;Room&lt;/h2&gt;
+&lt;p&gt;single room：通常有一个full-size 的大床&lt;/p&gt;
+&lt;p&gt;double room：单床双人房，通常有一张queen-size bed 或double bed 的双人床&lt;/p&gt;
+&lt;p&gt;twin room：双床双人房，通常配备两个single bed 的独立床铺&lt;/p&gt;
+&lt;p&gt;triple room：三人房，可以睡三人，通常有双人床和单人床各一张，或是其他组合&lt;/p&gt;
+&lt;p&gt;suite：套房，比一般客房大，有多个房间，可能还分行政套房或家庭套房&lt;/p&gt;
+&lt;p&gt;adjoining/connecting rooms：相连房，两个房间有门直接互通连接在一起，适合人多的家庭或团体&lt;/p&gt;
+&lt;h2 id=&#34;facility&#34;&gt;Facility&lt;/h2&gt;
+&lt;p&gt;amenities&lt;/p&gt;
+&lt;p&gt;AC：空调，Air conditioning 的缩写&lt;/p&gt;
+&lt;p&gt;heating：暖气&lt;/p&gt;
+&lt;p&gt;bathroom&lt;/p&gt;
+&lt;p&gt;internet access&lt;/p&gt;
+&lt;p&gt;wireless printing&lt;/p&gt;
+&lt;p&gt;fan：风扇&lt;/p&gt;
+&lt;p&gt;balcony：阳台&lt;/p&gt;
+&lt;p&gt;patio：露台、庭院&lt;/p&gt;
+&lt;p&gt;smoke-free：禁烟、禁止抽烟&lt;/p&gt;
+&lt;p&gt;complimentary：赠送的。观光饭店通常会提供免费早餐和个人浴室用品&lt;/p&gt;
+&lt;p&gt;bathtub：浴缸&lt;/p&gt;
+&lt;p&gt;shower：淋浴。shower head 是喷水的淋浴头。standing shower 是站立式淋浴&lt;/p&gt;
+&lt;p&gt;towel：毛巾。手巾是hand towel，而bath mat 是地板上的浴垫&lt;/p&gt;
+&lt;p&gt;robe：长袍。浴后穿也被称为bathrobe，浴袍&lt;/p&gt;
+&lt;p&gt;toiletries：洗浴用品。例如洗发、护发用品，肥皂、牙刷和牙膏&lt;/p&gt;
+&lt;p&gt;hair dryer：吹风机，也称为blow dryer&lt;/p&gt;
+&lt;p&gt;sink：洗脸槽。它有一个faucet（水龙头）和drain（排水管）&lt;/p&gt;
+&lt;p&gt;soap：有的饭店还同时提供hand soap 与body soap&lt;/p&gt;
+&lt;p&gt;lamp&lt;/p&gt;
+&lt;p&gt;executive desk：大办公桌。经常配备在商务套房使用&lt;/p&gt;
+&lt;p&gt;kitchenette：小厨房。通常配有microwave（微波炉）和sink（洗涤槽）。大部份酒店客房内都会有mini-fridge（小冰箱）&lt;/p&gt;
+&lt;p&gt;coffee machine&lt;/p&gt;
+&lt;p&gt;room service：客房服务&lt;/p&gt;
+&lt;p&gt;turndown service：夜床服务&lt;/p&gt;
+&lt;p&gt;curtain&lt;/p&gt;
+&lt;p&gt;TV：remote control（遥控器），pay-per-view channel（付费频道）&lt;/p&gt;
+&lt;p&gt;safe：保险箱。让客人放置贵重物品的小盒子&lt;/p&gt;
+&lt;p&gt;cot：婴儿床&lt;/p&gt;
+&lt;p&gt;pull-out sofa：折叠沙发&lt;/p&gt;
+&lt;p&gt;armchair：扶手椅&lt;/p&gt;
+&lt;p&gt;bed linen：床单和枕套&lt;/p&gt;
+&lt;p&gt;iron and ironing board：熨斗和熨衣板&lt;/p&gt;
+&lt;p&gt;private jacuzzi：私人按摩浴缸，jacuzzi/whirlpool tub（按摩浴缸）&lt;/p&gt;
+&lt;p&gt;bar&lt;/p&gt;
+&lt;p&gt;brochure&lt;/p&gt;
+&lt;p&gt;airport shuttle：机场巴士&lt;/p&gt;
+&lt;p&gt;parking lot：停车场，valet parking service（代客泊车服务）&lt;/p&gt;
+&lt;p&gt;continental breakfast：欧陆式早餐&lt;/p&gt;
+&lt;p&gt;catering service：外烩餐饮服务&lt;/p&gt;
+&lt;p&gt;buffet：自助餐，breakfast buffet/dinner buffet&lt;/p&gt;
+&lt;p&gt;ice machine&lt;/p&gt;
+&lt;p&gt;vending machine：自动贩卖机&lt;/p&gt;
+&lt;p&gt;wheelchair accessible：轮椅通道。通常用电梯和斜坡&lt;/p&gt;
+&lt;p&gt;fitness/workout room：健身房&lt;/p&gt;
+&lt;p&gt;swimming pool&lt;/p&gt;
+&lt;p&gt;spa&lt;/p&gt;
+&lt;p&gt;laundry&lt;/p&gt;
+&lt;p&gt;dry cleaning&lt;/p&gt;
+&lt;p&gt;business center&lt;/p&gt;
+&lt;p&gt;pets allowed/pet-friendly&lt;/p&gt;
+&lt;p&gt;ski storage：滑雪用具寄存&lt;/p&gt;
+&lt;p&gt;main entrance：正门&lt;/p&gt;
+&lt;p&gt;reception：前台，front desk&lt;/p&gt;
+&lt;p&gt;lobby：饭店大厅&lt;/p&gt;
+&lt;p&gt;banquet/meeting room：宴会厅/会议室&lt;/p&gt;
+&lt;p&gt;elevator/lift[英]&lt;/p&gt;
+&lt;p&gt;stairs/stairway：楼梯&lt;/p&gt;
+&lt;p&gt;hall：走廊，hallway/corridor&lt;/p&gt;
+&lt;p&gt;emergency exit&lt;/p&gt;
+&lt;h2 id=&#34;hotel-staff&#34;&gt;Hotel Staff&lt;/h2&gt;
+&lt;p&gt;manager&lt;/p&gt;
+&lt;p&gt;receptionist&lt;/p&gt;
+&lt;p&gt;concierge：旅馆柜台职员&lt;/p&gt;
+&lt;p&gt;bellboy：行李员&lt;/p&gt;
+&lt;p&gt;housekeeper&lt;/p&gt;
+&lt;p&gt;booking a room&lt;/p&gt;
+&lt;p&gt;making a reservation&lt;/p&gt;
+&lt;p&gt;vacancy/No Vacancy&lt;/p&gt;
+&lt;p&gt;conference/convention：会议，banquet（宴会）&lt;/p&gt;
+&lt;p&gt;wedding party&lt;/p&gt;
+&lt;p&gt;check-in&lt;/p&gt;
+&lt;p&gt;check-out&lt;/p&gt;
+&lt;p&gt;key card&lt;/p&gt;
+&lt;p&gt;deposit：保证金、定金&lt;/p&gt;
+&lt;p&gt;morning call/wake-up call&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pronounce&#34;&gt;Pronounce&lt;/h1&gt;
 &lt;h2 id=&#34;live&#34;&gt;Live&lt;/h2&gt;
@@ -946,7 +1468,7 @@ adv.实地,现场地,以直播方式&lt;/p&gt;
 &lt;h5 id=&#34;assemblies&#34;&gt;Assemblies&lt;/h5&gt;
 &lt;p&gt;The Common Language Runtime (CLR), which is the virtual machine that the .NET Framework uses to execute code instructions, is a software product like any other and has been programmed to behave in a predictable and logical way when hosting applications.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Resolution process&lt;/strong&gt; The assembly resolution process is an important facet of the CLR. This covers the gap between adding a reference to an assembly or project and having the application running with this assembly loaded. The process is as follows:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/AssemblyResolutionProcess-20201226102807.jpg&#34; alt=&#34;Assembly resolution process&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/AssemblyResolutionProcess-20201226102807.jpg&#34; alt=&#34;Assembly resolution process&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;The CLR uses a just-in-time (JIT) model to resolve assemblies. As was already proven earlier in the chapter, the references contained in an application are not resolved as you start up the application, but rather when you first make use of a feature of that assembly—literally just in time.&lt;/p&gt;
@@ -1009,16 +1531,16 @@ adv.实地,现场地,以直播方式&lt;/p&gt;
 &lt;h4 id=&#34;asymmetric-layering非对称分层&#34;&gt;Asymmetric layering(非对称分层)&lt;/h4&gt;
 &lt;p&gt;Command/Query Separation(CQS): Bertrand Meyer, in his book Object-Oriented Software Construction (Prentice Hall, 1997), used the phrase command/query separation (CQS) to explain that all object methods should be one of only two things: a command or a query.&lt;/p&gt;
 &lt;p&gt;Command/Query Responsibility Segregation(CQRS): Commands and queries follow much the same rules as with CQS, but CQRS goes one step further: it acknowledges that commands and queries might need to follow different paths through the layering in order to be best handled.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/CQRS-20201227140634.jpg&#34; alt=&#34;Domain models should only be used for handling commands.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/CQRS-20201227140634.jpg&#34; alt=&#34;Domain models should only be used for handling commands.&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Sound management of dependencies很重要&lt;/p&gt;
 &lt;h2 id=&#34;interfaces-and-design-patterns&#34;&gt;Interfaces and design patterns&lt;/h2&gt;
 &lt;h3 id=&#34;diamond-inheritance-problem&#34;&gt;Diamond inheritance problem&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Diamond-20201227143025.png&#34; alt=&#34;Diamond inheritance&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/Diamond-20201227143025.png&#34; alt=&#34;Diamond inheritance&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Because of this ambiguity, the .NET Framework does not allow multiple inheritance of classes.&lt;/p&gt;
 &lt;h3 id=&#34;explicit-implementation&#34;&gt;Explicit implementation&lt;/h3&gt;
 &lt;h3 id=&#34;polymorphism多态&#34;&gt;Polymorphism(多态)&lt;/h3&gt;
 &lt;p&gt;The ability to use an object of one type and have it implicitly act as if it were of a different type is called polymorphism.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Polymorphism-20201227144730.png&#34; alt=&#34;ploymorphism&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/Polymorphism-20201227144730.png&#34; alt=&#34;ploymorphism&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;adaptive-design-patterns&#34;&gt;Adaptive design patterns&lt;/h3&gt;
 &lt;h4 id=&#34;the-null-object-pattern&#34;&gt;The Null Object pattern&lt;/h4&gt;
 &lt;h4 id=&#34;the-isnull-property-anti-pattern&#34;&gt;The IsNull property anti-pattern&lt;/h4&gt;
@@ -1284,1126 +1806,28 @@ adv.实地,现场地,以直播方式&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;refactor&#34;&gt;Refactor&lt;/h2&gt;
 &lt;p&gt;如何有效地refactor？&lt;/p&gt;
+&lt;h1 id=&#34;issue&#34;&gt;Issue&lt;/h1&gt;
+&lt;h2 id=&#34;how-to-test-a-recursive-function&#34;&gt;How to test a recursive Function&lt;/h2&gt;
+&lt;p&gt;recursion 在所难免，那应该如何优雅的测试递归呢？&lt;/p&gt;
+&lt;p&gt;Stack Overflow推荐方式是设置待测试interface所对应class的method为vitrul，然后增加fake class。为fake class增加额外的property，该property用来记录待测试method的执行次数。然后再UT中不再对原interface测试，而是对fake class测试。&lt;/p&gt;
+&lt;p&gt;但是如果是直接对class进行测试，那为何不直接在待测试的class中增加property用来记录method执行次数。然后UT直接测试class。新加的property虽然在生产环境中也会进行计算，但是不会通过interface暴露给接口使用方，自增的property对性能影响也不大。&lt;/p&gt;
+&lt;h3 id=&#34;reference-2&#34;&gt;Reference&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/32660959/test-a-recursive-function-with-moq&#34;&gt;Test a recursive Function with Moq&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;how-to-test-for-order-of-calls&#34;&gt;How to test for order of calls&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;mock.InSequence(mockSequence).Setup(x =&amp;gt; x.A()).Returns(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;);
+mock.InSequence(mockSequence).Setup(x =&amp;gt; x.B()).Returns(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;It might not be very obvious, but what this code &lt;em&gt;really&lt;/em&gt; does is to set up two conditional setups, such that the second setup will not be matched by any invocations until after &lt;code&gt;A&lt;/code&gt; has been matched.&lt;/p&gt;
+&lt;p&gt;You can think of it this way:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; step = &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;;
+mock.When(() =&amp;gt; step == &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;).Setup(x =&amp;gt; x.A()).Returns(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;).Callback(() =&amp;gt; step++);
+mock.When(() =&amp;gt; step == &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;).Setup(x =&amp;gt; x.B()).Returns(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;).Callback(() =&amp;gt; step++);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
 - https://www.openheart.icu/cs/test-driven-development/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Idempotent</title>
-        <link>https://www.openheart.icu/cs/idempotent/</link>
-        <pubDate>Thu, 12 Nov 2020 15:58:21 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/idempotent/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/idempotent/ -&lt;h2 id=&#34;什么是幂等&#34;&gt;什么是幂等？&lt;/h2&gt;
-&lt;p&gt;在&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%95%B8%E5%AD%B8&#34;&gt;数学&lt;/a&gt;里，&lt;strong&gt;幂等&lt;/strong&gt;有两种主要的定义。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在某&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E9%81%8B%E7%AE%97&#34;&gt;二元运算&lt;/a&gt;下，&lt;strong&gt;幂等元素&lt;/strong&gt;是指被自己重复运算（或对于&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B8&#34;&gt;函数&lt;/a&gt;是为&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0&#34;&gt;复合&lt;/a&gt;）的结果等于它自己的元素。例如，乘法下唯一两个幂等&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%AF%A6%E6%95%B8&#34;&gt;实数&lt;/a&gt;为0和1。&lt;/li&gt;
-&lt;li&gt;某&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%80%E5%85%83%E9%81%8B%E7%AE%97&#34;&gt;一元运算&lt;/a&gt;为&lt;strong&gt;幂等&lt;/strong&gt;的时，其作用在任一元素两次后会和其作用一次的结果相同。例如，&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E7%AC%A6%E8%99%9F&#34;&gt;高斯符号&lt;/a&gt;便是幂等的。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%80%E5%85%83%E9%81%8B%E7%AE%97&#34;&gt;一元运算&lt;/a&gt;的定义是&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E9%81%8B%E7%AE%97&#34;&gt;二元运算&lt;/a&gt;定义的特例&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In &lt;a href=&#34;https://en.wikipedia.org/wiki/Computer_science&#34;&gt;computer science&lt;/a&gt;, the term &lt;em&gt;idempotence&lt;/em&gt; may have a different meaning depending on the context in which it is applied:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;in &lt;a href=&#34;https://en.wikipedia.org/wiki/Imperative_programming&#34;&gt;imperative programming&lt;/a&gt;(命令编程), a &lt;a href=&#34;https://en.wikipedia.org/wiki/Subroutine&#34;&gt;subroutine&lt;/a&gt;(子程序) with &lt;a href=&#34;https://en.wikipedia.org/wiki/Side_effect_(computer_science)&#34;&gt;side effects&lt;/a&gt; is idempotent if the system state remains the same after one or several calls, in other words if the function from the system state space to itself associated to the subroutine is idempotent in the mathematical sense given in the &lt;a href=&#34;https://en.wikipedia.org/wiki/Idempotence#Definition&#34;&gt;definition&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;in &lt;a href=&#34;https://en.wikipedia.org/wiki/Functional_programming&#34;&gt;functional programming&lt;/a&gt;, a &lt;a href=&#34;https://en.wikipedia.org/wiki/Pure_function&#34;&gt;pure function&lt;/a&gt; is idempotent if it is idempotent in the mathematical sense given in the &lt;a href=&#34;https://en.wikipedia.org/wiki/Idempotence#Definition&#34;&gt;definition&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This is a very useful property in many situations, as it means that an operation can be repeated or retried as often as necessary without causing unintended effects. With non-idempotent operations, the algorithm may have to keep track of whether the operation was already performed or not.&lt;/p&gt;
-&lt;p&gt;一个HTTP方法是&lt;strong&gt;幂等&lt;/strong&gt;的，指的是同样的请求被执行一次与连续执行多次的效果是一样的，服务器的状态也是一样的。换句话说就是，幂等方法不应该具有副作用（统计用途除外）。在正确实现的条件下，&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/GET&#34;&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/a&gt;，&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/HEAD&#34;&gt;&lt;code&gt;HEAD&lt;/code&gt;&lt;/a&gt;，&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/PUT&#34;&gt;&lt;code&gt;PUT&lt;/code&gt;&lt;/a&gt;和&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE&#34;&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/a&gt; 等方法都是&lt;strong&gt;幂等&lt;/strong&gt;的，而 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/POST&#34;&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/a&gt; 方法不是。所有的 &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Glossary/safe&#34;&gt;safe&lt;/a&gt; 方法也都是幂等的。&lt;/p&gt;
-&lt;p&gt;幂等性只与后端服务器的实际状态有关，而每一次请求接收到的状态码不一定相同。例如，第一次调用&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE&#34;&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/a&gt; 方法有可能返回 &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/200&#34;&gt;&lt;code&gt;200&lt;/code&gt;&lt;/a&gt;，但是后续的请求可能会返回&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/404&#34;&gt;&lt;code&gt;404&lt;/code&gt;&lt;/a&gt;。&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE&#34;&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/a&gt; 的言外之意是，开发者不应该使用&lt;code&gt;DELETE&lt;/code&gt;方法实现具有删除最后条目功能的 RESTful API。&lt;/p&gt;
-&lt;p&gt;需要注意的是，服务器不一定会确保请求方法的幂等性，有些应用可能会错误地打破幂等性约束。&lt;/p&gt;
-&lt;h2 id=&#34;接口幂等性&#34;&gt;接口幂等性&lt;/h2&gt;
-&lt;p&gt;在分布式系统中，一般都会有重试机制。但重复机制又有一定几率出现重复的数据。例如订单系统消费了消息，但是由于网络等问题消息系统未收到反馈是否已成功处理，此时消息系统会根据配置的规则隔断时间就retry一次。但如果此时网络恢复正常，我第一次收到的消息成功处理了，这是又收到一条消息，如果没有防护措施，就有可能出现重复数据。&lt;/p&gt;
-&lt;p&gt;幂等性指&lt;strong&gt;任意多次执行所产生的影响均与一次执行的影响相同。多次调用对系统的产生的影响是一样的，即对资源的作用是一样的，但是返回值允许不同。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;对于业务中需要考虑幂等性的地方一般都是接口的重复请求，重复请求是指同一个请求因为某些原因被多次提交。导致这个情况会有几种场景：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;前端重复提交&lt;/strong&gt;：提交订单，用户快速重复点击多次，造成后端生成多个内容重复的订单。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;接口超时重试&lt;/strong&gt;：对于给第三方调用的接口，为了防止网络抖动或其他原因造成请求丢失，这样的接口一般都会设计成超时重试多次。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;消息重复消费&lt;/strong&gt;：MQ消息中间件，消息重复消费。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;幂等性实现方式&#34;&gt;幂等性实现方式&lt;/h2&gt;
-&lt;h4 id=&#34;查询操作&#34;&gt;查询操作&lt;/h4&gt;
-&lt;p&gt;查询一次和查询多次，在数据不变的情况下，查询结果是一样的。select是天然的幂等操作；&lt;/p&gt;
-&lt;h4 id=&#34;删除操作&#34;&gt;删除操作&lt;/h4&gt;
-&lt;p&gt;删除操作也是幂等的，删除一次和多次删除都是把数据删除。(注意可能返回结果不一样，删除的数据不存在，返回0，删除的数据多条，返回结果多个)&lt;/p&gt;
-&lt;h4 id=&#34;唯一索引&#34;&gt;唯一索引&lt;/h4&gt;
-&lt;p&gt;这个机制是&lt;strong&gt;利用了数据库的主键唯一约束的特性&lt;/strong&gt;，解决了在&lt;strong&gt;insert场景&lt;/strong&gt;时幂等问题。但主键的要求不是自增的主键，这样就需要业务&lt;strong&gt;生成全局唯一&lt;/strong&gt;的主键，之前老顾的文章也介绍过&lt;strong&gt;分布式唯一主键ID&lt;/strong&gt;的生成，可自行查阅。如果是&lt;strong&gt;分库分表场景下&lt;/strong&gt;，&lt;strong&gt;路由规则要保证相同请求下&lt;/strong&gt;，&lt;strong&gt;落地在同一个数据库和同一表中&lt;/strong&gt;，要不然&lt;strong&gt;数据库主键约束就不起效果&lt;/strong&gt;了，因为是不同的数据库和表主键不相关。因为对主键有一定的要求，这个方案就跟业务有点耦合了，&lt;strong&gt;无法用自增主键了&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;防止新增脏数据。比如：支付宝的资金账户，支付宝也有用户账户，每个用户只能有一个资金账户，怎么防止给用户创建资金账户多个，那么给资金账户表中的用户ID加唯一索引，所以一个用户新增成功一个资金账户记录。要点：唯一索引或唯一组合索引来防止新增数据存在脏数据。&lt;/p&gt;
-&lt;h4 id=&#34;去重表机制&#34;&gt;去重表机制&lt;/h4&gt;
-&lt;p&gt;往去重表里插入数据的时候，利用数据库的唯一索引特性，保证唯一的逻辑。唯一序列号可以是一个字段，也可以是多字段的唯一性组合。&lt;/p&gt;
-&lt;p&gt;这里要注意的是，&lt;strong&gt;去重表和业务表应该在同一库中&lt;/strong&gt;，这样就保证了在同一个事务，即使业务操作失败了，也会把去重表的数据回滚。&lt;strong&gt;这个很好的保证了数据一致性&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;另外，使用数据库防重表的方式它有个严重的缺点，那就是系统容错性不高，如果幂等表所在的数据库连接异常或所在的服务器异常，则会导致整个系统幂等性校验出问题。&lt;/p&gt;
-&lt;h4 id=&#34;token机制&#34;&gt;Token机制&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Token-20201112171801.jpeg&#34; alt=&#34;Token&#34;&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;服务端提供了发送token的接口，我们在分析业务的时候，哪些是存在幂等问题的，就必须在执行业务前，前去获取token，服务器会把token保存到redis中；&lt;/li&gt;
-&lt;li&gt;然后调用业务接口请求时，把token携带过去，一般反正请求头部；&lt;/li&gt;
-&lt;li&gt;服务器判断token是否存在redis中，存在表示第一次请求，可以继续执行业务，业务完成后，&lt;strong&gt;需要把redis中的token删掉&lt;/strong&gt;；&lt;/li&gt;
-&lt;li&gt;如果判断token不存在redis中，就表示是重复操作，直接返回重复标记给client，这样就保证了业务代码，不被重复执行。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;服务器端第一次验证相同过后，会将session中的Token值更新下，若用户重复提交，第二次的验证判断将失败，因为用户提交的表单中的Token没变，但服务器端session中Token已经改变了。&lt;/p&gt;
-&lt;p&gt;这就是token+redis的幂等方案。适用于绝大部分场景。主要针对前端重复连续多次点击的情况，网上也有另一个版本的Token方案，不同的地方是：&lt;strong&gt;网上方案检验token存在后，就立刻删除token，再进行业务处理&lt;/strong&gt;。而上面的方式是检验token存在后，先进行业务处理，再删除token。&lt;/p&gt;
-&lt;p&gt;网上方案的缺点是&lt;strong&gt;先删除token&lt;/strong&gt;，这是出现系统问题导致&lt;strong&gt;业务处理出现异常&lt;/strong&gt;，业务处理没有成功，接口调用方也没有获取到明确的结果，然后&lt;strong&gt;进行重试，但token已经删除掉了&lt;/strong&gt;，服务端判断token不存在，&lt;strong&gt;认为是重复请求，就直接返回了&lt;/strong&gt;，无法进行业务处理了。&lt;/p&gt;
-&lt;p&gt;而上面的方案&lt;strong&gt;后删除token&lt;/strong&gt;也是会存在问题的，如果进行业务处理成功后，删除redis中的token失败了，这样就导致了有可能会发生重复请求，因为token没有被删除。&lt;/p&gt;
-&lt;h4 id=&#34;乐观锁机制&#34;&gt;乐观锁机制&lt;/h4&gt;
-&lt;p&gt;乐观锁只是在更新数据那一刻锁表，其他时间不锁表，所以相对于悲观锁，效率更高。乐观锁的实现方式多种多样可以通过version或者其他状态条件：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;通过版本号实现update table_xxx set name=#name#,version=version+1 where version=#version#；&lt;/li&gt;
-&lt;li&gt;通过条件限制 update table_xxx set avai_amount=avai_amount-#subAmount# where avai_amount-#subAmount# &amp;gt;= 0&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;加上了版本号后，就让此计算赋值型业务，具备了幂等性。&lt;/p&gt;
-&lt;p&gt;要求：quality-#subQuality# &amp;gt;= ，这个情景适合不用版本号，只更新是做数据安全校验，适合库存模型，扣份额和回滚份额，性能更高。&lt;/p&gt;
-&lt;p&gt;乐观锁缺点：在操作业务前，需要先查询出当前的version版本。&lt;/p&gt;
-&lt;h4 id=&#34;分布式锁&#34;&gt;分布式锁&lt;/h4&gt;
-&lt;p&gt;如果是分布是系统，构建全局唯一索引比较困难，例如唯一性的字段没法确定，这时候可以引入分布式锁，通过第三方的系统(redis或zookeeper)，在业务系统插入数据或者更新数据，获取分布式锁，然后做操作，之后释放锁，这样其实是把多线程并发的锁的思路，引入多多个系统，也就是分布式系统中得解决思路。要点：某个长流程处理过程要求不能并发执行，可以在流程执行之前根据某个标志(用户ID+后缀等)获取分布式锁，其他流程执行时获取锁就会失败，也就是同一时间该流程只能有一个能执行成功，执行完成后，释放分布式锁(分布式锁要第三方系统提供)。&lt;/p&gt;
-&lt;h4 id=&#34;状态机&#34;&gt;状态机&lt;/h4&gt;
-&lt;p&gt;对于很多业务有一个业务流转状态的，每个状态都有前置状态和后置状态，以及最后的结束状态。例如流程的待审批，审批中，驳回，重新发起，审批通过，审批拒绝。订单的待提交，待支付，已支付，取消。&lt;/p&gt;
-&lt;p&gt;在设计单据相关的业务，或者是任务相关的业务，肯定会涉及到状态机，就是业务单据上面有个状态，状态在不同的情况下会发生变更，一般情况下存在有限状态机，这时候，如果状态机已经处于下一个状态，这时候来了一个上一个状态的变更，理论上是不能够变更的，这样的话，保证了有限状态机的幂等。注意：订单等单据类业务，存在很长的状态流转，一定要深刻理解状态机，对业务系统设计能力提高有很大帮助。&lt;/p&gt;
-&lt;h4 id=&#34;select--insert&#34;&gt;select + insert&lt;/h4&gt;
-&lt;p&gt;并发不高的后台系统，或者一些任务JOB，为了支持幂等，支持重复执行，简单的处理方法是，先查询下一些关键数据，判断是否已经执行过，再进行业务处理，就可以了。注意：核心高并发流程不要用这种方法。&lt;/p&gt;
-&lt;h4 id=&#34;对外提供接口的api如何保证幂等&#34;&gt;对外提供接口的api如何保证幂等&lt;/h4&gt;
-&lt;p&gt;如银联提供的付款接口：需要接入商户提交付款请求时附带：source来源，seq序列号；source+seq在数据库里面做唯一索引，防止多次付款(并发时，只能处理一个请求) 。
-重点：对外提供接口为了支持幂等调用，接口有两个字段必须传，一个是来源source，一个是来源方序列号seq，这个两个字段在提供方系统里面做联合唯一索引，这样当第三方调用时，先在本方系统里面查询一下，是否已经处理过，返回相应处理结果；没有处理过，进行相应处理，返回结果。注意，为了幂等友好，一定要先查询一下，是否处理过该笔业务，不查询直接插入业务系统，会报错，但实际已经处理了。&lt;/p&gt;
-- https://www.openheart.icu/cs/idempotent/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Dependency Injection</title>
-        <link>https://www.openheart.icu/cs/dependency-injection/</link>
-        <pubDate>Thu, 15 Oct 2020 23:28:00 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/cs/dependency-injection/</guid>
-        <description>42th openheart https://www.openheart.icu/cs/dependency-injection/ -&lt;h1 id=&#34;dependency-injection&#34;&gt;Dependency Injection&lt;/h1&gt;
-&lt;h2 id=&#34;ioc&#34;&gt;IOC&lt;/h2&gt;
-&lt;p&gt;Spring 框架为Java提供了IOC（Inversion of Control），只是提供了一个服务容器，程序控制我们需要的对象，而不是在使用对象时我们亲自直接控制。既然提到了IOC就详细了解一下这种设计思想：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/Coupling-20200808133032885.png&#34; alt=&#34;Coupling-20200808133032885.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;为了解决对象间耦合度过高的问题，软件专家Michael Mattson提出了IOC理论，用来实现对象之间的“解耦”。&lt;/p&gt;
-&lt;p&gt;控制反转是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/IOC-20200808134840983.png&#34; alt=&#34;IOC-20200808134840983&#34;&gt;&lt;/p&gt;
-&lt;p&gt;软件系统在没有引入IOC容器之前，对象A依赖于对象B，那么对象A在初始化或者运行到某一点的时候，自己必须主动去创建对象B或者使用已经创建的对象B。无论是创建还是使用对象B，控制权都在自己手上。&lt;/p&gt;
-&lt;p&gt;软件系统在引入IOC容器之后，这种情形就完全改变了，由于IOC容器的加入，对象A与对象B之间失去了直接联系，所以，当对象A运行到需要对象B的时候，IOC容器会主动创建一个对象B注入到对象A需要的地方。&lt;/p&gt;
-&lt;p&gt;通过前后的对比，我们不难看出来：对象A获得依赖对象B的过程，由主动行为变为了被动行为，控制权颠倒过来了，这就是“控制反转”这个名称的由来。&lt;/p&gt;
-&lt;p&gt;控制反转可以用来减低计算机代码之间的耦合度。 其中最常见的方式叫做依赖注入（Dependency Injection，简称DI），还有一种方式叫“依赖查找”（Dependency Lookup）。&lt;/p&gt;
-&lt;h2 id=&#34;dip&#34;&gt;DIP&lt;/h2&gt;
-&lt;p&gt;要了解控制反转( Inversion of Control ), 我觉得有必要先了解软件设计的一个重要思想：依赖倒置原则（Dependency Inversion Principle ）。&lt;/p&gt;
-&lt;p&gt;依赖倒置原则（Dependence Inversion Principle）是程序要依赖于抽象接口，不要依赖于具体实现。 简单的说就是要求对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。&lt;/p&gt;
-&lt;p&gt;在&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B&#34;&gt;面向对象编程&lt;/a&gt;领域中，&lt;strong&gt;依赖反转原则&lt;/strong&gt;（Dependency inversion principle，DIP）是指一种特定的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%80%A6%E5%90%88%E6%80%A7_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)&#34;&gt;解耦&lt;/a&gt;（传统的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%80%A6%E5%90%88%E6%80%A7_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)&#34;&gt;依赖&lt;/a&gt;关系创建在高层次上，而具体的策略设置则应用在低层次的模块上）形式，使得高层次的模块不依赖于低层次的模块的实现细节，依赖关系被颠倒（反转），从而使得低层次模块依赖于高层次模块的需求抽象。&lt;/p&gt;
-&lt;p&gt;该原则规定：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;高层次的模块不应该依赖于低层次的模块，两者都应该依赖于&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)&#34;&gt;抽象接口&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;该原则颠倒了一部分人对于面向对象设计的认识方式。如高层次和低层次对象都应该依赖于相同的抽象接口。控制反转就是依赖倒置原则的一种代码设计的思路。具体采用的方法就是所谓的依赖注入（Dependency Injection）。&lt;/p&gt;
-&lt;p&gt;设计模式中的五大原则 &lt;a href=&#34;https://zh.wikipedia.org/wiki/SOLID_(%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1)&#34;&gt;SOLID&lt;/a&gt; 中的 D 指代的就是依赖反转原则。&lt;/p&gt;
-&lt;p&gt;eg: &lt;a href=&#34;https://flylib.com/books/en/4.444.1.71/1/&#34;&gt;Lamp and Button：A Simple DIP Example&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;di&#34;&gt;DI&lt;/h2&gt;
-&lt;h3 id=&#34;ioc与di的区别&#34;&gt;IOC与DI的区别&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;控制反转是一种在软件工程中解耦合的思想，调用类只依赖接口，而不依赖具体的实现类，减少了耦合。控制权交给了容器，在运行的时候才由容器决定将具体的实现动态的“注入”到调用类的对象中。&lt;/li&gt;
-&lt;li&gt;依赖注入是一种设计模式，可以作为控制反转的一种实现方式。依赖注入就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。&lt;/li&gt;
-&lt;li&gt;通过IOC框架，类A依赖类B的强耦合关系可以在运行时通过容器建立，也就是说把创建B实例的工作移交给容器，类A只管使用就可以。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;.net core 框架自带&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.iserviceprovider&#34;&gt;IServiceProvider&lt;/a&gt;以实现依赖注入&lt;/p&gt;
-&lt;h3 id=&#34;lifetime&#34;&gt;LifeTime&lt;/h3&gt;
-&lt;p&gt;MSDN指出了有关&lt;code&gt;AddTransient&lt;/code&gt;/&lt;code&gt;AddScoped&lt;/code&gt;/&lt;code&gt;AddSingleton&lt;/code&gt;的区别，并带有一个小示例：&lt;/p&gt;
-&lt;p&gt;创建一个Operation接口然后分别对应实现上述三种依赖注入，为Operation添加属性&lt;code&gt;Guid OperationId&lt;/code&gt;，凭借此属性值，我们可以在逻辑层与controller控制器中分别implement，对比两处implement的OperationId可以发现这三种模式的lifetime。（&lt;em&gt;The &lt;code&gt;IOperationSingletonInstance&lt;/code&gt; service is using a specific instance with a known ID of &lt;code&gt;Guid.Empty&lt;/code&gt;. It&amp;rsquo;s clear when this type is in use (its GUID is all zeroes).&lt;/em&gt;）&lt;/p&gt;
-&lt;p&gt;IOperation：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperation
-{
-  Guid OperationId { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-}
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationTransient : IOperation
-{
-}
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationScoped : IOperation
-{
-}
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationSingleton : IOperation
-{
-}
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;interface&lt;/span&gt; IOperationSingletonInstance : IOperation
-{
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Operation:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Operation&lt;/span&gt; : IOperation, IOperationTransient, IOperationScoped, IOperationSingleton, IOperationSingletonInstance
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Guid OperationId { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Operation(Guid operationId)
-  {
-    OperationId = operationId;
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Operation() : &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;this&lt;/span&gt;(Guid.NewGuid())
-  {
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OperationSercice:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;OperationService&lt;/span&gt;
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationTransient TransientOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationScoped ScopedOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationSingleton SingletonOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IOperationSingletonInstance SingletonInstanceOperation { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;get&lt;/span&gt;; }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; OperationService(IOperationTransient transientOperation,
-                          IOperationScoped scopedOperation,
-                          IOperationSingleton singletonOperation,
-                          IOperationSingletonInstance instanceOperation)
-  {
-    TransientOperation = transientOperation;
-    ScopedOperation = scopedOperation;
-    SingletonOperation = singletonOperation;
-    SingletonInstanceOperation = instanceOperation;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OperationController:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;OperationsController&lt;/span&gt; : Controller
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; OperationService _operationService;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationTransient _transientOperation;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationScoped _scopedOperation;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationSingleton _singletonOperation;
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;readonly&lt;/span&gt; IOperationSingletonInstance _singletonInstanceOperation;
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; OperationsController(OperationService operationService,
-                              IOperationTransient transientOperation,
-                              IOperationScoped scopedOperation,
-                              IOperationSingleton singletonOperation,
-                              IOperationSingletonInstance singletonInstanceOperation)
-  {
-    _operationService = operationService;
-    _transientOperation = transientOperation;
-    _scopedOperation = scopedOperation;
-    _singletonOperation = singletonOperation;
-    _singletonInstanceOperation = singletonInstanceOperation;
-  }
-
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IActionResult Index()
-  {
-    &lt;span style=&#34;color:#228b22&#34;&gt;// viewbag contains controller-requested services
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    ViewBag.Transient = _transientOperation;
-    ViewBag.Scoped = _scopedOperation;
-    ViewBag.Singleton = _singletonOperation;
-    ViewBag.SingletonInstance = _singletonInstanceOperation;
-
-    &lt;span style=&#34;color:#228b22&#34;&gt;// operation service has its own requested services
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;    ViewBag.Service = _operationService;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; View();
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;两次请求对比如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/DI-20200809140803.png&#34; alt=&#34;DI-20200809140803&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.openheart.icu/image/DI-20200809140837.png&#34; alt=&#34;DI-20200809140837&#34;&gt;&lt;/p&gt;
-&lt;p&gt;观察在请求中以及请求之间的哪个&lt;code&gt;OperationId&lt;/code&gt;值有所不同。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Transient 对象总是不同的; 每个控制器和每个服务都提供了一个新的实例。&lt;/li&gt;
-&lt;li&gt;Scoped 对象在请求中是相同的，但在不同的请求中是不同的。&lt;/li&gt;
-&lt;li&gt;Singleton 对象对于每个对象和每个请求都是一样的（不管&lt;code&gt;ConfigureServices&lt;/code&gt;中是否提供一个实例）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC%E5%8E%9F%E5%88%99&#34;&gt;依赖反转原则&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/07af9dbbbc4b&#34;&gt;控制反转（IOC）与依赖注入（DI）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/91218464&#34;&gt;.NET Core中的IoC和DI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.martinfowler.com/articles/injection.html&#34;&gt;Inversion of Control Containers and the Dependency Injection pattern&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://flylib.com/books/en/4.444.1.71/1/&#34;&gt;A Simple DIP Example&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1&#34;&gt;Dependency injection in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-- https://www.openheart.icu/cs/dependency-injection/ - ALL RIGHTS RESERVED KRIS NIE</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Dot Net Issue</title>
-        <link>https://www.openheart.icu/dotnet/dot-net-issue/</link>
-        <pubDate>Thu, 10 Sep 2020 11:00:35 +0000</pubDate>
-        
-        <guid>https://www.openheart.icu/dotnet/dot-net-issue/</guid>
-        <description>42th openheart https://www.openheart.icu/dotnet/dot-net-issue/ -&lt;h1 id=&#34;hot-reload-razor-views&#34;&gt;Hot-Reload Razor Views&lt;/h1&gt;
-&lt;p&gt;在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（&lt;em&gt;it&amp;rsquo;s fundamentally how ASP.NET MVC Core works&lt;/em&gt;）。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Razor files are compiled at both &lt;strong&gt;build&lt;/strong&gt; and &lt;strong&gt;publish&lt;/strong&gt; time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用&lt;strong&gt;运行时编译&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note that run time is not included in this list by default.&lt;/strong&gt; To change this behaviour:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Add the Nuget package &lt;a href=&#34;https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/&#34;&gt;&lt;code&gt;Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Change your &lt;code&gt;Startup.ConfigureServices&lt;/code&gt; code to include runtime compilation:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; ConfigureServices(IServiceCollection services)
-{
-  services
-    .AddControllersWithViews()
-    .AddRazorRuntimeCompilation();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/58300922/how-to-enable-the-view-hot-reloading-in-rider&#34;&gt;How to enable the view hot-reloading in Rider? &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/zh-cn/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0&amp;amp;tabs=visual-studio#runtime-compilation&#34;&gt;Razor file compilation in ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;watch-out-project-on-rider&#34;&gt;Watch out Project On Rider&lt;/h1&gt;
-&lt;p&gt;To let Project hot-reload, we can use the &amp;ldquo;Before launch&amp;rdquo; option as a run configuration to make this happen. To do so:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Select Run -&amp;gt; Edit Configuration from the menu options&lt;/li&gt;
-&lt;li&gt;Add a new &lt;code&gt;Before launch&lt;/code&gt;Click the + icon and select the &amp;ldquo;Run Executnal Tool &amp;quot; option from the list&lt;/li&gt;
-&lt;li&gt;In the options that are displayed, provide the following&amp;hellip;
-&lt;ul&gt;
-&lt;li&gt;Name: Watch (or whatever you prefer)&lt;/li&gt;
-&lt;li&gt;Exe path: /usr/local/share/dotnet/dotnet&lt;/li&gt;
-&lt;li&gt;Program Arguments: watch run&lt;/li&gt;
-&lt;li&gt;Working directory: [path to your project where .csproj file resides]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Click &amp;ldquo;OK&amp;rdquo; to apply/save the changes.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;reference-1&#34;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/46349038/jetbrains-rider-run-with-watch&#34;&gt;JetBrains Rider run with watch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;newguid&#34;&gt;NewGuid()&lt;/h1&gt;
-&lt;h2 id=&#34;guidhttpsenwikipediaorgwikiuniversally_unique_identifier&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Universally_unique_identifier&#34;&gt;GUID&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;全局唯一标识符&lt;/strong&gt;（Globally Unique &lt;strong&gt;Id&lt;/strong&gt;entifier，缩写：&lt;strong&gt;GUID&lt;/strong&gt;；发音为/ˈɡuːɪd/或/ˈɡwɪd/）是一种由&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%AE%97%E6%B3%95&#34;&gt;算法&lt;/a&gt;生成的唯一标识，通常表示成32个16进制数字（0－9，A－F）组成的字符串，如：&lt;code&gt;{21EC2020-3AEA-1069-A2DD-08002B30309D}&lt;/code&gt;，它实质上是一个128位长的二进制整数。GUID一词有时也专指微软对UUID标准的实现。&lt;/p&gt;
-&lt;p&gt;GUID的主要目的是产生完全唯一的数字。在理想情况下，任何计算机和计算机集群都不会生成两个相同的GUID。GUID的总数也足够大，达到了2128（3.4×1038）个，所以随机生成两个相同GUID的可能性是非常小的，但并不为0。所以，用于生成GUID的算法通常都加入了非随机的参数（时间），以保证这种重复的情况不会发生。&lt;/p&gt;
-&lt;p&gt;GUID 主要用于在拥有多个节点、多台计算机的网络或系统中，分配必须具有唯一性的标识符。在 Windows 平台上，GUID 应用非常广泛：注册表、类及接口标识、数据库、甚至自动生成的机器名、目录名等。&lt;/p&gt;
-&lt;p&gt;与自增长id相比较：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;优点&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;GUID&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;1. GUID过长，看表现形式，至少都有32位，长的38位，浪费存储空间 2. GUID是根据硬件设备相关ID以及时间戳生成的 3. GUID不利于检索、外键关联&lt;/td&gt;
-&lt;td&gt;1. 一般来说不担心有冲突的影响，而且，根据GUID的生成规则，还能大致知道生成的计算机硬件设备、时间等信息（但这个有多少意义呢）2. 能在业务层就知道目标ID，而不是数据提交给数据库系统后才确定&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;自增长&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;1. 多数据库同步、读写分离十分不方便。&lt;/td&gt;
-&lt;td&gt;1. 使用简单&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;systemguidnewguidtostring&#34;&gt;System.Guid.NewGuid().ToString()&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Guid.NewGuid()是指生成唯一码的规则&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;System.Guid.NewGuid().ToString(format)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;说明符 返回值的格式&lt;/p&gt;
-&lt;p&gt;N 32 位字符：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/p&gt;
-&lt;p&gt;D 由连字符分隔的 32 位数字：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&lt;/p&gt;
-&lt;p&gt;B 括在大括号中、由连字符分隔的 32 位数字：{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}&lt;/p&gt;
-&lt;p&gt;P 括在圆括号中、由连字符分隔的 32 位数字：(xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString()		  : 1f13a943-4c7e-4bfc-aac5-935886591424&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;N&amp;rdquo;)	: 3a81013f9ee549b38f11ee3d50f5bd78&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;D&amp;rdquo;)	: c4219375-c2c8-4639-86e8-8d910ed12186 &amp;ndash; 默认为：D&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;B&amp;rdquo;)	: {a793927d-9a1b-4d25-9562-0a59522db9c0}&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;P&amp;rdquo;)	: (a99839b9-da94-40fd-87a5-4a5e73677b1f)&lt;/p&gt;
-&lt;p&gt;Guid.NewGuid().ToString(&amp;ldquo;X&amp;rdquo;)	: {0xb294a44e,0x43d9,0x4b60,{0xb5,0xb9,0x32,0x29,0xae,0x46,0x45,0x17}}&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;如果在程序中使用&lt;strong&gt;D&lt;/strong&gt;，则需要注意数据库字段长应为&lt;code&gt;36&lt;/code&gt;而不是32&lt;/em&gt;。 但是数据库一般直接可以使用&lt;code&gt;uniqueidentifier&lt;/code&gt;类型的字段存储guid。&lt;/p&gt;
-&lt;h2 id=&#34;guids-case-sensitivehttpsbytescomtopicc-sharpanswers233494-guids-case-sensitive&#34;&gt;&lt;a href=&#34;https://bytes.com/topic/c-sharp/answers/233494-guids-case-sensitive&#34;&gt;GUIDS case sensitive?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;NO&lt;/code&gt;，code below will console &amp;lsquo;NO&amp;rsquo;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; guid1 = Guid.Parse(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;aaaaaaaa-bbbb-cccc-eeee-ffffffffffff&amp;#34;&lt;/span&gt;);
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; guid2 = Guid.Parse(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;AAAAAAAA-BBBB-CCCC-EEEE-FFFFFFFFFFFF&amp;#34;&lt;/span&gt;);
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (guid1 == guid2)
-{
-	Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;NO&amp;#34;&lt;/span&gt;);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://tools.ietf.org/html/rfc4122#section-3&#34;&gt;RFC 4122 Section 3&lt;/a&gt; requires that the characters be generated in lower case, while being case-insensitive on input.&lt;/p&gt;
-&lt;p&gt;Microsoft GUIDs are sometimes represented with surrounding braces:&lt;/p&gt;
-&lt;p&gt;This format should not be confused with &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Windows_Registry&#34;&gt;Windows Registry&lt;/a&gt; format&amp;rdquo;, which refers to the format &lt;em&gt;within&lt;/em&gt; the curly braces.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;model--entity--dto--viewmodel&#34;&gt;model &amp;amp; entity &amp;amp; dto &amp;amp; viewmodel&lt;/h1&gt;
-&lt;h2 id=&#34;model&#34;&gt;model&lt;/h2&gt;
-&lt;p&gt;model是一个模型，里面装了各种数据，将一个model传递给view，在试图页面就可以使用model里面的数据来呈现到页面上。&lt;/p&gt;
-&lt;h2 id=&#34;entity&#34;&gt;entity&lt;/h2&gt;
-&lt;p&gt;entity是实体，就是和数据表一一对应的，一个实体一张表&lt;/p&gt;
-&lt;p&gt;官方的demo没有entity这个说法，他只有model，model就是表，也是传递给view的model，就是说他的model即是model又是entity。而我们实际运用需要将model分成ViewModel和Entity，甚至还要加入Dto。&lt;/p&gt;
-&lt;h2 id=&#34;viewmodel&#34;&gt;viewmodel&lt;/h2&gt;
-&lt;p&gt;MSDOC详细介绍页面直接返回一个model，这个model就是表中的一条数据。但是在我们实际建站需求中页面上怎么可能只需要一条数据就完了，很多时候还需要其他的数据。比如一个&lt;code&gt;List&amp;lt;entity&amp;gt;&lt;/code&gt;，此时就需要使用ViewModel。&lt;/p&gt;
-&lt;h2 id=&#34;dtodata-transfer-object&#34;&gt;dto(Data transfer object)&lt;/h2&gt;
-&lt;p&gt;entity里包含的是表所有的字段，但在实际应用的时候我们可能不会使用到所有的字段，可能只需要一个名称和编号即可，所以就需要使用dto（数据传输对象）。此时ViewModel就可以使用&lt;code&gt;List&amp;lt;dto&amp;gt;&lt;/code&gt;返回我们部分数据而不是整个表数据。&lt;/p&gt;
-&lt;h2 id=&#34;final&#34;&gt;Final&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们可以花一部分精力去考虑这方面问题，但也不用纠结太多，头大且对项目也没太大帮助。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-2&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/194493331&#34;&gt;什么时候用Model，什么时候用Entity？ - 虚若影的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/25256772/answer/30290376&#34;&gt;什么时候用Model，什么时候用Entity？ - 赵劼的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;iviewlocationexpander&#34;&gt;IViewLocationExpander&lt;/h1&gt;
-&lt;p&gt;实现&lt;code&gt;IViewLocationExpander&lt;/code&gt;接口，&lt;code&gt;location&lt;/code&gt;为build时程序检查的views层路径&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;ViewLocationExpander&lt;/span&gt;: IViewLocationExpander
-{
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; IEnumerable&amp;lt;String&amp;gt; ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable&amp;lt;String&amp;gt; locations)
-  {
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (RazorViewEngine.GetNormalizedRouteValue(context.ActionContext, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;area&amp;#34;&lt;/span&gt;) != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;)
-    {
-      &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[]
-      {
-        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{2}/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{2}/{1}/{0}.cshtml&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;
-      };
-    }
-
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt;[]
-    {
-      &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/{1}/{0}.cshtml&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/Views/Shared/{0}.cshtml&amp;#34;&lt;/span&gt;
-    };
-  }
-  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; PopulateValues(ViewLocationExpanderContext context)
-  {
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在Startup注册我们的implement&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;services.AddMvc()
-  .AddRazorOptions(options =&amp;gt; options.ViewLocationExpanders.Add(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; ViewLocationExpander()));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference-3&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.c-sharpcorner.com/article/expanding-razor-view-location-and-sub-areas-in-asp-net-core/&#34;&gt;Expanding Razor View Location And Sub Areas In ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/NonFactors/AspNetCore.Template/blob/378d64f6900f0cc95eee921b5caf81d2bc9efc11/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&#34;&gt;AspNetCore.Template/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;error-the-database-provider-attempted-to-register-an-implementation&#34;&gt;Error: The database provider attempted to register an implementation&amp;hellip;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The database provider attempted to register an implementation of the &amp;lsquo;IRelationalTypeMappingSource&amp;rsquo; service. This is not a service defined by EF and as such must be registered as a provider-specific service using the &amp;lsquo;TryAddProviderSpecificServices&amp;rsquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;检查一下EF版本！！！&lt;/p&gt;
-&lt;p&gt;You are mixing different versions of EF Core!!!&lt;/p&gt;
-&lt;h2 id=&#34;reference-4&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/npgsql/efcore.pg/issues/1441&#34;&gt;Cannot register IRelationalTypeMappingSource #1441&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;framework-design-guidelines&#34;&gt;Framework Design Guidelines&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines&#34;&gt;Naming Guidelines&lt;/a&gt;
-Provides guidelines for naming assemblies, namespaces, types, and members in class libraries.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/type&#34;&gt;Type Design Guidelines&lt;/a&gt;
-Provides guidelines for using static and abstract classes, interfaces, enumerations, structures, and other types.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/member&#34;&gt;Member Design Guidelines&lt;/a&gt;
-Provides guidelines for designing and using properties, methods, constructors, fields, events, operators, and parameters.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/designing-for-extensibility&#34;&gt;Designing for Extensibility&lt;/a&gt;
-Discusses extensibility mechanisms such as subclassing, using events, virtual members, and callbacks, and explains how to choose the mechanisms that best meet your framework&amp;rsquo;s requirements.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/exceptions&#34;&gt;Design Guidelines for Exceptions&lt;/a&gt;
-Describes design guidelines for designing, throwing, and catching exceptions.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/usage-guidelines&#34;&gt;Usage Guidelines&lt;/a&gt;
-Describes guidelines for using common types such as arrays, attributes, and collections, supporting serialization, and overloading equality operators.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/common-design-patterns&#34;&gt;Common Design Patterns&lt;/a&gt;
-Provides guidelines for choosing and implementing dependency properties.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-5&#34;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/&#34;&gt;Framework Design Guidelines&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;analyze-code-in-visual-studio&#34;&gt;Analyze code in Visual Studio&lt;/h1&gt;
-&lt;h2 id=&#34;source-code-analysis&#34;&gt;Source code analysis&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;.NET Compiler Platform (Roslyn) Analyzers inspect your C# or Visual Basic code for style, quality, maintainability, design, and other issues. This inspection or analysis is done during design time in all open files.&lt;/p&gt;
-&lt;p&gt;Analyzers can be divided into the following groups:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options?preserve-view=true&amp;amp;view=vs-2019#convention-categories&#34;&gt;Code style&lt;/a&gt; analyzers are built in to Visual Studio.&lt;/strong&gt; The diagnostic ID, or code, for these analyzers is of the format IDExxxx, for example, IDE0067. You can configure preferences in the &lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/ide/code-styles-and-code-cleanup?view=vs-2019&#34;&gt;text editor options page&lt;/a&gt; or in an &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options&#34;&gt;EditorConfig file&lt;/a&gt;. Starting in .NET 5.0, code style analyzers are included with the .NET SDK and can be strictly enforced as build warnings or errors. For more information, see &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/productivity/code-analysis#code-style-analysis&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/index&#34;&gt;Code quality&lt;/a&gt; analyzers are now included with the .NET 5 SDK and enabled by default. The diagnostic ID, or code, for these analyzers is of the format CAxxxx, for example, CA1822. For more information, see &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis&#34;&gt;Overview of .NET code quality analysis&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Third party analyzers can be installed as a NuGet package or a Visual Studio extension. Third party analyzers, such as &lt;a href=&#34;https://www.nuget.org/packages/StyleCop.Analyzers/&#34;&gt;StyleCop&lt;/a&gt;, &lt;a href=&#34;https://www.nuget.org/packages/Roslynator.Analyzers/&#34;&gt;Roslynator&lt;/a&gt;, &lt;a href=&#34;https://www.nuget.org/packages/xunit.analyzers/&#34;&gt;XUnit Analyzers&lt;/a&gt;, and &lt;a href=&#34;https://www.nuget.org/packages/SonarAnalyzer.CSharp/&#34;&gt;Sonar Analyzer&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;legacy-analysis-for-managed-code&#34;&gt;Legacy analysis for managed code&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;attention&#34;&gt;Attention&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;✔️ DO name collection properties with a plural phrase describing the items in the collection instead of using a singular phrase followed by &amp;ldquo;List&amp;rdquo; or &amp;ldquo;Collection&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;✔️ DO name Boolean properties with an affirmative phrase (&lt;code&gt;CanSeek&lt;/code&gt; instead of &lt;code&gt;CantSeek&lt;/code&gt;). Optionally, you can also prefix Boolean properties with &amp;ldquo;Is&amp;rdquo;, &amp;ldquo;Can&amp;rdquo;, or &amp;ldquo;Has&amp;rdquo;, but only where it adds value.&lt;/p&gt;
-&lt;p&gt;✔️ CONSIDER defining a struct instead of a class if instances of the type are small and commonly short-lived or are commonly embedded in other objects.&lt;/p&gt;
-&lt;p&gt;❌ DO NOT add members to an interface that has previously shipped.&lt;/p&gt;
-&lt;p&gt;Doing so would break implementations of the interface. You should create a new interface in order to avoid versioning problems.&lt;/p&gt;
-&lt;p&gt;Except for the situations described in these guidelines, you should, in general, choose classes rather than interfaces in designing managed code reusable libraries.&lt;/p&gt;
-&lt;p&gt;✔️ DO ensure that a state where all instance data is set to zero, false, or null (as appropriate) is valid.（Struct Design）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;controversy&#34;&gt;Controversy&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Fields Naming between &lt;em&gt;_lowerCamelCase&lt;/em&gt; and &lt;em&gt;PascalCasing&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;_camelCase&lt;/code&gt; for fields is common from what I&amp;rsquo;ve seen (it&amp;rsquo;s what we use at our place and Microsoft &lt;a href=&#34;https://github.com/dotnet/runtime/blob/main/.editorconfig&#34;&gt;prefer for the .NET Runtime&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;My personal justification for using this standard is that is is easier to type &lt;code&gt;_&lt;/code&gt; to identify a private field than &lt;code&gt;this.&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Foo(String a, String b)
-{
-    _a = a;
-    _b = b;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Versus&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Foo(String a, String b)
-{
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;this&lt;/span&gt;.a = a;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;this&lt;/span&gt;.b = b;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I find the first much easier to type and it prevents me from ever accidentally assigning to the parameter called &lt;code&gt;a&lt;/code&gt; instead of &lt;code&gt;this.a&lt;/code&gt;. This is reinforced by a &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/dd264939.aspx&#34;&gt;Code Analysis&lt;/a&gt; Maintainability Rule that states:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://msdn.microsoft.com/en-us/library/ms182216.aspx&#34;&gt;CA1500&lt;/a&gt; Variable names should not match field names.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;My other reason, is that &lt;code&gt;this.&lt;/code&gt; is optional (Visual Studio / Code prompts you to remove them) if it doesn&amp;rsquo;t collide with a local variable or parameter name, making knowing which variable you are using harder. If you have an &lt;code&gt;_&lt;/code&gt; at the start of all private fields, then you always know which is a field and which is has local scope.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Tabs or Spaces&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;4 spaces or tabs, it&amp;rsquo;s a question.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Abbreviation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There is a convention, and it specifies initial uppercase, the rest lowercase, for all acronyms that are more than 2 characters long. Hence &lt;code&gt;HttpContext&lt;/code&gt; and &lt;code&gt;ClientID&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/brendaneich/status/1316377408027594753&#34;&gt;Chris Wilson&lt;/a&gt; （&lt;a href=&#34;https://www.linkedin.com/in/cwilso/&#34;&gt;LinkedIn&lt;/a&gt;）前微软员工如是说。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;&lt;a href=&#34;https://rads.stackoverflow.com/amzn/click/com/0321545613&#34;&gt;Framework Design Guidelines&lt;/a&gt;&amp;rdquo; 2nd edition by Krzysztof Cwalina and Brad Abrams pp.40-42&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3.1.2 Capitalizing Acronyms&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;DO&lt;/strong&gt; capitalize both characters on two-character acronyms, except the first word of a camel-cased identifier.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;System.IO
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; StartIO(Stream ioStream)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;DO&lt;/strong&gt; capitalize only the first character of acronyms with three or more characters, except the first word of a camel-cased identifier.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;System.Xml
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; ProcessHtmlTag(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; htmlTag)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;DO NOT&lt;/strong&gt; capitalize any of the characters of any acronyms, whatever their length, at the beginning of a camel-cased identifier.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;h2 id=&#34;using-abbreviations-and-acronyms&#34;&gt;Using Abbreviations and Acronyms&lt;/h2&gt;
-&lt;p&gt;❌ DO NOT use abbreviations or contractions as part of identifier names.&lt;/p&gt;
-&lt;p&gt;For example, use &lt;code&gt;GetWindow&lt;/code&gt; rather than &lt;code&gt;GetWin&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;❌ DO NOT use any acronyms that are not widely accepted, and even if they are, only when necessary.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The PascalCasing convention, used for all identifiers except parameter names, capitalizes the first character of each word (including acronyms over two letters in length), as shown in the following examples:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;PropertyDescriptor` `HtmlTag
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A special case is made for two-letter acronyms in which both letters are capitalized, as shown in the following identifier:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;IOStream
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The camelCasing convention, used only for parameter names, capitalizes the first character of each word except the first word, as shown in the following examples. As the example also shows, two-letter acronyms that begin a camel-cased identifier are both lowercase.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;propertyDescriptor` `ioStream` `htmlTag
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Guideline limit&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;80 characters&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;NameSpace&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Should the folders in a solution match the namespace?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CRUD Method Naming
-&lt;ul&gt;
-&lt;li&gt;CreateXXXX or InsertXXXX&lt;/li&gt;
-&lt;li&gt;ReadXXXX or GetXXXXX&lt;/li&gt;
-&lt;li&gt;UpdateXXXX&lt;/li&gt;
-&lt;li&gt;DeleteXXXX&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;reference-6&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/code-quality&#34;&gt;Analyze code in Visual Studio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview&#34;&gt;.NET source code analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/3186853/c-sharp-field-naming-guidelines&#34;&gt;C# Field Naming Guidelines?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/StyleCop/StyleCop&#34;&gt;StyleCop/StyleCop: Analyzes C# source code to enforce a set of style and consistency rules. &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions&#34;&gt;C# Coding Conventions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/capitalization-conventions#capitalizing-compound-words-and-common-terms&#34;&gt;Capitalizing Compound Words and Common Terms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/479596/what-makes-code-legacy&#34;&gt;What makes code legacy?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://softwareengineering.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width&#34;&gt;Why is 80 characters the &amp;lsquo;standard&amp;rsquo; limit for code width?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4664/should-the-folders-in-a-solution-match-the-namespace&#34;&gt;Should the folders in a solution match the namespace?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/360321/crud-vs-agud-vs-afud-whats-your-naming-convention-of-preference&#34;&gt;what&amp;rsquo;s your naming convention of preference&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;http-error-50019---internal-server-error&#34;&gt;HTTP Error 500.19 - Internal Server Error&lt;/h1&gt;
-&lt;p&gt;The requested page cannot be accessed because the related configuration data for the page is invalid.&lt;/p&gt;
-&lt;h2 id=&#34;detailed-error-information&#34;&gt;Detailed Error Information:&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:right&#34;&gt;Module&lt;/th&gt;
-&lt;th&gt;IIS Web Core&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Notification&lt;/td&gt;
-&lt;td&gt;BeginRequest&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Handler&lt;/td&gt;
-&lt;td&gt;Not yet determined&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Error Code&lt;/td&gt;
-&lt;td&gt;0x80070021&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;Config Error&lt;/td&gt;
-&lt;td&gt;This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&amp;ldquo;Deny&amp;rdquo;), or set explicitly by a location tag with overrideMode=&amp;ldquo;Deny&amp;rdquo; or the legacy allowOverride=&amp;ldquo;false&amp;rdquo;.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;Heres what worked for me, had a similar problem on my new laptop which had windows 10.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Search for &amp;ldquo;Turn windows features on or off&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Check &amp;ldquo;Internet Information Services&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Check &amp;ldquo;World Wide Web Services&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Check &amp;ldquo;Application Development Features&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Enable all items under this&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;try again, now it should work.&lt;/p&gt;
-&lt;h2 id=&#34;reference-7&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/34199976/iis-config-error-this-configuration-section-cannot-be-used-at-this-path&#34;&gt;IIS Config Error - This configuration section cannot be used at this path&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/43976092/excel-break-long-lines-when-importing-csv-file&#34;&gt;Excel break long lines when importing csv file&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Each instance of Microsoft Excel 2007, Excel 2010, and Excel 2013 32-bit is limited to 2 gigabyte (GB) of memory (internal heap space). &lt;strong&gt;Each instance is also limited to 32,760 source cells&lt;/strong&gt; when you perform a smart fill operation. When you copy or fill large sections of a worksheet, one or both of these limitations may affect the result.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-8&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/office/troubleshoot/excel/copy-formulas-over-large-area&#34;&gt;&amp;ldquo;Not enough memory&amp;rdquo; when you copy formulas over large area in Excel&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4019466/httplistener-access-denied&#34;&gt;HttpListener Access Denied&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;netsh http add urlacl &lt;span style=&#34;color:#00688b&#34;&gt;url&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://+:3032/&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;user&lt;/span&gt;=everyone
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Documentation is &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/ms733768.aspx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;internalsvisibleto&#34;&gt;internalsvisibleto&lt;/h1&gt;
-&lt;p&gt;To make interal type class/method or other object be visible in Tests project. In this way, we can use those object in our Unit Test.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[assembly: InternalsVisibleTo(&amp;#34;UnitTests&amp;#34;)]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;.csproj:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-XML&#34; data-lang=&#34;XML&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;ItemGroup&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;InternalsVisibleToSuffix&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;Include=&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;.Tests&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;/&amp;gt;&lt;/span&gt; 
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/ItemGroup&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference-9&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=net-5.0&#34;&gt;InternalsVisibleToAttribute Class&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1211707/how-to-access-classes-in-another-assembly-for-unit-testing-purposes&#34;&gt;How to access classes in another assembly for unit-testing purposes?&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;use-fake-method-in-unit-test-to-implement-the-non-mockable-object&#34;&gt;Use Fake Method in Unit Test to implement the non-mockable Object.&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Microsoft Fakes helps you isolate the code you are testing by replacing other parts of the application with &lt;em&gt;stubs&lt;/em&gt; or &lt;em&gt;shims&lt;/em&gt;. These are small pieces of code that are under the control of your tests. By isolating your code for testing, you know that if the test fails, the cause is there and not somewhere else. Stubs and shims also let you test your code even if other parts of your application are not working yet.&lt;/p&gt;
-&lt;p&gt;Fakes come in two flavors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A &lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019#get-started-with-stubs&#34;&gt;stub&lt;/a&gt; replaces a class with a small substitute that implements the same interface. To use stubs, you have to design your application so that each component depends only on interfaces, and not on other components. (By &amp;ldquo;component&amp;rdquo; we mean a class or group of classes that are designed and updated together and typically contained in an assembly.)&lt;/li&gt;
-&lt;li&gt;A &lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019#get-started-with-shims&#34;&gt;shim&lt;/a&gt; modifies the compiled code of your application at run time so that instead of making a specified method call, it runs the shim code that your test provides. Shims can be used to replace calls to assemblies that you cannot modify, such as .NET assemblies.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.microsoft.com/en-us/visualstudio/test/media/fakes-2.png?view=vs-2019&#34; alt=&#34;Fakes replace other components&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-10&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019&#34;&gt;Isolate code under test with Microsoft Fakes&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-nethttpsstackoverflowcomquestions4988286what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4988286/what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net&#34;&gt;What difference is there between WebClient and HTTPWebRequest classes in .NET?&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;WebClient is a higher-level abstraction built on top of HttpWebRequest to simplify the most common tasks. For instance, if you want to get the content out of an HttpWebResponse, you have to read from the response stream:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; http = (HttpWebRequest)WebRequest.Create(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://example.com&amp;#34;&lt;/span&gt;);
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; response = http.GetResponse();
-
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; stream = response.GetResponseStream();
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; sr = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; StreamReader(stream);
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; content = sr.ReadToEnd();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With WebClient, you just do &lt;code&gt;DownloadString&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; client = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; WebClient();
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; content = client.DownloadString(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://example.com&amp;#34;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: I left out the &lt;code&gt;using&lt;/code&gt; statements from both examples for brevity. You should definitely take care to dispose your web request objects properly.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;In general, WebClient is good for quick and dirty simple requests and HttpWebRequest is good for when you need more control over the entire request.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;consolewriteline-cannot--write-unicode-characters-to-the-console&#34;&gt;Console.WriteLine() cannot  write Unicode characters to the console&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;However there&amp;rsquo;s a &lt;em&gt;&amp;ldquo;Beta: Use Unicode UTF-8 for worldwide language support&amp;rdquo;&lt;/em&gt; checkbox since Windows 10 insider build 17035 for setting the locale code page to UTF-8&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.stack.imgur.com/heCud.png&#34; alt=&#34;Beta: Use Unicode UTF-8 for worldwide language support&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;reference-11&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/5750203/how-to-write-unicode-characters-to-the-console&#34;&gt;How to write Unicode characters to the console?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://superuser.com/questions/1033088/is-it-possible-to-set-locale-of-a-windows-application-to-utf-8&#34;&gt;Is it possible to set “locale” of a Windows application to UTF-8?&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;how-to-use-await-in-a-loophttpsstackoverflowcomquestions19431494how-to-use-await-in-a-loop&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/19431494/how-to-use-await-in-a-loop&#34;&gt;How to use await in a loop&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;The way you&amp;rsquo;re using the &lt;code&gt;await&lt;/code&gt; keyword tells C# that you want to wait each time you pass through the loop, which isn&amp;rsquo;t parallel. You can rewrite your method like this to do what you want, by storing a list of &lt;code&gt;Task&lt;/code&gt;s and then &lt;code&gt;await&lt;/code&gt;ing them all with &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/hh194766.aspx&#34;&gt;&lt;code&gt;Task.WhenAll&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;async&lt;/span&gt; Task&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;&amp;gt; Init()
-{
-    &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; series = Enumerable.Range(&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;).ToList();
-    &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; tasks = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; List&amp;lt;Task&amp;lt;Tuple&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;, &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt;();
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; i &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; series)
-    {
-        Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Starting Process {0}&amp;#34;&lt;/span&gt;, i);
-        tasks.Add(DoWorkAsync(i));
-    }
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; task &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;await&lt;/span&gt; Task.WhenAll(tasks))
-    {
-        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (task.Item2)
-        {
-            Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Ending Process {0}&amp;#34;&lt;/span&gt;, task.Item1);
-        }
-    }
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;;
-}
-
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;async&lt;/span&gt; Task&amp;lt;Tuple&amp;lt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;, &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;&amp;gt;&amp;gt; DoWorkAsync(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; i)
-{
-    Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;working..{0}&amp;#34;&lt;/span&gt;, i);
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;await&lt;/span&gt; Task.Delay(&lt;span style=&#34;color:#b452cd&#34;&gt;1000&lt;/span&gt;);
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; Tuple.Create(i, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;what-is-the-difference-between-asynchronous-programming-and-multithreadinghttpsstackoverflowcomquestions34680985what-is-the-difference-between-asynchronous-programming-and-multithreading&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/34680985/what-is-the-difference-between-asynchronous-programming-and-multithreading&#34;&gt;What is the difference between asynchronous programming and multithreading?&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Your misunderstanding is extremely common. Many people are taught that multithreading and asynchrony are the same thing, but they are not.&lt;/p&gt;
-&lt;p&gt;An analogy usually helps. You are cooking in a restaurant. An order comes in for eggs and toast.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Synchronous: you cook the eggs, then you cook the toast.&lt;/li&gt;
-&lt;li&gt;Asynchronous, single threaded: you start the eggs cooking and set a timer. You start the toast cooking, and set a timer. While they are both cooking, you clean the kitchen. When the timers go off you take the eggs off the heat and the toast out of the toaster and serve them.&lt;/li&gt;
-&lt;li&gt;Asynchronous, multithreaded: you hire two more cooks, one to cook eggs and one to cook toast. Now you have the problem of coordinating the cooks so that they do not conflict with each other in the kitchen when sharing resources. And you have to pay them.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now does it make sense that multithreading is only one kind of asynchrony? &lt;strong&gt;Threading is about workers; asynchrony is about tasks&lt;/strong&gt;. In multithreaded workflows you assign tasks to workers. In asynchronous single-threaded workflows you have a graph of tasks where some tasks depend on the results of others; as each task completes it invokes the code that schedules the next task that can run, given the results of the just-completed task. But you (hopefully) only need one worker to perform all the tasks, not one worker per task.&lt;/p&gt;
-&lt;p&gt;It will help to realize that many tasks are not processor-bound. For processor-bound tasks it makes sense to hire as many workers (threads) as there are processors, assign one task to each worker, assign one processor to each worker, and have each processor do the job of nothing else but computing the result as quickly as possible. But for tasks that are not waiting on a processor, you don&amp;rsquo;t need to assign a worker at all. You just wait for the message to arrive that the result is available and &lt;em&gt;do something else while you&amp;rsquo;re waiting&lt;/em&gt;. When that message arrives then you can schedule the continuation of the completed task as the next thing on your to-do list to check off.&lt;/p&gt;
-&lt;p&gt;So let&amp;rsquo;s look at Jon&amp;rsquo;s example in more detail. What happens?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Someone invokes DisplayWebSiteLength. Who? We don&amp;rsquo;t care.&lt;/li&gt;
-&lt;li&gt;It sets a label, creates a client, and asks the client to fetch something. The client returns an object representing the task of fetching something. That task is in progress.&lt;/li&gt;
-&lt;li&gt;Is it in progress on another thread? Probably not. Read &lt;a href=&#34;http://blog.stephencleary.com/2013/11/there-is-no-thread.html&#34;&gt;Stephen&amp;rsquo;s article&lt;/a&gt; on why there is no thread.&lt;/li&gt;
-&lt;li&gt;Now we await the task. What happens? We check to see if the task has completed between the time we created it and we awaited it. If yes, then we fetch the result and keep running. Let&amp;rsquo;s suppose it has not completed. &lt;strong&gt;We sign up the remainder of this method as the continuation of that task and return&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Now control has returned to the caller. What does it do? Whatever it wants.&lt;/li&gt;
-&lt;li&gt;Now suppose the task completes. How did it do that? Maybe it was running on another thread, or maybe the caller that we just returned to allowed it to run to completion on the current thread. Regardless, we now have a completed task.&lt;/li&gt;
-&lt;li&gt;The completed task asks the correct thread &amp;ndash; again, likely the &lt;em&gt;only&lt;/em&gt; thread &amp;ndash; to run the continuation of the task.&lt;/li&gt;
-&lt;li&gt;Control passes immediately back into the method we just left at the point of the await. Now there &lt;em&gt;is&lt;/em&gt; a result available so we can assign &lt;code&gt;text&lt;/code&gt; and run the rest of the method.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It&amp;rsquo;s just like in my analogy. Someone asks you for a document. You send away in the mail for the document, and keep on doing other work. When it arrives in the mail you are signalled, and when you feel like it, you do the rest of the workflow &amp;ndash; open the envelope, pay the delivery fees, whatever. You don&amp;rsquo;t need to hire another worker to do all that for you.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;tuple-vs-class&#34;&gt;Tuple VS Class&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;h2 id=&#34;tuples-are-values-so-are-copied-by-value-rather-than-by-reference&#34;&gt;Tuples are values, so are copied by value, rather than by reference.&lt;/h2&gt;
-&lt;p&gt;Most of the time, this should not be an issue. However, if you are passing around tuples of large structs, this might have an impact on performance. Ref locals/returns can be used to work around these performance issues, though.&lt;/p&gt;
-&lt;p&gt;Additionally, because they are values, modifying a copy remotely will not change the original copy. This is a good thing, but could catch some folk out.&lt;/p&gt;
-&lt;h2 id=&#34;tuple-element-names-are-not-persisted&#34;&gt;Tuple element names are not persisted&lt;/h2&gt;
-&lt;p&gt;The names given to elements are used by the compiler and (in most cases) are not available at run-time. This means that reflection cannot be used to discover their names; they cannot be accessed dynamically and they cannot be used in razor views.&lt;/p&gt;
-&lt;p&gt;Also this is an important consideration with APIs. A tuple returned from a method is the exception to the rule regarding after-compilation name discoverability. The compiler adds attributes to the method that hold information on the tuple names. This means you can safely return a tuple from a public method in one assembly and access its names in another.&lt;/p&gt;
-&lt;h2 id=&#34;tuples-are-lightweight&#34;&gt;Tuples are lightweight&lt;/h2&gt;
-&lt;p&gt;Tuples are much simpler to write than types as they are less verbose and the declaration can be &amp;ldquo;inlined&amp;rdquo; (ie declared at the point of use). This works well when declaring a method that returns multiple values, for example.&lt;/p&gt;
-&lt;p&gt;However, because they are declared at the point of use, if you have &lt;code&gt;MethodA&lt;/code&gt; that calls &lt;code&gt;MethodB&lt;/code&gt; that calls &lt;code&gt;MethodC&lt;/code&gt; and each returns a tuple, you&amp;rsquo;ll need to redefine the tuple at every stage. There isn&amp;rsquo;t (&lt;a href=&#34;https://github.com/dotnet/csharplang/issues/423&#34;&gt;yet&lt;/a&gt;) a way of creating an alias of a tuple and re-using it across multiple methods.&lt;/p&gt;
-&lt;h2 id=&#34;just-use-common-sense&#34;&gt;Just use common sense&lt;/h2&gt;
-&lt;p&gt;For any situation where you might consider using a tuple: simply ask yourself the question: &amp;ldquo;will a tuple simplify the code here&amp;rdquo;. If the answer is &amp;ldquo;yes&amp;rdquo;, then use one. And that ultimately is the primary consideration over whether to use a tuple or a custom class.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-12&#34;&gt;Reference:&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/44650636/when-to-use-tuple-vs-class-in-c-sharp-7-0&#34;&gt;When to use: Tuple vs Class in C# 7.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;in-net-which-loop-runs-faster-for-or-foreachhttpsstackoverflowcomquestions365615in-net-which-loop-runs-faster-for-or-foreach&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/365615/in-net-which-loop-runs-faster-for-or-foreach&#34;&gt;In .NET, which loop runs faster, &amp;lsquo;for&amp;rsquo; or &amp;lsquo;foreach&amp;rsquo;?&lt;/a&gt;&lt;/h1&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;c-enumhttpsdocsmicrosoftcomen-usdotnetapisystemenumviewnet-50&#34;&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.enum?view=net-5.0&#34;&gt;C# Enum&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id=&#34;get-value-of-enum-member-by-its-name&#34;&gt;Get value of enum member by its name&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;Console.WriteLine((&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;)Enum.Parse(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(ConsoleColor), &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Blue&amp;#34;&lt;/span&gt;)); &lt;span style=&#34;color:#228b22&#34;&gt;// 9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;c---returning-an-enum-from-a-static-extension-methodhttpsstackoverflowcomquestions1556952c-sharp-returning-an-enum-from-a-static-extension-method&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1556952/c-sharp-returning-an-enum-from-a-static-extension-method&#34;&gt;C# - Returning an Enum? from a static extension method&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; T? ToEnumSafe&amp;lt;T&amp;gt;(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;this&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; s) &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;where&lt;/span&gt; T : &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;struct&lt;/span&gt;
-{
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; (IsEnum&amp;lt;T&amp;gt;(s) ? (T?)Enum.Parse(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(T), s) : &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;);
-}
-
-Console.WriteLine((ConsoleColor) Enum.Parse(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(ConsoleColor), &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Blue&amp;#34;&lt;/span&gt;) == ConsoleColor.Blue); &lt;span style=&#34;color:#228b22&#34;&gt;// True
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;enumeration-format-stringshttpsdocsmicrosoftcomen-usdotnetstandardbase-typesenumeration-format-strings&#34;&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/base-types/enumeration-format-strings&#34;&gt;Enumeration format strings&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;Console.WriteLine(ConsoleColor.Red.ToString(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;G&amp;#34;&lt;/span&gt;));         &lt;span style=&#34;color:#228b22&#34;&gt;// Displays Red
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(ConsoleColor.Blue.ToString(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;F&amp;#34;&lt;/span&gt;));       &lt;span style=&#34;color:#228b22&#34;&gt;// Displays Blue
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(ConsoleColor.Cyan.ToString(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;D&amp;#34;&lt;/span&gt;));         &lt;span style=&#34;color:#228b22&#34;&gt;// Displays 11
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(ConsoleColor.Cyan.ToString(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;X&amp;#34;&lt;/span&gt;));   &lt;span style=&#34;color:#228b22&#34;&gt;// Displays 0000000B
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-nameof(RelevantTableName.DocumentObjectReference);  &lt;span style=&#34;color:#228b22&#34;&gt;// suggest*
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;how-can-i-cast-int-to-enumhttpsstackoverflowcomquestions29482how-can-i-cast-int-to-enum&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/29482/how-can-i-cast-int-to-enum&#34;&gt;How can I cast int to enum?&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;From an int:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;YourEnum foo = (YourEnum)yourInt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;From a string:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;YourEnum foo = (YourEnum) Enum.Parse(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(YourEnum), yourString);
-
-&lt;span style=&#34;color:#228b22&#34;&gt;// The foo.ToString().Contains(&amp;#34;,&amp;#34;) check is necessary for enumerations marked with an [Flags] attribute
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (!Enum.IsDefined(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(YourEnum), foo) &amp;amp;&amp;amp; !foo.ToString().Contains(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt;))
-{
-    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; InvalidOperationException(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;{yourString} is not an underlying value of the YourEnum enumeration.&amp;#34;&lt;/span&gt;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;From number you can also&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;YourEnum foo = (YourEnum)Enum.ToObject(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;typeof&lt;/span&gt;(YourEnum) , yourInt);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;naming-enumerations&#34;&gt;Naming Enumerations&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Names of enumeration types (also called enums) in general should follow the standard type-naming rules (PascalCasing, etc.). However, there are additional guidelines that apply specifically to enums.&lt;/p&gt;
-&lt;p&gt;✔️ DO use a singular type name for an enumeration unless its values are bit fields.&lt;/p&gt;
-&lt;p&gt;✔️ DO use a plural type name for an enumeration with bit fields as values, also called flags enum.&lt;/p&gt;
-&lt;p&gt;❌ DO NOT use an &amp;ldquo;Enum&amp;rdquo; suffix in enum type names.&lt;/p&gt;
-&lt;p&gt;❌ DO NOT use &amp;ldquo;Flag&amp;rdquo; or &amp;ldquo;Flags&amp;rdquo; suffixes in enum type names.&lt;/p&gt;
-&lt;p&gt;❌ DO NOT use a prefix on enumeration value names (e.g., &amp;ldquo;ad&amp;rdquo; for ADO enums, &amp;ldquo;rtf&amp;rdquo; for rich text enums, etc.).&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Portions © 2005, 2009 Microsoft Corporation. All rights reserved.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Reprinted by permission of Pearson Education, Inc. from &lt;a href=&#34;https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619&#34;&gt;Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition&lt;/a&gt; by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-13&#34;&gt;Reference:&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/enum&#34;&gt;Enum Design&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/21561684/get-value-of-enum-member-by-its-name&#34;&gt;Get value of enum member by its name?&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;moq-a-function-with-5-parameters-and-access-invocation-argumentshttpsstackoverflowcomquestions2540931moq-a-function-with-5-parameters-and-access-invocation-arguments&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/2540931/moq-a-function-with-5-parameters-and-access-invocation-arguments&#34;&gt;Moq a function with 5+ parameters and access invocation arguments&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is supported in the final release of Moq 4.0 (4.0.10827), which was released on April 12, 2011. If you&amp;rsquo;re using .NET 4, you&amp;rsquo;ll be able to mock up to 16 parameters.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;むだ！むだ！むだ！むだ！&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;delegate&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; SubmitCallback(Bar bar1,Bar bar2,Bar bar3,Bar bar4,Bar bar5);
-
-mock.Setup(foo =&amp;gt; foo.Submit(It.IsAny&amp;lt;Bar&amp;gt;(),It.IsAny&amp;lt;Bar&amp;gt;(),It.IsAny&amp;lt;Bar&amp;gt;(),It.IsAny&amp;lt;Bar&amp;gt;(),It.IsAny&amp;lt;Bar&amp;gt;()))
-    .Callback(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; SubmitCallback((Bar bar1,Bar bar2,Bar bar3,Bar bar4,Bar bar5) =&amp;gt; Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Submitting a Bar!&amp;#34;&lt;/span&gt;)));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;net-testing-naming-conventionshttpsstackoverflowcomquestions84717net-testing-naming-conventions&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/84717/net-testing-naming-conventions&#34;&gt;.NET Testing Naming Conventions&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;-Code Folder&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;namespace&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;Company.Website&lt;/span&gt;{}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;-Tests Folder&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;namespace&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;Company.Website.Tests&lt;/span&gt;{}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;just-in-time-compilation&#34;&gt;Just-in-time compilation&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.codedom.compiler.codedomprovider?view=net-5.0&#34;&gt;CodeDomProvider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/dotnet/roslyn&#34;&gt;Roslyn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Reference:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Just-in-time_compilation&#34;&gt;Just-in-time compilation Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;regex-for-ip-addresshttpsstackoverflowcomquestions9165922regex-for-ip-address&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/9165922/regex-for-ip-address&#34;&gt;Regex for IP address&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;IPv4 &amp;amp; IPv6 both are okay!&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I would use &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/system.net.ipaddress.tryparse.aspx&#34;&gt;&lt;code&gt;IPAddress.TryParse&lt;/code&gt;&lt;/a&gt; static method instead.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;IPAddress ip;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt; b = IPAddress.TryParse(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;1234.12.12.12&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;out&lt;/span&gt; ip);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-14&#34;&gt;Reference:&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-5.0&#34;&gt;Regex Class&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;encode--decode&#34;&gt;Encode &amp;amp; Decode&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;WebUtility&lt;/li&gt;
-&lt;li&gt;Server.UrlEncode&lt;/li&gt;
-&lt;li&gt;Uri.EscapeDataString&lt;/li&gt;
-&lt;li&gt;Uri.EscapeUriString&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;To encode or decode values outside of a web application, use the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.net.webutility?view=net-5.0&#34;&gt;WebUtility&lt;/a&gt; class.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We found that in some cases you need to consider using Uri.EscapeDataString. In our case we are encrypting the querystring and found that UrlDecode is converting a plus (+) to space. This was causing us errors during decryption. Using Uri’s Escape and UnescapeDataString makes sense for us when constructing a custom querystring in the URL.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I had significant headaches with these methods before, &lt;strong&gt;I recommend you *avoid* any variant of &lt;code&gt;UrlEncode&lt;/code&gt;, and instead use &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/system.uri.escapedatastring.aspx&#34;&gt;&lt;code&gt;Uri.EscapeDataString&lt;/code&gt;&lt;/a&gt;&lt;/strong&gt; - at least that one has a comprehensible behavior.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s see&amp;hellip;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;HttpUtility.UrlEncode(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;) == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;+&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#228b22&#34;&gt;//breaks ASP.NET when used in paths, non-
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;                                  &lt;span style=&#34;color:#228b22&#34;&gt;//standard, undocumented.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Uri.EscapeUriString(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;a?b=e&amp;#34;&lt;/span&gt;) == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;a?b=e&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#228b22&#34;&gt;// makes sense, but rarely what you
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;                                        &lt;span style=&#34;color:#228b22&#34;&gt;// want, since you still need to
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;                                        &lt;span style=&#34;color:#228b22&#34;&gt;// escape special characters yourself
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But my personal favorite has got to be &lt;strong&gt;HttpUtility.UrlPathEncode&lt;/strong&gt; - this thing is really incomprehensible. It encodes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;quot; &amp;quot; ==&amp;gt; &amp;ldquo;%20&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;100% true&amp;rdquo; ==&amp;gt; &amp;ldquo;100%%20true&amp;rdquo; (ok, your url is broken now)&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;test A.aspx#anchor B&amp;rdquo; ==&amp;gt; &amp;ldquo;test%20A.aspx**#anchor%20B**&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;test A.aspx?hmm#anchor B&amp;rdquo; ==&amp;gt; &amp;ldquo;test%20A.aspx?hmm**#anchor B**&amp;rdquo; (*note the difference with the previous escape sequence!*)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It also has the lovelily specific MSDN documentation &amp;ldquo;Encodes the path portion of a URL string for reliable HTTP transmission from the Web server to a client.&amp;rdquo; - without actually explaining what it does. You are less likely to shoot yourself in the foot with an Uzi&amp;hellip;&lt;/p&gt;
-&lt;p&gt;In short, stick to &lt;strong&gt;&lt;a href=&#34;http://msdn.microsoft.com/en-us/library/system.uri.escapedatastring.aspx&#34;&gt;Uri.EscapeDataString&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-15&#34;&gt;Reference:&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.web.httputility.urldecode?view=net-5.0&#34;&gt;HttpUtility.UrlDecode Method&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.net.webutility?view=net-5.0&#34;&gt;WebUtility Class&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4396598/whats-the-difference-between-escapeuristring-and-escapedatastring&#34;&gt;What&amp;rsquo;s the difference between EscapeUriString and EscapeDataString?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/602642/server-urlencode-vs-httputility-urlencode&#34;&gt;Server.UrlEncode vs. HttpUtility.UrlEncode&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;side-effect&#34;&gt;Side effect&lt;/h1&gt;
-&lt;h2 id=&#34;reference-16&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Side_effect_(computer_science)&#34;&gt;Side effect&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;how-do-you-unit-test-regular-expressionshttpsstackoverflowcomquestions488601how-do-you-unit-test-regular-expressions&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/488601/how-do-you-unit-test-regular-expressions&#34;&gt;How do you unit test regular expressions?&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You should always test your regexen, much like any other chunk of code. They&amp;rsquo;re at the most simple a function that takes a string and returns a bool, or returns an array of values.&lt;/p&gt;
-&lt;p&gt;Here are some suggestions on what to think about when it comes to designing unit tests for regexen. These are not not hard and fast prescriptions for unit test design, but some guidelines to shape your thinking. As always, weigh the needs of your testing versus cost of failure balanced with the time required to implement them all. (I find that &amp;lsquo;implementing&amp;rsquo; the test is the easy part! :-] )&lt;/p&gt;
-&lt;p&gt;Points to consider:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Think of every group (the parentheses) as a curly brace.&lt;/li&gt;
-&lt;li&gt;Think of every | as a condition. Make sure to test for each branch.&lt;/li&gt;
-&lt;li&gt;Think of every modifier (*, +, ? ) as a different path.&lt;/li&gt;
-&lt;li&gt;(side note to the above: remember the difference between *, +, ? and *?, +?, and ??.)&lt;/li&gt;
-&lt;li&gt;for \d, \s, \w, and their negations, give several in each range a try.&lt;/li&gt;
-&lt;li&gt;For * and +, you need to test for the &amp;lsquo;no value&amp;rsquo;, &amp;lsquo;one of&amp;rsquo;, and &amp;lsquo;one or more&amp;rsquo; for each.&lt;/li&gt;
-&lt;li&gt;For important &amp;lsquo;control&amp;rsquo; characters (eg, strings in the regex you look for) test to see what happens if they show up in the wrong places. This may surprise you.&lt;/li&gt;
-&lt;li&gt;If you have real world data, use as much of it as you can.&lt;/li&gt;
-&lt;li&gt;If you don&amp;rsquo;t, make sure to test both the simple and complex forms that should be valid.&lt;/li&gt;
-&lt;li&gt;Make sure to test what regex control characters do when inserted.&lt;/li&gt;
-&lt;li&gt;Make sure to verify that the empty string is properly accepted/rejected.&lt;/li&gt;
-&lt;li&gt;Make sure to verify that a string of each of the different kind of space characters are properly accepted or rejected.&lt;/li&gt;
-&lt;li&gt;Make sure that proper handling of case insensitivity is done (the i flag). This has bit me more times than almost anything else in text parsing (other than spaces).&lt;/li&gt;
-&lt;li&gt;If you have the x, m or s options, make sure you understand what they do and test for it (the behavior here can be different)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For a regex that returns lists, also remember:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Verify that the data you expect is returned, in the right order, in the right fields.&lt;/li&gt;
-&lt;li&gt;Verify that slight modifications do not return good data.&lt;/li&gt;
-&lt;li&gt;Verify that mixed anonymous groups and named groups parse correctly (eg, &lt;code&gt;(?&amp;lt;name&amp;gt; thing1 ( thing2) )&lt;/code&gt;) - this behavior can be different based on the regex engine you&amp;rsquo;re using.&lt;/li&gt;
-&lt;li&gt;Once again, give lots of real world trials.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you use any advanced features, such as non-backtracking groups, make sure you understand completely how the feature works, and using the guidelines above, build example strings that should work for and against each of them.&lt;/p&gt;
-&lt;p&gt;Depending on your regex library implementation, the way groups are captured may be different as well. Perl 5 has a &amp;lsquo;open paren order&amp;rsquo; ordering, C# has that partially except for named groups and so on. Make sure to experiment with your flavor to know exactly what it does.&lt;/p&gt;
-&lt;p&gt;Then, integrate them right in with your other unit tests, either in their own module or alongside the module that contains the regex. For particularly nasty regexen, you may find you need lots and lots of tests to verify that the pattern and all the features you use are correct. If the regex makes up a large (or nearly all) of the work that the method is doing, I will use the advice above to fashion inputs to test that function and not the regex directly. That way, if later you decide that the regex is not the way to go, or you want to break it up, you can capture the behavior the regex provided without changing the interface - ie, the method that invokes the regex.&lt;/p&gt;
-&lt;p&gt;As long as you really know how a regex feature is supposed to work in your flavor of regex, you should be able to develop decent test cases for it. Just make sure you really, really, really do understand how the feature works!&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In terms of ascii code, it&amp;rsquo;s 3 &amp;ndash; since they&amp;rsquo;re 10 and 13 respectively;-).&lt;/p&gt;
-&lt;p&gt;But seriously, there are many:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;in Unix and all Unix-like systems, &lt;code&gt;\n&lt;/code&gt; is the code for end-of-line, &lt;code&gt;\r&lt;/code&gt; means nothing special&lt;/li&gt;
-&lt;li&gt;as a consequence, in C and most languages that somehow copy it (even remotely), &lt;code&gt;\n&lt;/code&gt; is the standard escape sequence for end of line (translated to/from OS-specific sequences as needed)&lt;/li&gt;
-&lt;li&gt;in old Mac systems (pre-OS X), &lt;code&gt;\r&lt;/code&gt; was the code for end-of-line instead&lt;/li&gt;
-&lt;li&gt;in Windows (and many old OSs), the code for end of line is 2 characters, &lt;code&gt;\r\n&lt;/code&gt;, in this order&lt;/li&gt;
-&lt;li&gt;as a (surprising;-) consequence (harking back to OSs much older than Windows), &lt;code&gt;\r\n&lt;/code&gt; is the standard line-termination for text formats on the Internet&lt;/li&gt;
-&lt;li&gt;for electromechanical teletype-like &amp;ldquo;terminals&amp;rdquo;, &lt;code&gt;\r&lt;/code&gt; commands the carriage to go back leftwards until it hits the leftmost stop (a slow operation), &lt;code&gt;\n&lt;/code&gt; commands the roller to roll up one line (a much faster operation) &amp;ndash; that&amp;rsquo;s the reason you always have &lt;code&gt;\r&lt;/code&gt; &lt;strong&gt;before&lt;/strong&gt; &lt;code&gt;\n&lt;/code&gt;, so that the roller can move while the carriage is still going leftwards!-) Wikipedia has a &lt;a href=&#34;https://en.wikipedia.org/wiki/Newline#History&#34;&gt;more detailed explanation&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;for character-mode terminals (typically emulating even-older printing ones as above), in raw mode, &lt;code&gt;\r&lt;/code&gt; and &lt;code&gt;\n&lt;/code&gt; act similarly (except both in terms of the cursor, as there &lt;strong&gt;is&lt;/strong&gt; no carriage or roller;-)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In practice, in the modern context of writing to a text file, you should always use &lt;code&gt;\n&lt;/code&gt; (the underlying runtime will translate that if you&amp;rsquo;re on a weird OS, e.g., Windows;-). The only reason to use &lt;code&gt;\r&lt;/code&gt; is if you&amp;rsquo;re writing to a character terminal (or more likely a &amp;ldquo;console window&amp;rdquo; emulating it) and want the next line you write to overwrite the last one you just wrote (sometimes used for goofy &amp;ldquo;ascii animation&amp;rdquo; effects of e.g. progress bars) &amp;ndash; this is getting pretty obsolete in a world of GUIs, though;-).&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;\r&lt;/code&gt;&lt;/strong&gt; = CR (Carriage Return) → Used as a new line character in Mac OS before X&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/strong&gt; = LF (Line Feed) → Used as a new line character in Unix/Mac OS X&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;\r\n&lt;/code&gt;&lt;/strong&gt; = CR + LF → Used as a new line character in Windows&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The problem is not with the splitting but rather with the &lt;code&gt;WriteLine&lt;/code&gt;. A &lt;code&gt;\n&lt;/code&gt; in a string printed with &lt;code&gt;WriteLine&lt;/code&gt; will produce an &amp;ldquo;extra&amp;rdquo; line.&lt;/p&gt;
-&lt;p&gt;Example&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; text = 
-  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;somet interesting text\n&amp;#34;&lt;/span&gt; +
-  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;some text that should be in the same line\r\n&amp;#34;&lt;/span&gt; +
-  &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;some text should be in another line&amp;#34;&lt;/span&gt;;
-
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;[] stringSeparators = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;[] { &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;\r\n&amp;#34;&lt;/span&gt; };
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;[] lines = text.Split(stringSeparators, StringSplitOptions.None);
-Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Nr. Of items in list: &amp;#34;&lt;/span&gt; + lines.Length); &lt;span style=&#34;color:#228b22&#34;&gt;// 2 lines
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; s &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;in&lt;/span&gt; lines)
-{
-   Console.WriteLine(s); &lt;span style=&#34;color:#228b22&#34;&gt;//But will print 3 lines in total.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To fix the problem remove &lt;code&gt;\n&lt;/code&gt; before you print the string.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;Console.WriteLine(s.Replace(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;\n&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-17&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/1761051/difference-between-n-and-r&#34;&gt;Difference between \n and \r?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/15433188/what-is-the-difference-between-r-n-r-and-n&#34;&gt;What is the difference between \r\n, \r, and \n?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/22185009/split-text-with-r-n&#34;&gt;Split text with &amp;lsquo;\r\n&amp;rsquo;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;how-and-when-to-use-async-and-awaithttpsstackoverflowcomquestions14455293how-and-when-to-use-async-and-await&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/14455293/how-and-when-to-use-async-and-await&#34;&gt;How and when to use ‘async’ and ‘await’&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id=&#34;reference-18&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/&#34;&gt;Asynchronous programming with async and await&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;project-and-item-templateshttpsdocsmicrosoftcomen-usvisualstudioidecreating-project-and-item-templates&#34;&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/visualstudio/ide/creating-project-and-item-templates&#34;&gt;Project and item templates&lt;/a&gt;&lt;/h1&gt;
-&lt;h1 id=&#34;c-params-keyword-vs-listhttpsstackoverflowcomquestions2114297c-params-keyword-vs-list&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/2114297/c-params-keyword-vs-list&#34;&gt;C#: params keyword vs. list&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The params keyword is syntactic sugar handled by the C# compiler. underneath the hood, it&amp;rsquo;s actually turning&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Foo(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;params&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt;[] a) { ... }
-Foo(&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;THREE&amp;#34;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;into&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Foo(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt;[] a) { ... }
-Foo(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;object&lt;/span&gt;[] { &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;THREE&amp;#34;&lt;/span&gt; })
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;From a &lt;em&gt;performance&lt;/em&gt; perspective like you&amp;rsquo;re asking about, the params call is simply faster because it is a bit faster to create an array than it is to create a List&amp;lt;&amp;gt;. There is no performance difference between the two snippets above.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;reference-19&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/params&#34;&gt;params (C# Reference)&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;csharp-special-characters&#34;&gt;CSharp Special Characters&lt;/h1&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;?&lt;/h2&gt;
-&lt;p&gt;There are 4 question marks &lt;code&gt;?&lt;/code&gt; used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.&lt;/p&gt;
-&lt;h3 id=&#34;1-the--operator-since-visual-studio-2003&#34;&gt;1) The ?: Operator (since Visual Studio 2003)&lt;/h3&gt;
-&lt;p&gt;The format : &lt;code&gt;condition ? first_expression : second_expression;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If &lt;code&gt;condition&lt;/code&gt; evaluates to &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;first_expression&lt;/code&gt; shall be returned, otherwise &lt;code&gt;second_expression&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Example&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;Random rnd = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Random();
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; randomNo = rnd.Next();
-
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; status = randomNo % &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt; == &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt; ? &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Generated number is an even number.&amp;#34;&lt;/span&gt; : &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Generated number is an odd number.&amp;#34;&lt;/span&gt;;
-Console.WriteLine(randomNo);
-Console.WriteLine(status);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-the-nullable-types-since-visual-studio-2005&#34;&gt;2) The Nullable Types (since Visual Studio 2005)&lt;/h3&gt;
-&lt;p&gt;Definition on msdn&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Nullable types can represent all the values of an underlying type, and an additional null value.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;How do you use a nullable, let say nullable integer. Simple&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt; x = &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// x can hold any integer values plus the null value
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;x = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; isXNull = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;false&lt;/span&gt;;
-Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// True
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;
-x = &lt;span style=&#34;color:#b452cd&#34;&gt;15&lt;/span&gt;;
-isXNull = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;false&lt;/span&gt;;
-Console.WriteLine(isXNull); &lt;span style=&#34;color:#228b22&#34;&gt;// False
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-the-null-conditional-operators-since-visual-studio-2015&#34;&gt;3) The Null-conditional Operators (since Visual Studio 2015)&lt;/h3&gt;
-&lt;p&gt;Example of a pretty common mistake&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main() {
- &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student1 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Quan&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;);
- Console.WriteLine(student1.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// Quan
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null because no student name is given to the fiction method CreateStudent
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt; Console.WriteLine(student2.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// System.NullReferenceException: Object reference not set to an instance of an object.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The method &lt;code&gt;CreateStudent&lt;/code&gt; returns a &lt;code&gt;null&lt;/code&gt; value instead of creating a new student if the student name is not given. Trying to access its &lt;code&gt;Name&lt;/code&gt; property after that will throw a &lt;code&gt;NullReferenceException&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;What you can do (without the Null-conditional Operators)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (student2 != &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;){
- Console.WriteLine(student2.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// No more System.NullReferenceException
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What you can do (with the Null-conditional Operators)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; student2 = CreateStudent(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;27&lt;/span&gt;); &lt;span style=&#34;color:#228b22&#34;&gt;// student2 is null
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;Console.WriteLine(student2?.Name); &lt;span style=&#34;color:#228b22&#34;&gt;// No more System.NullReferenceException
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What happended? Thanks to the question mark after &lt;code&gt;student2&lt;/code&gt;, you are telling C# that &lt;code&gt;student2&lt;/code&gt; may be null. If &lt;code&gt;student2&lt;/code&gt; is indeed &lt;code&gt;null&lt;/code&gt;, C# will not try to access &lt;code&gt;Name&lt;/code&gt; anymore, it returns &lt;code&gt;null&lt;/code&gt; instead and &lt;code&gt;Console.WriteLine&lt;/code&gt;will happily ignore the &lt;code&gt;null&lt;/code&gt; value and only add a new line.&lt;/p&gt;
-&lt;h3 id=&#34;4-the---null-coalescing-operator-operator-since-visual-studio-2005&#34;&gt;4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)&lt;/h3&gt;
-&lt;p&gt;This is a special case of the ?: Operator in section 1&lt;/p&gt;
-&lt;p&gt;The format : &lt;code&gt;asking_value ?? just_in_case;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;if &lt;code&gt;asking_value&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt;, &lt;code&gt;just_in_case&lt;/code&gt; is returned, otherwise &lt;code&gt;asking_value&lt;/code&gt;is returned.&lt;/p&gt;
-&lt;p&gt;Example&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int?&lt;/span&gt; x = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// x is nullable so it can be null
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; y = x ?? &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#228b22&#34;&gt;// if x is null, set y to 0, otherwise set y = x;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// which is essentially the same as
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;var&lt;/span&gt; y = (x == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) ? &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt; : x;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;reference-20&#34;&gt;Reference&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://quannt.github.io/programming/c%23/2017/01/07/question-marks-c-sharp.html&#34;&gt;Four question marks you should know in C#&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;$&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Starting with C# 8.0, you can use the &lt;code&gt;$&lt;/code&gt; and &lt;code&gt;@&lt;/code&gt; tokens in any order: both &lt;code&gt;$@&amp;quot;...&amp;quot;&lt;/code&gt; and &lt;code&gt;@$&amp;quot;...&amp;quot;&lt;/code&gt; are valid interpolated verbatim strings. In earlier C# versions, the &lt;code&gt;$&lt;/code&gt; token must appear before the &lt;code&gt;@&lt;/code&gt; token.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;reference-21&#34;&gt;Reference&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated&#34;&gt;$ - string interpolation (C# reference)&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;heading-3&#34;&gt;@&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;@&lt;/code&gt; special character serves as a verbatim identifier. It can be used in the following ways:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;To enable C# keywords to be used as identifiers. The &lt;code&gt;@&lt;/code&gt; character prefixes a code element that the compiler is to interpret as an identifier rather than a C# keyword. The following example uses the &lt;code&gt;@&lt;/code&gt; character to define an identifier named &lt;code&gt;for&lt;/code&gt; that it uses in a &lt;code&gt;for&lt;/code&gt;loop.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;[] @for = { &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;John&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;James&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Joan&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Jamie&amp;#34;&lt;/span&gt; };
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt; ctr = &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; ctr &amp;lt; @for.Length; ctr++)
-{
-   Console.WriteLine(&lt;span style=&#34;color:#cd5555&#34;&gt;$&amp;#34;Here is your gift, {@for[ctr]}!&amp;#34;&lt;/span&gt;);
-}
-&lt;span style=&#34;color:#228b22&#34;&gt;// The example displays the following output:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, John!
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, James!
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, Joan!
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     Here is your gift, Jamie!
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;To indicate that a string literal is to be interpreted verbatim. The &lt;code&gt;@&lt;/code&gt; character in this instance defines a &lt;em&gt;verbatim string literal&lt;/em&gt;. Simple escape sequences (such as &lt;code&gt;&amp;quot;\\&amp;quot;&lt;/code&gt; for a backslash), hexadecimal escape sequences (such as &lt;code&gt;&amp;quot;\x0041&amp;quot;&lt;/code&gt; for an uppercase A), and Unicode escape sequences (such as &lt;code&gt;&amp;quot;\u0041&amp;quot;&lt;/code&gt; for an uppercase A) are interpreted literally. Only a quote escape sequence (&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;) is not interpreted literally; it produces one double quotation mark. Additionally, in case of a verbatim &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated&#34;&gt;interpolated string&lt;/a&gt; brace escape sequences (&lt;code&gt;{{&lt;/code&gt; and &lt;code&gt;}}&lt;/code&gt;) are not interpreted literally; they produce single brace characters. The following example defines two identical file paths, one by using a regular string literal and the other by using a verbatim string literal. This is one of the more common uses of verbatim string literals.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; filename1 = &lt;span style=&#34;color:#cd5555&#34;&gt;@&amp;#34;c:\documents\files\u0066.txt&amp;#34;&lt;/span&gt;;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; filename2 = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;c:\\documents\\files\\u0066.txt&amp;#34;&lt;/span&gt;;
-   
-Console.WriteLine(filename1);
-Console.WriteLine(filename2);
-&lt;span style=&#34;color:#228b22&#34;&gt;// The example displays the following output:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     c:\documents\files\u0066.txt
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     c:\documents\files\u0066.txt
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following example illustrates the effect of defining a regular string literal and a verbatim string literal that contain identical character sequences.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; s1 = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;He said, \&amp;#34;This is the last \u0063hance\x0021\&amp;#34;&amp;#34;&lt;/span&gt;;
-&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; s2 = &lt;span style=&#34;color:#cd5555&#34;&gt;@&amp;#34;He said, &amp;#34;&amp;#34;This is the last \u0063hance\x0021&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;;
-   
-Console.WriteLine(s1);
-Console.WriteLine(s2);
-&lt;span style=&#34;color:#228b22&#34;&gt;// The example displays the following output:
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     He said, &amp;#34;This is the last chance!&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//     He said, &amp;#34;This is the last \u0063hance\x0021&amp;#34;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;To enable the compiler to distinguish between attributes in cases of a naming conflict. An attribute is a class that derives from &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/api/system.attribute&#34;&gt;Attribute&lt;/a&gt;. Its type name typically includes the suffix &lt;strong&gt;Attribute&lt;/strong&gt;, although the compiler does not enforce this convention. The attribute can then be referenced in code either by its full type name (for example, &lt;code&gt;[InfoAttribute]&lt;/code&gt; or its shortened name (for example, &lt;code&gt;[Info]&lt;/code&gt;). However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the &lt;strong&gt;Attribute&lt;/strong&gt; suffix but the other does not. For example, the following code fails to compile because the compiler cannot determine whether the &lt;code&gt;Info&lt;/code&gt; or &lt;code&gt;InfoAttribute&lt;/code&gt; attribute is applied to the &lt;code&gt;Example&lt;/code&gt; class. See &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1614&#34;&gt;CS1614&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#008b45;text-decoration:underline&#34;&gt;System&lt;/span&gt;;
-&lt;span style=&#34;color:#658b00&#34;&gt;   
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[AttributeUsage(AttributeTargets.Class)]&lt;/span&gt;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Info&lt;/span&gt; : Attribute
-{
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; information;
-   
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; Info(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; info)
-   {
-      information = info;
-   }
-}
-&lt;span style=&#34;color:#658b00&#34;&gt;   
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[AttributeUsage(AttributeTargets.Method)]&lt;/span&gt;
-&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;InfoAttribute&lt;/span&gt; : Attribute
-{
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; information;
-   
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; InfoAttribute(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; info)
-   {
-      information = info;
-   }
-}
-&lt;span style=&#34;color:#658b00&#34;&gt;   
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;[Info(&amp;#34;A simple executable.&amp;#34;)]&lt;/span&gt; 
-&lt;span style=&#34;color:#228b22&#34;&gt;// Generates compiler error CS1614. Ambiguous Info and InfoAttribute.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Prepend &amp;#39;@&amp;#39; to select &amp;#39;Info&amp;#39;. Specify the full name &amp;#39;InfoAttribute&amp;#39; to select it.
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Example&lt;/span&gt;
-{
-&lt;span style=&#34;color:#658b00&#34;&gt;   [InfoAttribute(&amp;#34;The entry point.&amp;#34;)]&lt;/span&gt;
-   &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;void&lt;/span&gt; Main()
-   {
-   }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;heading-4&#34;&gt;!&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Available in C# 8.0 and later, the unary postfix &lt;code&gt;!&lt;/code&gt; operator is the null-forgiving, or null-suppression, operator. In an enabled &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-annotation-context&#34;&gt;nullable annotation context&lt;/a&gt;, you use the null-forgiving operator to declare that expression &lt;code&gt;x&lt;/code&gt; of a reference type isn&amp;rsquo;t &lt;code&gt;null&lt;/code&gt;: &lt;code&gt;x!&lt;/code&gt;. The unary prefix &lt;code&gt;!&lt;/code&gt; operator is the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#logical-negation-operator-&#34;&gt;logical negation operator&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;It tells the compiler &amp;ldquo;this isn&amp;rsquo;t null, trust me&amp;rdquo;, so it does not issue a warning for a possible null reference.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;reference-22&#34;&gt;Reference&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-forgiving&#34;&gt;! (null-forgiving) operator (C# reference)&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;_&#34;&gt;_&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Starting with C# 7.0, C# supports discards, which are placeholder variables that are intentionally unused in application code. Discards are equivalent to unassigned variables; they don&amp;rsquo;t have a value. A discard communicates intent to the compiler and others that read your code: You intended to ignore the result of an expression. You may want to ignore the result of an expression, one or more members of a tuple expression, an &lt;code&gt;out&lt;/code&gt; parameter to a method, or the target of a pattern matching expression.&lt;/p&gt;
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Beginning with C# 9.0, you can use discards to specify unused input parameters of a lambda expression. For more information, see the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions#input-parameters-of-a-lambda-expression&#34;&gt;Input parameters of a lambda expression&lt;/a&gt; section of the &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions&#34;&gt;Lambda expressions&lt;/a&gt; article.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;reference-23&#34;&gt;Reference&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/discards&#34;&gt;Discards - C# Fundamentals&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-- https://www.openheart.icu/dotnet/dot-net-issue/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     

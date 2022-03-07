@@ -210,7 +210,7 @@
 
 
 <i class="fa fa-weixin" aria-hidden="true"></i>
-Case42
+QuadragintaDuo
 <br>
 <i class="fa fa-envelope" aria-hidden="true"></i>
 krisnie42@qq.com
@@ -535,6 +535,98 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 							<li>
 								<a href="#refactor" onclick="onNavClick(`#refactor-nav`)" id="refactor-nav">
 									Refactor
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issue" onclick="onNavClick(`#issue-nav`)" id="issue-nav">
+									Issue
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#how-to-test-a-recursive-function" onclick="onNavClick(`#how-to-test-a-recursive-function-nav`)" id="how-to-test-a-recursive-function-nav">
+									How to test a recursive Function
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#reference-2" onclick="onNavClick(`#reference-2-nav`)" id="reference-2-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#how-to-test-for-order-of-calls" onclick="onNavClick(`#how-to-test-for-order-of-calls-nav`)" id="how-to-test-for-order-of-calls-nav">
+									How to test for order of calls
 								</a>
 							</li>
 						
@@ -954,6 +1046,98 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 					
 				
 			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issue" onclick="onNavClick(`#issue-nav`)" id="issue-nav">
+									Issue
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#how-to-test-a-recursive-function" onclick="onNavClick(`#how-to-test-a-recursive-function-nav`)" id="how-to-test-a-recursive-function-nav">
+									How to test a recursive Function
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#reference-2" onclick="onNavClick(`#reference-2-nav`)" id="reference-2-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#how-to-test-for-order-of-calls" onclick="onNavClick(`#how-to-test-for-order-of-calls-nav`)" id="how-to-test-for-order-of-calls-nav">
+									How to test for order of calls
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -1046,9 +1230,9 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
                             
 
                             
-                            6 min
+                            8 min
                             
-                            27 s.
+                            19 s.
                         
                     </div>
                 </div>
@@ -1138,6 +1322,27 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
 </ol>
 <h2 id="refactor">Refactor</h2>
 <p>如何有效地refactor？</p>
+<h1 id="issue">Issue</h1>
+<h2 id="how-to-test-a-recursive-function">How to test a recursive Function</h2>
+<p>recursion 在所难免，那应该如何优雅的测试递归呢？</p>
+<p>Stack Overflow推荐方式是设置待测试interface所对应class的method为vitrul，然后增加fake class。为fake class增加额外的property，该property用来记录待测试method的执行次数。然后再UT中不再对原interface测试，而是对fake class测试。</p>
+<p>但是如果是直接对class进行测试，那为何不直接在待测试的class中增加property用来记录method执行次数。然后UT直接测试class。新加的property虽然在生产环境中也会进行计算，但是不会通过interface暴露给接口使用方，自增的property对性能影响也不大。</p>
+<h3 id="reference-2">Reference</h3>
+<ol>
+<li><a href="https://stackoverflow.com/questions/32660959/test-a-recursive-function-with-moq">Test a recursive Function with Moq</a></li>
+</ol>
+<h2 id="how-to-test-for-order-of-calls">How to test for order of calls</h2>
+<blockquote>
+<blockquote>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">mock.InSequence(mockSequence).Setup(x =&gt; x.A()).Returns(<span style="color:#cd5555">&#34;A&#34;</span>);
+mock.InSequence(mockSequence).Setup(x =&gt; x.B()).Returns(<span style="color:#cd5555">&#34;B&#34;</span>);
+</code></pre></div></blockquote>
+<p>It might not be very obvious, but what this code <em>really</em> does is to set up two conditional setups, such that the second setup will not be matched by any invocations until after <code>A</code> has been matched.</p>
+<p>You can think of it this way:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">int</span> step = <span style="color:#b452cd">1</span>;
+mock.When(() =&gt; step == <span style="color:#b452cd">1</span>).Setup(x =&gt; x.A()).Returns(<span style="color:#cd5555">&#34;A&#34;</span>).Callback(() =&gt; step++);
+mock.When(() =&gt; step == <span style="color:#b452cd">2</span>).Setup(x =&gt; x.B()).Returns(<span style="color:#cd5555">&#34;B&#34;</span>).Callback(() =&gt; step++);
+</code></pre></div></blockquote>
 
                     
                     <HR width="100%" id="EOF">
@@ -1184,7 +1389,7 @@ Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-dia
             </div><div id="single-column-footer">
 	
 	<i class="fa fa-weixin" aria-hidden="true"></i>
-	Case42
+	QuadragintaDuo
 	<br>
 	<i class="fa fa-envelope" aria-hidden="true"></i>
 	krisnie42@qq.com
