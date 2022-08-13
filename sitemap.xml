@@ -4,71 +4,206 @@
   
   <url>
     <loc>https://www.openheart.icu/</loc>
-    <lastmod>2021-12-26T11:25:57+00:00</lastmod>
+    <lastmod>2022-07-30T17:15:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/tags/arithmetic/</loc>
+    <lastmod>2022-07-30T17:15:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/arithmetic/</loc>
+    <lastmod>2022-07-30T17:15:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/arithmetic/bankers-algorithm/</loc>
+    <lastmod>2022-07-30T17:15:26+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.openheart.icu/categories/</loc>
-    <lastmod>2021-12-26T11:25:57+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/tags/cs/</loc>
-    <lastmod>2021-12-01T14:28:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/</loc>
-    <lastmod>2021-12-01T14:28:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/representational-state-transfer/</loc>
-    <lastmod>2021-12-01T14:28:00+00:00</lastmod>
+    <lastmod>2022-07-30T17:15:26+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.openheart.icu/tags/</loc>
-    <lastmod>2021-12-26T11:25:57+00:00</lastmod>
+    <lastmod>2022-07-30T17:15:26+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.openheart.icu/categories/technical/</loc>
-    <lastmod>2021-12-26T11:25:57+00:00</lastmod>
+    <lastmod>2022-07-30T17:15:26+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/transactions/</loc>
+    <loc>https://www.openheart.icu/tags/business/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/categories/business/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/configure-price-quote/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/customer-orders/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/inventory/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/job-orders/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/material-planning/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/material-requirements-planning/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/purchase-orders/</loc>
+    <lastmod>2022-07-29T11:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/computing-science/</loc>
+    <lastmod>2022-07-19T17:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/tags/cs/</loc>
+    <lastmod>2022-07-19T17:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/computing-science/schema-security/</loc>
+    <lastmod>2022-07-19T17:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/tags/.net/</loc>
+    <lastmod>2022-06-25T00:14:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/microsoft-dotnet/dot-net-6&#43;/</loc>
+    <lastmod>2022-06-25T00:14:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/microsoft-dotnet/</loc>
+    <lastmod>2022-06-25T00:14:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/tags/interesting/</loc>
+    <lastmod>2022-05-11T19:51:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/categories/interesting/</loc>
+    <lastmod>2022-05-11T19:51:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/speech/interesting2022/</loc>
+    <lastmod>2022-05-11T19:51:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/speech/</loc>
+    <lastmod>2022-05-11T19:51:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/computing-science/technical-debt/</loc>
+    <lastmod>2022-04-19T11:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/tags/finance/</loc>
+    <lastmod>2022-03-24T14:21:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/categories/finance/</loc>
+    <lastmod>2022-03-24T14:21:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/market-based-management/</loc>
+    <lastmod>2022-03-24T14:21:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/our-countrys-economy/</loc>
+    <lastmod>2022-03-24T14:21:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/business/principles-of-economics/</loc>
+    <lastmod>2022-03-20T18:40:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/computing-science/representational-state-transfer/</loc>
     <lastmod>2021-12-01T14:28:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/transparent-multilevel-diversion-system/</loc>
+    <loc>https://www.openheart.icu/computing-science/transactions/</loc>
     <lastmod>2021-12-01T14:28:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/remote-procedure-call/</loc>
+    <loc>https://www.openheart.icu/computing-science/transparent-multilevel-diversion-system/</loc>
+    <lastmod>2021-12-01T14:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.openheart.icu/computing-science/remote-procedure-call/</loc>
     <lastmod>2021-11-15T23:28:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/aws/</loc>
+    <loc>https://www.openheart.icu/computing-science/aws/</loc>
     <lastmod>2021-10-17T11:35:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/cicd/</loc>
+    <loc>https://www.openheart.icu/computing-science/cicd/</loc>
     <lastmod>2021-10-17T11:35:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/csapp/</loc>
+    <loc>https://www.openheart.icu/computing-science/csapp/</loc>
     <lastmod>2021-10-17T11:35:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/database/</loc>
+    <loc>https://www.openheart.icu/computing-science/database/</loc>
     <lastmod>2021-10-17T11:35:34+00:00</lastmod>
   </url>
   
@@ -83,16 +218,6 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/tags/arithmetic/</loc>
-    <lastmod>2021-09-19T17:15:26+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/arithmetic/</loc>
-    <lastmod>2021-09-19T17:15:26+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.openheart.icu/arithmetic/backtracking/</loc>
     <lastmod>2021-09-19T17:15:26+00:00</lastmod>
   </url>
@@ -103,57 +228,32 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</loc>
+    <loc>https://www.openheart.icu/computing-science/working-effectively-with-legacy-code/</loc>
     <lastmod>2021-08-13T15:15:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/tags/.net/</loc>
-    <lastmod>2021-12-26T11:25:57+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/design-patterns/</loc>
+    <loc>https://www.openheart.icu/computing-science/design-patterns/</loc>
     <lastmod>2021-08-02T15:57:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/behavior-driven-development/</loc>
+    <loc>https://www.openheart.icu/computing-science/behavior-driven-development/</loc>
     <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/finance/economicsfinancemanagement/</loc>
+    <loc>https://www.openheart.icu/business/economics-finance-management/</loc>
     <lastmod>2021-05-25T23:29:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/tags/finance/</loc>
-    <lastmod>2021-05-25T23:29:58+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/categories/finance/</loc>
-    <lastmod>2021-05-25T23:29:58+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/finance/</loc>
-    <lastmod>2021-05-25T23:29:58+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/dotnet/</loc>
-    <lastmod>2021-12-26T11:25:57+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/dotnet/effective-csharp6.0/</loc>
+    <loc>https://www.openheart.icu/microsoft-dotnet/effective-csharp6.0/</loc>
     <lastmod>2021-01-09T16:22:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/dotnet/dot-net-runtime/</loc>
+    <loc>https://www.openheart.icu/microsoft-dotnet/dot-net-runtime/</loc>
     <lastmod>2020-12-26T11:25:57+00:00</lastmod>
   </url>
   
@@ -173,42 +273,37 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/speech/</loc>
-    <lastmod>2020-12-01T16:39:46+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/adaptive-code/</loc>
+    <loc>https://www.openheart.icu/computing-science/adaptive-code/</loc>
     <lastmod>2020-12-27T17:15:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/domain-driven-design/</loc>
+    <loc>https://www.openheart.icu/computing-science/domain-driven-design/</loc>
     <lastmod>2020-12-27T17:15:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/test-driven-development/</loc>
+    <loc>https://www.openheart.icu/computing-science/test-driven-development/</loc>
     <lastmod>2020-12-27T17:15:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/idempotent/</loc>
+    <loc>https://www.openheart.icu/computing-science/idempotent/</loc>
     <lastmod>2020-11-12T17:34:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/dependency-injection/</loc>
+    <loc>https://www.openheart.icu/computing-science/dependency-injection/</loc>
     <lastmod>2020-10-15T23:28:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/dotnet/dot-net-issue/</loc>
+    <loc>https://www.openheart.icu/microsoft-dotnet/dot-net-issue/</loc>
     <lastmod>2021-12-26T11:25:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/serverless/</loc>
+    <loc>https://www.openheart.icu/computing-science/serverless/</loc>
     <lastmod>2021-03-02T22:57:39+00:00</lastmod>
   </url>
   
@@ -233,27 +328,27 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/dotnet/csharp-in-depth/</loc>
+    <loc>https://www.openheart.icu/microsoft-dotnet/csharp-in-depth/</loc>
     <lastmod>2020-07-25T00:14:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/architecture/</loc>
+    <loc>https://www.openheart.icu/computing-science/architecture/</loc>
     <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/binary-relation/</loc>
+    <loc>https://www.openheart.icu/computing-science/binary-relation/</loc>
     <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/distributed/</loc>
+    <loc>https://www.openheart.icu/computing-science/distributed/</loc>
     <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/microservice/</loc>
+    <loc>https://www.openheart.icu/computing-science/microservice/</loc>
     <lastmod>2021-11-22T11:11:37+00:00</lastmod>
   </url>
   
@@ -268,18 +363,8 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/tags/interesting/</loc>
-    <lastmod>2020-07-22T19:45:28+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/categories/interesting/</loc>
-    <lastmod>2020-07-22T19:45:28+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/speech/interesting/</loc>
-    <lastmod>2020-07-22T19:45:28+00:00</lastmod>
+    <loc>https://www.openheart.icu/speech/interesting2021/</loc>
+    <lastmod>2020-07-24T19:51:16+00:00</lastmod>
   </url>
   
   <url>
@@ -293,7 +378,7 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/dotnet/dot-net-interview/</loc>
+    <loc>https://www.openheart.icu/microsoft-dotnet/dot-net-interview/</loc>
     <lastmod>2020-11-12T17:34:23+00:00</lastmod>
   </url>
   
@@ -303,27 +388,22 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/computer-network/</loc>
+    <loc>https://www.openheart.icu/computing-science/computer-network/</loc>
     <lastmod>2020-07-15T23:28:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/git/</loc>
+    <loc>https://www.openheart.icu/computing-science/git/</loc>
     <lastmod>2020-07-15T23:28:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/hugo/</loc>
+    <loc>https://www.openheart.icu/computing-science/hugo/</loc>
     <lastmod>2020-07-19T13:18:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/mac/</loc>
-    <lastmod>2020-07-21T22:52:15+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.openheart.icu/cs/markdown/</loc>
+    <loc>https://www.openheart.icu/computing-science/markdown/</loc>
     <lastmod>2020-07-21T21:15:51+00:00</lastmod>
   </url>
   
@@ -338,12 +418,12 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/nginx/</loc>
+    <loc>https://www.openheart.icu/computing-science/nginx/</loc>
     <lastmod>2020-07-21T22:52:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/cs/operating-system/</loc>
+    <loc>https://www.openheart.icu/computing-science/operating-system/</loc>
     <lastmod>2020-07-15T23:28:00+00:00</lastmod>
   </url>
   
@@ -358,13 +438,12 @@
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/speech/work-review/</loc>
+    <loc>https://www.openheart.icu/business/work-review/</loc>
     <lastmod>2020-07-15T23:28:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.openheart.icu/speech/english/</loc>
-    <lastmod>2020-06-15T23:28:00+00:00</lastmod>
+    <loc>https://www.openheart.icu/computing-science/as-built-design/</loc>
   </url>
   
 </urlset>

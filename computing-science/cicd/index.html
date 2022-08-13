@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html><head>
+<title>CI/CD</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="CI/CD">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="CI/CD" />
+<meta property="og:description" content="CI/CD" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/computing-science/cicd/" />
+<meta property="article:published_time" content="2021-10-17T11:35:34+00:00" />
+<meta property="article:modified_time" content="2021-10-17T11:35:34+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CI/CD"/>
+<meta name="twitter:description" content="CI/CD"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-cicd" onclick="onNavClick(`#what-is-cicd-nav`)" id="what-is-cicd-nav">
+									What is CI/CD?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#continuous-integration" onclick="onNavClick(`#continuous-integration-nav`)" id="continuous-integration-nav">
+									Continuous integration
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#continuous-delivery" onclick="onNavClick(`#continuous-delivery-nav`)" id="continuous-delivery-nav">
+									Continuous delivery
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#continuous-deployment" onclick="onNavClick(`#continuous-deployment-nav`)" id="continuous-deployment-nav">
+									Continuous deployment
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-cicd" onclick="onNavClick(`#what-is-cicd-nav`)" id="what-is-cicd-nav">
+									What is CI/CD?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#continuous-integration" onclick="onNavClick(`#continuous-integration-nav`)" id="continuous-integration-nav">
+									Continuous integration
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#continuous-delivery" onclick="onNavClick(`#continuous-delivery-nav`)" id="continuous-delivery-nav">
+									Continuous delivery
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#continuous-deployment" onclick="onNavClick(`#continuous-deployment-nav`)" id="continuous-deployment-nav">
+									Continuous deployment
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    CI/CD
+                    
+                    <div class="post-subtitle">
+                        CI/CD
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-10-17 11:35
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/operation">Operation</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            1 min
+                            
+                            18 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="what-is-cicd">What is CI/CD?</h1>
+<blockquote>
+<p>In <a href="https://en.wikipedia.org/wiki/Software_engineering">software engineering</a>, <strong>CI/CD</strong> or <strong>CICD</strong> is the combined practices of <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> (CI) and either <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a> or <a href="https://en.wikipedia.org/wiki/Continuous_deployment">continuous deployment</a> (CD).</p>
+<p>CI/CD bridges the gaps between development and operation activities and teams by enforcing automation in building, testing and deployment of applications. The process contrasts with traditional methods where all updates were integrated into one large batch before rolling out the newer version. Modern day <a href="https://en.wikipedia.org/wiki/DevOps">DevOps</a> practices involve continuous development, continuous testing, continuous integration, continuous deployment and continuous monitoring of software applications throughout its development life cycle. The CI/CD practice, or <em>CI/CD pipeline</em>, forms the backbone of modern day DevOps operations.</p>
+</blockquote>
+<h2 id="continuous-integration">Continuous integration</h2>
+<p>这个阶段应该是在VCS下，codebase要对每个MR进行自动化的build，甚至自动化的run unit testing。目的是为了保证merge的代码是OK的。</p>
+<h2 id="continuous-delivery">Continuous delivery</h2>
+<p>已经完成CI的代码表示可以交付给用户，此时的代码应该是随时都可以部署到生产环境中。</p>
+<h2 id="continuous-deployment">Continuous deployment</h2>
+<p>这个应该是重点，要自动部署可能基于cloud更为方便。CD过程可以更好的与蓝绿部署/滚动发布/灰度发布相结合。</p>
+<h2 id="reference">Reference:</h2>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/CI/CD">https://en.wikipedia.org/wiki/CI/CD</a></li>
+<li><a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd">https://www.redhat.com/en/topics/devops/what-is-ci-cd</a></li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-10-17</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/computing-science/aws/">
+			Next<br>AWS
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/computing-science/csapp/">
+			Previous<br>CSAPP
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

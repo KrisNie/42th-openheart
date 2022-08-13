@@ -7,13 +7,39 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Wed, 01 Dec 2021 14:28:00 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 17:28:00 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Schema Security</title>
+      <link>https://www.openheart.icu/computing-science/schema-security/</link>
+      <pubDate>Tue, 19 Jul 2022 17:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/computing-science/schema-security/</guid>
+      <description>Authentication 系统如何正确分辨出操作用户的真实身份？
+认证并不是仅仅是校验一下用户名、密码是否正确这么简单。
+账户和权限信息作为一种必须最大限度保障安全和隐私，同时又要兼顾各个系统模块甚至系统间共享访问的基础主数据，它的存储、管理与使用都面临一系列复杂的问题。对于某些大规模的信息系统，账户和权限的管理往往要由专门的基础设施来负责，譬如微软的活动目录（Active Directory，AD）或者轻量目录访问协议（Lightweight Directory Access Protocol，LDAP），跨系统的共享使用甚至会用到区块链技术。
+Authentication standards 基于 HTML 和 JavaScript 的超文本 Web 应用（B/S 系统）对最终用户认证的需求使得“安全认证”的重点逐渐从“代码级安全”转为“用户级安全”，即你是否信任正在操作的用户。
+认证需要覆盖通信信道、协议和内容三个层面，而这三种层面认证恰好涵盖了主流的三种认证方式，具体含义和应用场景列举如下。
+ 通信信道上的认证：你和我建立通信连接之前，要先证明你是谁。在网络传输（Network）场景中的典型是基于 SSL/TLS 传输安全层的认证。 通信协议上的认证：你请求获取我的资源之前，要先证明你是谁。在互联网（Internet）场景中的典型是基于 HTTP 协议的认证。 通信内容上的认证：你使用我提供的服务之前，要先证明你是谁。在万维网（World Wide Web）场景中的典型是基于 Web 内容的认证。  HTTP Authentication 认证方案（Authentication Schemes），它是指生成用户身份凭证的某种方法，这个概念最初源于 HTTP 协议的认证框架（Authentication Framework）。
+IETF 在RFC 7235中定义了 HTTP 协议的通用认证框架，要求所有支持 HTTP 协议的服务器，在未授权的用户意图访问服务端保护区域的资源时，应返回 401 Unauthorized 的状态码，同时应在响应报文头里附带以下两个分别代表网页认证和代理认证的 Header 之一，告知客户端应该采取何种方式产生能代表访问者身份的凭证信息：
+WWW-Authenticate: &amp;lt;认证方案&amp;gt; realm=&amp;lt;保护区域的描述信息&amp;gt; Proxy-Authenticate: &amp;lt;认证方案&amp;gt; realm=&amp;lt;保护区域的描述信息&amp;gt; 接收到该响应后，客户端必须遵循服务端指定的认证方案，在请求资源的报文头中加入身份凭证信息，由服务端核实通过后才会允许该请求正常返回，否则将返回 403 Forbidden 错误。请求头报文应包含以下 Header 项之一：
+Authorization: &amp;lt;认证方案&amp;gt; &amp;lt;凭证内容&amp;gt; Proxy-Authorization: &amp;lt;认证方案&amp;gt; &amp;lt;凭证内容&amp;gt; HTTP 认证框架提出认证方案是希望能把认证“要产生身份凭证”的目的与“具体如何产生凭证”的实现分离开来，无论客户端通过生物信息（指纹、人脸）、用户密码、数字证书抑或其他方式来生成凭证，都属于是如何生成凭证的具体实现，都可以包容在 HTTP 协议预设的框架之内。</description>
+    </item>
+    
+    <item>
+      <title>Technical debt</title>
+      <link>https://www.openheart.icu/computing-science/technical-debt/</link>
+      <pubDate>Tue, 19 Apr 2022 11:28:00 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/computing-science/technical-debt/</guid>
+      <description>Technical debt  Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite. Objects make the cost of this transaction tolerable. The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt. Entire engineering organizations can be brought to a stand-still under the debt load of an unconsolidated implementation, object- oriented or otherwise.</description>
+    </item>
+    
     <item>
       <title>Representational State Transfer</title>
-      <link>https://www.openheart.icu/cs/representational-state-transfer/</link>
+      <link>https://www.openheart.icu/computing-science/representational-state-transfer/</link>
       <pubDate>Wed, 01 Dec 2021 14:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/representational-state-transfer/</guid>
+      <guid>https://www.openheart.icu/computing-science/representational-state-transfer/</guid>
       <description>What&amp;rsquo;s REST? Representational State Transfer, 表征状态转移
  比较容易理解 REST 思想的途径是先理解什么是 HTTP，再配合一些实际例子来进行类比，你会发现“REST”（Representational State Transfer）实际上是“HTT”（Hypertext Transfer）的进一步抽象，两者就如同接口与实现类的关系一般。
  Hypertext:
@@ -25,10 +51,10 @@
     
     <item>
       <title>Transactions</title>
-      <link>https://www.openheart.icu/cs/transactions/</link>
+      <link>https://www.openheart.icu/computing-science/transactions/</link>
       <pubDate>Wed, 01 Dec 2021 14:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/transactions/</guid>
+      <guid>https://www.openheart.icu/computing-science/transactions/</guid>
       <description>ACID  事务处理几乎在每一个信息系统中都会涉及，它存在的意义是为了保证系统中所有的数据都是符合期望的，且相互关联的数据之间不会产生矛盾，即数据状态的一致性（Consistency）。
 按照数据库的经典理论，要达成这个目标，需要三方面共同努力来保障。
  原子性（Atomic）：在同一项业务处理过程中，事务保证了对多个数据的修改，要么同时成功，要么同时被撤销。 隔离性（Isolation）：在不同的业务处理过程中，事务保证了各自业务正在读、写的数据互相独立，不会彼此影响。 持久性（Durability）：事务应当保证所有成功被提交的数据修改都能够正确地被持久化，不丢失数据。    场景事例
@@ -39,35 +65,35 @@ Fenix&amp;rsquo;s Bookstore 是一个在线书店。每当一本书被成功售�
     
     <item>
       <title>Transparent Multilevel Diversion</title>
-      <link>https://www.openheart.icu/cs/transparent-multilevel-diversion-system/</link>
+      <link>https://www.openheart.icu/computing-science/transparent-multilevel-diversion-system/</link>
       <pubDate>Wed, 01 Dec 2021 14:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/transparent-multilevel-diversion-system/</guid>
+      <guid>https://www.openheart.icu/computing-science/transparent-multilevel-diversion-system/</guid>
       <description>在用户使用信息系统的过程中，请求从浏览器出发，在域名服务器的指引下找到系统的入口，经过网关、负载均衡器、缓存、服务集群等一系列设施，最后触及到末端存储于数据库服务器中的信息，然后逐级返回到用户的浏览器之中。这其中要经过很多技术部件：
  有一些部件位于客户端或网络的边缘，能够迅速响应用户的请求，避免给后方的 I/O 与 CPU 带来压力，典型如本地缓存、内容分发网络、反向代理等。 有一些部件的处理能力能够线性拓展，易于伸缩，可以使用较小的代价堆叠机器来获得与用户数量相匹配的并发性能，应尽量作为业务逻辑的主要载体，典型如集群中能够自动扩缩的服务节点。 有一些部件稳定服务对系统运行有全局性的影响，要时刻保持着容错备份，维护着高可用性，典型如服务注册中心、配置中心。 有一些设施是天生的单点部件，只能依靠升级机器本身的网络、存储和运算性能来提升处理能力，如位于系统入口的路由、网关或者负载均衡器（它们都可以做集群，但一次网络请求中无可避免至少有一个是单点的部件）、位于请求调用链末端的传统关系数据库等，都是典型的容易形成单点部件。  对系统进行流量规划时，我们应该充分理解这些部件的价值差异，有两条简单、普适的原则能指导我们进行设计：
- 第一条原则是尽可能减少单点部件，如果某些单点是无可避免的，则应尽最大限度减少到达单点部件的流量。在系统中往往会有多个部件能够处理、响应用户请求，譬如要获取一张存储在数据库的用户头像图片，浏览器缓存、内容分发网络、反向代理、Web 服务器、文件服务器、数据库都可能提供这张图片。恰如其分地引导请求分流至最合适的组件中，避免绝大多数流量汇集到单点部件（如数据库），同时依然能够在绝大多数时候保证处理结果的准确性，使单点系统在出现故障时自动而迅速地实施补救措施，这便是系统架构中多级分流的意义。 另一条更关键的原则是奥卡姆剃刀原则。作为一名架构设计者，你应对多级分流的手段有全面的理解与充分的准备，同时清晰地意识到这些设施并不是越多越好。在实际构建系统时，你应当在有明确需求、真正必要的时候再去考虑部署它们。不是每一个系统都要追求高并发、高可用的，根据系统的用户量、峰值流量和团队本身的技术与运维能力来考虑如何部署这些设施才是合理的做法，在能满足需求的前提下，最简单的系统就是最好的系统。  Client Cache 强制缓存 假设在某个时点到来以前，譬如收到响应后的 10 分钟内，资源的内容和状态一定不会被改变，因此客户端可以无须经过任何请求，在该时点前一直持有和使用该资源的本地缓存副本。
+ 第一条原则是尽可能减少单点部件，如果某些单点是无可避免的，则应尽最大限度减少到达单点部件的流量。在系统中往往会有多个部件能够处理、响应用户请求，譬如要获取一张存储在数据库的用户头像图片，浏览器缓存、内容分发网络、反向代理、Web 服务器、文件服务器、数据库都可能提供这张图片。恰如其分地引导请求分流至最合适的组件中，避免绝大多数流量汇集到单点部件（如数据库），同时依然能够在绝大多数时候保证处理结果的准确性，使单点系统在出现故障时自动而迅速地实施补救措施，这便是系统架构中多级分流的意义。 另一条更关键的原则是奥卡姆剃刀原则。作为一名架构设计者，你应对多级分流的手段有全面的理解与充分的准备，同时清晰地意识到这些设施并不是越多越好。在实际构建系统时，你应当在有明确需求、真正必要的时候再去考虑部署它们。不是每一个系统都要追求高并发、高可用的，根据系统的用户量、峰值流量和团队本身的技术与运维能力来考虑如何部署这些设施才是合理的做法，在能满足需求的前提下，最简单的系统就是最好的系统。  Client Cache Force Caching 假设在某个时点到来以前，譬如收到响应后的 10 分钟内，资源的内容和状态一定不会被改变，因此客户端可以无须经过任何请求，在该时点前一直持有和使用该资源的本地缓存副本。
 根据约定，强制缓存在浏览器的地址输入、页面链接跳转、新开窗口、前进和后退中均可生效，但在用户主动刷新页面时应当自动失效。
- Expires  受限于客户端的本地时间。 无法处理涉及到用户身份的私有资源，譬如，某些资源被登录用户缓存在自己的浏览器上是合理的，但如果被代理服务器或者内容分发网络缓存起来，则可能被其他未认证的用户所获取。 无法描述“不缓存”的语义。譬如，浏览器为了提高性能，往往会自动在当次会话中缓存某些 MIME 类型的资源，在 HTTP/1.0 的服务器中就缺乏手段强制浏览器不允许缓存某个资源。以前为了实现这类功能，通常不得不使用脚本，或者手工在资源后面增加时间戳（譬如如“xx.js?t=1586359920”、“xx.jpg?t=1586359350”）来保证每次资源都会重新获取。 关于“不缓存”的语义，在 HTTP/1.0 中其实预留了“Pragma: no-cache”来表达，但 Pragma 参数在 HTTP/1.0 中并没有确切描述其具体行为，随后就被 HTTP/1.1 中出现过的 Cache-Control 所替代，现在，尽管主流浏览器通常都会支持 Pragma，但行为仍然是不确定的，实际并没有什么使用价值。   Cache-Control  协商缓存 强制缓存是基于时效性的，但无论是人还是服务器，其实多数情况下都并没有什么把握去承诺某项资源多久不会发生变化。
+ Expires  受限于客户端的本地时间。 无法处理涉及到用户身份的私有资源，譬如，某些资源被登录用户缓存在自己的浏览器上是合理的，但如果被代理服务器或者内容分发网络缓存起来，则可能被其他未认证的用户所获取。 无法描述“不缓存”的语义。譬如，浏览器为了提高性能，往往会自动在当次会话中缓存某些 MIME 类型的资源，在 HTTP/1.0 的服务器中就缺乏手段强制浏览器不允许缓存某个资源。以前为了实现这类功能，通常不得不使用脚本，或者手工在资源后面增加时间戳（譬如如“xx.js?t=1586359920”、“xx.jpg?t=1586359350”）来保证每次资源都会重新获取。 关于“不缓存”的语义，在 HTTP/1.0 中其实预留了“Pragma: no-cache”来表达，但 Pragma 参数在 HTTP/1.0 中并没有确切描述其具体行为，随后就被 HTTP/1.1 中出现过的 Cache-Control 所替代，现在，尽管主流浏览器通常都会支持 Pragma，但行为仍然是不确定的，实际并没有什么使用价值。   Cache-Control  Negotiate Caching 强制缓存是基于时效性的，但无论是人还是服务器，其实多数情况下都并没有什么把握去承诺某项资源多久不会发生变化。
 根据约定，协商缓存不仅在浏览器的地址输入、页面链接跳转、新开窗口、前进、后退中生效，而且在用户主动刷新页面（F5）时也同样是生效的，只有用户强制刷新（Ctrl+F5）或者明确禁用缓存（譬如在 DevTools 中设定）时才会失效，此时客户端向服务端发出的请求会自动带有“Cache-Control: no-cache”。
  Last-Modified &amp;amp; If-Modified-Since ETag &amp;amp; If-None-Match  Etag 是 HTTP 中一致性最强的缓存机制，譬如，Last-Modified 标注的最后修改只能精确到秒级，如果某些文件在 1 秒钟以内，被修改多次的话，它将不能准确标注文件的修改时间；又或者如果某些文件会被定期生成，可能内容并没有任何变化，但 Last-Modified 却改变了，导致文件无法有效使用缓存，这些情况 Last-Modified 都有可能产生资源一致性问题，只能使用 Etag 解决。</description>
     </item>
     
     <item>
       <title>Remote Procedure Call</title>
-      <link>https://www.openheart.icu/cs/remote-procedure-call/</link>
+      <link>https://www.openheart.icu/computing-science/remote-procedure-call/</link>
       <pubDate>Mon, 15 Nov 2021 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/remote-procedure-call/</guid>
+      <guid>https://www.openheart.icu/computing-science/remote-procedure-call/</guid>
       <description>Inter-Process Communication Pipe Signal Semaphore Message Queue Shared Memory Socket 8 Fallacies of Distributed Computing 1994 - 1997, ACM 和 Sun 院士Peter Deutsch、套接字接口发明者Bill Joy、Java 之父James Gosling等一众在 Sun Microsystems 工作的大佬们共同总结了通过网络进行分布式运算的八宗罪（8 Fallacies of Distributed Computing）
   The network is reliable —— 网络是可靠的。 Latency is zero —— 延迟是不存在的。 Bandwidth is infinite —— 带宽是无限的。 The network is secure —— 网络是安全的。 Topology doesn&amp;rsquo;t change —— 拓扑结构是一成不变的。 There is one administrator —— 总会有一个管理员。 Transport cost is zero —— 不必考虑传输成本。 The network is homogeneous —— 网络是同质化（Homogeneous networks are networks where all the nodes have the same function in the network.</description>
     </item>
     
     <item>
       <title>CSAPP</title>
-      <link>https://www.openheart.icu/cs/csapp/</link>
+      <link>https://www.openheart.icu/computing-science/csapp/</link>
       <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/csapp/</guid>
+      <guid>https://www.openheart.icu/computing-science/csapp/</guid>
       <description>ISSUES Application binary interface 区分高可靠性与高可用性 Reliability和Availability分别对应可靠性和可用性, 这两个概念既有区别也有联系:
  Reliability定义为一个服务连续无故障运行的时间，无故障运行的时间越长，可靠性就越高。 Availiability定义为在足够长的时间里，比如一年的时间里，一个服务可用的时间，服务可用时间越长越好。一般用可服务时间除于总时间算出一个百分比，用百分比作为度量。比如一个服务如果有5个9的可用性，指的就是一年里99.999%时间里服务都是可用的。  有两个极端的例子可以很好的说明这两个概念的区别:
  假想一个服务，可靠性很高，平均来说可以稳定运行10年，但是一旦服务中断，要用一年的时间来恢复，那么它的可用性只有90%。 假想另一个服务，可靠性很差，运行10秒就会宕机，但是恢复服务只需要1ms, 那么它的可用性是99.99%  从这两个极端的例子可以看出，提高可用性有两条路:
@@ -82,38 +108,39 @@ Fenix&amp;rsquo;s Bookstore 是一个在线书店。每当一本书被成功售�
     
     <item>
       <title>Working Effectively with Legacy Code</title>
-      <link>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</link>
+      <link>https://www.openheart.icu/computing-science/working-effectively-with-legacy-code/</link>
       <pubDate>Thu, 12 Aug 2021 15:15:57 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/working-effectively-with-legacy-code/</guid>
+      <guid>https://www.openheart.icu/computing-science/working-effectively-with-legacy-code/</guid>
       <description>The Mechanics of Change Changing Software Four Reasons to Change Software  Adding a feature Fixing a bug Improving the design Optimizing resource usage  Changing Software Dependency-Breaking Techniques </description>
     </item>
     
     <item>
       <title>Design Patterns</title>
-      <link>https://www.openheart.icu/cs/design-patterns/</link>
+      <link>https://www.openheart.icu/computing-science/design-patterns/</link>
       <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/design-patterns/</guid>
+      <guid>https://www.openheart.icu/computing-science/design-patterns/</guid>
       <description>Overengineering keep it simple, stupid
-Structural Design Patterns Creational Design Patterns Singleton Reference  https://csharpindepth.com/articles/Singleton https://www.cnblogs.com/leolion/p/10241822.html  Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.</description>
+Structural Design Patterns Creational Design Patterns Singleton Reference:
+ https://csharpindepth.com/articles/Singleton https://www.cnblogs.com/leolion/p/10241822.html  Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.</description>
     </item>
     
     <item>
       <title>Behavior-driven development</title>
-      <link>https://www.openheart.icu/cs/behavior-driven-development/</link>
+      <link>https://www.openheart.icu/computing-science/behavior-driven-development/</link>
       <pubDate>Sat, 24 Jul 2021 00:00:50 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/behavior-driven-development/</guid>
+      <guid>https://www.openheart.icu/computing-science/behavior-driven-development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Adaptive Code</title>
-      <link>https://www.openheart.icu/cs/adaptive-code/</link>
+      <link>https://www.openheart.icu/computing-science/adaptive-code/</link>
       <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/adaptive-code/</guid>
+      <guid>https://www.openheart.icu/computing-science/adaptive-code/</guid>
       <description>Adaptive Code: Agile coding with design patterns and SOLID principles 从标题中就不难发现，Adaptive Code的重点有三个：
   敏捷编码
   设计模式
@@ -125,31 +152,31 @@ Structural Design Patterns Creational Design Patterns Singleton Reference  https
     
     <item>
       <title>Domain-driven design</title>
-      <link>https://www.openheart.icu/cs/domain-driven-design/</link>
+      <link>https://www.openheart.icu/computing-science/domain-driven-design/</link>
       <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/domain-driven-design/</guid>
+      <guid>https://www.openheart.icu/computing-science/domain-driven-design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Test-driven development</title>
-      <link>https://www.openheart.icu/cs/test-driven-development/</link>
+      <link>https://www.openheart.icu/computing-science/test-driven-development/</link>
       <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/test-driven-development/</guid>
-      <description>Unit Test Practice  纸上得来终觉浅，绝知此事要躬行。
- Shifting Left 所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )
+      <guid>https://www.openheart.icu/computing-science/test-driven-development/</guid>
+      <description>Unit Test Practice 纸上得来终觉浅，绝知此事要躬行。
+Shifting Left 所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )
  Shift Left is a practice intended to find and prevent defects early in the software delivery process. The idea is to improve quality by moving tasks to the left as early in the lifecycle as possible.
 In the traditional software development model, requirements are kept on the left side of the plan, and the delivery and testing requirements on the right.</description>
     </item>
     
     <item>
       <title>Dependency Injection</title>
-      <link>https://www.openheart.icu/cs/dependency-injection/</link>
+      <link>https://www.openheart.icu/computing-science/dependency-injection/</link>
       <pubDate>Thu, 15 Oct 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/dependency-injection/</guid>
+      <guid>https://www.openheart.icu/computing-science/dependency-injection/</guid>
       <description>Dependency Injection IOC Spring 框架为Java提供了IOC（Inversion of Control），只是提供了一个服务容器，程序控制我们需要的对象，而不是在使用对象时我们亲自直接控制。既然提到了IOC就详细了解一下这种设计思想：
 为了解决对象间耦合度过高的问题，软件专家Michael Mattson提出了IOC理论，用来实现对象之间的“解耦”。
 控制反转是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。
@@ -169,10 +196,10 @@ DI IOC与DI的区别  控制反转是一种在软件工程中解耦合的思想�
     
     <item>
       <title>Serverless </title>
-      <link>https://www.openheart.icu/cs/serverless/</link>
+      <link>https://www.openheart.icu/computing-science/serverless/</link>
       <pubDate>Sat, 15 Aug 2020 16:27:30 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/serverless/</guid>
+      <guid>https://www.openheart.icu/computing-science/serverless/</guid>
       <description>Implement AWS Lambda </description>
     </item>
     
@@ -198,10 +225,10 @@ DI IOC与DI的区别  控制反转是一种在软件工程中解耦合的思想�
     
     <item>
       <title>Architecture</title>
-      <link>https://www.openheart.icu/cs/architecture/</link>
+      <link>https://www.openheart.icu/computing-science/architecture/</link>
       <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/architecture/</guid>
+      <guid>https://www.openheart.icu/computing-science/architecture/</guid>
       <description>Evolvement Monolithic “单体”只是表明系统中主要的过程调用都是进程内调用，不会发生进程间通信，仅此而已。
 Monolithic Application  Monolith means composed all in one piece. The Monolithic application describes a single-tiered software application in which different components combined into a single program from a single platform.
 单体意味着自包含。单体应用描述了一种由同一技术平台的不同组件构成的单层软件。
@@ -216,40 +243,41 @@ Information Silo Architecture  信息烟囱又名信息孤岛（Information Isla
     
     <item>
       <title>Binary relation</title>
-      <link>https://www.openheart.icu/cs/binary-relation/</link>
+      <link>https://www.openheart.icu/computing-science/binary-relation/</link>
       <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/binary-relation/</guid>
+      <guid>https://www.openheart.icu/computing-science/binary-relation/</guid>
       <description>Binary relation Total order Partially ordered set </description>
     </item>
     
     <item>
       <title>Distributed</title>
-      <link>https://www.openheart.icu/cs/distributed/</link>
+      <link>https://www.openheart.icu/computing-science/distributed/</link>
       <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/distributed/</guid>
+      <guid>https://www.openheart.icu/computing-science/distributed/</guid>
       <description>CAP Consistency Every read receives the most recent write or an error.
 Availability Every request receives a (non-error) response, without the guarantee that it contains the most recent write.
 Partition tolerance The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes.
-Solution  Cloud Spanner  Reference  CAP theorem An Illustrated Proof of the CAP Theorem 分布式系统的CAP理论  Distributed cache 缓存雪崩 缓存雪崩我们可以简单的理解为：由于原有缓存失效，新缓存未到期间所有原本应该访问缓存的请求都去查询数据库了，而对数据库 CPU 和内存造成巨大压力，严重的会造成数据库宕机。从而形成一系列连锁反应，造成整个系统崩溃。</description>
+Solution  Cloud Spanner  Reference
+ CAP theorem An Illustrated Proof of the CAP Theorem 分布式系统的CAP理论  Issues Andrew File System  Distributed and global time Reference</description>
     </item>
     
     <item>
       <title>Microservice</title>
-      <link>https://www.openheart.icu/cs/microservice/</link>
+      <link>https://www.openheart.icu/computing-science/microservice/</link>
       <pubDate>Fri, 24 Jul 2020 00:00:50 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/microservice/</guid>
+      <guid>https://www.openheart.icu/computing-science/microservice/</guid>
       <description>API Gateways  The reference microservice application eShopOnContainers is currently using features provided by Envoy to implement the API Gateway instead of the earlier referenced Ocelot. We made this design choice because of Envoy&amp;rsquo;s built-in support for the WebSocket protocol, required by the new gRPC inter-service communications implemented in eShopOnContainers. However, we&amp;rsquo;ve retained this section in the guide so you can consider Ocelot as a simple, capable, and lightweight API Gateway suitable for production-grade scenarios.</description>
     </item>
     
     <item>
       <title>Computer network</title>
-      <link>https://www.openheart.icu/cs/computer-network/</link>
+      <link>https://www.openheart.icu/computing-science/computer-network/</link>
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/computer-network/</guid>
+      <guid>https://www.openheart.icu/computing-science/computer-network/</guid>
       <description>Computer Network Base on &amp;ldquo;Computer Networking - A Top Down Approach, 7th&amp;rdquo;.
 Issues 网络的七层架构  物理层 数据链路层 网络层 传输层 会话层 表示层 应用层  TCP/IP 原理 TCP 三次握手/四次挥手 三次握手 TCP 在传输之前会进行三次沟通，一般称为“三次握手”。
 四次挥手 TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。
@@ -259,13 +287,13 @@ Private IP Address vs Public IP Address &amp;amp; Public IP Port  0-1023是公�
     
     <item>
       <title>Operating System</title>
-      <link>https://www.openheart.icu/cs/operating-system/</link>
+      <link>https://www.openheart.icu/computing-science/operating-system/</link>
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/operating-system/</guid>
-      <description>Basic Operation Mac brew使用国内镜像源（不好使） 中科大：
-# 步骤一 cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git* # 步骤二 cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git* #步骤三 brew update 复原：
-cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core brew update 配置item2代理 # 打开配置文件 vim ~/.bash_profile # 如果用了`oh-my-zsh` 那么修改`~/.zshrc` # 在后面新增配置 export http_proxy=http://127.0.0.1:1087 export https_proxy=socks5://127.0.0.1:1080 # 同理，可能执行 source ~/.zshrc source ~/.bash_profile iTerm2 + Oh My Zsh 安装Oh my zsh # curl 安装方式 sh -c &amp;#34;$(curl -fsSL https://raw.</description>
+      <guid>https://www.openheart.icu/computing-science/operating-system/</guid>
+      <description>Basic Introduction Processes and Threads 作业与作业调度 在多道批处理系统中，作业是用户提交给系统的一项相对独立的工作。操作员把用户提交的作业通过相应的输入设备输入到磁盘存储器，并保存在一个后备作业队列中。再由作业调度程序将其从外存调入内存。
+作业（Job），作业是一个比程序更为广泛的概念，它不仅包含了通常的程序和数据，而且还应配有一份作业说明书，系统根据该书名书来对程序的运行进行控制。在批处理系统中，是以作业为基本单位从外存调入内存的。
+ A process is an isolated entity of Operating System. A task may be called a process if it is a single task. A job may be called a task if the job to be performed is a single unit of work. A process or group of processes can be termed as a task and a group of tasks can be termed as a job.</description>
     </item>
     
   </channel>

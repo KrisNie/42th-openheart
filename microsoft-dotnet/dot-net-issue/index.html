@@ -1,0 +1,4108 @@
+<!DOCTYPE html>
+<html><head>
+<title>Dot Net Issue</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Dot Net Issue">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Dot Net Issue" />
+<meta property="og:description" content="Dot Net Issue" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/microsoft-dotnet/dot-net-issue/" />
+<meta property="article:published_time" content="2020-09-10T11:00:35+00:00" />
+<meta property="article:modified_time" content="2021-12-26T11:25:57+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dot Net Issue"/>
+<meta name="twitter:description" content="Dot Net Issue"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#hot-reload-razor-views" onclick="onNavClick(`#hot-reload-razor-views-nav`)" id="hot-reload-razor-views-nav">
+									Hot-Reload Razor Views
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#watch-out-project-on-rider" onclick="onNavClick(`#watch-out-project-on-rider-nav`)" id="watch-out-project-on-rider-nav">
+									Watch out Project On Rider
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#newguid" onclick="onNavClick(`#newguid-nav`)" id="newguid-nav">
+									NewGuid()
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#guidhttpsenwikipediaorgwikiuniversally_unique_identifier" onclick="onNavClick(`#guidhttpsenwikipediaorgwikiuniversally_unique_identifier-nav`)" id="guidhttpsenwikipediaorgwikiuniversally_unique_identifier-nav">
+									GUID
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#systemguidnewguidtostring" onclick="onNavClick(`#systemguidnewguidtostring-nav`)" id="systemguidnewguidtostring-nav">
+									System.Guid.NewGuid().ToString()
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#guids-case-sensitivehttpsbytescomtopicc-sharpanswers233494-guids-case-sensitive" onclick="onNavClick(`#guids-case-sensitivehttpsbytescomtopicc-sharpanswers233494-guids-case-sensitive-nav`)" id="guids-case-sensitivehttpsbytescomtopicc-sharpanswers233494-guids-case-sensitive-nav">
+									GUIDS case sensitive?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#model--entity--viewmodel--dto" onclick="onNavClick(`#model--entity--viewmodel--dto-nav`)" id="model--entity--viewmodel--dto-nav">
+									Model &amp; Entity &amp; Viewmodel &amp; DTO
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#model" onclick="onNavClick(`#model-nav`)" id="model-nav">
+									Model
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#entity" onclick="onNavClick(`#entity-nav`)" id="entity-nav">
+									Entity
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#viewmodel" onclick="onNavClick(`#viewmodel-nav`)" id="viewmodel-nav">
+									Viewmodel
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dto-data-transfer-object" onclick="onNavClick(`#dto-data-transfer-object-nav`)" id="dto-data-transfer-object-nav">
+									DTO (Data transfer object)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#iviewlocationexpander" onclick="onNavClick(`#iviewlocationexpander-nav`)" id="iviewlocationexpander-nav">
+									IViewLocationExpander
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#error-the-database-provider-attempted-to-register-an-implementation" onclick="onNavClick(`#error-the-database-provider-attempted-to-register-an-implementation-nav`)" id="error-the-database-provider-attempted-to-register-an-implementation-nav">
+									Error: The database provider attempted to register an implementation…
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#framework-design-guidelines" onclick="onNavClick(`#framework-design-guidelines-nav`)" id="framework-design-guidelines-nav">
+									Framework Design Guidelines
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#analyze-code-in-visual-studio" onclick="onNavClick(`#analyze-code-in-visual-studio-nav`)" id="analyze-code-in-visual-studio-nav">
+									Analyze code in Visual Studio
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#source-code-analysis" onclick="onNavClick(`#source-code-analysis-nav`)" id="source-code-analysis-nav">
+									Source code analysis
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#legacy-analysis-for-managed-code" onclick="onNavClick(`#legacy-analysis-for-managed-code-nav`)" id="legacy-analysis-for-managed-code-nav">
+									Legacy analysis for managed code
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#attention" onclick="onNavClick(`#attention-nav`)" id="attention-nav">
+									Attention
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#controversy" onclick="onNavClick(`#controversy-nav`)" id="controversy-nav">
+									Controversy
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#using-abbreviations-and-acronyms" onclick="onNavClick(`#using-abbreviations-and-acronyms-nav`)" id="using-abbreviations-and-acronyms-nav">
+									Using Abbreviations and Acronyms
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#http-error-50019---internal-server-error" onclick="onNavClick(`#http-error-50019---internal-server-error-nav`)" id="http-error-50019---internal-server-error-nav">
+									HTTP Error 500.19 - Internal Server Error
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#detailed-error-information" onclick="onNavClick(`#detailed-error-information-nav`)" id="detailed-error-information-nav">
+									Detailed Error Information:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#solution" onclick="onNavClick(`#solution-nav`)" id="solution-nav">
+									Solution
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file" onclick="onNavClick(`#excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file-nav`)" id="excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file-nav">
+									Excel break long lines when importing csv file
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied" onclick="onNavClick(`#httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied-nav`)" id="httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied-nav">
+									HttpListener Access Denied
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#internalsvisibleto" onclick="onNavClick(`#internalsvisibleto-nav`)" id="internalsvisibleto-nav">
+									internalsvisibleto
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#use-fake-method-in-unit-test-to-implement-the-non-mockable-object" onclick="onNavClick(`#use-fake-method-in-unit-test-to-implement-the-non-mockable-object-nav`)" id="use-fake-method-in-unit-test-to-implement-the-non-mockable-object-nav">
+									Use Fake Method in Unit Test to implement the non-mockable Object.
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-nethttpsstackoverflowcomquestions4988286what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net" onclick="onNavClick(`#what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-nethttpsstackoverflowcomquestions4988286what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net-nav`)" id="what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-nethttpsstackoverflowcomquestions4988286what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net-nav">
+									What difference is there between WebClient and HTTPWebRequest classes in .NET?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#consolewriteline-cannot--write-unicode-characters-to-the-console" onclick="onNavClick(`#consolewriteline-cannot--write-unicode-characters-to-the-console-nav`)" id="consolewriteline-cannot--write-unicode-characters-to-the-console-nav">
+									Console.WriteLine() cannot write Unicode characters to the console
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-to-use-await-in-a-loophttpsstackoverflowcomquestions19431494how-to-use-await-in-a-loop" onclick="onNavClick(`#how-to-use-await-in-a-loophttpsstackoverflowcomquestions19431494how-to-use-await-in-a-loop-nav`)" id="how-to-use-await-in-a-loophttpsstackoverflowcomquestions19431494how-to-use-await-in-a-loop-nav">
+									How to use await in a loop
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-the-difference-between-asynchronous-programming-and-multithreadinghttpsstackoverflowcomquestions34680985what-is-the-difference-between-asynchronous-programming-and-multithreading" onclick="onNavClick(`#what-is-the-difference-between-asynchronous-programming-and-multithreadinghttpsstackoverflowcomquestions34680985what-is-the-difference-between-asynchronous-programming-and-multithreading-nav`)" id="what-is-the-difference-between-asynchronous-programming-and-multithreadinghttpsstackoverflowcomquestions34680985what-is-the-difference-between-asynchronous-programming-and-multithreading-nav">
+									What is the difference between asynchronous programming and multithreading?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tuple-vs-class" onclick="onNavClick(`#tuple-vs-class-nav`)" id="tuple-vs-class-nav">
+									Tuple VS Class
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#tuples-are-values-so-are-copied-by-value-rather-than-by-reference" onclick="onNavClick(`#tuples-are-values-so-are-copied-by-value-rather-than-by-reference-nav`)" id="tuples-are-values-so-are-copied-by-value-rather-than-by-reference-nav">
+									Tuples are values, so are copied by value, rather than by reference.
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tuple-element-names-are-not-persisted" onclick="onNavClick(`#tuple-element-names-are-not-persisted-nav`)" id="tuple-element-names-are-not-persisted-nav">
+									Tuple element names are not persisted
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tuples-are-lightweight" onclick="onNavClick(`#tuples-are-lightweight-nav`)" id="tuples-are-lightweight-nav">
+									Tuples are lightweight
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#just-use-common-sense" onclick="onNavClick(`#just-use-common-sense-nav`)" id="just-use-common-sense-nav">
+									Just use common sense
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#in-net-which-loop-runs-faster-for-or-foreachhttpsstackoverflowcomquestions365615in-net-which-loop-runs-faster-for-or-foreach" onclick="onNavClick(`#in-net-which-loop-runs-faster-for-or-foreachhttpsstackoverflowcomquestions365615in-net-which-loop-runs-faster-for-or-foreach-nav`)" id="in-net-which-loop-runs-faster-for-or-foreachhttpsstackoverflowcomquestions365615in-net-which-loop-runs-faster-for-or-foreach-nav">
+									In .NET, which loop runs faster, ‘for’ or ‘foreach’?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#c-enumhttpsdocsmicrosoftcomen-usdotnetapisystemenumviewnet-50" onclick="onNavClick(`#c-enumhttpsdocsmicrosoftcomen-usdotnetapisystemenumviewnet-50-nav`)" id="c-enumhttpsdocsmicrosoftcomen-usdotnetapisystemenumviewnet-50-nav">
+									C# Enum
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#get-value-of-enum-member-by-its-name" onclick="onNavClick(`#get-value-of-enum-member-by-its-name-nav`)" id="get-value-of-enum-member-by-its-name-nav">
+									Get value of enum member by its name
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#c---returning-an-enum-from-a-static-extension-methodhttpsstackoverflowcomquestions1556952c-sharp-returning-an-enum-from-a-static-extension-method" onclick="onNavClick(`#c---returning-an-enum-from-a-static-extension-methodhttpsstackoverflowcomquestions1556952c-sharp-returning-an-enum-from-a-static-extension-method-nav`)" id="c---returning-an-enum-from-a-static-extension-methodhttpsstackoverflowcomquestions1556952c-sharp-returning-an-enum-from-a-static-extension-method-nav">
+									C# - Returning an Enum? from a static extension method
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#enumeration-format-stringshttpsdocsmicrosoftcomen-usdotnetstandardbase-typesenumeration-format-strings" onclick="onNavClick(`#enumeration-format-stringshttpsdocsmicrosoftcomen-usdotnetstandardbase-typesenumeration-format-strings-nav`)" id="enumeration-format-stringshttpsdocsmicrosoftcomen-usdotnetstandardbase-typesenumeration-format-strings-nav">
+									Enumeration format strings
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-can-i-cast-int-to-enumhttpsstackoverflowcomquestions29482how-can-i-cast-int-to-enum" onclick="onNavClick(`#how-can-i-cast-int-to-enumhttpsstackoverflowcomquestions29482how-can-i-cast-int-to-enum-nav`)" id="how-can-i-cast-int-to-enumhttpsstackoverflowcomquestions29482how-can-i-cast-int-to-enum-nav">
+									How can I cast int to enum?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#naming-enumerations" onclick="onNavClick(`#naming-enumerations-nav`)" id="naming-enumerations-nav">
+									Naming Enumerations
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#moq-a-function-with-5-parameters-and-access-invocation-argumentshttpsstackoverflowcomquestions2540931moq-a-function-with-5-parameters-and-access-invocation-arguments" onclick="onNavClick(`#moq-a-function-with-5-parameters-and-access-invocation-argumentshttpsstackoverflowcomquestions2540931moq-a-function-with-5-parameters-and-access-invocation-arguments-nav`)" id="moq-a-function-with-5-parameters-and-access-invocation-argumentshttpsstackoverflowcomquestions2540931moq-a-function-with-5-parameters-and-access-invocation-arguments-nav">
+									Moq a function with 5&#43; parameters and access invocation arguments
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#net-testing-naming-conventionshttpsstackoverflowcomquestions84717net-testing-naming-conventions" onclick="onNavClick(`#net-testing-naming-conventionshttpsstackoverflowcomquestions84717net-testing-naming-conventions-nav`)" id="net-testing-naming-conventionshttpsstackoverflowcomquestions84717net-testing-naming-conventions-nav">
+									.NET Testing Naming Conventions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#just-in-time-compilation" onclick="onNavClick(`#just-in-time-compilation-nav`)" id="just-in-time-compilation-nav">
+									Just-in-time compilation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#regex-for-ip-addresshttpsstackoverflowcomquestions9165922regex-for-ip-address" onclick="onNavClick(`#regex-for-ip-addresshttpsstackoverflowcomquestions9165922regex-for-ip-address-nav`)" id="regex-for-ip-addresshttpsstackoverflowcomquestions9165922regex-for-ip-address-nav">
+									Regex for IP address
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#encode--decode" onclick="onNavClick(`#encode--decode-nav`)" id="encode--decode-nav">
+									Encode &amp; Decode
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#side-effect" onclick="onNavClick(`#side-effect-nav`)" id="side-effect-nav">
+									Side effect
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-do-you-unit-test-regular-expressionshttpsstackoverflowcomquestions488601how-do-you-unit-test-regular-expressions" onclick="onNavClick(`#how-do-you-unit-test-regular-expressionshttpsstackoverflowcomquestions488601how-do-you-unit-test-regular-expressions-nav`)" id="how-do-you-unit-test-regular-expressionshttpsstackoverflowcomquestions488601how-do-you-unit-test-regular-expressions-nav">
+									How do you unit test regular expressions?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-and-when-to-use-async-and-awaithttpsstackoverflowcomquestions14455293how-and-when-to-use-async-and-await" onclick="onNavClick(`#how-and-when-to-use-async-and-awaithttpsstackoverflowcomquestions14455293how-and-when-to-use-async-and-await-nav`)" id="how-and-when-to-use-async-and-awaithttpsstackoverflowcomquestions14455293how-and-when-to-use-async-and-await-nav">
+									How and when to use ‘async’ and ‘await’
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#project-and-item-templateshttpsdocsmicrosoftcomen-usvisualstudioidecreating-project-and-item-templates" onclick="onNavClick(`#project-and-item-templateshttpsdocsmicrosoftcomen-usvisualstudioidecreating-project-and-item-templates-nav`)" id="project-and-item-templateshttpsdocsmicrosoftcomen-usvisualstudioidecreating-project-and-item-templates-nav">
+									Project and item templates
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#c-params-keyword-vs-listhttpsstackoverflowcomquestions2114297c-params-keyword-vs-list" onclick="onNavClick(`#c-params-keyword-vs-listhttpsstackoverflowcomquestions2114297c-params-keyword-vs-list-nav`)" id="c-params-keyword-vs-listhttpsstackoverflowcomquestions2114297c-params-keyword-vs-list-nav">
+									C#: params keyword vs. list
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#csharp-special-characters" onclick="onNavClick(`#csharp-special-characters-nav`)" id="csharp-special-characters-nav">
+									CSharp Special Characters
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#heading-1" onclick="onNavClick(`#heading-1-nav`)" id="heading-1-nav">
+									?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#1-the--operator-since-visual-studio-2003" onclick="onNavClick(`#1-the--operator-since-visual-studio-2003-nav`)" id="1-the--operator-since-visual-studio-2003-nav">
+									1) The ?: Operator (since Visual Studio 2003)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#2-the-nullable-types-since-visual-studio-2005" onclick="onNavClick(`#2-the-nullable-types-since-visual-studio-2005-nav`)" id="2-the-nullable-types-since-visual-studio-2005-nav">
+									2) The Nullable Types (since Visual Studio 2005)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#3-the-null-conditional-operators-since-visual-studio-2015" onclick="onNavClick(`#3-the-null-conditional-operators-since-visual-studio-2015-nav`)" id="3-the-null-conditional-operators-since-visual-studio-2015-nav">
+									3) The Null-conditional Operators (since Visual Studio 2015)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#4-the---null-coalescing-operator-operator-since-visual-studio-2005" onclick="onNavClick(`#4-the---null-coalescing-operator-operator-since-visual-studio-2005-nav`)" id="4-the---null-coalescing-operator-operator-since-visual-studio-2005-nav">
+									4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#heading-2" onclick="onNavClick(`#heading-2-nav`)" id="heading-2-nav">
+									$
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading-3" onclick="onNavClick(`#heading-3-nav`)" id="heading-3-nav">
+									@
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading-4" onclick="onNavClick(`#heading-4-nav`)" id="heading-4-nav">
+									!
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#_" onclick="onNavClick(`#_-nav`)" id="_-nav">
+									_
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#transaction-and-bulk-copy-operationshttpsdocsmicrosoftcomen-usdotnetframeworkdataadonetsqltransaction-and-bulk-copy-operationsredirectedfrommsdn" onclick="onNavClick(`#transaction-and-bulk-copy-operationshttpsdocsmicrosoftcomen-usdotnetframeworkdataadonetsqltransaction-and-bulk-copy-operationsredirectedfrommsdn-nav`)" id="transaction-and-bulk-copy-operationshttpsdocsmicrosoftcomen-usdotnetframeworkdataadonetsqltransaction-and-bulk-copy-operationsredirectedfrommsdn-nav">
+									Transaction and Bulk Copy Operations
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#difference-between-a-coroutine-and-a-threadhttpsstackoverflowcomquestions1934715difference-between-a-coroutine-and-a-thread" onclick="onNavClick(`#difference-between-a-coroutine-and-a-threadhttpsstackoverflowcomquestions1934715difference-between-a-coroutine-and-a-thread-nav`)" id="difference-between-a-coroutine-and-a-threadhttpsstackoverflowcomquestions1934715difference-between-a-coroutine-and-a-thread-nav">
+									Difference between a “coroutine” and a “thread”?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#swagger--openapi" onclick="onNavClick(`#swagger--openapi-nav`)" id="swagger--openapi-nav">
+									Swagger / OpenAPI
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#concurrent" onclick="onNavClick(`#concurrent-nav`)" id="concurrent-nav">
+									Concurrent
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-the-difference-between-i-and-ihttpsstackoverflowcomquestions24853what-is-the-difference-between-i-and-i" onclick="onNavClick(`#what-is-the-difference-between-i-and-ihttpsstackoverflowcomquestions24853what-is-the-difference-between-i-and-i-nav`)" id="what-is-the-difference-between-i-and-ihttpsstackoverflowcomquestions24853what-is-the-difference-between-i-and-i-nav">
+									What is the difference between &#43;&#43;i and i&#43;&#43;?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#hot-reload-razor-views" onclick="onNavClick(`#hot-reload-razor-views-nav`)" id="hot-reload-razor-views-nav">
+									Hot-Reload Razor Views
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#watch-out-project-on-rider" onclick="onNavClick(`#watch-out-project-on-rider-nav`)" id="watch-out-project-on-rider-nav">
+									Watch out Project On Rider
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#newguid" onclick="onNavClick(`#newguid-nav`)" id="newguid-nav">
+									NewGuid()
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#guidhttpsenwikipediaorgwikiuniversally_unique_identifier" onclick="onNavClick(`#guidhttpsenwikipediaorgwikiuniversally_unique_identifier-nav`)" id="guidhttpsenwikipediaorgwikiuniversally_unique_identifier-nav">
+									GUID
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#systemguidnewguidtostring" onclick="onNavClick(`#systemguidnewguidtostring-nav`)" id="systemguidnewguidtostring-nav">
+									System.Guid.NewGuid().ToString()
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#guids-case-sensitivehttpsbytescomtopicc-sharpanswers233494-guids-case-sensitive" onclick="onNavClick(`#guids-case-sensitivehttpsbytescomtopicc-sharpanswers233494-guids-case-sensitive-nav`)" id="guids-case-sensitivehttpsbytescomtopicc-sharpanswers233494-guids-case-sensitive-nav">
+									GUIDS case sensitive?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#model--entity--viewmodel--dto" onclick="onNavClick(`#model--entity--viewmodel--dto-nav`)" id="model--entity--viewmodel--dto-nav">
+									Model &amp; Entity &amp; Viewmodel &amp; DTO
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#model" onclick="onNavClick(`#model-nav`)" id="model-nav">
+									Model
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#entity" onclick="onNavClick(`#entity-nav`)" id="entity-nav">
+									Entity
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#viewmodel" onclick="onNavClick(`#viewmodel-nav`)" id="viewmodel-nav">
+									Viewmodel
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dto-data-transfer-object" onclick="onNavClick(`#dto-data-transfer-object-nav`)" id="dto-data-transfer-object-nav">
+									DTO (Data transfer object)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#iviewlocationexpander" onclick="onNavClick(`#iviewlocationexpander-nav`)" id="iviewlocationexpander-nav">
+									IViewLocationExpander
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#error-the-database-provider-attempted-to-register-an-implementation" onclick="onNavClick(`#error-the-database-provider-attempted-to-register-an-implementation-nav`)" id="error-the-database-provider-attempted-to-register-an-implementation-nav">
+									Error: The database provider attempted to register an implementation…
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#framework-design-guidelines" onclick="onNavClick(`#framework-design-guidelines-nav`)" id="framework-design-guidelines-nav">
+									Framework Design Guidelines
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#analyze-code-in-visual-studio" onclick="onNavClick(`#analyze-code-in-visual-studio-nav`)" id="analyze-code-in-visual-studio-nav">
+									Analyze code in Visual Studio
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#source-code-analysis" onclick="onNavClick(`#source-code-analysis-nav`)" id="source-code-analysis-nav">
+									Source code analysis
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#legacy-analysis-for-managed-code" onclick="onNavClick(`#legacy-analysis-for-managed-code-nav`)" id="legacy-analysis-for-managed-code-nav">
+									Legacy analysis for managed code
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#attention" onclick="onNavClick(`#attention-nav`)" id="attention-nav">
+									Attention
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#controversy" onclick="onNavClick(`#controversy-nav`)" id="controversy-nav">
+									Controversy
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#using-abbreviations-and-acronyms" onclick="onNavClick(`#using-abbreviations-and-acronyms-nav`)" id="using-abbreviations-and-acronyms-nav">
+									Using Abbreviations and Acronyms
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#http-error-50019---internal-server-error" onclick="onNavClick(`#http-error-50019---internal-server-error-nav`)" id="http-error-50019---internal-server-error-nav">
+									HTTP Error 500.19 - Internal Server Error
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#detailed-error-information" onclick="onNavClick(`#detailed-error-information-nav`)" id="detailed-error-information-nav">
+									Detailed Error Information:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#solution" onclick="onNavClick(`#solution-nav`)" id="solution-nav">
+									Solution
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file" onclick="onNavClick(`#excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file-nav`)" id="excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file-nav">
+									Excel break long lines when importing csv file
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied" onclick="onNavClick(`#httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied-nav`)" id="httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied-nav">
+									HttpListener Access Denied
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#internalsvisibleto" onclick="onNavClick(`#internalsvisibleto-nav`)" id="internalsvisibleto-nav">
+									internalsvisibleto
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#use-fake-method-in-unit-test-to-implement-the-non-mockable-object" onclick="onNavClick(`#use-fake-method-in-unit-test-to-implement-the-non-mockable-object-nav`)" id="use-fake-method-in-unit-test-to-implement-the-non-mockable-object-nav">
+									Use Fake Method in Unit Test to implement the non-mockable Object.
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-nethttpsstackoverflowcomquestions4988286what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net" onclick="onNavClick(`#what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-nethttpsstackoverflowcomquestions4988286what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net-nav`)" id="what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-nethttpsstackoverflowcomquestions4988286what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net-nav">
+									What difference is there between WebClient and HTTPWebRequest classes in .NET?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#consolewriteline-cannot--write-unicode-characters-to-the-console" onclick="onNavClick(`#consolewriteline-cannot--write-unicode-characters-to-the-console-nav`)" id="consolewriteline-cannot--write-unicode-characters-to-the-console-nav">
+									Console.WriteLine() cannot write Unicode characters to the console
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-to-use-await-in-a-loophttpsstackoverflowcomquestions19431494how-to-use-await-in-a-loop" onclick="onNavClick(`#how-to-use-await-in-a-loophttpsstackoverflowcomquestions19431494how-to-use-await-in-a-loop-nav`)" id="how-to-use-await-in-a-loophttpsstackoverflowcomquestions19431494how-to-use-await-in-a-loop-nav">
+									How to use await in a loop
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-the-difference-between-asynchronous-programming-and-multithreadinghttpsstackoverflowcomquestions34680985what-is-the-difference-between-asynchronous-programming-and-multithreading" onclick="onNavClick(`#what-is-the-difference-between-asynchronous-programming-and-multithreadinghttpsstackoverflowcomquestions34680985what-is-the-difference-between-asynchronous-programming-and-multithreading-nav`)" id="what-is-the-difference-between-asynchronous-programming-and-multithreadinghttpsstackoverflowcomquestions34680985what-is-the-difference-between-asynchronous-programming-and-multithreading-nav">
+									What is the difference between asynchronous programming and multithreading?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tuple-vs-class" onclick="onNavClick(`#tuple-vs-class-nav`)" id="tuple-vs-class-nav">
+									Tuple VS Class
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#tuples-are-values-so-are-copied-by-value-rather-than-by-reference" onclick="onNavClick(`#tuples-are-values-so-are-copied-by-value-rather-than-by-reference-nav`)" id="tuples-are-values-so-are-copied-by-value-rather-than-by-reference-nav">
+									Tuples are values, so are copied by value, rather than by reference.
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tuple-element-names-are-not-persisted" onclick="onNavClick(`#tuple-element-names-are-not-persisted-nav`)" id="tuple-element-names-are-not-persisted-nav">
+									Tuple element names are not persisted
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tuples-are-lightweight" onclick="onNavClick(`#tuples-are-lightweight-nav`)" id="tuples-are-lightweight-nav">
+									Tuples are lightweight
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#just-use-common-sense" onclick="onNavClick(`#just-use-common-sense-nav`)" id="just-use-common-sense-nav">
+									Just use common sense
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#in-net-which-loop-runs-faster-for-or-foreachhttpsstackoverflowcomquestions365615in-net-which-loop-runs-faster-for-or-foreach" onclick="onNavClick(`#in-net-which-loop-runs-faster-for-or-foreachhttpsstackoverflowcomquestions365615in-net-which-loop-runs-faster-for-or-foreach-nav`)" id="in-net-which-loop-runs-faster-for-or-foreachhttpsstackoverflowcomquestions365615in-net-which-loop-runs-faster-for-or-foreach-nav">
+									In .NET, which loop runs faster, ‘for’ or ‘foreach’?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#c-enumhttpsdocsmicrosoftcomen-usdotnetapisystemenumviewnet-50" onclick="onNavClick(`#c-enumhttpsdocsmicrosoftcomen-usdotnetapisystemenumviewnet-50-nav`)" id="c-enumhttpsdocsmicrosoftcomen-usdotnetapisystemenumviewnet-50-nav">
+									C# Enum
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#get-value-of-enum-member-by-its-name" onclick="onNavClick(`#get-value-of-enum-member-by-its-name-nav`)" id="get-value-of-enum-member-by-its-name-nav">
+									Get value of enum member by its name
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#c---returning-an-enum-from-a-static-extension-methodhttpsstackoverflowcomquestions1556952c-sharp-returning-an-enum-from-a-static-extension-method" onclick="onNavClick(`#c---returning-an-enum-from-a-static-extension-methodhttpsstackoverflowcomquestions1556952c-sharp-returning-an-enum-from-a-static-extension-method-nav`)" id="c---returning-an-enum-from-a-static-extension-methodhttpsstackoverflowcomquestions1556952c-sharp-returning-an-enum-from-a-static-extension-method-nav">
+									C# - Returning an Enum? from a static extension method
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#enumeration-format-stringshttpsdocsmicrosoftcomen-usdotnetstandardbase-typesenumeration-format-strings" onclick="onNavClick(`#enumeration-format-stringshttpsdocsmicrosoftcomen-usdotnetstandardbase-typesenumeration-format-strings-nav`)" id="enumeration-format-stringshttpsdocsmicrosoftcomen-usdotnetstandardbase-typesenumeration-format-strings-nav">
+									Enumeration format strings
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-can-i-cast-int-to-enumhttpsstackoverflowcomquestions29482how-can-i-cast-int-to-enum" onclick="onNavClick(`#how-can-i-cast-int-to-enumhttpsstackoverflowcomquestions29482how-can-i-cast-int-to-enum-nav`)" id="how-can-i-cast-int-to-enumhttpsstackoverflowcomquestions29482how-can-i-cast-int-to-enum-nav">
+									How can I cast int to enum?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#naming-enumerations" onclick="onNavClick(`#naming-enumerations-nav`)" id="naming-enumerations-nav">
+									Naming Enumerations
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#moq-a-function-with-5-parameters-and-access-invocation-argumentshttpsstackoverflowcomquestions2540931moq-a-function-with-5-parameters-and-access-invocation-arguments" onclick="onNavClick(`#moq-a-function-with-5-parameters-and-access-invocation-argumentshttpsstackoverflowcomquestions2540931moq-a-function-with-5-parameters-and-access-invocation-arguments-nav`)" id="moq-a-function-with-5-parameters-and-access-invocation-argumentshttpsstackoverflowcomquestions2540931moq-a-function-with-5-parameters-and-access-invocation-arguments-nav">
+									Moq a function with 5&#43; parameters and access invocation arguments
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#net-testing-naming-conventionshttpsstackoverflowcomquestions84717net-testing-naming-conventions" onclick="onNavClick(`#net-testing-naming-conventionshttpsstackoverflowcomquestions84717net-testing-naming-conventions-nav`)" id="net-testing-naming-conventionshttpsstackoverflowcomquestions84717net-testing-naming-conventions-nav">
+									.NET Testing Naming Conventions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#just-in-time-compilation" onclick="onNavClick(`#just-in-time-compilation-nav`)" id="just-in-time-compilation-nav">
+									Just-in-time compilation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#regex-for-ip-addresshttpsstackoverflowcomquestions9165922regex-for-ip-address" onclick="onNavClick(`#regex-for-ip-addresshttpsstackoverflowcomquestions9165922regex-for-ip-address-nav`)" id="regex-for-ip-addresshttpsstackoverflowcomquestions9165922regex-for-ip-address-nav">
+									Regex for IP address
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#encode--decode" onclick="onNavClick(`#encode--decode-nav`)" id="encode--decode-nav">
+									Encode &amp; Decode
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#side-effect" onclick="onNavClick(`#side-effect-nav`)" id="side-effect-nav">
+									Side effect
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-do-you-unit-test-regular-expressionshttpsstackoverflowcomquestions488601how-do-you-unit-test-regular-expressions" onclick="onNavClick(`#how-do-you-unit-test-regular-expressionshttpsstackoverflowcomquestions488601how-do-you-unit-test-regular-expressions-nav`)" id="how-do-you-unit-test-regular-expressionshttpsstackoverflowcomquestions488601how-do-you-unit-test-regular-expressions-nav">
+									How do you unit test regular expressions?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-and-when-to-use-async-and-awaithttpsstackoverflowcomquestions14455293how-and-when-to-use-async-and-await" onclick="onNavClick(`#how-and-when-to-use-async-and-awaithttpsstackoverflowcomquestions14455293how-and-when-to-use-async-and-await-nav`)" id="how-and-when-to-use-async-and-awaithttpsstackoverflowcomquestions14455293how-and-when-to-use-async-and-await-nav">
+									How and when to use ‘async’ and ‘await’
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#project-and-item-templateshttpsdocsmicrosoftcomen-usvisualstudioidecreating-project-and-item-templates" onclick="onNavClick(`#project-and-item-templateshttpsdocsmicrosoftcomen-usvisualstudioidecreating-project-and-item-templates-nav`)" id="project-and-item-templateshttpsdocsmicrosoftcomen-usvisualstudioidecreating-project-and-item-templates-nav">
+									Project and item templates
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#c-params-keyword-vs-listhttpsstackoverflowcomquestions2114297c-params-keyword-vs-list" onclick="onNavClick(`#c-params-keyword-vs-listhttpsstackoverflowcomquestions2114297c-params-keyword-vs-list-nav`)" id="c-params-keyword-vs-listhttpsstackoverflowcomquestions2114297c-params-keyword-vs-list-nav">
+									C#: params keyword vs. list
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#csharp-special-characters" onclick="onNavClick(`#csharp-special-characters-nav`)" id="csharp-special-characters-nav">
+									CSharp Special Characters
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#heading-1" onclick="onNavClick(`#heading-1-nav`)" id="heading-1-nav">
+									?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#1-the--operator-since-visual-studio-2003" onclick="onNavClick(`#1-the--operator-since-visual-studio-2003-nav`)" id="1-the--operator-since-visual-studio-2003-nav">
+									1) The ?: Operator (since Visual Studio 2003)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#2-the-nullable-types-since-visual-studio-2005" onclick="onNavClick(`#2-the-nullable-types-since-visual-studio-2005-nav`)" id="2-the-nullable-types-since-visual-studio-2005-nav">
+									2) The Nullable Types (since Visual Studio 2005)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#3-the-null-conditional-operators-since-visual-studio-2015" onclick="onNavClick(`#3-the-null-conditional-operators-since-visual-studio-2015-nav`)" id="3-the-null-conditional-operators-since-visual-studio-2015-nav">
+									3) The Null-conditional Operators (since Visual Studio 2015)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#4-the---null-coalescing-operator-operator-since-visual-studio-2005" onclick="onNavClick(`#4-the---null-coalescing-operator-operator-since-visual-studio-2005-nav`)" id="4-the---null-coalescing-operator-operator-since-visual-studio-2005-nav">
+									4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#heading-2" onclick="onNavClick(`#heading-2-nav`)" id="heading-2-nav">
+									$
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading-3" onclick="onNavClick(`#heading-3-nav`)" id="heading-3-nav">
+									@
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading-4" onclick="onNavClick(`#heading-4-nav`)" id="heading-4-nav">
+									!
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#_" onclick="onNavClick(`#_-nav`)" id="_-nav">
+									_
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#transaction-and-bulk-copy-operationshttpsdocsmicrosoftcomen-usdotnetframeworkdataadonetsqltransaction-and-bulk-copy-operationsredirectedfrommsdn" onclick="onNavClick(`#transaction-and-bulk-copy-operationshttpsdocsmicrosoftcomen-usdotnetframeworkdataadonetsqltransaction-and-bulk-copy-operationsredirectedfrommsdn-nav`)" id="transaction-and-bulk-copy-operationshttpsdocsmicrosoftcomen-usdotnetframeworkdataadonetsqltransaction-and-bulk-copy-operationsredirectedfrommsdn-nav">
+									Transaction and Bulk Copy Operations
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#difference-between-a-coroutine-and-a-threadhttpsstackoverflowcomquestions1934715difference-between-a-coroutine-and-a-thread" onclick="onNavClick(`#difference-between-a-coroutine-and-a-threadhttpsstackoverflowcomquestions1934715difference-between-a-coroutine-and-a-thread-nav`)" id="difference-between-a-coroutine-and-a-threadhttpsstackoverflowcomquestions1934715difference-between-a-coroutine-and-a-thread-nav">
+									Difference between a “coroutine” and a “thread”?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#swagger--openapi" onclick="onNavClick(`#swagger--openapi-nav`)" id="swagger--openapi-nav">
+									Swagger / OpenAPI
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#concurrent" onclick="onNavClick(`#concurrent-nav`)" id="concurrent-nav">
+									Concurrent
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-the-difference-between-i-and-ihttpsstackoverflowcomquestions24853what-is-the-difference-between-i-and-i" onclick="onNavClick(`#what-is-the-difference-between-i-and-ihttpsstackoverflowcomquestions24853what-is-the-difference-between-i-and-i-nav`)" id="what-is-the-difference-between-i-and-ihttpsstackoverflowcomquestions24853what-is-the-difference-between-i-and-i-nav">
+									What is the difference between &#43;&#43;i and i&#43;&#43;?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Dot Net Issue
+                    
+                    <div class="post-subtitle">
+                        Dot Net Issue
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-09-10 11:00
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/.net">.NET</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            38 min
+                            
+                            18 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="hot-reload-razor-views">Hot-Reload Razor Views</h1>
+<p>在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（<em>it&rsquo;s fundamentally how ASP.NET MVC Core works</em>）。</p>
+<blockquote>
+<p>Razor files are compiled at both <strong>build</strong> and <strong>publish</strong> time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.</p>
+</blockquote>
+<p>使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用<strong>运行时编译</strong>。</p>
+<p><strong>Note that run time is not included in this list by default.</strong> To change this behaviour:</p>
+<ol>
+<li>Add the Nuget package <a href="https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/"><code>Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation</code></a>.</li>
+<li>Change your <code>Startup.ConfigureServices</code> code to include runtime compilation:</li>
+</ol>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">void</span> ConfigureServices(IServiceCollection services)
+{
+  services
+    .AddControllersWithViews()
+    .AddRazorRuntimeCompilation();
+}
+</code></pre></div><p>Reference</p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/58300922/how-to-enable-the-view-hot-reloading-in-rider">How to enable the view hot-reloading in Rider? </a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0&amp;tabs=visual-studio#runtime-compilation">Razor file compilation in ASP.NET Core</a></li>
+</ol>
+<hr>
+<h1 id="watch-out-project-on-rider">Watch out Project On Rider</h1>
+<p>To let Project hot-reload, we can use the &ldquo;Before launch&rdquo; option as a run configuration to make this happen. To do so:</p>
+<ol>
+<li>Select Run -&gt; Edit Configuration from the menu options</li>
+<li>Add a new <code>Before launch</code>Click the + icon and select the &ldquo;Run Executnal Tool &quot; option from the list</li>
+<li>In the options that are displayed, provide the following&hellip;
+<ul>
+<li>Name: Watch (or whatever you prefer)</li>
+<li>Exe path: /usr/local/share/dotnet/dotnet</li>
+<li>Program Arguments: watch run</li>
+<li>Working directory: [path to your project where .csproj file resides]</li>
+</ul>
+</li>
+<li>Click &ldquo;OK&rdquo; to apply/save the changes.</li>
+</ol>
+<p>Reference</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/46349038/jetbrains-rider-run-with-watch">JetBrains Rider run with watch</a></li>
+</ul>
+<hr>
+<h1 id="newguid">NewGuid()</h1>
+<h2 id="guidhttpsenwikipediaorgwikiuniversally_unique_identifier"><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">GUID</a></h2>
+<p><strong>全局唯一标识符</strong>（Globally Unique <strong>Id</strong>entifier，缩写：<strong>GUID</strong>；发音为/ˈɡuːɪd/或/ˈɡwɪd/）是一种由<a href="https://zh.wikipedia.org/wiki/%E7%AE%97%E6%B3%95">算法</a>生成的唯一标识，通常表示成32个16进制数字（0－9，A－F）组成的字符串，如：<code>{21EC2020-3AEA-1069-A2DD-08002B30309D}</code>，它实质上是一个128位长的二进制整数。GUID一词有时也专指微软对UUID标准的实现。</p>
+<p>GUID的主要目的是产生完全唯一的数字。在理想情况下，任何计算机和计算机集群都不会生成两个相同的GUID。GUID的总数也足够大，达到了2128（3.4×1038）个，所以随机生成两个相同GUID的可能性是非常小的，但并不为0。所以，用于生成GUID的算法通常都加入了非随机的参数（时间），以保证这种重复的情况不会发生。</p>
+<p>GUID 主要用于在拥有多个节点、多台计算机的网络或系统中，分配必须具有唯一性的标识符。在 Windows 平台上，GUID 应用非常广泛：注册表、类及接口标识、数据库、甚至自动生成的机器名、目录名等。</p>
+<p>与自增长id相比较：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>缺点</strong></th>
+<th><strong>优点</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GUID</strong></td>
+<td>1. GUID过长，看表现形式，至少都有32位，长的38位，浪费存储空间 2. GUID是根据硬件设备相关ID以及时间戳生成的 3. GUID不利于检索、外键关联</td>
+<td>1. 一般来说不担心有冲突的影响，而且，根据GUID的生成规则，还能大致知道生成的计算机硬件设备、时间等信息（但这个有多少意义呢）2. 能在业务层就知道目标ID，而不是数据提交给数据库系统后才确定</td>
+</tr>
+<tr>
+<td><strong>自增长</strong></td>
+<td>1. 多数据库同步、读写分离十分不方便。</td>
+<td>1. 使用简单</td>
+</tr>
+</tbody>
+</table>
+<h2 id="systemguidnewguidtostring">System.Guid.NewGuid().ToString()</h2>
+<p><strong>Guid.NewGuid()是指生成唯一码的规则</strong></p>
+<blockquote>
+<p>System.Guid.NewGuid().ToString(format)</p>
+</blockquote>
+<p>说明符 返回值的格式</p>
+<p>N 32 位字符：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<p>D 由连字符分隔的 32 位数字：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
+<p>B 括在大括号中、由连字符分隔的 32 位数字：{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}</p>
+<p>P 括在圆括号中、由连字符分隔的 32 位数字：(xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)</p>
+<p>Guid.NewGuid().ToString()		  : 1f13a943-4c7e-4bfc-aac5-935886591424</p>
+<p>Guid.NewGuid().ToString(&ldquo;N&rdquo;)	: 3a81013f9ee549b38f11ee3d50f5bd78</p>
+<p>Guid.NewGuid().ToString(&ldquo;D&rdquo;)	: c4219375-c2c8-4639-86e8-8d910ed12186 &ndash; 默认为：D</p>
+<p>Guid.NewGuid().ToString(&ldquo;B&rdquo;)	: {a793927d-9a1b-4d25-9562-0a59522db9c0}</p>
+<p>Guid.NewGuid().ToString(&ldquo;P&rdquo;)	: (a99839b9-da94-40fd-87a5-4a5e73677b1f)</p>
+<p>Guid.NewGuid().ToString(&ldquo;X&rdquo;)	: {0xb294a44e,0x43d9,0x4b60,{0xb5,0xb9,0x32,0x29,0xae,0x46,0x45,0x17}}</p>
+<p><em>如果在程序中使用<strong>D</strong>，则需要注意数据库字段长应为<code>36</code>而不是32</em>。 但是数据库一般直接可以使用<code>uniqueidentifier</code>类型的字段存储guid。</p>
+<h2 id="guids-case-sensitivehttpsbytescomtopicc-sharpanswers233494-guids-case-sensitive"><a href="https://bytes.com/topic/c-sharp/answers/233494-guids-case-sensitive">GUIDS case sensitive?</a></h2>
+<p><code>NO</code>，code below will console &lsquo;NO&rsquo;.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">var</span> guid1 = Guid.Parse(<span style="color:#cd5555">&#34;aaaaaaaa-bbbb-cccc-eeee-ffffffffffff&#34;</span>);
+<span style="color:#00688b;font-weight:bold">var</span> guid2 = Guid.Parse(<span style="color:#cd5555">&#34;AAAAAAAA-BBBB-CCCC-EEEE-FFFFFFFFFFFF&#34;</span>);
+
+<span style="color:#8b008b;font-weight:bold">if</span> (guid1 == guid2)
+{
+	Console.WriteLine(<span style="color:#cd5555">&#34;NO&#34;</span>);
+}
+</code></pre></div><blockquote>
+<p><a href="https://tools.ietf.org/html/rfc4122#section-3">RFC 4122 Section 3</a> requires that the characters be generated in lower case, while being case-insensitive on input.</p>
+<p>Microsoft GUIDs are sometimes represented with surrounding braces:</p>
+<p>This format should not be confused with &ldquo;<a href="https://en.wikipedia.org/wiki/Windows_Registry">Windows Registry</a> format&rdquo;, which refers to the format <em>within</em> the curly braces.</p>
+</blockquote>
+<hr>
+<h1 id="model--entity--viewmodel--dto">Model &amp; Entity &amp; Viewmodel &amp; DTO</h1>
+<h2 id="model">Model</h2>
+<p>model是一个模型，里面装了各种数据，将一个model传递给view，在试图页面就可以使用model里面的数据来呈现到页面上。</p>
+<h2 id="entity">Entity</h2>
+<p>entity是实体，就是和数据表一一对应的，一个实体一张表</p>
+<p>官方的demo没有entity这个说法，他只有model，model就是表，也是传递给view的model，就是说他的model即是model又是entity。而我们实际运用需要将model分成ViewModel和Entity，甚至还要加入Dto。</p>
+<h2 id="viewmodel">Viewmodel</h2>
+<p>MSDOC详细介绍页面直接返回一个model，这个model就是表中的一条数据。但是在我们实际建站需求中页面上怎么可能只需要一条数据就完了，很多时候还需要其他的数据。比如一个<code>List&lt;entity&gt;</code>，此时就需要使用ViewModel。</p>
+<h2 id="dto-data-transfer-object">DTO (Data transfer object)</h2>
+<p>entity里包含的是表所有的字段，但在实际应用的时候我们可能不会使用到所有的字段，可能只需要一个名称和编号即可，所以就需要使用dto（数据传输对象）。此时ViewModel就可以使用<code>List&lt;dto&gt;</code>返回我们部分数据而不是整个表数据。</p>
+<p><strong>我们可以花一部分精力去考虑这方面问题，但也不用纠结太多，头大且对项目也没太大帮助。</strong></p>
+<p>Reference</p>
+<ol>
+<li><a href="https://www.zhihu.com/question/25256772/answer/194493331">什么时候用Model，什么时候用Entity？ - 虚若影的回答 - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/25256772/answer/30290376">什么时候用Model，什么时候用Entity？ - 赵劼的回答 - 知乎</a></li>
+</ol>
+<hr>
+<h1 id="iviewlocationexpander">IViewLocationExpander</h1>
+<p>实现<code>IViewLocationExpander</code>接口，<code>location</code>为build时程序检查的views层路径</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">ViewLocationExpander</span>: IViewLocationExpander
+{
+  <span style="color:#8b008b;font-weight:bold">public</span> IEnumerable&lt;String&gt; ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable&lt;String&gt; locations)
+  {
+    <span style="color:#8b008b;font-weight:bold">if</span> (RazorViewEngine.GetNormalizedRouteValue(context.ActionContext, <span style="color:#cd5555">&#34;area&#34;</span>) != <span style="color:#8b008b;font-weight:bold">null</span>)
+    {
+      <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#8b008b;font-weight:bold">new</span>[]
+      {
+        <span style="color:#cd5555">&#34;/Views/{2}/Shared/{0}.cshtml&#34;</span>,
+        <span style="color:#cd5555">&#34;/Views/{2}/{1}/{0}.cshtml&#34;</span>,
+        <span style="color:#cd5555">&#34;/Views/Shared/{0}.cshtml&#34;</span>
+      };
+    }
+
+    <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#8b008b;font-weight:bold">new</span>[]
+    {
+      <span style="color:#cd5555">&#34;/Views/{1}/{0}.cshtml&#34;</span>,
+      <span style="color:#cd5555">&#34;/Views/Shared/{0}.cshtml&#34;</span>
+    };
+  }
+  <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">void</span> PopulateValues(ViewLocationExpanderContext context)
+  {
+  }
+}
+</code></pre></div><p>在Startup注册我们的implement</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">services.AddMvc()
+  .AddRazorOptions(options =&gt; options.ViewLocationExpanders.Add(<span style="color:#8b008b;font-weight:bold">new</span> ViewLocationExpander()));
+</code></pre></div><p>Reference</p>
+<ol>
+<li><a href="https://www.c-sharpcorner.com/article/expanding-razor-view-location-and-sub-areas-in-asp-net-core/">Expanding Razor View Location And Sub Areas In ASP.NET Core</a></li>
+<li><a href="https://github.com/NonFactors/AspNetCore.Template/blob/378d64f6900f0cc95eee921b5caf81d2bc9efc11/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs">AspNetCore.Template/src/MvcTemplate.Components/Mvc/Razor/ViewLocationExpander.cs</a></li>
+</ol>
+<hr>
+<h1 id="error-the-database-provider-attempted-to-register-an-implementation">Error: The database provider attempted to register an implementation&hellip;</h1>
+<blockquote>
+<p>The database provider attempted to register an implementation of the &lsquo;IRelationalTypeMappingSource&rsquo; service. This is not a service defined by EF and as such must be registered as a provider-specific service using the &lsquo;TryAddProviderSpecificServices&rsquo;</p>
+</blockquote>
+<p>检查一下EF版本！！！</p>
+<p>You are mixing different versions of EF Core!!!</p>
+<p>Reference</p>
+<p><a href="https://github.com/npgsql/efcore.pg/issues/1441">Cannot register IRelationalTypeMappingSource #1441</a></p>
+<hr>
+<h1 id="framework-design-guidelines">Framework Design Guidelines</h1>
+<blockquote>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines">Naming Guidelines</a>
+Provides guidelines for naming assemblies, namespaces, types, and members in class libraries.</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/type">Type Design Guidelines</a>
+Provides guidelines for using static and abstract classes, interfaces, enumerations, structures, and other types.</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/member">Member Design Guidelines</a>
+Provides guidelines for designing and using properties, methods, constructors, fields, events, operators, and parameters.</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/designing-for-extensibility">Designing for Extensibility</a>
+Discusses extensibility mechanisms such as subclassing, using events, virtual members, and callbacks, and explains how to choose the mechanisms that best meet your framework&rsquo;s requirements.</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/exceptions">Design Guidelines for Exceptions</a>
+Describes design guidelines for designing, throwing, and catching exceptions.</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/usage-guidelines">Usage Guidelines</a>
+Describes guidelines for using common types such as arrays, attributes, and collections, supporting serialization, and overloading equality operators.</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/common-design-patterns">Common Design Patterns</a>
+Provides guidelines for choosing and implementing dependency properties.</p>
+</blockquote>
+<p>Reference</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/">Framework Design Guidelines</a></li>
+</ul>
+<hr>
+<h1 id="analyze-code-in-visual-studio">Analyze code in Visual Studio</h1>
+<h2 id="source-code-analysis">Source code analysis</h2>
+<blockquote>
+<p>.NET Compiler Platform (Roslyn) Analyzers inspect your C# or Visual Basic code for style, quality, maintainability, design, and other issues. This inspection or analysis is done during design time in all open files.</p>
+<p>Analyzers can be divided into the following groups:</p>
+<ul>
+<li><strong><a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options?preserve-view=true&amp;view=vs-2019#convention-categories">Code style</a> analyzers are built in to Visual Studio.</strong> The diagnostic ID, or code, for these analyzers is of the format IDExxxx, for example, IDE0067. You can configure preferences in the <a href="https://docs.microsoft.com/en-us/visualstudio/ide/code-styles-and-code-cleanup?view=vs-2019">text editor options page</a> or in an <a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options">EditorConfig file</a>. Starting in .NET 5.0, code style analyzers are included with the .NET SDK and can be strictly enforced as build warnings or errors. For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/productivity/code-analysis#code-style-analysis">here</a>.</li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/index">Code quality</a> analyzers are now included with the .NET 5 SDK and enabled by default. The diagnostic ID, or code, for these analyzers is of the format CAxxxx, for example, CA1822. For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis">Overview of .NET code quality analysis</a>.</li>
+<li>Third party analyzers can be installed as a NuGet package or a Visual Studio extension. Third party analyzers, such as <a href="https://www.nuget.org/packages/StyleCop.Analyzers/">StyleCop</a>, <a href="https://www.nuget.org/packages/Roslynator.Analyzers/">Roslynator</a>, <a href="https://www.nuget.org/packages/xunit.analyzers/">XUnit Analyzers</a>, and <a href="https://www.nuget.org/packages/SonarAnalyzer.CSharp/">Sonar Analyzer</a>.</li>
+</ul>
+</blockquote>
+<h2 id="legacy-analysis-for-managed-code">Legacy analysis for managed code</h2>
+<blockquote>
+</blockquote>
+<h2 id="attention">Attention</h2>
+<blockquote>
+<p>✔️ DO name collection properties with a plural phrase describing the items in the collection instead of using a singular phrase followed by &ldquo;List&rdquo; or &ldquo;Collection&rdquo;.</p>
+<p>✔️ DO name Boolean properties with an affirmative phrase (<code>CanSeek</code> instead of <code>CantSeek</code>). Optionally, you can also prefix Boolean properties with &ldquo;Is&rdquo;, &ldquo;Can&rdquo;, or &ldquo;Has&rdquo;, but only where it adds value.</p>
+<p>✔️ CONSIDER defining a struct instead of a class if instances of the type are small and commonly short-lived or are commonly embedded in other objects.</p>
+<p>❌ DO NOT add members to an interface that has previously shipped.</p>
+<p>Doing so would break implementations of the interface. You should create a new interface in order to avoid versioning problems.</p>
+<p>Except for the situations described in these guidelines, you should, in general, choose classes rather than interfaces in designing managed code reusable libraries.</p>
+<p>✔️ DO ensure that a state where all instance data is set to zero, false, or null (as appropriate) is valid.（Struct Design）</p>
+</blockquote>
+<h2 id="controversy">Controversy</h2>
+<ul>
+<li>Fields Naming between <em>_lowerCamelCase</em> and <em>PascalCasing</em></li>
+</ul>
+<blockquote>
+<p><code>_camelCase</code> for fields is common from what I&rsquo;ve seen (it&rsquo;s what we use at our place and Microsoft <a href="https://github.com/dotnet/runtime/blob/main/.editorconfig">prefer for the .NET Runtime</a>).</p>
+<p>My personal justification for using this standard is that is is easier to type <code>_</code> to identify a private field than <code>this.</code></p>
+<p>For example:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#8b008b;font-weight:bold">void</span> Foo(String a, String b)
+{
+    _a = a;
+    _b = b;
+}
+</code></pre></div><p>Versus</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#8b008b;font-weight:bold">void</span> Foo(String a, String b)
+{
+    <span style="color:#8b008b;font-weight:bold">this</span>.a = a;
+    <span style="color:#8b008b;font-weight:bold">this</span>.b = b;
+}
+</code></pre></div><p>I find the first much easier to type and it prevents me from ever accidentally assigning to the parameter called <code>a</code> instead of <code>this.a</code>. This is reinforced by a <a href="http://msdn.microsoft.com/en-us/library/dd264939.aspx">Code Analysis</a> Maintainability Rule that states:</p>
+<ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/ms182216.aspx">CA1500</a> Variable names should not match field names.</li>
+</ul>
+<p>My other reason, is that <code>this.</code> is optional (Visual Studio / Code prompts you to remove them) if it doesn&rsquo;t collide with a local variable or parameter name, making knowing which variable you are using harder. If you have an <code>_</code> at the start of all private fields, then you always know which is a field and which is has local scope.</p>
+</blockquote>
+<ul>
+<li>Tabs or Spaces</li>
+</ul>
+<p>4 spaces or tabs, it&rsquo;s a question.</p>
+<ul>
+<li>Abbreviation</li>
+</ul>
+<blockquote>
+<p>There is a convention, and it specifies initial uppercase, the rest lowercase, for all acronyms that are more than 2 characters long. Hence <code>HttpContext</code> and <code>ClientID</code>.</p>
+</blockquote>
+<p><a href="https://twitter.com/brendaneich/status/1316377408027594753">Chris Wilson</a> （<a href="https://www.linkedin.com/in/cwilso/">LinkedIn</a>）前微软员工如是说。</p>
+<blockquote>
+<p>&ldquo;<a href="https://rads.stackoverflow.com/amzn/click/com/0321545613">Framework Design Guidelines</a>&rdquo; 2nd edition by Krzysztof Cwalina and Brad Abrams pp.40-42</p>
+<p><strong>3.1.2 Capitalizing Acronyms</strong></p>
+<p><strong>DO</strong> capitalize both characters on two-character acronyms, except the first word of a camel-cased identifier.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs">System.IO
+<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">void</span> StartIO(Stream ioStream)
+</code></pre></div><p><strong>DO</strong> capitalize only the first character of acronyms with three or more characters, except the first word of a camel-cased identifier.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs">System.Xml
+<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">void</span> ProcessHtmlTag(<span style="color:#00688b;font-weight:bold">string</span> htmlTag)
+</code></pre></div><p><strong>DO NOT</strong> capitalize any of the characters of any acronyms, whatever their length, at the beginning of a camel-cased identifier.</p>
+</blockquote>
+<blockquote>
+<h2 id="using-abbreviations-and-acronyms">Using Abbreviations and Acronyms</h2>
+<p>❌ DO NOT use abbreviations or contractions as part of identifier names.</p>
+<p>For example, use <code>GetWindow</code> rather than <code>GetWin</code>.</p>
+<p>❌ DO NOT use any acronyms that are not widely accepted, and even if they are, only when necessary.</p>
+</blockquote>
+<blockquote>
+<p>The PascalCasing convention, used for all identifiers except parameter names, capitalizes the first character of each word (including acronyms over two letters in length), as shown in the following examples:</p>
+<pre><code>PropertyDescriptor` `HtmlTag
+</code></pre><p>A special case is made for two-letter acronyms in which both letters are capitalized, as shown in the following identifier:</p>
+<pre><code>IOStream
+</code></pre><p>The camelCasing convention, used only for parameter names, capitalizes the first character of each word except the first word, as shown in the following examples. As the example also shows, two-letter acronyms that begin a camel-cased identifier are both lowercase.</p>
+<pre><code>propertyDescriptor` `ioStream` `htmlTag
+</code></pre></blockquote>
+<ul>
+<li>Guideline limit</li>
+</ul>
+<p>80 characters</p>
+<ul>
+<li>NameSpace</li>
+</ul>
+<p>Should the folders in a solution match the namespace?</p>
+<ul>
+<li>CRUD Method Naming
+<ul>
+<li>CreateXXXX or InsertXXXX</li>
+<li>ReadXXXX or GetXXXXX</li>
+<li>UpdateXXXX</li>
+<li>DeleteXXXX</li>
+</ul>
+</li>
+</ul>
+<p>Reference</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/visualstudio/code-quality">Analyze code in Visual Studio</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview">.NET source code analysis</a></li>
+<li><a href="https://stackoverflow.com/questions/3186853/c-sharp-field-naming-guidelines">C# Field Naming Guidelines?</a></li>
+<li><a href="https://github.com/StyleCop/StyleCop">StyleCop/StyleCop: Analyzes C# source code to enforce a set of style and consistency rules. </a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions">C# Coding Conventions</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/capitalization-conventions#capitalizing-compound-words-and-common-terms">Capitalizing Compound Words and Common Terms</a></li>
+<li><a href="https://stackoverflow.com/questions/479596/what-makes-code-legacy">What makes code legacy?</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width">Why is 80 characters the &lsquo;standard&rsquo; limit for code width?</a></li>
+<li><a href="https://stackoverflow.com/questions/4664/should-the-folders-in-a-solution-match-the-namespace">Should the folders in a solution match the namespace?</a></li>
+<li><a href="https://stackoverflow.com/questions/360321/crud-vs-agud-vs-afud-whats-your-naming-convention-of-preference">what&rsquo;s your naming convention of preference</a></li>
+</ol>
+<hr>
+<h1 id="http-error-50019---internal-server-error">HTTP Error 500.19 - Internal Server Error</h1>
+<p>The requested page cannot be accessed because the related configuration data for the page is invalid.</p>
+<h2 id="detailed-error-information">Detailed Error Information:</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Module</th>
+<th>IIS Web Core</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">Notification</td>
+<td>BeginRequest</td>
+</tr>
+<tr>
+<td style="text-align:right">Handler</td>
+<td>Not yet determined</td>
+</tr>
+<tr>
+<td style="text-align:right">Error Code</td>
+<td>0x80070021</td>
+</tr>
+<tr>
+<td style="text-align:right">Config Error</td>
+<td>This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault=&ldquo;Deny&rdquo;), or set explicitly by a location tag with overrideMode=&ldquo;Deny&rdquo; or the legacy allowOverride=&ldquo;false&rdquo;.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="solution">Solution</h2>
+<p>Heres what worked for me, had a similar problem on my new laptop which had windows 10.</p>
+<ul>
+<li>Search for &ldquo;Turn windows features on or off&rdquo;</li>
+<li>Check &ldquo;Internet Information Services&rdquo;</li>
+<li>Check &ldquo;World Wide Web Services&rdquo;</li>
+<li>Check &ldquo;Application Development Features&rdquo;</li>
+<li><strong>Enable all items under this</strong></li>
+</ul>
+<p>try again, now it should work.</p>
+<p>Reference</p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/34199976/iis-config-error-this-configuration-section-cannot-be-used-at-this-path">IIS Config Error - This configuration section cannot be used at this path</a></li>
+</ol>
+<hr>
+<h1 id="excel-break-long-lines-when-importing-csv-filehttpsstackoverflowcomquestions43976092excel-break-long-lines-when-importing-csv-file"><a href="https://stackoverflow.com/questions/43976092/excel-break-long-lines-when-importing-csv-file">Excel break long lines when importing csv file</a></h1>
+<blockquote>
+<p>Each instance of Microsoft Excel 2007, Excel 2010, and Excel 2013 32-bit is limited to 2 gigabyte (GB) of memory (internal heap space). <strong>Each instance is also limited to 32,760 source cells</strong> when you perform a smart fill operation. When you copy or fill large sections of a worksheet, one or both of these limitations may affect the result.</p>
+</blockquote>
+<p>Reference</p>
+<p><a href="https://docs.microsoft.com/en-us/office/troubleshoot/excel/copy-formulas-over-large-area">&ldquo;Not enough memory&rdquo; when you copy formulas over large area in Excel</a></p>
+<hr>
+<h1 id="httplistener-access-deniedhttpsstackoverflowcomquestions4019466httplistener-access-denied"><a href="https://stackoverflow.com/questions/4019466/httplistener-access-denied">HttpListener Access Denied</a></h1>
+<blockquote>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">netsh http add urlacl <span style="color:#00688b">url</span>=<span style="color:#cd5555">&#34;http://+:3032/&#34;</span> <span style="color:#00688b">user</span>=everyone
+</code></pre></div><p>Documentation is <a href="http://msdn.microsoft.com/en-us/library/ms733768.aspx">here</a>.</p>
+</blockquote>
+<hr>
+<h1 id="internalsvisibleto">internalsvisibleto</h1>
+<p>To make interal type class/method or other object be visible in Tests project. In this way, we can use those object in our Unit Test.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#658b00">[assembly: InternalsVisibleTo(&#34;UnitTests&#34;)]</span>
+</code></pre></div><p>.csproj:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XML" data-lang="XML"><span style="color:#8b008b;font-weight:bold">&lt;ItemGroup&gt;</span>
+    <span style="color:#8b008b;font-weight:bold">&lt;InternalsVisibleToSuffix</span> <span style="color:#658b00">Include=</span><span style="color:#cd5555">&#34;.Tests&#34;</span> <span style="color:#8b008b;font-weight:bold">/&gt;</span> 
+<span style="color:#8b008b;font-weight:bold">&lt;/ItemGroup&gt;</span>
+</code></pre></div><p>Reference</p>
+<ol>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=net-5.0">InternalsVisibleToAttribute Class</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/1211707/how-to-access-classes-in-another-assembly-for-unit-testing-purposes">How to access classes in another assembly for unit-testing purposes?</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="use-fake-method-in-unit-test-to-implement-the-non-mockable-object">Use Fake Method in Unit Test to implement the non-mockable Object.</h1>
+<blockquote>
+<p>Microsoft Fakes helps you isolate the code you are testing by replacing other parts of the application with <em>stubs</em> or <em>shims</em>. These are small pieces of code that are under the control of your tests. By isolating your code for testing, you know that if the test fails, the cause is there and not somewhere else. Stubs and shims also let you test your code even if other parts of your application are not working yet.</p>
+<p>Fakes come in two flavors:</p>
+<ul>
+<li>A <a href="https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019#get-started-with-stubs">stub</a> replaces a class with a small substitute that implements the same interface. To use stubs, you have to design your application so that each component depends only on interfaces, and not on other components. (By &ldquo;component&rdquo; we mean a class or group of classes that are designed and updated together and typically contained in an assembly.)</li>
+<li>A <a href="https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019#get-started-with-shims">shim</a> modifies the compiled code of your application at run time so that instead of making a specified method call, it runs the shim code that your test provides. Shims can be used to replace calls to assemblies that you cannot modify, such as .NET assemblies.</li>
+</ul>
+<p><img src="https://docs.microsoft.com/en-us/visualstudio/test/media/fakes-2.png?view=vs-2019" alt="Fakes replace other components"></p>
+</blockquote>
+<p>Reference:</p>
+<p><a href="https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019">Isolate code under test with Microsoft Fakes</a></p>
+<hr>
+<h1 id="what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-nethttpsstackoverflowcomquestions4988286what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net"><a href="https://stackoverflow.com/questions/4988286/what-difference-is-there-between-webclient-and-httpwebrequest-classes-in-net">What difference is there between WebClient and HTTPWebRequest classes in .NET?</a></h1>
+<blockquote>
+<p>WebClient is a higher-level abstraction built on top of HttpWebRequest to simplify the most common tasks. For instance, if you want to get the content out of an HttpWebResponse, you have to read from the response stream:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#00688b;font-weight:bold">var</span> http = (HttpWebRequest)WebRequest.Create(<span style="color:#cd5555">&#34;http://example.com&#34;</span>);
+<span style="color:#00688b;font-weight:bold">var</span> response = http.GetResponse();
+
+<span style="color:#00688b;font-weight:bold">var</span> stream = response.GetResponseStream();
+<span style="color:#00688b;font-weight:bold">var</span> sr = <span style="color:#8b008b;font-weight:bold">new</span> StreamReader(stream);
+<span style="color:#00688b;font-weight:bold">var</span> content = sr.ReadToEnd();
+</code></pre></div><p>With WebClient, you just do <code>DownloadString</code>:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#00688b;font-weight:bold">var</span> client = <span style="color:#8b008b;font-weight:bold">new</span> WebClient();
+<span style="color:#00688b;font-weight:bold">var</span> content = client.DownloadString(<span style="color:#cd5555">&#34;http://example.com&#34;</span>);
+</code></pre></div><p><em>Note: I left out the <code>using</code> statements from both examples for brevity. You should definitely take care to dispose your web request objects properly.</em></p>
+<p>In general, WebClient is good for quick and dirty simple requests and HttpWebRequest is good for when you need more control over the entire request.</p>
+</blockquote>
+<hr>
+<h1 id="consolewriteline-cannot--write-unicode-characters-to-the-console">Console.WriteLine() cannot  write Unicode characters to the console</h1>
+<blockquote>
+<p>However there&rsquo;s a <em>&ldquo;Beta: Use Unicode UTF-8 for worldwide language support&rdquo;</em> checkbox since Windows 10 insider build 17035 for setting the locale code page to UTF-8</p>
+</blockquote>
+<p><img src="https://i.stack.imgur.com/heCud.png" alt="Beta: Use Unicode UTF-8 for worldwide language support"></p>
+<p>Reference</p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/5750203/how-to-write-unicode-characters-to-the-console">How to write Unicode characters to the console?</a></li>
+<li><a href="https://superuser.com/questions/1033088/is-it-possible-to-set-locale-of-a-windows-application-to-utf-8">Is it possible to set “locale” of a Windows application to UTF-8?</a></li>
+</ol>
+<hr>
+<h1 id="how-to-use-await-in-a-loophttpsstackoverflowcomquestions19431494how-to-use-await-in-a-loop"><a href="https://stackoverflow.com/questions/19431494/how-to-use-await-in-a-loop">How to use await in a loop</a></h1>
+<p>The way you&rsquo;re using the <code>await</code> keyword tells C# that you want to wait each time you pass through the loop, which isn&rsquo;t parallel. You can rewrite your method like this to do what you want, by storing a list of <code>Task</code>s and then <code>await</code>ing them all with <a href="http://msdn.microsoft.com/en-us/library/hh194766.aspx"><code>Task.WhenAll</code></a>.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">async</span> Task&lt;<span style="color:#00688b;font-weight:bold">bool</span>&gt; Init()
+{
+    <span style="color:#00688b;font-weight:bold">var</span> series = Enumerable.Range(<span style="color:#b452cd">1</span>, <span style="color:#b452cd">5</span>).ToList();
+    <span style="color:#00688b;font-weight:bold">var</span> tasks = <span style="color:#8b008b;font-weight:bold">new</span> List&lt;Task&lt;Tuple&lt;<span style="color:#00688b;font-weight:bold">int</span>, <span style="color:#00688b;font-weight:bold">bool</span>&gt;&gt;&gt;();
+    <span style="color:#8b008b;font-weight:bold">foreach</span> (<span style="color:#00688b;font-weight:bold">var</span> i <span style="color:#8b008b;font-weight:bold">in</span> series)
+    {
+        Console.WriteLine(<span style="color:#cd5555">&#34;Starting Process {0}&#34;</span>, i);
+        tasks.Add(DoWorkAsync(i));
+    }
+    <span style="color:#8b008b;font-weight:bold">foreach</span> (<span style="color:#00688b;font-weight:bold">var</span> task <span style="color:#8b008b;font-weight:bold">in</span> <span style="color:#8b008b;font-weight:bold">await</span> Task.WhenAll(tasks))
+    {
+        <span style="color:#8b008b;font-weight:bold">if</span> (task.Item2)
+        {
+            Console.WriteLine(<span style="color:#cd5555">&#34;Ending Process {0}&#34;</span>, task.Item1);
+        }
+    }
+    <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#8b008b;font-weight:bold">true</span>;
+}
+
+<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">async</span> Task&lt;Tuple&lt;<span style="color:#00688b;font-weight:bold">int</span>, <span style="color:#00688b;font-weight:bold">bool</span>&gt;&gt; DoWorkAsync(<span style="color:#00688b;font-weight:bold">int</span> i)
+{
+    Console.WriteLine(<span style="color:#cd5555">&#34;working..{0}&#34;</span>, i);
+    <span style="color:#8b008b;font-weight:bold">await</span> Task.Delay(<span style="color:#b452cd">1000</span>);
+    <span style="color:#8b008b;font-weight:bold">return</span> Tuple.Create(i, <span style="color:#8b008b;font-weight:bold">true</span>);
+}
+</code></pre></div><hr>
+<h1 id="what-is-the-difference-between-asynchronous-programming-and-multithreadinghttpsstackoverflowcomquestions34680985what-is-the-difference-between-asynchronous-programming-and-multithreading"><a href="https://stackoverflow.com/questions/34680985/what-is-the-difference-between-asynchronous-programming-and-multithreading">What is the difference between asynchronous programming and multithreading?</a></h1>
+<blockquote>
+<p>Your misunderstanding is extremely common. Many people are taught that multithreading and asynchrony are the same thing, but they are not.</p>
+<p>An analogy usually helps. You are cooking in a restaurant. An order comes in for eggs and toast.</p>
+<ul>
+<li>Synchronous: you cook the eggs, then you cook the toast.</li>
+<li>Asynchronous, single threaded: you start the eggs cooking and set a timer. You start the toast cooking, and set a timer. While they are both cooking, you clean the kitchen. When the timers go off you take the eggs off the heat and the toast out of the toaster and serve them.</li>
+<li>Asynchronous, multithreaded: you hire two more cooks, one to cook eggs and one to cook toast. Now you have the problem of coordinating the cooks so that they do not conflict with each other in the kitchen when sharing resources. And you have to pay them.</li>
+</ul>
+<p>Now does it make sense that multithreading is only one kind of asynchrony? <strong>Threading is about workers; asynchrony is about tasks</strong>. In multithreaded workflows you assign tasks to workers. In asynchronous single-threaded workflows you have a graph of tasks where some tasks depend on the results of others; as each task completes it invokes the code that schedules the next task that can run, given the results of the just-completed task. But you (hopefully) only need one worker to perform all the tasks, not one worker per task.</p>
+<p>It will help to realize that many tasks are not processor-bound. For processor-bound tasks it makes sense to hire as many workers (threads) as there are processors, assign one task to each worker, assign one processor to each worker, and have each processor do the job of nothing else but computing the result as quickly as possible. But for tasks that are not waiting on a processor, you don&rsquo;t need to assign a worker at all. You just wait for the message to arrive that the result is available and <em>do something else while you&rsquo;re waiting</em>. When that message arrives then you can schedule the continuation of the completed task as the next thing on your to-do list to check off.</p>
+<p>So let&rsquo;s look at Jon&rsquo;s example in more detail. What happens?</p>
+<ul>
+<li>Someone invokes DisplayWebSiteLength. Who? We don&rsquo;t care.</li>
+<li>It sets a label, creates a client, and asks the client to fetch something. The client returns an object representing the task of fetching something. That task is in progress.</li>
+<li>Is it in progress on another thread? Probably not. Read <a href="http://blog.stephencleary.com/2013/11/there-is-no-thread.html">Stephen&rsquo;s article</a> on why there is no thread.</li>
+<li>Now we await the task. What happens? We check to see if the task has completed between the time we created it and we awaited it. If yes, then we fetch the result and keep running. Let&rsquo;s suppose it has not completed. <strong>We sign up the remainder of this method as the continuation of that task and return</strong>.</li>
+<li>Now control has returned to the caller. What does it do? Whatever it wants.</li>
+<li>Now suppose the task completes. How did it do that? Maybe it was running on another thread, or maybe the caller that we just returned to allowed it to run to completion on the current thread. Regardless, we now have a completed task.</li>
+<li>The completed task asks the correct thread &ndash; again, likely the <em>only</em> thread &ndash; to run the continuation of the task.</li>
+<li>Control passes immediately back into the method we just left at the point of the await. Now there <em>is</em> a result available so we can assign <code>text</code> and run the rest of the method.</li>
+</ul>
+<p>It&rsquo;s just like in my analogy. Someone asks you for a document. You send away in the mail for the document, and keep on doing other work. When it arrives in the mail you are signalled, and when you feel like it, you do the rest of the workflow &ndash; open the envelope, pay the delivery fees, whatever. You don&rsquo;t need to hire another worker to do all that for you.</p>
+</blockquote>
+<hr>
+<h1 id="tuple-vs-class">Tuple VS Class</h1>
+<blockquote>
+<h2 id="tuples-are-values-so-are-copied-by-value-rather-than-by-reference">Tuples are values, so are copied by value, rather than by reference.</h2>
+<p>Most of the time, this should not be an issue. However, if you are passing around tuples of large structs, this might have an impact on performance. Ref locals/returns can be used to work around these performance issues, though.</p>
+<p>Additionally, because they are values, modifying a copy remotely will not change the original copy. This is a good thing, but could catch some folk out.</p>
+<h2 id="tuple-element-names-are-not-persisted">Tuple element names are not persisted</h2>
+<p>The names given to elements are used by the compiler and (in most cases) are not available at run-time. This means that reflection cannot be used to discover their names; they cannot be accessed dynamically and they cannot be used in razor views.</p>
+<p>Also this is an important consideration with APIs. A tuple returned from a method is the exception to the rule regarding after-compilation name discoverability. The compiler adds attributes to the method that hold information on the tuple names. This means you can safely return a tuple from a public method in one assembly and access its names in another.</p>
+<h2 id="tuples-are-lightweight">Tuples are lightweight</h2>
+<p>Tuples are much simpler to write than types as they are less verbose and the declaration can be &ldquo;inlined&rdquo; (ie declared at the point of use). This works well when declaring a method that returns multiple values, for example.</p>
+<p>However, because they are declared at the point of use, if you have <code>MethodA</code> that calls <code>MethodB</code> that calls <code>MethodC</code> and each returns a tuple, you&rsquo;ll need to redefine the tuple at every stage. There isn&rsquo;t (<a href="https://github.com/dotnet/csharplang/issues/423">yet</a>) a way of creating an alias of a tuple and re-using it across multiple methods.</p>
+<h2 id="just-use-common-sense">Just use common sense</h2>
+<p>For any situation where you might consider using a tuple: simply ask yourself the question: &ldquo;will a tuple simplify the code here&rdquo;. If the answer is &ldquo;yes&rdquo;, then use one. And that ultimately is the primary consideration over whether to use a tuple or a custom class.</p>
+</blockquote>
+<p>Reference:</p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/44650636/when-to-use-tuple-vs-class-in-c-sharp-7-0">When to use: Tuple vs Class in C# 7.0</a></li>
+</ol>
+<hr>
+<h1 id="in-net-which-loop-runs-faster-for-or-foreachhttpsstackoverflowcomquestions365615in-net-which-loop-runs-faster-for-or-foreach"><a href="https://stackoverflow.com/questions/365615/in-net-which-loop-runs-faster-for-or-foreach">In .NET, which loop runs faster, &lsquo;for&rsquo; or &lsquo;foreach&rsquo;?</a></h1>
+<hr>
+<h1 id="c-enumhttpsdocsmicrosoftcomen-usdotnetapisystemenumviewnet-50"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.enum?view=net-5.0">C# Enum</a></h1>
+<h2 id="get-value-of-enum-member-by-its-name">Get value of enum member by its name</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">Console.WriteLine((<span style="color:#00688b;font-weight:bold">int</span>)Enum.Parse(<span style="color:#8b008b;font-weight:bold">typeof</span>(ConsoleColor), <span style="color:#cd5555">&#34;Blue&#34;</span>)); <span style="color:#228b22">// 9
+</span></code></pre></div><h2 id="c---returning-an-enum-from-a-static-extension-methodhttpsstackoverflowcomquestions1556952c-sharp-returning-an-enum-from-a-static-extension-method"><a href="https://stackoverflow.com/questions/1556952/c-sharp-returning-an-enum-from-a-static-extension-method">C# - Returning an Enum? from a static extension method</a></h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> T? ToEnumSafe&lt;T&gt;(<span style="color:#8b008b;font-weight:bold">this</span> <span style="color:#00688b;font-weight:bold">string</span> s) <span style="color:#8b008b;font-weight:bold">where</span> T : <span style="color:#8b008b;font-weight:bold">struct</span>
+{
+    <span style="color:#8b008b;font-weight:bold">return</span> (IsEnum&lt;T&gt;(s) ? (T?)Enum.Parse(<span style="color:#8b008b;font-weight:bold">typeof</span>(T), s) : <span style="color:#8b008b;font-weight:bold">null</span>);
+}
+
+Console.WriteLine((ConsoleColor) Enum.Parse(<span style="color:#8b008b;font-weight:bold">typeof</span>(ConsoleColor), <span style="color:#cd5555">&#34;Blue&#34;</span>) == ConsoleColor.Blue); <span style="color:#228b22">// True
+</span></code></pre></div><h2 id="enumeration-format-stringshttpsdocsmicrosoftcomen-usdotnetstandardbase-typesenumeration-format-strings"><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/enumeration-format-strings">Enumeration format strings</a></h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">Console.WriteLine(ConsoleColor.Red.ToString(<span style="color:#cd5555">&#34;G&#34;</span>));         <span style="color:#228b22">// Displays Red
+</span><span style="color:#228b22"></span>Console.WriteLine(ConsoleColor.Blue.ToString(<span style="color:#cd5555">&#34;F&#34;</span>));       <span style="color:#228b22">// Displays Blue
+</span><span style="color:#228b22"></span>Console.WriteLine(ConsoleColor.Cyan.ToString(<span style="color:#cd5555">&#34;D&#34;</span>));         <span style="color:#228b22">// Displays 11
+</span><span style="color:#228b22"></span>Console.WriteLine(ConsoleColor.Cyan.ToString(<span style="color:#cd5555">&#34;X&#34;</span>));   <span style="color:#228b22">// Displays 0000000B
+</span><span style="color:#228b22"></span>
+nameof(RelevantTableName.DocumentObjectReference);  <span style="color:#228b22">// suggest*
+</span></code></pre></div><h2 id="how-can-i-cast-int-to-enumhttpsstackoverflowcomquestions29482how-can-i-cast-int-to-enum"><a href="https://stackoverflow.com/questions/29482/how-can-i-cast-int-to-enum">How can I cast int to enum?</a></h2>
+<blockquote>
+<p>From an int:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs">YourEnum foo = (YourEnum)yourInt;
+</code></pre></div><p>From a string:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs">YourEnum foo = (YourEnum) Enum.Parse(<span style="color:#8b008b;font-weight:bold">typeof</span>(YourEnum), yourString);
+
+<span style="color:#228b22">// The foo.ToString().Contains(&#34;,&#34;) check is necessary for enumerations marked with an [Flags] attribute
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">if</span> (!Enum.IsDefined(<span style="color:#8b008b;font-weight:bold">typeof</span>(YourEnum), foo) &amp;&amp; !foo.ToString().Contains(<span style="color:#cd5555">&#34;,&#34;</span>))
+{
+    <span style="color:#8b008b;font-weight:bold">throw</span> <span style="color:#8b008b;font-weight:bold">new</span> InvalidOperationException(<span style="color:#cd5555">$&#34;{yourString} is not an underlying value of the YourEnum enumeration.&#34;</span>)
+}
+</code></pre></div><p><strong>Update:</strong></p>
+<p>From number you can also</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs">YourEnum foo = (YourEnum)Enum.ToObject(<span style="color:#8b008b;font-weight:bold">typeof</span>(YourEnum) , yourInt);
+</code></pre></div></blockquote>
+<h2 id="naming-enumerations">Naming Enumerations</h2>
+<blockquote>
+<p>Names of enumeration types (also called enums) in general should follow the standard type-naming rules (PascalCasing, etc.). However, there are additional guidelines that apply specifically to enums.</p>
+<p>✔️ DO use a singular type name for an enumeration unless its values are bit fields.</p>
+<p>✔️ DO use a plural type name for an enumeration with bit fields as values, also called flags enum.</p>
+<p>❌ DO NOT use an &ldquo;Enum&rdquo; suffix in enum type names.</p>
+<p>❌ DO NOT use &ldquo;Flag&rdquo; or &ldquo;Flags&rdquo; suffixes in enum type names.</p>
+<p>❌ DO NOT use a prefix on enumeration value names (e.g., &ldquo;ad&rdquo; for ADO enums, &ldquo;rtf&rdquo; for rich text enums, etc.).</p>
+<p><em>Portions © 2005, 2009 Microsoft Corporation. All rights reserved.</em></p>
+<p><em>Reprinted by permission of Pearson Education, Inc. from <a href="https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619">Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition</a> by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.</em></p>
+</blockquote>
+<p>Reference:</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/enum">Enum Design</a></li>
+<li><a href="https://stackoverflow.com/questions/21561684/get-value-of-enum-member-by-its-name">Get value of enum member by its name?</a></li>
+</ol>
+<hr>
+<h1 id="moq-a-function-with-5-parameters-and-access-invocation-argumentshttpsstackoverflowcomquestions2540931moq-a-function-with-5-parameters-and-access-invocation-arguments"><a href="https://stackoverflow.com/questions/2540931/moq-a-function-with-5-parameters-and-access-invocation-arguments">Moq a function with 5+ parameters and access invocation arguments</a></h1>
+<blockquote>
+<p>This is supported in the final release of Moq 4.0 (4.0.10827), which was released on April 12, 2011. If you&rsquo;re using .NET 4, you&rsquo;ll be able to mock up to 16 parameters.</p>
+</blockquote>
+<p>むだ！むだ！むだ！むだ！</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#8b008b;font-weight:bold">delegate</span> <span style="color:#8b008b;font-weight:bold">void</span> SubmitCallback(Bar bar1,Bar bar2,Bar bar3,Bar bar4,Bar bar5);
+
+mock.Setup(foo =&gt; foo.Submit(It.IsAny&lt;Bar&gt;(),It.IsAny&lt;Bar&gt;(),It.IsAny&lt;Bar&gt;(),It.IsAny&lt;Bar&gt;(),It.IsAny&lt;Bar&gt;()))
+    .Callback(<span style="color:#8b008b;font-weight:bold">new</span> SubmitCallback((Bar bar1,Bar bar2,Bar bar3,Bar bar4,Bar bar5) =&gt; Console.WriteLine(<span style="color:#cd5555">&#34;Submitting a Bar!&#34;</span>)));
+</code></pre></div><hr>
+<h1 id="net-testing-naming-conventionshttpsstackoverflowcomquestions84717net-testing-naming-conventions"><a href="https://stackoverflow.com/questions/84717/net-testing-naming-conventions">.NET Testing Naming Conventions</a></h1>
+<blockquote>
+<p>-Code Folder</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">namespace</span> <span style="color:#008b45;text-decoration:underline">Company.Website</span>{}
+</code></pre></div><p>-Tests Folder</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">namespace</span> <span style="color:#008b45;text-decoration:underline">Company.Website.Tests</span>{}
+</code></pre></div></blockquote>
+<hr>
+<h1 id="just-in-time-compilation">Just-in-time compilation</h1>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.codedom.compiler.codedomprovider?view=net-5.0">CodeDomProvider</a></li>
+<li><a href="https://github.com/dotnet/roslyn">Roslyn</a></li>
+</ul>
+<p>Reference:</p>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Just-in-time_compilation">Just-in-time compilation Wiki</a></li>
+</ol>
+<hr>
+<h1 id="regex-for-ip-addresshttpsstackoverflowcomquestions9165922regex-for-ip-address"><a href="https://stackoverflow.com/questions/9165922/regex-for-ip-address">Regex for IP address</a></h1>
+<p>IPv4 &amp; IPv6 both are okay!</p>
+<blockquote>
+<p>I would use <a href="http://msdn.microsoft.com/en-us/library/system.net.ipaddress.tryparse.aspx"><code>IPAddress.TryParse</code></a> static method instead.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs">IPAddress ip;
+<span style="color:#00688b;font-weight:bold">bool</span> b = IPAddress.TryParse(<span style="color:#cd5555">&#34;1234.12.12.12&#34;</span>,<span style="color:#8b008b;font-weight:bold">out</span> ip);
+</code></pre></div></blockquote>
+<p>Reference:</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-5.0">Regex Class</a></li>
+</ol>
+<hr>
+<h2 id="encode--decode">Encode &amp; Decode</h2>
+<ul>
+<li>WebUtility</li>
+<li>Server.UrlEncode</li>
+<li>Uri.EscapeDataString</li>
+<li>Uri.EscapeUriString</li>
+</ul>
+<blockquote>
+<p>To encode or decode values outside of a web application, use the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.net.webutility?view=net-5.0">WebUtility</a> class.</p>
+</blockquote>
+<blockquote>
+<p>We found that in some cases you need to consider using Uri.EscapeDataString. In our case we are encrypting the querystring and found that UrlDecode is converting a plus (+) to space. This was causing us errors during decryption. Using Uri’s Escape and UnescapeDataString makes sense for us when constructing a custom querystring in the URL.</p>
+</blockquote>
+<blockquote>
+<p>I had significant headaches with these methods before, <strong>I recommend you *avoid* any variant of <code>UrlEncode</code>, and instead use <a href="http://msdn.microsoft.com/en-us/library/system.uri.escapedatastring.aspx"><code>Uri.EscapeDataString</code></a></strong> - at least that one has a comprehensible behavior.</p>
+<p>Let&rsquo;s see&hellip;</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart">HttpUtility.UrlEncode(<span style="color:#cd5555">&#34; &#34;</span>) == <span style="color:#cd5555">&#34;+&#34;</span> <span style="color:#228b22">//breaks ASP.NET when used in paths, non-
+</span><span style="color:#228b22"></span>                                  <span style="color:#228b22">//standard, undocumented.
+</span><span style="color:#228b22"></span>Uri.EscapeUriString(<span style="color:#cd5555">&#34;a?b=e&#34;</span>) == <span style="color:#cd5555">&#34;a?b=e&#34;</span> <span style="color:#228b22">// makes sense, but rarely what you
+</span><span style="color:#228b22"></span>                                        <span style="color:#228b22">// want, since you still need to
+</span><span style="color:#228b22"></span>                                        <span style="color:#228b22">// escape special characters yourself
+</span></code></pre></div><p>But my personal favorite has got to be <strong>HttpUtility.UrlPathEncode</strong> - this thing is really incomprehensible. It encodes:</p>
+<ul>
+<li>&quot; &quot; ==&gt; &ldquo;%20&rdquo;</li>
+<li>&ldquo;100% true&rdquo; ==&gt; &ldquo;100%%20true&rdquo; (ok, your url is broken now)</li>
+<li>&ldquo;test A.aspx#anchor B&rdquo; ==&gt; &ldquo;test%20A.aspx**#anchor%20B**&rdquo;</li>
+<li>&ldquo;test A.aspx?hmm#anchor B&rdquo; ==&gt; &ldquo;test%20A.aspx?hmm**#anchor B**&rdquo; (*note the difference with the previous escape sequence!*)</li>
+</ul>
+<p>It also has the lovelily specific MSDN documentation &ldquo;Encodes the path portion of a URL string for reliable HTTP transmission from the Web server to a client.&rdquo; - without actually explaining what it does. You are less likely to shoot yourself in the foot with an Uzi&hellip;</p>
+<p>In short, stick to <strong><a href="http://msdn.microsoft.com/en-us/library/system.uri.escapedatastring.aspx">Uri.EscapeDataString</a></strong>.</p>
+</blockquote>
+<p>Reference:</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.web.httputility.urldecode?view=net-5.0">HttpUtility.UrlDecode Method</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.net.webutility?view=net-5.0">WebUtility Class</a></li>
+<li><a href="https://stackoverflow.com/questions/4396598/whats-the-difference-between-escapeuristring-and-escapedatastring">What&rsquo;s the difference between EscapeUriString and EscapeDataString?</a></li>
+<li><a href="https://stackoverflow.com/questions/602642/server-urlencode-vs-httputility-urlencode">Server.UrlEncode vs. HttpUtility.UrlEncode</a></li>
+</ol>
+<hr>
+<h1 id="side-effect">Side effect</h1>
+<p>Reference</p>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">Side effect</a></li>
+</ol>
+<hr>
+<h1 id="how-do-you-unit-test-regular-expressionshttpsstackoverflowcomquestions488601how-do-you-unit-test-regular-expressions"><a href="https://stackoverflow.com/questions/488601/how-do-you-unit-test-regular-expressions">How do you unit test regular expressions?</a></h1>
+<blockquote>
+<p>You should always test your regexen, much like any other chunk of code. They&rsquo;re at the most simple a function that takes a string and returns a bool, or returns an array of values.</p>
+<p>Here are some suggestions on what to think about when it comes to designing unit tests for regexen. These are not not hard and fast prescriptions for unit test design, but some guidelines to shape your thinking. As always, weigh the needs of your testing versus cost of failure balanced with the time required to implement them all. (I find that &lsquo;implementing&rsquo; the test is the easy part! :-] )</p>
+<p>Points to consider:</p>
+<ul>
+<li>Think of every group (the parentheses) as a curly brace.</li>
+<li>Think of every | as a condition. Make sure to test for each branch.</li>
+<li>Think of every modifier (*, +, ? ) as a different path.</li>
+<li>(side note to the above: remember the difference between *, +, ? and *?, +?, and ??.)</li>
+<li>for \d, \s, \w, and their negations, give several in each range a try.</li>
+<li>For * and +, you need to test for the &lsquo;no value&rsquo;, &lsquo;one of&rsquo;, and &lsquo;one or more&rsquo; for each.</li>
+<li>For important &lsquo;control&rsquo; characters (eg, strings in the regex you look for) test to see what happens if they show up in the wrong places. This may surprise you.</li>
+<li>If you have real world data, use as much of it as you can.</li>
+<li>If you don&rsquo;t, make sure to test both the simple and complex forms that should be valid.</li>
+<li>Make sure to test what regex control characters do when inserted.</li>
+<li>Make sure to verify that the empty string is properly accepted/rejected.</li>
+<li>Make sure to verify that a string of each of the different kind of space characters are properly accepted or rejected.</li>
+<li>Make sure that proper handling of case insensitivity is done (the i flag). This has bit me more times than almost anything else in text parsing (other than spaces).</li>
+<li>If you have the x, m or s options, make sure you understand what they do and test for it (the behavior here can be different)</li>
+</ul>
+<p>For a regex that returns lists, also remember:</p>
+<ul>
+<li>Verify that the data you expect is returned, in the right order, in the right fields.</li>
+<li>Verify that slight modifications do not return good data.</li>
+<li>Verify that mixed anonymous groups and named groups parse correctly (eg, <code>(?&lt;name&gt; thing1 ( thing2) )</code>) - this behavior can be different based on the regex engine you&rsquo;re using.</li>
+<li>Once again, give lots of real world trials.</li>
+</ul>
+<p>If you use any advanced features, such as non-backtracking groups, make sure you understand completely how the feature works, and using the guidelines above, build example strings that should work for and against each of them.</p>
+<p>Depending on your regex library implementation, the way groups are captured may be different as well. Perl 5 has a &lsquo;open paren order&rsquo; ordering, C# has that partially except for named groups and so on. Make sure to experiment with your flavor to know exactly what it does.</p>
+<p>Then, integrate them right in with your other unit tests, either in their own module or alongside the module that contains the regex. For particularly nasty regexen, you may find you need lots and lots of tests to verify that the pattern and all the features you use are correct. If the regex makes up a large (or nearly all) of the work that the method is doing, I will use the advice above to fashion inputs to test that function and not the regex directly. That way, if later you decide that the regex is not the way to go, or you want to break it up, you can capture the behavior the regex provided without changing the interface - ie, the method that invokes the regex.</p>
+<p>As long as you really know how a regex feature is supposed to work in your flavor of regex, you should be able to develop decent test cases for it. Just make sure you really, really, really do understand how the feature works!</p>
+</blockquote>
+<h1 id="heading"></h1>
+<blockquote>
+<p>In terms of ascii code, it&rsquo;s 3 &ndash; since they&rsquo;re 10 and 13 respectively;-).</p>
+<p>But seriously, there are many:</p>
+<ul>
+<li>in Unix and all Unix-like systems, <code>\n</code> is the code for end-of-line, <code>\r</code> means nothing special</li>
+<li>as a consequence, in C and most languages that somehow copy it (even remotely), <code>\n</code> is the standard escape sequence for end of line (translated to/from OS-specific sequences as needed)</li>
+<li>in old Mac systems (pre-OS X), <code>\r</code> was the code for end-of-line instead</li>
+<li>in Windows (and many old OSs), the code for end of line is 2 characters, <code>\r\n</code>, in this order</li>
+<li>as a (surprising;-) consequence (harking back to OSs much older than Windows), <code>\r\n</code> is the standard line-termination for text formats on the Internet</li>
+<li>for electromechanical teletype-like &ldquo;terminals&rdquo;, <code>\r</code> commands the carriage to go back leftwards until it hits the leftmost stop (a slow operation), <code>\n</code> commands the roller to roll up one line (a much faster operation) &ndash; that&rsquo;s the reason you always have <code>\r</code> <strong>before</strong> <code>\n</code>, so that the roller can move while the carriage is still going leftwards!-) Wikipedia has a <a href="https://en.wikipedia.org/wiki/Newline#History">more detailed explanation</a>.</li>
+<li>for character-mode terminals (typically emulating even-older printing ones as above), in raw mode, <code>\r</code> and <code>\n</code> act similarly (except both in terms of the cursor, as there <strong>is</strong> no carriage or roller;-)</li>
+</ul>
+<p>In practice, in the modern context of writing to a text file, you should always use <code>\n</code> (the underlying runtime will translate that if you&rsquo;re on a weird OS, e.g., Windows;-). The only reason to use <code>\r</code> is if you&rsquo;re writing to a character terminal (or more likely a &ldquo;console window&rdquo; emulating it) and want the next line you write to overwrite the last one you just wrote (sometimes used for goofy &ldquo;ascii animation&rdquo; effects of e.g. progress bars) &ndash; this is getting pretty obsolete in a world of GUIs, though;-).</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong><code>\r</code></strong> = CR (Carriage Return) → Used as a new line character in Mac OS before X</li>
+<li><strong><code>\n</code></strong> = LF (Line Feed) → Used as a new line character in Unix/Mac OS X</li>
+<li><strong><code>\r\n</code></strong> = CR + LF → Used as a new line character in Windows</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>The problem is not with the splitting but rather with the <code>WriteLine</code>. A <code>\n</code> in a string printed with <code>WriteLine</code> will produce an &ldquo;extra&rdquo; line.</p>
+<p>Example</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#00688b;font-weight:bold">var</span> text = 
+  <span style="color:#cd5555">&#34;somet interesting text\n&#34;</span> +
+  <span style="color:#cd5555">&#34;some text that should be in the same line\r\n&#34;</span> +
+  <span style="color:#cd5555">&#34;some text should be in another line&#34;</span>;
+
+<span style="color:#00688b;font-weight:bold">string</span>[] stringSeparators = <span style="color:#8b008b;font-weight:bold">new</span> <span style="color:#00688b;font-weight:bold">string</span>[] { <span style="color:#cd5555">&#34;\r\n&#34;</span> };
+<span style="color:#00688b;font-weight:bold">string</span>[] lines = text.Split(stringSeparators, StringSplitOptions.None);
+Console.WriteLine(<span style="color:#cd5555">&#34;Nr. Of items in list: &#34;</span> + lines.Length); <span style="color:#228b22">// 2 lines
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">foreach</span> (<span style="color:#00688b;font-weight:bold">string</span> s <span style="color:#8b008b;font-weight:bold">in</span> lines)
+{
+   Console.WriteLine(s); <span style="color:#228b22">//But will print 3 lines in total.
+</span><span style="color:#228b22"></span>}
+</code></pre></div><p>To fix the problem remove <code>\n</code> before you print the string.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs">Console.WriteLine(s.Replace(<span style="color:#cd5555">&#34;\n&#34;</span>, <span style="color:#cd5555">&#34;&#34;</span>));
+</code></pre></div></blockquote>
+<p>Reference</p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/1761051/difference-between-n-and-r">Difference between \n and \r?</a></li>
+<li><a href="https://stackoverflow.com/questions/15433188/what-is-the-difference-between-r-n-r-and-n">What is the difference between \r\n, \r, and \n?</a></li>
+<li><a href="https://stackoverflow.com/questions/22185009/split-text-with-r-n">Split text with &lsquo;\r\n&rsquo;</a></li>
+</ol>
+<hr>
+<h1 id="how-and-when-to-use-async-and-awaithttpsstackoverflowcomquestions14455293how-and-when-to-use-async-and-await"><a href="https://stackoverflow.com/questions/14455293/how-and-when-to-use-async-and-await">How and when to use ‘async’ and ‘await’</a></h1>
+<p>Reference</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/">Asynchronous programming with async and await</a></li>
+</ol>
+<hr>
+<h1 id="project-and-item-templateshttpsdocsmicrosoftcomen-usvisualstudioidecreating-project-and-item-templates"><a href="https://docs.microsoft.com/en-us/visualstudio/ide/creating-project-and-item-templates">Project and item templates</a></h1>
+<hr>
+<h1 id="c-params-keyword-vs-listhttpsstackoverflowcomquestions2114297c-params-keyword-vs-list"><a href="https://stackoverflow.com/questions/2114297/c-params-keyword-vs-list">C#: params keyword vs. list</a></h1>
+<blockquote>
+<p>The params keyword is syntactic sugar handled by the C# compiler. underneath the hood, it&rsquo;s actually turning</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#8b008b;font-weight:bold">void</span> Foo(<span style="color:#8b008b;font-weight:bold">params</span> <span style="color:#00688b;font-weight:bold">object</span>[] a) { ... }
+Foo(<span style="color:#b452cd">1</span>,<span style="color:#b452cd">2</span>,<span style="color:#cd5555">&#34;THREE&#34;</span>);
+</code></pre></div><p>into</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#8b008b;font-weight:bold">void</span> Foo(<span style="color:#00688b;font-weight:bold">object</span>[] a) { ... }
+Foo(<span style="color:#8b008b;font-weight:bold">new</span> <span style="color:#00688b;font-weight:bold">object</span>[] { <span style="color:#b452cd">1</span>, <span style="color:#b452cd">2</span>, <span style="color:#cd5555">&#34;THREE&#34;</span> })
+</code></pre></div><p>From a <em>performance</em> perspective like you&rsquo;re asking about, the params call is simply faster because it is a bit faster to create an array than it is to create a List&lt;&gt;. There is no performance difference between the two snippets above.</p>
+</blockquote>
+<p>Reference</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/params">params (C# Reference)</a></li>
+</ol>
+<hr>
+<h1 id="csharp-special-characters">CSharp Special Characters</h1>
+<h2 id="heading-1">?</h2>
+<p>There are 4 question marks <code>?</code> used in C# syntax which I think is pretty confusing sometimes. Here I will attempt to explain them to you.</p>
+<h3 id="1-the--operator-since-visual-studio-2003">1) The ?: Operator (since Visual Studio 2003)</h3>
+<p>The format : <code>condition ? first_expression : second_expression;</code></p>
+<p>If <code>condition</code> evaluates to <code>true</code>, <code>first_expression</code> shall be returned, otherwise <code>second_expression</code>.</p>
+<p>Example</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">Random rnd = <span style="color:#8b008b;font-weight:bold">new</span> Random();
+<span style="color:#00688b;font-weight:bold">var</span> randomNo = rnd.Next();
+
+<span style="color:#00688b;font-weight:bold">var</span> status = randomNo % <span style="color:#b452cd">2</span> == <span style="color:#b452cd">0</span> ? <span style="color:#cd5555">&#34;Generated number is an even number.&#34;</span> : <span style="color:#cd5555">&#34;Generated number is an odd number.&#34;</span>;
+Console.WriteLine(randomNo);
+Console.WriteLine(status);
+</code></pre></div><h3 id="2-the-nullable-types-since-visual-studio-2005">2) The Nullable Types (since Visual Studio 2005)</h3>
+<p>Definition on msdn</p>
+<blockquote>
+<p>Nullable types can represent all the values of an underlying type, and an additional null value.</p>
+</blockquote>
+<p>How do you use a nullable, let say nullable integer. Simple</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#00688b;font-weight:bold">int?</span> x = <span style="color:#b452cd">0</span>; <span style="color:#228b22">// x can hold any integer values plus the null value
+</span><span style="color:#228b22"></span>x = <span style="color:#8b008b;font-weight:bold">null</span>;
+<span style="color:#00688b;font-weight:bold">var</span> isXNull = (x == <span style="color:#8b008b;font-weight:bold">null</span>) ? <span style="color:#8b008b;font-weight:bold">true</span>: <span style="color:#8b008b;font-weight:bold">false</span>;
+Console.WriteLine(isXNull); <span style="color:#228b22">// True
+</span><span style="color:#228b22"></span>
+x = <span style="color:#b452cd">15</span>;
+isXNull = (x == <span style="color:#8b008b;font-weight:bold">null</span>) ? <span style="color:#8b008b;font-weight:bold">true</span>: <span style="color:#8b008b;font-weight:bold">false</span>;
+Console.WriteLine(isXNull); <span style="color:#228b22">// False
+</span></code></pre></div><h3 id="3-the-null-conditional-operators-since-visual-studio-2015">3) The Null-conditional Operators (since Visual Studio 2015)</h3>
+<p>Example of a pretty common mistake</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">void</span> Main() {
+ <span style="color:#00688b;font-weight:bold">var</span> student1 = CreateStudent(<span style="color:#cd5555">&#34;Quan&#34;</span>, <span style="color:#b452cd">27</span>);
+ Console.WriteLine(student1.Name); <span style="color:#228b22">// Quan
+</span><span style="color:#228b22"></span> <span style="color:#00688b;font-weight:bold">var</span> student2 = CreateStudent(<span style="color:#cd5555">&#34;&#34;</span>, <span style="color:#b452cd">27</span>); <span style="color:#228b22">// student2 is null because no student name is given to the fiction method CreateStudent
+</span><span style="color:#228b22"></span> Console.WriteLine(student2.Name); <span style="color:#228b22">// System.NullReferenceException: Object reference not set to an instance of an object.
+</span><span style="color:#228b22"></span>}
+</code></pre></div><p>The method <code>CreateStudent</code> returns a <code>null</code> value instead of creating a new student if the student name is not given. Trying to access its <code>Name</code> property after that will throw a <code>NullReferenceException</code></p>
+<p>What you can do (without the Null-conditional Operators)</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">var</span> student2 = CreateStudent(<span style="color:#cd5555">&#34;&#34;</span>, <span style="color:#b452cd">27</span>); <span style="color:#228b22">// student2 is null
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">if</span> (student2 != <span style="color:#8b008b;font-weight:bold">null</span>){
+ Console.WriteLine(student2.Name); <span style="color:#228b22">// No more System.NullReferenceException
+</span><span style="color:#228b22"></span>}
+</code></pre></div><p>What you can do (with the Null-conditional Operators)</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">var</span> student2 = CreateStudent(<span style="color:#cd5555">&#34;&#34;</span>, <span style="color:#b452cd">27</span>); <span style="color:#228b22">// student2 is null
+</span><span style="color:#228b22"></span>Console.WriteLine(student2?.Name); <span style="color:#228b22">// No more System.NullReferenceException
+</span></code></pre></div><p>What happended? Thanks to the question mark after <code>student2</code>, you are telling C# that <code>student2</code> may be null. If <code>student2</code> is indeed <code>null</code>, C# will not try to access <code>Name</code> anymore, it returns <code>null</code> instead and <code>Console.WriteLine</code>will happily ignore the <code>null</code> value and only add a new line.</p>
+<h3 id="4-the---null-coalescing-operator-operator-since-visual-studio-2005">4) The ?? : Null-coalescing operator Operator (since Visual Studio 2005)</h3>
+<p>This is a special case of the ?: Operator in section 1</p>
+<p>The format : <code>asking_value ?? just_in_case;</code></p>
+<p>if <code>asking_value</code> is <code>null</code>, <code>just_in_case</code> is returned, otherwise <code>asking_value</code>is returned.</p>
+<p>Example</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">int?</span> x = <span style="color:#8b008b;font-weight:bold">null</span>; <span style="color:#228b22">// x is nullable so it can be null
+</span><span style="color:#228b22"></span><span style="color:#00688b;font-weight:bold">var</span> y = x ?? <span style="color:#b452cd">0</span>; <span style="color:#228b22">// if x is null, set y to 0, otherwise set y = x;
+</span><span style="color:#228b22">// which is essentially the same as
+</span><span style="color:#228b22"></span><span style="color:#00688b;font-weight:bold">var</span> y = (x == <span style="color:#8b008b;font-weight:bold">null</span>) ? <span style="color:#b452cd">0</span> : x;
+</code></pre></div><p>Reference</p>
+<p><a href="https://quannt.github.io/programming/c%23/2017/01/07/question-marks-c-sharp.html">Four question marks you should know in C#</a></p>
+<h2 id="heading-2">$</h2>
+<blockquote>
+<p>Starting with C# 8.0, you can use the <code>$</code> and <code>@</code> tokens in any order: both <code>$@&quot;...&quot;</code> and <code>@$&quot;...&quot;</code> are valid interpolated verbatim strings. In earlier C# versions, the <code>$</code> token must appear before the <code>@</code> token.</p>
+</blockquote>
+<p>Reference</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated">$ - string interpolation (C# reference)</a></li>
+</ol>
+<h2 id="heading-3">@</h2>
+<p>The <code>@</code> special character serves as a verbatim identifier. It can be used in the following ways:</p>
+<ol>
+<li>
+<p>To enable C# keywords to be used as identifiers. The <code>@</code> character prefixes a code element that the compiler is to interpret as an identifier rather than a C# keyword. The following example uses the <code>@</code> character to define an identifier named <code>for</code> that it uses in a <code>for</code>loop.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#00688b;font-weight:bold">string</span>[] @for = { <span style="color:#cd5555">&#34;John&#34;</span>, <span style="color:#cd5555">&#34;James&#34;</span>, <span style="color:#cd5555">&#34;Joan&#34;</span>, <span style="color:#cd5555">&#34;Jamie&#34;</span> };
+<span style="color:#8b008b;font-weight:bold">for</span> (<span style="color:#00688b;font-weight:bold">int</span> ctr = <span style="color:#b452cd">0</span>; ctr &lt; @for.Length; ctr++)
+{
+   Console.WriteLine(<span style="color:#cd5555">$&#34;Here is your gift, {@for[ctr]}!&#34;</span>);
+}
+<span style="color:#228b22">// The example displays the following output:
+</span><span style="color:#228b22">//     Here is your gift, John!
+</span><span style="color:#228b22">//     Here is your gift, James!
+</span><span style="color:#228b22">//     Here is your gift, Joan!
+</span><span style="color:#228b22">//     Here is your gift, Jamie!
+</span></code></pre></div></li>
+<li>
+<p>To indicate that a string literal is to be interpreted verbatim. The <code>@</code> character in this instance defines a <em>verbatim string literal</em>. Simple escape sequences (such as <code>&quot;\\&quot;</code> for a backslash), hexadecimal escape sequences (such as <code>&quot;\x0041&quot;</code> for an uppercase A), and Unicode escape sequences (such as <code>&quot;\u0041&quot;</code> for an uppercase A) are interpreted literally. Only a quote escape sequence (<code>&quot;&quot;</code>) is not interpreted literally; it produces one double quotation mark. Additionally, in case of a verbatim <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated">interpolated string</a> brace escape sequences (<code>{{</code> and <code>}}</code>) are not interpreted literally; they produce single brace characters. The following example defines two identical file paths, one by using a regular string literal and the other by using a verbatim string literal. This is one of the more common uses of verbatim string literals.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#00688b;font-weight:bold">string</span> filename1 = <span style="color:#cd5555">@&#34;c:\documents\files\u0066.txt&#34;</span>;
+<span style="color:#00688b;font-weight:bold">string</span> filename2 = <span style="color:#cd5555">&#34;c:\\documents\\files\\u0066.txt&#34;</span>;
+   
+Console.WriteLine(filename1);
+Console.WriteLine(filename2);
+<span style="color:#228b22">// The example displays the following output:
+</span><span style="color:#228b22">//     c:\documents\files\u0066.txt
+</span><span style="color:#228b22">//     c:\documents\files\u0066.txt
+</span></code></pre></div><p>The following example illustrates the effect of defining a regular string literal and a verbatim string literal that contain identical character sequences.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#00688b;font-weight:bold">string</span> s1 = <span style="color:#cd5555">&#34;He said, \&#34;This is the last \u0063hance\x0021\&#34;&#34;</span>;
+<span style="color:#00688b;font-weight:bold">string</span> s2 = <span style="color:#cd5555">@&#34;He said, &#34;&#34;This is the last \u0063hance\x0021&#34;&#34;&#34;</span>;
+   
+Console.WriteLine(s1);
+Console.WriteLine(s2);
+<span style="color:#228b22">// The example displays the following output:
+</span><span style="color:#228b22">//     He said, &#34;This is the last chance!&#34;
+</span><span style="color:#228b22">//     He said, &#34;This is the last \u0063hance\x0021&#34;
+</span></code></pre></div></li>
+<li>
+<p>To enable the compiler to distinguish between attributes in cases of a naming conflict. An attribute is a class that derives from <a href="https://docs.microsoft.com/en-us/dotnet/api/system.attribute">Attribute</a>. Its type name typically includes the suffix <strong>Attribute</strong>, although the compiler does not enforce this convention. The attribute can then be referenced in code either by its full type name (for example, <code>[InfoAttribute]</code> or its shortened name (for example, <code>[Info]</code>). However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the <strong>Attribute</strong> suffix but the other does not. For example, the following code fails to compile because the compiler cannot determine whether the <code>Info</code> or <code>InfoAttribute</code> attribute is applied to the <code>Example</code> class. See <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1614">CS1614</a> for more information.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#8b008b;font-weight:bold">using</span> <span style="color:#008b45;text-decoration:underline">System</span>;
+<span style="color:#658b00">   
+</span><span style="color:#658b00">[AttributeUsage(AttributeTargets.Class)]</span>
+<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Info</span> : Attribute
+{
+   <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#00688b;font-weight:bold">string</span> information;
+   
+   <span style="color:#8b008b;font-weight:bold">public</span> Info(<span style="color:#00688b;font-weight:bold">string</span> info)
+   {
+      information = info;
+   }
+}
+<span style="color:#658b00">   
+</span><span style="color:#658b00">[AttributeUsage(AttributeTargets.Method)]</span>
+<span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">InfoAttribute</span> : Attribute
+{
+   <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#00688b;font-weight:bold">string</span> information;
+   
+   <span style="color:#8b008b;font-weight:bold">public</span> InfoAttribute(<span style="color:#00688b;font-weight:bold">string</span> info)
+   {
+      information = info;
+   }
+}
+<span style="color:#658b00">   
+</span><span style="color:#658b00">[Info(&#34;A simple executable.&#34;)]</span> 
+<span style="color:#228b22">// Generates compiler error CS1614. Ambiguous Info and InfoAttribute.
+</span><span style="color:#228b22">// Prepend &#39;@&#39; to select &#39;Info&#39;. Specify the full name &#39;InfoAttribute&#39; to select it.
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Example</span>
+{
+<span style="color:#658b00">   [InfoAttribute(&#34;The entry point.&#34;)]</span>
+   <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> <span style="color:#8b008b;font-weight:bold">void</span> Main()
+   {
+   }
+}
+</code></pre></div></li>
+</ol>
+<h2 id="heading-4">!</h2>
+<blockquote>
+<p>Available in C# 8.0 and later, the unary postfix <code>!</code> operator is the null-forgiving, or null-suppression, operator. In an enabled <a href="https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-annotation-context">nullable annotation context</a>, you use the null-forgiving operator to declare that expression <code>x</code> of a reference type isn&rsquo;t <code>null</code>: <code>x!</code>. The unary prefix <code>!</code> operator is the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#logical-negation-operator-">logical negation operator</a>.</p>
+</blockquote>
+<blockquote>
+<p>It tells the compiler &ldquo;this isn&rsquo;t null, trust me&rdquo;, so it does not issue a warning for a possible null reference.</p>
+</blockquote>
+<p>Reference</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-forgiving">! (null-forgiving) operator (C# reference)</a></li>
+</ol>
+<h2 id="_">_</h2>
+<blockquote>
+<p>Starting with C# 7.0, C# supports discards, which are placeholder variables that are intentionally unused in application code. Discards are equivalent to unassigned variables; they don&rsquo;t have a value. A discard communicates intent to the compiler and others that read your code: You intended to ignore the result of an expression. You may want to ignore the result of an expression, one or more members of a tuple expression, an <code>out</code> parameter to a method, or the target of a pattern matching expression.</p>
+<p>&hellip;</p>
+<p>Beginning with C# 9.0, you can use discards to specify unused input parameters of a lambda expression. For more information, see the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions#input-parameters-of-a-lambda-expression">Input parameters of a lambda expression</a> section of the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions">Lambda expressions</a> article.</p>
+</blockquote>
+<p>Reference</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/discards">Discards - C# Fundamentals</a></li>
+</ol>
+<hr>
+<h1 id="transaction-and-bulk-copy-operationshttpsdocsmicrosoftcomen-usdotnetframeworkdataadonetsqltransaction-and-bulk-copy-operationsredirectedfrommsdn"><a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/transaction-and-bulk-copy-operations?redirectedfrom=MSDN">Transaction and Bulk Copy Operations</a></h1>
+<hr>
+<h1 id="difference-between-a-coroutine-and-a-threadhttpsstackoverflowcomquestions1934715difference-between-a-coroutine-and-a-thread"><a href="https://stackoverflow.com/questions/1934715/difference-between-a-coroutine-and-a-thread">Difference between a &ldquo;coroutine&rdquo; and a &ldquo;thread&rdquo;?</a></h1>
+<hr>
+<h1 id="swagger--openapi">Swagger / OpenAPI</h1>
+<p><a href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-6.0">ASP.NET Core web API documentation with Swagger / OpenAPI</a></p>
+<p>Infor&rsquo;s T2V project used Swagger UI to build the API documentation. More about <a href="https://swagger.io">swagger</a>.</p>
+<hr>
+<h1 id="concurrent">Concurrent</h1>
+<p><a href="https://www.red-gate.com/simple-talk/blogs/inside-the-concurrent-collections-concurrentdictionary/">Inside the Concurrent Collections: ConcurrentDictionary</a></p>
+<p><a href="https://stackoverflow.com/questions/1949131/net-dictionary-locking-vs-concurrentdictionary">.NET - Dictionary locking vs. ConcurrentDictionary</a></p>
+<p><a href="https://stackoverflow.com/questions/42013226/when-should-i-use-concurrentdictionary-and-dictionary">When should I use ConcurrentDictionary and Dictionary?</a></p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/collections/thread-safe/">Thread-Safe Collections | Microsoft Docs</a></p>
+<hr>
+<h1 id="what-is-the-difference-between-i-and-ihttpsstackoverflowcomquestions24853what-is-the-difference-between-i-and-i"><a href="https://stackoverflow.com/questions/24853/what-is-the-difference-between-i-and-i">What is the difference between ++i and i++?</a></h1>
+<blockquote>
+<ul>
+<li>
+<p><code>++i</code> will increment the value of <code>i</code>, and then return the incremented value.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"> i = <span style="color:#b452cd">1</span>;
+ j = ++i;
+ (i is <span style="color:#b452cd">2</span>, j is <span style="color:#b452cd">2</span>)
+</code></pre></div></li>
+<li>
+<p><code>i++</code> will increment the value of <code>i</code>, but return the original value that <code>i</code> held before being incremented.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"> i = <span style="color:#b452cd">1</span>;
+ j = i++;
+ (i is <span style="color:#b452cd">2</span>, j is <span style="color:#b452cd">1</span>)
+</code></pre></div></li>
+</ul>
+<p>In any case, follow the guideline &ldquo;prefer <code>++i</code> over <code>i++</code>&rdquo; and you won&rsquo;t go wrong.</p>
+</blockquote>
+<hr>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-12-26</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/computing-science/dependency-injection/">
+			Next<br>Dependency Injection
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/computing-science/serverless/">
+			Previous<br>Serverless 
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

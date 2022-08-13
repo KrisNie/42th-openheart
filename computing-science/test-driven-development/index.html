@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html><head>
+<title>Test-driven development</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="单元测试">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Test-driven development" />
+<meta property="og:description" content="单元测试" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/computing-science/test-driven-development/" />
+<meta property="article:published_time" content="2020-11-21T22:30:12+00:00" />
+<meta property="article:modified_time" content="2020-12-27T17:15:23+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Test-driven development"/>
+<meta name="twitter:description" content="单元测试"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#unit-test-practice" onclick="onNavClick(`#unit-test-practice-nav`)" id="unit-test-practice-nav">
+									Unit Test Practice
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#shifting-left" onclick="onNavClick(`#shifting-left-nav`)" id="shifting-left-nav">
+									Shifting Left
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#shift-left-testinghttpsenwikipediaorgwikishift-left_testing" onclick="onNavClick(`#shift-left-testinghttpsenwikipediaorgwikishift-left_testing-nav`)" id="shift-left-testinghttpsenwikipediaorgwikishift-left_testing-nav">
+									Shift Left Testing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#iso" onclick="onNavClick(`#iso-nav`)" id="iso-nav">
+									ISO
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#bdd" onclick="onNavClick(`#bdd-nav`)" id="bdd-nav">
+									BDD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#specflowhttpsspecfloworg" onclick="onNavClick(`#specflowhttpsspecfloworg-nav`)" id="specflowhttpsspecfloworg-nav">
+									SpecFlow
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#tfd" onclick="onNavClick(`#tfd-nav`)" id="tfd-nav">
+									TFD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tdd" onclick="onNavClick(`#tdd-nav`)" id="tdd-nav">
+									TDD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#questions" onclick="onNavClick(`#questions-nav`)" id="questions-nav">
+									Questions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#unit-test-api" onclick="onNavClick(`#unit-test-api-nav`)" id="unit-test-api-nav">
+									Unit Test API
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#non-mockable" onclick="onNavClick(`#non-mockable-nav`)" id="non-mockable-nav">
+									Non-Mockable
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#refactor" onclick="onNavClick(`#refactor-nav`)" id="refactor-nav">
+									Refactor
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issue" onclick="onNavClick(`#issue-nav`)" id="issue-nav">
+									Issue
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#how-to-test-a-recursive-function" onclick="onNavClick(`#how-to-test-a-recursive-function-nav`)" id="how-to-test-a-recursive-function-nav">
+									How to test a recursive Function
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-to-test-for-order-of-calls" onclick="onNavClick(`#how-to-test-for-order-of-calls-nav`)" id="how-to-test-for-order-of-calls-nav">
+									How to test for order of calls
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#unit-test-practice" onclick="onNavClick(`#unit-test-practice-nav`)" id="unit-test-practice-nav">
+									Unit Test Practice
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#shifting-left" onclick="onNavClick(`#shifting-left-nav`)" id="shifting-left-nav">
+									Shifting Left
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#shift-left-testinghttpsenwikipediaorgwikishift-left_testing" onclick="onNavClick(`#shift-left-testinghttpsenwikipediaorgwikishift-left_testing-nav`)" id="shift-left-testinghttpsenwikipediaorgwikishift-left_testing-nav">
+									Shift Left Testing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#iso" onclick="onNavClick(`#iso-nav`)" id="iso-nav">
+									ISO
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#bdd" onclick="onNavClick(`#bdd-nav`)" id="bdd-nav">
+									BDD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#specflowhttpsspecfloworg" onclick="onNavClick(`#specflowhttpsspecfloworg-nav`)" id="specflowhttpsspecfloworg-nav">
+									SpecFlow
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#tfd" onclick="onNavClick(`#tfd-nav`)" id="tfd-nav">
+									TFD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tdd" onclick="onNavClick(`#tdd-nav`)" id="tdd-nav">
+									TDD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#questions" onclick="onNavClick(`#questions-nav`)" id="questions-nav">
+									Questions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#unit-test-api" onclick="onNavClick(`#unit-test-api-nav`)" id="unit-test-api-nav">
+									Unit Test API
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#non-mockable" onclick="onNavClick(`#non-mockable-nav`)" id="non-mockable-nav">
+									Non-Mockable
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#refactor" onclick="onNavClick(`#refactor-nav`)" id="refactor-nav">
+									Refactor
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issue" onclick="onNavClick(`#issue-nav`)" id="issue-nav">
+									Issue
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#how-to-test-a-recursive-function" onclick="onNavClick(`#how-to-test-a-recursive-function-nav`)" id="how-to-test-a-recursive-function-nav">
+									How to test a recursive Function
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#how-to-test-for-order-of-calls" onclick="onNavClick(`#how-to-test-for-order-of-calls-nav`)" id="how-to-test-for-order-of-calls-nav">
+									How to test for order of calls
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Test-driven development
+                    
+                    <div class="post-subtitle">
+                        单元测试
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-11-21 22:30
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/cs">CS</a>
+                                &nbsp;
+                            
+                                <a href="/tags/.net">.NET</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            8 min
+                            
+                            22 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="unit-test-practice">Unit Test Practice</h1>
+<p><strong>纸上得来终觉浅</strong>，绝知此事要躬行。</p>
+<h2 id="shifting-left">Shifting Left</h2>
+<p>所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )</p>
+<blockquote>
+<p>Shift Left is a practice intended to find and prevent defects early in the software delivery process. The idea is to improve quality by moving tasks to the left as early in the lifecycle as possible.</p>
+<p>In the traditional software development model, requirements are kept on the left side of the plan, and the delivery and testing requirements on the right. The problem is that these practices can’t handle changing expectations and requirements, resulting in negative outcomes for the business such as:</p>
+<ul>
+<li>Increased costs</li>
+<li>Increased time to market</li>
+<li>Unexpected errors</li>
+</ul>
+<p>The Shift left approach emphasizes the need for developers to concentrate on quality from their earliest stage of a software build, rather than waiting for errors and bugs to be found late in the SDLC(<a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">Systems development life cycle</a>, <a href="https://www.tutorialspoint.com/sdlc/sdlc_pdf_version.htm">SDLC Tutorial</a>). Shifting left enables product teams perform daily tasks like:</p>
+<ul>
+<li>Testing</li>
+<li>Providing feedback</li>
+<li>Reviewing changes and progress</li>
+</ul>
+</blockquote>
+<p>人工的过程大都是倒置的，比如制作一个杯子，我们得想象杯子的样子，然后按设计高温烧制，最终的杯子才会在我的右手旁，盛着热美式。这本来就与自然相背而行，类人猿进化到人类，人类继续进化，他们（我们）都不晓得要进化成什么样子的生物，一切未知，但前进却永不止步。软件肯定不是自然产物，所以不能放纵各种“变异”和“遗传”，要把控过程，走的每一步、每一个动作都要向最终产物在靠拢。</p>
+<p>其实所谓左移，将流程后半部前移，真正移动的是什么？还是需求。一切是做出更完善的Demand planning，以减少缺陷，提前规避风险。</p>
+<p>软件的需求并不像生活里比比皆是的目标那么简单。明确今天自己要写几行代码，给哪一个心爱的女孩买个GUCCI……这类目标的确立犹如是探囊取物。而一个明确的软件需求，不止要从客户要求里抽象，还要包括对具体实现的思考与设计，保持一切都符合主流规范并贴合市场发展，这难于上青天。（这也可能是IT相关都需要团队工作的原因）</p>
+<blockquote>
+<p>In Scrum we refer to the step’s output as the Definition of Done, the DoD, of a user story or an epic. Writing good DoDs is not trivial and many books and articles are written to cover the topic. A user story (and epic for that matter as well) can also have a Definition of Ready, the DoR, meaning that the story is groomed to the point that it makes sense, and everything is clear enough so the story can be planned. Where the DoD defines the quality requirements of the outcome user story or epic, it is the DoR that defines the user story or epic’s input.</p>
+</blockquote>
+<p>明确的目标（力所能及），就是对过程最好的掌控。A clear goal (Able To Do) is the best control of the process.</p>
+<h3 id="shift-left-testinghttpsenwikipediaorgwikishift-left_testing"><a href="https://en.wikipedia.org/wiki/Shift-left_testing">Shift Left Testing</a></h3>
+<p>字面意思。 Literally interpretation</p>
+<blockquote>
+<p><strong>Shift Left testing</strong> means testing earlier in the software development process.</p>
+</blockquote>
+<h3 id="iso">ISO</h3>
+<p>Im my opinion, ISO means a standard, criterion, norm, touchstone&hellip; what we must follow. Like: Veracode will help do a check of our codes, Source Code Scanning with SonarQube.</p>
+<p>BCI should be mentioned here, non-governmental organization may be a joke to me now.</p>
+<h2 id="bdd">BDD</h2>
+<p>Behavior Driven Development.</p>
+<p>BDD的过程就是在完善“左移”，将需求（架构）描述的更加清晰。</p>
+<h3 id="specflowhttpsspecfloworg"><a href="https://specflow.org/">SpecFlow</a></h3>
+<blockquote>
+<p>Building up the logic to test that a particular behavior is being satisfied can be tedious. One of the tools Doire demonstrated in his presentation was SpecFlow (<a href="http://specflow.org/">specflow.org</a>). <strong>This tool integrates with Visual Studio and enables you to define user stories—called scenarios—using its simple rules.</strong> It then automates some of the creation and execution of the methods (some with tests and some without). The goal is to validate that the rules of the story are being satisfied.</p>
+</blockquote>
+<p>Reference</p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/38145106/what-is-major-difference-between-integration-testing-and-behavioral-testing-bdd">What is Major Difference between Integration Testing and Behavioral Testing BDD</a></li>
+<li><a href="https://docs.microsoft.com/en-us/archive/msdn-magazine/2013/july/data-points-behavior-driven-design-with-specflow">Data Points - Behavior-Driven Design with SpecFlow</a></li>
+<li><a href="https://docs.microsoft.com/en-us/archive/msdn-magazine/2010/december/msdn-magazine-bdd-primer-behavior-driven-development-with-specflow-and-watin">BDD Primer - Behavior-Driven Development with SpecFlow and WatiN</a></li>
+</ol>
+<h2 id="tfd">TFD</h2>
+<h2 id="tdd">TDD</h2>
+<h2 id="questions">Questions</h2>
+<h3 id="unit-test-api">Unit Test API</h3>
+<blockquote>
+<p>You should either create Mocks or use Isolation Framework in order to simulate API environment. Unit tests should not depend on resources like internet connections, network, endpoints etc.</p>
+</blockquote>
+<blockquote>
+<p>The job of a remote API client is to issue certain calls - no more, no less. Therefore, its test should verify that it issues those calls - no more, no less.</p>
+</blockquote>
+<p>也就是说我们在对各种与API相关的Code做Unit Test时，不需要去测试我们的请求是否能获取正确的结果。非要测试，也只是去测试我们的请求有没有真正的去发送。这也意味着，API相关的Unit Test需要对Code进行做出更准确的分割，保证Coverage然后对分割后与请求无关的Code 进行Unit Test。</p>
+<h3 id="non-mockable">Non-Mockable</h3>
+<ul>
+<li>
+<p>Internal/Protected/Private 对于此类Classes/Methods，首先肯定要避免在UT会直接需要mock。期次可以考虑Use Fake Method in Unit Test to implement the non-mockable Object.</p>
+<ul>
+<li><a href="https://jesseduffield.com/Testing-Private-Methods/">私有方法要写单元测试吗？</a></li>
+</ul>
+</li>
+<li>
+<p>Can&rsquo;t Be Mock Type, Like cant be overrided, not interface, not virtual type. 遇到此类可以考虑将此类进行封装，这种情况往往是第三方或者.NET本身限制，存在共性，可以把这些不能mock的Classes/Methods封装成新的Interface保证可以被mock。</p>
+</li>
+</ul>
+<p>Reference</p>
+<ol>
+<li>
+<p><a href="https://stackoverflow.com/questions/3129821/how-to-unit-test-your-api">How to unit test your API?</a></p>
+</li>
+<li>
+<p><a href="https://softwareengineering.stackexchange.com/questions/252748/is-it-actually-worth-unit-testing-an-api-client">Is it actually worth unit-testing an API client?</a></p>
+</li>
+</ol>
+<h2 id="refactor">Refactor</h2>
+<p>如何有效地refactor？</p>
+<h1 id="issue">Issue</h1>
+<h2 id="how-to-test-a-recursive-function">How to test a recursive Function</h2>
+<p>recursion 在所难免，那应该如何优雅的测试递归呢？</p>
+<p>Stack Overflow推荐方式是设置待测试interface所对应class的method为vitrul，然后增加fake class。为fake class增加额外的property，该property用来记录待测试method的执行次数。然后再UT中不再对原interface测试，而是对fake class测试。</p>
+<p>但是如果是直接对class进行测试，那为何不直接在待测试的class中增加property用来记录method执行次数。然后UT直接测试class。新加的property虽然在生产环境中也会进行计算，但是不会通过interface暴露给接口使用方，自增的property对性能影响也不大。</p>
+<p>Reference</p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/32660959/test-a-recursive-function-with-moq">Test a recursive Function with Moq</a></li>
+</ol>
+<h2 id="how-to-test-for-order-of-calls">How to test for order of calls</h2>
+<blockquote>
+<blockquote>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">mock.InSequence(mockSequence).Setup(x =&gt; x.A()).Returns(<span style="color:#cd5555">&#34;A&#34;</span>);
+mock.InSequence(mockSequence).Setup(x =&gt; x.B()).Returns(<span style="color:#cd5555">&#34;B&#34;</span>);
+</code></pre></div></blockquote>
+<p>It might not be very obvious, but what this code <em>really</em> does is to set up two conditional setups, such that the second setup will not be matched by any invocations until after <code>A</code> has been matched.</p>
+<p>You can think of it this way:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#00688b;font-weight:bold">int</span> step = <span style="color:#b452cd">1</span>;
+mock.When(() =&gt; step == <span style="color:#b452cd">1</span>).Setup(x =&gt; x.A()).Returns(<span style="color:#cd5555">&#34;A&#34;</span>).Callback(() =&gt; step++);
+mock.When(() =&gt; step == <span style="color:#b452cd">2</span>).Setup(x =&gt; x.B()).Returns(<span style="color:#cd5555">&#34;B&#34;</span>).Callback(() =&gt; step++);
+</code></pre></div></blockquote>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2020-12-27</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/computing-science/domain-driven-design/">
+			Next<br>Domain-driven design
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/computing-science/idempotent/">
+			Previous<br>Idempotent
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

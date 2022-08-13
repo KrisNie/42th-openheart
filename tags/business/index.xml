@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Business on 42th openheart</title>
+    <link>https://www.openheart.icu/tags/business/</link>
+    <description>Recent content in Business on 42th openheart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
+    <lastBuildDate>Fri, 29 Jul 2022 23:29:58 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/business/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure &amp; Price &amp; Quote</title>
+      <link>https://www.openheart.icu/business/configure-price-quote/</link>
+      <pubDate>Fri, 29 Jul 2022 23:29:58 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/business/configure-price-quote/</guid>
+      <description>Configure &amp;amp; Price &amp;amp; Quote Visual configuration Leverage a powerful, dynamic, and visually interactive experience to bring product options and final product configurations to life.
+ 3D interactive model creation 2D parametric drawing generation 3D CAD assemblies and shop drawings creation Augmented reality experience  Innovative quoting and ordering Capture interest and knowledge about your highly variable products or systems once, and then share with customers and selling channels to make the selection and purchase process intuitive and error-free.</description>
+    </item>
+    
+    <item>
+      <title>Customer Orders</title>
+      <link>https://www.openheart.icu/business/customer-orders/</link>
+      <pubDate>Fri, 29 Jul 2022 23:29:58 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/business/customer-orders/</guid>
+      <description>What&amp;rsquo;s the CO A customer order is a formal order from the customer which provides details of the amount and due date for a customer’s requirement of products.
+It is a written document specifying the orders made by the customer. It states the amount of money to be paid, the due date on which the money can be expected, and the quantity of the product delivered.
+(It is mainly used in business to help customers get their products.</description>
+    </item>
+    
+    <item>
+      <title>Inventory</title>
+      <link>https://www.openheart.icu/business/inventory/</link>
+      <pubDate>Fri, 29 Jul 2022 23:29:58 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/business/inventory/</guid>
+      <description>Counting Physical Inventory Counting
+Cycle Counting
+ Container Containerization: 集装箱化
+ Transfer order processing The following table displays the steps for using a transfer order.
+The following graphic displays the transfer inventory flow.
+ </description>
+    </item>
+    
+    <item>
+      <title>Job Orders</title>
+      <link>https://www.openheart.icu/business/job-orders/</link>
+      <pubDate>Fri, 29 Jul 2022 23:29:58 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/business/job-orders/</guid>
+      <description>Backflushing Automatic deduction of material or components Backflushing is a method of updating inventory records at a defined point in the manufacturing process, called the deduct point.
+倒冲就是为了在保证生产的效率，对于生产过程中价值较低、使用频繁、数量较大的物料（比如螺丝、螺帽各种油、漆液体类原材料）根据BOM（物料清单）中设置的标准消耗量在对生产订单报工时自动进行物料消耗的一种方法，比如生产一个产品A，需要使用2个原材料A1，在对产品A报工时产生为100，系统就自动消耗200个A1到生产订单，至于系统标准消耗的量和实际消耗量之间的差异，则通过实际盘点实现，通常需要设置车间线边库专门核算和管理倒冲的物料，也便于在月底对线边库盘点差异，差异的处理则根据实际情况分析是否需调整标准消耗量还是要加强车间材料管理降低损耗率等。
+ To use backflushing, you must set up the backflushing location on the Inventory Parameters form. You cannot perform backflushing operations on items from consignment warehouse locations. If you have material in a vendor consignment warehouse when you perform a backflush, the system will check that warehouse for the required material.</description>
+    </item>
+    
+    <item>
+      <title>Material Planning</title>
+      <link>https://www.openheart.icu/business/material-planning/</link>
+      <pubDate>Fri, 29 Jul 2022 23:29:58 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/business/material-planning/</guid>
+      <description>Bill of Materials  Low Level Code The low-level code represents the lowest level of the item in any current, job, or production schedule bill of material (BOM). A low-level code of 0 indicates that the item is an end item (finished good) and is not a subcomponent of another item. A low-level code greater than zero indicates that the item is a component of another item. The system supports up to 20 levels of low-level coding.</description>
+    </item>
+    
+    <item>
+      <title>Material Requirements Planning</title>
+      <link>https://www.openheart.icu/business/material-requirements-planning/</link>
+      <pubDate>Fri, 29 Jul 2022 23:29:58 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/business/material-requirements-planning/</guid>
+      <description>Prior to MRP  Reorder point (ROP) Reorder-quantity (ROQ) type methods like EOQ (economic order quantity)  MRP Material Requirements Planning was computerized by the aero engine makers Rolls Royce and General Electric in the early 1950s but not commercialized by them. It was then &amp;lsquo;reinvented&amp;rsquo; to supply the Polaris program and then, in 1964, as a response to the Toyota Manufacturing Program(TPS), Joseph Orlicky developed material requirements planning (MRP). The first company to use MRP was Black &amp;amp; Decker in 1964, with Dick Alban as project leader.</description>
+    </item>
+    
+    <item>
+      <title>Purchase Orders</title>
+      <link>https://www.openheart.icu/business/purchase-orders/</link>
+      <pubDate>Fri, 29 Jul 2022 23:29:58 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/business/purchase-orders/</guid>
+      <description>What&amp;rsquo;s the PO While purchase order refers to an outgoing order for the purchase of goods or services, the term sales order is used in the instance that the order is received on the sales side (incoming).</description>
+    </item>
+    
+  </channel>
+</rss>

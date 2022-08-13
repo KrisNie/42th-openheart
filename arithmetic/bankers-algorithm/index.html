@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html><head>
+<title>Banker&#39;s algorithm</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="银行家算法">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Banker&#39;s algorithm" />
+<meta property="og:description" content="银行家算法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/arithmetic/bankers-algorithm/" />
+<meta property="article:published_time" content="2022-07-30T17:15:26+00:00" />
+<meta property="article:modified_time" content="2022-07-30T17:15:26+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Banker&#39;s algorithm"/>
+<meta name="twitter:description" content="银行家算法"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#data-structure" onclick="onNavClick(`#data-structure-nav`)" id="data-structure-nav">
+									Data Structure
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#bankers-algorithm" onclick="onNavClick(`#bankers-algorithm-nav`)" id="bankers-algorithm-nav">
+									Banker’s algorithm
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#security-algorithm" onclick="onNavClick(`#security-algorithm-nav`)" id="security-algorithm-nav">
+									Security algorithm
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#data-structure" onclick="onNavClick(`#data-structure-nav`)" id="data-structure-nav">
+									Data Structure
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#bankers-algorithm" onclick="onNavClick(`#bankers-algorithm-nav`)" id="bankers-algorithm-nav">
+									Banker’s algorithm
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#security-algorithm" onclick="onNavClick(`#security-algorithm-nav`)" id="security-algorithm-nav">
+									Security algorithm
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Banker&#39;s algorithm
+                    
+                    <div class="post-subtitle">
+                        银行家算法
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2022-07-30 17:15
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/arithmetic">Arithmetic</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            3 min
+                            
+                            42 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="data-structure">Data Structure</h1>
+<ul>
+<li>可利用资源向量 Available ：含有 m 个元素的数组，其中每个元素代表一类可用的资源数目。Available[J] = K 表示系统中现有 R~j~ 类资源 K 个。</li>
+<li>最大需求矩阵 Max ： n * m 矩阵，定义系统中 n 个进程中的每个进程对 m 类资源的最大需求。一行代表一个进程，一列代表一类资源。 Max[i,j] = K 表示进程 i 需要 R~j~ 类资源的最大数目是 K 。</li>
+<li>分配矩阵 Allocation ： n * m 矩阵，定义系统中每类资源当前已分配给每个进程的资源数。 Allocation[i,j] = K 表示进程 i 当前已分得 R~j~ 类资源的数目为 K 。</li>
+<li>需求矩阵 Need ： n * m 矩阵，表示每个进程接下来最多还需要多少资源。 Need[i,j] = K 表示进程 i 还需要 R~j~ 类资源的数目为K。</li>
+</ul>
+<p>上述三个矩阵存在关系： Need = Max - Allocation</p>
+<h1 id="bankers-algorithm">Banker&rsquo;s algorithm</h1>
+<p>设 Request~i~ 是进程 P~i~ 的请求向量， Request[j] = K 表示进程 P~i~ 需要 j 类资源 K 个。当 P~i~ 发出资源请求后，系统按下述步骤进行检查：</p>
+<ol>
+<li>
+<p>若 Request~i~[j] &lt;= Need[i,j]，则转向步骤2；否则认为出错，因为它所需要的资源已经超过了它所宣布的最大值。</p>
+</li>
+<li>
+<p>若 Request~i~[j] &lt;= Available[j]，则转向步骤3；否则，表示尚无足够资源，P~i~ 须等待。</p>
+</li>
+<li>
+<p>若系统试探把资源分配给进程 P~i~ ，并修改下main数据结构中的数值：</p>
+<p>Available = Available - Request~i~;</p>
+<p>Allocation[i,j] = Allocation[i,j] + Request~i~[j];</p>
+<p>Need[i,j] = Need[i,j] - Request~i~[j];</p>
+</li>
+<li>
+<p>系统执行安全性算法，检查此次资源分配后，系统是否出于安全状态。若安全，才正式将资源分配给进程 P~i~，以完成本次分配；否则，讲本次的试探分配作废，回复原来的资源分配状态，让 P~i~等待。</p>
+</li>
+</ol>
+<h1 id="security-algorithm">Security algorithm</h1>
+<p>设置工作向量 Work，有 m 个元素，表示系统中的剩余可用资源数目。在执行安全性算法开始时， Work = Available 。</p>
+<ol>
+<li>初始时安全序列为空。</li>
+<li>从 Need 矩阵中找出符合下面条件的行：改行对应的进程不在安全序列中，而且该行小于等于 Work 向量，找到后，把对应的进程加入安全序列；若找不到，则执行步骤4。</li>
+<li>进程 P~i~ 进入安全序列后，可顺利执行，直到完成，并释放分配给它的资源，因此应执行 Work = Work + Allocation[i]，其中 Allocation[i] 表示进程 P~i~代表的在 Allocation 矩阵中对应的行，返回步骤2。</li>
+<li>若此时安全序列中已有所有进程， 则系统处于安全状态，否则系统处于不安全状态。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/KrisNie/ImageHosting/main/Blog/image-20220730172750647.png" alt="image-20220730172750647"></p>
+<h1 id="reference">Reference</h1>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Banker%27s_algorithm">https://en.wikipedia.org/wiki/Banker%27s_algorithm</a></li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2022-07-30</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/business/configure-price-quote/">
+			Previous<br>Configure &amp; Price &amp; Quote
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

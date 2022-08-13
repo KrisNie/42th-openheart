@@ -1,0 +1,2720 @@
+<!DOCTYPE html>
+<html><head>
+<title>Database</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Database">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Database" />
+<meta property="og:description" content="Database" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/computing-science/database/" />
+<meta property="article:published_time" content="2021-10-17T11:35:34+00:00" />
+<meta property="article:modified_time" content="2021-10-17T11:35:34+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Database"/>
+<meta name="twitter:description" content="Database"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#common" onclick="onNavClick(`#common-nav`)" id="common-nav">
+									Common
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#orms" onclick="onNavClick(`#orms-nav`)" id="orms-nav">
+									ORMs
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#acidhttpsenwikipediaorgwikiacid" onclick="onNavClick(`#acidhttpsenwikipediaorgwikiacid-nav`)" id="acidhttpsenwikipediaorgwikiacid-nav">
+									ACID
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#transactions" onclick="onNavClick(`#transactions-nav`)" id="transactions-nav">
+									Transactions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#n1-problem" onclick="onNavClick(`#n1-problem-nav`)" id="n1-problem-nav">
+									N&#43;1 Problem
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#database-normalization" onclick="onNavClick(`#database-normalization-nav`)" id="database-normalization-nav">
+									Database Normalization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#indexes-and-how-they-work" onclick="onNavClick(`#indexes-and-how-they-work-nav`)" id="indexes-and-how-they-work-nav">
+									Indexes and how they work
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-the-difference-between-varchar-and-nvarcharhttpsstackoverflowcomquestions144283what-is-the-difference-between-varchar-and-nvarchar" onclick="onNavClick(`#what-is-the-difference-between-varchar-and-nvarcharhttpsstackoverflowcomquestions144283what-is-the-difference-between-varchar-and-nvarchar-nav`)" id="what-is-the-difference-between-varchar-and-nvarcharhttpsstackoverflowcomquestions144283what-is-the-difference-between-varchar-and-nvarchar-nav">
+									What is the difference between varchar and nvarchar?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#mysql" onclick="onNavClick(`#mysql-nav`)" id="mysql-nav">
+									MySQL
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#postgresql" onclick="onNavClick(`#postgresql-nav`)" id="postgresql-nav">
+									PostgreSQL
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#issues" onclick="onNavClick(`#issues-nav`)" id="issues-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#postgres-full-text-search-a-search-engine-in-a-databasehttpsblogcrunchydatacomblogpostgres-full-text-search-a-search-engine-in-a-database" onclick="onNavClick(`#postgres-full-text-search-a-search-engine-in-a-databasehttpsblogcrunchydatacomblogpostgres-full-text-search-a-search-engine-in-a-database-nav`)" id="postgres-full-text-search-a-search-engine-in-a-databasehttpsblogcrunchydatacomblogpostgres-full-text-search-a-search-engine-in-a-database-nav">
+									Postgres Full-Text Search: A Search Engine in a Database
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#oracle" onclick="onNavClick(`#oracle-nav`)" id="oracle-nav">
+									Oracle
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#optimize" onclick="onNavClick(`#optimize-nav`)" id="optimize-nav">
+									Optimize
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%b4%a2%e5%bc%95%e5%a4%b1%e6%95%88" onclick="onNavClick(`#索引失效-nav`)" id="索引失效-nav">
+									索引失效
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%88%86%e5%ba%93-%e5%88%86%e8%a1%a8-%e5%88%86%e5%8c%ba" onclick="onNavClick(`#分库-分表-分区-nav`)" id="分库-分表-分区-nav">
+									分库 分表 分区
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%a7%86%e5%9b%be%e4%bc%98%e5%8c%96" onclick="onNavClick(`#视图优化-nav`)" id="视图优化-nav">
+									视图优化
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e8%a1%a8%e5%a2%9e%e5%8a%a0%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#基表增加索引-nav`)" id="基表增加索引-nav">
+									基表增加索引
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%87%8d%e6%96%b0%e8%bf%9b%e8%a1%8c%e8%a1%a8%e5%88%86%e6%9e%90" onclick="onNavClick(`#重新进行表分析-nav`)" id="重新进行表分析-nav">
+									重新进行表分析
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issues-1" onclick="onNavClick(`#issues-1-nav`)" id="issues-1-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#ora-01779-%e6%97%a0%e6%b3%95%e4%bf%ae%e6%94%b9%e4%b8%8e%e9%9d%9e%e9%94%ae%e5%80%bc%e4%bf%9d%e5%ad%98%e8%a1%a8%e5%af%b9%e5%ba%94%e7%9a%84%e5%88%97" onclick="onNavClick(`#ora-01779-无法修改与非键值保存表对应的列-nav`)" id="ora-01779-无法修改与非键值保存表对应的列-nav">
+									ORA-01779: 无法修改与非键值保存表对应的列
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e8%a7%86%e5%9b%be" onclick="onNavClick(`#视图-nav`)" id="视图-nav">
+									视图
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8a%a5%e9%94%99%e5%8e%9f%e7%90%86" onclick="onNavClick(`#报错原理-nav`)" id="报错原理-nav">
+									报错原理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#sqlserver" onclick="onNavClick(`#sqlserver-nav`)" id="sqlserver-nav">
+									SQLServer
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#sqlcmd" onclick="onNavClick(`#sqlcmd-nav`)" id="sqlcmd-nav">
+									SQLCMD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#is-null" onclick="onNavClick(`#is-null-nav`)" id="is-null-nav">
+									IS NULL
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issues-2" onclick="onNavClick(`#issues-2-nav`)" id="issues-2-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity" onclick="onNavClick(`#cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity-nav`)" id="cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity-nav">
+									Cannot insert explicit value for identity column in table ‘table’ when IDENTITY_INSERT is set to OFF
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing" onclick="onNavClick(`#sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing-nav`)" id="sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing-nav">
+									SQL-Server: The backup set holds a backup of a database other than the existing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server" onclick="onNavClick(`#what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server-nav`)" id="what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server-nav">
+									What is the T-SQL syntax to connect to another SQL Server?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server" onclick="onNavClick(`#enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server-nav`)" id="enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server-nav">
+									Enable ‘xp_cmdshell’ SQL Server
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#use-xp_cmdshell-to-print-variables-into-a-file" onclick="onNavClick(`#use-xp_cmdshell-to-print-variables-into-a-file-nav`)" id="use-xp_cmdshell-to-print-variables-into-a-file-nav">
+									Use ‘xp_cmdshell’ to print variables into a file
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#offset-fetch--top" onclick="onNavClick(`#offset-fetch--top-nav`)" id="offset-fetch--top-nav">
+									Offset-Fetch &amp; TOP
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cannot-login-with-sa" onclick="onNavClick(`#cannot-login-with-sa-nav`)" id="cannot-login-with-sa-nav">
+									Cannot login with sa.
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#the-difference-between-where-and-having" onclick="onNavClick(`#the-difference-between-where-and-having-nav`)" id="the-difference-between-where-and-having-nav">
+									The difference between WHERE and HAVING
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#where" onclick="onNavClick(`#where-nav`)" id="where-nav">
+									WHERE
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#match" onclick="onNavClick(`#match-nav`)" id="match-nav">
+									MATCH
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#having" onclick="onNavClick(`#having-nav`)" id="having-nav">
+									HAVING
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#the-differences-with-group-by" onclick="onNavClick(`#the-differences-with-group-by-nav`)" id="the-differences-with-group-by-nav">
+									The differences with GROUP BY
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#query-performance" onclick="onNavClick(`#query-performance-nav`)" id="query-performance-nav">
+									Query performance
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#delete-from-from" onclick="onNavClick(`#delete-from-from-nav`)" id="delete-from-from-nav">
+									Delete from from
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-code-3417httpsstackoverflowcomquestions17273021windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error" onclick="onNavClick(`#windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-code-3417httpsstackoverflowcomquestions17273021windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-nav`)" id="windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-code-3417httpsstackoverflowcomquestions17273021windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-nav">
+									Windows could not start the SQL Server (MSSQLSERVER) on Local Computer… (error code 3417)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#redis" onclick="onNavClick(`#redis-nav`)" id="redis-nav">
+									Redis
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#common" onclick="onNavClick(`#common-nav`)" id="common-nav">
+									Common
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#orms" onclick="onNavClick(`#orms-nav`)" id="orms-nav">
+									ORMs
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#acidhttpsenwikipediaorgwikiacid" onclick="onNavClick(`#acidhttpsenwikipediaorgwikiacid-nav`)" id="acidhttpsenwikipediaorgwikiacid-nav">
+									ACID
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#transactions" onclick="onNavClick(`#transactions-nav`)" id="transactions-nav">
+									Transactions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#n1-problem" onclick="onNavClick(`#n1-problem-nav`)" id="n1-problem-nav">
+									N&#43;1 Problem
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#database-normalization" onclick="onNavClick(`#database-normalization-nav`)" id="database-normalization-nav">
+									Database Normalization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#indexes-and-how-they-work" onclick="onNavClick(`#indexes-and-how-they-work-nav`)" id="indexes-and-how-they-work-nav">
+									Indexes and how they work
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-the-difference-between-varchar-and-nvarcharhttpsstackoverflowcomquestions144283what-is-the-difference-between-varchar-and-nvarchar" onclick="onNavClick(`#what-is-the-difference-between-varchar-and-nvarcharhttpsstackoverflowcomquestions144283what-is-the-difference-between-varchar-and-nvarchar-nav`)" id="what-is-the-difference-between-varchar-and-nvarcharhttpsstackoverflowcomquestions144283what-is-the-difference-between-varchar-and-nvarchar-nav">
+									What is the difference between varchar and nvarchar?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#mysql" onclick="onNavClick(`#mysql-nav`)" id="mysql-nav">
+									MySQL
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#postgresql" onclick="onNavClick(`#postgresql-nav`)" id="postgresql-nav">
+									PostgreSQL
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#issues" onclick="onNavClick(`#issues-nav`)" id="issues-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#postgres-full-text-search-a-search-engine-in-a-databasehttpsblogcrunchydatacomblogpostgres-full-text-search-a-search-engine-in-a-database" onclick="onNavClick(`#postgres-full-text-search-a-search-engine-in-a-databasehttpsblogcrunchydatacomblogpostgres-full-text-search-a-search-engine-in-a-database-nav`)" id="postgres-full-text-search-a-search-engine-in-a-databasehttpsblogcrunchydatacomblogpostgres-full-text-search-a-search-engine-in-a-database-nav">
+									Postgres Full-Text Search: A Search Engine in a Database
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#oracle" onclick="onNavClick(`#oracle-nav`)" id="oracle-nav">
+									Oracle
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#optimize" onclick="onNavClick(`#optimize-nav`)" id="optimize-nav">
+									Optimize
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%b4%a2%e5%bc%95%e5%a4%b1%e6%95%88" onclick="onNavClick(`#索引失效-nav`)" id="索引失效-nav">
+									索引失效
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%88%86%e5%ba%93-%e5%88%86%e8%a1%a8-%e5%88%86%e5%8c%ba" onclick="onNavClick(`#分库-分表-分区-nav`)" id="分库-分表-分区-nav">
+									分库 分表 分区
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%a7%86%e5%9b%be%e4%bc%98%e5%8c%96" onclick="onNavClick(`#视图优化-nav`)" id="视图优化-nav">
+									视图优化
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e8%a1%a8%e5%a2%9e%e5%8a%a0%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#基表增加索引-nav`)" id="基表增加索引-nav">
+									基表增加索引
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%87%8d%e6%96%b0%e8%bf%9b%e8%a1%8c%e8%a1%a8%e5%88%86%e6%9e%90" onclick="onNavClick(`#重新进行表分析-nav`)" id="重新进行表分析-nav">
+									重新进行表分析
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issues-1" onclick="onNavClick(`#issues-1-nav`)" id="issues-1-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#ora-01779-%e6%97%a0%e6%b3%95%e4%bf%ae%e6%94%b9%e4%b8%8e%e9%9d%9e%e9%94%ae%e5%80%bc%e4%bf%9d%e5%ad%98%e8%a1%a8%e5%af%b9%e5%ba%94%e7%9a%84%e5%88%97" onclick="onNavClick(`#ora-01779-无法修改与非键值保存表对应的列-nav`)" id="ora-01779-无法修改与非键值保存表对应的列-nav">
+									ORA-01779: 无法修改与非键值保存表对应的列
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e8%a7%86%e5%9b%be" onclick="onNavClick(`#视图-nav`)" id="视图-nav">
+									视图
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8a%a5%e9%94%99%e5%8e%9f%e7%90%86" onclick="onNavClick(`#报错原理-nav`)" id="报错原理-nav">
+									报错原理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#sqlserver" onclick="onNavClick(`#sqlserver-nav`)" id="sqlserver-nav">
+									SQLServer
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#sqlcmd" onclick="onNavClick(`#sqlcmd-nav`)" id="sqlcmd-nav">
+									SQLCMD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#is-null" onclick="onNavClick(`#is-null-nav`)" id="is-null-nav">
+									IS NULL
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issues-2" onclick="onNavClick(`#issues-2-nav`)" id="issues-2-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity" onclick="onNavClick(`#cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity-nav`)" id="cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity-nav">
+									Cannot insert explicit value for identity column in table ‘table’ when IDENTITY_INSERT is set to OFF
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing" onclick="onNavClick(`#sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing-nav`)" id="sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing-nav">
+									SQL-Server: The backup set holds a backup of a database other than the existing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server" onclick="onNavClick(`#what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server-nav`)" id="what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server-nav">
+									What is the T-SQL syntax to connect to another SQL Server?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server" onclick="onNavClick(`#enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server-nav`)" id="enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server-nav">
+									Enable ‘xp_cmdshell’ SQL Server
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#use-xp_cmdshell-to-print-variables-into-a-file" onclick="onNavClick(`#use-xp_cmdshell-to-print-variables-into-a-file-nav`)" id="use-xp_cmdshell-to-print-variables-into-a-file-nav">
+									Use ‘xp_cmdshell’ to print variables into a file
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#offset-fetch--top" onclick="onNavClick(`#offset-fetch--top-nav`)" id="offset-fetch--top-nav">
+									Offset-Fetch &amp; TOP
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cannot-login-with-sa" onclick="onNavClick(`#cannot-login-with-sa-nav`)" id="cannot-login-with-sa-nav">
+									Cannot login with sa.
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#the-difference-between-where-and-having" onclick="onNavClick(`#the-difference-between-where-and-having-nav`)" id="the-difference-between-where-and-having-nav">
+									The difference between WHERE and HAVING
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#where" onclick="onNavClick(`#where-nav`)" id="where-nav">
+									WHERE
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#match" onclick="onNavClick(`#match-nav`)" id="match-nav">
+									MATCH
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#having" onclick="onNavClick(`#having-nav`)" id="having-nav">
+									HAVING
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#the-differences-with-group-by" onclick="onNavClick(`#the-differences-with-group-by-nav`)" id="the-differences-with-group-by-nav">
+									The differences with GROUP BY
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#query-performance" onclick="onNavClick(`#query-performance-nav`)" id="query-performance-nav">
+									Query performance
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#delete-from-from" onclick="onNavClick(`#delete-from-from-nav`)" id="delete-from-from-nav">
+									Delete from from
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-code-3417httpsstackoverflowcomquestions17273021windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error" onclick="onNavClick(`#windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-code-3417httpsstackoverflowcomquestions17273021windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-nav`)" id="windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-code-3417httpsstackoverflowcomquestions17273021windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-nav">
+									Windows could not start the SQL Server (MSSQLSERVER) on Local Computer… (error code 3417)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#redis" onclick="onNavClick(`#redis-nav`)" id="redis-nav">
+									Redis
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Database
+                    
+                    <div class="post-subtitle">
+                        Database
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-10-17 11:35
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/operation">Operation</a>
+                                &nbsp;
+                            
+                                <a href="/tags/sql">SQL</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            19 min
+                            
+                            18 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="common">Common</h1>
+<h2 id="orms">ORMs</h2>
+<hr>
+<h2 id="acidhttpsenwikipediaorgwikiacid"><a href="https://en.wikipedia.org/wiki/ACID">ACID</a></h2>
+<p>Atomicity 原子性
+Transactions are often composed of multiple statements. Atomicity guarantees that each transaction is treated as a single &ldquo;unit&rdquo;, which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. A guarantee of atomicity prevents updates to the database occurring only partially, which can cause greater problems than rejecting the whole series outright. As a consequence, the transaction cannot be observed to be in progress by another database client. At one moment in time, it has not yet happened, and at the next it has already occurred in whole (or nothing happened if the transaction was cancelled in progress).</p>
+<p>An example of an atomic transaction is a monetary transfer from bank account A to account B. It consists of two operations, withdrawing the money from account A and saving it to account B. Performing these operations in an atomic transaction ensures that the database remains in a consistent state, that is, money is neither debited nor credited if either of those two operations fail.</p>
+<p>Consistency (Correctness) 一致性
+<strong>Consistency ensures that a transaction can only bring the database from one valid state to another</strong>, maintaining database invariants: any data written to the database must be valid according to all defined rules, including constraints, cascades, triggers, and any combination thereof. This prevents database corruption by an illegal transaction, but does not guarantee that a transaction is correct. Referential integrity guarantees the primary key – foreign key relationship.</p>
+<p>Isolation 隔离性
+Transactions are often executed concurrently (e.g., multiple transactions reading and writing to a table at the same time). Isolation ensures that concurrent execution of transactions leaves the database in the same state that would have been obtained if the transactions were executed sequentially. Isolation is the main goal of concurrency control; depending on the method used, the effects of an incomplete transaction might not even be visible to other transactions.</p>
+<p>Durability 永久性
+Durability guarantees that once a transaction has been committed, it will remain committed even in the case of a system failure (e.g., power outage or crash). This usually means that completed transactions (or their effects) are recorded in non-volatile memory.</p>
+<hr>
+<h2 id="transactions">Transactions</h2>
+<hr>
+<h2 id="n1-problem">N+1 Problem</h2>
+<p><a href="https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping">What is the &ldquo;N+1 selects problem&rdquo; in ORM (Object-Relational Mapping)?</a></p>
+<p>N+1是指，在两个表关联查询中，容易出现先查询主表，然后根据主表多次查询从表的情况。数据库执行语句此时为1+N。</p>
+<p>ORM可以使用相关method实现join。比如，在EF中可以使用<code>Include</code>方法查询related数据。</p>
+<hr>
+<h2 id="database-normalization">Database Normalization</h2>
+<hr>
+<h2 id="indexes-and-how-they-work">Indexes and how they work</h2>
+<p>You can find relevant content in dotnet interview page.</p>
+<h2 id="what-is-the-difference-between-varchar-and-nvarcharhttpsstackoverflowcomquestions144283what-is-the-difference-between-varchar-and-nvarchar"><a href="https://stackoverflow.com/questions/144283/what-is-the-difference-between-varchar-and-nvarchar">What is the difference between varchar and nvarchar?</a></h2>
+<blockquote>
+<p>An <code>nvarchar</code> column can store any Unicode data. A <code>varchar</code> column is restricted to an 8-bit codepage. Some people think that <code>varchar</code> should be used because it takes up less space. I believe this is not the correct answer. Codepage incompatabilities are a pain, and Unicode is the cure for codepage problems. With cheap disk and memory nowadays, there is really no reason to waste time mucking around with code pages anymore.</p>
+<p>All modern operating systems and development platforms use Unicode internally. By using <code>nvarchar</code> rather than <code>varchar</code>, you can avoid doing encoding conversions every time you read from or write to the database. Conversions take time, and are prone to errors. And recovery from conversion errors is a non-trivial problem.</p>
+<p>If you are interfacing with an application that uses only ASCII, I would still recommend using Unicode in the database. The OS and database collation algorithms will work better with Unicode. Unicode avoids conversion problems when interfacing with <em>other</em> systems. And you will be preparing for the future. And you can always validate that your data is restricted to 7-bit ASCII for whatever legacy system you&rsquo;re having to maintain, even while enjoying some of the benefits of full Unicode storage.</p>
+</blockquote>
+<hr>
+<h1 id="mysql">MySQL</h1>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lsb_release -a						<span style="color:#228b22"># 查看操作系统版本</span>
+<span style="color:#228b22"># LSB Version:	:core-4.1-amd64:core-4.1-noarch</span>
+<span style="color:#228b22"># Distributor ID:	CentOS</span>
+<span style="color:#228b22"># Description:	CentOS Linux release 7.8.2003 (Core)</span>
+<span style="color:#228b22"># Release:	7.8.2003</span>
+<span style="color:#228b22"># Codename:	Core</span>
+
+cat /etc/redhat-release		<span style="color:#228b22"># 查看Linux内核版本</span>
+<span style="color:#228b22"># CentOS Linux release 7.8.2003 (Core)</span>
+
+getconf LONG_BIT					<span style="color:#228b22"># 查看系统位数</span>
+<span style="color:#228b22"># 64</span>
+
+yum -y update							<span style="color:#228b22"># 更新 yum</span>
+rpm -qa | grep mysql			<span style="color:#228b22"># 查看是否安装过MySQL</span>
+
+<span style="color:#228b22"># 此处版本为在CentOS7下安装MySQL8.0</span>
+wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+
+<span style="color:#228b22"># 安装</span>
+sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
+
+<span style="color:#228b22"># 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80）</span>
+<span style="color:#228b22">#mysql80-community-release-el7-3.noarch</span>
+
+<span style="color:#228b22"># 禁用 mysql8.0:</span>
+sudo yum-config-manager --disable mysql80-community
+
+<span style="color:#228b22"># 启用 mysql8.0</span>
+sudo yum-config-manager --enable mysql80-community
+
+<span style="color:#228b22"># 校验当前启用(enable)的 mysql 版本是否为 5.7:</span>
+yum repolist enabled | grep mysql
+<span style="color:#228b22"># mysql-connectors-community/x86_64 MySQL Connectors Community                 165</span>
+<span style="color:#228b22"># mysql-tools-community/x86_64      MySQL Tools Community                      115</span>
+<span style="color:#228b22"># mysql80-community/x86_64          MySQL 8.0 Community Server                 193</span>
+
+<span style="color:#228b22"># 安装MySQL</span>
+sudo yum install -y mysql-community-server
+
+<span style="color:#228b22"># 启动 mysql 服务</span>
+sudo service mysqld start
+
+<span style="color:#228b22"># 查看 mysql 服务状态</span>
+sudo service mysqld status
+
+<span style="color:#228b22"># 查看初始密码</span>
+sudo grep <span style="color:#cd5555">&#39;temporary password&#39;</span> /var/log/mysqld.log
+
+<span style="color:#228b22"># 使用初始密码进行登录</span>
+mysql -u root -p
+
+<span style="color:#228b22"># 登录成功之后设置新密码</span>
+ALTER USER <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;localhost&#39;</span> IDENTIFIED BY <span style="color:#cd5555">&#39;123456&#39;</span>;
+
+<span style="color:#228b22"># 创建用户</span>
+<span style="color:#228b22"># 允许本地 IP（localhost, 127.0.0.1）访问：</span>
+create user <span style="color:#cd5555">&#39;test&#39;</span>@<span style="color:#cd5555">&#39;localhost&#39;</span> identified by <span style="color:#cd5555">&#39;123456&#39;</span>;
+<span style="color:#228b22"># 允许任何 IP 访问：</span>
+create user <span style="color:#cd5555">&#39;test&#39;</span>@<span style="color:#cd5555">&#39;%&#39;</span> identified by <span style="color:#cd5555">&#39;123456&#39;</span>;
+<span style="color:#228b22"># 刷新权限</span>
+FLUSH PRIVILEGES;
+
+<span style="color:#228b22"># 8.0版本后</span>
+<span style="color:#228b22"># 创建账户</span>
+create user <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;172.16.10.203&#39;</span> identified by  <span style="color:#cd5555">&#39;password&#39;</span>
+<span style="color:#228b22"># 赋予权限，with grant option这个选项表示该用户可以将自己拥有的权限授权给别人</span>
+grant all privileges on *.* to <span style="color:#cd5555">&#39;root&#39;</span>@<span style="color:#cd5555">&#39;172.16.10.203&#39;</span> with grant option;
+<span style="color:#228b22"># 改密码&amp;授权超用户，flush privileges 命令本质上的作用是将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里</span>
+flush privileges;
+
+<span style="color:#228b22"># 修改host 将kris用作登录账户名</span>
+update mysql.user <span style="color:#658b00">set</span> <span style="color:#00688b">host</span>=<span style="color:#cd5555">&#39;%&#39;</span> where <span style="color:#00688b">User</span>=<span style="color:#cd5555">&#34;Kris&#34;</span>
+</code></pre></div><hr>
+<h1 id="postgresql">PostgreSQL</h1>
+<h2 id="issues">Issues</h2>
+<h3 id="postgres-full-text-search-a-search-engine-in-a-databasehttpsblogcrunchydatacomblogpostgres-full-text-search-a-search-engine-in-a-database"><a href="https://blog.crunchydata.com/blog/postgres-full-text-search-a-search-engine-in-a-database">Postgres Full-Text Search: A Search Engine in a Database</a></h3>
+<p>Reference</p>
+<ol>
+<li><a href="https://www.postgresql.org/docs/">https://www.postgresql.org/docs/</a></li>
+</ol>
+<hr>
+<h1 id="oracle">Oracle</h1>
+<p><strong>删除操作前一定要先执行一遍查询！</strong></p>
+<h2 id="optimize">Optimize</h2>
+<h3 id="索引失效">索引失效</h3>
+<p>SQL在<code>WHERE</code>条件里面使用了<code>IN</code>导致有一个关联表的索引失效，Oracle版本为11g</p>
+<p>条件中有or，要想使用or，又想让索引生效，只能将or条件中的每个列都加上索引</p>
+<p>like查询是以%开头</p>
+<p>如果列类型是字符串，那一定要在条件中将数据使用引号引用起来,否则不使用索引</p>
+<h3 id="分库-分表-分区">分库 分表 分区</h3>
+<h3 id="视图优化">视图优化</h3>
+<h4 id="基表增加索引">基表增加索引</h4>
+<p>对基表中，视图查询SQL的<code>WHERE</code>条件中用到的字段增加索引</p>
+<h4 id="重新进行表分析">重新进行表分析</h4>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">-- 视图查询慢
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">analyze</span> <span style="color:#8b008b;font-weight:bold">table</span> <span style="color:#8b008b;font-weight:bold">table_name</span> <span style="color:#8b008b;font-weight:bold">delete</span> <span style="color:#8b008b;font-weight:bold">statistics</span>;
+    <span style="color:#8b008b;font-weight:bold">analyze</span> <span style="color:#8b008b;font-weight:bold">table</span> <span style="color:#8b008b;font-weight:bold">table_name</span> compute <span style="color:#8b008b;font-weight:bold">statistics</span>;
+
+<span style="color:#228b22">-- 在当前用户下执行
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">select</span> <span style="color:#cd5555">&#39;analyze table &#39;</span>||<span style="color:#8b008b;font-weight:bold">table_name</span>||<span style="color:#cd5555">&#39; compute statistics;&#39;</span> <span style="color:#8b008b;font-weight:bold">from</span> user_tables <span style="color:#8b008b;font-weight:bold">where</span> <span style="color:#8b008b;font-weight:bold">table_name</span> <span style="color:#8b008b;font-weight:bold">IN</span> (<span style="color:#cd5555">&#39;tablename&#39;</span>);   
+
+<span style="color:#228b22">-- 得到如下语句，将这些语句整体执行一遍
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">analyze</span> <span style="color:#8b008b;font-weight:bold">table</span> PRODUCT_REF_LIST_NESTEDTAB compute <span style="color:#8b008b;font-weight:bold">statistics</span>;
+    <span style="color:#228b22">-- ....
+</span><span style="color:#228b22"></span>
+<span style="color:#228b22">-- 查看统计信息
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">select</span> <span style="color:#8b008b;font-weight:bold">table_name</span>,num_rows <span style="color:#8b008b;font-weight:bold">from</span> user_tables;
+</code></pre></div><p>分析的结果被Oracle用于基于成本的优化生成更好的查询计划。</p>
+<p>遇到当前表的查询或其他性能不好时，就可以对相应的表进行一次分析。</p>
+<ul>
+<li>如果你的表经常由几千万变成几百万，又变成几千万那么需要制定分析计划定期表分析，同时可以一并分析索引，计算索引中数据的分布情况，这样CBO会选择更加准确的执行计划。</li>
+<li>如果表结构变化了也要做下，也就是经常对表做dml就需要分析，现在推荐使用dbms_stats包。</li>
+</ul>
+<hr>
+<h2 id="issues-1">Issues</h2>
+<h3 id="ora-01779-无法修改与非键值保存表对应的列">ORA-01779: 无法修改与非键值保存表对应的列</h3>
+<p>这里要搞清楚三个概念：视图、联接视图、可更新的联接视图</p>
+<h4 id="视图">视图</h4>
+<p><strong>视图</strong>可以分为视图对象和内嵌视图两种。</p>
+<p>视图对象（View Object）</p>
+<p>数据库里的<strong>视图对象</strong>跟一张表或索引等一样，是数据库对象中的一种，它其实是将基于表中原始数据的查询给虚拟了一层之后，提供给外部查询的一种对象。
+其本质是并不保存查询的实际结果，而只是将查询语句保存在数据库中，当用户查询某张视图的时候，就会找到并执行这个视图的语句。
+而<strong>联接视图</strong>其实就是在一个视图中将两个表建立关联就是了。</p>
+<p>内嵌视图（Inline View）</p>
+<p>在SQL语句中，很多地方都可以写嵌套的语句，比如说，FROM后面可以套括号嵌套其他的语句，WHERE、SELECT、UPDATE、INSERT、DELETE后面都是可以写的。只是写的位置不同，执行的方式还有处理时的一些限制不同，这些SQL中嵌套的SQL被称为<strong>子查询（Subquery）</strong> 。子查询可以分为如下几类：</p>
+<ul>
+<li>内嵌视图：位置位于FROM语句中，也相当于一个预处理结果集的概念</li>
+<li>标量子查询（Scalar Subquery）：只返还一个结果值的子查询。位于SELECT语句的子查询只能返还一个值，所以必然是标量子查询，WHERE语句里也会出现这样的子查询</li>
+<li>关联子查询：将查询的结果传递给子查询作为参数的使用的形式</li>
+<li>一般子查询：除了那些特殊形式的子查询以外的一般用法</li>
+</ul>
+<p>可更新联接视图（Updatable Join View ）</p>
+<p>将一个联接视图（包括视图对象和内嵌视图）放到UPADTE语句中这样的语法形式。</p>
+<p>同样的道理，如果只是用一个表来作为视图的基表，则可以对该视图直接进行<code>DELETE</code>和<code>UPDATE</code>，但无法直接执行<code>INSERT</code>，因为该视图没有默认值的非空列(<code>brand_id</code>)。该视图称为<strong>可更新视图</strong></p>
+<h4 id="报错原理">报错原理</h4>
+<p>Oracle的键值保存表</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#8b008b;font-weight:bold">SELECT</span> *
+<span style="color:#8b008b;font-weight:bold">FROM</span> DBA_UPDATABLE_COLUMNS
+<span style="color:#8b008b;font-weight:bold">WHERE</span> <span style="color:#8b008b;font-weight:bold">OWNER</span> = <span style="color:#cd5555">&#39;SCOTT&#39;</span> <span style="color:#8b008b;font-weight:bold">AND</span> <span style="color:#8b008b;font-weight:bold">TABLE_NAME</span> = <span style="color:#cd5555">&#39;EMP_DEPT_V&#39;</span>;
+<span style="color:#8b008b;font-weight:bold">OWNER</span> | <span style="color:#8b008b;font-weight:bold">TABLE_NAME</span> | <span style="color:#8b008b;font-weight:bold">COLUMN_NAME</span> | UPDATABLE | INSERTABLE | DELETABLE
+SCOTT   EMP_DEPT_V     EMPNO            <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+SCOTT   EMP_DEPT_V     ENAME            <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+SCOTT   EMP_DEPT_V     SAL              <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+SCOTT   EMP_DEPT_V     DEPTNO           <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+SCOTT   EMP_DEPT_V     DNAME            <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+</code></pre></div><p>视图<code>EMP_DEPT_V</code>里的字段都无法变更。</p>
+<p>如果能保证DEPT_T表里的数据是唯一的就能够更新。也就是说在DEPT_T表上加<code>主键约束</code>或<code>唯一约束</code></p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">ALTER</span> <span style="color:#8b008b;font-weight:bold">TABLE</span> DEPT_T
+     <span style="color:#8b008b;font-weight:bold">ADD</span> <span style="color:#8b008b;font-weight:bold">CONSTRAINT</span> PK_DEPT_T <span style="color:#8b008b;font-weight:bold">PRIMARY</span> <span style="color:#8b008b;font-weight:bold">KEY</span> (DEPTNO);
+</code></pre></div><p>再看一下之前的视图：</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">SELECT</span> *
+<span style="color:#8b008b;font-weight:bold">FROM</span> DBA_UPDATABLE_COLUMNS
+<span style="color:#8b008b;font-weight:bold">WHERE</span> <span style="color:#8b008b;font-weight:bold">OWNER</span> = <span style="color:#cd5555">&#39;SCOTT&#39;</span> <span style="color:#8b008b;font-weight:bold">AND</span> <span style="color:#8b008b;font-weight:bold">TABLE_NAME</span> = <span style="color:#cd5555">&#39;EMP_DEPT_V&#39;</span>;
+
+<span style="color:#8b008b;font-weight:bold">OWNER</span> | <span style="color:#8b008b;font-weight:bold">TABLE_NAME</span> | <span style="color:#8b008b;font-weight:bold">COLUMN_NAME</span> | UPDATABLE | INSERTABLE | DELETABLE
+SCOTT   EMP_DEPT_V     EMPNO            YES         YES         YES
+SCOTT   EMP_DEPT_V     ENAME            YES         YES         YES
+SCOTT   EMP_DEPT_V     SAL              YES         YES         YES
+SCOTT   EMP_DEPT_V     DEPTNO           YES         YES         YES
+SCOTT   EMP_DEPT_V     DNAME             <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>          <span style="color:#8b008b;font-weight:bold">NO</span>
+</code></pre></div><p>这个时候就可以看到，视图中<code>EMP_DEPT_V</code>表中原来的字段都是可以更新的了。</p>
+<p>在对联接视图进行变更的时候，必须保证修改后的值是唯一的，并且这个事实要让数据库知道，而告知数据库的方法是建立主键约束或唯一约束。</p>
+<p>并不是所有的表都可以随意建这些约束，有什么方法能够不添加约束也能变更？</p>
+<ul>
+<li>添加<code>/*+ BYPASS_UJVC */</code> 提示，让ORACLE跳过检查（11g R2之后无效，不建议使用）</li>
+<li>改写<code>UPDATE</code>语句，通过其他方式判断后处理</li>
+<li>将<code>UPDATE</code>改成<code>MERGE</code>语句</li>
+</ul>
+<p>Reference</p>
+<ul>
+<li>Oracle：</li>
+</ul>
+<blockquote>
+<p>The concept of a <strong>key-preserved table</strong> is fundamental to understanding the restrictions on <strong>modifying join views</strong>. A table is key-preserved if every key of the table can also be a key of the result of the join. So, a key-preserved table has its keys preserved through a join.</p>
+</blockquote>
+<blockquote>
+<p>An <strong>updatable join view</strong> (also referred to as a <strong>modifiable join view</strong>) is a view that contains multiple tables in the top-level FROM clause of the SELECT statement, and is not restricted by the WITH READ ONLY clause.</p>
+</blockquote>
+<ul>
+<li><a href="https://www.jianshu.com/p/60a56760b19f">https://www.jianshu.com/p/60a56760b19f</a></li>
+<li><a href="https://www.yiibai.com/oracle/oracle-updatable-view.html">https://www.yiibai.com/oracle/oracle-updatable-view.html</a></li>
+</ul>
+<hr>
+<h1 id="sqlserver">SQLServer</h1>
+<h3 id="sqlcmd">SQLCMD</h3>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqlcmd -S localhost -d CSI10 -q <span style="color:#cd5555">&#34;SELECT * FROM SITE&#34;</span>
+sqlcmd -S localhost -d CSI10 -Q <span style="color:#cd5555">&#34;SELECT * FROM SITE&#34;</span>
+sqlcmd -S localhost -U SA -Q <span style="color:#cd5555">&#39;select @@VERSION&#39;</span>
+sqlcmd -S localhost
+</code></pre></div><h3 id="is-null">IS NULL</h3>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">ISNULL</span>(<span style="color:#8b008b;font-weight:bold">column</span>, <span style="color:#cd5555">&#39;&#39;</span>) &lt;&gt; <span style="color:#cd5555">&#39;&#39;</span>
+</code></pre></div><hr>
+<h2 id="issues-2">Issues</h2>
+<h3 id="cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity_insert-is-set-to-offhttpsstackoverflowcomquestions1334012cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity"><a href="https://stackoverflow.com/questions/1334012/cannot-insert-explicit-value-for-identity-column-in-table-table-when-identity">Cannot insert explicit value for identity column in table &lsquo;table&rsquo; when IDENTITY_INSERT is set to OFF</a></h3>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">SET</span> IDENTITY_INSERT Table1 <span style="color:#8b008b;font-weight:bold">ON</span>
+
+<span style="color:#228b22">--Do INSERT
+</span><span style="color:#228b22"></span>
+<span style="color:#8b008b;font-weight:bold">SET</span> IDENTITY_INSERT Table1 <span style="color:#8b008b;font-weight:bold">OFF</span> 
+</code></pre></div><hr>
+<h3 id="sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existinghttpsstackoverflowcomquestions10204480sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing"><a href="https://stackoverflow.com/questions/10204480/sql-server-the-backup-set-holds-a-backup-of-a-database-other-than-the-existing">SQL-Server: The backup set holds a backup of a database other than the existing</a></h3>
+<blockquote>
+<ul>
+<li>Don&rsquo;t create an empty database and restore the <code>.bak</code> file on to it.</li>
+<li>Use <strong>&lsquo;Restore Database&rsquo;</strong> option accessible by right clicking the &ldquo;Databases&rdquo; branch of the SQL Server Management Studio and provide the database name while providing the source to restore.</li>
+<li>Also change the file names at &ldquo;Files&rdquo; if the other database still exists. Otherwise you get &ldquo;The file &lsquo;&hellip;&rsquo; cannot be overwritten. It is being used by database &lsquo;yourFirstDb&rsquo;&rdquo;.</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="what-is-the-t-sql-syntax-to-connect-to-another-sql-serverhttpsstackoverflowcomquestions125457what-is-the-t-sql-syntax-to-connect-to-another-sql-server"><a href="https://stackoverflow.com/questions/125457/what-is-the-t-sql-syntax-to-connect-to-another-sql-server">What is the T-SQL syntax to connect to another SQL Server?</a></h3>
+<p><a href="https://docs.microsoft.com/en-us/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor?view=sql-server-ver15">Edit SQLCMD Scripts with Query Editor</a></p>
+<p>In SQL Server Management Studio, turn on SQLCMD mode from the Query menu. Then at the top of your script, type in the command below</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">:<span style="color:#8b008b;font-weight:bold">connect</span> USDB -U sa -P mypassword
+USE [<span style="color:#8b008b;font-weight:bold">database</span>]
+<span style="color:#8b008b;font-weight:bold">GO</span>
+
+<span style="color:#8b008b;font-weight:bold">select</span> * <span style="color:#8b008b;font-weight:bold">from</span> site;
+
+:<span style="color:#8b008b;font-weight:bold">CONNECT</span> CNDB
+USE [<span style="color:#8b008b;font-weight:bold">database</span>]
+<span style="color:#8b008b;font-weight:bold">GO</span>
+
+<span style="color:#8b008b;font-weight:bold">select</span> * <span style="color:#8b008b;font-weight:bold">from</span> site;
+</code></pre></div><p><strong>NOTE</strong>: IntelliSense is turned off in the Database Engine Query Editor when the SQLCMD mode is set on.</p>
+<hr>
+<h3 id="enable-xp_cmdshell-sql-serverhttpsstackoverflowcomquestions5131491enable-xp-cmdshell-sql-server"><a href="https://stackoverflow.com/questions/5131491/enable-xp-cmdshell-sql-server">Enable &lsquo;xp_cmdshell&rsquo; SQL Server</a></h3>
+<p><a href="https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/xp-cmdshell-server-configuration-option?redirectedfrom=MSDN&amp;view=sql-server-ver15">If you need to enable <strong>xp_cmdshell</strong>, you can use Policy-Based Managementhttps://docs.microsoft.com/en-us/sql/relational-databases/policy-based-management/administer-servers-by-using-policy-based-management?view=sql-server-ver15 or run the <strong>sp_configure</strong> system stored procedure as shown in the following code example:</a></p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">-- To allow advanced options to be changed.  
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">EXECUTE</span> sp_configure <span style="color:#cd5555">&#39;show advanced options&#39;</span>, <span style="color:#b452cd">1</span>;  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+<span style="color:#228b22">-- To update the currently configured value for advanced options.  
+</span><span style="color:#228b22"></span>RECONFIGURE;  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+<span style="color:#228b22">-- To enable the feature.  
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">EXECUTE</span> sp_configure <span style="color:#cd5555">&#39;xp_cmdshell&#39;</span>, <span style="color:#b452cd">1</span>;  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+<span style="color:#228b22">-- To update the currently configured value for this feature.  
+</span><span style="color:#228b22"></span>RECONFIGURE;  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+</code></pre></div><hr>
+<h3 id="use-xp_cmdshell-to-print-variables-into-a-file">Use &lsquo;xp_cmdshell&rsquo; to print variables into a file</h3>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">-- print variables 
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">DECLARE</span> @cmdtxt <span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">4000</span>);
+<span style="color:#8b008b;font-weight:bold">select</span> @cmdtxt = <span style="color:#cd5555">&#39;echo &#39;</span> +<span style="color:#cd5555">&#39;@TtPmtpckCurrCode&#39;</span>+ <span style="color:#8b008b;font-weight:bold">CAST</span>(@TtPmtpckCurrCode <span style="color:#8b008b;font-weight:bold">AS</span> <span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">2</span>))  + <span style="color:#cd5555">&#39;@CurrparmsCurrCode&#39;</span>+<span style="color:#8b008b;font-weight:bold">CAST</span>(@CurrparmsCurrCode <span style="color:#8b008b;font-weight:bold">AS</span> <span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">2</span>)) +<span style="color:#cd5555">&#39; &gt;&gt; C:\Development\SubFolder\outPut.txt&#39;</span>;
+<span style="color:#8b008b;font-weight:bold">exec</span> master..xp_cmdshell @cmdtxt
+
+<span style="color:#228b22">-- use FOR XML to print table-valued variable
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">declare</span> @rates <span style="color:#8b008b;font-weight:bold">table</span> (
+  curr_code CurrCodeType
+, site_ref SiteType
+, exch_rate ExchRateType
+, rate_is_divisor ListYesNoType
+, <span style="color:#8b008b;font-weight:bold">primary</span> <span style="color:#8b008b;font-weight:bold">key</span> (curr_code, site_ref)
+)
+
+<span style="color:#8b008b;font-weight:bold">insert</span> <span style="color:#8b008b;font-weight:bold">into</span> @rates (curr_code, site_ref)
+<span style="color:#8b008b;font-weight:bold">select</span> <span style="color:#8b008b;font-weight:bold">distinct</span> curr_code, site
+<span style="color:#8b008b;font-weight:bold">from</span> tt_pmtpck
+<span style="color:#8b008b;font-weight:bold">where</span> tt_pmtpck.ProcessId = @PProcessId
+<span style="color:#8b008b;font-weight:bold">and</span> (tt_pmtpck.exch_rate <span style="color:#8b008b;font-weight:bold">is</span> <span style="color:#8b008b;font-weight:bold">null</span>
+  <span style="color:#8b008b;font-weight:bold">or</span> tt_pmtpck.dom_amt_applied <span style="color:#8b008b;font-weight:bold">is</span> <span style="color:#8b008b;font-weight:bold">null</span>
+  <span style="color:#8b008b;font-weight:bold">or</span> tt_pmtpck.dom_disc_amt <span style="color:#8b008b;font-weight:bold">is</span> <span style="color:#8b008b;font-weight:bold">null</span>)
+  
+<span style="color:#8b008b;font-weight:bold">DECLARE</span> @xmltmp xml = (<span style="color:#8b008b;font-weight:bold">SELECT</span> rat.curr_code,rat.site_ref,rat.exch_rate,rat.rate_is_divisor <span style="color:#8b008b;font-weight:bold">FROM</span> @rates <span style="color:#8b008b;font-weight:bold">AS</span> rat <span style="color:#8b008b;font-weight:bold">FOR</span> XML AUTO,ELEMENTS XSINIL);
+<span style="color:#8b008b;font-weight:bold">SELECT</span> @cmdtxt = <span style="color:#cd5555">&#39;echo &#39;</span> +<span style="color:#cd5555">&#39;@rates &#34;&#39;</span>+ <span style="color:#8b008b;font-weight:bold">CONVERT</span>(<span style="color:#658b00">VARCHAR</span>(<span style="color:#8b008b;font-weight:bold">max</span>),@xmltmp) + <span style="color:#cd5555">&#39;&#34; &gt;&gt; C:\Development\SubFolder\outPut.txt&#39;</span>;
+<span style="color:#8b008b;font-weight:bold">exec</span> master..xp_cmdshell @cmdtxt;
+</code></pre></div><hr>
+<h3 id="offset-fetch--top">Offset-Fetch &amp; TOP</h3>
+<p><code>offset</code>并不是万能的，在偏移量越来越大的情况性能表现会越来越差。解决方案为固定偏移量，分页之后用上次标签的行当做起点，使用类似<code>TOP</code>方式再进行查询。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">SELECT</span> * <span style="color:#8b008b;font-weight:bold">FROM</span> demo_table <span style="color:#8b008b;font-weight:bold">WHERE</span> demo_column1=<span style="color:#cd5555">&#39;1&#39;</span> <span style="color:#8b008b;font-weight:bold">AND</span> ((<span style="color:#8b008b;font-weight:bold">ISNULL</span>(demo_column2, <span style="color:#cd5555">&#39;&#39;</span>) &gt; <span style="color:#cd5555">&#39;2&#39;</span>) <span style="color:#8b008b;font-weight:bold">OR</span> (<span style="color:#8b008b;font-weight:bold">ISNULL</span>(demo_column2, <span style="color:#cd5555">&#39;&#39;</span>) = <span style="color:#cd5555">&#39;2&#39;</span> <span style="color:#8b008b;font-weight:bold">AND</span> <span style="color:#8b008b;font-weight:bold">ISNULL</span>(demo_column3, <span style="color:#cd5555">&#39;&#39;</span>) &gt; <span style="color:#cd5555">&#39;75&#39;</span>)) <span style="color:#8b008b;font-weight:bold">ORDER</span> <span style="color:#8b008b;font-weight:bold">BY</span> demo_column1,demo_column2 <span style="color:#8b008b;font-weight:bold">OFFSET</span> <span style="color:#b452cd">49999</span> <span style="color:#8b008b;font-weight:bold">ROWS</span> <span style="color:#8b008b;font-weight:bold">FETCH</span> <span style="color:#8b008b;font-weight:bold">NEXT</span> <span style="color:#b452cd">1</span> <span style="color:#8b008b;font-weight:bold">ROWS</span> <span style="color:#8b008b;font-weight:bold">ONLY</span>
+</code></pre></div><p>Reference:</p>
+<ol>
+<li><a href="https://www.microsoftpressstore.com/articles/article.aspx?p=2314819">T-SQL Querying: TOP and OFFSET-FETCH</a></li>
+<li><a href="https://dba.stackexchange.com/questions/220326/reduce-query-time-for-higher-offset-in-sql-server">Reduce query time for higher offset in sql server</a></li>
+</ol>
+<hr>
+<h3 id="cannot-login-with-sa">Cannot login with sa.</h3>
+<ol>
+<li>安装mss过程中如果没有设置sa和sa的密码，那可能<code>server authorization</code>会被default成<code>Windows Authorization mode</code>，sa 登录需要<code>SQL Server and Windows Authorization mode</code></li>
+<li>sa 需要enable login</li>
+</ol>
+<hr>
+<h3 id="the-difference-between-where-and-having">The difference between WHERE and HAVING</h3>
+<h4 id="where">WHERE</h4>
+<p>In a single-table query, <code>WHERE</code> comes in at the beginning of a query execution. We used to think that it determines which rows will be returned by the query, but this is not accurate:</p>
+<p><strong><code>WHERE</code> determines which rows will be processed by the query.</strong></p>
+<p>The difference becomes clear when we use a <code>GROUP BY</code> clause.</p>
+<h4 id="match">MATCH</h4>
+<h4 id="having">HAVING</h4>
+<p>HAVING comes in at the end of a query execution.</p>
+<p><strong>After all rows have been processed, <code>HAVING</code> determines which of rows will be sent to the client.</strong></p>
+<blockquote>
+<p>The <strong>text</strong>, <strong>image</strong>, and <strong>ntext</strong> data types cannot be used in a HAVING clause.</p>
+</blockquote>
+<h4 id="the-differences-with-group-by">The differences with GROUP BY</h4>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">SELECT</span> site_ref, <span style="color:#8b008b;font-weight:bold">COUNT</span>(*) <span style="color:#8b008b;font-weight:bold">AS</span> num
+<span style="color:#8b008b;font-weight:bold">FROM</span> item_mst
+<span style="color:#8b008b;font-weight:bold">WHERE</span> u_m = <span style="color:#cd5555">&#39;BX&#39;</span>
+<span style="color:#8b008b;font-weight:bold">GROUP</span> <span style="color:#8b008b;font-weight:bold">BY</span> site_ref
+<span style="color:#8b008b;font-weight:bold">HAVING</span> <span style="color:#8b008b;font-weight:bold">COUNT</span>(*) &lt; <span style="color:#b452cd">10</span>;
+</code></pre></div><h4 id="query-performance">Query performance</h4>
+<blockquote>
+<p>In that case we’re telling the database to read all rows, and only return the ones that match the condition. This is unnecessarily slow.</p>
+</blockquote>
+<p>Reference:</p>
+<ol>
+<li><a href="https://sql-bits.com/the-difference-between-where-and-having/">https://sql-bits.com/the-difference-between-where-and-having/</a></li>
+<li><a href="https://docs.microsoft.com/en-us/sql/t-sql/queries/select-having-transact-sql?view=sql-server-ver15">HAVING (Transact-SQL) - SQL Server | Microsoft Docs</a></li>
+<li><a href="https://docs.microsoft.com/en-us/sql/t-sql/queries/match-sql-graph?view=sql-server-ver15">MATCH (SQL Graph) - SQL Server | Microsoft Docs</a></li>
+<li><a href="https://docs.microsoft.com/en-us/sql/t-sql/queries/where-transact-sql?view=sql-server-ver15">WHERE (Transact-SQL) - SQL Server | Microsoft Docs</a></li>
+</ol>
+<hr>
+<h3 id="delete-from-from">Delete from from</h3>
+<blockquote>
+<p>FROM <em>table_source</em>
+Specifies an additional FROM clause. This Transact-SQL extension to DELETE allows specifying data from &lt;table_source&gt; and deleting the corresponding rows from the table in the first FROM clause.</p>
+<p>This extension, specifying a join, can be used instead of a subquery in the WHERE clause to identify rows to be removed.</p>
+</blockquote>
+<blockquote>
+<p>The following examples show two ways to delete rows in one table based on data in another table. In both examples, rows from the <code>SalesPersonQuotaHistory</code> table in the AdventureWorks2012 database are deleted based on the year-to-date sales stored in the <code>SalesPerson</code> table. The first <code>DELETE</code> statement shows the ISO-compatible subquery solution, and the second <code>DELETE</code> statement shows the Transact-SQL FROM extension to join the two tables.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">-- SQL-2003 Standard subquery  
+</span><span style="color:#228b22"></span>  
+<span style="color:#8b008b;font-weight:bold">DELETE</span> <span style="color:#8b008b;font-weight:bold">FROM</span> Sales.SalesPersonQuotaHistory   
+<span style="color:#8b008b;font-weight:bold">WHERE</span> BusinessEntityID <span style="color:#8b008b;font-weight:bold">IN</span>   
+    (<span style="color:#8b008b;font-weight:bold">SELECT</span> BusinessEntityID   
+     <span style="color:#8b008b;font-weight:bold">FROM</span> Sales.SalesPerson   
+     <span style="color:#8b008b;font-weight:bold">WHERE</span> SalesYTD &gt; <span style="color:#b452cd">2500000</span>.<span style="color:#b452cd">00</span>);  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+</code></pre></div><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">-- Transact-SQL extension  
+</span><span style="color:#228b22"></span>  
+<span style="color:#8b008b;font-weight:bold">DELETE</span> <span style="color:#8b008b;font-weight:bold">FROM</span> Sales.SalesPersonQuotaHistory   
+<span style="color:#8b008b;font-weight:bold">FROM</span> Sales.SalesPersonQuotaHistory <span style="color:#8b008b;font-weight:bold">AS</span> spqh  
+<span style="color:#8b008b;font-weight:bold">INNER</span> <span style="color:#8b008b;font-weight:bold">JOIN</span> Sales.SalesPerson <span style="color:#8b008b;font-weight:bold">AS</span> sp  
+<span style="color:#8b008b;font-weight:bold">ON</span> spqh.BusinessEntityID = sp.BusinessEntityID  
+<span style="color:#8b008b;font-weight:bold">WHERE</span> sp.SalesYTD &gt; <span style="color:#b452cd">2500000</span>.<span style="color:#b452cd">00</span>;  
+<span style="color:#8b008b;font-weight:bold">GO</span>  
+</code></pre></div><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">-- No need to mention target table more than once.  
+</span><span style="color:#228b22"></span>  
+<span style="color:#8b008b;font-weight:bold">DELETE</span> spqh  
+  <span style="color:#8b008b;font-weight:bold">FROM</span>  
+        Sales.SalesPersonQuotaHistory <span style="color:#8b008b;font-weight:bold">AS</span> spqh  
+    <span style="color:#8b008b;font-weight:bold">INNER</span> <span style="color:#8b008b;font-weight:bold">JOIN</span> Sales.SalesPerson <span style="color:#8b008b;font-weight:bold">AS</span> sp  
+        <span style="color:#8b008b;font-weight:bold">ON</span> spqh.BusinessEntityID = sp.BusinessEntityID  
+  <span style="color:#8b008b;font-weight:bold">WHERE</span>  sp.SalesYTD &gt; <span style="color:#b452cd">2500000</span>.<span style="color:#b452cd">00</span>;  
+</code></pre></div></blockquote>
+<p>Reference:</p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/56453021/sql-server-delete-from-table-from-table">SQL Server : DELETE FROM table FROM table</a></li>
+<li><a href="https://docs.microsoft.com/en-us/sql/t-sql/statements/delete-transact-sql?view=sql-server-2017#d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table">DELETE (Transact-SQL) - SQL Server | Microsoft Docs</a></li>
+</ol>
+<hr>
+<h3 id="windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error-code-3417httpsstackoverflowcomquestions17273021windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error"><a href="https://stackoverflow.com/questions/17273021/windows-could-not-start-the-sql-server-mssqlserver-on-local-computer-error">Windows could not start the SQL Server (MSSQLSERVER) on Local Computer&hellip; (error code 3417)</a></h3>
+<p>Run this command after opening cmd as administrator</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">net <span style="color:#8b008b;font-weight:bold">start</span> mssqlserver /T902
+</code></pre></div><p>This command is called trace flag 902. It is used to bypass script upgrade mode. Every time when you try to start your sql service it also looks for script upgrades. and when the script upgrade fail your service unable to start. So, Whenever we have such upgrade script failure issue and SQL is not getting started, we need to use trace flag 902 to start SQL.</p>
+<hr>
+<h1 id="redis">Redis</h1>
+<p>MongoDB vs Redis</p>
+<p>MongoDB is a document-oriented, disk-based database optimized for operational simplicity, schema-free design and very large data volumes. <em>Redis is an in-memory, persistent data structure store that enables developers to perform common operations with minimal complexity and maximum performance.</em> MongoDB and Redis are both NoSQL languages, but because they’re built for different purposes, Redis’ enhanced capabilities significantly augment MongoDB’s capabilities.</p>
+<hr>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-10-17</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/computing-science/csapp/">
+			Next<br>CSAPP
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/arithmetic/backtracking/">
+			Previous<br>Backtracking
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

@@ -6,200 +6,1689 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sun, 17 Oct 2021 11:35:34 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Jul 2022 17:15:26 +0000</lastBuildDate>
     
         <atom:link href="https://www.openheart.icu/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>下一站</title>
-        <link>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</link>
-        <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+        <title>Computer network</title>
+        <link>https://www.openheart.icu/computing-science/computer-network/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ -&lt;p&gt;不是茶山刘，是草山岭东。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;故事&#34;&gt;故事&lt;/h1&gt;
-&lt;p&gt;如果要我编个故事，我必然会这么写：&lt;/p&gt;
-&lt;p&gt;“我是刘波，百度上‘刘波’的搜索结果有一千二百八十万个，我可能不是你们认识的那个。我和其他刘波不同，我爸不是木匠，我不是山大毕业，我更不是主播也不配钥匙……我和其他刘波一样，我也喜欢一个张苇，也时常在熙攘的人群中当众孤独，我也不知道我到底想要什么……”这是人物；&lt;/p&gt;
-&lt;p&gt;“公交车顺着经十路往西，我被挤在公交车后门脸快贴到玻璃，路上拥挤的人群在整齐的标语和不整齐的广告中显得更加拥挤。我服了，于是我把自己放到了乐安县与油城的中间偏南，这里足够空旷。这里秋天的下午和别地儿一样慵懒，风挺大，云彩也不小；风吹云彩，太阳时隐时现，像极了梦里的张苇，所以我爱死了下午的太阳……”这是环境；&lt;/p&gt;
-&lt;p&gt;“我要如何体面地date张苇，她会如何体面地拒绝我，我该如何体面地认同她的拒绝，我一问三不知……”这是故事情节。&lt;/p&gt;
-&lt;p&gt;要是假期再充裕点，我可以是欧亨利，也可以是莫泊桑。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;国庆&#34;&gt;国庆&lt;/h1&gt;
+        <guid>https://www.openheart.icu/computing-science/computer-network/</guid>
+        <description>42th openheart https://www.openheart.icu/computing-science/computer-network/ -&lt;h1 id=&#34;computer-network&#34;&gt;Computer Network&lt;/h1&gt;
+&lt;p&gt;Base on &amp;ldquo;&lt;em&gt;Computer Networking - A Top Down Approach, 7th&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;h1 id=&#34;issues&#34;&gt;Issues&lt;/h1&gt;
+&lt;h2 id=&#34;网络的七层架构&#34;&gt;网络的七层架构&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;物理层&lt;/li&gt;
+&lt;li&gt;数据链路层&lt;/li&gt;
+&lt;li&gt;网络层&lt;/li&gt;
+&lt;li&gt;传输层&lt;/li&gt;
+&lt;li&gt;会话层&lt;/li&gt;
+&lt;li&gt;表示层&lt;/li&gt;
+&lt;li&gt;应用层&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;tcpip-原理&#34;&gt;TCP/IP 原理&lt;/h2&gt;
+&lt;h2 id=&#34;tcp-三次握手四次挥手&#34;&gt;TCP 三次握手/四次挥手&lt;/h2&gt;
+&lt;h3 id=&#34;三次握手&#34;&gt;三次握手&lt;/h3&gt;
+&lt;p&gt;TCP 在传输之前会进行三次沟通，一般称为“三次握手”。&lt;/p&gt;
+&lt;h3 id=&#34;四次挥手&#34;&gt;四次挥手&lt;/h3&gt;
+&lt;p&gt;TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。&lt;/p&gt;
+&lt;h2 id=&#34;private-ip-address-vs-public-ip-address--public-ip-port&#34;&gt;Private IP Address vs Public IP Address &amp;amp; Public IP Port&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在狼牙区 在飞虎路 那李杀神 王诛魔 还有刘斩仙 断罪小学 再度聚首 齐心协力 只因为 一个大魔头&lt;/p&gt;
+&lt;p&gt;0-1023是公认端口号，即已经公认定义或为将要公认定义的软件保留的，而1024-65535是并没有公共定义的端口号，用户可以自己定义这些端口的作用。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;大魔头是谁就不用问了吧，军人伟大，异地恋伟大，大魔头只配挨打，懂吧！&lt;/p&gt;
-&lt;p&gt;国庆加班开始前一晚上喜迎院士孙，我们几个在天没黑前走进饭店速战速决，然后各就各位。在开始电子竞技前，异口同声骂我朋张“被小孙洋的小香批迷住了双眼”（我除外，我不会骂人）。&lt;/p&gt;
-&lt;p&gt;国庆加班结束前一晚上喜迎农民许，我们几个在政法学院旁边，感受到康康他们租的宾馆里浓厚的学习氛围后，在他们宾馆楼下的豪华网咖开始电子竞技，按习俗我朋张必须挨骂，“他就是个豁批犯”（不是我说的，我不会骂人）。&lt;/p&gt;
-&lt;p&gt;其实，院士孙和农民许并不配骂我朋张，因为他俩来泉城完全是路过，他俩的目的地一个是一国两制的小香批一个是油城的小香批，真是五十步笑百步。&lt;/p&gt;
-&lt;p&gt;世界与我都不完美，万物都有美中不足之处（我除外，我只有不足）。国庆长假也不例外，除了长假不够长这一明显不足外还有两个。&lt;/p&gt;
-&lt;p&gt;一是由于各种原因没吃上公司旁边刚开业生意兴隆的蟹黄生煎。&lt;/p&gt;
-&lt;p&gt;二是没在6号晚上及时亲手接过院士孙给我代的大地，然后大声让他滚出我屋。&lt;/p&gt;
-&lt;p&gt;但总体上来说国庆长假还算圆满。这是我在泉城过得第一个国庆，康康说泉城比琴岛宜居，其实我也感觉到了，冬暖夏凉怕是琴岛唯一的优势了。&lt;/p&gt;
-&lt;p&gt;还有一个有关国庆的就是，这几天除了路灯挂上了五星红旗，路边还多了挺多标语……&lt;/p&gt;
-&lt;p&gt;“灭霸扫痞”与“除暴安良”不停地交配、繁殖，与“鼓励二胎”一起平分了原本属于“计划生育好”的天下。虽然比“年产一零七零万吨钢铁”要些许得靠谱，但还是难免让多愁善感的人叹一口气，“时过境迁，物是人非”（我爱国爱党，没有任何暗示，如果有，也与本人无关）。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;活着&#34;&gt;活着&lt;/h1&gt;
-&lt;p&gt;其实，除了国庆也没啥可以说道的。&lt;/p&gt;
-&lt;p&gt;自打中秋节画了个月亮里的张苇，就没动过画笔，樱花牌的固体颜料都裂开了，像极了樱花。&lt;/p&gt;
-&lt;p&gt;这半年我也还是没做到不以物喜不以己悲。&lt;/p&gt;
-&lt;p&gt;拿到大地后特意发了个微博。我没做到不以物喜，我对不起范仲淹。&lt;/p&gt;
-&lt;p&gt;在一群贪财好色的人中，有的成了冯唐、王小波、王朔、渡边淳一、杜拉斯、萨德、劳伦斯、三岛由纪夫……有的成了空山基、金政基、席勒、莫迪里阿尼、前田俊夫、佐伯俊男……（还有很多我就不列举了，不然就成当众开车了）却只有我成了刘波。我没做到不以己悲，我对不起范仲淹。&lt;/p&gt;
-&lt;p&gt;我现在做的，能做的也就只有活着了，大地也不能让我在活着前面加个“好好”。&lt;/p&gt;
-&lt;p&gt;然后呢，这几个完成“豁小香批”成就的（此处并非特指男生，也包括个别女生）和我妈一样开始担心起我的感情生活了。他们从正面侧面反面对我的将来进行大胆预测，让我对未来根本不抱有任何期望。&lt;/p&gt;
-&lt;p&gt;他们与其问我什么时候能在我结婚典礼上听到我背唐诗宋词汉乐府，还不如问我在结婚典礼上会背长恨歌还是孔雀东南飞。懂吧，我起码能给他们个确切的答案。&lt;/p&gt;
-&lt;p&gt;说起往南飞，你说如果世上没有了南这个方向……&lt;/p&gt;
-&lt;p&gt;那我要撞张苇的南墙，是不是就要从佛王村出发，带足干粮或者带足银行卡一直往北，途径北极、南极，行程40万公里，才能一头撞死我自己或者撞瞎张苇？&lt;/p&gt;
-&lt;p&gt;虽然我极力地避免在多事之秋出门，但故事里一旦有张苇，那我内心与肉体必肿胀，这40万公里是逃不掉的。舔狗舔到最后一无所有，但没办法，大地毕竟不是聚斯金德笔下的格雷诺耶谋杀二十六个少女后制成的香水，并不能让我***永久占有（包括进行占有）***张苇。&lt;/p&gt;
-&lt;p&gt;我会继续努力的，努力方向可以是张苇，但没必要。&lt;/p&gt;
-&lt;p&gt;不以物喜不以己悲，不用互勉，我自己勉自己。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2018年10月7日&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E4%B8%8B%E4%B8%80%E7%AB%99/ - ALL RIGHTS RESERVED KRIS NIE</description>
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/77322667&#34;&gt;常用端口号&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/304991342&#34;&gt;为什么ipconfig和浏览器查询出的ip不一样？&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;how-does-the-internet-work&#34;&gt;How does the internet work?&lt;/h2&gt;
+&lt;h2 id=&#34;what-is-http&#34;&gt;What is HTTP?&lt;/h2&gt;
+&lt;h2 id=&#34;dns-and-how-it-works&#34;&gt;DNS and how it works?&lt;/h2&gt;
+&lt;h3 id=&#34;4-dns-servers&#34;&gt;4 DNS servers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.cloudflare.com/learning/dns/dns-server-types#recursive-resolver&#34;&gt;DNS recursor&lt;/a&gt;&lt;/strong&gt; - The recursor can be thought of as a librarian who is asked to go find a particular book somewhere in a library. The DNS recursor is a server designed to receive queries from client machines through applications such as web browsers. Typically the recursor is then responsible for making additional requests in order to satisfy the client’s DNS query.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Root nameserver&lt;/strong&gt; - The &lt;a href=&#34;https://www.cloudflare.com/learning/dns/glossary/dns-root-server/&#34;&gt;root server&lt;/a&gt; is the first step in translating (resolving) human readable host names into IP addresses. It can be thought of like an index in a library that points to different racks of books - typically it serves as a reference to other more specific locations.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.cloudflare.com/learning/dns/dns-server-types#tld-nameserver&#34;&gt;TLD nameserver&lt;/a&gt;&lt;/strong&gt; - The top level domain server (&lt;a href=&#34;https://www.cloudflare.com/learning/dns/top-level-domain/&#34;&gt;TLD&lt;/a&gt;) can be thought of as a specific rack of books in a library. This nameserver is the next step in the search for a specific IP address, and it hosts the last portion of a hostname (In example.com, the TLD server is “com”).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.cloudflare.com/learning/dns/dns-server-types#authoritative-nameserver&#34;&gt;Authoritative nameserver&lt;/a&gt;&lt;/strong&gt; - This final nameserver can be thought of as a dictionary on a rack of books, in which a specific name can be translated into its definition. The authoritative nameserver is the last stop in the nameserver query. If the authoritative name server has access to the requested record, it will return the IP address for the requested hostname back to the DNS Recursor (the librarian) that made the initial request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dns-lookup&#34;&gt;DNS lookup&lt;/h3&gt;
+&lt;p&gt;For most situations, DNS is concerned with a domain name being translated into the appropriate IP address. To learn how this process works, it helps to follow the path of a DNS lookup as it travels from a web browser, through the DNS lookup process, and back again. Let&amp;rsquo;s take a look at the steps.&lt;/p&gt;
+&lt;p&gt;Note: Often DNS lookup information will be cached either locally inside the querying computer or remotely in the DNS infrastructure. There are typically 8 steps in a DNS lookup. When DNS information is cached, steps are skipped from the DNS lookup process which makes it quicker. The example below outlines all 8 steps when nothing is cached.&lt;/p&gt;
+&lt;h4 id=&#34;the-8-steps-in-a-dns-lookup&#34;&gt;The 8 steps in a DNS lookup:&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;A user types ‘example.com’ into a web browser and the query travels into the Internet and is received by a DNS recursive resolver.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The resolver then queries a DNS root nameserver (.).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The root server then responds to the resolver with the address of a Top Level Domain (TLD) DNS server (such as .com or .net), which stores the information for its domains. When searching for example.com, our request is pointed toward the .com TLD.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The resolver then makes a request to the .com TLD.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The TLD server then responds with the IP address of the domain’s nameserver, example.com.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lastly, the recursive resolver sends a query to the domain’s nameserver.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The IP address for example.com is then returned to the resolver from the nameserver.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The DNS resolver then responds to the web browser with the IP address of the domain requested initially.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once the 8 steps of the DNS lookup have returned the IP address for example.com, the browser is able to make the request for the web page:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The browser makes a &lt;a href=&#34;https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/&#34;&gt;HTTP&lt;/a&gt; request to the IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The server at that IP returns the webpage to be rendered in the browser (step 10).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-lookup-diagram.png&#34; alt=&#34;DNS query diagram&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dns-caching&#34;&gt;DNS caching&lt;/h3&gt;
+&lt;h4 id=&#34;browser-dns-caching&#34;&gt;Browser DNS caching&lt;/h4&gt;
+&lt;p&gt;Modern web browsers are designed by default to cache DNS records for a set amount of time. The purpose here is obvious; the closer the DNS caching occurs to the web browser, the fewer processing steps must be taken in order to check the cache and make the correct requests to an IP address. When a request is made for a DNS record, the browser cache is the first location checked for the requested record.&lt;/p&gt;
+&lt;p&gt;In Chrome, you can see the status of your DNS cache by going to chrome://net-internals/#dns.&lt;/p&gt;
+&lt;h4 id=&#34;operating-system-os-level-dns-caching&#34;&gt;Operating system (OS) level DNS caching&lt;/h4&gt;
+&lt;p&gt;The operating system level DNS resolver is the second and last local stop before a DNS query leaves your machine. The process inside your operating system that is designed to handle this query is commonly called a “stub resolver” or DNS client. When a stub resolver gets a request from an application, it first checks its own cache to see if it has the record. If it does not, it then sends a DNS query (with a recursive flag set), outside the local network to a DNS recursive resolver inside the Internet service provider (ISP).&lt;/p&gt;
+&lt;p&gt;When the recursive resolver inside the ISP receives a DNS query, like all previous steps, it will also check to see if the requested host-to-IP-address translation is already stored inside its local persistence layer.&lt;/p&gt;
+&lt;p&gt;The recursive resolver also has additional functionality depending on the types of records it has in its cache:&lt;/p&gt;
+&lt;p&gt;If the resolver does not have the A records, but does have the NS records for the authoritative nameservers, it will query those name servers directly, bypassing several steps in the DNS query. This shortcut prevents lookups from the root and .com nameservers (in our search for example.com) and helps the resolution of the DNS query occur more quickly.
+If the resolver does not have the NS records, it will send a query to the TLD servers (.com in our case), skipping the root server.
+In the unlikely event that the resolver does not have records pointing to the TLD servers, it will then query the root servers. This event typically occurs after a DNS cache has been purged.&lt;/p&gt;
+&lt;h3 id=&#34;reverse-dns-lookup&#34;&gt;Reverse DNS lookup&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Reverse_DNS_lookup&#34;&gt;Reverse DNS lookup - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dns-server-recommend&#34;&gt;DNS Server recommend&lt;/h3&gt;
+&lt;h4 id=&#34;dnspod-dns&#34;&gt;DNSPod DNS+&lt;/h4&gt;
+&lt;p&gt;首选：119.29.29.29&lt;/p&gt;
+&lt;p&gt;备选：182.254.116.116&lt;/p&gt;
+&lt;h4 id=&#34;114dns&#34;&gt;114DNS&lt;/h4&gt;
+&lt;p&gt;首选：114.114.114.114&lt;/p&gt;
+&lt;p&gt;备选：114.114.114.115&lt;/p&gt;
+&lt;h4 id=&#34;阿里-alidns&#34;&gt;阿里 AliDNS&lt;/h4&gt;
+&lt;p&gt;首选：223.5.5.5&lt;/p&gt;
+&lt;p&gt;备选：223.6.6.6&lt;/p&gt;
+&lt;h4 id=&#34;dns派&#34;&gt;DNS派&lt;/h4&gt;
+&lt;p&gt;首选（电信/移动/铁通）：101.226.4.6&lt;/p&gt;
+&lt;p&gt;备选（电信/移动/铁通）：218.30.118.6&lt;/p&gt;
+&lt;p&gt;首选（联通）：123.125.81.6&lt;/p&gt;
+&lt;p&gt;备选（联通）：140.207.198.6&lt;/p&gt;
+&lt;h4 id=&#34;百度-baidudns&#34;&gt;百度 BaiduDNS&lt;/h4&gt;
+&lt;p&gt;首选：180.76.76.76&lt;/p&gt;
+&lt;h4 id=&#34;cnnic-sdns&#34;&gt;CNNIC SDNS&lt;/h4&gt;
+&lt;p&gt;首选：1.2.4.8&lt;/p&gt;
+&lt;p&gt;备选：202.98.0.68&lt;/p&gt;
+&lt;h4 id=&#34;opendns&#34;&gt;OpenDNS&lt;/h4&gt;
+&lt;p&gt;208.67.222.222&lt;/p&gt;
+&lt;p&gt;208.67.220.220&lt;/p&gt;
+&lt;p&gt;208.67.222.220&lt;/p&gt;
+&lt;p&gt;208.67.220.222&lt;/p&gt;
+&lt;h4 id=&#34;family-shield-servers&#34;&gt;Family Shield Servers&lt;/h4&gt;
+&lt;p&gt;可以阻挡成人网站和含有恶意网站&lt;/p&gt;
+&lt;p&gt;208.67.222.123&lt;/p&gt;
+&lt;p&gt;208.67.220.123&lt;/p&gt;
+&lt;h4 id=&#34;ipv6地址实验&#34;&gt;IPv6地址(实验)&lt;/h4&gt;
+&lt;p&gt;2620:0:ccc::2&lt;/p&gt;
+&lt;p&gt;2620:0:ccd::2&lt;/p&gt;
+&lt;h2 id=&#34;what-is-domain-name&#34;&gt;What is Domain Name?&lt;/h2&gt;
+&lt;h2 id=&#34;what-is-hosting&#34;&gt;What is hosting?&lt;/h2&gt;
+&lt;h2 id=&#34;url解析&#34;&gt;URL解析&lt;/h2&gt;
+&lt;h3 id=&#34;urlencode&#34;&gt;UrlEncode&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;符号&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;意义&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Encode&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;表示空格&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%2B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;(空格)&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;可以用+号替代&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;分隔目录和子目录&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%2F&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;？&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;分隔实际的URL和参数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%3F&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;指定特殊字符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;#&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;表示书签&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;amp;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;URL 中指定的参数间的分隔符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%26&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;URL 中指定参数的值&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%3D&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;ie11url解析问题&#34;&gt;IE11URL解析问题&lt;/h3&gt;
+&lt;p&gt;今天(2020-8-3 14:41:03)，发现项目中使用IE11时打开连接出现&lt;code&gt;HTTP400&lt;/code&gt;的问题，有且仅在IE11里面，chrome正常。&lt;/p&gt;
+&lt;p&gt;后来查资料发现，是因为我传参的时候带了中文字符，而IE对中文字符是有限制的，所以不成功，而要解决这个问题就需要转码，把要传的中文参数用UrlEncode方法给转一下码就ok。&lt;/p&gt;
+&lt;h1 id=&#34;reference-1&#34;&gt;Reference&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.practicalnetworking.net/&#34;&gt;https://www.practicalnetworking.net/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+- https://www.openheart.icu/computing-science/computer-network/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
     
         <item>
-        <title>Abstinence</title>
-        <link>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</link>
-        <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
+        <title>Git</title>
+        <link>https://www.openheart.icu/computing-science/git/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/boom/%E6%88%92%E9%85%92/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E6%88%92%E9%85%92/ -&lt;h1 id=&#34;戒酒&#34;&gt;戒酒&lt;/h1&gt;
-&lt;p&gt;我把眼泪酿成酒&lt;/p&gt;
-&lt;p&gt;一股脑喝进了肚子&lt;/p&gt;
-&lt;p&gt;肾老是大呼着将进酒&lt;/p&gt;
-&lt;p&gt;他总爱把酒糟蹋成尿&lt;/p&gt;
-&lt;p&gt;我的泪就这样进入了下水道&lt;/p&gt;
-&lt;p&gt;与他人的泪混在一起&lt;/p&gt;
-&lt;p&gt;悲伤与悲伤互相交融&lt;/p&gt;
-&lt;p&gt;寂寞与寂寞互相倾诉&lt;/p&gt;
-&lt;p&gt;后来&lt;/p&gt;
-&lt;p&gt;不知又过了多久&lt;/p&gt;
-&lt;p&gt;烈日炎炎将其蒸发&lt;/p&gt;
-&lt;p&gt;化作一场秋雨&lt;/p&gt;
-&lt;p&gt;淋在我的脸上&lt;/p&gt;
-&lt;p&gt;我伸出舌尖&lt;/p&gt;
-&lt;p&gt;尝出了那是我的眼泪&lt;/p&gt;
-&lt;p&gt;味道太差&lt;/p&gt;
-&lt;p&gt;所以我不再哭&lt;/p&gt;
-&lt;p&gt;顺便戒了酒&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2017.10.10&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E6%88%92%E9%85%92/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        <guid>https://www.openheart.icu/computing-science/git/</guid>
+        <description>42th openheart https://www.openheart.icu/computing-science/git/ -&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 遇到pull不下来&lt;/span&gt;
+git reset --hard FETCH_HEAD
+git clone  https://www.github.com/XXXX/XXX.git
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 修改邮箱&lt;/span&gt;
+git config --global user.name &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Kris Nie&amp;#34;&lt;/span&gt;
+git config --global user.email krisnie@qq.com
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Commit undo&lt;/span&gt;
+git reset HEAD~ &lt;span style=&#34;color:#228b22&#34;&gt;#只undo最后一次&lt;/span&gt;
+git reflog &lt;span style=&#34;color:#228b22&#34;&gt;#显示所有操作&lt;/span&gt;
+git reset d0988e7a0d
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# delete commit&lt;/span&gt;
+git reset --soft HEAD~1 &lt;span style=&#34;color:#228b22&#34;&gt;# 保留修改&lt;/span&gt;
+git reset --hard HEAD~1 &lt;span style=&#34;color:#228b22&#34;&gt;# 不保留修改&lt;/span&gt;
+git push origin mybranch --force &lt;span style=&#34;color:#228b22&#34;&gt;# 强制推送到远端&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# delete branch&lt;/span&gt;
+git branch -d mybranch
+git branch -D mybranch &lt;span style=&#34;color:#228b22&#34;&gt;# delete force&lt;/span&gt;
+git remote prune origin &lt;span style=&#34;color:#228b22&#34;&gt;# automatically get rid of remote branches that no longer exist on the remote&lt;/span&gt;
+git push origin --delete mybranch &lt;span style=&#34;color:#228b22&#34;&gt;# delete remote branch&lt;/span&gt;
+git push origin :mybranch &lt;span style=&#34;color:#228b22&#34;&gt;# delete remote branch&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# update commit after git push&lt;/span&gt;
+git commit --amend &lt;span style=&#34;color:#228b22&#34;&gt;# 进入vim修改 修改完成后:wq 保存&lt;/span&gt;
+git push --force-with-lease origin mybranch &lt;span style=&#34;color:#228b22&#34;&gt;#强制修改&lt;/span&gt;
+
+git fetch origin &lt;span style=&#34;color:#228b22&#34;&gt;# 如果有人已经pull了未修改前的&lt;/span&gt;
+git reset --hard origin/branch &lt;span style=&#34;color:#228b22&#34;&gt;# 本地端的修改會不見&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Stash changes&lt;/span&gt;
+git stash pop
+git stash list
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Operate Commit&lt;/span&gt;
+git rebase -i Head~3 &lt;span style=&#34;color:#228b22&#34;&gt;# it will open a vim for u, i to insert, wq to save&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Change repositories URL&lt;/span&gt;
+git remote -v &lt;span style=&#34;color:#228b22&#34;&gt;# show yoru remote URL&lt;/span&gt;
+git remote set-url origin ssh://git@XXX.com/XXX/XXX.git &lt;span style=&#34;color:#228b22&#34;&gt;# reset your remote URL&lt;/span&gt;
+
+git mv -f .&lt;span style=&#34;color:#cd5555&#34;&gt;\a&lt;/span&gt;bc.js  .&lt;span style=&#34;color:#cd5555&#34;&gt;\A&lt;/span&gt;BC.js &lt;span style=&#34;color:#228b22&#34;&gt;# rename&lt;/span&gt;
+
+git clean -f -d -X &lt;span style=&#34;color:#228b22&#34;&gt;# remove ignored files, untracked files and directories&lt;/span&gt;
+
+git show --pretty=fuller commit_id &lt;span style=&#34;color:#228b22&#34;&gt;# View Author&amp;amp;Authordate&amp;amp;Commit&amp;amp;CommitDate &lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Submodule&lt;/span&gt;
+git submodule sync --recursive &lt;span style=&#34;color:#228b22&#34;&gt;# Server does not allow request for unadvertised object&lt;/span&gt;
+git submodule init
+git submodule add https://github.com/***/***
+git submodule update
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Git Proxy&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# http&lt;/span&gt;
+git config --global https.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# socks5&lt;/span&gt;
+git config --global http.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
+git config --global https.proxy &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 取消代理&lt;/span&gt;
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+npm config delete proxy
+
+&lt;span style=&#34;color:#228b22&#34;&gt;## Where is Git&lt;/span&gt;
+which git &lt;span style=&#34;color:#228b22&#34;&gt;# Mac&lt;/span&gt;
+where git &lt;span style=&#34;color:#228b22&#34;&gt;# Windows&lt;/span&gt;
+where.exe git.exe &lt;span style=&#34;color:#228b22&#34;&gt;#powershell&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# Stop packing&lt;/span&gt;
+git fsck
+git gc --prune=now
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;issues&#34;&gt;Issues&lt;/h1&gt;
+&lt;h2 id=&#34;whats-the-use-of-the-staging-area-in-githttpsstackoverflowcomquestions49228209whats-the-use-of-the-staging-area-in-git&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/49228209/whats-the-use-of-the-staging-area-in-git&#34;&gt;What&amp;rsquo;s the use of the staging area in Git?&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;staging helps you split up one large change into multiple commits&lt;/li&gt;
+&lt;li&gt;staging helps in reviewing changes&lt;/li&gt;
+&lt;li&gt;staging helps when a merge has conflicts&lt;/li&gt;
+&lt;li&gt;staging helps you keep extra local files hanging around&lt;/li&gt;
+&lt;li&gt;staging helps you sneak in small changes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;auto-packing-the-repository-for-optimum-performancehttpsstackoverflowcomquestions8633981what-does-auto-packing-the-repository-for-optimum-performance-mean&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/8633981/what-does-auto-packing-the-repository-for-optimum-performance-mean&#34;&gt;Auto packing the repository for optimum performance&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Short version: it means what it says, and if you just let it finish, all will be well.&lt;/p&gt;
+&lt;p&gt;During most operations which can potentially increase the number of loose (unpacked) objects in the repository (including pushes), Git invokes &lt;code&gt;git gc --auto&lt;/code&gt;. If there are enough loose objects (by default, at least 6700), it will then invoke &lt;code&gt;git repack -d -l&lt;/code&gt; to pack them. If there are too many separate packs, it will also repack them into one.&lt;/p&gt;
+&lt;p&gt;A pack is a delta-compressed single file, containing a large number of objects. It&amp;rsquo;s more efficient to store objects in packs, but it takes time to pack (compress) objects, so Git initially creates loose objects, then packs them in batches now and then, via automatic invocation of &lt;code&gt;git gc --auto&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If you let Git finish repacking, this won&amp;rsquo;t happen again for a while.&lt;/strong&gt; It can indeed take a while, especially if you have a lot of large binary objects, but if it&amp;rsquo;s triggering, then it&amp;rsquo;s a sign that it will probably drastically reduce the amount of disk space taken by the repo. If you really don&amp;rsquo;t want it to happen, you can change the config parameter &lt;code&gt;gc.auto&lt;/code&gt;. If you increase it to something much larger than 6700, it will happen less frequently, but take longer when it does. If you decrease it, it&amp;rsquo;ll still have to do your current repack, but subsequently it will happen more often and finish more quickly. If you set it to 0, it will disable automatic repacking.&lt;/p&gt;
+&lt;p&gt;See &lt;code&gt;man git-gc&lt;/code&gt; (under &lt;code&gt;--auto&lt;/code&gt;) and &lt;code&gt;man git-config&lt;/code&gt; (under &lt;code&gt;gc.auto&lt;/code&gt;) for more information.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;While Jefroni is correct that sometimes the auto-packing just needs time to complete, if the auto-packing message persists over multiple days as OP describes, there&amp;rsquo;s a good chance that git&amp;rsquo;s cleanup is missing dangling objects, as described in &lt;a href=&#34;https://stackoverflow.com/questions/28633956/why-does-git-keep-telling-me-its-auto-packing-the-repository-in-background-for&#34;&gt;this question&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To see whether dangling objects are triggering ongoing messages about auto-packing, try running &lt;code&gt;git fsck&lt;/code&gt;. If you get a long list of dangling commits, you can clean them with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git gc --prune=now
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I usually have to run this on my repo every 2-3 months when the auto-packing message doesn&amp;rsquo;t go away after a single pull.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;using-git-with-powershell-and-ssh-key-with-passphrasehttpsstackoverflowcomquestions48843643using-git-with-powershell-and-ssh-key-with-passphrase&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/48843643/using-git-with-powershell-and-ssh-key-with-passphrase&#34;&gt;Using git with powershell and ssh key with passphrase&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;git-clone-with-ssh-only-working-in-git-bash-not-on-windows-cmdhttpsstackoverflowcomquestions57742378git-clone-with-ssh-only-working-in-git-bash-not-on-windows-cmd&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/57742378/git-clone-with-ssh-only-working-in-git-bash-not-on-windows-cmd&#34;&gt;git clone with SSH only working in Git Bash not on Windows CMD&lt;/a&gt;&lt;/h2&gt;
+- https://www.openheart.icu/computing-science/git/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
     
         <item>
-        <title>Children</title>
-        <link>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</link>
-        <pubDate>Mon, 21 May 2018 10:58:08 -0400</pubDate>
+        <title>Hugo</title>
+        <link>https://www.openheart.icu/computing-science/hugo/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ -&lt;blockquote&gt;
-&lt;p&gt;你的儿女，其实并不是你的儿女&lt;/p&gt;
-&lt;p&gt;他们的诞生源自于你的情欲以及自身对于生命的渴望&lt;/p&gt;
-&lt;p&gt;他们借助你来到这个世界，却非为了你而来&lt;/p&gt;
-&lt;p&gt;他们在你身旁，然而并不是你的私人物品&lt;/p&gt;
-&lt;p&gt;你可以给予他们的是你的爱，不是你的想法&lt;/p&gt;
-&lt;p&gt;你可以庇护的是他们的身体，不是他们的灵魂&lt;/p&gt;
-&lt;p&gt;因为他们的灵魂属于明天&lt;/p&gt;
-&lt;p&gt;属于你做梦也无法到达的明天&lt;/p&gt;
-&lt;p&gt;你可以拼尽全力，变得像他们一样&lt;/p&gt;
-&lt;p&gt;你不能绞尽脑汁，让他们变得和你一样&lt;/p&gt;
-&lt;p&gt;因为生命不会后退，时间也不在过去停留&lt;/p&gt;
-&lt;p&gt;你是弓，儿女是箭&lt;/p&gt;
-&lt;p&gt;弓箭手望着未来之路上的箭靶&lt;/p&gt;
-&lt;p&gt;他用尽力气将你拉开，使他的箭射得又快又远&lt;/p&gt;
-&lt;p&gt;所以怀着快乐的心情，在弓箭手的手中弯曲吧&lt;/p&gt;
-&lt;p&gt;因为他爱一路飞翔的箭，也爱无比稳定的弓&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这首诗是纪伯伦的《On Children》，我把这诗读给了我爸妈，于是我来到了你身边。&lt;/p&gt;
-- https://www.openheart.icu/boom/%E5%AD%A9%E5%AD%90/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        <guid>https://www.openheart.icu/computing-science/hugo/</guid>
+        <description>42th openheart https://www.openheart.icu/computing-science/hugo/ -&lt;h1 id=&#34;install&#34;&gt;Install&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz
+
+cp ./hugo /usr/local/bin/
+
+hugo new site site42
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
+
+hugo version
+
+rm -r public
+hugo server -b &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://openheart.icu:1313/&amp;#34;&lt;/span&gt; -p &lt;span style=&#34;color:#b452cd&#34;&gt;1313&lt;/span&gt; --bind &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#mac 安装&lt;/span&gt;
+brew install hugo
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# show the location of the hugo executable&lt;/span&gt;
+which hugo
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# show the installed version&lt;/span&gt;
+ls -l &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt; which hugo &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#lrwxr-xr-x  1 hyomin  admin  30  7 17 22:46 /usr/local/bin/hugo -&amp;gt; ../Cellar/hugo/0.74.1/bin/hugo&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# verify that hugo runs correctly&lt;/span&gt;
+hugo version
+Hugo Static Site Generator v0.74.1/extended darwin/amd64 BuildDate: unknown
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;quick-start-guide&#34;&gt;Quick start guide&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new site site42
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ archetypes/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ doc/content/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ data/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ layouts/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  ▸ static/&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#    config.toml&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#创建文章&lt;/span&gt;
+hugo new about.md
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#安装皮肤&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; themes
+&lt;span style=&#34;color:#228b22&#34;&gt;#git clone https://github.com/gevhaz/hugo-theme-notrack.git&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#https://github.com/spf13/hyde.git&lt;/span&gt;
+git clone https://github.com/AmazingRise/hugo-theme-diary.git themes/diary
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#下载所有hugoThemes&lt;/span&gt;
+git clone --depth &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt; --recursive https://github.com/spf13/hugoThemes.git themes
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#运行 Hugo&lt;/span&gt;
+hugo server --theme=hyde --buildDrafts
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#想要了解更多其他的选项，执行：&lt;/span&gt;
+hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#想要了解 server 相关的选项：&lt;/span&gt;
+hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt; server
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#打开你喜欢的 编辑器 ，编辑和保存你的文章内容，然后等待 Hugo 重新编译并自动重新加载&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hugo-post-missing&#34;&gt;Hugo Post Missing&lt;/h1&gt;
+&lt;p&gt;偶然发现存在有文章无法被生成的情况，经过检查发现在文章yaml配置文件中的date的问题。&lt;/p&gt;
+&lt;p&gt;具体对比后发现并没有规律，既不是纽约时间也不是北京时间，但改时间确实会影响文章的生成。&lt;/p&gt;
+&lt;p&gt;查阅之后发现如下两个解决办法&lt;/p&gt;
+&lt;h4 id=&#34;修改configtoml文件&#34;&gt;修改&lt;code&gt;config.toml&lt;/code&gt;文件&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;buildFuture = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;build-add---buildfuture&#34;&gt;build add &amp;ndash;buildFuture&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server --theme=diary --buildDrafts --buildFuture
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;添加谈笑风生区&#34;&gt;添加谈笑风生区&lt;/h1&gt;
+&lt;p&gt;申请地址：&lt;a href=&#34;https://github.com/settings/applications/new&#34;&gt;Authorization callback URL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;查看自己的OAuth Apps：&lt;a href=&#34;https://github.com/settings/developers&#34;&gt;OAuth Apps&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Application name&lt;/td&gt;
+&lt;td&gt;42th-openheart&lt;/td&gt;
+&lt;td&gt;填写应用名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Homepage URL&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.openheart.icu/&#34;&gt;https://www.openheart.icu/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;主页地址&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Application description&lt;/td&gt;
+&lt;td&gt;第四十二次不开心&lt;/td&gt;
+&lt;td&gt;备注&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Authorization callback URL&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.openheart.icu/&#34;&gt;https://www.openheart.icu/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;回调地址&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;创建模板&#34;&gt;创建模板&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;{{ if and (.Site.Params.enableGitalk) (.IsPage) }}
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;rel&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;href&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;#34;&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;vendor&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;js&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;md5&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;min&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;js&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;relURL&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;}}&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+  &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; gitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Gitalk({
+  clientID: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.client_id }}&amp;#39;&lt;/span&gt;,
+  clientSecret: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.client_secret }}&amp;#39;&lt;/span&gt;,
+  repo: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.repo }}&amp;#39;&lt;/span&gt;,
+  owner: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.owner }}&amp;#39;&lt;/span&gt;,
+  admin: [&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;{{ .Site.Params.Gitalk.owner }}&amp;#39;&lt;/span&gt;],
+  id: md5(location.pathname),
+  distractionFreeMode: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;false&amp;#39;&lt;/span&gt;
+  });
+  &lt;span style=&#34;color:#658b00&#34;&gt;window&lt;/span&gt;.onload = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; () {
+        gitalk.render(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;gitalk-container&amp;#39;&lt;/span&gt;)
+  }
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;添加配置&#34;&gt;添加配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[params]
+  enableGitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
+
+[params.gitalk]
+  owner = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hyominn&amp;#34;&lt;/span&gt;
+  repo = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;42th-openheart&amp;#34;&lt;/span&gt;
+  client_id = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_id&amp;#34;&lt;/span&gt;
+  client_secret = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_secret&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;webhook&#34;&gt;Webhook&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 本地public文件夹关联到GitHub&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; public
+git init
+git remote add origin https://github.com/Hyominn/42th-openheart.git
+git add -A
+git commit -m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
+git push -u origin master
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 服务端操作&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# cd 到目录blog2&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; hugoblog
+&lt;span style=&#34;color:#228b22&#34;&gt;# git 初始化&lt;/span&gt;
+git init
+git remote add origin https://github.com/Hyominn/42th-openheart.git
+&lt;span style=&#34;color:#228b22&#34;&gt;# 从 Github第一次抓取&lt;/span&gt;
+git pull origin master
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建目录 webhook目录需要创建在当前项目路径下&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 如 /usr/project/hugoblog/webhook&lt;/span&gt;
+mkdir webhook
+&lt;span style=&#34;color:#228b22&#34;&gt;#进入目录&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; webhook
+&lt;span style=&#34;color:#228b22&#34;&gt;# 创建脚本&lt;/span&gt;
+vim git_pull.sh
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#在脚本中保存以下内容：&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; /root/blog2
+git pull origin master
+&lt;span style=&#34;color:#658b00&#34;&gt;exit&lt;/span&gt; &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装并配置webhook&#34;&gt;安装并配置webhook&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;npm install github-webhook-handler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;新建github_webhookjs脚本&#34;&gt;新建&lt;code&gt;github_webhook.js&lt;/code&gt;脚本&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; http = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; exec = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt;).exec
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; createHandler = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;github-webhook-handler&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; handler = createHandler({ path: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/webhook&amp;#39;&lt;/span&gt;, secret: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;111111&amp;#39;&lt;/span&gt; })
+
+http.createServer(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (req, res) {
+handler(req, res, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (err) {
+    res.statusCode = &lt;span style=&#34;color:#b452cd&#34;&gt;404&lt;/span&gt;
+    res.end(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;no such location&amp;#39;&lt;/span&gt;)
+  })
+}).listen(&lt;span style=&#34;color:#b452cd&#34;&gt;7777&lt;/span&gt;)
+
+handler.on(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;push&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (event) {
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;let&lt;/span&gt; currentTime = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;Date&lt;/span&gt;();
+    console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\n--&amp;gt; &amp;#39;&lt;/span&gt; + currentTime.toLocaleString());
+    console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Received a push event for %s to %s&amp;#39;&lt;/span&gt;, event.payload.repository.name, event.payload.ref);
+    exec(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;sh git_pull.sh&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;function&lt;/span&gt; (error, stdout, stderr) {
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt;(error) {
+            console.error(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;error:\n&amp;#39;&lt;/span&gt; + error);
+            &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt;;
+        }
+        console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;stdout:\n&amp;#39;&lt;/span&gt; + stdout);
+        console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;stderr:\n&amp;#39;&lt;/span&gt; + stderr);
+    });
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pm2运行&#34;&gt;pm2运行&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;pm2 start github_webhook.js
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;增加nginx配置&#34;&gt;增加nginx配置&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# NodeJS 将 Web 服务跑在了 7777 端口，我们可以用 Nginx 反向代理到 80 端口&lt;/span&gt;
+location /webhook {
+  &lt;span style=&#34;color:#658b00&#34;&gt;alias&lt;/span&gt; /root/webhook;
+  proxy_pass http://127.0.0.1:7777;  
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github配置&#34;&gt;Github配置&lt;/h2&gt;
+&lt;p&gt;&amp;lsquo;webhook&amp;rsquo;即 ‘github_webhook.js’ 中配置的path，比如：&lt;code&gt;https://www.openheart.icu/webhook&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;必须选择‘application/json’,否则不起作用&lt;/p&gt;
+&lt;p&gt;‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
+一定要和脚本中设置一致&lt;/p&gt;
+&lt;h1 id=&#34;pv-uv&#34;&gt;pv uv&lt;/h1&gt;
+&lt;p&gt;两行代码 搞定计数：&lt;a href=&#34;http://busuanzi.ibruce.info/&#34;&gt;不蒜子&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 网站head引用 --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- PV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_pv&amp;#34;&lt;/span&gt;&amp;gt;
+    本站总访问量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- UV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_site_uv&amp;#34;&lt;/span&gt;&amp;gt;
+  本站访客数&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_site_uv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;人次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 单页PV --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_container_page_pv&amp;#34;&lt;/span&gt;&amp;gt;
+  本文总阅读量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_page_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Reference&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&#34;&gt;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jdhao.github.io/2020/01/11/hugo_post_missing/&#34;&gt;https://jdhao.github.io/2020/01/11/hugo_post_missing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/024/&#34;&gt;https://mogeko.me/2018/024/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/computing-science/hugo/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
     
     
         <item>
-        <title>智者不弱</title>
-        <link>https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/</link>
-        <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+        <title>Markdown</title>
+        <link>https://www.openheart.icu/computing-science/markdown/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
-        <guid>https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/</guid>
-        <description>42th openheart https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/ -&lt;p&gt;智者们也有七宗罪&lt;/p&gt;
+        <guid>https://www.openheart.icu/computing-science/markdown/</guid>
+        <description>42th openheart https://www.openheart.icu/computing-science/markdown/ -&lt;h1 id=&#34;supporttyporaiohttpssupporttyporaio&#34;&gt;&lt;a href=&#34;https://support.typora.io/&#34;&gt;support.typora.io&lt;/a&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;expressions&#34;&gt;Expressions&lt;/h1&gt;
+&lt;h2 id=&#34;公式标记&#34;&gt;公式标记&lt;/h2&gt;
+&lt;h3 id=&#34;行内公式inline&#34;&gt;行内公式（inline）&lt;/h3&gt;
+&lt;p&gt;eg: $ E=mc^2 $，写法是：&lt;code&gt;$E=mc^2$&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;整行公式displayed&#34;&gt;整行公式（displayed）&lt;/h3&gt;
+&lt;p&gt;用一对紧挨的两个美元符号&lt;code&gt;$$&lt;/code&gt;包裹&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;傲慢、嫉妒、暴怒、懒惰、贪婪、色欲、暴食&lt;/p&gt;
+&lt;p&gt;$$ $$&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;但他们凭借控制力把罪过埋在心里&lt;/p&gt;
-&lt;p&gt;一生只吃无花果&lt;/p&gt;
-&lt;p&gt;于是变得很强&lt;/p&gt;
+&lt;p&gt;eg:
+$$
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+$$&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;青龙山下青龙湖&lt;/p&gt;
-&lt;p&gt;无花树上无花果&lt;/p&gt;
-&lt;p&gt;弱智眼里出弱智&lt;/p&gt;
-&lt;p&gt;正常人中无正常&lt;/p&gt;
+&lt;h2 id=&#34;希腊字母&#34;&gt;希腊字母&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;名称&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;大写&lt;/th&gt;
+&lt;th&gt;Tex&lt;/th&gt;
+&lt;th&gt;小写&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Tex&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;alpha&lt;/td&gt;
+&lt;td&gt;$A$&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;α&lt;/td&gt;
+&lt;td&gt;\alpha&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;beta&lt;/td&gt;
+&lt;td&gt;$B$&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;β&lt;/td&gt;
+&lt;td&gt;\beat&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gamma&lt;/td&gt;
+&lt;td&gt;$Γ$&lt;/td&gt;
+&lt;td&gt;\Gamma&lt;/td&gt;
+&lt;td&gt;γ&lt;/td&gt;
+&lt;td&gt;\gamma&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;delta&lt;/td&gt;
+&lt;td&gt;$Δ$&lt;/td&gt;
+&lt;td&gt;\Delta&lt;/td&gt;
+&lt;td&gt;δ&lt;/td&gt;
+&lt;td&gt;\delta&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;epsilon&lt;/td&gt;
+&lt;td&gt;$E$&lt;/td&gt;
+&lt;td&gt;E&lt;/td&gt;
+&lt;td&gt;ϵ&lt;/td&gt;
+&lt;td&gt;\epsilon&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zeta&lt;/td&gt;
+&lt;td&gt;Z&lt;/td&gt;
+&lt;td&gt;Z&lt;/td&gt;
+&lt;td&gt;ζ&lt;/td&gt;
+&lt;td&gt;\zeta&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eta&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;η&lt;/td&gt;
+&lt;td&gt;\eta&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;theta&lt;/td&gt;
+&lt;td&gt;$Θ$&lt;/td&gt;
+&lt;td&gt;\Theta&lt;/td&gt;
+&lt;td&gt;θ&lt;/td&gt;
+&lt;td&gt;\theta&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iota&lt;/td&gt;
+&lt;td&gt;I&lt;/td&gt;
+&lt;td&gt;I&lt;/td&gt;
+&lt;td&gt;ι&lt;/td&gt;
+&lt;td&gt;\iota&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;kappa&lt;/td&gt;
+&lt;td&gt;K&lt;/td&gt;
+&lt;td&gt;K&lt;/td&gt;
+&lt;td&gt;κ&lt;/td&gt;
+&lt;td&gt;\kappa&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;lambda&lt;/td&gt;
+&lt;td&gt;Λ&lt;/td&gt;
+&lt;td&gt;\Lambda&lt;/td&gt;
+&lt;td&gt;λ&lt;/td&gt;
+&lt;td&gt;\lambda&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mu&lt;/td&gt;
+&lt;td&gt;M&lt;/td&gt;
+&lt;td&gt;M&lt;/td&gt;
+&lt;td&gt;μ&lt;/td&gt;
+&lt;td&gt;\mu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nu&lt;/td&gt;
+&lt;td&gt;N&lt;/td&gt;
+&lt;td&gt;N&lt;/td&gt;
+&lt;td&gt;ν&lt;/td&gt;
+&lt;td&gt;\nu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;xi&lt;/td&gt;
+&lt;td&gt;$Ξ$&lt;/td&gt;
+&lt;td&gt;\Xi&lt;/td&gt;
+&lt;td&gt;ξ&lt;/td&gt;
+&lt;td&gt;\xi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;omicron&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;ο&lt;/td&gt;
+&lt;td&gt;\omicron&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pi&lt;/td&gt;
+&lt;td&gt;Π&lt;/td&gt;
+&lt;td&gt;\Pi&lt;/td&gt;
+&lt;td&gt;π&lt;/td&gt;
+&lt;td&gt;\pi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rho&lt;/td&gt;
+&lt;td&gt;P&lt;/td&gt;
+&lt;td&gt;P&lt;/td&gt;
+&lt;td&gt;ρ&lt;/td&gt;
+&lt;td&gt;\rho&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sigma&lt;/td&gt;
+&lt;td&gt;Σ&lt;/td&gt;
+&lt;td&gt;\Sigma&lt;/td&gt;
+&lt;td&gt;σ&lt;/td&gt;
+&lt;td&gt;\sigma&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tau&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;τ&lt;/td&gt;
+&lt;td&gt;\tau&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;upsilon&lt;/td&gt;
+&lt;td&gt;Υ&lt;/td&gt;
+&lt;td&gt;\Upsilon&lt;/td&gt;
+&lt;td&gt;υ&lt;/td&gt;
+&lt;td&gt;\upsilon&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;phi&lt;/td&gt;
+&lt;td&gt;Φ&lt;/td&gt;
+&lt;td&gt;\Phi&lt;/td&gt;
+&lt;td&gt;ϕ&lt;/td&gt;
+&lt;td&gt;\phi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chi&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;χ&lt;/td&gt;
+&lt;td&gt;\chi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;psi&lt;/td&gt;
+&lt;td&gt;$Ψ$&lt;/td&gt;
+&lt;td&gt;\Psi&lt;/td&gt;
+&lt;td&gt;$ψ$&lt;/td&gt;
+&lt;td&gt;\psi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;omega&lt;/td&gt;
+&lt;td&gt;Ω&lt;/td&gt;
+&lt;td&gt;\Omega&lt;/td&gt;
+&lt;td&gt;ω&lt;/td&gt;
+&lt;td&gt;\omega&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;hr&gt;
-&lt;p&gt;现在的人隐藏的都太好了&lt;/p&gt;
-&lt;p&gt;根本分不清谁与谁一样&lt;/p&gt;
-&lt;p&gt;我又少了很多&lt;/p&gt;
-&lt;p&gt;所谓知己&lt;/p&gt;
+&lt;h2 id=&#34;角标&#34;&gt;角标&lt;/h2&gt;
+&lt;p&gt;Markdown Language is a superset of HTML, so you can use html tag &lt;strong&gt;sub,sup&lt;/strong&gt; to achieve this&lt;/p&gt;
+&lt;p&gt;上标和下标分别使用&lt;code&gt;^&lt;/code&gt;和&lt;code&gt;_&lt;/code&gt;来表示，下标也可以用&lt;code&gt;~&lt;/code&gt;表示&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;H&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sub&amp;gt;&lt;/span&gt;2&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sub&amp;gt;&lt;/span&gt;O
+CO&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sub&amp;gt;&lt;/span&gt;2&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sub&amp;gt;&lt;/span&gt;
+NIKE&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;sup&amp;gt;&lt;/span&gt;®&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/sup&amp;gt;&lt;/span&gt;
+H~2~O~2~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;H&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;O
+CO&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;
+NIKE&lt;!-- raw HTML omitted --&gt;®&lt;!-- raw HTML omitted --&gt;
+H~2~0~2~&lt;/p&gt;
+&lt;p&gt;$e^{n+2}$&lt;/p&gt;
+&lt;p&gt;如果要在左右两边都有上下标，可以用&lt;code&gt;\sideset&lt;/code&gt;来表示：&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\sideset{^1_2}{^3_4}\bigotimes&lt;/code&gt;：$\sideset{^1_2}{^3_4}\bigotimes$。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;正常人都有个梦想&lt;/p&gt;
-&lt;p&gt;无关贫富&lt;/p&gt;
-&lt;p&gt;想要一座房子&lt;/p&gt;
-&lt;p&gt;面朝哪儿无所谓&lt;/p&gt;
-&lt;p&gt;春花何花无所谓&lt;/p&gt;
-&lt;p&gt;弱智也有一个梦想&lt;/p&gt;
-&lt;p&gt;无关美丑&lt;/p&gt;
-&lt;p&gt;想要一个姑娘&lt;/p&gt;
-&lt;p&gt;面朝是青龙湖&lt;/p&gt;
-&lt;p&gt;身旁结无花果&lt;/p&gt;
+&lt;h2 id=&#34;括号&#34;&gt;括号&lt;/h2&gt;
+&lt;h3 id=&#34;小括号与方括号&#34;&gt;小括号与方括号&lt;/h3&gt;
+&lt;p&gt;使用原始的&lt;code&gt;()&lt;/code&gt;和&lt;code&gt;[]&lt;/code&gt;即可。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;(2+3)[4+4]&lt;/code&gt;：$(2+3)[4+4]$。&lt;/p&gt;
+&lt;h3 id=&#34;大括号&#34;&gt;大括号&lt;/h3&gt;
+&lt;p&gt;由于大括号&lt;code&gt;{}&lt;/code&gt;被用来分组，因此需要使用&lt;code&gt;\{&lt;/code&gt;和&lt;code&gt;\}&lt;/code&gt;表示大括号，也可以使用&lt;code&gt;\lbrace&lt;/code&gt;和&lt;code&gt;\rbrace&lt;/code&gt;来表示。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\{a*b\}&lt;/code&gt;或者&lt;code&gt;\lbrace a*b \rbrace&lt;/code&gt;，都会显示为${a*b}$。&lt;/p&gt;
+&lt;h3 id=&#34;尖括号&#34;&gt;尖括号&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;\langle&lt;/code&gt;和&lt;code&gt;\rangle&lt;/code&gt;分别表示左尖括号和右尖括号。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\langle x \rangle&lt;/code&gt;：$\langle x \rangle$&lt;/p&gt;
+&lt;h3 id=&#34;上取整&#34;&gt;上取整&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;\lceil&lt;/code&gt;和&lt;code&gt;\rceil&lt;/code&gt;表示。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\lceil x \rceil&lt;/code&gt;：$\lceil x \rceil$&lt;/p&gt;
+&lt;h3 id=&#34;下取整&#34;&gt;下取整&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;\lfloor&lt;/code&gt;和&lt;code&gt;\rfloor&lt;/code&gt;表示。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\lfloor x \rfloor&lt;/code&gt;：$\lfloor x \rfloor$&lt;/p&gt;
+&lt;p&gt;需要注意的是，原始括号并不会随着公式大小缩放。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;(\frac12)&lt;/code&gt;：$(\frac12)$。可以使用\left( &amp;hellip;\right)来自适应的调整括号: &lt;code&gt;\left( \frac12 \right)&lt;/code&gt;：$\left( \frac12 \right)$。&lt;/p&gt;
+&lt;p&gt;可以明显看出，后一组公式中的括号是经过缩放的。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;《谁》&lt;/p&gt;
-&lt;p&gt;在青龙山下走&lt;/p&gt;
-&lt;p&gt;饮青龙湖中水&lt;/p&gt;
-&lt;p&gt;闻着无花果香&lt;/p&gt;
-&lt;p&gt;梦里梦见自己&lt;/p&gt;
-&lt;p&gt;没有墨子庄周&lt;/p&gt;
-&lt;p&gt;怀抱一个姑娘&lt;/p&gt;
+&lt;h2 id=&#34;求和与积分&#34;&gt;求和与积分&lt;/h2&gt;
+&lt;h3 id=&#34;求和&#34;&gt;求和&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;\sum&lt;/code&gt;用来表示求和符号，其下标表示求和下限，上标表示上线。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\sum_1^n&lt;/code&gt;：
+$$
+\sum_1^n
+$$&lt;/p&gt;
+&lt;h3 id=&#34;积分&#34;&gt;积分&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;\int&lt;/code&gt;用来表示积分符号，同样地，其上下标表示积分的上下限。&lt;/p&gt;
+&lt;p&gt;eg: &lt;code&gt;\int_1^\infty&lt;/code&gt;：
+$$
+\int_1^\infty
+$$
+与此类似的符号还有：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\prod&lt;/code&gt;：$\prod$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\bigcup&lt;/code&gt;：$\bigcup$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\bigcap&lt;/code&gt;：$\bigcap$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\iint&lt;/code&gt;：$\iint$&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;最重要的问题往往没有答案&lt;/p&gt;
-&lt;p&gt;最聪明的弱智往往没有姑娘&lt;/p&gt;
+&lt;h2 id=&#34;分式与根式&#34;&gt;分式与根式&lt;/h2&gt;
+&lt;h3 id=&#34;分式&#34;&gt;分式&lt;/h3&gt;
+&lt;p&gt;分式有两种表示方法。&lt;/p&gt;
+&lt;p&gt;第一种，使用&lt;code&gt;\frac&lt;/code&gt;，如果分子或分母不是单个字符，需要使用{}来分组。&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\frac ab&lt;/code&gt;: $\frac ab$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\frac {a-1}{b+1}&lt;/code&gt;:$\frac {a-1}{b+1}$&lt;/p&gt;
+&lt;p&gt;第二种，使用&lt;code&gt;\over&lt;/code&gt;来分隔一个组的前后两部分&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{a+1\over b+1}&lt;/code&gt;：${a+1\over b+1}$&lt;/p&gt;
+&lt;h3 id=&#34;根式&#34;&gt;根式&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;\sqrt[a]b&lt;/code&gt;来表示。其中，方括号内的值用来表示开几次方，省略方括号则表示开方。&lt;/p&gt;
+&lt;p&gt;eg:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\sqrt[4]{\frac xy}&lt;/code&gt;：$\sqrt[4]{\frac xy}$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\sqrt{x^3}&lt;/code&gt;：$\sqrt{x^3}$&lt;/p&gt;
+&lt;h3 id=&#34;乘号&#34;&gt;乘号&lt;/h3&gt;
+&lt;p&gt;叉乘\times&lt;/p&gt;
+&lt;p&gt;eg: $\times$&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;世上娇娘皆虚妄&lt;/p&gt;
-&lt;p&gt;残花败柳排成行&lt;/p&gt;
-&lt;p&gt;难得一对好鸳鸯&lt;/p&gt;
-&lt;p&gt;扮成野鸡配豺狼&lt;/p&gt;
+&lt;h1 id=&#34;font&#34;&gt;Font&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;\it&lt;/code&gt;显示意大利体（公式默认字体）：&lt;/p&gt;
+&lt;p&gt;$\it ACDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;\mathbb&lt;/code&gt;或&lt;code&gt;\Bbb&lt;/code&gt;显示黑板粗体（黑板黑体）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\mathbb{CHNQRZ}&lt;/code&gt;：$\mathbb{CHNQRZ}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;\mathbf&lt;/code&gt;或&lt;code&gt;\bf&lt;/code&gt;示黑体&lt;/p&gt;
+&lt;p&gt;$\mathbf ABCDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用\mathtt或\tt显示打印机字体：&lt;/p&gt;
+&lt;p&gt;$\tt ABCDEFGHIJKLMnopqrstuvwxyz$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;青龙山下，湖水泡茶，诵金刚经，念念有词：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“凡所有相，皆是虚妄”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;正常人在想是真亦假是假亦真&lt;/p&gt;
-&lt;p&gt;弱智们在想如来偷吃过无花果&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;弱智不会写字，笔落惊风雨&lt;/p&gt;
-&lt;p&gt;弱智不会说话，诗成泣鬼神&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;正常人关心生老病死，恋爱婚嫁，编着微博段子，成为知乎精英&lt;/p&gt;
-&lt;p&gt;弱智只等无花果开花，弱智只看青龙山日落&lt;/p&gt;
-&lt;p&gt;无花果的花，只有一朵&lt;/p&gt;
-&lt;p&gt;青龙山的日落，弱智数不过来，于是对谁都说是四十三次&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;正常人用说话证明自己多出色&lt;/p&gt;
-&lt;p&gt;可怜的弱智，却不会说话&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;会有个姑娘，于我乃一山，山下有湖，湖畔花开，秋后结果&lt;/p&gt;
-&lt;p&gt;我想我，是有了一山无花果，还是有了一个姑娘&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;2017.12.01&lt;/em&gt;&lt;/p&gt;
-- https://www.openheart.icu/boom/%E6%99%BA%E8%80%85%E4%B8%8D%E5%BC%B1/ - ALL RIGHTS RESERVED KRIS NIE</description>
+&lt;h1 id=&#34;image&#34;&gt;Image&lt;/h1&gt;
+&lt;p&gt;Credit line：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-XML&#34; data-lang=&#34;XML&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;center&amp;gt;&lt;/span&gt;Apple Marina Bay Sands is the first Apple store to sit directly on the water.&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;diff&#34;&gt;Diff&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;color:#a00&#34;&gt;-if(v &amp;gt; 100)
+&lt;/span&gt;&lt;span style=&#34;color:#a00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#0a0&#34;&gt;+if(v &amp;gt; 120)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;代码块的语法类型为&lt;code&gt;diff&lt;/code&gt;，在删除行加上 &lt;code&gt;-&lt;/code&gt;，在新增行加上 &lt;code&gt;+&lt;/code&gt;。&lt;/p&gt;
+- https://www.openheart.icu/computing-science/markdown/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
+    
+    
+    
+        <item>
+        <title>Music</title>
+        <link>https://www.openheart.icu/speech/music/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/speech/music/</guid>
+        <description>42th openheart https://www.openheart.icu/speech/music/ -&lt;h1 id=&#34;music&#34;&gt;Music&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;La Mia Vita - &lt;a href=&#34;https://www.youtube.com/watch?v=q3LE8cl0IwE&#34;&gt;Ferrari Roma - Official Video&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;archiveorg-serendipityhttpswwwlocserendipitycompushplayhtml&#34;&gt;&lt;a href=&#34;https://www.locserendipity.com/PushPlay.html&#34;&gt;Archive.org Serendipity&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;“互联网档案馆”收集了很多早期的黑胶唱片音乐作品，都已经过了版权保护期。这个网站可以收听这些音乐，按一下按钮，就会随机播放一段音乐。&lt;/p&gt;
+&lt;h1 id=&#34;20-cds-curated-by-steve-jobs--the-ipod-teamhttpnobicomentry-1239html&#34;&gt;&lt;a href=&#34;http://nobi.com/entry-1239.html&#34;&gt;20 CDs curated by Steve Jobs &amp;amp; the iPod team&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Below you will find the list of those 20 CDs which was carefully selected by Steve Jobs and the original iPod team (lead by Stan Ng). Enjoy!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/classic-yo-yo/id155722108?at=10lwWY&amp;amp;app=itunes&#34;&gt;Classic Yo-Yo by Yo-Yo Ma&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/mozart-symphonies-nos.-35-41/id968876434?at=10lwWY&amp;amp;app=itunes&#34;&gt;Mozart:Symphonies Nos.35-41 by Karl Böhm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/bach-goldberg-variations-bwv/id594521223?at=10lwWY&amp;amp;app=itunes&#34;&gt;Goldberg Variations by Glenn Gould&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/bridge-over-troubled-water/id324127933?at=10lwWY&amp;amp;app=itunes&#34;&gt;Bridge Over Troubled Water by Simon &amp;amp; Garfunkel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/bookends/id203303421?at=10lwWY&amp;amp;app=itunes&#34;&gt;Bookends by Simon &amp;amp; Garfunkel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/bootleg-series-vol.-4-live/id157433155?at=10lwWY&amp;amp;app=itunes&#34;&gt;The Bootleg Series, Vol. 4: Live 1966 - The &amp;ldquo;Royal Albert Hall&amp;rdquo; Concert by Bob Dylan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/a-hard-days-night/id401132835?at=10lwWY&amp;amp;app=itunes&#34;&gt;A Hard Day&amp;rsquo;s Night by The Beatles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/abbey-road/id401186200?at=10lwWY&amp;amp;app=itunes&#34;&gt;Abbey Road by The Beatles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/live-in-cook-county-jail/id1036336053?at=10lwWY&amp;amp;app=itunes&#34;&gt;Live In Cook County Jail by B.B. King&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Cole-Porter-Songbook-Vol/dp/B0000046UG/ref=sr_1_1?ie=UTF8&amp;amp;qid=1458535394&amp;amp;sr=8-1&amp;amp;keywords=Ella+Fitzgerald+-+The+Cole+Porter+Songbook%2C+Vol+1&#34;&gt;The Cole Porter Songbook, Vol 1 by Ella Fitzgerald&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/kind-of-blue/id268443092?at=10lwWY&amp;amp;app=itunes&#34;&gt;Kind of Blue by Miles Davis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/time-out/id193085545?at=10lwWY&amp;amp;app=itunes&#34;&gt;Time Out by The Dave Brubeck Quartet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/jagged-little-pill-2015-remastered/id1050392837?at=10lwWY&amp;amp;app=itunes&#34;&gt;Jagged Little Pill by Alanis Morissette&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/surfacing/id388153718?at=10lwWY&amp;amp;app=itunes&#34;&gt;Surfacing by Sarah McLachlan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/nevermind/id485495703?at=10lwWY&amp;amp;app=itunes&#34;&gt;Never mind by Nirvana&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/legend-deluxe-edition/id19851211?at=10lwWY&amp;amp;app=itunes&#34;&gt;Bob Marley &amp;amp; The Wailers by Legend&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/breathe/id321981503?at=10lwWY&amp;amp;app=itunes&#34;&gt;Breathe by Faith Hill&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/crash/id388136111?at=10lwWY&amp;amp;app=itunes&#34;&gt;Crash by Dave Matthews Band&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/play-play-b-sides/id281242279?at=10lwWY&amp;amp;app=itunes&#34;&gt;Play &amp;amp; Play: B Sides by Moby&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geo.itunes.apple.com/us/album/o-brother-where-art-thou-music/id524827132?at=10lwWY&amp;amp;app=itunes&#34;&gt;O Brother, Where Art Thou? (Music from the Motion Picture)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/speech/music/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Nginx</title>
+        <link>https://www.openheart.icu/computing-science/nginx/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/computing-science/nginx/</guid>
+        <description>42th openheart https://www.openheart.icu/computing-science/nginx/ -&lt;h1 id=&#34;reverse-proxy--forward-proxy&#34;&gt;Reverse Proxy &amp;amp; Forward Proxy&lt;/h1&gt;
+&lt;h2 id=&#34;forward-proxy正向代理&#34;&gt;Forward Proxy（正向代理）&lt;/h2&gt;
+&lt;p&gt;我想访问 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; ，然而大家都知道它被墙了，我没法直接访问它。于是我连接了一个 VPN 服务并设定其为本地 HTTP 访问的代理，然后我再访问 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; ，此时我的请求被该 VPN 服务代理了，它帮我访问了 &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt; 然后把结果返回给我。&lt;/p&gt;
+&lt;p&gt;正向代理隐藏真实客户端，www.google.com 并不知道访问他的是我。&lt;/p&gt;
+&lt;h2 id=&#34;reverse-proxy反向代理&#34;&gt;Reverse Proxy（反向代理）&lt;/h2&gt;
+&lt;p&gt;当我们在访问 &lt;a href=&#34;http://www.baidu.com&#34;&gt;www.baidu.com&lt;/a&gt; 时，百度背后有成千上万个服务器为我们服务，但具体是哪一台，我们并不知道。此时 &lt;a href=&#34;http://www.baidu.com&#34;&gt;www.baidu.com&lt;/a&gt; 就充当一个反向代理服务器，帮我们把请求转发到真实的服务器。&lt;/p&gt;
+&lt;p&gt;反向代理隐藏真实服务端，Nginx就是很好的反向代理服务器，用来做&lt;strong&gt;负载均衡&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;正向代理与反向代理两者的区别在于代理的对象不一样：&lt;strong&gt;正向代理&lt;/strong&gt;代理的对象是客户端，&lt;strong&gt;反向代理&lt;/strong&gt;代理的对象是服务端。&lt;/p&gt;
+&lt;h1 id=&#34;common-operation&#34;&gt;Common Operation&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#00688b&#34;&gt;$sudo&lt;/span&gt; nginx
+
+sudo pkill -f nginx &amp;amp; &lt;span style=&#34;color:#658b00&#34;&gt;wait&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;$!&lt;/span&gt;
+
+sudo systemctl start nginx
+
+sudo systemctl restart nginx
+
+nginx -c /etc/nginx/nginx.conf
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 重启服务&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置二级域名&#34;&gt;设置二级域名&lt;/h2&gt;
+&lt;p&gt;增加一个新的&lt;code&gt;listen 80&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;server_name&lt;/code&gt;设置为二级域名地址&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;root&lt;/code&gt;指向项目地址&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;server {&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;listen       80;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;server_name  site42.openheart.icu;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;location / {&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;root         /usr/project/openheart;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;强制浏览器使用本地缓存&#34;&gt;强制浏览器使用本地缓存&lt;/h2&gt;
+&lt;p&gt;cache-control/expires&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# nginx.conf 中配置&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)${&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires 30d;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;location ~ .*\.(js|css)?${&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;		&lt;/span&gt;expires 1h;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.openheart.icu/computing-science/nginx/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Operating System</title>
+        <link>https://www.openheart.icu/computing-science/operating-system/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/computing-science/operating-system/</guid>
+        <description>42th openheart https://www.openheart.icu/computing-science/operating-system/ -&lt;h1 id=&#34;basic&#34;&gt;Basic&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;processes-and-threads&#34;&gt;Processes and Threads&lt;/h2&gt;
+&lt;h3 id=&#34;作业与作业调度&#34;&gt;作业与作业调度&lt;/h3&gt;
+&lt;p&gt;在多道批处理系统中，作业是用户提交给系统的一项相对独立的工作。操作员把用户提交的作业通过相应的输入设备输入到磁盘存储器，并保存在一个后备作业队列中。再由作业调度程序将其从外存调入内存。&lt;/p&gt;
+&lt;p&gt;作业（Job），作业是一个比程序更为广泛的概念，它不仅包含了通常的程序和数据，而且还应配有一份作业说明书，系统根据该书名书来对程序的运行进行控制。在批处理系统中，是以作业为基本单位从外存调入内存的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A process is an isolated entity of Operating System. A task may be called a process if it is a single task. A job may be called  a task if the job to be performed is a single unit of work. A process or group of processes can be termed as a task and a group of tasks can be termed as a job.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://www.geeksforgeeks.org/difference-between-job-task-and-process/#:~:text=A%20process%20is%20an%20isolated,be%20termed%20as%20a%20job.&#34;&gt;Difference between Job, Task and Process&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;operation&#34;&gt;Operation&lt;/h1&gt;
+&lt;h2 id=&#34;mac&#34;&gt;Mac&lt;/h2&gt;
+&lt;h3 id=&#34;brew使用国内镜像源不好使&#34;&gt;brew使用国内镜像源（不好使）&lt;/h3&gt;
+&lt;p&gt;中科大：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤一&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 步骤二&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#步骤三&lt;/span&gt;
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;复原：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/brew.git
+
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;brew --repo&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;/Library/Taps/homebrew/homebrew-core&amp;#34;&lt;/span&gt;
+git remote set-url origin https://github.com/Homebrew/homebrew-core
+
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;配置item2代理&#34;&gt;配置item2代理&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 打开配置文件&lt;/span&gt;
+vim ~/.bash_profile 
+&lt;span style=&#34;color:#228b22&#34;&gt;# 如果用了`oh-my-zsh` 那么修改`~/.zshrc`&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 在后面新增配置&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;http_proxy&lt;/span&gt;=http://127.0.0.1:1087 
+&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;https_proxy&lt;/span&gt;=socks5://127.0.0.1:1080
+&lt;span style=&#34;color:#228b22&#34;&gt;# 同理，可能执行 source ~/.zshrc&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;iterm2--oh-my-zsh&#34;&gt;iTerm2 + Oh My Zsh&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;安装Oh my zsh&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# curl 安装方式&lt;/span&gt;
+sh -c &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;安装PowerLine&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 安装 pip&lt;/span&gt;
+sudo easy_install pip
+
+pip install powerline-status --user
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;安装PowerFonts&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# git clone&lt;/span&gt;
+git clone https://github.com/powerline/fonts.git --depth=&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# cd to folder&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; fonts
+&lt;span style=&#34;color:#228b22&#34;&gt;# run install shell&lt;/span&gt;
+./install.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Text 设置item2字体为Meslo LG&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;安装主题&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/Desktop/OpenSource
+git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; oh-my-zsh-agnoster-fcamblor/
+./install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行上面的命令会将主题拷贝到oh my zsh的themes中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vi ~/.zshrc
+&lt;span style=&#34;color:#228b22&#34;&gt;# 将ZSH_THEME后面的字段改为agnoster&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;安装高亮插件&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-autosuggestions
+vi ~/.zshrc
+&lt;span style=&#34;color:#228b22&#34;&gt;# 修改zshrc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;plugins信息：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;operation-1&#34;&gt;Operation&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 检查应用签名&lt;/span&gt;
+pkgutil --check-signature /Applications/Flume.app
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 清空DNS缓存&lt;/span&gt;
+dscacheutil -flushcache
+sudo dscacheutil -flushcache
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;windows&#34;&gt;Windows&lt;/h2&gt;
+&lt;h3 id=&#34;windows-terminal&#34;&gt;Windows Terminal&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;oh-my-posh&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; oh-my-posh -Scope CurrentUser -AllowPrerelease
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;PSReadLine&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/PowerShell/PSReadLine&#34;&gt;PowerShell/PSReadLine&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; PSReadLine -AllowPrerelease -Force
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;notepad $profile&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Import-Module&lt;/span&gt; PSReadLine
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineOption&lt;/span&gt; -PredictionSource &lt;span style=&#34;color:#658b00&#34;&gt;History
+&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 下面是三条是文档里推荐的，根据自己的习惯决定是否添加&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key UpArrow -Function HistorySearchBackward
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key DownArrow -Function HistorySearchForward
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key Tab -Function Complete
+&lt;span style=&#34;color:#228b22&#34;&gt;# Hot-Key&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;Set-PSReadLineKeyHandler&lt;/span&gt; -Key &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Ctrl+g&amp;#34;&lt;/span&gt; -Function MenuComplete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;posh-git&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/dahlbyk/posh-git&#34;&gt;dahlbyk/posh-git&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Install-Module&lt;/span&gt; posh-git -Scope CurrentUser -AllowPrerelease -Force
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;Import-Module&lt;/span&gt; posh-git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Scoop&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;iwr -useb get.scoop.sh | iex
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://stackoverflow.com/questions/56839307/adding-git-bash-to-the-new-windows-terminal&#34;&gt;Adding Git-Bash to the new Windows Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;issues&#34;&gt;Issues&lt;/h3&gt;
+&lt;h4 id=&#34;重置onedrive&#34;&gt;重置Onedrive&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;%localappdata%\Microsoft\OneDrive\onedrive.exe /reset
+
+%localappdata%\Microsoft\OneDrive\onedrive.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;资源管理器打开卡顿可以通过索引选项给所有系统文件创建索引&#34;&gt;资源管理器打开卡顿可以通过索引选项给所有系统文件创建索引&lt;/h4&gt;
+&lt;h4 id=&#34;证书管理中心&#34;&gt;证书管理中心&lt;/h4&gt;
+&lt;p&gt;​     用win+R输入“certmgr.msc”，进入, China Internet Network Information Center EV Certificates Root 和CNNIC Root证书导出，不信任导入，右键&amp;ndash;&amp;gt;属性，在常规选项卡中，找到“证书目的”，选择“禁用此证书的所有目的”&lt;/p&gt;
+&lt;h4 id=&#34;图标不正常&#34;&gt;图标不正常&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; /d %userprofile%&lt;span style=&#34;color:#cd5555&#34;&gt;\A&lt;/span&gt;ppData&lt;span style=&#34;color:#cd5555&#34;&gt;\L&lt;/span&gt;ocal
+del IconCache.db /a
+&lt;span style=&#34;color:#658b00&#34;&gt;exit&lt;/span&gt;
+explorer.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;netstat--ano&#34;&gt;netstat -ano&lt;/h4&gt;
+&lt;p&gt;占用进程&lt;/p&gt;
+&lt;h4 id=&#34;netsh-winsock-reset&#34;&gt;netsh winsock reset&lt;/h4&gt;
+&lt;p&gt;重新初始化网络环境,以解决由于软件冲突、病毒原因造成的参数错误问题&lt;/p&gt;
+&lt;h4 id=&#34;ipconfig-flushdns&#34;&gt;ipconfig /flushdns&lt;/h4&gt;
+&lt;p&gt;刷新dns缓存&lt;/p&gt;
+&lt;h4 id=&#34;程序如果一直停止&#34;&gt;程序如果一直停止&lt;/h4&gt;
+&lt;p&gt;删除C:\Users\你的电脑username\AppData\Local\出现问题的程序文件夹&lt;/p&gt;
+&lt;h4 id=&#34;net&#34;&gt;net&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;net share &lt;span style=&#34;color:#228b22&#34;&gt;# view your pc&amp;#39;s share folder&lt;/span&gt;
+net view &lt;span style=&#34;color:#cd5555&#34;&gt;\I&lt;/span&gt;P &lt;span style=&#34;color:#228b22&#34;&gt;#查看远程主机的所以共享资源&lt;/span&gt;
+
+net use &lt;span style=&#34;color:#cd5555&#34;&gt;\I&lt;/span&gt;P&lt;span style=&#34;color:#cd5555&#34;&gt;\I&lt;/span&gt;PC password /user:name &lt;span style=&#34;color:#228b22&#34;&gt;#建立IPC连接 远程主机的某个共享资源影射为本地盘符&lt;/span&gt;
+copy nc.exe &lt;span style=&#34;color:#cd5555&#34;&gt;\1&lt;/span&gt;92.168.0.7&lt;span style=&#34;color:#cd5555&#34;&gt;\a&lt;/span&gt;dmin &lt;span style=&#34;color:#228b22&#34;&gt;#upload 把本地目录下的nc.exe传到远程主机&lt;/span&gt;
+
+net start servername &lt;span style=&#34;color:#228b22&#34;&gt;#启动远程主机上的服务&lt;/span&gt;
+net stop servername &lt;span style=&#34;color:#228b22&#34;&gt;#停止远程主机上的服务&lt;/span&gt;
+
+net user abcd &lt;span style=&#34;color:#b452cd&#34;&gt;1234&lt;/span&gt; /add &lt;span style=&#34;color:#228b22&#34;&gt;#新建一个用户名为abcd，密码为1234的帐户，默认为user组成员。&lt;/span&gt;
+net user abcd /del &lt;span style=&#34;color:#228b22&#34;&gt;#将用户名为abcd的用户删除。&lt;/span&gt;
+net user abcd /active:no &lt;span style=&#34;color:#228b22&#34;&gt;#将用户名为abcd的用户禁用。&lt;/span&gt;
+net user abcd /active:yes &lt;span style=&#34;color:#228b22&#34;&gt;#激活用户名为abcd的用户。&lt;/span&gt;
+net user abcd &lt;span style=&#34;color:#228b22&#34;&gt;#查看用户名为abcd的用户的情况&lt;/span&gt;
+
+net localgroup groupname username /add &lt;span style=&#34;color:#228b22&#34;&gt;#查看所有和用户组有关的信息和进行相关操作&lt;/span&gt;
+
+net &lt;span style=&#34;color:#658b00&#34;&gt;time&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;\I&lt;/span&gt;P &lt;span style=&#34;color:#228b22&#34;&gt;#可以查看远程主机当前的时间&lt;/span&gt;
+
+
+tracert IP
+
+at &lt;span style=&#34;color:#658b00&#34;&gt;time&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;command&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;\c&lt;/span&gt;omputer &lt;span style=&#34;color:#228b22&#34;&gt;#表示在6点55分时，让名称为a-01的计算机开启telnet服务（这里net start telnet即为开启telnet服务的命令）&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;ftp&#34;&gt;ftp&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;dir &lt;span style=&#34;color:#228b22&#34;&gt;#跟DOS命令一样，用于查看服务器的文件，直接敲上dir回车，就可以看到此ftp服务器上的文件。&lt;/span&gt;
+&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#228b22&#34;&gt;#进入某个文件夹。&lt;/span&gt;
+get &lt;span style=&#34;color:#228b22&#34;&gt;#下载文件到本地机器。&lt;/span&gt;
+put &lt;span style=&#34;color:#228b22&#34;&gt;#上传文件到远程服务器。这就要看远程ftp服务器是否给了你可写的权限了，如果可以，呵呵，该怎么 利用就不多说了，大家就自由发挥去吧。&lt;/span&gt;
+delete &lt;span style=&#34;color:#228b22&#34;&gt;#删除远程ftp服务器上的文件。这也必须保证你有可写的权限。&lt;/span&gt;
+bye &lt;span style=&#34;color:#228b22&#34;&gt;#退出当前连接。&lt;/span&gt;
+quit &lt;span style=&#34;color:#228b22&#34;&gt;#同上&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;telnet&#34;&gt;telnet&lt;/h4&gt;
+&lt;h4 id=&#34;常用命令&#34;&gt;常用命令&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;winver &lt;span style=&#34;color:#228b22&#34;&gt;#检查Windows版本 &lt;/span&gt;
+wmimgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#打开windows管理体系结构(WMI) &lt;/span&gt;
+wupdmgr &lt;span style=&#34;color:#228b22&#34;&gt;#windows更新程序 &lt;/span&gt;
+wscript &lt;span style=&#34;color:#228b22&#34;&gt;#windows脚本宿主设置 &lt;/span&gt;
+write &lt;span style=&#34;color:#228b22&#34;&gt;#写字板 &lt;/span&gt;
+winmsd &lt;span style=&#34;color:#228b22&#34;&gt;#系统信息 &lt;/span&gt;
+wiaacmgr &lt;span style=&#34;color:#228b22&#34;&gt;#扫描仪和照相机向导 &lt;/span&gt;
+winchat &lt;span style=&#34;color:#228b22&#34;&gt;#XP自带局域网聊天&lt;/span&gt;
+mem.exe &lt;span style=&#34;color:#228b22&#34;&gt;#显示内存使用情况 &lt;/span&gt;
+Msconfig.exe &lt;span style=&#34;color:#228b22&#34;&gt;#系统配置实用程序 &lt;/span&gt;
+mplayer2 &lt;span style=&#34;color:#228b22&#34;&gt;#简易widnows media player &lt;/span&gt;
+mspaint &lt;span style=&#34;color:#228b22&#34;&gt;#画图板 &lt;/span&gt;
+mstsc &lt;span style=&#34;color:#228b22&#34;&gt;#远程桌面连接 &lt;/span&gt;
+mplayer2 &lt;span style=&#34;color:#228b22&#34;&gt;#媒体播放机 &lt;/span&gt;
+magnify &lt;span style=&#34;color:#228b22&#34;&gt;#放大镜实用程序 &lt;/span&gt;
+mmc &lt;span style=&#34;color:#228b22&#34;&gt;#打开控制台 &lt;/span&gt;
+mobsync &lt;span style=&#34;color:#228b22&#34;&gt;#同步命令&lt;/span&gt;
+dxdiag &lt;span style=&#34;color:#228b22&#34;&gt;#检查directx&lt;/span&gt;
+drwtsn32 &lt;span style=&#34;color:#228b22&#34;&gt;#系统医生 &lt;/span&gt;
+devmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#设备管理器 &lt;/span&gt;
+dfrg.msc &lt;span style=&#34;color:#228b22&#34;&gt;#-磁盘碎片整理&lt;/span&gt;
+diskmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#磁盘管理实用程序 &lt;/span&gt;
+dcomcnfg &lt;span style=&#34;color:#228b22&#34;&gt;#打开系统组件服务 &lt;/span&gt;
+ddeshare &lt;span style=&#34;color:#228b22&#34;&gt;#打开DDE共享设置 &lt;/span&gt;
+dvdplay &lt;span style=&#34;color:#228b22&#34;&gt;#dvd播放器&lt;/span&gt;
+net stop messenger &lt;span style=&#34;color:#228b22&#34;&gt;#停止信使服务 &lt;/span&gt;
+net start messenger &lt;span style=&#34;color:#228b22&#34;&gt;#开始信使服务 &lt;/span&gt;
+notepad &lt;span style=&#34;color:#228b22&#34;&gt;#打开记事本 &lt;/span&gt;
+nslookup &lt;span style=&#34;color:#228b22&#34;&gt;#网络管理的工具向导 &lt;/span&gt;
+ntbackup &lt;span style=&#34;color:#228b22&#34;&gt;#系统备份和还原 &lt;/span&gt;
+narrator &lt;span style=&#34;color:#228b22&#34;&gt;#屏幕&amp;amp;quot;讲述人&amp;amp;quot; &lt;/span&gt;
+ntmsmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#移动存储管理器 &lt;/span&gt;
+ntmsoprq.msc &lt;span style=&#34;color:#228b22&#34;&gt;#移动存储管理员操作请求 &lt;/span&gt;
+netstat -an &lt;span style=&#34;color:#228b22&#34;&gt;#(TC)命令检查接口&lt;/span&gt;
+syncapp &lt;span style=&#34;color:#228b22&#34;&gt;#创建一个公文包 &lt;/span&gt;
+sysedit &lt;span style=&#34;color:#228b22&#34;&gt;#系统配置编辑器 &lt;/span&gt;
+sigverif &lt;span style=&#34;color:#228b22&#34;&gt;#文件签名验证程序 &lt;/span&gt;
+sndrec32 &lt;span style=&#34;color:#228b22&#34;&gt;#录音机 &lt;/span&gt;
+shrpubw &lt;span style=&#34;color:#228b22&#34;&gt;#创建共享文件夹 &lt;/span&gt;
+secpol.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本地安全策略 &lt;/span&gt;
+syskey &lt;span style=&#34;color:#228b22&#34;&gt;#系统加密，一旦加密就不能解开，保护windows xp系统的双重密码 &lt;/span&gt;
+services.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本地服务设置 &lt;/span&gt;
+Sndvol32 &lt;span style=&#34;color:#228b22&#34;&gt;#音量控制程序 &lt;/span&gt;
+sfc.exe &lt;span style=&#34;color:#228b22&#34;&gt;#系统文件检查器 &lt;/span&gt;
+sfc /scannow &lt;span style=&#34;color:#228b22&#34;&gt;#windows文件保护&lt;/span&gt;
+tsshutdn &lt;span style=&#34;color:#228b22&#34;&gt;#60秒倒计时关机命令 &lt;/span&gt;
+tourstart &lt;span style=&#34;color:#228b22&#34;&gt;#xp简介（安装完成后出现的漫游xp程序） &lt;/span&gt;
+taskmgr &lt;span style=&#34;color:#228b22&#34;&gt;#任务管理器&lt;/span&gt;
+eventvwr &lt;span style=&#34;color:#228b22&#34;&gt;#事件查看器 &lt;/span&gt;
+eudcedit &lt;span style=&#34;color:#228b22&#34;&gt;#造字程序 &lt;/span&gt;
+explorer &lt;span style=&#34;color:#228b22&#34;&gt;#打开资源管理器&lt;/span&gt;
+packager &lt;span style=&#34;color:#228b22&#34;&gt;#对象包装程序 &lt;/span&gt;
+perfmon.msc &lt;span style=&#34;color:#228b22&#34;&gt;#计算机性能监测程序 &lt;/span&gt;
+progman &lt;span style=&#34;color:#228b22&#34;&gt;#程序管理器&lt;/span&gt;
+regedit.exe &lt;span style=&#34;color:#228b22&#34;&gt;#注册表 &lt;/span&gt;
+rsop.msc &lt;span style=&#34;color:#228b22&#34;&gt;#组策略结果集 &lt;/span&gt;
+regedt32 &lt;span style=&#34;color:#228b22&#34;&gt;#注册表编辑器 &lt;/span&gt;
+rononce -p &lt;span style=&#34;color:#228b22&#34;&gt;#15秒关机 &lt;/span&gt;
+regsvr32 /u *.dll &lt;span style=&#34;color:#228b22&#34;&gt;#停止dll文件运行 &lt;/span&gt;
+regsvr32 /u zipfldr.dll &lt;span style=&#34;color:#228b22&#34;&gt;#取消ZIP支持&lt;/span&gt;
+cmd.exe &lt;span style=&#34;color:#228b22&#34;&gt;#CMD命令提示符 &lt;/span&gt;
+chkdsk.exe &lt;span style=&#34;color:#228b22&#34;&gt;#Chkdsk磁盘检查 &lt;/span&gt;
+certmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#证书管理实用程序 &lt;/span&gt;
+calc &lt;span style=&#34;color:#228b22&#34;&gt;#启动计算器&lt;/span&gt;
+charmap &lt;span style=&#34;color:#228b22&#34;&gt;#启动字符映射表 &lt;/span&gt;
+cliconfg &lt;span style=&#34;color:#228b22&#34;&gt;#sql server 客户端网络实用程序 &lt;/span&gt;
+Clipbrd &lt;span style=&#34;color:#228b22&#34;&gt;#剪贴板查看器 &lt;/span&gt;
+conf &lt;span style=&#34;color:#228b22&#34;&gt;#启动netmeeting &lt;/span&gt;
+compmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#计算机管理 &lt;/span&gt;
+cleanmgr &lt;span style=&#34;color:#228b22&#34;&gt;#垃圾整理 &lt;/span&gt;
+ciadv.msc &lt;span style=&#34;color:#228b22&#34;&gt;#索引服务程序&lt;/span&gt;
+osk &lt;span style=&#34;color:#228b22&#34;&gt;#打开屏幕键盘 &lt;/span&gt;
+odbcad32 &lt;span style=&#34;color:#228b22&#34;&gt;#ODBC数据源管理器 &lt;/span&gt;
+oobe/msoobe /a &lt;span style=&#34;color:#228b22&#34;&gt;#检查XP是否激活 &lt;/span&gt;
+lusrmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本机用户和组 &lt;/span&gt;
+iexpress &lt;span style=&#34;color:#228b22&#34;&gt;#木马捆绑工具，系统自带&lt;/span&gt;
+Nslookup &lt;span style=&#34;color:#228b22&#34;&gt;#IP地址侦测器&lt;/span&gt;
+fsmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#共享文件夹管理器&lt;/span&gt;
+utilman &lt;span style=&#34;color:#228b22&#34;&gt;#辅助工具管理器&lt;/span&gt;
+gpedit.msc &lt;span style=&#34;color:#228b22&#34;&gt;#组策略&lt;/span&gt;
+ntmsoprq.msc &lt;span style=&#34;color:#228b22&#34;&gt;#移动存储管理员操作请求&lt;/span&gt;
+netstat -an &lt;span style=&#34;color:#228b22&#34;&gt;#(TC)命令检查接口&lt;/span&gt;
+Nslookup &lt;span style=&#34;color:#228b22&#34;&gt;#IP地址侦测器&lt;/span&gt;
+oobe/msoobe /a &lt;span style=&#34;color:#228b22&#34;&gt;#检查windows是否激活&lt;/span&gt;
+odbcad32 &lt;span style=&#34;color:#228b22&#34;&gt;#ODBC数据源管理器&lt;/span&gt;
+progman &lt;span style=&#34;color:#228b22&#34;&gt;#程序管理器&lt;/span&gt;
+perfmon.msc &lt;span style=&#34;color:#228b22&#34;&gt;#计算机性能监测程序&lt;/span&gt;
+packager &lt;span style=&#34;color:#228b22&#34;&gt;#对象包装程序&lt;/span&gt;
+rononce -p  &lt;span style=&#34;color:#228b22&#34;&gt;#15秒关机&lt;/span&gt;
+regsvr32 /u *.dll &lt;span style=&#34;color:#228b22&#34;&gt;#停止dll文件运行(把*号换成要停止的dll文件名)&lt;/span&gt;
+regedt32 &lt;span style=&#34;color:#228b22&#34;&gt;#注册表编辑器&lt;/span&gt;
+rsop.msc &lt;span style=&#34;color:#228b22&#34;&gt;#组策略结果集&lt;/span&gt;
+regedit.exe–注册表
+regsvr32 /u zipfldr.dll &lt;span style=&#34;color:#228b22&#34;&gt;#取消ZIP支持&lt;/span&gt;
+sndrec32 &lt;span style=&#34;color:#228b22&#34;&gt;#录音机&lt;/span&gt;
+services.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本地服务设置&lt;/span&gt;
+syncapp &lt;span style=&#34;color:#228b22&#34;&gt;#创建一个公文包&lt;/span&gt;
+sysedit &lt;span style=&#34;color:#228b22&#34;&gt;#系统配置编辑器&lt;/span&gt;
+sigverif &lt;span style=&#34;color:#228b22&#34;&gt;#文件签名验证程序&lt;/span&gt;
+shrpubw &lt;span style=&#34;color:#228b22&#34;&gt;#创建共享文件夹&lt;/span&gt;
+secpol.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本地安全策略&lt;/span&gt;
+syskey &lt;span style=&#34;color:#228b22&#34;&gt;#系统加密&lt;/span&gt;
+Sndvol32 &lt;span style=&#34;color:#228b22&#34;&gt;#音量控制程序&lt;/span&gt;
+sfc.exe &lt;span style=&#34;color:#228b22&#34;&gt;#系统文件检查器&lt;/span&gt;
+sfc /scannow &lt;span style=&#34;color:#228b22&#34;&gt;#windows文件保护(扫描错误并复原)&lt;/span&gt;
+tsshutdn &lt;span style=&#34;color:#228b22&#34;&gt;#60秒倒计时关机命令&lt;/span&gt;
+taskmgr &lt;span style=&#34;color:#228b22&#34;&gt;#任务管理器&lt;/span&gt;
+utilman &lt;span style=&#34;color:#228b22&#34;&gt;#辅助工具管理器&lt;/span&gt;
+winmsd &lt;span style=&#34;color:#228b22&#34;&gt;#系统信息&lt;/span&gt;
+winver &lt;span style=&#34;color:#228b22&#34;&gt;#检查Windows版本&lt;/span&gt;
+wmimgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#打开windows管理体系结构(WMI)&lt;/span&gt;
+wupdmgr &lt;span style=&#34;color:#228b22&#34;&gt;#windows更新程序 (不是正版系统不要打开)&lt;/span&gt;
+Wscript.exe &lt;span style=&#34;color:#228b22&#34;&gt;#windows脚本宿主设置&lt;/span&gt;
+wiaacmgr &lt;span style=&#34;color:#228b22&#34;&gt;#扫描仪和照相机向导&lt;/span&gt;
+cleanmgr &lt;span style=&#34;color:#228b22&#34;&gt;#打开磁盘清理工具&lt;/span&gt;
+compmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#计算机管理&lt;/span&gt;
+conf &lt;span style=&#34;color:#228b22&#34;&gt;#启动 netmeeting&lt;/span&gt;
+chkdsk.exe &lt;span style=&#34;color:#228b22&#34;&gt;#Chkdsk磁盘检查&lt;/span&gt;
+cmd.exe &lt;span style=&#34;color:#228b22&#34;&gt;#CMD命令提示符&lt;/span&gt;
+certmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#证书管理实用程序&lt;/span&gt;
+cliconfg &lt;span style=&#34;color:#228b22&#34;&gt;#SQL SERVER 客户端网络实用程序&lt;/span&gt;
+Clipbrd &lt;span style=&#34;color:#228b22&#34;&gt;#剪贴板查看器&lt;/span&gt;
+ciadv.msc &lt;span style=&#34;color:#228b22&#34;&gt;#索引服务程序&lt;/span&gt;
+dvdplay &lt;span style=&#34;color:#228b22&#34;&gt;#DVD播放器&lt;/span&gt;
+diskmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#磁盘管理实用程序&lt;/span&gt;
+dfrg.msc &lt;span style=&#34;color:#228b22&#34;&gt;#磁盘碎片整理程序&lt;/span&gt;
+devmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#设备管理器&lt;/span&gt;
+drwtsn32 &lt;span style=&#34;color:#228b22&#34;&gt;#系统医生&lt;/span&gt;
+dxdiag &lt;span style=&#34;color:#228b22&#34;&gt;#检查DirectX信息&lt;/span&gt;
+dcomcnfg &lt;span style=&#34;color:#228b22&#34;&gt;#打开系统组件服务&lt;/span&gt;
+ddeshare &lt;span style=&#34;color:#228b22&#34;&gt;#打开DDE共享设置&lt;/span&gt;
+explorer &lt;span style=&#34;color:#228b22&#34;&gt;#打开资源管理器&lt;/span&gt;
+eventvwr &lt;span style=&#34;color:#228b22&#34;&gt;#事件查看器&lt;/span&gt;
+eudcedit &lt;span style=&#34;color:#228b22&#34;&gt;#造字程序&lt;/span&gt;
+fsmgmt.msc &lt;span style=&#34;color:#228b22&#34;&gt;#共享文件夹管理器&lt;/span&gt;
+gpedit.msc &lt;span style=&#34;color:#228b22&#34;&gt;#组策略&lt;/span&gt;
+iexpress &lt;span style=&#34;color:#228b22&#34;&gt;#工具，系统自带&lt;/span&gt;
+logoff &lt;span style=&#34;color:#228b22&#34;&gt;#注销命令&lt;/span&gt;
+lusrmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#本机用户和组&lt;/span&gt;
+mstsc &lt;span style=&#34;color:#228b22&#34;&gt;#远程桌面连接&lt;/span&gt;
+Msconfig.exe &lt;span style=&#34;color:#228b22&#34;&gt;#系统配置实用程序&lt;/span&gt;
+mem.exe &lt;span style=&#34;color:#228b22&#34;&gt;#显示内存使用情况(如果直接运行无效，可以先运行cmd，在命令提示符里输入mem.exe&amp;gt;d:a.txt 即可打开d盘查看a.txt，里面的就是内存使用情况了。当然什么盘什么文件名可自己决定。)&lt;/span&gt;
+mplayer2 &lt;span style=&#34;color:#228b22&#34;&gt;#简易widnows media player&lt;/span&gt;
+mspaint &lt;span style=&#34;color:#228b22&#34;&gt;#画图板&lt;/span&gt;
+mplayer2 &lt;span style=&#34;color:#228b22&#34;&gt;#媒体播放机&lt;/span&gt;
+magnify &lt;span style=&#34;color:#228b22&#34;&gt;#放大镜实用程序&lt;/span&gt;
+mmc &lt;span style=&#34;color:#228b22&#34;&gt;#打开控制台&lt;/span&gt;
+mobsync &lt;span style=&#34;color:#228b22&#34;&gt;#同步命令&lt;/span&gt;
+notepad &lt;span style=&#34;color:#228b22&#34;&gt;#打开记事本&lt;/span&gt;
+net start messenger &lt;span style=&#34;color:#228b22&#34;&gt;#开始信使服务&lt;/span&gt;
+net stop messenger &lt;span style=&#34;color:#228b22&#34;&gt;#停止信使服务&lt;/span&gt;
+notepad &lt;span style=&#34;color:#228b22&#34;&gt;#打开记事本&lt;/span&gt;
+nslookup &lt;span style=&#34;color:#228b22&#34;&gt;#网络管理的工具向导&lt;/span&gt;
+ntbackup &lt;span style=&#34;color:#228b22&#34;&gt;#系统备份和还原&lt;/span&gt;
+narrator &lt;span style=&#34;color:#228b22&#34;&gt;#屏幕“讲述人”&lt;/span&gt;
+ntmsmgr.msc &lt;span style=&#34;color:#228b22&#34;&gt;#移动存储管理器&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;how-to-find-the-target-exe-file-of-appref-mshttpsstackoverflowcomquestions10766334how-to-find-the-target-exe-file-of-appref-ms&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/10766334/how-to-find-the-target-exe-file-of-appref-ms&#34;&gt;How to find the Target *.exe file of *.appref-ms&lt;/a&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
+&lt;h3 id=&#34;papers&#34;&gt;Papers&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://chsasank.com/classic_papers/unix-time-sharing-system.html&#34;&gt;The UNIX Time-Sharing System&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;operation-2&#34;&gt;Operation&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ chown -R nginx:users ./*
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看当前文件夹下权限&lt;/span&gt;
+$ ls -l
+
+$ netstat -npa | grep &lt;span style=&#34;color:#b452cd&#34;&gt;9000&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看当前路径&lt;/span&gt;
+$ &lt;span style=&#34;color:#658b00&#34;&gt;pwd&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 安装git&lt;/span&gt;
+$ yum -y install git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;vim&#34;&gt;vim&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 退出编辑模式，输入以下命令：&lt;/span&gt;
+Esc 
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 保存后退出vi，若为 :wq! 则为强制储存后退出（常用）&lt;/span&gt;
+:wq
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 保存但不退出（常用）&lt;/span&gt;
+:w
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 若文件属性为『只读』时，强制写入该档案&lt;/span&gt;
+:w!
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 离开 vi （常用）&lt;/span&gt;
+:q    
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。&lt;/span&gt;
+:q!   
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 将档案还原到最原始的状态！&lt;/span&gt;
+:e!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;tail&#34;&gt;tail&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 现有itbilu.log日志文件，查看其后5行：&lt;/span&gt;
+$ tail -n -5 itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
+$ tail -n &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt; itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
+$ tail -5 itbilu.log
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 查看第100行至文件末尾：&lt;/span&gt;
+$ tail -n +100 itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
+$ tail +100 itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 配合head命令，实现查看文件的第10到20行：&lt;/span&gt;
+$ head -20 itbilu.log | tail -10
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 实时查看日志&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 通过-f参数，我们可以实时查看文件的新增内容：&lt;/span&gt;
+$ tail -f itbilu.log
+&lt;span style=&#34;color:#228b22&#34;&gt;# 注意：使用-f参数时不会中断文件监视，需要通过ctrl+c手动结束。&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;# 实时日志查看与grep过滤关键字&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 通过-f参数，并配合grep命令，可以实现对文件内容的过滤。如：查看前几行、后几行、或前后几行，这时可以通过以下几个参数实现：&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# -A &amp;lt;显示行数&amp;gt;            除了显示符合匹配内容的那一行之外，并显示该行之后的内容&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# -B &amp;lt;显示行数&amp;gt;            在显示符合匹配内容的那一行之外，并显示该行之前的内容&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# -C &amp;lt;显示行数&amp;gt;或-&amp;lt;显示行数&amp;gt; 除了显示符合匹配内容的那一列之外，并显示该列之前后的内容&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 监控itbilu.log日志件，并查看含有&amp;#39;foo&amp;#39;关键字的前后5行：&lt;/span&gt;
+$ tail -f itbilu.log|grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt; -C &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;# 或&lt;/span&gt;
+$ tail -f itbilu.log|grep &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt; -5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;issues-1&#34;&gt;Issues&lt;/h3&gt;
+&lt;h4 id=&#34;how-is-it-possible-for-fork-to-return-two-valueshttpsstackoverflowcomquestions4207656how-is-it-possible-for-fork-to-return-two-values&#34;&gt;&lt;a href=&#34;https://stackoverflow.com/questions/4207656/how-is-it-possible-for-fork-to-return-two-values&#34;&gt;How is it possible for fork() to return two values?&lt;/a&gt;&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;fork&lt;/code&gt; does not return two values. Right after a &lt;code&gt;fork&lt;/code&gt; system call you simply have two independent processes executing the same code, and the returned pid from &lt;code&gt;fork&lt;/code&gt; is the only way to distinguish which process are you in - the parent or the child.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;iptables--nftables&#34;&gt;iptables &amp;amp; nftables&lt;/h4&gt;
+&lt;h4 id=&#34;linux-command-full-english-name&#34;&gt;Linux command full English name&lt;/h4&gt;
+&lt;p&gt;/bin = BINaries&lt;/p&gt;
+&lt;p&gt;/dev = DEVices&lt;/p&gt;
+&lt;p&gt;/etc = ETCetera&lt;/p&gt;
+&lt;p&gt;/lib = LIBrary&lt;/p&gt;
+&lt;p&gt;/proc = PROCesses&lt;/p&gt;
+&lt;p&gt;/sbin = Superuser BINaries&lt;/p&gt;
+&lt;p&gt;/tmp = TeMPorary&lt;/p&gt;
+&lt;p&gt;/usr = Unix Shared Resources&lt;/p&gt;
+&lt;p&gt;/var = VARiable ?&lt;/p&gt;
+&lt;p&gt;FIFO = First In, First Out&lt;/p&gt;
+&lt;p&gt;GRUB = GRand Unified Bootloader&lt;/p&gt;
+&lt;p&gt;IFS = Internal Field Seperators&lt;/p&gt;
+&lt;p&gt;LILO = LInux LOader&lt;/p&gt;
+&lt;p&gt;MySQL = My is the name of the original author&amp;rsquo;s daughter, SQL = Structured Query Language&lt;/p&gt;
+&lt;p&gt;PHP = Personal Home Page Tools = PHP Hypertext Preprocessor&lt;/p&gt;
+&lt;p&gt;PS = Prompt String&lt;/p&gt;
+&lt;p&gt;Perl = &amp;ldquo;Pratical Extraction and Report Language&amp;rdquo; = &amp;ldquo;Pathologically Eclectic Rubbish Lister&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Python gets its name from the TV series Monty Python&amp;rsquo;s Flying Circus&lt;/p&gt;
+&lt;p&gt;Tcl = Tool Command Language&lt;/p&gt;
+&lt;p&gt;Tk = ToolKit&lt;/p&gt;
+&lt;p&gt;VT = Video Terminal&lt;/p&gt;
+&lt;p&gt;YaST = Yet Another Setup Tool&lt;/p&gt;
+&lt;p&gt;apache = &amp;ldquo;a patchy&amp;rdquo; server&lt;/p&gt;
+&lt;p&gt;apt = Advanced Packaging Tool&lt;/p&gt;
+&lt;p&gt;ar = archiver&lt;/p&gt;
+&lt;p&gt;as = assembler&lt;/p&gt;
+&lt;p&gt;awk = &amp;ldquo;Aho Weiberger and Kernighan&amp;rdquo; The first letter of the last name of the three author&lt;/p&gt;
+&lt;p&gt;bash = Bourne Again SHell&lt;/p&gt;
+&lt;p&gt;bc = Basic (Better) Calculator&lt;/p&gt;
+&lt;p&gt;bg = BackGround&lt;/p&gt;
+&lt;p&gt;biff = A dog raised by Uid Berkely by author Heidi Stettner.&lt;/p&gt;
+&lt;p&gt;cal = CALendar&lt;/p&gt;
+&lt;p&gt;cat = CATenate&lt;/p&gt;
+&lt;p&gt;cd = Change Directory&lt;/p&gt;
+&lt;p&gt;chgrp = CHange GRouP&lt;/p&gt;
+&lt;p&gt;chmod = CHange MODe&lt;/p&gt;
+&lt;p&gt;chown = CHange OWNer&lt;/p&gt;
+&lt;p&gt;chsh = CHange SHell&lt;/p&gt;
+&lt;p&gt;cmp = compare&lt;/p&gt;
+&lt;p&gt;cobra = Common Object Request Broker Architecture&lt;/p&gt;
+&lt;p&gt;comm = common&lt;/p&gt;
+&lt;p&gt;cp = CoPy&lt;/p&gt;
+&lt;p&gt;cpio = CoPy In and Out&lt;/p&gt;
+&lt;p&gt;cpp = C Pre Processor&lt;/p&gt;
+&lt;p&gt;cron = Chronos Greek time&lt;/p&gt;
+&lt;p&gt;cups = Common Unix Printing System&lt;/p&gt;
+&lt;p&gt;cvs = Current Version System&lt;/p&gt;
+&lt;p&gt;daemon = Disk And Execution MONitor&lt;/p&gt;
+&lt;p&gt;dc = Desk Calculator&lt;/p&gt;
+&lt;p&gt;dd = Disk Dump&lt;/p&gt;
+&lt;p&gt;df = Disk Free&lt;/p&gt;
+&lt;p&gt;diff = DIFFerence&lt;/p&gt;
+&lt;p&gt;dmesg = diagnostic message&lt;/p&gt;
+&lt;p&gt;du = Disk Usage&lt;/p&gt;
+&lt;p&gt;ed = editor&lt;/p&gt;
+&lt;p&gt;egrep = Extended GREP&lt;/p&gt;
+&lt;p&gt;elf = Extensible Linking Format&lt;/p&gt;
+&lt;p&gt;elm = ELectronic Mail&lt;/p&gt;
+&lt;p&gt;emacs = Editor MACroS&lt;/p&gt;
+&lt;p&gt;eval = EVALuate&lt;/p&gt;
+&lt;p&gt;ex = EXtended&lt;/p&gt;
+&lt;p&gt;exec = EXECute&lt;/p&gt;
+&lt;p&gt;fd = file descriptors&lt;/p&gt;
+&lt;p&gt;fg = ForeGround&lt;/p&gt;
+&lt;p&gt;fgrep = Fixed GREP&lt;/p&gt;
+&lt;p&gt;fmt = format&lt;/p&gt;
+&lt;p&gt;fsck = File System ChecK&lt;/p&gt;
+&lt;p&gt;fstab = FileSystem TABle&lt;/p&gt;
+&lt;p&gt;fvwm = F*** Virtual Window Manager&lt;/p&gt;
+&lt;p&gt;gawk = GNU AWK&lt;/p&gt;
+&lt;p&gt;gpg = GNU Privacy Guard&lt;/p&gt;
+&lt;p&gt;groff = GNU troff&lt;/p&gt;
+&lt;p&gt;hal = Hardware Abstraction Layer&lt;/p&gt;
+&lt;p&gt;joe = Joe&amp;rsquo;s Own Editor&lt;/p&gt;
+&lt;p&gt;ksh = Korn SHell&lt;/p&gt;
+&lt;p&gt;lame = Lame Ain&amp;rsquo;t an MP3 Encoder&lt;/p&gt;
+&lt;p&gt;lex = LEXical analyser&lt;/p&gt;
+&lt;p&gt;lisp = LISt Processing = Lots of Irritating Superfluous Parentheses&lt;/p&gt;
+&lt;p&gt;ln = LiNk&lt;/p&gt;
+&lt;p&gt;lpr = Line PRint&lt;/p&gt;
+&lt;p&gt;ls = list&lt;/p&gt;
+&lt;p&gt;lsof = LiSt Open Files&lt;/p&gt;
+&lt;p&gt;m4 = Macro processor Version 4&lt;/p&gt;
+&lt;p&gt;man = MANual pages&lt;/p&gt;
+&lt;p&gt;mawk = Mike Brennan&amp;rsquo;s AWK&lt;/p&gt;
+&lt;p&gt;mc = Midnight Commander&lt;/p&gt;
+&lt;p&gt;mkfs = MaKe FileSystem&lt;/p&gt;
+&lt;p&gt;mknod = MaKe NODe&lt;/p&gt;
+&lt;p&gt;motd = Message of The Day&lt;/p&gt;
+&lt;p&gt;mozilla = MOsaic GodZILLa&lt;/p&gt;
+&lt;p&gt;mtab = Mount TABle&lt;/p&gt;
+&lt;p&gt;mv = MoVe&lt;/p&gt;
+&lt;p&gt;nano = Nano&amp;rsquo;s ANOther editor&lt;/p&gt;
+&lt;p&gt;nawk = New AWK&lt;/p&gt;
+&lt;p&gt;nl = Number of Lines&lt;/p&gt;
+&lt;p&gt;nm = names&lt;/p&gt;
+&lt;p&gt;nohup = No HangUP&lt;/p&gt;
+&lt;p&gt;nroff = New ROFF&lt;/p&gt;
+&lt;p&gt;od = Octal Dump&lt;/p&gt;
+&lt;p&gt;passwd = PASSWorD&lt;/p&gt;
+&lt;p&gt;pg = pager&lt;/p&gt;
+&lt;p&gt;pico = PIne&amp;rsquo;s message COmposition editor&lt;/p&gt;
+&lt;p&gt;pine = &amp;ldquo;Program for Internet News &amp;amp; Email&amp;rdquo; = &amp;ldquo;Pine is not Elm&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;ping = Onomatopoeia = Packet InterNet Grouper&lt;/p&gt;
+&lt;p&gt;pirntcap = PRINTer CAPability&lt;/p&gt;
+&lt;p&gt;popd = POP Directory&lt;/p&gt;
+&lt;p&gt;pr = pre&lt;/p&gt;
+&lt;p&gt;printf = PRINT Formatted&lt;/p&gt;
+&lt;p&gt;ps = Processes Status&lt;/p&gt;
+&lt;p&gt;pty = pseudo tty&lt;/p&gt;
+&lt;p&gt;pushd = PUSH Directory&lt;/p&gt;
+&lt;p&gt;pwd = Print Working Directory&lt;/p&gt;
+&lt;p&gt;rc = runcom = run command, rc is still the shell of plan9&lt;/p&gt;
+&lt;p&gt;rev = REVerse&lt;/p&gt;
+&lt;p&gt;rm = ReMove&lt;/p&gt;
+&lt;p&gt;rn = Read News&lt;/p&gt;
+&lt;p&gt;roff = RunOFF&lt;/p&gt;
+&lt;p&gt;rpm = RPM Package Manager = RedHat Package Manager&lt;/p&gt;
+&lt;p&gt;rsh, rlogin, r = Remote in rvim&lt;/p&gt;
+&lt;p&gt;rxvt = ouR XVT&lt;/p&gt;
+&lt;p&gt;seamoneky = me&lt;/p&gt;
+&lt;p&gt;sed = Stream EDitor&lt;/p&gt;
+&lt;p&gt;seq = SEQuence&lt;/p&gt;
+&lt;p&gt;shar = SHell ARchive&lt;/p&gt;
+&lt;p&gt;slrn = S-Lang rn&lt;/p&gt;
+&lt;p&gt;ssh = Secure SHell&lt;/p&gt;
+&lt;p&gt;ssl = Secure Sockets Layer&lt;/p&gt;
+&lt;p&gt;stty = Set TTY&lt;/p&gt;
+&lt;p&gt;su = Susuper user&amp;quot;&lt;/p&gt;
+&lt;p&gt;svn = SubVersioN&lt;/p&gt;
+&lt;p&gt;tar = Tape ARchive&lt;/p&gt;
+&lt;p&gt;tcsh = TENEX C shell&lt;/p&gt;
+&lt;p&gt;tee = T (T-shaped water pipe connection)&lt;/p&gt;
+&lt;p&gt;telnet = TEminaL over Network&lt;/p&gt;
+&lt;p&gt;termcap = terminal capability&lt;/p&gt;
+&lt;p&gt;terminfo = terminal information&lt;/p&gt;
+&lt;p&gt;tex = abbreviation of τ? χνη, Greek art&lt;/p&gt;
+&lt;p&gt;tr = traslate&lt;/p&gt;
+&lt;p&gt;troff = Typesetter new ROFF&lt;/p&gt;
+&lt;p&gt;tsort = Topological SORT&lt;/p&gt;
+&lt;p&gt;tty = TeleTypewriter&lt;/p&gt;
+&lt;p&gt;twm = Tom&amp;rsquo;s Window Manager&lt;/p&gt;
+&lt;p&gt;tz = TimeZone&lt;/p&gt;
+&lt;p&gt;udev = Userspace DEV&lt;/p&gt;
+&lt;p&gt;ulimit = User&amp;rsquo;s LIMIT&lt;/p&gt;
+&lt;p&gt;umask = User&amp;rsquo;s MASK&lt;/p&gt;
+&lt;p&gt;uniq = UNIQue&lt;/p&gt;
+&lt;p&gt;vi = VIsual = Very Inconvenient&lt;/p&gt;
+&lt;p&gt;vim = Vi IMproved&lt;/p&gt;
+&lt;p&gt;wall = write all&lt;/p&gt;
+&lt;p&gt;wc = Word Count&lt;/p&gt;
+&lt;p&gt;wine = WINE Is Not an Emulator&lt;/p&gt;
+&lt;p&gt;xargs = eXtended ARGuments&lt;/p&gt;
+&lt;p&gt;xdm = X Display Manager&lt;/p&gt;
+&lt;p&gt;xlfd = X Logical Font Description&lt;/p&gt;
+&lt;p&gt;xmms = X Multimedia System&lt;/p&gt;
+&lt;p&gt;xrdb = X Resources DataBase&lt;/p&gt;
+&lt;p&gt;xwd = X Window Dump&lt;/p&gt;
+&lt;p&gt;yacc = yet another compiler compiler&lt;/p&gt;
+&lt;h5 id=&#34;filedirectory-basics&#34;&gt;File/Directory Basics&lt;/h5&gt;
+&lt;p&gt;ls List files&lt;/p&gt;
+&lt;p&gt;cp Copy files&lt;/p&gt;
+&lt;p&gt;mv Rename files&lt;/p&gt;
+&lt;p&gt;rm Delete files&lt;/p&gt;
+&lt;p&gt;ln Link files&lt;/p&gt;
+&lt;p&gt;cd Change directory&lt;/p&gt;
+&lt;p&gt;pwd Print current directory&lt;/p&gt;
+&lt;p&gt;name&lt;/p&gt;
+&lt;p&gt;mkdir Create directory&lt;/p&gt;
+&lt;p&gt;rmdir Delete directory&lt;/p&gt;
+&lt;h5 id=&#34;file-viewing&#34;&gt;File Viewing&lt;/h5&gt;
+&lt;p&gt;cat View files&lt;/p&gt;
+&lt;p&gt;less Page through files&lt;/p&gt;
+&lt;p&gt;head View file beginning&lt;/p&gt;
+&lt;p&gt;tail View file ending&lt;/p&gt;
+&lt;p&gt;nl Number lines&lt;/p&gt;
+&lt;p&gt;od View binary data&lt;/p&gt;
+&lt;p&gt;xxd View binary data&lt;/p&gt;
+&lt;p&gt;gv View Postscript/PDF files&lt;/p&gt;
+&lt;p&gt;xdvi View TeX DVI files&lt;/p&gt;
+&lt;p&gt;File Creation and Editing&lt;/p&gt;
+&lt;p&gt;emacs Text editor&lt;/p&gt;
+&lt;p&gt;vim Text editor&lt;/p&gt;
+&lt;p&gt;umask Set default file&lt;/p&gt;
+&lt;p&gt;protections&lt;/p&gt;
+&lt;p&gt;soffice Edit Word/Excel/&lt;/p&gt;
+&lt;p&gt;PowerPoint docs&lt;/p&gt;
+&lt;p&gt;abiword  Edit Word documents&lt;/p&gt;
+&lt;p&gt;gnumeric  Edit Excel documents&lt;/p&gt;
+&lt;h5 id=&#34;file-properties&#34;&gt;File Properties&lt;/h5&gt;
+&lt;p&gt;stat Display file attributes&lt;/p&gt;
+&lt;p&gt;wc Count bytes/words/lines&lt;/p&gt;
+&lt;p&gt;du Measure disk usage&lt;/p&gt;
+&lt;p&gt;file Identify file types&lt;/p&gt;
+&lt;p&gt;touch Change file timestamps&lt;/p&gt;
+&lt;p&gt;chown Change file owner&lt;/p&gt;
+&lt;p&gt;chgrp Change file group&lt;/p&gt;
+&lt;p&gt;chmod Change file protections&lt;/p&gt;
+&lt;p&gt;chattr Change advanced file&lt;/p&gt;
+&lt;p&gt;attributes&lt;/p&gt;
+&lt;p&gt;lsattr List advanced file&lt;/p&gt;
+&lt;p&gt;attributes&lt;/p&gt;
+&lt;p&gt;File Location&lt;/p&gt;
+&lt;p&gt;find Locate files&lt;/p&gt;
+&lt;p&gt;slocate Locate files via index&lt;/p&gt;
+&lt;p&gt;which Locate commands&lt;/p&gt;
+&lt;p&gt;whereis Locate standard files&lt;/p&gt;
+&lt;p&gt;File Text Manipulation&lt;/p&gt;
+&lt;p&gt;grep Search text for matching&lt;/p&gt;
+&lt;p&gt;lines&lt;/p&gt;
+&lt;p&gt;cut Extract columns&lt;/p&gt;
+&lt;p&gt;paste Append columns&lt;/p&gt;
+&lt;p&gt;tr Translate characters&lt;/p&gt;
+&lt;p&gt;sort Sort lines&lt;/p&gt;
+&lt;p&gt;uniq Locate identical lines&lt;/p&gt;
+&lt;p&gt;tee Copy stdin to a file and&lt;/p&gt;
+&lt;p&gt;to stdout simultaneously&lt;/p&gt;
+&lt;p&gt;File Compression&lt;/p&gt;
+&lt;p&gt;gzip Compress files&lt;/p&gt;
+&lt;p&gt;(GNU Zip)&lt;/p&gt;
+&lt;p&gt;compress Compress files (Unix)&lt;/p&gt;
+&lt;p&gt;bzip2 Compress files (BZip2)&lt;/p&gt;
+&lt;p&gt;zip Compress files&lt;/p&gt;
+&lt;p&gt;(Windows Zip)&lt;/p&gt;
+&lt;p&gt;File Comparison&lt;/p&gt;
+&lt;p&gt;diff Compare files line by line&lt;/p&gt;
+&lt;p&gt;comm Compare sorted files&lt;/p&gt;
+&lt;p&gt;cmp Compare files byte&lt;/p&gt;
+&lt;p&gt;by byte&lt;/p&gt;
+&lt;p&gt;md5sum Compute checksums&lt;/p&gt;
+&lt;h5 id=&#34;disks-and-filesystems&#34;&gt;Disks and Filesystems&lt;/h5&gt;
+&lt;p&gt;df  Show free disk space&lt;/p&gt;
+&lt;p&gt;mount Make a disk accessible&lt;/p&gt;
+&lt;p&gt;fsck Check a disk for errors&lt;/p&gt;
+&lt;p&gt;sync Flush disk caches&lt;/p&gt;
+&lt;p&gt;Backups and Remote Storage&lt;/p&gt;
+&lt;p&gt;mt Control a tape drive&lt;/p&gt;
+&lt;p&gt;dump Back up a disk&lt;/p&gt;
+&lt;p&gt;restore Restore a dump&lt;/p&gt;
+&lt;p&gt;tar Read/write tape archives&lt;/p&gt;
+&lt;p&gt;cdrecord Burn a CD&lt;/p&gt;
+&lt;p&gt;rsync Mirror a set of files&lt;/p&gt;
+- https://www.openheart.icu/computing-science/operating-system/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Work Review</title>
+        <link>https://www.openheart.icu/business/work-review/</link>
+        <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
+        
+        <guid>https://www.openheart.icu/business/work-review/</guid>
+        <description>42th openheart https://www.openheart.icu/business/work-review/ -&lt;h1 id=&#34;measures&#34;&gt;Measures&lt;/h1&gt;
+&lt;h2 id=&#34;kpi&#34;&gt;KPI&lt;/h2&gt;
+&lt;p&gt;key performance indicator&lt;/p&gt;
+&lt;h2 id=&#34;okr&#34;&gt;OKR&lt;/h2&gt;
+&lt;p&gt;Objectives and key results&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.okr.com/&#34;&gt;OKR.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rre&#34;&gt;RRE&lt;/h2&gt;
+&lt;h2 id=&#34;360&#34;&gt;360&lt;/h2&gt;
+&lt;p&gt;Pronounce it &amp;lsquo;Three-Sixty&amp;rsquo;.&lt;/p&gt;
+&lt;h1 id=&#34;how-to-increase-efficiency&#34;&gt;How to increase efficiency&lt;/h1&gt;
+&lt;h2 id=&#34;pomodoro-techniquehttpsenwikipediaorgwikipomodoro_technique&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Pomodoro_Technique&#34;&gt;Pomodoro Technique&lt;/a&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;problem-solving-process&#34;&gt;Problem Solving Process&lt;/h2&gt;
+&lt;h3 id=&#34;define-the-problem&#34;&gt;Define the Problem&lt;/h3&gt;
+&lt;p&gt;Mostly, we can not figure out the situation: what&amp;rsquo;s the problem?&lt;/p&gt;
+&lt;p&gt;It will impact our solution.  Whatever underestimate or overestimate. (Generally, we will think our solution as a line, from start to finish. But it may be a curve or cycle. So it&amp;rsquo;ll take π time to resolve it.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pareto chart&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A Pareto chart is a bar graph. The lengths of the bars represent frequency or cost (time or money), and are arranged with longest bars on the left and the shortest to the right. In this way the chart visually depicts which situations are more significant&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5 Whys&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To get the root cause.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fishbone Diagram&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Scatter Diagram&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Histogram&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ideate&#34;&gt;Ideate&lt;/h3&gt;
+&lt;p&gt;Brainstorm&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Every idea is welcome.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Xmind? I think it&amp;rsquo;s just useful in organize your notes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Effectiveness and Practicality Matrix.&lt;/p&gt;
+&lt;h3 id=&#34;implement&#34;&gt;Implement&lt;/h3&gt;
+&lt;p&gt;Pilot test.&lt;/p&gt;
+&lt;p&gt;Gather feedback.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gantt Chart&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;evaluate-iterate-improve&#34;&gt;Evaluate, Iterate, Improve&lt;/h3&gt;
+&lt;p&gt;Marshmallow Challenge&lt;/p&gt;
+&lt;p&gt;Reference:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=BEQvq99PZwo&#34;&gt;Five Whys Jefferson Memorial Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-most-important-attribute-to-hire-for&#34;&gt;The Most Important Attribute to Hire for&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;integrity（正直）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;intelligence（智力）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;initiative（主动）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.openheart.icu/business/work-review/ - ALL RIGHTS RESERVED KRIS NIE</description>
+        </item>
+    
+    
     
     
   </channel>

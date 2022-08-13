@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html><head>
+<title>Markdown</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Markdown">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Markdown" />
+<meta property="og:description" content="Markdown" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/computing-science/markdown/" />
+<meta property="article:published_time" content="2020-07-15T23:28:00+00:00" />
+<meta property="article:modified_time" content="2020-07-21T21:15:51+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Markdown"/>
+<meta name="twitter:description" content="Markdown"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#supporttyporaiohttpssupporttyporaio" onclick="onNavClick(`#supporttyporaiohttpssupporttyporaio-nav`)" id="supporttyporaiohttpssupporttyporaio-nav">
+									support.typora.io
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#expressions" onclick="onNavClick(`#expressions-nav`)" id="expressions-nav">
+									Expressions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%85%ac%e5%bc%8f%e6%a0%87%e8%ae%b0" onclick="onNavClick(`#公式标记-nav`)" id="公式标记-nav">
+									公式标记
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e8%a1%8c%e5%86%85%e5%85%ac%e5%bc%8finline" onclick="onNavClick(`#行内公式inline-nav`)" id="行内公式inline-nav">
+									行内公式（inline）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%b4%e8%a1%8c%e5%85%ac%e5%bc%8fdisplayed" onclick="onNavClick(`#整行公式displayed-nav`)" id="整行公式displayed-nav">
+									整行公式（displayed）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%b8%8c%e8%85%8a%e5%ad%97%e6%af%8d" onclick="onNavClick(`#希腊字母-nav`)" id="希腊字母-nav">
+									希腊字母
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%a7%92%e6%a0%87" onclick="onNavClick(`#角标-nav`)" id="角标-nav">
+									角标
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8b%ac%e5%8f%b7" onclick="onNavClick(`#括号-nav`)" id="括号-nav">
+									括号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%b0%8f%e6%8b%ac%e5%8f%b7%e4%b8%8e%e6%96%b9%e6%8b%ac%e5%8f%b7" onclick="onNavClick(`#小括号与方括号-nav`)" id="小括号与方括号-nav">
+									小括号与方括号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a4%a7%e6%8b%ac%e5%8f%b7" onclick="onNavClick(`#大括号-nav`)" id="大括号-nav">
+									大括号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b0%96%e6%8b%ac%e5%8f%b7" onclick="onNavClick(`#尖括号-nav`)" id="尖括号-nav">
+									尖括号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%8a%e5%8f%96%e6%95%b4" onclick="onNavClick(`#上取整-nav`)" id="上取整-nav">
+									上取整
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%8b%e5%8f%96%e6%95%b4" onclick="onNavClick(`#下取整-nav`)" id="下取整-nav">
+									下取整
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%b1%82%e5%92%8c%e4%b8%8e%e7%a7%af%e5%88%86" onclick="onNavClick(`#求和与积分-nav`)" id="求和与积分-nav">
+									求和与积分
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%b1%82%e5%92%8c" onclick="onNavClick(`#求和-nav`)" id="求和-nav">
+									求和
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%a7%af%e5%88%86" onclick="onNavClick(`#积分-nav`)" id="积分-nav">
+									积分
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%88%86%e5%bc%8f%e4%b8%8e%e6%a0%b9%e5%bc%8f" onclick="onNavClick(`#分式与根式-nav`)" id="分式与根式-nav">
+									分式与根式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%88%86%e5%bc%8f" onclick="onNavClick(`#分式-nav`)" id="分式-nav">
+									分式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a0%b9%e5%bc%8f" onclick="onNavClick(`#根式-nav`)" id="根式-nav">
+									根式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b9%98%e5%8f%b7" onclick="onNavClick(`#乘号-nav`)" id="乘号-nav">
+									乘号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#font" onclick="onNavClick(`#font-nav`)" id="font-nav">
+									Font
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#image" onclick="onNavClick(`#image-nav`)" id="image-nav">
+									Image
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#diff" onclick="onNavClick(`#diff-nav`)" id="diff-nav">
+									Diff
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#supporttyporaiohttpssupporttyporaio" onclick="onNavClick(`#supporttyporaiohttpssupporttyporaio-nav`)" id="supporttyporaiohttpssupporttyporaio-nav">
+									support.typora.io
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#expressions" onclick="onNavClick(`#expressions-nav`)" id="expressions-nav">
+									Expressions
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%85%ac%e5%bc%8f%e6%a0%87%e8%ae%b0" onclick="onNavClick(`#公式标记-nav`)" id="公式标记-nav">
+									公式标记
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e8%a1%8c%e5%86%85%e5%85%ac%e5%bc%8finline" onclick="onNavClick(`#行内公式inline-nav`)" id="行内公式inline-nav">
+									行内公式（inline）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%b4%e8%a1%8c%e5%85%ac%e5%bc%8fdisplayed" onclick="onNavClick(`#整行公式displayed-nav`)" id="整行公式displayed-nav">
+									整行公式（displayed）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%b8%8c%e8%85%8a%e5%ad%97%e6%af%8d" onclick="onNavClick(`#希腊字母-nav`)" id="希腊字母-nav">
+									希腊字母
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%a7%92%e6%a0%87" onclick="onNavClick(`#角标-nav`)" id="角标-nav">
+									角标
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8b%ac%e5%8f%b7" onclick="onNavClick(`#括号-nav`)" id="括号-nav">
+									括号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%b0%8f%e6%8b%ac%e5%8f%b7%e4%b8%8e%e6%96%b9%e6%8b%ac%e5%8f%b7" onclick="onNavClick(`#小括号与方括号-nav`)" id="小括号与方括号-nav">
+									小括号与方括号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a4%a7%e6%8b%ac%e5%8f%b7" onclick="onNavClick(`#大括号-nav`)" id="大括号-nav">
+									大括号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b0%96%e6%8b%ac%e5%8f%b7" onclick="onNavClick(`#尖括号-nav`)" id="尖括号-nav">
+									尖括号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%8a%e5%8f%96%e6%95%b4" onclick="onNavClick(`#上取整-nav`)" id="上取整-nav">
+									上取整
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%8b%e5%8f%96%e6%95%b4" onclick="onNavClick(`#下取整-nav`)" id="下取整-nav">
+									下取整
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%b1%82%e5%92%8c%e4%b8%8e%e7%a7%af%e5%88%86" onclick="onNavClick(`#求和与积分-nav`)" id="求和与积分-nav">
+									求和与积分
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%b1%82%e5%92%8c" onclick="onNavClick(`#求和-nav`)" id="求和-nav">
+									求和
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%a7%af%e5%88%86" onclick="onNavClick(`#积分-nav`)" id="积分-nav">
+									积分
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%88%86%e5%bc%8f%e4%b8%8e%e6%a0%b9%e5%bc%8f" onclick="onNavClick(`#分式与根式-nav`)" id="分式与根式-nav">
+									分式与根式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%88%86%e5%bc%8f" onclick="onNavClick(`#分式-nav`)" id="分式-nav">
+									分式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a0%b9%e5%bc%8f" onclick="onNavClick(`#根式-nav`)" id="根式-nav">
+									根式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b9%98%e5%8f%b7" onclick="onNavClick(`#乘号-nav`)" id="乘号-nav">
+									乘号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#font" onclick="onNavClick(`#font-nav`)" id="font-nav">
+									Font
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#image" onclick="onNavClick(`#image-nav`)" id="image-nav">
+									Image
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#diff" onclick="onNavClick(`#diff-nav`)" id="diff-nav">
+									Diff
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Markdown
+                    
+                    <div class="post-subtitle">
+                        Markdown
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-07-15 23:28
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/operation">Operation</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            6 min
+                            
+                            15 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="supporttyporaiohttpssupporttyporaio"><a href="https://support.typora.io/">support.typora.io</a></h1>
+<hr>
+<h1 id="expressions">Expressions</h1>
+<h2 id="公式标记">公式标记</h2>
+<h3 id="行内公式inline">行内公式（inline）</h3>
+<p>eg: $ E=mc^2 $，写法是：<code>$E=mc^2$</code></p>
+<h3 id="整行公式displayed">整行公式（displayed）</h3>
+<p>用一对紧挨的两个美元符号<code>$$</code>包裹</p>
+<blockquote>
+<p>$$ $$</p>
+</blockquote>
+<p>eg:
+$$
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+$$</p>
+<hr>
+<h2 id="希腊字母">希腊字母</h2>
+<table>
+<thead>
+<tr>
+<th><strong>名称</strong></th>
+<th>大写</th>
+<th>Tex</th>
+<th>小写</th>
+<th><strong>Tex</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alpha</td>
+<td>$A$</td>
+<td>A</td>
+<td>α</td>
+<td>\alpha</td>
+</tr>
+<tr>
+<td>beta</td>
+<td>$B$</td>
+<td>B</td>
+<td>β</td>
+<td>\beat</td>
+</tr>
+<tr>
+<td>gamma</td>
+<td>$Γ$</td>
+<td>\Gamma</td>
+<td>γ</td>
+<td>\gamma</td>
+</tr>
+<tr>
+<td>delta</td>
+<td>$Δ$</td>
+<td>\Delta</td>
+<td>δ</td>
+<td>\delta</td>
+</tr>
+<tr>
+<td>epsilon</td>
+<td>$E$</td>
+<td>E</td>
+<td>ϵ</td>
+<td>\epsilon</td>
+</tr>
+<tr>
+<td>zeta</td>
+<td>Z</td>
+<td>Z</td>
+<td>ζ</td>
+<td>\zeta</td>
+</tr>
+<tr>
+<td>eta</td>
+<td>H</td>
+<td>H</td>
+<td>η</td>
+<td>\eta</td>
+</tr>
+<tr>
+<td>theta</td>
+<td>$Θ$</td>
+<td>\Theta</td>
+<td>θ</td>
+<td>\theta</td>
+</tr>
+<tr>
+<td>iota</td>
+<td>I</td>
+<td>I</td>
+<td>ι</td>
+<td>\iota</td>
+</tr>
+<tr>
+<td>kappa</td>
+<td>K</td>
+<td>K</td>
+<td>κ</td>
+<td>\kappa</td>
+</tr>
+<tr>
+<td>lambda</td>
+<td>Λ</td>
+<td>\Lambda</td>
+<td>λ</td>
+<td>\lambda</td>
+</tr>
+<tr>
+<td>mu</td>
+<td>M</td>
+<td>M</td>
+<td>μ</td>
+<td>\mu</td>
+</tr>
+<tr>
+<td>nu</td>
+<td>N</td>
+<td>N</td>
+<td>ν</td>
+<td>\nu</td>
+</tr>
+<tr>
+<td>xi</td>
+<td>$Ξ$</td>
+<td>\Xi</td>
+<td>ξ</td>
+<td>\xi</td>
+</tr>
+<tr>
+<td>omicron</td>
+<td>O</td>
+<td>O</td>
+<td>ο</td>
+<td>\omicron</td>
+</tr>
+<tr>
+<td>pi</td>
+<td>Π</td>
+<td>\Pi</td>
+<td>π</td>
+<td>\pi</td>
+</tr>
+<tr>
+<td>rho</td>
+<td>P</td>
+<td>P</td>
+<td>ρ</td>
+<td>\rho</td>
+</tr>
+<tr>
+<td>sigma</td>
+<td>Σ</td>
+<td>\Sigma</td>
+<td>σ</td>
+<td>\sigma</td>
+</tr>
+<tr>
+<td>tau</td>
+<td>T</td>
+<td>T</td>
+<td>τ</td>
+<td>\tau</td>
+</tr>
+<tr>
+<td>upsilon</td>
+<td>Υ</td>
+<td>\Upsilon</td>
+<td>υ</td>
+<td>\upsilon</td>
+</tr>
+<tr>
+<td>phi</td>
+<td>Φ</td>
+<td>\Phi</td>
+<td>ϕ</td>
+<td>\phi</td>
+</tr>
+<tr>
+<td>chi</td>
+<td>X</td>
+<td>X</td>
+<td>χ</td>
+<td>\chi</td>
+</tr>
+<tr>
+<td>psi</td>
+<td>$Ψ$</td>
+<td>\Psi</td>
+<td>$ψ$</td>
+<td>\psi</td>
+</tr>
+<tr>
+<td>omega</td>
+<td>Ω</td>
+<td>\Omega</td>
+<td>ω</td>
+<td>\omega</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="角标">角标</h2>
+<p>Markdown Language is a superset of HTML, so you can use html tag <strong>sub,sup</strong> to achieve this</p>
+<p>上标和下标分别使用<code>^</code>和<code>_</code>来表示，下标也可以用<code>~</code>表示</p>
+<p>eg:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">H<span style="color:#8b008b;font-weight:bold">&lt;sub&gt;</span>2<span style="color:#8b008b;font-weight:bold">&lt;/sub&gt;</span>O
+CO<span style="color:#8b008b;font-weight:bold">&lt;sub&gt;</span>2<span style="color:#8b008b;font-weight:bold">&lt;/sub&gt;</span>
+NIKE<span style="color:#8b008b;font-weight:bold">&lt;sup&gt;</span>®<span style="color:#8b008b;font-weight:bold">&lt;/sup&gt;</span>
+H~2~O~2~
+</code></pre></div><p>H<!-- raw HTML omitted -->2<!-- raw HTML omitted -->O
+CO<!-- raw HTML omitted -->2<!-- raw HTML omitted -->
+NIKE<!-- raw HTML omitted -->®<!-- raw HTML omitted -->
+H~2~0~2~</p>
+<p>$e^{n+2}$</p>
+<p>如果要在左右两边都有上下标，可以用<code>\sideset</code>来表示：</p>
+<p>eg: <code>\sideset{^1_2}{^3_4}\bigotimes</code>：$\sideset{^1_2}{^3_4}\bigotimes$。</p>
+<hr>
+<h2 id="括号">括号</h2>
+<h3 id="小括号与方括号">小括号与方括号</h3>
+<p>使用原始的<code>()</code>和<code>[]</code>即可。</p>
+<p>eg: <code>(2+3)[4+4]</code>：$(2+3)[4+4]$。</p>
+<h3 id="大括号">大括号</h3>
+<p>由于大括号<code>{}</code>被用来分组，因此需要使用<code>\{</code>和<code>\}</code>表示大括号，也可以使用<code>\lbrace</code>和<code>\rbrace</code>来表示。</p>
+<p>eg: <code>\{a*b\}</code>或者<code>\lbrace a*b \rbrace</code>，都会显示为${a*b}$。</p>
+<h3 id="尖括号">尖括号</h3>
+<p>使用<code>\langle</code>和<code>\rangle</code>分别表示左尖括号和右尖括号。</p>
+<p>eg: <code>\langle x \rangle</code>：$\langle x \rangle$</p>
+<h3 id="上取整">上取整</h3>
+<p>使用<code>\lceil</code>和<code>\rceil</code>表示。</p>
+<p>eg: <code>\lceil x \rceil</code>：$\lceil x \rceil$</p>
+<h3 id="下取整">下取整</h3>
+<p>使用<code>\lfloor</code>和<code>\rfloor</code>表示。</p>
+<p>eg: <code>\lfloor x \rfloor</code>：$\lfloor x \rfloor$</p>
+<p>需要注意的是，原始括号并不会随着公式大小缩放。</p>
+<p>eg: <code>(\frac12)</code>：$(\frac12)$。可以使用\left( &hellip;\right)来自适应的调整括号: <code>\left( \frac12 \right)</code>：$\left( \frac12 \right)$。</p>
+<p>可以明显看出，后一组公式中的括号是经过缩放的。</p>
+<hr>
+<h2 id="求和与积分">求和与积分</h2>
+<h3 id="求和">求和</h3>
+<p><code>\sum</code>用来表示求和符号，其下标表示求和下限，上标表示上线。</p>
+<p>eg: <code>\sum_1^n</code>：
+$$
+\sum_1^n
+$$</p>
+<h3 id="积分">积分</h3>
+<p><code>\int</code>用来表示积分符号，同样地，其上下标表示积分的上下限。</p>
+<p>eg: <code>\int_1^\infty</code>：
+$$
+\int_1^\infty
+$$
+与此类似的符号还有：</p>
+<p><code>\prod</code>：$\prod$</p>
+<p><code>\bigcup</code>：$\bigcup$</p>
+<p><code>\bigcap</code>：$\bigcap$</p>
+<p><code>\iint</code>：$\iint$</p>
+<hr>
+<h2 id="分式与根式">分式与根式</h2>
+<h3 id="分式">分式</h3>
+<p>分式有两种表示方法。</p>
+<p>第一种，使用<code>\frac</code>，如果分子或分母不是单个字符，需要使用{}来分组。</p>
+<p>eg:</p>
+<p><code>\frac ab</code>: $\frac ab$</p>
+<p><code>\frac {a-1}{b+1}</code>:$\frac {a-1}{b+1}$</p>
+<p>第二种，使用<code>\over</code>来分隔一个组的前后两部分</p>
+<p>eg:</p>
+<p><code>{a+1\over b+1}</code>：${a+1\over b+1}$</p>
+<h3 id="根式">根式</h3>
+<p>使用<code>\sqrt[a]b</code>来表示。其中，方括号内的值用来表示开几次方，省略方括号则表示开方。</p>
+<p>eg:</p>
+<p><code>\sqrt[4]{\frac xy}</code>：$\sqrt[4]{\frac xy}$</p>
+<p><code>\sqrt{x^3}</code>：$\sqrt{x^3}$</p>
+<h3 id="乘号">乘号</h3>
+<p>叉乘\times</p>
+<p>eg: $\times$</p>
+<hr>
+<h1 id="font">Font</h1>
+<ul>
+<li>
+<p>使用<code>\it</code>显示意大利体（公式默认字体）：</p>
+<p>$\it ACDEFGHIJKLMnopqrstuvwxyz$</p>
+</li>
+<li>
+<p>使用<code>\mathbb</code>或<code>\Bbb</code>显示黑板粗体（黑板黑体）</p>
+<p><code>\mathbb{CHNQRZ}</code>：$\mathbb{CHNQRZ}$</p>
+</li>
+<li>
+<p>使用<code>\mathbf</code>或<code>\bf</code>示黑体</p>
+<p>$\mathbf ABCDEFGHIJKLMnopqrstuvwxyz$</p>
+</li>
+<li>
+<p>使用\mathtt或\tt显示打印机字体：</p>
+<p>$\tt ABCDEFGHIJKLMnopqrstuvwxyz$</p>
+</li>
+</ul>
+<hr>
+<h1 id="image">Image</h1>
+<p>Credit line：</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XML" data-lang="XML"><span style="color:#8b008b;font-weight:bold">&lt;center&gt;</span>Apple Marina Bay Sands is the first Apple store to sit directly on the water.<span style="color:#8b008b;font-weight:bold">&lt;/center&gt;</span>
+</code></pre></div><hr>
+<h1 id="diff">Diff</h1>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#a00">-if(v &gt; 100)
+</span><span style="color:#a00"></span><span style="color:#0a0">+if(v &gt; 120)
+</span></code></pre></div><p>代码块的语法类型为<code>diff</code>，在删除行加上 <code>-</code>，在新增行加上 <code>+</code>。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2020-07-21</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/computing-science/hugo/">
+			Next<br>Hugo
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/speech/music/">
+			Previous<br>Music
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

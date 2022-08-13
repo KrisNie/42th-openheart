@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html><head>
+<title>Job Orders</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Job Orders">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Job Orders" />
+<meta property="og:description" content="Job Orders" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/business/job-orders/" />
+<meta property="article:published_time" content="2022-07-29T23:29:58+00:00" />
+<meta property="article:modified_time" content="2022-07-29T11:29:35+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Job Orders"/>
+<meta name="twitter:description" content="Job Orders"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#backflushing" onclick="onNavClick(`#backflushing-nav`)" id="backflushing-nav">
+									Backflushing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#automatic-deduction-of-material-or-components" onclick="onNavClick(`#automatic-deduction-of-material-or-components-nav`)" id="automatic-deduction-of-material-or-components-nav">
+									Automatic deduction of material or components
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#purpose-of-backflushing" onclick="onNavClick(`#purpose-of-backflushing-nav`)" id="purpose-of-backflushing-nav">
+									Purpose of Backflushing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#who-can-be-backflushed" onclick="onNavClick(`#who-can-be-backflushed-nav`)" id="who-can-be-backflushed-nav">
+									Who can be backflushed?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#control-points" onclick="onNavClick(`#control-points-nav`)" id="control-points-nav">
+									Control points
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#overposting" onclick="onNavClick(`#overposting-nav`)" id="overposting-nav">
+									Overposting
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#outside-process-management" onclick="onNavClick(`#outside-process-management-nav`)" id="outside-process-management-nav">
+									Outside Process management
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#co-products-and-by-products-in-process-manufacturing" onclick="onNavClick(`#co-products-and-by-products-in-process-manufacturing-nav`)" id="co-products-and-by-products-in-process-manufacturing-nav">
+									Co-products and by-products in Process Manufacturing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#backflushing" onclick="onNavClick(`#backflushing-nav`)" id="backflushing-nav">
+									Backflushing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#automatic-deduction-of-material-or-components" onclick="onNavClick(`#automatic-deduction-of-material-or-components-nav`)" id="automatic-deduction-of-material-or-components-nav">
+									Automatic deduction of material or components
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#purpose-of-backflushing" onclick="onNavClick(`#purpose-of-backflushing-nav`)" id="purpose-of-backflushing-nav">
+									Purpose of Backflushing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#who-can-be-backflushed" onclick="onNavClick(`#who-can-be-backflushed-nav`)" id="who-can-be-backflushed-nav">
+									Who can be backflushed?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#control-points" onclick="onNavClick(`#control-points-nav`)" id="control-points-nav">
+									Control points
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#overposting" onclick="onNavClick(`#overposting-nav`)" id="overposting-nav">
+									Overposting
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#outside-process-management" onclick="onNavClick(`#outside-process-management-nav`)" id="outside-process-management-nav">
+									Outside Process management
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#co-products-and-by-products-in-process-manufacturing" onclick="onNavClick(`#co-products-and-by-products-in-process-manufacturing-nav`)" id="co-products-and-by-products-in-process-manufacturing-nav">
+									Co-products and by-products in Process Manufacturing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Job Orders
+                    
+                    <div class="post-subtitle">
+                        Job Orders
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2022-07-29 23:29
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/business">Business</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/business">Business</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            3 min
+                            
+                            56 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="backflushing">Backflushing</h1>
+<h2 id="automatic-deduction-of-material-or-components">Automatic deduction of material or components</h2>
+<p>Backflushing is a method of updating inventory records at a defined point in the manufacturing process, called the <em>deduct point</em>.</p>
+<p>倒冲就是为了在保证生产的效率，对于生产过程中价值较低、使用频繁、数量较大的物料（比如螺丝、螺帽各种油、漆液体类原材料）根据BOM（物料清单）中设置的标准消耗量在对生产订单报工时自动进行物料消耗的一种方法，比如生产一个产品A，需要使用2个原材料A1，在对产品A报工时产生为100，系统就自动消耗200个A1到生产订单，至于系统标准消耗的量和实际消耗量之间的差异，则通过实际盘点实现，通常需要设置车间线边库专门核算和管理倒冲的物料，也便于在月底对线边库盘点差异，差异的处理则根据实际情况分析是否需调整标准消耗量还是要加强车间材料管理降低损耗率等。</p>
+<ul>
+<li>To use backflushing, you must set up the backflushing location on the Inventory Parameters form.</li>
+<li>You cannot perform backflushing operations on items  from consignment warehouse locations.</li>
+<li>If you have material in a vendor consignment warehouse when you perform a backflush, the system will check that warehouse for the required     material. If found, it will transfer the necessary amount out of consignment, which will trigger a purchase order line with the vendor.</li>
+</ul>
+<h2 id="purpose-of-backflushing">Purpose of Backflushing</h2>
+<ul>
+<li>minimize the number of  entries you will need to enter to record transactions for jobs</li>
+<li>production schedules</li>
+<li>JIT production</li>
+</ul>
+<p>Just-in-time, continuous improvement, and lean are powerful approaches to helping companies continuously improve their operations in the face of a more demanding competitive environment. A prime target of these programs is waste; waste is defined as any activity that does not add value and can take the form of <em>excess inventory, setup times, inspection, material movement, transactions, or rejects</em>. Implementation of lean programs can lead to dramatically lower inventories. Far from reducing concern for inventory accuracy, however, the need for accuracy actually increases with lean programs, because lower on-hand balances translate directly to a greater opportunity for stock-outs.</p>
+<p>通用的、价值不高的物料总是在相同的位置被生产订单消耗。</p>
+<p>物料项目的帐面库存量是在其父项或装配件的活动完成之后才被减去。缺点是会导致帐面记录与实际库存经常不一致。</p>
+<h2 id="who-can-be-backflushed">Who can be backflushed?</h2>
+<p>Materials, setup and run, and machine transactions can be backflushed.</p>
+<h2 id="control-points">Control points</h2>
+<p>The point in the production process up to which all the parts assumed to have use (as defined in the bill of material) are “back</p>
+<p>flushed,” (automatically deducted) from the inventory records.</p>
+<h2 id="overposting">Overposting</h2>
+<p>Backflushing saves time when there are standard items and times. the systemallows material and operation transactions to post at any operation regardless of its backflush settings.</p>
+<hr>
+<h1 id="outside-process-management">Outside Process management</h1>
+<h2 id="co-products-and-by-products-in-process-manufacturing">Co-products and by-products in Process Manufacturing</h2>
+<p>Process Manufacturing can include by-products and co-products.</p>
+<ul>
+<li>By-products of the formulation process are objects that you need to inventory but that are probably assigned zero or little cost. For example, if you are processing cherries for use in a jam recipe, you must remove the stems and the seeds. If you want to keep track of the removed amount, it is considered a by-product of the formulation. You can choose not to account for this waste product as by-product; in that case, your yield value per pound of unprocessed cherries will be lower.</li>
+<li>Co-products in process manufacturing occur when you package the blended ingredients into multiple types of products that can be sold. For example, 12-oz and 20-oz jars of cherry jam are co-products.</li>
+</ul>
+<p>In process manufacturing, the number of co-products is based on orders. You do not produce the same amount or percentage of each co-product each time you do a run, as you do in discrete manufacturing.</p>
+<p>When you have co-products, you also need to consider whether the co-products are produced on the same line. For example, does the same production line produce 12-oz jams and 20-oz jams, or are two different production lines used? This decision affects your setup process.</p>
+<hr>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2022-07-29</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/business/inventory/">
+			Next<br>Inventory
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/business/material-planning/">
+			Previous<br>Material Planning
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

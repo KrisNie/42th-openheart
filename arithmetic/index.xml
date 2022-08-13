@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Sun, 19 Sep 2021 17:15:26 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/arithmetic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jul 2022 17:15:26 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/arithmetic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Banker&#39;s algorithm</title>
+      <link>https://www.openheart.icu/arithmetic/bankers-algorithm/</link>
+      <pubDate>Sat, 30 Jul 2022 17:15:26 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/arithmetic/bankers-algorithm/</guid>
+      <description>Data Structure  可利用资源向量 Available ：含有 m 个元素的数组，其中每个元素代表一类可用的资源数目。Available[J] = K 表示系统中现有 R~j~ 类资源 K 个。 最大需求矩阵 Max ： n * m 矩阵，定义系统中 n 个进程中的每个进程对 m 类资源的最大需求。一行代表一个进程，一列代表一类资源。 Max[i,j] = K 表示进程 i 需要 R~j~ 类资源的最大数目是 K 。 分配矩阵 Allocation ： n * m 矩阵，定义系统中每类资源当前已分配给每个进程的资源数。 Allocation[i,j] = K 表示进程 i 当前已分得 R~j~ 类资源的数目为 K 。 需求矩阵 Need ： n * m 矩阵，表示每个进程接下来最多还需要多少资源。 Need[i,j] = K 表示进程 i 还需要 R~j~ 类资源的数目为K。  上述三个矩阵存在关系： Need = Max - Allocation</description>
+    </item>
+    
     <item>
       <title>Backtracking</title>
       <link>https://www.openheart.icu/arithmetic/backtracking/</link>

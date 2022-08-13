@@ -7,23 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Mon, 02 Aug 2021 15:57:23 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 May 2022 00:14:11 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dot Net 6&#43;</title>
+      <link>https://www.openheart.icu/microsoft-dotnet/dot-net-6&#43;/</link>
+      <pubDate>Wed, 25 May 2022 00:14:11 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/microsoft-dotnet/dot-net-6&#43;/</guid>
+      <description>.Net6.0 Minimal APIs  Minimal APIs are architected to create HTTP APIs with minimal dependencies. They are ideal for microservices and apps that want to include only the minimum files, features, and dependencies in ASP.NET Core. For more information, see:
+ Tutorial: Create a minimal web API with ASP.NET Core Differences between minimal APIs and APIs with controllers Minimal APIs overview Code samples migrated to the new minimal hosting model in 6.</description>
+    </item>
+    
     <item>
       <title>Design Patterns</title>
-      <link>https://www.openheart.icu/cs/design-patterns/</link>
+      <link>https://www.openheart.icu/computing-science/design-patterns/</link>
       <pubDate>Mon, 02 Aug 2021 15:57:23 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/design-patterns/</guid>
+      <guid>https://www.openheart.icu/computing-science/design-patterns/</guid>
       <description>Overengineering keep it simple, stupid
-Structural Design Patterns Creational Design Patterns Singleton Reference  https://csharpindepth.com/articles/Singleton https://www.cnblogs.com/leolion/p/10241822.html  Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.</description>
+Structural Design Patterns Creational Design Patterns Singleton Reference:
+ https://csharpindepth.com/articles/Singleton https://www.cnblogs.com/leolion/p/10241822.html  Behavioral Design Patterns Observer  The observer design pattern is suitable for distributed push-based notifications, because it supports a clean separation between two different components or application layers, such as a data source (business logic) layer and a user interface (display) layer. The pattern can be implemented whenever a provider uses callbacks to supply its clients with current information.</description>
     </item>
     
     <item>
       <title>Effective CSharp</title>
-      <link>https://www.openheart.icu/dotnet/effective-csharp6.0/</link>
+      <link>https://www.openheart.icu/microsoft-dotnet/effective-csharp6.0/</link>
       <pubDate>Sat, 09 Jan 2021 16:22:42 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/dotnet/effective-csharp6.0/</guid>
+      <guid>https://www.openheart.icu/microsoft-dotnet/effective-csharp6.0/</guid>
       <description>Effective C# Effective C# does not take you on a historical journey through the changes in the language. Rather, I provide advice on how to use the current C# language.
 C # Language Idioms You change tools or languages because you can be more productive.
 Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in the following contexts:
@@ -32,10 +43,10 @@ Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in t
     
     <item>
       <title>Dot Net Runtime</title>
-      <link>https://www.openheart.icu/dotnet/dot-net-runtime/</link>
+      <link>https://www.openheart.icu/microsoft-dotnet/dot-net-runtime/</link>
       <pubDate>Sat, 26 Dec 2020 11:25:57 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/dotnet/dot-net-runtime/</guid>
+      <guid>https://www.openheart.icu/microsoft-dotnet/dot-net-runtime/</guid>
       <description>Source Code Learning for 「Dot Net Runtime」.
  Microsoft.Extensions.DependencyInjection Branch: release/5.0
 之前使用的都是.NET MVC DI，相对封装较为严重。公司的设计为Composition Root实现MVC中的ConfigureDependencies然后创建BuildServiceProvider。在对方法进行调用前通过IServiceProvider.GetService注入所需类构造函数中的依赖。
@@ -45,22 +56,22 @@ Item 1: Prefer Implicitly Typed Local Variables The var keyword may be used in t
     
     <item>
       <title>Test-driven development</title>
-      <link>https://www.openheart.icu/cs/test-driven-development/</link>
+      <link>https://www.openheart.icu/computing-science/test-driven-development/</link>
       <pubDate>Sat, 21 Nov 2020 22:30:12 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/test-driven-development/</guid>
-      <description>Unit Test Practice  纸上得来终觉浅，绝知此事要躬行。
- Shifting Left 所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )
+      <guid>https://www.openheart.icu/computing-science/test-driven-development/</guid>
+      <description>Unit Test Practice 纸上得来终觉浅，绝知此事要躬行。
+Shifting Left 所谓左移，左倾，不是指冒险主义。是将整个流程中右边部分向左边移动，比如测试。 : )
  Shift Left is a practice intended to find and prevent defects early in the software delivery process. The idea is to improve quality by moving tasks to the left as early in the lifecycle as possible.
 In the traditional software development model, requirements are kept on the left side of the plan, and the delivery and testing requirements on the right.</description>
     </item>
     
     <item>
       <title>Dependency Injection</title>
-      <link>https://www.openheart.icu/cs/dependency-injection/</link>
+      <link>https://www.openheart.icu/computing-science/dependency-injection/</link>
       <pubDate>Thu, 15 Oct 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/dependency-injection/</guid>
+      <guid>https://www.openheart.icu/computing-science/dependency-injection/</guid>
       <description>Dependency Injection IOC Spring 框架为Java提供了IOC（Inversion of Control），只是提供了一个服务容器，程序控制我们需要的对象，而不是在使用对象时我们亲自直接控制。既然提到了IOC就详细了解一下这种设计思想：
 为了解决对象间耦合度过高的问题，软件专家Michael Mattson提出了IOC理论，用来实现对象之间的“解耦”。
 控制反转是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。
@@ -80,10 +91,10 @@ DI IOC与DI的区别  控制反转是一种在软件工程中解耦合的思想�
     
     <item>
       <title>Dot Net Issue</title>
-      <link>https://www.openheart.icu/dotnet/dot-net-issue/</link>
+      <link>https://www.openheart.icu/microsoft-dotnet/dot-net-issue/</link>
       <pubDate>Thu, 10 Sep 2020 11:00:35 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/dotnet/dot-net-issue/</guid>
+      <guid>https://www.openheart.icu/microsoft-dotnet/dot-net-issue/</guid>
       <description>Hot-Reload Razor Views 在mac上使用Rider创建 .net core mvc项目后发现run和debug，都无法热加载razor页面。经过Google后发现，这并不是Rider的bug，这得需要知道mvc到底是如何运行的（it&amp;rsquo;s fundamentally how ASP.NET MVC Core works）。
  Razor files are compiled at both build and publish time using the Razor SDK. Runtime compilation may be optionally enabled by configuring your application.
  使用Razor SDK在构建和发布时都会编译Razor文件。通过配置您的应用程序，可以选择启用运行时编译。
@@ -93,10 +104,10 @@ Note that run time is not included in this list by default. To change this behav
     
     <item>
       <title>C# in Depth</title>
-      <link>https://www.openheart.icu/dotnet/csharp-in-depth/</link>
+      <link>https://www.openheart.icu/microsoft-dotnet/csharp-in-depth/</link>
       <pubDate>Sat, 25 Jul 2020 00:14:11 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/dotnet/csharp-in-depth/</guid>
+      <guid>https://www.openheart.icu/microsoft-dotnet/csharp-in-depth/</guid>
       <description>本文为「C# in Depth」(4th edition)学习记录。
 Part 1 C# in context Survival of the sharpest 本章主要讲C#的由来与介绍（吹嘘）。
 开始前可以回顾一下C#的历史，现在是北京时间2021-05-29 14:06:54，the last C# version is C# 9.
@@ -105,10 +116,10 @@ Reference  The history of C#  Part 2 C# in 2-5 C# 3: LINQ and everything that co
     
     <item>
       <title>.NET INTERVIEW</title>
-      <link>https://www.openheart.icu/dotnet/dot-net-interview/</link>
+      <link>https://www.openheart.icu/microsoft-dotnet/dot-net-interview/</link>
       <pubDate>Fri, 17 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/dotnet/dot-net-interview/</guid>
+      <guid>https://www.openheart.icu/microsoft-dotnet/dot-net-interview/</guid>
       <description>.NET INTERVIEW from Jeffrey Zhao&amp;rsquo;s blog 我在面试.NET/C#程序员时会提出的问题
  什么是.NET？什么是CLI？什么是CLR？IL是什么？JIT是什么，它是如何工作的？GC是什么，简述一下GC的工作方式？ 什么是.net .NET是个平台，你就把它看成C#
 一个.NET应用是一个运行于.NET Framework之上的应用程序。（更精确的说，一个.NET应用是一个使用.NET Framework类库来编写，并运行于公共语言运行时 Common Language Runtime之上的应用程序。）如果一个应用程序跟.NET Framework无关，它就不能叫做.NET程序。比如，仅仅使用了XML并不就是.NET应用，仅仅使用SOAP SDK调用一个Web Service也不是.NET应用

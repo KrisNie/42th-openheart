@@ -7,26 +7,61 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ALL RIGHTS RESERVED KRIS NIE</copyright>
-    <lastBuildDate>Wed, 22 Jul 2020 19:45:28 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 May 2022 19:45:28 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interesting2022</title>
+      <link>https://www.openheart.icu/speech/interesting2022/</link>
+      <pubDate>Wed, 11 May 2022 19:45:28 +0000</pubDate>
+      
+      <guid>https://www.openheart.icu/speech/interesting2022/</guid>
+      <description>微软 TTS（2021版） 微软最新的机器语音库，逼真地吓人。
+Btop++ Linux 程序，在命令行实时显示系统的各种负载情况，是top命令的强化版。
+无法下载此图片 这是一个演示，如何生成一张可以正常显示、但永远无法下载完成的图片，原理是服务器不结束连接，不断发送数据。
+md-block 一个 Web Component 组件，可以在 HTML 网页里面加载 Markdown 文档。
+2021年最佳科学照片 违反直觉的事实 本文列出数学、计算机科学、物理学等学科的一些违反直觉的事实，比如存在表面积无限、但是体积有限的物体。
+“签名”电路板 国外一家可穿戴硬件公司，知道竞争对手会拆开他们的设备查看，所以特别在电路板上加了“签名”。
+打开设备，电路板的覆盖片上印着一行字：“别想拷贝我们，我们会赢。”
+电路板背面的每个焊点下面，则印着所有开发团队成员的姓名缩写。
+消失的男孩 上面的网址有一个1906年的欧洲小玩具。页面顶部有一个绿色滑块，可以调节指针的指向。
+当指针指向 A 点时，下面的圆盘有13个小男孩。当指针指向 B 点时，内圈的圆盘滚动，只剩下12个小男孩。为什么消失了一个男孩？
+你的估计需要乘以 π 有一种说法，你的预估乘以 π，就会得到真实的估计。
+这种说法有一定的道理，我可以用数学证明给大家看。
+一切顺利的情况下，从 A 点到 B 点的路线是一条直线。没有遇到困难时，就是两点之间直线最短。
+但是现实中，很多事情都是不顺利的。你会遇到各种各样的困难，你会迷失方向，路线不可能是直线，而是曲线。
+平均来说，实际的路线长度往往是理想路线的 π 倍。这意味着，你预估一件事的难度是1，实际难度可能是3；你预估需要一个月完成的项目，实际需要的时间可能是三个月。
+绿宝石外墙 国际奢侈品牌宝格丽，在上海新开张的专卖店有一个绿色外墙，看上去很华丽，像是镶嵌了绿宝石。实际上，它的材料是回收的啤酒瓶，经过加工变成特殊的绿色玻璃，增加反射面，会产生耀目的光芒，有宝石般的视觉效果。
+镜子阵列 一位美国程序员将许多六边形的小镜子，放在 3D 打印出来的一个底盘上，用来求婚。每块镜子的反射角度都经过精心计算，放在一起就会反射出一行字“Marry me?”（嫁给我好吗？）。
+他把 3D 打印的 STL 文件放在 GitHub 仓库里面，如果你有 3D 打印机，可以下载打印。
+韩国为什么这么卷？ 韩国人均 GDP 超过3万美元，是一个中等富裕的国家。但是，人口出生率超低，年轻人的教育和就业竞争激烈、老年人贫穷现象严重，为什么会变成这样？
+上图是韩国的人口分布图，全国一半人口聚集在首尔都市圈，韩国的许多问题都与此有关。
+我被载入校史，因为差点炸了课堂 作者大学时进行化学实验，不小心出了一次爆炸事故，幸好危险物的量比较少，没有造成严重后果，此后就成了实验室的反面教材。
+2021年中国十大丑陋建筑评选结果 建筑畅言网每年评选当年的中国十大丑陋建筑，这是今年的结果。上图是广州的阿里巴巴华南运营中心。</description>
+    </item>
+    
     <item>
       <title>Gardener</title>
       <link>https://www.openheart.icu/speech/gardener/</link>
       <pubDate>Wed, 22 Jul 2020 19:45:28 +0000</pubDate>
       
       <guid>https://www.openheart.icu/speech/gardener/</guid>
-      <description>Gardenia 栀子花
-How to grow gardenia
-栀子花缺水会叶子卷曲，此时不要频繁浇水，要浸盆，一次性浇透。叶子要经常性喷水。
-Narcissi 水仙
-Eight white narcissi to grow</description>
+      <description>Gardenia 栀子花缺水会叶子卷曲，此时不要频繁浇水，要浸盆，一次性浇透。叶子要经常性喷水。
+Reference:
+ 栀子花 How to grow gardenia   Narcissi Reference:
+ 水仙 Eight white narcissi to grow   Solanum tuberosum 将发芽后的土豆切块，嫩芽朝上，埋入土中。
+上海疫情期间，中国发芽土豆，两个月张了大概一扎。当然纯粹是为了开花。
+当你将你的植物花卉移栽，或者是用枝条扦插的时候，想要让它们更快生根，那么可以用400-500毫克/千克的阿司匹林溶液浸泡裸根的花木根系1-2小时，取出后晾晒8-10分钟，立即栽植，可提高成活率。 在花苗和树桩盆景移栽时，用30-50毫克/千克的阿司匹林溶液浇灌根系，成活率可在95%以上。
+Reference:
+ 阳芋 Potato How to grow potatoes   Chaenomeles cathayensis 毛叶木瓜，木瓜海棠属。
+木瓜海棠 绿宝石 是一种蔷薇科木瓜属植物，主要用途是园林绿化，产于上海植物园。观测地点是上海植物园。
+ True quince is Cydonia oblonga and is a spreading tree with large pear shaped fruit. Japanese quince is Chaenomeles japonica and is a different species of plant entirely.</description>
     </item>
     
     <item>
-      <title>Interesting</title>
-      <link>https://www.openheart.icu/speech/interesting/</link>
+      <title>Interesting2021</title>
+      <link>https://www.openheart.icu/speech/interesting2021/</link>
       <pubDate>Wed, 22 Jul 2020 19:45:28 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/speech/interesting/</guid>
+      <guid>https://www.openheart.icu/speech/interesting2021/</guid>
       <description>List of computer science conferences CS Conferences
 Textures.js 一个 JS 纹理库，基于 D3.js
 elevator.js Finally, a &amp;ldquo;back to top&amp;rdquo; button that behaves like a real elevator, by adding elevator music to quietly soothe the awkwardness that can ensue when being smoothly scrolled to the top of the screen.
@@ -43,28 +78,29 @@ JavaScript 生成艺术图形教程 介绍 如何使用JavaScript 生成8种艺�
       <pubDate>Tue, 21 Jul 2020 19:45:28 +0000</pubDate>
       
       <guid>https://www.openheart.icu/speech/speech/</guid>
-      <description>唯一不适应远程工作的是中层管理人员。
+      <description>1  唯一不适应远程工作的是中层管理人员。
 基层员工对于在家工作感到很高兴，只要把活做好就可以了。高层管理人员只需要对销售和产量数字负责。中层管理人员的不适应在于，他们的职责是直接监控基层员工，最常用的判断方法是通过是否坐在座位上等迹象，来判断工作量和工作是否勤奋。
  &amp;ndash; Hacker news 读者
-   我有一种反英雄主义的精神。以前看电视时，我就对皇帝和将军不感兴趣，觉得他们已经有荣耀和风光了。
+2  我有一种反英雄主义的精神。以前看电视时，我就对皇帝和将军不感兴趣，觉得他们已经有荣耀和风光了。
 我更关心皇帝和将军手下的那些小兵，有时战斗刚开始，他们就被杀死了。他们脑海里想的是什么？会有人记得他们，为他们哭泣吗？
  &amp;ndash; 黄西自传《黄瓜的黄，西瓜的西》
-   时钟和镜子改变了人类社会。
+3  时钟和镜子改变了人类社会。
 时钟创造了一种焦虑文化。
 镜子创造了一种自恋文化。
  &amp;ndash; David Perell
-   100年前的中国，四千个人里面才有一个中学生，其他都是文盲。
+4  100年前的中国，四千个人里面才有一个中学生，其他都是文盲。
  &amp;ndash; 李敖
-   看到抽象的东西，应该尽量使它变得具体；看到具体的东西，应该尽量使它变得抽象。
+5  看到抽象的东西，应该尽量使它变得具体；看到具体的东西，应该尽量使它变得抽象。
  &amp;ndash; 李敖
-   如果你花钱买，你就是客户，如果你免费获得，你就是产品。
+6  如果你花钱买，你就是客户，如果你免费获得，你就是产品。
  &amp;ndash; 《创业公司尝试搜索引擎的订阅模式》
-   40年前算法很重要，大部分程序员都需要懂，因为硬件差，必须靠算法保证性能。
+7  40年前算法很重要，大部分程序员都需要懂，因为硬件差，必须靠算法保证性能。
 但是今天只剩下不到1%的程序员直接跟算法打交道，其他人都使用现成的软件包，或从大公司购买算法，算法已成为一种商品，普通程序员不再需要自己生产了，也不需要有很深入的了解。
  &amp;ndash; 《算法现在是商品》
-   本站100%无 JavaScript。
+8  本站100%无 JavaScript。
  &amp;ndash; swiftbysundell.com
-   我希望 JavaScript 程序员、Java 程序员、PHP 程序员、Perl 程序员、Python 程序员、C 程序员、C ++ 程序员、以及其他重要语言的程序员，大家聚在一起开个会，一劳永逸地提出一个大家都遵守的解决方案，我们应该如何处理时间和日期。我厌倦了每个语言都有自己一套处理时间和日期的方法。</description>
+9  我希望 JavaScript 程序员、Java 程序员、PHP 程序员、Perl 程序员、Python 程序员、C 程序员、C ++ 程序员、以及其他重要语言的程序员，大家聚在一起开个会，一劳永逸地提出一个大家都遵守的解决方案，我们应该如何处理时间和日期。我厌倦了每个语言都有自己一套处理时间和日期的方法。
+ &amp;ndash; 《JavaScript 语言准备提出新的时间和日期 API》</description>
     </item>
     
     <item>

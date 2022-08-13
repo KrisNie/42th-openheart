@@ -10,38 +10,38 @@
     <lastBuildDate>Sun, 17 Oct 2021 11:35:34 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/operation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS</title>
-      <link>https://www.openheart.icu/cs/aws/</link>
+      <link>https://www.openheart.icu/computing-science/aws/</link>
       <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/aws/</guid>
+      <guid>https://www.openheart.icu/computing-science/aws/</guid>
       <description>S3 Access to S3 Object Notes:  Add permission AmazonS3ReadOnlyAccess for IMA User. If you use postman, set Authorization to AWS Signature type. Fill the field AccessKey &amp;amp; SecretKey &amp;amp; AWS Region &amp;amp; Service Name. If you use Infor File Server, add Additional properties for AWS S3 servers. It contains aws_region, and you need set the full path to the External Bucket Name. Unlike standard Windows file systems, the Amazon S3 storage is case-sensitive.</description>
     </item>
     
     <item>
       <title>CI/CD</title>
-      <link>https://www.openheart.icu/cs/cicd/</link>
+      <link>https://www.openheart.icu/computing-science/cicd/</link>
       <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/cicd/</guid>
+      <guid>https://www.openheart.icu/computing-science/cicd/</guid>
       <description>What is CI/CD?  In software engineering, CI/CD or CICD is the combined practices of continuous integration (CI) and either continuous delivery or continuous deployment (CD).
 CI/CD bridges the gaps between development and operation activities and teams by enforcing automation in building, testing and deployment of applications. The process contrasts with traditional methods where all updates were integrated into one large batch before rolling out the newer version. Modern day DevOps practices involve continuous development, continuous testing, continuous integration, continuous deployment and continuous monitoring of software applications throughout its development life cycle.</description>
     </item>
     
     <item>
       <title>Database</title>
-      <link>https://www.openheart.icu/cs/database/</link>
+      <link>https://www.openheart.icu/computing-science/database/</link>
       <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/database/</guid>
-      <description>MySQL Install MySQL lsb_release -a	# 查看操作系统版本 # LSB Version:	:core-4.1-amd64:core-4.1-noarch # Distributor ID:	CentOS # Description:	CentOS Linux release 7.8.2003 (Core) # Release:	7.8.2003 # Codename:	Core cat /etc/redhat-release	# 查看Linux内核版本 # CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	# 查看系统位数 # 64 yum -y update	# 更新 yum rpm -qa | grep mysql	# 查看是否安装过MySQL # 此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm # 安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm # 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.</description>
+      <guid>https://www.openheart.icu/computing-science/database/</guid>
+      <description>Common ORMs  ACID Atomicity 原子性 Transactions are often composed of multiple statements. Atomicity guarantees that each transaction is treated as a single &amp;ldquo;unit&amp;rdquo;, which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. A guarantee of atomicity prevents updates to the database occurring only partially, which can cause greater problems than rejecting the whole series outright.</description>
     </item>
     
     <item>
       <title>Idempotent</title>
-      <link>https://www.openheart.icu/cs/idempotent/</link>
+      <link>https://www.openheart.icu/computing-science/idempotent/</link>
       <pubDate>Thu, 12 Nov 2020 15:58:21 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/idempotent/</guid>
+      <guid>https://www.openheart.icu/computing-science/idempotent/</guid>
       <description>什么是幂等？ 在数学里，幂等有两种主要的定义。
  在某二元运算下，幂等元素是指被自己重复运算（或对于函数是为复合）的结果等于它自己的元素。例如，乘法下唯一两个幂等实数为0和1。 某一元运算为幂等的时，其作用在任一元素两次后会和其作用一次的结果相同。例如，高斯符号便是幂等的。 一元运算的定义是二元运算定义的特例  In computer science, the term idempotence may have a different meaning depending on the context in which it is applied:
  in imperative programming(命令编程), a subroutine(子程序) with side effects is idempotent if the system state remains the same after one or several calls, in other words if the function from the system state space to itself associated to the subroutine is idempotent in the mathematical sense given in the definition; in functional programming, a pure function is idempotent if it is idempotent in the mathematical sense given in the definition.</description>
@@ -49,39 +49,28 @@ CI/CD bridges the gaps between development and operation activities and teams by
     
     <item>
       <title>Git</title>
-      <link>https://www.openheart.icu/cs/git/</link>
+      <link>https://www.openheart.icu/computing-science/git/</link>
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/git/</guid>
+      <guid>https://www.openheart.icu/computing-science/git/</guid>
       <description>Common Operation # 遇到pull不下来 git reset --hard FETCH_HEAD git clone https://www.github.com/XXXX/XXX.git # 修改邮箱 git config --global user.name &amp;#34;Kris Nie&amp;#34; git config --global user.email krisnie@qq.com # Commit undo git reset HEAD~ #只undo最后一次 git reflog #显示所有操作 git reset d0988e7a0d # delete commit git reset --soft HEAD~1 # 保留修改 git reset --hard HEAD~1 # 不保留修改 git push origin mybranch --force # 强制推送到远端 # delete branch git branch -d mybranch git branch -D mybranch # delete force git remote prune origin # automatically get rid of remote branches that no longer exist on the remote git push origin --delete mybranch # delete remote branch git push origin :mybranch # delete remote branch # update commit after git push git commit --amend # 进入vim修改 修改完成后:wq 保存 git push --force-with-lease origin mybranch #强制修改 git fetch origin # 如果有人已经pull了未修改前的 git reset --hard origin/branch # 本地端的修改會不見 # Stash changes git stash pop git stash list # Operate Commit git rebase -i Head~3 # it will open a vim for u, i to insert, wq to save # Change repositories URL git remote -v # show yoru remote URL git remote set-url origin ssh://git@XXX.</description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://www.openheart.icu/cs/hugo/</link>
+      <link>https://www.openheart.icu/computing-science/hugo/</link>
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/hugo/</guid>
+      <guid>https://www.openheart.icu/computing-science/hugo/</guid>
       <description>Install tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz cp ./hugo /usr/local/bin/ hugo new site site42 cd site42 hugo version rm -r public hugo server -b &amp;#34;https://openheart.icu:1313/&amp;#34; -p 1313 --bind &amp;#34;0.0.0.0&amp;#34; #mac 安装 brew install hugo # show the location of the hugo executable which hugo # show the installed version ls -l $( which hugo ) #lrwxr-xr-x 1 hyomin admin 30 7 17 22:46 /usr/local/bin/hugo -&amp;gt; ../Cellar/hugo/0.74.1/bin/hugo # verify that hugo runs correctly hugo version Hugo Static Site Generator v0.</description>
     </item>
     
     <item>
-      <title>Mac Operation</title>
-      <link>https://www.openheart.icu/cs/mac/</link>
-      <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
-      
-      <guid>https://www.openheart.icu/cs/mac/</guid>
-      <description>brew使用国内镜像源（不好使） 中科大：
-# 步骤一 cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git* # 步骤二 cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https:*//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git* #步骤三 brew update 复原：
-cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core brew update  配置item2代理 # 打开配置文件 vim ~/.bash_profile # 如果用了`oh-my-zsh` 那么修改`~/.zshrc` # 在后面新增配置 export http_proxy=http://127.0.0.1:1087 export https_proxy=socks5://127.0.0.1:1080 # 同理，可能执行 source ~/.zshrc source ~/.bash_profile  iTerm2 + Oh My Zsh 安装Oh my zsh # curl 安装方式 sh -c &amp;#34;$(curl -fsSL https://raw.</description>
-    </item>
-    
-    <item>
       <title>Markdown</title>
-      <link>https://www.openheart.icu/cs/markdown/</link>
+      <link>https://www.openheart.icu/computing-science/markdown/</link>
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/markdown/</guid>
+      <guid>https://www.openheart.icu/computing-science/markdown/</guid>
       <description>support.typora.io  Expressions 公式标记 行内公式（inline） eg: $ E=mc^2 $，写法是：$E=mc^2$
 整行公式（displayed） 用一对紧挨的两个美元符号$$包裹
  $$ $$
@@ -91,10 +80,10 @@ cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com
     
     <item>
       <title>Nginx</title>
-      <link>https://www.openheart.icu/cs/nginx/</link>
+      <link>https://www.openheart.icu/computing-science/nginx/</link>
       <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/nginx/</guid>
+      <guid>https://www.openheart.icu/computing-science/nginx/</guid>
       <description>Reverse Proxy &amp;amp; Forward Proxy Forward Proxy（正向代理） 我想访问 www.google.com ，然而大家都知道它被墙了，我没法直接访问它。于是我连接了一个 VPN 服务并设定其为本地 HTTP 访问的代理，然后我再访问 www.google.com ，此时我的请求被该 VPN 服务代理了，它帮我访问了 www.google.com 然后把结果返回给我。
 正向代理隐藏真实客户端，www.google.com 并不知道访问他的是我。
 Reverse Proxy（反向代理） 当我们在访问 www.baidu.com 时，百度背后有成千上万个服务器为我们服务，但具体是哪一台，我们并不知道。此时 www.baidu.com 就充当一个反向代理服务器，帮我们把请求转发到真实的服务器。

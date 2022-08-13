@@ -10,11 +10,11 @@
     <lastBuildDate>Sun, 17 Oct 2021 11:35:34 +0000</lastBuildDate><atom:link href="https://www.openheart.icu/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Database</title>
-      <link>https://www.openheart.icu/cs/database/</link>
+      <link>https://www.openheart.icu/computing-science/database/</link>
       <pubDate>Sun, 17 Oct 2021 11:35:34 +0000</pubDate>
       
-      <guid>https://www.openheart.icu/cs/database/</guid>
-      <description>MySQL Install MySQL lsb_release -a	# 查看操作系统版本 # LSB Version:	:core-4.1-amd64:core-4.1-noarch # Distributor ID:	CentOS # Description:	CentOS Linux release 7.8.2003 (Core) # Release:	7.8.2003 # Codename:	Core cat /etc/redhat-release	# 查看Linux内核版本 # CentOS Linux release 7.8.2003 (Core) getconf LONG_BIT	# 查看系统位数 # 64 yum -y update	# 更新 yum rpm -qa | grep mysql	# 查看是否安装过MySQL # 此处版本为在CentOS7下安装MySQL8.0 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm # 安装 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm # 此时检查是否安装过 rpm -qa | grep mysql 显示：（端口默认为80） #mysql80-community-release-el7-3.</description>
+      <guid>https://www.openheart.icu/computing-science/database/</guid>
+      <description>Common ORMs  ACID Atomicity 原子性 Transactions are often composed of multiple statements. Atomicity guarantees that each transaction is treated as a single &amp;ldquo;unit&amp;rdquo;, which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. A guarantee of atomicity prevents updates to the database occurring only partially, which can cause greater problems than rejecting the whole series outright.</description>
     </item>
     
   </channel>

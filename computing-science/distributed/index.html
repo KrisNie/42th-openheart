@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html><head>
+<title>Distributed</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="分布式">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Distributed" />
+<meta property="og:description" content="分布式" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/computing-science/distributed/" />
+<meta property="article:published_time" content="2020-07-24T00:00:50+00:00" />
+<meta property="article:modified_time" content="2021-11-22T11:11:37+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Distributed"/>
+<meta name="twitter:description" content="分布式"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cap" onclick="onNavClick(`#cap-nav`)" id="cap-nav">
+									CAP
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#consistencyhttpsenwikipediaorgwikiconsistency_model" onclick="onNavClick(`#consistencyhttpsenwikipediaorgwikiconsistency_model-nav`)" id="consistencyhttpsenwikipediaorgwikiconsistency_model-nav">
+									Consistency
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#availabilityhttpsenwikipediaorgwikiavailability" onclick="onNavClick(`#availabilityhttpsenwikipediaorgwikiavailability-nav`)" id="availabilityhttpsenwikipediaorgwikiavailability-nav">
+									Availability
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#partition-tolerancehttpsenwikipediaorgwikinetwork_partitioning" onclick="onNavClick(`#partition-tolerancehttpsenwikipediaorgwikinetwork_partitioning-nav`)" id="partition-tolerancehttpsenwikipediaorgwikinetwork_partitioning-nav">
+									Partition tolerance
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#solution" onclick="onNavClick(`#solution-nav`)" id="solution-nav">
+									Solution
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issues" onclick="onNavClick(`#issues-nav`)" id="issues-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#andrew-file-systemhttpsenwikipediaorgwikiandrew_file_system" onclick="onNavClick(`#andrew-file-systemhttpsenwikipediaorgwikiandrew_file_system-nav`)" id="andrew-file-systemhttpsenwikipediaorgwikiandrew_file_system-nav">
+									Andrew File System
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#distributed-and-global-time" onclick="onNavClick(`#distributed-and-global-time-nav`)" id="distributed-and-global-time-nav">
+									Distributed and global time
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cap" onclick="onNavClick(`#cap-nav`)" id="cap-nav">
+									CAP
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#consistencyhttpsenwikipediaorgwikiconsistency_model" onclick="onNavClick(`#consistencyhttpsenwikipediaorgwikiconsistency_model-nav`)" id="consistencyhttpsenwikipediaorgwikiconsistency_model-nav">
+									Consistency
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#availabilityhttpsenwikipediaorgwikiavailability" onclick="onNavClick(`#availabilityhttpsenwikipediaorgwikiavailability-nav`)" id="availabilityhttpsenwikipediaorgwikiavailability-nav">
+									Availability
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#partition-tolerancehttpsenwikipediaorgwikinetwork_partitioning" onclick="onNavClick(`#partition-tolerancehttpsenwikipediaorgwikinetwork_partitioning-nav`)" id="partition-tolerancehttpsenwikipediaorgwikinetwork_partitioning-nav">
+									Partition tolerance
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#solution" onclick="onNavClick(`#solution-nav`)" id="solution-nav">
+									Solution
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#issues" onclick="onNavClick(`#issues-nav`)" id="issues-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#andrew-file-systemhttpsenwikipediaorgwikiandrew_file_system" onclick="onNavClick(`#andrew-file-systemhttpsenwikipediaorgwikiandrew_file_system-nav`)" id="andrew-file-systemhttpsenwikipediaorgwikiandrew_file_system-nav">
+									Andrew File System
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#distributed-and-global-time" onclick="onNavClick(`#distributed-and-global-time-nav`)" id="distributed-and-global-time-nav">
+									Distributed and global time
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Distributed
+                    
+                    <div class="post-subtitle">
+                        分布式
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-07-24 00:00
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/cs">CS</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            36 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="cap">CAP</h1>
+<h2 id="consistencyhttpsenwikipediaorgwikiconsistency_model"><a href="https://en.wikipedia.org/wiki/Consistency_model">Consistency</a></h2>
+<p>Every read receives the most recent write or an error.</p>
+<h2 id="availabilityhttpsenwikipediaorgwikiavailability"><a href="https://en.wikipedia.org/wiki/Availability">Availability</a></h2>
+<p>Every request receives a (non-error) response, without the guarantee that it contains the most recent write.</p>
+<h2 id="partition-tolerancehttpsenwikipediaorgwikinetwork_partitioning"><a href="https://en.wikipedia.org/wiki/Network_partitioning">Partition tolerance</a></h2>
+<p>The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes.</p>
+<h3 id="solution">Solution</h3>
+<ol>
+<li><a href="https://cloud.google.com/spanner">Cloud Spanner</a></li>
+</ol>
+<p>Reference</p>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/CAP_theorem">CAP theorem</a></li>
+<li><a href="https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/">An Illustrated Proof of the CAP Theorem</a></li>
+<li><a href="https://www.hollischuang.com/archives/666">分布式系统的CAP理论</a></li>
+</ol>
+<h1 id="issues">Issues</h1>
+<h2 id="andrew-file-systemhttpsenwikipediaorgwikiandrew_file_system"><a href="https://en.wikipedia.org/wiki/Andrew_File_System">Andrew File System</a></h2>
+<hr>
+<h2 id="distributed-and-global-time">Distributed and global time</h2>
+<p>Reference</p>
+<ol>
+<li><a href="https://www.v2ex.com/t/816940#reply20">分布式没有全局时间 - V2EX</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%97%B6%E9%92%9F%E5%81%8F%E7%A7%BB">时钟偏移</a></li>
+<li><a href="https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/">An Illustrated Proof of the CAP Theorem</a></li>
+<li><a href="https://vonng.gitbooks.io/ddia-cn/content/">设计数据密集型应用 - 中文翻译</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%9F%B3%E8%8B%B1%E6%99%B6%E4%BD%93%E8%B0%90%E6%8C%AF%E5%99%A8">石英晶体谐振器</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8E%9F%E5%AD%90%E9%90%98">原子钟</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4">系统时间</a></li>
+</ol>
+<hr>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-11-22</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/computing-science/binary-relation/">
+			Next<br>Binary relation
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/computing-science/microservice/">
+			Previous<br>Microservice
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

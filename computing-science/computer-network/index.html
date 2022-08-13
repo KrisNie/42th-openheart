@@ -1,0 +1,2156 @@
+<!DOCTYPE html>
+<html><head>
+<title>Computer network</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="计算机网络">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Computer network" />
+<meta property="og:description" content="计算机网络" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/computing-science/computer-network/" />
+<meta property="article:published_time" content="2020-07-15T23:28:00+00:00" />
+<meta property="article:modified_time" content="2020-07-15T23:28:00+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Computer network"/>
+<meta name="twitter:description" content="计算机网络"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#computer-network" onclick="onNavClick(`#computer-network-nav`)" id="computer-network-nav">
+									Computer Network
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#issues" onclick="onNavClick(`#issues-nav`)" id="issues-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%bd%91%e7%bb%9c%e7%9a%84%e4%b8%83%e5%b1%82%e6%9e%b6%e6%9e%84" onclick="onNavClick(`#网络的七层架构-nav`)" id="网络的七层架构-nav">
+									网络的七层架构
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tcpip-%e5%8e%9f%e7%90%86" onclick="onNavClick(`#tcpip-原理-nav`)" id="tcpip-原理-nav">
+									TCP/IP 原理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tcp-%e4%b8%89%e6%ac%a1%e6%8f%a1%e6%89%8b%e5%9b%9b%e6%ac%a1%e6%8c%a5%e6%89%8b" onclick="onNavClick(`#tcp-三次握手四次挥手-nav`)" id="tcp-三次握手四次挥手-nav">
+									TCP 三次握手/四次挥手
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e4%b8%89%e6%ac%a1%e6%8f%a1%e6%89%8b" onclick="onNavClick(`#三次握手-nav`)" id="三次握手-nav">
+									三次握手
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%9b%e6%ac%a1%e6%8c%a5%e6%89%8b" onclick="onNavClick(`#四次挥手-nav`)" id="四次挥手-nav">
+									四次挥手
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#private-ip-address-vs-public-ip-address--public-ip-port" onclick="onNavClick(`#private-ip-address-vs-public-ip-address--public-ip-port-nav`)" id="private-ip-address-vs-public-ip-address--public-ip-port-nav">
+									Private IP Address vs Public IP Address &amp; Public IP Port
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#how-does-the-internet-work" onclick="onNavClick(`#how-does-the-internet-work-nav`)" id="how-does-the-internet-work-nav">
+									How does the internet work?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-http" onclick="onNavClick(`#what-is-http-nav`)" id="what-is-http-nav">
+									What is HTTP?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dns-and-how-it-works" onclick="onNavClick(`#dns-and-how-it-works-nav`)" id="dns-and-how-it-works-nav">
+									DNS and how it works?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#4-dns-servers" onclick="onNavClick(`#4-dns-servers-nav`)" id="4-dns-servers-nav">
+									4 DNS servers
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dns-lookup" onclick="onNavClick(`#dns-lookup-nav`)" id="dns-lookup-nav">
+									DNS lookup
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#the-8-steps-in-a-dns-lookup" onclick="onNavClick(`#the-8-steps-in-a-dns-lookup-nav`)" id="the-8-steps-in-a-dns-lookup-nav">
+									The 8 steps in a DNS lookup:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#dns-caching" onclick="onNavClick(`#dns-caching-nav`)" id="dns-caching-nav">
+									DNS caching
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#browser-dns-caching" onclick="onNavClick(`#browser-dns-caching-nav`)" id="browser-dns-caching-nav">
+									Browser DNS caching
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#operating-system-os-level-dns-caching" onclick="onNavClick(`#operating-system-os-level-dns-caching-nav`)" id="operating-system-os-level-dns-caching-nav">
+									Operating system (OS) level DNS caching
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#reverse-dns-lookup" onclick="onNavClick(`#reverse-dns-lookup-nav`)" id="reverse-dns-lookup-nav">
+									Reverse DNS lookup
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dns-server-recommend" onclick="onNavClick(`#dns-server-recommend-nav`)" id="dns-server-recommend-nav">
+									DNS Server recommend
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#dnspod-dns" onclick="onNavClick(`#dnspod-dns-nav`)" id="dnspod-dns-nav">
+									DNSPod DNS&#43;
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#114dns" onclick="onNavClick(`#114dns-nav`)" id="114dns-nav">
+									114DNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%98%bf%e9%87%8c-alidns" onclick="onNavClick(`#阿里-alidns-nav`)" id="阿里-alidns-nav">
+									阿里 AliDNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dns%e6%b4%be" onclick="onNavClick(`#dns派-nav`)" id="dns派-nav">
+									DNS派
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%99%be%e5%ba%a6-baidudns" onclick="onNavClick(`#百度-baidudns-nav`)" id="百度-baidudns-nav">
+									百度 BaiduDNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cnnic-sdns" onclick="onNavClick(`#cnnic-sdns-nav`)" id="cnnic-sdns-nav">
+									CNNIC SDNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#opendns" onclick="onNavClick(`#opendns-nav`)" id="opendns-nav">
+									OpenDNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#family-shield-servers" onclick="onNavClick(`#family-shield-servers-nav`)" id="family-shield-servers-nav">
+									Family Shield Servers
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ipv6%e5%9c%b0%e5%9d%80%e5%ae%9e%e9%aa%8c" onclick="onNavClick(`#ipv6地址实验-nav`)" id="ipv6地址实验-nav">
+									IPv6地址(实验)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#what-is-domain-name" onclick="onNavClick(`#what-is-domain-name-nav`)" id="what-is-domain-name-nav">
+									What is Domain Name?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-hosting" onclick="onNavClick(`#what-is-hosting-nav`)" id="what-is-hosting-nav">
+									What is hosting?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#url%e8%a7%a3%e6%9e%90" onclick="onNavClick(`#url解析-nav`)" id="url解析-nav">
+									URL解析
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#urlencode" onclick="onNavClick(`#urlencode-nav`)" id="urlencode-nav">
+									UrlEncode
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ie11url%e8%a7%a3%e6%9e%90%e9%97%ae%e9%a2%98" onclick="onNavClick(`#ie11url解析问题-nav`)" id="ie11url解析问题-nav">
+									IE11URL解析问题
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#reference-1" onclick="onNavClick(`#reference-1-nav`)" id="reference-1-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#computer-network" onclick="onNavClick(`#computer-network-nav`)" id="computer-network-nav">
+									Computer Network
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#issues" onclick="onNavClick(`#issues-nav`)" id="issues-nav">
+									Issues
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%bd%91%e7%bb%9c%e7%9a%84%e4%b8%83%e5%b1%82%e6%9e%b6%e6%9e%84" onclick="onNavClick(`#网络的七层架构-nav`)" id="网络的七层架构-nav">
+									网络的七层架构
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tcpip-%e5%8e%9f%e7%90%86" onclick="onNavClick(`#tcpip-原理-nav`)" id="tcpip-原理-nav">
+									TCP/IP 原理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#tcp-%e4%b8%89%e6%ac%a1%e6%8f%a1%e6%89%8b%e5%9b%9b%e6%ac%a1%e6%8c%a5%e6%89%8b" onclick="onNavClick(`#tcp-三次握手四次挥手-nav`)" id="tcp-三次握手四次挥手-nav">
+									TCP 三次握手/四次挥手
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e4%b8%89%e6%ac%a1%e6%8f%a1%e6%89%8b" onclick="onNavClick(`#三次握手-nav`)" id="三次握手-nav">
+									三次握手
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%9b%e6%ac%a1%e6%8c%a5%e6%89%8b" onclick="onNavClick(`#四次挥手-nav`)" id="四次挥手-nav">
+									四次挥手
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#private-ip-address-vs-public-ip-address--public-ip-port" onclick="onNavClick(`#private-ip-address-vs-public-ip-address--public-ip-port-nav`)" id="private-ip-address-vs-public-ip-address--public-ip-port-nav">
+									Private IP Address vs Public IP Address &amp; Public IP Port
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#reference" onclick="onNavClick(`#reference-nav`)" id="reference-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#how-does-the-internet-work" onclick="onNavClick(`#how-does-the-internet-work-nav`)" id="how-does-the-internet-work-nav">
+									How does the internet work?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-http" onclick="onNavClick(`#what-is-http-nav`)" id="what-is-http-nav">
+									What is HTTP?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dns-and-how-it-works" onclick="onNavClick(`#dns-and-how-it-works-nav`)" id="dns-and-how-it-works-nav">
+									DNS and how it works?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#4-dns-servers" onclick="onNavClick(`#4-dns-servers-nav`)" id="4-dns-servers-nav">
+									4 DNS servers
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dns-lookup" onclick="onNavClick(`#dns-lookup-nav`)" id="dns-lookup-nav">
+									DNS lookup
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#the-8-steps-in-a-dns-lookup" onclick="onNavClick(`#the-8-steps-in-a-dns-lookup-nav`)" id="the-8-steps-in-a-dns-lookup-nav">
+									The 8 steps in a DNS lookup:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#dns-caching" onclick="onNavClick(`#dns-caching-nav`)" id="dns-caching-nav">
+									DNS caching
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#browser-dns-caching" onclick="onNavClick(`#browser-dns-caching-nav`)" id="browser-dns-caching-nav">
+									Browser DNS caching
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#operating-system-os-level-dns-caching" onclick="onNavClick(`#operating-system-os-level-dns-caching-nav`)" id="operating-system-os-level-dns-caching-nav">
+									Operating system (OS) level DNS caching
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#reverse-dns-lookup" onclick="onNavClick(`#reverse-dns-lookup-nav`)" id="reverse-dns-lookup-nav">
+									Reverse DNS lookup
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dns-server-recommend" onclick="onNavClick(`#dns-server-recommend-nav`)" id="dns-server-recommend-nav">
+									DNS Server recommend
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#dnspod-dns" onclick="onNavClick(`#dnspod-dns-nav`)" id="dnspod-dns-nav">
+									DNSPod DNS&#43;
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#114dns" onclick="onNavClick(`#114dns-nav`)" id="114dns-nav">
+									114DNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%98%bf%e9%87%8c-alidns" onclick="onNavClick(`#阿里-alidns-nav`)" id="阿里-alidns-nav">
+									阿里 AliDNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dns%e6%b4%be" onclick="onNavClick(`#dns派-nav`)" id="dns派-nav">
+									DNS派
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%99%be%e5%ba%a6-baidudns" onclick="onNavClick(`#百度-baidudns-nav`)" id="百度-baidudns-nav">
+									百度 BaiduDNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cnnic-sdns" onclick="onNavClick(`#cnnic-sdns-nav`)" id="cnnic-sdns-nav">
+									CNNIC SDNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#opendns" onclick="onNavClick(`#opendns-nav`)" id="opendns-nav">
+									OpenDNS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#family-shield-servers" onclick="onNavClick(`#family-shield-servers-nav`)" id="family-shield-servers-nav">
+									Family Shield Servers
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ipv6%e5%9c%b0%e5%9d%80%e5%ae%9e%e9%aa%8c" onclick="onNavClick(`#ipv6地址实验-nav`)" id="ipv6地址实验-nav">
+									IPv6地址(实验)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#what-is-domain-name" onclick="onNavClick(`#what-is-domain-name-nav`)" id="what-is-domain-name-nav">
+									What is Domain Name?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#what-is-hosting" onclick="onNavClick(`#what-is-hosting-nav`)" id="what-is-hosting-nav">
+									What is hosting?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#url%e8%a7%a3%e6%9e%90" onclick="onNavClick(`#url解析-nav`)" id="url解析-nav">
+									URL解析
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#urlencode" onclick="onNavClick(`#urlencode-nav`)" id="urlencode-nav">
+									UrlEncode
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ie11url%e8%a7%a3%e6%9e%90%e9%97%ae%e9%a2%98" onclick="onNavClick(`#ie11url解析问题-nav`)" id="ie11url解析问题-nav">
+									IE11URL解析问题
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#reference-1" onclick="onNavClick(`#reference-1-nav`)" id="reference-1-nav">
+									Reference
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Computer network
+                    
+                    <div class="post-subtitle">
+                        计算机网络
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-07-15 23:28
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/cs">CS</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            8 min
+                            
+                            4 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="computer-network">Computer Network</h1>
+<p>Base on &ldquo;<em>Computer Networking - A Top Down Approach, 7th</em>&rdquo;.</p>
+<h1 id="issues">Issues</h1>
+<h2 id="网络的七层架构">网络的七层架构</h2>
+<ol>
+<li>物理层</li>
+<li>数据链路层</li>
+<li>网络层</li>
+<li>传输层</li>
+<li>会话层</li>
+<li>表示层</li>
+<li>应用层</li>
+</ol>
+<h2 id="tcpip-原理">TCP/IP 原理</h2>
+<h2 id="tcp-三次握手四次挥手">TCP 三次握手/四次挥手</h2>
+<h3 id="三次握手">三次握手</h3>
+<p>TCP 在传输之前会进行三次沟通，一般称为“三次握手”。</p>
+<h3 id="四次挥手">四次挥手</h3>
+<p>TCP在传输完数据断开的时候要进行四次沟通，一般称为“四次挥手”。</p>
+<h2 id="private-ip-address-vs-public-ip-address--public-ip-port">Private IP Address vs Public IP Address &amp; Public IP Port</h2>
+<blockquote>
+<p>0-1023是公认端口号，即已经公认定义或为将要公认定义的软件保留的，而1024-65535是并没有公共定义的端口号，用户可以自己定义这些端口的作用。</p>
+</blockquote>
+<h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/77322667">常用端口号</a></li>
+<li><a href="https://www.zhihu.com/question/304991342">为什么ipconfig和浏览器查询出的ip不一样？</a></li>
+</ol>
+<h2 id="how-does-the-internet-work">How does the internet work?</h2>
+<h2 id="what-is-http">What is HTTP?</h2>
+<h2 id="dns-and-how-it-works">DNS and how it works?</h2>
+<h3 id="4-dns-servers">4 DNS servers</h3>
+<ul>
+<li><strong><a href="https://www.cloudflare.com/learning/dns/dns-server-types#recursive-resolver">DNS recursor</a></strong> - The recursor can be thought of as a librarian who is asked to go find a particular book somewhere in a library. The DNS recursor is a server designed to receive queries from client machines through applications such as web browsers. Typically the recursor is then responsible for making additional requests in order to satisfy the client’s DNS query.</li>
+<li><strong>Root nameserver</strong> - The <a href="https://www.cloudflare.com/learning/dns/glossary/dns-root-server/">root server</a> is the first step in translating (resolving) human readable host names into IP addresses. It can be thought of like an index in a library that points to different racks of books - typically it serves as a reference to other more specific locations.</li>
+<li><strong><a href="https://www.cloudflare.com/learning/dns/dns-server-types#tld-nameserver">TLD nameserver</a></strong> - The top level domain server (<a href="https://www.cloudflare.com/learning/dns/top-level-domain/">TLD</a>) can be thought of as a specific rack of books in a library. This nameserver is the next step in the search for a specific IP address, and it hosts the last portion of a hostname (In example.com, the TLD server is “com”).</li>
+<li><strong><a href="https://www.cloudflare.com/learning/dns/dns-server-types#authoritative-nameserver">Authoritative nameserver</a></strong> - This final nameserver can be thought of as a dictionary on a rack of books, in which a specific name can be translated into its definition. The authoritative nameserver is the last stop in the nameserver query. If the authoritative name server has access to the requested record, it will return the IP address for the requested hostname back to the DNS Recursor (the librarian) that made the initial request.</li>
+</ul>
+<h3 id="dns-lookup">DNS lookup</h3>
+<p>For most situations, DNS is concerned with a domain name being translated into the appropriate IP address. To learn how this process works, it helps to follow the path of a DNS lookup as it travels from a web browser, through the DNS lookup process, and back again. Let&rsquo;s take a look at the steps.</p>
+<p>Note: Often DNS lookup information will be cached either locally inside the querying computer or remotely in the DNS infrastructure. There are typically 8 steps in a DNS lookup. When DNS information is cached, steps are skipped from the DNS lookup process which makes it quicker. The example below outlines all 8 steps when nothing is cached.</p>
+<h4 id="the-8-steps-in-a-dns-lookup">The 8 steps in a DNS lookup:</h4>
+<ol>
+<li>
+<p>A user types ‘example.com’ into a web browser and the query travels into the Internet and is received by a DNS recursive resolver.</p>
+</li>
+<li>
+<p>The resolver then queries a DNS root nameserver (.).</p>
+</li>
+<li>
+<p>The root server then responds to the resolver with the address of a Top Level Domain (TLD) DNS server (such as .com or .net), which stores the information for its domains. When searching for example.com, our request is pointed toward the .com TLD.</p>
+</li>
+<li>
+<p>The resolver then makes a request to the .com TLD.</p>
+</li>
+<li>
+<p>The TLD server then responds with the IP address of the domain’s nameserver, example.com.</p>
+</li>
+<li>
+<p>Lastly, the recursive resolver sends a query to the domain’s nameserver.</p>
+</li>
+<li>
+<p>The IP address for example.com is then returned to the resolver from the nameserver.</p>
+</li>
+<li>
+<p>The DNS resolver then responds to the web browser with the IP address of the domain requested initially.</p>
+</li>
+<li>
+<p>Once the 8 steps of the DNS lookup have returned the IP address for example.com, the browser is able to make the request for the web page:</p>
+</li>
+<li>
+<p>The browser makes a <a href="https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/">HTTP</a> request to the IP address.</p>
+</li>
+<li>
+<p>The server at that IP returns the webpage to be rendered in the browser (step 10).</p>
+</li>
+</ol>
+<p><img src="https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-lookup-diagram.png" alt="DNS query diagram"></p>
+<h3 id="dns-caching">DNS caching</h3>
+<h4 id="browser-dns-caching">Browser DNS caching</h4>
+<p>Modern web browsers are designed by default to cache DNS records for a set amount of time. The purpose here is obvious; the closer the DNS caching occurs to the web browser, the fewer processing steps must be taken in order to check the cache and make the correct requests to an IP address. When a request is made for a DNS record, the browser cache is the first location checked for the requested record.</p>
+<p>In Chrome, you can see the status of your DNS cache by going to chrome://net-internals/#dns.</p>
+<h4 id="operating-system-os-level-dns-caching">Operating system (OS) level DNS caching</h4>
+<p>The operating system level DNS resolver is the second and last local stop before a DNS query leaves your machine. The process inside your operating system that is designed to handle this query is commonly called a “stub resolver” or DNS client. When a stub resolver gets a request from an application, it first checks its own cache to see if it has the record. If it does not, it then sends a DNS query (with a recursive flag set), outside the local network to a DNS recursive resolver inside the Internet service provider (ISP).</p>
+<p>When the recursive resolver inside the ISP receives a DNS query, like all previous steps, it will also check to see if the requested host-to-IP-address translation is already stored inside its local persistence layer.</p>
+<p>The recursive resolver also has additional functionality depending on the types of records it has in its cache:</p>
+<p>If the resolver does not have the A records, but does have the NS records for the authoritative nameservers, it will query those name servers directly, bypassing several steps in the DNS query. This shortcut prevents lookups from the root and .com nameservers (in our search for example.com) and helps the resolution of the DNS query occur more quickly.
+If the resolver does not have the NS records, it will send a query to the TLD servers (.com in our case), skipping the root server.
+In the unlikely event that the resolver does not have records pointing to the TLD servers, it will then query the root servers. This event typically occurs after a DNS cache has been purged.</p>
+<h3 id="reverse-dns-lookup">Reverse DNS lookup</h3>
+<p><a href="https://en.wikipedia.org/wiki/Reverse_DNS_lookup">Reverse DNS lookup - Wikipedia</a></p>
+<h3 id="dns-server-recommend">DNS Server recommend</h3>
+<h4 id="dnspod-dns">DNSPod DNS+</h4>
+<p>首选：119.29.29.29</p>
+<p>备选：182.254.116.116</p>
+<h4 id="114dns">114DNS</h4>
+<p>首选：114.114.114.114</p>
+<p>备选：114.114.114.115</p>
+<h4 id="阿里-alidns">阿里 AliDNS</h4>
+<p>首选：223.5.5.5</p>
+<p>备选：223.6.6.6</p>
+<h4 id="dns派">DNS派</h4>
+<p>首选（电信/移动/铁通）：101.226.4.6</p>
+<p>备选（电信/移动/铁通）：218.30.118.6</p>
+<p>首选（联通）：123.125.81.6</p>
+<p>备选（联通）：140.207.198.6</p>
+<h4 id="百度-baidudns">百度 BaiduDNS</h4>
+<p>首选：180.76.76.76</p>
+<h4 id="cnnic-sdns">CNNIC SDNS</h4>
+<p>首选：1.2.4.8</p>
+<p>备选：202.98.0.68</p>
+<h4 id="opendns">OpenDNS</h4>
+<p>208.67.222.222</p>
+<p>208.67.220.220</p>
+<p>208.67.222.220</p>
+<p>208.67.220.222</p>
+<h4 id="family-shield-servers">Family Shield Servers</h4>
+<p>可以阻挡成人网站和含有恶意网站</p>
+<p>208.67.222.123</p>
+<p>208.67.220.123</p>
+<h4 id="ipv6地址实验">IPv6地址(实验)</h4>
+<p>2620:0:ccc::2</p>
+<p>2620:0:ccd::2</p>
+<h2 id="what-is-domain-name">What is Domain Name?</h2>
+<h2 id="what-is-hosting">What is hosting?</h2>
+<h2 id="url解析">URL解析</h2>
+<h3 id="urlencode">UrlEncode</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:left">意义</th>
+<th style="text-align:center">Encode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:left">表示空格</td>
+<td style="text-align:center">%2B</td>
+</tr>
+<tr>
+<td style="text-align:center">(空格)</td>
+<td style="text-align:left">可以用+号替代</td>
+<td style="text-align:center">%20</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:left">分隔目录和子目录</td>
+<td style="text-align:center">%2F</td>
+</tr>
+<tr>
+<td style="text-align:center">？</td>
+<td style="text-align:left">分隔实际的URL和参数</td>
+<td style="text-align:center">%3F</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:left">指定特殊字符</td>
+<td style="text-align:center">%25</td>
+</tr>
+<tr>
+<td style="text-align:center">#</td>
+<td style="text-align:left">表示书签</td>
+<td style="text-align:center">%23</td>
+</tr>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:left">URL 中指定的参数间的分隔符</td>
+<td style="text-align:center">%26</td>
+</tr>
+<tr>
+<td style="text-align:center">=</td>
+<td style="text-align:left">URL 中指定参数的值</td>
+<td style="text-align:center">%3D</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ie11url解析问题">IE11URL解析问题</h3>
+<p>今天(2020-8-3 14:41:03)，发现项目中使用IE11时打开连接出现<code>HTTP400</code>的问题，有且仅在IE11里面，chrome正常。</p>
+<p>后来查资料发现，是因为我传参的时候带了中文字符，而IE对中文字符是有限制的，所以不成功，而要解决这个问题就需要转码，把要传的中文参数用UrlEncode方法给转一下码就ok。</p>
+<h1 id="reference-1">Reference</h1>
+<ol>
+<li><a href="https://www.practicalnetworking.net/">https://www.practicalnetworking.net/</a></li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2020-07-15</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/about/">
+			Next<br>About
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/computing-science/git/">
+			Previous<br>Git
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

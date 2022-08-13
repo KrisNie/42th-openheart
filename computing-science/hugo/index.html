@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html><head>
+<title>Hugo</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="HugoBlog">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Hugo" />
+<meta property="og:description" content="HugoBlog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/computing-science/hugo/" />
+<meta property="article:published_time" content="2020-07-15T23:28:00+00:00" />
+<meta property="article:modified_time" content="2020-07-19T13:18:43+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo"/>
+<meta name="twitter:description" content="HugoBlog"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#install" onclick="onNavClick(`#install-nav`)" id="install-nav">
+									Install
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#quick-start-guide" onclick="onNavClick(`#quick-start-guide-nav`)" id="quick-start-guide-nav">
+									Quick start guide
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#hugo-post-missing" onclick="onNavClick(`#hugo-post-missing-nav`)" id="hugo-post-missing-nav">
+									Hugo Post Missing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e4%bf%ae%e6%94%b9configtoml%e6%96%87%e4%bb%b6" onclick="onNavClick(`#修改configtoml文件-nav`)" id="修改configtoml文件-nav">
+									修改config.toml文件
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#build-add---buildfuture" onclick="onNavClick(`#build-add---buildfuture-nav`)" id="build-add---buildfuture-nav">
+									build add –buildFuture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%b7%bb%e5%8a%a0%e8%b0%88%e7%ac%91%e9%a3%8e%e7%94%9f%e5%8c%ba" onclick="onNavClick(`#添加谈笑风生区-nav`)" id="添加谈笑风生区-nav">
+									添加谈笑风生区
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%88%9b%e5%bb%ba%e6%a8%a1%e6%9d%bf" onclick="onNavClick(`#创建模板-nav`)" id="创建模板-nav">
+									创建模板
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b7%bb%e5%8a%a0%e9%85%8d%e7%bd%ae" onclick="onNavClick(`#添加配置-nav`)" id="添加配置-nav">
+									添加配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#webhook" onclick="onNavClick(`#webhook-nav`)" id="webhook-nav">
+									Webhook
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85%e5%b9%b6%e9%85%8d%e7%bd%aewebhook" onclick="onNavClick(`#安装并配置webhook-nav`)" id="安装并配置webhook-nav">
+									安装并配置webhook
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%96%b0%e5%bb%bagithub_webhookjs%e8%84%9a%e6%9c%ac" onclick="onNavClick(`#新建github_webhookjs脚本-nav`)" id="新建github_webhookjs脚本-nav">
+									新建github_webhook.js脚本
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#pm2%e8%bf%90%e8%a1%8c" onclick="onNavClick(`#pm2运行-nav`)" id="pm2运行-nav">
+									pm2运行
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a2%9e%e5%8a%a0nginx%e9%85%8d%e7%bd%ae" onclick="onNavClick(`#增加nginx配置-nav`)" id="增加nginx配置-nav">
+									增加nginx配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#github%e9%85%8d%e7%bd%ae" onclick="onNavClick(`#github配置-nav`)" id="github配置-nav">
+									Github配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#pv-uv" onclick="onNavClick(`#pv-uv-nav`)" id="pv-uv-nav">
+									pv uv
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#install" onclick="onNavClick(`#install-nav`)" id="install-nav">
+									Install
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#quick-start-guide" onclick="onNavClick(`#quick-start-guide-nav`)" id="quick-start-guide-nav">
+									Quick start guide
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#hugo-post-missing" onclick="onNavClick(`#hugo-post-missing-nav`)" id="hugo-post-missing-nav">
+									Hugo Post Missing
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e4%bf%ae%e6%94%b9configtoml%e6%96%87%e4%bb%b6" onclick="onNavClick(`#修改configtoml文件-nav`)" id="修改configtoml文件-nav">
+									修改config.toml文件
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#build-add---buildfuture" onclick="onNavClick(`#build-add---buildfuture-nav`)" id="build-add---buildfuture-nav">
+									build add –buildFuture
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%b7%bb%e5%8a%a0%e8%b0%88%e7%ac%91%e9%a3%8e%e7%94%9f%e5%8c%ba" onclick="onNavClick(`#添加谈笑风生区-nav`)" id="添加谈笑风生区-nav">
+									添加谈笑风生区
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%88%9b%e5%bb%ba%e6%a8%a1%e6%9d%bf" onclick="onNavClick(`#创建模板-nav`)" id="创建模板-nav">
+									创建模板
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b7%bb%e5%8a%a0%e9%85%8d%e7%bd%ae" onclick="onNavClick(`#添加配置-nav`)" id="添加配置-nav">
+									添加配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#webhook" onclick="onNavClick(`#webhook-nav`)" id="webhook-nav">
+									Webhook
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85%e5%b9%b6%e9%85%8d%e7%bd%aewebhook" onclick="onNavClick(`#安装并配置webhook-nav`)" id="安装并配置webhook-nav">
+									安装并配置webhook
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%96%b0%e5%bb%bagithub_webhookjs%e8%84%9a%e6%9c%ac" onclick="onNavClick(`#新建github_webhookjs脚本-nav`)" id="新建github_webhookjs脚本-nav">
+									新建github_webhook.js脚本
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#pm2%e8%bf%90%e8%a1%8c" onclick="onNavClick(`#pm2运行-nav`)" id="pm2运行-nav">
+									pm2运行
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a2%9e%e5%8a%a0nginx%e9%85%8d%e7%bd%ae" onclick="onNavClick(`#增加nginx配置-nav`)" id="增加nginx配置-nav">
+									增加nginx配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#github%e9%85%8d%e7%bd%ae" onclick="onNavClick(`#github配置-nav`)" id="github配置-nav">
+									Github配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#pv-uv" onclick="onNavClick(`#pv-uv-nav`)" id="pv-uv-nav">
+									pv uv
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Hugo
+                    
+                    <div class="post-subtitle">
+                        HugoBlog
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-07-15 23:28
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/operation">Operation</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            5 min
+                            
+                            52 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="install">Install</h1>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz
+
+cp ./hugo /usr/local/bin/
+
+hugo new site site42
+
+<span style="color:#658b00">cd</span> site42
+
+hugo version
+
+rm -r public
+hugo server -b <span style="color:#cd5555">&#34;https://openheart.icu:1313/&#34;</span> -p <span style="color:#b452cd">1313</span> --bind <span style="color:#cd5555">&#34;0.0.0.0&#34;</span>
+
+<span style="color:#228b22">#mac 安装</span>
+brew install hugo
+
+<span style="color:#228b22"># show the location of the hugo executable</span>
+which hugo
+
+<span style="color:#228b22"># show the installed version</span>
+ls -l <span style="color:#8b008b;font-weight:bold">$(</span> which hugo <span style="color:#8b008b;font-weight:bold">)</span>
+<span style="color:#228b22">#lrwxr-xr-x  1 hyomin  admin  30  7 17 22:46 /usr/local/bin/hugo -&gt; ../Cellar/hugo/0.74.1/bin/hugo</span>
+
+<span style="color:#228b22"># verify that hugo runs correctly</span>
+hugo version
+Hugo Static Site Generator v0.74.1/extended darwin/amd64 BuildDate: unknown
+
+</code></pre></div><h1 id="quick-start-guide">Quick start guide</h1>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new site site42
+
+<span style="color:#658b00">cd</span> site42
+<span style="color:#228b22">#  ▸ archetypes/</span>
+<span style="color:#228b22">#  ▸ doc/content/</span>
+<span style="color:#228b22">#  ▸ data/</span>
+<span style="color:#228b22">#  ▸ layouts/</span>
+<span style="color:#228b22">#  ▸ static/</span>
+<span style="color:#228b22">#    config.toml</span>
+
+<span style="color:#228b22">#创建文章</span>
+hugo new about.md
+
+<span style="color:#228b22">#安装皮肤</span>
+<span style="color:#658b00">cd</span> themes
+<span style="color:#228b22">#git clone https://github.com/gevhaz/hugo-theme-notrack.git</span>
+<span style="color:#228b22">#https://github.com/spf13/hyde.git</span>
+git clone https://github.com/AmazingRise/hugo-theme-diary.git themes/diary
+
+
+<span style="color:#228b22">#下载所有hugoThemes</span>
+git clone --depth <span style="color:#b452cd">1</span> --recursive https://github.com/spf13/hugoThemes.git themes
+
+<span style="color:#228b22">#运行 Hugo</span>
+hugo server --theme=hyde --buildDrafts
+
+<span style="color:#228b22">#想要了解更多其他的选项，执行：</span>
+hugo <span style="color:#658b00">help</span>
+<span style="color:#228b22">#想要了解 server 相关的选项：</span>
+hugo <span style="color:#658b00">help</span> server
+
+<span style="color:#228b22">#打开你喜欢的 编辑器 ，编辑和保存你的文章内容，然后等待 Hugo 重新编译并自动重新加载</span>
+</code></pre></div><h1 id="hugo-post-missing">Hugo Post Missing</h1>
+<p>偶然发现存在有文章无法被生成的情况，经过检查发现在文章yaml配置文件中的date的问题。</p>
+<p>具体对比后发现并没有规律，既不是纽约时间也不是北京时间，但改时间确实会影响文章的生成。</p>
+<p>查阅之后发现如下两个解决办法</p>
+<h4 id="修改configtoml文件">修改<code>config.toml</code>文件</h4>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">buildFuture = <span style="color:#8b008b;font-weight:bold">true</span>
+</code></pre></div><h4 id="build-add---buildfuture">build add &ndash;buildFuture</h4>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo server --theme=diary --buildDrafts --buildFuture
+</code></pre></div><h1 id="添加谈笑风生区">添加谈笑风生区</h1>
+<p>申请地址：<a href="https://github.com/settings/applications/new">Authorization callback URL</a></p>
+<p>查看自己的OAuth Apps：<a href="https://github.com/settings/developers">OAuth Apps</a></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application name</td>
+<td>42th-openheart</td>
+<td>填写应用名称</td>
+</tr>
+<tr>
+<td>Homepage URL</td>
+<td><a href="https://www.openheart.icu/">https://www.openheart.icu/</a></td>
+<td>主页地址</td>
+</tr>
+<tr>
+<td>Application description</td>
+<td>第四十二次不开心</td>
+<td>备注</td>
+</tr>
+<tr>
+<td>Authorization callback URL</td>
+<td><a href="https://www.openheart.icu/">https://www.openheart.icu/</a></td>
+<td>回调地址</td>
+</tr>
+</tbody>
+</table>
+<h3 id="创建模板">创建模板</h3>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if and (.Site.Params.enableGitalk) (.IsPage) }}
+&lt;<span style="color:#8b008b;font-weight:bold">link</span> <span style="color:#658b00">rel</span>=<span style="color:#cd5555">&#34;stylesheet&#34;</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&#34;</span>&gt;
+&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
+&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;{{&#34;</span><span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#658b00">vendor</span><span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#658b00">js</span><span style="color:#a61717;background-color:#e3d2d2">/</span><span style="color:#658b00">md5</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#658b00">min</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#658b00">js</span><span style="color:#a61717;background-color:#e3d2d2">&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">|</span> <span style="color:#658b00">relURL</span><span style="color:#a61717;background-color:#e3d2d2">}}&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
+&lt;<span style="color:#8b008b;font-weight:bold">script</span>&gt;
+  <span style="color:#8b008b;font-weight:bold">var</span> gitalk = <span style="color:#8b008b;font-weight:bold">new</span> Gitalk({
+  clientID: <span style="color:#cd5555">&#39;{{ .Site.Params.Gitalk.client_id }}&#39;</span>,
+  clientSecret: <span style="color:#cd5555">&#39;{{ .Site.Params.Gitalk.client_secret }}&#39;</span>,
+  repo: <span style="color:#cd5555">&#39;{{ .Site.Params.Gitalk.repo }}&#39;</span>,
+  owner: <span style="color:#cd5555">&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span>,
+  admin: [<span style="color:#cd5555">&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span>],
+  id: md5(location.pathname),
+  distractionFreeMode: <span style="color:#cd5555">&#39;false&#39;</span>
+  });
+  <span style="color:#658b00">window</span>.onload = <span style="color:#8b008b;font-weight:bold">function</span> () {
+        gitalk.render(<span style="color:#cd5555">&#39;gitalk-container&#39;</span>)
+  }
+&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
+{{ end }}
+</code></pre></div><h3 id="添加配置">添加配置</h3>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[params]
+  enableGitalk = <span style="color:#8b008b;font-weight:bold">true</span>
+
+[params.gitalk]
+  owner = <span style="color:#cd5555">&#34;Hyominn&#34;</span>
+  repo = <span style="color:#cd5555">&#34;42th-openheart&#34;</span>
+  client_id = <span style="color:#cd5555">&#34;your_id&#34;</span>
+  client_secret = <span style="color:#cd5555">&#34;your_secret&#34;</span>
+</code></pre></div><h1 id="webhook">Webhook</h1>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#228b22"># 本地public文件夹关联到GitHub</span>
+<span style="color:#658b00">cd</span> public
+git init
+git remote add origin https://github.com/Hyominn/42th-openheart.git
+git add -A
+git commit -m <span style="color:#cd5555">&#34;first commit&#34;</span>
+git push -u origin master
+
+
+<span style="color:#228b22"># 服务端操作</span>
+<span style="color:#228b22"># cd 到目录blog2</span>
+<span style="color:#658b00">cd</span> hugoblog
+<span style="color:#228b22"># git 初始化</span>
+git init
+git remote add origin https://github.com/Hyominn/42th-openheart.git
+<span style="color:#228b22"># 从 Github第一次抓取</span>
+git pull origin master
+
+
+<span style="color:#228b22"># 创建目录 webhook目录需要创建在当前项目路径下</span>
+<span style="color:#228b22"># 如 /usr/project/hugoblog/webhook</span>
+mkdir webhook
+<span style="color:#228b22">#进入目录</span>
+<span style="color:#658b00">cd</span> webhook
+<span style="color:#228b22"># 创建脚本</span>
+vim git_pull.sh
+
+<span style="color:#228b22">#在脚本中保存以下内容：</span>
+<span style="color:#658b00">cd</span> /root/blog2
+git pull origin master
+<span style="color:#658b00">exit</span> <span style="color:#b452cd">0</span>
+</code></pre></div><h2 id="安装并配置webhook">安装并配置webhook</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install github-webhook-handler
+</code></pre></div><h2 id="新建github_webhookjs脚本">新建<code>github_webhook.js</code>脚本</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8b008b;font-weight:bold">var</span> http = require(<span style="color:#cd5555">&#39;http&#39;</span>)
+<span style="color:#8b008b;font-weight:bold">var</span> exec = require(<span style="color:#cd5555">&#39;child_process&#39;</span>).exec
+<span style="color:#8b008b;font-weight:bold">var</span> createHandler = require(<span style="color:#cd5555">&#39;github-webhook-handler&#39;</span>)
+<span style="color:#8b008b;font-weight:bold">var</span> handler = createHandler({ path: <span style="color:#cd5555">&#39;/webhook&#39;</span>, secret: <span style="color:#cd5555">&#39;111111&#39;</span> })
+
+http.createServer(<span style="color:#8b008b;font-weight:bold">function</span> (req, res) {
+handler(req, res, <span style="color:#8b008b;font-weight:bold">function</span> (err) {
+    res.statusCode = <span style="color:#b452cd">404</span>
+    res.end(<span style="color:#cd5555">&#39;no such location&#39;</span>)
+  })
+}).listen(<span style="color:#b452cd">7777</span>)
+
+handler.on(<span style="color:#cd5555">&#39;push&#39;</span>, <span style="color:#8b008b;font-weight:bold">function</span> (event) {
+    <span style="color:#8b008b;font-weight:bold">let</span> currentTime = <span style="color:#8b008b;font-weight:bold">new</span> <span style="color:#658b00">Date</span>();
+    console.log(<span style="color:#cd5555">&#39;\n--&gt; &#39;</span> + currentTime.toLocaleString());
+    console.log(<span style="color:#cd5555">&#39;Received a push event for %s to %s&#39;</span>, event.payload.repository.name, event.payload.ref);
+    exec(<span style="color:#cd5555">&#39;sh git_pull.sh&#39;</span>, <span style="color:#8b008b;font-weight:bold">function</span> (error, stdout, stderr) {
+        <span style="color:#8b008b;font-weight:bold">if</span>(error) {
+            console.error(<span style="color:#cd5555">&#39;error:\n&#39;</span> + error);
+            <span style="color:#8b008b;font-weight:bold">return</span>;
+        }
+        console.log(<span style="color:#cd5555">&#39;stdout:\n&#39;</span> + stdout);
+        console.log(<span style="color:#cd5555">&#39;stderr:\n&#39;</span> + stderr);
+    });
+})
+</code></pre></div><h2 id="pm2运行">pm2运行</h2>
+<pre><code>pm2 start github_webhook.js
+</code></pre><h2 id="增加nginx配置">增加nginx配置</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># NodeJS 将 Web 服务跑在了 7777 端口，我们可以用 Nginx 反向代理到 80 端口</span>
+location /webhook {
+  <span style="color:#658b00">alias</span> /root/webhook;
+  proxy_pass http://127.0.0.1:7777;  
+}
+</code></pre></div><h2 id="github配置">Github配置</h2>
+<p>&lsquo;webhook&rsquo;即 ‘github_webhook.js’ 中配置的path，比如：<code>https://www.openheart.icu/webhook</code></p>
+<p>必须选择‘application/json’,否则不起作用</p>
+<p>‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
+一定要和脚本中设置一致</p>
+<h1 id="pv-uv">pv uv</h1>
+<p>两行代码 搞定计数：<a href="http://busuanzi.ibruce.info/">不蒜子</a></p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#228b22">&lt;!-- 网站head引用 --&gt;</span>
+&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">async</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
+
+<span style="color:#228b22">&lt;!-- PV --&gt;</span>
+&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_container_site_pv&#34;</span>&gt;
+    本站总访问量&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_value_site_pv&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;次
+&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
+
+<span style="color:#228b22">&lt;!-- UV --&gt;</span>
+&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_container_site_uv&#34;</span>&gt;
+  本站访客数&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_value_site_uv&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;人次
+&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
+
+<span style="color:#228b22">&lt;!-- 单页PV --&gt;</span>
+&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_container_page_pv&#34;</span>&gt;
+  本文总阅读量&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;busuanzi_value_page_pv&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;次
+&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
+</code></pre></div><p>Reference</p>
+<ul>
+<li><a href="https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3">https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3</a></li>
+<li><a href="https://jdhao.github.io/2020/01/11/hugo_post_missing/">https://jdhao.github.io/2020/01/11/hugo_post_missing/</a></li>
+<li><a href="https://mogeko.me/2018/024/">https://mogeko.me/2018/024/</a></li>
+</ul>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2020-07-19</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/computing-science/git/">
+			Next<br>Git
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/computing-science/markdown/">
+			Previous<br>Markdown
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

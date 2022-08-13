@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html><head>
+<title></title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="API Overview This primary purpose of this API is to &hellip;
+   API Consumers: &lt;Identify the expected clients of this API. External applications? Infor Applications? Internal SyteLine subsystems? Etc.&gt;     Primary Actions:    Sample Request /CSI/IDORequestService/ido/invoke/SLCos?method=CustomerOrderCount&#39; \ -H &lsquo;accept: application/json&rsquo; \ -H &lsquo;X-Infor-MongooseConfig: &lsquo;&rsquo; \ -H &lsquo;Content-Type: application/json&rsquo; \ -H &lsquo;Authorization: Bearer &rsquo; \ -d &lsquo;[ &ldquo;&rdquo;, &ldquo;&rdquo;, &ldquo;&rdquo;, &ldquo;&rdquo;, &quot;&quot; ]&rsquo;    API Details Endpoint /" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/computing-science/as-built-design/" />
+<meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="API Overview This primary purpose of this API is to &hellip;
+   API Consumers: &lt;Identify the expected clients of this API. External applications? Infor Applications? Internal SyteLine subsystems? Etc.&gt;     Primary Actions:    Sample Request /CSI/IDORequestService/ido/invoke/SLCos?method=CustomerOrderCount&#39; \ -H &lsquo;accept: application/json&rsquo; \ -H &lsquo;X-Infor-MongooseConfig: &lsquo;&rsquo; \ -H &lsquo;Content-Type: application/json&rsquo; \ -H &lsquo;Authorization: Bearer &rsquo; \ -d &lsquo;[ &ldquo;&rdquo;, &ldquo;&rdquo;, &ldquo;&rdquo;, &ldquo;&rdquo;, &quot;&quot; ]&rsquo;    API Details Endpoint /"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#api-overview" onclick="onNavClick(`#api-overview-nav`)" id="api-overview-nav">
+									API Overview
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#api-details" onclick="onNavClick(`#api-details-nav`)" id="api-details-nav">
+									API Details
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#endpoint" onclick="onNavClick(`#endpoint-nav`)" id="endpoint-nav">
+									Endpoint
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#high-level-inputs" onclick="onNavClick(`#high-level-inputs-nav`)" id="high-level-inputs-nav">
+									High Level Inputs
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#high-level-outputs" onclick="onNavClick(`#high-level-outputs-nav`)" id="high-level-outputs-nav">
+									High Level Outputs
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#response-messagingerror-success-warning-informational" onclick="onNavClick(`#response-messagingerror-success-warning-informational-nav`)" id="response-messagingerror-success-warning-informational-nav">
+									Response Messaging(Error, Success, Warning, Informational)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#api-overview" onclick="onNavClick(`#api-overview-nav`)" id="api-overview-nav">
+									API Overview
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#api-details" onclick="onNavClick(`#api-details-nav`)" id="api-details-nav">
+									API Details
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#endpoint" onclick="onNavClick(`#endpoint-nav`)" id="endpoint-nav">
+									Endpoint
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#high-level-inputs" onclick="onNavClick(`#high-level-inputs-nav`)" id="high-level-inputs-nav">
+									High Level Inputs
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#high-level-outputs" onclick="onNavClick(`#high-level-outputs-nav`)" id="high-level-outputs-nav">
+									High Level Outputs
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#response-messagingerror-success-warning-informational" onclick="onNavClick(`#response-messagingerror-success-warning-informational-nav`)" id="response-messagingerror-success-warning-informational-nav">
+									Response Messaging(Error, Success, Warning, Informational)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    
+                    
+                    <div class="post-meta">
+                        
+
+                        
+
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            32 s.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="api-overview">API Overview</h1>
+<p>This primary purpose of this API is to &hellip;</p>
+<table>
+<thead>
+<tr>
+<th>API Consumers:</th>
+<th>&lt;Identify the expected clients of this API. External applications? Infor Applications? Internal SyteLine subsystems? Etc.&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Actions:</td>
+<td><!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>Sample Request</td>
+<td><!-- raw HTML omitted -->/CSI/IDORequestService/ido/invoke/SLCos?method=CustomerOrderCount' \ -H &lsquo;accept: application/json&rsquo; \ -H &lsquo;X-Infor-MongooseConfig: &lsquo;<!-- raw HTML omitted -->&rsquo; \ -H &lsquo;Content-Type: application/json&rsquo; \ -H &lsquo;Authorization: Bearer <!-- raw HTML omitted -->&rsquo; \ -d &lsquo;[ &ldquo;&rdquo;, &ldquo;&rdquo;, &ldquo;&rdquo;, &ldquo;&rdquo;, &quot;&quot; ]&rsquo;</td>
+</tr>
+</tbody>
+</table>
+<h1 id="api-details">API Details</h1>
+<h2 id="endpoint">Endpoint</h2>
+<p><!-- raw HTML omitted -->/</p>
+<h2 id="high-level-inputs">High Level Inputs</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Parameters</strong></th>
+<th><strong>Required</strong></th>
+<th><strong>Default / Validation / Additional Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><!-- raw HTML omitted --></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="high-level-outputs">High Level Outputs</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Parameters</strong></th>
+<th><strong>Description</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><!-- raw HTML omitted --></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="response-messagingerror-success-warning-informational">Response Messaging(Error, Success, Warning, Informational)</h2>
+<p>Provide situational information regarding messaging that will be passed back to the client (codes, messages, data). <strong>IMPORTANT: PII Data must NOT be exposed.</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>WHEN the following is encountered</strong></th>
+<th><strong>THEN the following occurs</strong></th>
+<th><strong>Message Code</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/business/work-review/">
+			Next<br>Work Review
+                </a>
+                
+                
+                
+                <a class="older-posts">
+			Previous<br>No older posts.
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

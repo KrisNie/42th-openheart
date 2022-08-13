@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html><head>
+<title>Microservice</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="微服务">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link rel="shortcut icon" href="/images/smile_favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+<meta property="og:title" content="Microservice" />
+<meta property="og:description" content="微服务" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openheart.icu/computing-science/microservice/" />
+<meta property="article:published_time" content="2020-07-24T00:00:50+00:00" />
+<meta property="article:modified_time" content="2021-11-22T11:11:37+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Microservice"/>
+<meta name="twitter:description" content="微服务"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/journal.min.501d7307b277cc4885da27e54d8eb3a01eb04a3eb1539d4db0f640bad47a803c.css" integrity="sha256-UB1zB7J3zEiF2iflTY6zoB6wSj6xU51NsPZAutR6gDw=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://www.openheart.icu/scss/dark-mode.min.7757e4001197b1cd1c03bf75eeef947c882e0bbc26b5096a3c1a66992f55521a.css" integrity="sha256-d1fkABGXsc0cA7917u&#43;UfIguC7wmtQlqPBpmmS9VUho=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '78028e4d522031d4773c',
+  clientSecret: 'e387ce8646bde4df55f81e9dc6c1e72b91248d82',
+  repo: '42th-openheart',
+  owner: 'KrisNie',
+  admin: ['KrisNie'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.openheart.icu/">
+    
+        <div class="nav-title">
+            42th openheart
+        </div>
+        
+        <div class="nav-subtitle">
+            Kris Nie&#39;s Blog.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/arithmetic">
+                Arithmetic
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/cs">
+                ComputerScience
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/dotnet">
+                DotNet
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/finance">
+                Finance
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/speech">
+                Speech
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+
+<i class="fa fa-weixin" aria-hidden="true"></i>
+QuadragintaDuo
+<br>
+<i class="fa fa-envelope" aria-hidden="true"></i>
+krisnie42@qq.com
+<br>
+<span id="busuanzi_container_site_pv">
+    site pv:<span id="busuanzi_value_site_pv"></span>
+</span>
+| 
+<span id="busuanzi_container_site_uv">
+	site uv:<span id="busuanzi_value_site_uv"></span>
+</span>
+<br>
+<a href="https://beian.miit.gov.cn/">鲁ICP备20007116号-1</a>
+<br>
+Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+
+<br>
+
+
+&copy;
+	
+	2022 ALL RIGHTS RESERVED KRIS NIE
+	
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#api-gateways" onclick="onNavClick(`#api-gateways-nav`)" id="api-gateways-nav">
+									API Gateways
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#service-mesh" onclick="onNavClick(`#service-mesh-nav`)" id="service-mesh-nav">
+									Service Mesh
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#sidecar" onclick="onNavClick(`#sidecar-nav`)" id="sidecar-nav">
+									SideCar
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#certificate-authority" onclick="onNavClick(`#certificate-authority-nav`)" id="certificate-authority-nav">
+									Certificate Authority
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#infrastructure" onclick="onNavClick(`#infrastructure-nav`)" id="infrastructure-nav">
+									Infrastructure
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#virtualizationhttpsenwikipediaorgwikivirtualization--containerizationhttpsenwikipediaorgwikicontainerization" onclick="onNavClick(`#virtualizationhttpsenwikipediaorgwikivirtualization--containerizationhttpsenwikipediaorgwikicontainerization-nav`)" id="virtualizationhttpsenwikipediaorgwikivirtualization--containerizationhttpsenwikipediaorgwikicontainerization-nav">
+									Virtualization &amp; Containerization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization" onclick="onNavClick(`#os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization-nav`)" id="os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization-nav">
+									OS-level_virtualization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#wslwindows-subsystem-for-linux" onclick="onNavClick(`#wslwindows-subsystem-for-linux-nav`)" id="wslwindows-subsystem-for-linux-nav">
+									WSL(Windows Subsystem for Linux)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/arithmetic">
+                    Arithmetic
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/cs">
+                    ComputerScience
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/dotnet">
+                    DotNet
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/finance">
+                    Finance
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/speech">
+                    Speech
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#api-gateways" onclick="onNavClick(`#api-gateways-nav`)" id="api-gateways-nav">
+									API Gateways
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#service-mesh" onclick="onNavClick(`#service-mesh-nav`)" id="service-mesh-nav">
+									Service Mesh
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#sidecar" onclick="onNavClick(`#sidecar-nav`)" id="sidecar-nav">
+									SideCar
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#certificate-authority" onclick="onNavClick(`#certificate-authority-nav`)" id="certificate-authority-nav">
+									Certificate Authority
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#infrastructure" onclick="onNavClick(`#infrastructure-nav`)" id="infrastructure-nav">
+									Infrastructure
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#virtualizationhttpsenwikipediaorgwikivirtualization--containerizationhttpsenwikipediaorgwikicontainerization" onclick="onNavClick(`#virtualizationhttpsenwikipediaorgwikivirtualization--containerizationhttpsenwikipediaorgwikicontainerization-nav`)" id="virtualizationhttpsenwikipediaorgwikivirtualization--containerizationhttpsenwikipediaorgwikicontainerization-nav">
+									Virtualization &amp; Containerization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization" onclick="onNavClick(`#os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization-nav`)" id="os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization-nav">
+									OS-level_virtualization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#wslwindows-subsystem-for-linux" onclick="onNavClick(`#wslwindows-subsystem-for-linux-nav`)" id="wslwindows-subsystem-for-linux-nav">
+									WSL(Windows Subsystem for Linux)
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.openheart.icu/">
+            42th openheart
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.openheart.icu/">
+        <div class="single-column-header-title">42th openheart</div>
+        
+        <div class="single-column-header-subtitle">Kris Nie&#39;s Blog.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Microservice
+                    
+                    <div class="post-subtitle">
+                        微服务
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-07-24 00:00
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical">Technical</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/cs">CS</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            3 min
+                            
+                            1 second.
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="api-gateways">API Gateways</h1>
+<blockquote>
+<p>The reference microservice application <a href="https://github.com/dotnet-architecture/eShopOnContainers">eShopOnContainers</a> is currently using features provided by <a href="https://www.envoyproxy.io/">Envoy</a> to implement the API Gateway instead of the earlier referenced <a href="https://github.com/ThreeMammals/Ocelot">Ocelot</a>. We made this design choice because of Envoy&rsquo;s built-in support for the WebSocket protocol, required by the new gRPC inter-service communications implemented in eShopOnContainers. However, we&rsquo;ve retained this section in the guide so you can consider Ocelot as a simple, capable, and lightweight API Gateway suitable for production-grade scenarios. Also, latest Ocelot version contains a breaking change on its json schema. Consider using Ocelot &lt; v16.0.0, or use the key Routes instead of ReRoutes.</p>
+</blockquote>
+<h1 id="service-mesh">Service Mesh</h1>
+<blockquote>
+<p>A service mesh, like the open source project <a href="https://www.redhat.com/en/topics/microservices/what-is-istio">Istio,</a> is a way to control how different parts of an application share data with one another. Unlike other systems for managing this communication, a service mesh is a dedicated infrastructure layer built right into an app. This visible infrastructure layer can document how well (or not) different parts of an app interact, so it becomes easier to optimize communication and avoid downtime as an app grows.</p>
+</blockquote>
+<blockquote>
+<p>Istio uses an extended version of the <a href="https://www.envoyproxy.io/">Envoy</a> proxy. Envoy is a high-performance proxy developed in C++ to mediate all inbound and outbound traffic for all services in the service mesh. Envoy proxies are the only Istio components that interact with data plane traffic.</p>
+</blockquote>
+<h3 id="sidecar">SideCar</h3>
+<p>A service mesh doesn’t introduce new functionality to an app’s runtime environment—apps in any architecture have always needed rules to specify how requests get from point A to point B. What’s different about a service mesh is that it takes the logic governing service-to-service communication out of individual services and abstracts it to a layer of infrastructure.</p>
+<p>To do this, a service mesh is built into an app as an array of network proxies. Proxies are a familiar concept in enterprise IT—if you are accessing this webpage from a work computer, there’s a good chance you just used one:</p>
+<ol>
+<li>As your request for this page went out, it was first received by your company’s web proxy…</li>
+<li>After passing the proxy’s security measure, it was sent to the server that hosts this page…</li>
+<li>Next, this page was returned to the proxy and again checked against its security measures…</li>
+<li>And then it was finally sent from the proxy to you.</li>
+</ol>
+<p><img src="https://www.redhat.com/cms/managed-files/web-proxy-1680.png" alt="img"></p>
+<p>In a service mesh, requests are routed between microservices through proxies in their own infrastructure layer. For this reason, individual proxies that make up a service mesh are sometimes called &ldquo;sidecars,&rdquo; since they run <em>alongside</em> each service, rather than <em>within</em> them. Taken together, these &ldquo;sidecar&rdquo; proxies—decoupled from each service—form a mesh network.</p>
+<p><img src="https://www.redhat.com/cms/managed-files/service-mesh-1680.png" alt="img"></p>
+<p><em>A sidecar proxy sits alongside a microservice and routes requests to other proxies. Together, these sidecars form a mesh network.</em></p>
+<p>Without a service mesh, each microservice needs to be coded with logic to govern service-to-service communication, which means developers are less focused on business goals. It also means communication failures are harder to diagnose because the logic that governs interservice communication is hidden within each service.</p>
+<h1 id="certificate-authority">Certificate Authority</h1>
+<p>OAuth2 Security</p>
+<h1 id="infrastructure">Infrastructure</h1>
+<p>Configuration Center</p>
+<p>Service discovery</p>
+<p>Service monitoring</p>
+<p>Log analysis</p>
+<h1 id="virtualizationhttpsenwikipediaorgwikivirtualization--containerizationhttpsenwikipediaorgwikicontainerization"><a href="https://en.wikipedia.org/wiki/Virtualization">Virtualization</a> &amp; <a href="https://en.wikipedia.org/wiki/Containerization">Containerization</a></h1>
+<h2 id="os-level_virtualizationhttpsenwikipediaorgwikios-level_virtualization"><a href="https://en.wikipedia.org/wiki/OS-level_virtualization">OS-level_virtualization</a></h2>
+<h2 id="wslwindows-subsystem-for-linux">WSL(Windows Subsystem for Linux)</h2>
+<p>Reference</p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/">.NET Microservices. Architecture for Containerized .NET Applications | Microsoft Docs</a></li>
+<li>Martin Fowler &amp; James Lewis, <a href="https://martinfowler.com/articles/microservices.html">Microservices - a definition of this new architectural term</a></li>
+<li>Chris Richardson, <a href="https://microservices.io/patterns/index.html">A pattern language for microservices</a></li>
+<li><a href="https://jmmv.dev/2020/11/wsl-lost-potential.html">WSL1 &amp; WSL2</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/wsl/compare-versions">Comparing WSL 1 and WSL 2 | Microsoft Docs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Architecture_of_Windows_NT">Architecture of Windows NT</a></li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-11-22</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://www.openheart.icu/computing-science/distributed/">
+			Next<br>Distributed
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://www.openheart.icu/speech/gardener/">
+			Previous<br>Gardener
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+	
+	<i class="fa fa-weixin" aria-hidden="true"></i>
+	QuadragintaDuo
+	<br>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	krisnie42@qq.com
+	<br>
+		site pv:<span id="busuanzi_value_site_pv_m"></span>
+	| 
+		site uv:<span id="busuanzi_value_site_uv_m"></span>
+	<br>
+	鲁ICP备20007116号
+	<br>
+	Powered by Hugo | Theme - <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>
+	
+	<br>
+	
+	
+	&copy;
+		
+		2022 ALL RIGHTS RESERVED KRIS NIE
+		
+	<script>
+		$(function(){
+			$("#busuanzi_value_site_uv").bind('DOMNodeInserted',function(e){
+				console.log('DOMNodeInserted');
+				debugger;
+				$('#busuanzi_value_site_uv_m').after($('#busuanzi_value_site_uv').text()); 
+				$('#busuanzi_value_site_pv_m').after($('#busuanzi_value_site_pv').text());
+			});
+		})
+	</script>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>
