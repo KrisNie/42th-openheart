@@ -329,7 +329,7 @@ git gc --prune=now
         <pubDate>Wed, 15 Jul 2020 23:28:00 +0000</pubDate>
         
         <guid>https://www.openheart.icu/computing-science/hugo/</guid>
-        <description>42th openheart https://www.openheart.icu/computing-science/hugo/ -&lt;h1 id=&#34;install&#34;&gt;Install&lt;/h1&gt;
+        <description>42th openheart https://www.openheart.icu/computing-science/hugo/ -&lt;h1 id=&#34;installhttpsgohugoio&#34;&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Install&lt;/a&gt;&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;tar -zxvf ./hugo_0.74.1_Linux-64bit.tar.gz
 
 cp ./hugo /usr/local/bin/
@@ -357,7 +357,8 @@ ls -l &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;$(&lt;/span&gt;
 hugo version
 Hugo Static Site Generator v0.74.1/extended darwin/amd64 BuildDate: unknown
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;quick-start-guide&#34;&gt;Quick start guide&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;quick-start-guidehttpsgohugoiogetting-started&#34;&gt;&lt;a href=&#34;https://gohugo.io/getting-started/&#34;&gt;Quick start guide&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;clihttpsgohugoiocommands&#34;&gt;&lt;a href=&#34;https://gohugo.io/commands/&#34;&gt;CLI&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new site site42
 
 &lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; site42
@@ -390,15 +391,96 @@ hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt;
 hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt; server
 
 &lt;span style=&#34;color:#228b22&#34;&gt;#打开你喜欢的 编辑器 ，编辑和保存你的文章内容，然后等待 Hugo 重新编译并自动重新加载&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hugo-post-missing&#34;&gt;Hugo Post Missing&lt;/h1&gt;
+
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#hugo is the main command, used to build your Hugo site.&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#Hugo is a Fast and Flexible Static Site Generator&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#built with love by spf13 and friends in Go.&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#Complete documentation is available at https://gohugo.io/.&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#Usage:&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  hugo [flags]&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  hugo [command]&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#Available Commands:&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  completion  Generate the autocompletion script for the specified shell&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  config      Print the site configuration&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  convert     Convert your content to different formats&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  deploy      Deploy your site to a Cloud provider.&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  env         Print Hugo version and environment info&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  gen         A collection of several useful generators.&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  help        Help about any command&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  import      Import your site from others.&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  list        Listing out various types of content&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  mod         Various Hugo Modules helpers.&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  new         Create new content for your site&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  server      A high performance webserver&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;#  version     Print the version number of Hugo&lt;/span&gt;
+
+Flags:
+  -b, --baseURL string             &lt;span style=&#34;color:#228b22&#34;&gt;# hostname (and path) to the root, e.g. https://spf13.com/&lt;/span&gt;
+  -D, --buildDrafts                &lt;span style=&#34;color:#228b22&#34;&gt;# include content marked as draft&lt;/span&gt;
+  -E, --buildExpired               &lt;span style=&#34;color:#228b22&#34;&gt;# include expired content&lt;/span&gt;
+  -F, --buildFuture                &lt;span style=&#34;color:#228b22&#34;&gt;# include content with publishdate in the future&lt;/span&gt;
+      --cacheDir string            &lt;span style=&#34;color:#228b22&#34;&gt;# filesystem path to cache directory. Defaults: $TMPDIR/hugo_cache/&lt;/span&gt;
+      --cleanDestinationDir        &lt;span style=&#34;color:#228b22&#34;&gt;# remove files from destination not found in static directories&lt;/span&gt;
+      --config string              &lt;span style=&#34;color:#228b22&#34;&gt;# config file (default is path/config.yaml|json|toml)&lt;/span&gt;
+      --configDir string           &lt;span style=&#34;color:#228b22&#34;&gt;# config dir (default &amp;#34;config&amp;#34;)&lt;/span&gt;
+  -c, --contentDir string          &lt;span style=&#34;color:#228b22&#34;&gt;# filesystem path to content directory&lt;/span&gt;
+      --debug                      &lt;span style=&#34;color:#228b22&#34;&gt;# debug output&lt;/span&gt;
+  -d, --destination string         &lt;span style=&#34;color:#228b22&#34;&gt;# filesystem path to write files to&lt;/span&gt;
+      --disableKinds strings       &lt;span style=&#34;color:#228b22&#34;&gt;# disable different kind of pages (home, RSS etc.)&lt;/span&gt;
+      --enableGitInfo              &lt;span style=&#34;color:#228b22&#34;&gt;# add Git revision, date, author, and CODEOWNERS info to the pages&lt;/span&gt;
+  -e, --environment string         &lt;span style=&#34;color:#228b22&#34;&gt;# build environment&lt;/span&gt;
+      --forceSyncStatic            &lt;span style=&#34;color:#228b22&#34;&gt;# copy all files when static is changed.&lt;/span&gt;
+      --gc                         &lt;span style=&#34;color:#228b22&#34;&gt;# enable to run some cleanup tasks (remove unused cache files) after the build&lt;/span&gt;
+  -h, --help                       &lt;span style=&#34;color:#228b22&#34;&gt;# help for hugo&lt;/span&gt;
+      --ignoreCache                &lt;span style=&#34;color:#228b22&#34;&gt;# ignores the cache directory&lt;/span&gt;
+      --ignoreVendorPaths string   &lt;span style=&#34;color:#228b22&#34;&gt;# ignores any _vendor for module paths matching the given Glob pattern&lt;/span&gt;
+  -l, --layoutDir string           &lt;span style=&#34;color:#228b22&#34;&gt;# filesystem path to layout directory&lt;/span&gt;
+      --log                        &lt;span style=&#34;color:#228b22&#34;&gt;# enable Logging&lt;/span&gt;
+      --logFile string             &lt;span style=&#34;color:#228b22&#34;&gt;# log File path (if set, logging enabled automatically)&lt;/span&gt;
+      --minify                     &lt;span style=&#34;color:#228b22&#34;&gt;# minify any supported output format (HTML, XML etc.)&lt;/span&gt;
+      --noChmod                    &lt;span style=&#34;color:#228b22&#34;&gt;# don&amp;#39;t sync permission mode of files&lt;/span&gt;
+      --noTimes                    &lt;span style=&#34;color:#228b22&#34;&gt;# don&amp;#39;t sync modification time of files&lt;/span&gt;
+      --panicOnWarning             &lt;span style=&#34;color:#228b22&#34;&gt;# panic on first WARNING log&lt;/span&gt;
+      --poll string                &lt;span style=&#34;color:#228b22&#34;&gt;# set this to a poll interval, e.g --poll 700ms, to use a poll based approach to watch for file system changes&lt;/span&gt;
+      --printI18nWarnings          &lt;span style=&#34;color:#228b22&#34;&gt;# print missing translations&lt;/span&gt;
+      --printMemoryUsage           &lt;span style=&#34;color:#228b22&#34;&gt;# print memory usage to screen at intervals&lt;/span&gt;
+      --printPathWarnings          &lt;span style=&#34;color:#228b22&#34;&gt;# print warnings on duplicate target paths etc.&lt;/span&gt;
+      --printUnusedTemplates       &lt;span style=&#34;color:#228b22&#34;&gt;# print warnings on unused templates.&lt;/span&gt;
+      --quiet                      &lt;span style=&#34;color:#228b22&#34;&gt;# build in quiet mode&lt;/span&gt;
+      --renderToMemory             &lt;span style=&#34;color:#228b22&#34;&gt;# render to memory (only useful for benchmark testing)&lt;/span&gt;
+  -s, --source string              &lt;span style=&#34;color:#228b22&#34;&gt;# filesystem path to read files relative from&lt;/span&gt;
+      --templateMetrics            &lt;span style=&#34;color:#228b22&#34;&gt;# display metrics about template executions&lt;/span&gt;
+      --templateMetricsHints       &lt;span style=&#34;color:#228b22&#34;&gt;# calculate some improvement hints when combined with --templateMetrics&lt;/span&gt;
+  -t, --theme strings              &lt;span style=&#34;color:#228b22&#34;&gt;# themes to use (located in /themes/THEMENAME/)&lt;/span&gt;
+      --themesDir string           &lt;span style=&#34;color:#228b22&#34;&gt;# filesystem path to themes directory&lt;/span&gt;
+      --trace file                 &lt;span style=&#34;color:#228b22&#34;&gt;# write trace to file (not useful in general)&lt;/span&gt;
+  -v, --verbose                    &lt;span style=&#34;color:#228b22&#34;&gt;# verbose output&lt;/span&gt;
+      --verboseLog                 &lt;span style=&#34;color:#228b22&#34;&gt;# verbose logging&lt;/span&gt;
+  -w, --watch                      &lt;span style=&#34;color:#228b22&#34;&gt;# watch filesystem for changes and recreate as needed&lt;/span&gt;
+
+&lt;span style=&#34;color:#228b22&#34;&gt;#Use &amp;#34;hugo [command] --help&amp;#34; for more information about a command.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;hugo-post-missing&#34;&gt;Hugo Post Missing&lt;/h2&gt;
 &lt;p&gt;偶然发现存在有文章无法被生成的情况，经过检查发现在文章yaml配置文件中的date的问题。&lt;/p&gt;
 &lt;p&gt;具体对比后发现并没有规律，既不是纽约时间也不是北京时间，但改时间确实会影响文章的生成。&lt;/p&gt;
-&lt;p&gt;查阅之后发现如下两个解决办法&lt;/p&gt;
-&lt;h4 id=&#34;修改configtoml文件&#34;&gt;修改&lt;code&gt;config.toml&lt;/code&gt;文件&lt;/h4&gt;
+&lt;p&gt;查阅之后发现如下两个解决办法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改&lt;code&gt;config.toml&lt;/code&gt;文件&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;buildFuture = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;build-add---buildfuture&#34;&gt;build add &amp;ndash;buildFuture&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;build add &amp;ndash;buildFuture&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server --theme=diary --buildDrafts --buildFuture
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;添加谈笑风生区&#34;&gt;添加谈笑风生区&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;how-to-build-your-site&#34;&gt;How To Build Your Site&lt;/h1&gt;
+&lt;h2 id=&#34;comments-area&#34;&gt;Comments Area&lt;/h2&gt;
+&lt;p&gt;谈笑生风！&lt;/p&gt;
 &lt;p&gt;申请地址：&lt;a href=&#34;https://github.com/settings/applications/new&#34;&gt;Authorization callback URL&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;查看自己的OAuth Apps：&lt;a href=&#34;https://github.com/settings/developers&#34;&gt;OAuth Apps&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -432,7 +514,7 @@ hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt; server
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;创建模板&#34;&gt;创建模板&lt;/h3&gt;
+&lt;p&gt;创建模板&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;{{ if and (.Site.Params.enableGitalk) (.IsPage) }}
 &amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;rel&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;href&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;#34;&lt;/span&gt;&amp;gt;
 &amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
@@ -452,7 +534,7 @@ hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt; server
   }
 &amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
 {{ end }}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;添加配置&#34;&gt;添加配置&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加配置&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[params]
   enableGitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
 
@@ -461,7 +543,8 @@ hugo &lt;span style=&#34;color:#658b00&#34;&gt;help&lt;/span&gt; server
   repo = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;42th-openheart&amp;#34;&lt;/span&gt;
   client_id = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_id&amp;#34;&lt;/span&gt;
   client_secret = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;your_secret&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;webhook&#34;&gt;Webhook&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;webhook&#34;&gt;Webhook&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# 本地public文件夹关联到GitHub&lt;/span&gt;
 &lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; public
 git init
@@ -493,9 +576,9 @@ vim git_pull.sh
 &lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; /root/blog2
 git pull origin master
 &lt;span style=&#34;color:#658b00&#34;&gt;exit&lt;/span&gt; &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装并配置webhook&#34;&gt;安装并配置webhook&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装并配置webhook&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;npm install github-webhook-handler
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;新建github_webhookjs脚本&#34;&gt;新建&lt;code&gt;github_webhook.js&lt;/code&gt;脚本&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;新建&lt;code&gt;github_webhook.js&lt;/code&gt;脚本&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; http = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;)
 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; exec = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt;).exec
 &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; createHandler = require(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;github-webhook-handler&amp;#39;&lt;/span&gt;)
@@ -521,20 +604,20 @@ handler.on(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;push&amp;#39;&lt;/
         console.log(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;stderr:\n&amp;#39;&lt;/span&gt; + stderr);
     });
 })
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pm2运行&#34;&gt;pm2运行&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;pm2运行&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;pm2 start github_webhook.js
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;增加nginx配置&#34;&gt;增加nginx配置&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;增加nginx配置&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# NodeJS 将 Web 服务跑在了 7777 端口，我们可以用 Nginx 反向代理到 80 端口&lt;/span&gt;
 location /webhook {
   &lt;span style=&#34;color:#658b00&#34;&gt;alias&lt;/span&gt; /root/webhook;
   proxy_pass http://127.0.0.1:7777;  
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github配置&#34;&gt;Github配置&lt;/h2&gt;
-&lt;p&gt;&amp;lsquo;webhook&amp;rsquo;即 ‘github_webhook.js’ 中配置的path，比如：&lt;code&gt;https://www.openheart.icu/webhook&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;必须选择‘application/json’,否则不起作用&lt;/p&gt;
-&lt;p&gt;‘Secret’即 ‘github_webhook.js’中配置的‘ secret_key’
-一定要和脚本中设置一致&lt;/p&gt;
-&lt;h1 id=&#34;pv-uv&#34;&gt;pv uv&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;GitHub Config&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;webhook&lt;/code&gt;即 &lt;code&gt;github_webhook.js&lt;/code&gt; 中配置的path，比如：&lt;code&gt;https://www.openheart.icu/webhook&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;必须选择&lt;code&gt;application/json&lt;/code&gt;,否则不起作用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Secret&lt;/code&gt;即 &lt;code&gt;github_webhook.js&lt;/code&gt;中配置的&lt;code&gt;secret_key&lt;/code&gt;一定要和脚本中设置一致&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;pv-uv&#34;&gt;pv uv&lt;/h2&gt;
 &lt;p&gt;两行代码 搞定计数：&lt;a href=&#34;http://busuanzi.ibruce.info/&#34;&gt;不蒜子&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 网站head引用 --&amp;gt;&lt;/span&gt;
 &amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
@@ -554,11 +637,12 @@ location /webhook {
   本文总阅读量&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;busuanzi_value_page_pv&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;次
 &amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;span&lt;/span&gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Reference&lt;/p&gt;
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&#34;&gt;https://discourse.gohugo.io/t/issue-with-generating-site-missing-posts/12149/3&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://jdhao.github.io/2020/01/11/hugo_post_missing/&#34;&gt;https://jdhao.github.io/2020/01/11/hugo_post_missing/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/024/&#34;&gt;https://mogeko.me/2018/024/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
 - https://www.openheart.icu/computing-science/hugo/ - ALL RIGHTS RESERVED KRIS NIE</description>
         </item>
     
